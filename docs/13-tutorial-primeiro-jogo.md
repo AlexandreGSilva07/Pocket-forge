@@ -39,6 +39,16 @@ node --check meu-jogo/game.js
 ```
 A saída lista bytes e gzip teórico. FPS e memória não são medidos por esses comandos.
 
+Para reproduzir o **smoke de navegador** usado pelo GitHub Actions (instala dependência somente de desenvolvimento):
+
+```bash
+python3 -m pip install playwright==1.56.0
+python3 -m playwright install chromium
+python3 tests/browser_smoke.py
+```
+
+O script inicia servidor HTTP temporário, verifica desktop e touch e salva duas capturas; não mede FPS nem valida pixel diff.
+
 ## 6. Entregar com evidências
 Produzir Evidence Report em `docs/08-qa-testes.md`. Abrir em desktop e telefone quando for alvo. Capturar erros reais e comunicar o que não foi possível testar.
 

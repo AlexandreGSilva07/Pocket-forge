@@ -20,7 +20,8 @@
 - [ ] Sistema automático de criação de diferentes gêneros por prompt.
 
 ## Milestone 0.2 — Robustez
-- [ ] Harness Playwright em Chromium com captura e input automatizados.
+- [x] Smoke Playwright Chromium com inputs desktop/touch, testes de estados e screenshots no CI.
+- [ ] Comparação visual automática com baseline e tolerâncias por dispositivo.
 - [ ] Frame snapshots e testes de UI em retrato/paisagem.
 - [ ] Baselines de tamanho e orçamento no CI.
 - [ ] Manifests de assets e cenas com schema JSON validado.

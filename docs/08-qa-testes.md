@@ -70,4 +70,4 @@ Não verificado:
 - “**Completo**”: critérios de aceite cobertos por evidência.
 
 ## Suite v0.1
-`tests/` roda testes Python de geração e auditoria; `node --check` valida sintaxe JS. Não há ainda inspeção automatizada de frames por Playwright integrada ao CI. Esse trabalho está marcado no roadmap e não deve ser reportado como pronto.
+`tests/test_tools.py` cobre geração/auditoria; `node --check` valida sintaxe. `tests/browser_smoke.py` usa Playwright/Chromium no CI para iniciar, mover, pausar, retomar e acionar dash em desktop/touch; salva screenshots como artefatos de evidência. **Ainda não existe comparação automática de pixels com baseline**, avaliação humana/IA de imagens, teste em telefone físico ou medição de FPS. Essas lacunas permanecem no roadmap.

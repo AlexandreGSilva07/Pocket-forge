@@ -8,8 +8,9 @@ Contribuições devem melhorar **jogos reais**: correção, arte, ergonomia, des
 2. Relacionar ao Game Brief/critério de aceite quando houver.
 3. Criar alteração mínima acompanhada de testes e exemplos.
 4. Rodar `python3 -m unittest discover -s tests -v`, `node --check demo/game.js` e `python3 scripts/audit.py demo`.
-5. Informar impacto no tamanho final.
-6. Documentar resultado **observado** e trabalho não testado.
+5. Quando alterações de gameplay afetarem input/estados, executar `python3 tests/browser_smoke.py` após instalar Playwright e Chromium; ou conferir o workflow GitHub Actions.
+6. Informar impacto no tamanho final.
+7. Documentar resultado **observado** e trabalho não testado.
 
 ## Diretrizes de código
 - Sem dependências de runtime externas para o demo de referência.

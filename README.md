@@ -1,52 +1,97 @@
 # PocketForge
 
-**Super-skill de engenharia de jogos modernos ultraleves, com liberdade estética e validação real.**  
-Construída para agentes que precisam entregar jogos jogáveis — não apenas protótipos ou mockups.
+**Super-skill de engenharia de jogos modernos ultraleves.** Crie jogos HTML5 com liberdade estética, alto acabamento visual e foco em **qualidade percebida por byte, milissegundo e linha de código** — do Game Brief ao build revisado.
 
-## O que existe nesta versão (v0.1)
+> [!IMPORTANT]
+> **v0.1 = fundação operacional**, não criação autônoma de qualquer jogo. Existem documentação, scripts, demo, testes estruturais e smoke interativo de navegador. Agentes autônomos de criação e QA visual em navegador ainda constam no roadmap. J2ME é uma referência de engenharia enxuta; PocketForge **não usa Java, não é emulador e não obriga pixel art**.
 
-- `SKILL.md` compatível com o formato aberto Agent Skills, com referências sob demanda.
-- Guias especializados de arquitetura, direção de arte, design, áudio, componentes, testes e otimização.
-- Ferramentas Python sem dependências para criar um novo projeto, produzir assets vetoriais e auditar o peso do pacote.
-- **Lumen Shift**: vertical slice jogável em HTML5 Canvas, sem framework nem CDN, com partículas, controles touch/teclado, colisão, vida, pontuação, dash, áudio sintetizado e dificuldade progressiva.
-- Testes locais e integração contínua via GitHub Actions.
+## Comece aqui
 
-## Executar o demo
+| Recurso | O que contém |
+| --- | --- |
+| **[SKILL.md](SKILL.md)** | Entrypoint de agente, invariantes, fluxo, gates, referência sob demanda |
+| **[Índice técnico](docs/INDEX.md)** | 20 capítulos organizados por engenharia, arte, QA e operações |
+| **[Tutorial](docs/13-tutorial-primeiro-jogo.md)** | Instruções de execução e derivação do demo |
+| **[Lumen Shift](demo/)** | Vertical slice de arena/ação Canvas, sem CDN, motor ou dependências de runtime |
+| **[Padrões por gênero](docs/10-receitas.md)** | Arena, plataforma, pseudo-3D, RPG isométrico, puzzle e micro-3D |
+| **[Harness de agentes](docs/15-harness-agentes.md)** | Arquitetura proposta de papéis, tarefas, gates e evidências |
+| **[Roadmap](docs/11-roadmap.md)** | O que está concluído, planejado e pendente de teste |
+
+## A primeira demonstração: Lumen Shift
+
+Um jogo compacto construído com Canvas 2D, CSS e JavaScript puros. Possui menu, controle por teclado e ponteiro, botão de dash, perseguidores, orbes colecionáveis, colisão, vida, score, recorde local, aumento de dificuldade, pausa, reinício, partículas e áudio sintetizado. É **código de vertical slice**, não um benchmark de desempenho validado em múltiplos aparelhos.
+
+### Executar
 
 ```bash
+git clone https://github.com/AlexandreGSilva07/Pocket-forge.git
+cd Pocket-forge
 python3 -m http.server 8000 --directory demo
-# abrir http://localhost:8000
 ```
 
-Ou abra `demo/index.html` (utiliza módulos ES; prefira servidor HTTP).
+Abra **http://localhost:8000** em um navegador. Em desktop use WASD/setas, Space (dash), P (pausa) e M (áudio). Em touch, aponte a direção na arena e toque no botão Impulso. Para servir ao celular na mesma rede, configure o endereço/porta do servidor apropriadamente.
 
-## Criar um jogo derivado
+## Toolchain local
+
+Não é necessário npm para executar o jogo ou os scripts Python.
 
 ```bash
+# Gerar scaffold de um novo projeto a partir da referência
 python3 scripts/new_game.py meu-jogo --title "Meu Jogo"
-python3 -m http.server 8000 --directory meu-jogo
-python3 scripts/audit.py meu-jogo
+
+# Gerar SVGs procedurais originais (ícones e cenário abstrato)
 python3 scripts/make_assets.py meu-jogo/assets --seed 42
+
+# Auditar tamanho local bruto e gzip aproximado
+python3 scripts/audit.py meu-jogo --json
+
+# Testes determinísticos Python e sintaxe JS
+python3 -m unittest discover -s tests -v
+node --check demo/game.js
 ```
 
-O scaffold é uma **base de referência**, não um gerador de jogos arbitrários: o agente deve redesenhar a mecânica, a arte e os componentes de acordo com o pedido, depois testar a entrega.
+**Os limites das ferramentas são explícitos:** `new_game.py` copia/customiza um ponto de partida, não inventa novas mecânicas por prompt; `make_assets.py` cria quatro SVGs abstratos, não um sprite studio generalista; `audit.py` não mede FPS, memória ou tráfego HTTP real.
 
-## Usar como skill
+## Organização
 
-Copie o repositório para o diretório de skills do seu agente e aponte o agente ao arquivo `SKILL.md`. O formato usa frontmatter `name: pocketforge` e documentação carregada sob demanda; a localização de instalação varia conforme o agente.
+```text
+Pocket-forge/
+├── SKILL.md
+├── README.md
+├── docs/             # 20 capítulos técnicos e índice
+├── agents/           # playbooks Director, Visual e Reviewer
+├── examples/         # Game Brief e manifesto de requisitos
+├── schemas/          # contrato JSON Schema do projeto
+├── scripts/          # new_game, make_assets, audit
+├── demo/             # Lumen Shift (HTML, CSS, JS)
+├── tests/            # regressões determinísticas + browser smoke Playwright
+├── .github/workflows # CI: sintaxe, testes e orçamento de bundle
+├── CONTRIBUTING.md
+└── LICENSE
+```
 
-Leia `SKILL.md` e `references/pipeline.md`. Os arquivos `agents/*.md` representam **papéis operacionais**, não processos de IA automaticamente executados.
+## Índice temático
 
-## Critérios de qualidade
+**Começar:** [Visão](docs/00-visao.md) · [Pipeline](docs/01-pipeline.md) · [Arquitetura](docs/02-arquitetura.md) · [Tutorial](docs/13-tutorial-primeiro-jogo.md)
 
-1. O jogo precisa executar, responder aos controles e ter condições de vitória/derrota.
-2. O desenho visual é livre, desde que consistente e legível.
-3. O projeto deve manter um orçamento definido de tamanho, memória, FPS e inicialização.
-4. O agente deve apresentar evidências observáveis de testes e declarar lacunas.
-5. É proibido tratar mockups, código compilável ou screenshots como comprovação de jogabilidade.
+**Produzir:** [Tecnologia/render](docs/03-tecnologia-renderizacao.md) · [Componentes](docs/04-componentes.md) · [Arte/assets](docs/05-artes-assets.md) · [Áudio](docs/06-audio.md) · [Design system](docs/17-design-system-ui.md) · [Receitas](docs/10-receitas.md)
 
-## Status
+**Verificar:** [Performance](docs/07-performance.md) · [QA e gates](docs/08-qa-testes.md) · [Benchmarks](docs/16-benchmarks-avaliacao.md) · [Distribuição/licenças](docs/09-distribuicao-licencas.md)
 
-**v0.1: fundação funcional**, não um conversor automático de 1.000 jogos nem um sistema autônomo de produção. O próximo passo é ampliar gêneros, geradores de assets e harness de QA visual.
+**Evoluir:** [Manifesto](docs/12-manifesto.md) · [Harness](docs/15-harness-agentes.md) · [Contrato de ferramentas](docs/18-protocolo-ferramentas.md) · [Roadmap](docs/11-roadmap.md) · [Limites](docs/19-perguntas-e-limites.md)
 
-MIT License (ver `LICENSE`).
+## Como instalar como skill
+
+O arquivo `SKILL.md` segue o formato de skills para agentes (frontmatter YAML + instruções). Adicione o diretório ao local de skills do agente escolhido; cada ferramenta/cliente tem seu próprio caminho de instalação. Referências técnicas são carregadas sob demanda.
+
+A presença de arquivos `agents/` **não** configura um sistema de agentes em execução; são playbooks para um agente coordenador ou pessoas. O harness real está especificado em [15](docs/15-harness-agentes.md).
+
+## Qualidade e evidências
+
+Os workflows GitHub Actions executam testes Python, verificação de sintaxe JavaScript, orçamento estático, validade sintática JSON e um **smoke real via Playwright/Chromium**: iniciar, mover, pausar, retomar, usar dash e acionar touch no perfil mobile, salvando screenshots como artefatos de CI. Isso comprova esses caminhos no ambiente do runner, mas **não** equivale a teste em celular físico, revisão visual por IA/humano, benchmark FPS ou avaliação de diversão. A documentação [G0–G5](docs/08-qa-testes.md) separa build, gameplay, visual, perfil e licença; use o [Evidence Report](docs/08-qa-testes.md#modelo-de-evidence-report) para declarar o que foi testado.
+
+O objetivo é evoluir do vertical slice para ferramentas reutilizáveis e benchmarks de múltiplos gêneros, preservando fidelidade de relatório: **feito ≠ testado ≠ medido**.
+
+## Licença e contribuições
+
+Código e documentação sob [MIT](LICENSE); o uso de assets externos exige rastreio de proveniência e licença. Veja [CONTRIBUTING.md](CONTRIBUTING.md).

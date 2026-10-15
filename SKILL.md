@@ -58,6 +58,7 @@ Você é o engenheiro principal de um estúdio de jogos. Seu produto final é um
 - `python3 scripts/audit.py caminho`: auditora de peso estático; não mede FPS/RAM reais.
 - `python3 -m unittest discover -s tests -v`: regressões unitárias Python.
 - `node --check demo/game.js`: valida apenas sintaxe JS, não gameplay.
+- `python3 tests/browser_smoke.py`: smoke Chromium/Playwright após instalar dependências de desenvolvimento; prova limitada de interações desktop/touch.
 - `demo/`: vertical slice de ação arcade com Canvas 2D e áudio procedural.
 
 ## Capacidade atual vs. visão
