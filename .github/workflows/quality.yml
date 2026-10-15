@@ -21,5 +21,33 @@ jobs:
         run: python3 -m unittest discover -s tests -v
       - name: Auditar tamanho do jogo
         run: python3 scripts/audit.py demo --max-bytes 1048576
-      - name: Validar manifesto de exemplo
-        run: python3 -m json.tool examples/pocketforge.json > /dev/null
+      - name: Validar manifestos JSON
+        run: |
+          python3 -m json.tool examples/pocketforge.json > /dev/null
+          python3 -m json.tool schemas/pocketforge.schema.json > /dev/null
+
+  browser-smoke:
+    needs: validate
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Instalar Playwright e navegador Chromium
+        run: |
+          python3 -m pip install playwright==1.56.0
+          python3 -m playwright install --with-deps chromium
+      - name: Smoke real desktop/touch
+        run: python3 tests/browser_smoke.py
+        env:
+          POCKETFORGE_SCREENSHOT_DIR: artifacts/browser
+      - name: Salvar capturas de evidência
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pocketforge-browser-screenshots
+          path: artifacts/browser/
+          if-no-files-found: ignore
