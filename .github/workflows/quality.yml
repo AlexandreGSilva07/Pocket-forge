@@ -1,0 +1,25 @@
+name: PocketForge QA
+on:
+  push:
+  pull_request:
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Verificar sintaxe JavaScript
+        run: node --check demo/game.js
+      - name: Executar testes da toolchain
+        run: python3 -m unittest discover -s tests -v
+      - name: Auditar tamanho do jogo
+        run: python3 scripts/audit.py demo --max-bytes 1048576
+      - name: Validar manifesto de exemplo
+        run: python3 -m json.tool examples/pocketforge.json > /dev/null
