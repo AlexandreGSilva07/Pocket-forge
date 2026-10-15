@@ -43,7 +43,7 @@ def run():
             page.locator("#primaryButton").click()
             assert not page.locator("#centerOverlay").is_visible(), "Retomar não voltou ao jogo"
             page.locator("#dash").click()
-            assert "cooling" in (page.locator("#dash").get_attribute("class") or ""), "Dash não iniciou recarga"
+            page.wait_for_function("document.querySelector(\'#dash\').classList.contains(\'cooling\')", timeout=3000)
             page.screenshot(path=str(SHOT_DIR / "desktop.png"))
             desktop.close()
 
@@ -57,7 +57,7 @@ def run():
             touch_page.locator("#primaryButton").tap()
             assert not touch_page.locator("#centerOverlay").is_visible(), "Touch não iniciou jogo"
             touch_page.locator("#dash").tap()
-            assert "cooling" in (touch_page.locator("#dash").get_attribute("class") or ""), "Dash touch não funcionou"
+            touch_page.wait_for_function("document.querySelector(\'#dash\').classList.contains(\'cooling\')", timeout=3000)
             touch_page.screenshot(path=str(SHOT_DIR / "mobile.png"))
             mobile.close()
             browser.close()
