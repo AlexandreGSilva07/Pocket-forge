@@ -1,0 +1,22 @@
+{
+  "schemaVersion": "0.1",
+  "id": "lumen-shift",
+  "title": "Lumen Shift",
+  "target": {
+    "platform": "web",
+    "orientation": "responsive"
+  },
+  "genre": "arena-action",
+  "input": ["keyboard", "touch"],
+  "visual": {
+    "style": "neon-vector",
+    "motion": "reduced-supported"
+  },
+  "budgets": {
+    "transferBytes": 1048576,
+    "targetFps": 60
+  },
+  "states": ["menu", "playing", "paused", "defeat"],
+  "assets": [],
+  "acceptance": ["player-moves", "player-can-lose", "game-restarts"]
+}

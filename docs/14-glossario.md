@@ -1,0 +1,25 @@
+# 14 — Glossário prático
+
+- **Vertical slice**: pequena amostra completa da experiência real, com gameplay, arte e ciclo de início/fim.
+- **Core loop**: sequência repetida de decisão → ação → feedback → recompensa/consequência.
+- **Frame budget**: tempo disponível por frame; 60Hz ≈ 16,67 ms.
+- **DPR**: razão entre pixels físicos e CSS; impacta custo de rasterização.
+- **Draw call**: comando de desenho submetido à GPU; relevante sobretudo em WebGL.
+- **Atlas**: várias imagens agrupadas em uma textura com coordenadas.
+- **Pivot**: ponto de ancoragem de sprite para posição/rotação.
+- **Culling**: não desenhar/processar objetos fora da área relevante.
+- **Pooling**: reuso de objetos para diminuir alocação/coleta de lixo.
+- **Fixed timestep**: simulação com passos de duração constante.
+- **Interpolation**: desenho entre estados físicos para suavidade visual.
+- **Hitbox**: região que define contato/acerto; diferente da silhueta visual.
+- **Broad phase**: filtragem barata de pares antes de testes finos de colisão.
+- **FSM**: máquina de estados finitos usada em inimigos, cenas, UI.
+- **Juice**: polimento sensorial, efeitos de impacto, movimento, áudio, respostas.
+- **Telegraph**: sinalização antecipada de ataque/perigo.
+- **Overdraw**: desenhar repetidamente sobre os mesmos pixels.
+- **Gzip/Brotli**: compressão de transferência; não mede memória da textura decodificada.
+- **P50/P95/P99**: percentis; p95 representa limite abaixo do qual caem 95% das amostras.
+- **PWA**: aplicação web instalável com recursos como cache offline quando configurados.
+- **Evidence Report**: registro verificável de testes, métricas, lacunas e ambiente.
+- **Game Brief**: contrato resumido da experiência e dos objetivos mensuráveis.
+- **Agent Skill**: instruções organizadas em `SKILL.md`, referências e ferramentas que um agente pode usar.
