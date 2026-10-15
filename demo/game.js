@@ -86,7 +86,6 @@
     if (heading) title.innerHTML = heading;
     if (text) description.textContent = text;
     if (label) primary.innerHTML = label + " <span>→</span>";
-    primary.textContent = primary.textContent; // keep button focusable with normal DOM
     dashButton.disabled = next !== "playing";
     pauseButton.textContent = next === "paused" ? "▶" : "Ⅱ";
     statusLabel.textContent = next === "playing" ? "EM JOGO" : next === "paused" ? "PAUSADO" : next === "defeat" ? "FIM DA PARTIDA" : "PRONTO PARA INICIAR";
