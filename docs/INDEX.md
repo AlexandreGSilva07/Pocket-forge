@@ -34,6 +34,6 @@
 - [Game Brief de exemplo](../examples/game-brief.md)
 - [Manifesto de exemplo](../examples/pocketforge.json)
 - [Schema JSON](../schemas/pocketforge.schema.json)
-- [Director](../agents/director.md), [Visual](../agents/visual.md), [Reviewer](../agents/reviewer.md)
+- [Playbooks dos oito agentes](../agents/INDEX.md): Director, Architect, Gameplay, Visual, Audio, Profiler, Reviewer e Release
 
 **Status:** a documentação distingue capacidades implementadas (v0.1) de projetos futuros; consulte o [roadmap](11-roadmap.md).

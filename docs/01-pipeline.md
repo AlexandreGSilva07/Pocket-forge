@@ -44,7 +44,7 @@
 - **Gameplay**: sensação de controles, inimigos, progressão e equilíbrio.
 - **Sound**: design sonoro e políticas de desbloqueio de áudio.
 - **Profiler**: custos reais e alternativas.
-- **Reviewer**: testes e evidências; não confunde estilo com correção.
+- **Reviewer**: testes e evidências; não confunde estilo com correção.\n- **Release**: empacota, audita proveniência e limitações de distribuição.
 
 Esses papéis podem ser executados pelo mesmo agente em etapas distintas. Sua presença no texto não significa que subagentes estejam em execução.
 

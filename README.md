@@ -59,7 +59,7 @@ Pocket-forge/
 ├── SKILL.md
 ├── README.md
 ├── docs/             # 20 capítulos técnicos e índice
-├── agents/           # playbooks Director, Visual e Reviewer
+├── agents/           # 8 playbooks especializados + índice
 ├── examples/         # Game Brief e manifesto de requisitos
 ├── schemas/          # contrato JSON Schema do projeto
 ├── scripts/          # new_game, make_assets, audit
@@ -84,7 +84,7 @@ Pocket-forge/
 
 O arquivo `SKILL.md` segue o formato de skills para agentes (frontmatter YAML + instruções). Adicione o diretório ao local de skills do agente escolhido; cada ferramenta/cliente tem seu próprio caminho de instalação. Referências técnicas são carregadas sob demanda.
 
-A presença de arquivos `agents/` **não** configura um sistema de agentes em execução; são playbooks para um agente coordenador ou pessoas. O harness real está especificado em [15](docs/15-harness-agentes.md).
+A presença dos oito playbooks em `agents/` **não** configura um sistema de agentes em execução; são playbooks para um agente coordenador ou pessoas. O harness real está especificado em [15](docs/15-harness-agentes.md).
 
 ## Qualidade e evidências
 
