@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="pt-BR">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PocketForge — Pixel Buffer Lab</title>
+<style>
+:root{color-scheme:dark;font:16px system-ui;background:#081224;color:#e4f7ff}
+body{min-height:100vh;box-sizing:border-box;display:grid;place-items:center;margin:0;padding:18px}
+main{max-width:620px;width:100%;box-sizing:border-box;border:1px solid #30668d;border-radius:18px;background:#111f35;padding:24px}
+h1{font-size:1.7rem;margin:0 0 10px}p{line-height:1.5;color:#acc0d8}
+canvas{display:block;max-width:100%;width:100%;aspect-ratio:4/3;border:1px solid #42799e;image-rendering:pixelated;border-radius:8px;background:black}
+small{color:#a8c7e2}
+</style>
+</head><body><main>
+<small>POCKETFORGE / SOFTWARE RENDER LAB</small>
+<h1>Framebuffer de 16 bits</h1>
+<p>Experimento autoral baseado na ideia de buffers curtos encontrada em <em>3D Adventure</em>. Esta animação é nova, não uma recriação do jogo original. O armazenamento em CPU usa RGBA4444 e é convertido para Canvas.</p>
+<canvas id="lab" width="160" height="120" aria-label="Demonstração de paisagem em perspectiva"></canvas>
+<p id="info" aria-live="polite">Preparando renderizador...</p>
+</main>
+<script src="engine/pixels.js"></script>
+<script>
+"use strict";
+(()=>{
+ const P=window.PocketForgePixels,canvas=document.getElementById("lab");
+ const ctx=canvas.getContext("2d",{alpha:false}),surface=P.createSurface(160,120);
+ const info=document.getElementById("info");
+ let frames=0,start=performance.now();
+ function frame(t){
+   const tick=t*.0004, W=160,H=120,horizon=47;
+   const sky=P.pack(10,30,65,255),ground=P.pack(12,23,24,255),light=P.pack(59,207,255,255);
+   surface.clear(sky);surface.rect(0,horizon,W,H-horizon,ground);
+   const sunX=120+Math.round(Math.sin(tick)*15);
+   for(let y=0;y<14;y++){
+     let xrad=Math.floor(Math.sqrt(Math.max(0,14*14-y*y)));
+     surface.rect(sunX-xrad,25+y,2*xrad+1,1,P.pack(255,165+Math.round(y*4),55,255));
+   }
+   for(let y=horizon;y<H;y++){
+     const dy=y-horizon+1,half=Math.min(75,Math.floor(1.2*dy));
+     const xL=Math.floor(W/2-half),xR=Math.floor(W/2+half);
+     const road=(Math.floor((500/dy+tick*35)/15)%2===0);
+     surface.rect(xL,y,xR-xL+1,1,P.pack(22,36,52,255));
+     if(road && dy>12){
+       surface.rect(Math.floor(W/2),y,1+dy/80,1,light);
+       surface.set(xL,y,P.pack(255,80,70,255));
+       surface.set(xR,y,P.pack(255,80,70,255));
+     }
+   }
+   for(let i=0;i<6;i++){
+     const base=4+i*27-Math.floor(tick*35)%27;
+     surface.line(base,horizon-2,base-7,horizon+10,P.pack(35,95,119,255));
+   }
+   surface.flush(ctx);
+   frames++;
+   if(frames%30===0){
+     const fps=Math.round(frames*1000/(performance.now()-start));
+     info.textContent="Framebuffer "+surface.pixels.byteLength+" bytes (160×120×16-bit), expansão RGBA "+(W*H*4)+" bytes; "+fps+" FPS observado nesta sessão (não é benchmark comparativo).";
+   }
+   requestAnimationFrame(frame);
+ }
+ requestAnimationFrame(frame);
+})();
+</script>
+</body></html>
