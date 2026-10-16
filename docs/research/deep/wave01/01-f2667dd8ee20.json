@@ -1,0 +1,1001 @@
+{
+  "jar_path": "828 Java Games/3D-Adventure.jar",
+  "jar_sha256": "f2667dd8ee20f37d323d16a705ef9e26ed4e61f704af185e1dbb187cf7cf5761",
+  "game_title": "3D Adventure",
+  "jar_bytes": 20363,
+  "research_status": "BYTECODE_DISASSEMBLED_INDEXED_NOT_FULLY_REVIEWED",
+  "class_count": 2,
+  "methods_count": 23,
+  "instructions_count": 21665,
+  "branch_count": 461,
+  "method_examples": [
+    {
+      "class": "adventure.a",
+      "signature": "private void if(int);",
+      "instructions": 13862,
+      "branches": 5,
+      "priority_score": 13877,
+      "calls": {}
+    },
+    {
+      "class": "adventure.a",
+      "signature": "public void run();",
+      "instructions": 1769,
+      "branches": 167,
+      "priority_score": 7577,
+      "calls": {
+        "com.nokia.mid.sound.Sound.play": 4,
+        "javax.microedition.lcdui.Canvas.repaint": 3,
+        "javax.microedition.lcdui.Display.setCurrent": 2,
+        "java.lang.Thread.yield": 1,
+        "java.lang.Thread.sleep": 1
+      }
+    },
+    {
+      "class": "adventure.a",
+      "signature": "public adventure.a();",
+      "instructions": 2093,
+      "branches": 2,
+      "priority_score": 2099,
+      "calls": {
+        "javax.microedition.lcdui.Image.createImage": 5,
+        "javax.microedition.lcdui.List.append": 5,
+        "javax.microedition.lcdui.Displayable.setCommandListener": 3,
+        "javax.microedition.lcdui.Form.append": 2,
+        "javax.microedition.lcdui.Displayable.addCommand": 2,
+        "java.lang.Throwable.printStackTrace": 1,
+        "javax.microedition.lcdui.Canvas.getHeight": 1,
+        "javax.microedition.lcdui.Image.getGraphics": 1,
+        "javax.microedition.lcdui.Graphics.fillRect": 1,
+        "javax.microedition.lcdui.Font.getFont": 1
+      }
+    },
+    {
+      "class": "adventure.a",
+      "signature": "protected void paint(javax.microedition.lcdui.Graphics);",
+      "instructions": 641,
+      "branches": 34,
+      "priority_score": 2025,
+      "calls": {
+        "com.nokia.mid.ui.DirectGraphics.drawPixels": 16,
+        "javax.microedition.lcdui.Graphics.fillRect": 8,
+        "javax.microedition.lcdui.Graphics.drawString": 5,
+        "javax.microedition.lcdui.Graphics.drawImage": 3,
+        "javax.microedition.lcdui.Graphics.setColor": 3,
+        "javax.microedition.lcdui.Graphics.drawLine": 2,
+        "java.lang.String.valueOf": 2,
+        "adventure.MIDlet1.a": 1,
+        "com.nokia.mid.ui.DirectUtils.getDirectGraphics": 1,
+        "javax.microedition.lcdui.Graphics.setFont": 1,
+        "java.lang.String.concat": 1
+      }
+    },
+    {
+      "class": "adventure.a",
+      "signature": "private void new();",
+      "instructions": 1308,
+      "branches": 113,
+      "priority_score": 1647,
+      "calls": {}
+    },
+    {
+      "class": "adventure.a",
+      "signature": "void do();",
+      "instructions": 442,
+      "branches": 16,
+      "priority_score": 932,
+      "calls": {
+        "com.nokia.mid.ui.DirectGraphics.getPixels": 28,
+        "javax.microedition.lcdui.Image.createImage": 1,
+        "javax.microedition.lcdui.Image.getGraphics": 1,
+        "javax.microedition.lcdui.Graphics.drawImage": 1,
+        "com.nokia.mid.ui.DirectUtils.getDirectGraphics": 1
+      }
+    },
+    {
+      "class": "adventure.a",
+      "signature": "private void if(byte, byte, byte);",
+      "instructions": 326,
+      "branches": 19,
+      "priority_score": 383,
+      "calls": {}
+    },
+    {
+      "class": "adventure.a",
+      "signature": "private void a(byte, byte, byte);",
+      "instructions": 326,
+      "branches": 19,
+      "priority_score": 383,
+      "calls": {}
+    },
+    {
+      "class": "adventure.a",
+      "signature": "private boolean for();",
+      "instructions": 233,
+      "branches": 11,
+      "priority_score": 266,
+      "calls": {}
+    },
+    {
+      "class": "adventure.a",
+      "signature": "protected void keyPressed(int);",
+      "instructions": 185,
+      "branches": 26,
+      "priority_score": 263,
+      "calls": {
+        "javax.microedition.lcdui.List.size": 2,
+        "com.nokia.mid.sound.Sound.play": 2,
+        "javax.microedition.lcdui.List.append": 1,
+        "javax.microedition.lcdui.List.delete": 1,
+        "javax.microedition.lcdui.List.setSelectedIndex": 1,
+        "javax.microedition.lcdui.Display.setCurrent": 1
+      }
+    },
+    {
+      "class": "adventure.a",
+      "signature": "void byte();",
+      "instructions": 143,
+      "branches": 20,
+      "priority_score": 203,
+      "calls": {}
+    },
+    {
+      "class": "adventure.a",
+      "signature": "public void commandAction(javax.microedition.lcdui.Command, javax.microedition.lcdui.Displayable);",
+      "instructions": 107,
+      "branches": 10,
+      "priority_score": 137,
+      "calls": {
+        "javax.microedition.lcdui.Display.setCurrent": 3,
+        "javax.microedition.lcdui.List.set": 3,
+        "java.lang.String.valueOf": 2,
+        "javax.microedition.lcdui.List.getSelectedIndex": 1,
+        "javax.microedition.lcdui.Command.getLabel": 1,
+        "java.lang.String.equals": 1,
+        "java.lang.String.concat": 1
+      }
+    },
+    {
+      "class": "adventure.a",
+      "signature": "void a(long, long);",
+      "instructions": 63,
+      "branches": 0,
+      "priority_score": 63,
+      "calls": {}
+    },
+    {
+      "class": "adventure.a",
+      "signature": "byte a();",
+      "instructions": 40,
+      "branches": 5,
+      "priority_score": 55,
+      "calls": {
+        "javax.microedition.rms.RecordStore.closeRecordStore": 3,
+        "javax.microedition.rms.RecordStore.openRecordStore": 1,
+        "javax.microedition.rms.RecordStore.getNumRecords": 1,
+        "javax.microedition.rms.RecordStore.getRecord": 1
+      }
+    },
+    {
+      "class": "adventure.a",
+      "signature": "void a(int);",
+      "instructions": 39,
+      "branches": 5,
+      "priority_score": 54,
+      "calls": {
+        "javax.microedition.rms.RecordStore.closeRecordStore": 3,
+        "javax.microedition.rms.RecordStore.openRecordStore": 1,
+        "javax.microedition.rms.RecordStore.addRecord": 1
+      }
+    },
+    {
+      "class": "adventure.a",
+      "signature": "protected void keyReleased(int);",
+      "instructions": 26,
+      "branches": 6,
+      "priority_score": 44,
+      "calls": {}
+    },
+    {
+      "class": "adventure.a",
+      "signature": "void try();",
+      "instructions": 11,
+      "branches": 2,
+      "priority_score": 39,
+      "calls": {
+        "java.lang.Thread.currentThread": 2,
+        "java.lang.Thread.start": 2
+      }
+    },
+    {
+      "class": "adventure.a",
+      "signature": "private byte int();",
+      "instructions": 20,
+      "branches": 1,
+      "priority_score": 23,
+      "calls": {}
+    },
+    {
+      "class": "adventure.MIDlet1",
+      "signature": "public static void a();",
+      "instructions": 11,
+      "branches": 0,
+      "priority_score": 11,
+      "calls": {
+        "javax.microedition.midlet.MIDlet.notifyDestroyed": 1
+      }
+    }
+  ],
+  "class_details": [
+    {
+      "class_file": "adventure/MIDlet1.class",
+      "class_name": "adventure.MIDlet1",
+      "methods_count": 5,
+      "instructions_count": 31,
+      "branch_count": 0,
+      "methods": [
+        {
+          "signature": "public adventure.MIDlet1();",
+          "instructions": 10,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 3,
+            "invokespecial": 2,
+            "new": 1,
+            "dup": 1,
+            "putfield": 1,
+            "putstatic": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "public void startApp();",
+          "instructions": 8,
+          "branches": 0,
+          "calls": {
+            "javax.microedition.lcdui.Display.getDisplay": 1,
+            "javax.microedition.lcdui.Display.setCurrent": 1
+          },
+          "opcodes": {
+            "aload_0": 2,
+            "invokestatic": 1,
+            "putstatic": 1,
+            "getstatic": 1,
+            "getfield": 1,
+            "invokevirtual": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "public void pauseApp();",
+          "instructions": 1,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "return": 1
+          }
+        },
+        {
+          "signature": "public void destroyApp(boolean);",
+          "instructions": 1,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "return": 1
+          }
+        },
+        {
+          "signature": "public static void a();",
+          "instructions": 11,
+          "branches": 0,
+          "calls": {
+            "javax.microedition.midlet.MIDlet.notifyDestroyed": 1
+          },
+          "opcodes": {
+            "getstatic": 2,
+            "invokevirtual": 2,
+            "aconst_null": 2,
+            "putstatic": 2,
+            "return": 2,
+            "iconst_1": 1
+          }
+        }
+      ]
+    },
+    {
+      "class_file": "adventure/a.class",
+      "class_name": "adventure.a",
+      "methods_count": 18,
+      "instructions_count": 21634,
+      "branch_count": 461,
+      "methods": [
+        {
+          "signature": "public adventure.a();",
+          "instructions": 2093,
+          "branches": 2,
+          "calls": {
+            "javax.microedition.lcdui.Image.createImage": 5,
+            "javax.microedition.lcdui.List.append": 5,
+            "javax.microedition.lcdui.Displayable.setCommandListener": 3,
+            "javax.microedition.lcdui.Form.append": 2,
+            "javax.microedition.lcdui.Displayable.addCommand": 2,
+            "java.lang.Throwable.printStackTrace": 1,
+            "javax.microedition.lcdui.Canvas.getHeight": 1,
+            "javax.microedition.lcdui.Image.getGraphics": 1,
+            "javax.microedition.lcdui.Graphics.fillRect": 1,
+            "javax.microedition.lcdui.Font.getFont": 1
+          },
+          "opcodes": {
+            "bipush": 464,
+            "dup": 431,
+            "sastore": 200,
+            "sipush": 170,
+            "iconst_0": 158,
+            "bastore": 141,
+            "aload_0": 97,
+            "putfield": 69,
+            "iastore": 64,
+            "newarray": 47,
+            "iconst_1": 43,
+            "iconst_2": 34,
+            "getfield": 19,
+            "invokevirtual": 19,
+            "ldc": 18
+          }
+        },
+        {
+          "signature": "void try();",
+          "instructions": 11,
+          "branches": 2,
+          "calls": {
+            "java.lang.Thread.currentThread": 2,
+            "java.lang.Thread.start": 2
+          },
+          "opcodes": {
+            "invokestatic": 2,
+            "invokevirtual": 2,
+            "ifnull": 1,
+            "new": 1,
+            "dup": 1,
+            "aload_0": 1,
+            "invokespecial": 1,
+            "goto": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "protected void keyPressed(int);",
+          "instructions": 185,
+          "branches": 26,
+          "calls": {
+            "javax.microedition.lcdui.List.size": 2,
+            "com.nokia.mid.sound.Sound.play": 2,
+            "javax.microedition.lcdui.List.append": 1,
+            "javax.microedition.lcdui.List.delete": 1,
+            "javax.microedition.lcdui.List.setSelectedIndex": 1,
+            "javax.microedition.lcdui.Display.setCurrent": 1
+          },
+          "opcodes": {
+            "aload_0": 49,
+            "putfield": 31,
+            "iconst_1": 27,
+            "getfield": 20,
+            "goto": 13,
+            "invokevirtual": 8,
+            "iconst_0": 8,
+            "ifeq": 5,
+            "ifle": 3,
+            "iconst_5": 2,
+            "lookupswitch": 2,
+            "dup": 2,
+            "isub": 2,
+            "i2b": 2,
+            "bipush": 1
+          }
+        },
+        {
+          "signature": "protected void keyReleased(int);",
+          "instructions": 26,
+          "branches": 6,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 6,
+            "iconst_0": 6,
+            "putfield": 6,
+            "goto": 5,
+            "iload_1": 1,
+            "lookupswitch": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "public void run();",
+          "instructions": 1769,
+          "branches": 167,
+          "calls": {
+            "com.nokia.mid.sound.Sound.play": 4,
+            "javax.microedition.lcdui.Canvas.repaint": 3,
+            "javax.microedition.lcdui.Display.setCurrent": 2,
+            "java.lang.Thread.yield": 1,
+            "java.lang.Thread.sleep": 1
+          },
+          "opcodes": {
+            "aload_0": 354,
+            "getfield": 280,
+            "sipush": 107,
+            "putfield": 91,
+            "aaload": 69,
+            "iload_1": 67,
+            "bipush": 64,
+            "i2l": 58,
+            "idiv": 54,
+            "iadd": 45,
+            "lcmp": 41,
+            "goto": 40,
+            "iconst_1": 34,
+            "iconst_0": 33,
+            "lastore": 32
+          }
+        },
+        {
+          "signature": "protected void paint(javax.microedition.lcdui.Graphics);",
+          "instructions": 641,
+          "branches": 34,
+          "calls": {
+            "com.nokia.mid.ui.DirectGraphics.drawPixels": 16,
+            "javax.microedition.lcdui.Graphics.fillRect": 8,
+            "javax.microedition.lcdui.Graphics.drawString": 5,
+            "javax.microedition.lcdui.Graphics.drawImage": 3,
+            "javax.microedition.lcdui.Graphics.setColor": 3,
+            "javax.microedition.lcdui.Graphics.drawLine": 2,
+            "java.lang.String.valueOf": 2,
+            "adventure.MIDlet1.a": 1,
+            "com.nokia.mid.ui.DirectUtils.getDirectGraphics": 1,
+            "javax.microedition.lcdui.Graphics.setFont": 1,
+            "java.lang.String.concat": 1
+          },
+          "opcodes": {
+            "bipush": 159,
+            "aload_0": 108,
+            "getfield": 92,
+            "iconst_0": 50,
+            "invokevirtual": 24,
+            "aload_1": 23,
+            "sipush": 22,
+            "putfield": 17,
+            "invokeinterface": 16,
+            "imul": 15,
+            "iconst_1": 15,
+            "idiv": 11,
+            "goto": 10,
+            "isub": 10,
+            "ifeq": 9
+          }
+        },
+        {
+          "signature": "void a(long, long);",
+          "instructions": 63,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 18,
+            "getfield": 14,
+            "i2l": 8,
+            "putfield": 4,
+            "iaload": 4,
+            "lmul": 4,
+            "lsub": 3,
+            "sipush": 2,
+            "ldiv": 2,
+            "lload_1": 1,
+            "lload_3": 1,
+            "ladd": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "private void new();",
+          "instructions": 1308,
+          "branches": 113,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 284,
+            "getfield": 196,
+            "goto": 64,
+            "putfield": 63,
+            "iload_2": 59,
+            "bipush": 56,
+            "iload_1": 54,
+            "iadd": 52,
+            "sipush": 43,
+            "imul": 37,
+            "isub": 29,
+            "idiv": 25,
+            "invokespecial": 24,
+            "i2l": 23,
+            "aaload": 22
+          }
+        },
+        {
+          "signature": "private void if(byte, byte, byte);",
+          "instructions": 326,
+          "branches": 19,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 70,
+            "getfield": 55,
+            "bipush": 26,
+            "aaload": 18,
+            "putfield": 17,
+            "iadd": 15,
+            "iaload": 12,
+            "iload": 12,
+            "iload_2": 10,
+            "iload_1": 10,
+            "iconst_1": 10,
+            "idiv": 9,
+            "isub": 7,
+            "imul": 7,
+            "if_icmple": 7
+          }
+        },
+        {
+          "signature": "private void a(byte, byte, byte);",
+          "instructions": 326,
+          "branches": 19,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 70,
+            "getfield": 55,
+            "bipush": 26,
+            "aaload": 18,
+            "putfield": 17,
+            "iadd": 15,
+            "iaload": 12,
+            "iload": 12,
+            "iload_2": 10,
+            "iload_1": 10,
+            "iconst_1": 10,
+            "idiv": 9,
+            "isub": 7,
+            "imul": 7,
+            "if_icmple": 7
+          }
+        },
+        {
+          "signature": "void byte();",
+          "instructions": 143,
+          "branches": 20,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 41,
+            "putfield": 40,
+            "bipush": 24,
+            "goto": 19,
+            "iconst_0": 12,
+            "iconst_m1": 4,
+            "getfield": 1,
+            "tableswitch": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "private boolean for();",
+          "instructions": 233,
+          "branches": 11,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 45,
+            "getfield": 43,
+            "i2l": 29,
+            "sipush": 15,
+            "lsub": 12,
+            "ldiv": 11,
+            "putfield": 10,
+            "iconst_0": 10,
+            "l2i": 9,
+            "dup": 8,
+            "lcmp": 6,
+            "ireturn": 5,
+            "ifle": 4,
+            "aaload": 4,
+            "baload": 4
+          }
+        },
+        {
+          "signature": "private byte int();",
+          "instructions": 20,
+          "branches": 1,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 5,
+            "getfield": 4,
+            "putfield": 2,
+            "dup": 1,
+            "iconst_1": 1,
+            "iadd": 1,
+            "i2b": 1,
+            "bipush": 1,
+            "if_icmple": 1,
+            "iconst_0": 1,
+            "baload": 1,
+            "ireturn": 1
+          }
+        },
+        {
+          "signature": "private void if(int);",
+          "instructions": 13862,
+          "branches": 5,
+          "calls": {},
+          "opcodes": {
+            "dup": 3390,
+            "bipush": 3029,
+            "bastore": 2673,
+            "iconst_0": 1834,
+            "lastore": 500,
+            "iconst_1": 430,
+            "iconst_2": 380,
+            "ldc2_w": 338,
+            "iconst_3": 260,
+            "newarray": 217,
+            "aastore": 217,
+            "iconst_5": 183,
+            "iconst_4": 178,
+            "lconst_0": 108,
+            "lconst_1": 54
+          }
+        },
+        {
+          "signature": "void do();",
+          "instructions": 442,
+          "branches": 16,
+          "calls": {
+            "com.nokia.mid.ui.DirectGraphics.getPixels": 28,
+            "javax.microedition.lcdui.Image.createImage": 1,
+            "javax.microedition.lcdui.Image.getGraphics": 1,
+            "javax.microedition.lcdui.Graphics.drawImage": 1,
+            "com.nokia.mid.ui.DirectUtils.getDirectGraphics": 1
+          },
+          "opcodes": {
+            "bipush": 136,
+            "iconst_0": 51,
+            "aload_0": 41,
+            "getfield": 41,
+            "sipush": 29,
+            "aload_3": 28,
+            "invokeinterface": 28,
+            "iload": 18,
+            "aaload": 8,
+            "istore": 6,
+            "if_icmpge": 6,
+            "iinc": 6,
+            "goto": 6,
+            "iconst_5": 4,
+            "arraylength": 4
+          }
+        },
+        {
+          "signature": "public void commandAction(javax.microedition.lcdui.Command, javax.microedition.lcdui.Displayable);",
+          "instructions": 107,
+          "branches": 10,
+          "calls": {
+            "javax.microedition.lcdui.Display.setCurrent": 3,
+            "javax.microedition.lcdui.List.set": 3,
+            "java.lang.String.valueOf": 2,
+            "javax.microedition.lcdui.List.getSelectedIndex": 1,
+            "javax.microedition.lcdui.Command.getLabel": 1,
+            "java.lang.String.equals": 1,
+            "java.lang.String.concat": 1
+          },
+          "opcodes": {
+            "aload_0": 25,
+            "getfield": 13,
+            "putfield": 13,
+            "invokevirtual": 10,
+            "goto": 6,
+            "iconst_1": 5,
+            "iconst_0": 5,
+            "getstatic": 3,
+            "bipush": 3,
+            "aconst_null": 3,
+            "istore_3": 2,
+            "ldc": 2,
+            "ifeq": 2,
+            "iconst_2": 2,
+            "ldc_w": 2
+          }
+        },
+        {
+          "signature": "void a(int);",
+          "instructions": 39,
+          "branches": 5,
+          "calls": {
+            "javax.microedition.rms.RecordStore.closeRecordStore": 3,
+            "javax.microedition.rms.RecordStore.openRecordStore": 1,
+            "javax.microedition.rms.RecordStore.addRecord": 1
+          },
+          "opcodes": {
+            "goto": 5,
+            "aload_2": 4,
+            "invokevirtual": 4,
+            "astore": 4,
+            "iconst_0": 3,
+            "astore_2": 2,
+            "iconst_1": 2,
+            "astore_3": 2,
+            "aload_3": 2,
+            "aconst_null": 1,
+            "ldc_w": 1,
+            "invokestatic": 1,
+            "newarray": 1,
+            "iload_1": 1,
+            "i2b": 1
+          }
+        },
+        {
+          "signature": "byte a();",
+          "instructions": 40,
+          "branches": 5,
+          "calls": {
+            "javax.microedition.rms.RecordStore.closeRecordStore": 3,
+            "javax.microedition.rms.RecordStore.openRecordStore": 1,
+            "javax.microedition.rms.RecordStore.getNumRecords": 1,
+            "javax.microedition.rms.RecordStore.getRecord": 1
+          },
+          "opcodes": {
+            "aload_2": 5,
+            "invokevirtual": 5,
+            "goto": 5,
+            "astore": 4,
+            "iconst_1": 3,
+            "astore_1": 2,
+            "aload_1": 2,
+            "iconst_0": 2,
+            "astore_2": 2,
+            "newarray": 1,
+            "bastore": 1,
+            "aconst_null": 1,
+            "ldc_w": 1,
+            "invokestatic": 1,
+            "astore_3": 1
+          }
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "call_edges": [
+    {
+      "target": "com.nokia.mid.ui.DirectGraphics.getPixels",
+      "count": 28
+    },
+    {
+      "target": "com.nokia.mid.ui.DirectGraphics.drawPixels",
+      "count": 16
+    },
+    {
+      "target": "javax.microedition.lcdui.Graphics.fillRect",
+      "count": 9
+    },
+    {
+      "target": "javax.microedition.lcdui.Display.setCurrent",
+      "count": 7
+    },
+    {
+      "target": "javax.microedition.lcdui.Image.createImage",
+      "count": 6
+    },
+    {
+      "target": "javax.microedition.lcdui.List.append",
+      "count": 6
+    },
+    {
+      "target": "com.nokia.mid.sound.Sound.play",
+      "count": 6
+    },
+    {
+      "target": "javax.microedition.rms.RecordStore.closeRecordStore",
+      "count": 6
+    },
+    {
+      "target": "javax.microedition.lcdui.Graphics.drawString",
+      "count": 5
+    },
+    {
+      "target": "javax.microedition.lcdui.Graphics.drawImage",
+      "count": 4
+    },
+    {
+      "target": "java.lang.String.valueOf",
+      "count": 4
+    },
+    {
+      "target": "javax.microedition.lcdui.Displayable.setCommandListener",
+      "count": 3
+    },
+    {
+      "target": "javax.microedition.lcdui.Canvas.repaint",
+      "count": 3
+    },
+    {
+      "target": "javax.microedition.lcdui.Graphics.setColor",
+      "count": 3
+    },
+    {
+      "target": "javax.microedition.lcdui.List.set",
+      "count": 3
+    },
+    {
+      "target": "javax.microedition.lcdui.Image.getGraphics",
+      "count": 2
+    },
+    {
+      "target": "javax.microedition.lcdui.Form.append",
+      "count": 2
+    },
+    {
+      "target": "javax.microedition.lcdui.Displayable.addCommand",
+      "count": 2
+    },
+    {
+      "target": "java.lang.Thread.currentThread",
+      "count": 2
+    },
+    {
+      "target": "java.lang.Thread.start",
+      "count": 2
+    },
+    {
+      "target": "javax.microedition.lcdui.List.size",
+      "count": 2
+    },
+    {
+      "target": "com.nokia.mid.ui.DirectUtils.getDirectGraphics",
+      "count": 2
+    },
+    {
+      "target": "javax.microedition.lcdui.Graphics.drawLine",
+      "count": 2
+    },
+    {
+      "target": "java.lang.String.concat",
+      "count": 2
+    },
+    {
+      "target": "javax.microedition.rms.RecordStore.openRecordStore",
+      "count": 2
+    },
+    {
+      "target": "javax.microedition.lcdui.Display.getDisplay",
+      "count": 1
+    },
+    {
+      "target": "javax.microedition.midlet.MIDlet.notifyDestroyed",
+      "count": 1
+    },
+    {
+      "target": "java.lang.Throwable.printStackTrace",
+      "count": 1
+    },
+    {
+      "target": "javax.microedition.lcdui.Canvas.getHeight",
+      "count": 1
+    },
+    {
+      "target": "javax.microedition.lcdui.Font.getFont",
+      "count": 1
+    },
+    {
+      "target": "javax.microedition.lcdui.List.delete",
+      "count": 1
+    },
+    {
+      "target": "javax.microedition.lcdui.List.setSelectedIndex",
+      "count": 1
+    },
+    {
+      "target": "java.lang.Thread.yield",
+      "count": 1
+    },
+    {
+      "target": "java.lang.Thread.sleep",
+      "count": 1
+    },
+    {
+      "target": "adventure.MIDlet1.a",
+      "count": 1
+    },
+    {
+      "target": "javax.microedition.lcdui.Graphics.setFont",
+      "count": 1
+    },
+    {
+      "target": "javax.microedition.lcdui.List.getSelectedIndex",
+      "count": 1
+    },
+    {
+      "target": "javax.microedition.lcdui.Command.getLabel",
+      "count": 1
+    },
+    {
+      "target": "java.lang.String.equals",
+      "count": 1
+    },
+    {
+      "target": "javax.microedition.rms.RecordStore.addRecord",
+      "count": 1
+    },
+    {
+      "target": "javax.microedition.rms.RecordStore.getNumRecords",
+      "count": 1
+    },
+    {
+      "target": "javax.microedition.rms.RecordStore.getRecord",
+      "count": 1
+    }
+  ],
+  "opcode_histogram": {
+    "bipush": 3993,
+    "dup": 3873,
+    "bastore": 2816,
+    "iconst_0": 2205,
+    "aload_0": 1239,
+    "getfield": 834,
+    "iconst_1": 601,
+    "lastore": 535,
+    "iconst_2": 451,
+    "putfield": 401,
+    "sipush": 390,
+    "ldc2_w": 353,
+    "iconst_3": 299,
+    "newarray": 266,
+    "aastore": 233,
+    "iconst_4": 229,
+    "iconst_5": 223,
+    "sastore": 214,
+    "goto": 183,
+    "iload_1": 145,
+    "aaload": 145,
+    "iadd": 135,
+    "lconst_0": 125,
+    "i2l": 118,
+    "idiv": 108,
+    "invokevirtual": 89,
+    "isub": 83,
+    "iastore": 80,
+    "iload_2": 79,
+    "imul": 68,
+    "if_icmple": 57,
+    "lconst_1": 56,
+    "lcmp": 54,
+    "ifeq": 51,
+    "iaload": 49
+  },
+  "resource_files": [
+    {
+      "path": "META-INF/MANIFEST.MF",
+      "size": 253
+    },
+    {
+      "path": "adventure/ico.png",
+      "size": 190
+    },
+    {
+      "path": "adventure/menu.png",
+      "size": 380
+    },
+    {
+      "path": "adventure/textury.png",
+      "size": 3100
+    },
+    {
+      "path": "adventure/titl.png",
+      "size": 1996
+    },
+    {
+      "path": "icons/ico.png",
+      "size": 190
+    }
+  ]
+}

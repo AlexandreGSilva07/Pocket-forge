@@ -60,6 +60,23 @@ def run():
             touch_page.wait_for_function("document.querySelector(\'#dash\').classList.contains(\'cooling\')", timeout=3000)
             touch_page.screenshot(path=str(SHOT_DIR / "mobile.png"))
             mobile.close()
+            # Original test game for deep-research AI module.
+            ai_page = browser.new_context(
+                viewport={"width": 800, "height": 700}
+            ).new_page()
+            ai_page.on("pageerror", lambda error: errors.append(str(error)))
+            ai_response = ai_page.goto(url + "ai-lab.html", wait_until="load")
+            assert ai_response is not None and ai_response.status == 200
+            assert ai_page.locator("#piles span").count() == 15
+            assert "Sua vez" in ai_page.locator("#turn").inner_text()
+            ai_page.locator("[data-take='1']").click()
+            remaining = ai_page.locator("#piles span").count()
+            assert 11 <= remaining <= 13, f"CPU did not play: {remaining}"
+            assert "nós" in ai_page.locator("#stats").inner_text()
+            ai_page.locator("#reset").click()
+            assert ai_page.locator("#piles span").count() == 15
+            ai_page.screenshot(path=str(SHOT_DIR / "ai-lab.png"))
+            ai_page.context.close()
             browser.close()
     finally:
         server.shutdown()

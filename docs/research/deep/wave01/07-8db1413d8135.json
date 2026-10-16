@@ -1,0 +1,4419 @@
+{
+  "jar_path": "828 Java Games/1XCrossingDice.jar",
+  "jar_sha256": "8db1413d8135bfc300525375ae0ff398548707d0d8f824cb610d797130e67c9d",
+  "game_title": "Xrossing Dice",
+  "jar_bytes": 44648,
+  "research_status": "BYTECODE_DISASSEMBLED_INDEXED_NOT_FULLY_REVIEWED",
+  "class_count": 25,
+  "methods_count": 205,
+  "instructions_count": 5508,
+  "branch_count": 391,
+  "method_examples": [
+    {
+      "class": "com.ixisoft.gxdice.nokia40.GamePlayScreen",
+      "signature": "private void createGameScreen();",
+      "instructions": 609,
+      "branches": 13,
+      "priority_score": 1257,
+      "calls": {
+        "com.ixisoft.midlet.util.ContainerCanvas.addRegion": 19,
+        "com.ixisoft.midlet.region.BorderRegion.setBackground": 10,
+        "java.lang.StringBuffer.append": 9,
+        "com.ixisoft.midlet.imageloader.ImageLoader.getImage": 7,
+        "com.ixisoft.midlet.region.BorderRegion.setBorderColor": 7,
+        "com.ixisoft.midlet.region.StringRegion.setHorizontalAlignment": 5,
+        "com.ixisoft.midlet.region.StringRegion.setFont": 4,
+        "com.ixisoft.midlet.util.RegionContainer.addRegion": 4,
+        "java.lang.StringBuffer.toString": 3,
+        "com.ixisoft.midlet.region.StringRegion.setValue": 3,
+        "com.ixisoft.midlet.util.Region.setVisible": 3,
+        "com.ixisoft.midlet.region.StringRegion.setFontColor": 2,
+        "com.ixisoft.midlet.util.Region.setSize": 2,
+        "com.ixisoft.midlet.imageloader.ImageLoader.getInstance": 1,
+        "java.io.PrintStream.println": 1,
+        "com.ixisoft.midlet.region.ImageRegion.setHorizontalCentered": 1,
+        "com.ixisoft.midlet.region.ImageRegion.setVerticalCentered": 1,
+        "java.lang.System.gc": 1,
+        "javax.microedition.lcdui.Canvas.repaint": 1
+      }
+    },
+    {
+      "class": "com.ixisoft.gxdice.nokia40.GamePlayScreen",
+      "signature": "protected void keyPressed(int);",
+      "instructions": 223,
+      "branches": 32,
+      "priority_score": 765,
+      "calls": {
+        "com.ixisoft.midlet.util.Region.repaintRegion": 8,
+        "javax.microedition.lcdui.Canvas.getGameAction": 2,
+        "javax.microedition.lcdui.Canvas.repaint": 2,
+        "com.ixisoft.gxdice.nokia40.GameController.isSelectableCol": 2,
+        "com.ixisoft.gxdice.nokia40.GameController.setSelectedCol": 2,
+        "com.ixisoft.gxdice.nokia40.GameController.isSelectableRow": 2,
+        "com.ixisoft.gxdice.nokia40.GameController.setSelectedRow": 2,
+        "com.ixisoft.gxdice.nokia40.GameController.getSelectedCol": 1,
+        "com.ixisoft.gxdice.nokia40.GameController.getSelectedRow": 1
+      }
+    },
+    {
+      "class": "com.ixisoft.gxdice.nokia40.MinimaxRobot",
+      "signature": "private int minimaxValue(com.ixisoft.gxdice.nokia40.GameController, int, boolean, int, int, int);",
+      "instructions": 489,
+      "branches": 66,
+      "priority_score": 687,
+      "calls": {
+        "com.ixisoft.gxdice.nokia40.GameController.getRowPlayerScore": 6,
+        "com.ixisoft.gxdice.nokia40.GameController.getColPlayerScore": 6,
+        "com.ixisoft.gxdice.nokia40.GameController.isSelectableRow": 3,
+        "com.ixisoft.gxdice.nokia40.GameModel.getRowSize": 3,
+        "com.ixisoft.gxdice.nokia40.GameController.isSelectableCol": 3,
+        "com.ixisoft.gxdice.nokia40.GameModel.getColSize": 3,
+        "com.ixisoft.gxdice.nokia40.GameModel.getDieValue": 2,
+        "com.ixisoft.gxdice.nokia40.GameModel.setDieValue": 2,
+        "com.ixisoft.gxdice.nokia40.GameController.getGameModel": 1,
+        "com.ixisoft.gxdice.nokia40.GameController.getSelectedRow": 1,
+        "com.ixisoft.gxdice.nokia40.GameController.getSelectedCol": 1,
+        "com.ixisoft.gxdice.nokia40.GameController.setSelectedCol": 1,
+        "com.ixisoft.gxdice.nokia40.GameController.incrementColPlayerScore": 1,
+        "com.ixisoft.gxdice.nokia40.GameController.setSelectedRow": 1,
+        "com.ixisoft.gxdice.nokia40.GameController.incrementRowPlayerScore": 1
+      }
+    },
+    {
+      "class": "com.ixisoft.gxdice.nokia40.GamePlayScreen",
+      "signature": "private void handleStartGame();",
+      "instructions": 89,
+      "branches": 5,
+      "priority_score": 549,
+      "calls": {
+        "com.ixisoft.midlet.util.Region.setVisible": 3,
+        "javax.microedition.lcdui.Displayable.removeCommand": 2,
+        "java.lang.Thread.currentThread": 2,
+        "javax.microedition.lcdui.Displayable.addCommand": 1,
+        "com.ixisoft.gxdice.nokia40.SpriteRegion.setFrame": 1,
+        "com.ixisoft.gxdice.nokia40.GameController.setSelectedCol": 1,
+        "javax.microedition.lcdui.Canvas.repaint": 1,
+        "java.lang.Thread.start": 1,
+        "java.lang.Thread.yield": 1,
+        "java.lang.Thread.sleep": 1
+      }
+    },
+    {
+      "class": "com.ixisoft.gxdice.nokia40.GamePlayScreen",
+      "signature": "public void run();",
+      "instructions": 115,
+      "branches": 14,
+      "priority_score": 502,
+      "calls": {
+        "com.ixisoft.gxdice.nokia40.SpriteRegion.setFrame": 2,
+        "com.ixisoft.midlet.util.Region.repaintRegion": 2,
+        "com.ixisoft.gxdice.nokia40.XingDiceRobot.takeTurn": 2,
+        "java.lang.Thread.currentThread": 1,
+        "java.lang.Object.wait": 1,
+        "java.lang.Thread.sleep": 1
+      }
+    },
+    {
+      "class": "com.ixisoft.gxdice.nokia40.WelcomeScreen",
+      "signature": "public void commandAction(javax.microedition.lcdui.Command, javax.microedition.lcdui.Displayable);",
+      "instructions": 398,
+      "branches": 34,
+      "priority_score": 500,
+      "calls": {
+        "java.lang.StringBuffer.append": 11,
+        "javax.microedition.lcdui.Form.append": 10,
+        "javax.microedition.lcdui.Display.setCurrent": 6,
+        "javax.microedition.lcdui.Displayable.addCommand": 6,
+        "java.util.Vector.elementAt": 4,
+        "java.lang.StringBuffer.toString": 3,
+        "java.util.Vector.indexOf": 2,
+        "java.util.Vector.firstElement": 2,
+        "java.util.Vector.size": 2,
+        "javax.microedition.lcdui.Displayable.setCommandListener": 2,
+        "java.util.Vector.addElement": 2,
+        "com.ixisoft.gxdice.nokia40.MainMIDlet.destroyApp": 1,
+        "com.ixisoft.gxdice.nokia40.ColOptionScreen.setMIDletContext": 1,
+        "com.ixisoft.gxdice.nokia40.ColOptionScreen.initScreen": 1,
+        "com.ixisoft.gxdice.nokia40.ColOptionScreen.showScreen": 1,
+        "javax.microedition.midlet.MIDlet.getAppProperty": 1
+      }
+    },
+    {
+      "class": "com.ixisoft.gxdice.nokia40.GamePlayScreen",
+      "signature": "public com.ixisoft.gxdice.nokia40.GamePlayScreen();",
+      "instructions": 328,
+      "branches": 0,
+      "priority_score": 328,
+      "calls": {
+        "javax.microedition.lcdui.Font.getFont": 2
+      }
+    },
+    {
+      "class": "com.ixisoft.gxdice.nokia40.GamePlayScreen",
+      "signature": "void takeRow(int);",
+      "instructions": 132,
+      "branches": 10,
+      "priority_score": 294,
+      "calls": {
+        "com.ixisoft.gxdice.nokia40.SpriteRegion.setFrame": 2,
+        "com.ixisoft.midlet.util.Region.setLocation": 2,
+        "com.ixisoft.midlet.util.Region.setVisible": 2,
+        "com.ixisoft.gxdice.nokia40.GameController.setSelectedRow": 1,
+        "com.ixisoft.gxdice.nokia40.GameController.getSelectedCol": 1,
+        "com.ixisoft.gxdice.nokia40.GameModel.getDieValue": 1,
+        "com.ixisoft.gxdice.nokia40.GameController.incrementRowPlayerScore": 1,
+        "com.ixisoft.gxdice.nokia40.GameModel.setDieValue": 1,
+        "com.ixisoft.gxdice.nokia40.GameController.isSelectableCol": 1,
+        "com.ixisoft.gxdice.nokia40.GameController.setSelectedCol": 1,
+        "javax.microedition.lcdui.Canvas.repaint": 1,
+        "java.lang.System.gc": 1
+      }
+    },
+    {
+      "class": "com.ixisoft.gxdice.nokia40.GamePlayScreen",
+      "signature": "void takeCol(int);",
+      "instructions": 132,
+      "branches": 10,
+      "priority_score": 294,
+      "calls": {
+        "com.ixisoft.gxdice.nokia40.SpriteRegion.setFrame": 2,
+        "com.ixisoft.midlet.util.Region.setLocation": 2,
+        "com.ixisoft.midlet.util.Region.setVisible": 2,
+        "com.ixisoft.gxdice.nokia40.GameController.setSelectedCol": 1,
+        "com.ixisoft.gxdice.nokia40.GameController.getSelectedRow": 1,
+        "com.ixisoft.gxdice.nokia40.GameModel.getDieValue": 1,
+        "com.ixisoft.gxdice.nokia40.GameController.incrementColPlayerScore": 1,
+        "com.ixisoft.gxdice.nokia40.GameModel.setDieValue": 1,
+        "com.ixisoft.gxdice.nokia40.GameController.isSelectableRow": 1,
+        "com.ixisoft.gxdice.nokia40.GameController.setSelectedRow": 1,
+        "javax.microedition.lcdui.Canvas.repaint": 1,
+        "java.lang.System.gc": 1
+      }
+    },
+    {
+      "class": "com.ixisoft.midlet.imageloader.ImageLoader",
+      "signature": "public javax.microedition.lcdui.Image putImage(java.lang.String, javax.microedition.lcdui.Image);",
+      "instructions": 106,
+      "branches": 11,
+      "priority_score": 245,
+      "calls": {
+        "java.lang.StringBuffer.append": 2,
+        "javax.microedition.lcdui.Image.createImage": 2,
+        "java.io.InputStream.close": 2,
+        "javax.microedition.io.Connection.close": 2,
+        "java.util.Hashtable.put": 1,
+        "java.util.Hashtable.get": 1,
+        "java.lang.String.startsWith": 1,
+        "javax.microedition.io.Connector.open": 1,
+        "javax.microedition.io.HttpConnection.getResponseCode": 1,
+        "javax.microedition.io.HttpConnection.getResponseMessage": 1,
+        "java.lang.StringBuffer.toString": 1,
+        "javax.microedition.io.InputConnection.openInputStream": 1,
+        "javax.microedition.io.ContentConnection.getLength": 1,
+        "java.io.InputStream.read": 1
+      }
+    },
+    {
+      "class": "com.ixisoft.gxdice.nokia40.GamePlayScreen",
+      "signature": "private void updateSprites();",
+      "instructions": 126,
+      "branches": 18,
+      "priority_score": 180,
+      "calls": {
+        "com.ixisoft.gxdice.nokia40.SpriteRegion.setFrame": 7,
+        "java.lang.String.valueOf": 2,
+        "com.ixisoft.midlet.region.StringRegion.setValue": 2,
+        "com.ixisoft.gxdice.nokia40.GameModel.getDieValue": 1,
+        "com.ixisoft.gxdice.nokia40.GameController.getSelectedRow": 1,
+        "com.ixisoft.gxdice.nokia40.GameController.isSelectableRow": 1,
+        "com.ixisoft.gxdice.nokia40.GameController.getSelectedCol": 1,
+        "com.ixisoft.gxdice.nokia40.GameController.isSelectableCol": 1,
+        "com.ixisoft.gxdice.nokia40.GameController.getColPlayerScore": 1,
+        "com.ixisoft.gxdice.nokia40.GameController.getRowPlayerScore": 1
+      }
+    },
+    {
+      "class": "com.ixisoft.gxdice.nokia40.GamePlayScreen",
+      "signature": "private void handleEndGame();",
+      "instructions": 78,
+      "branches": 5,
+      "priority_score": 171,
+      "calls": {
+        "com.ixisoft.midlet.region.StringRegion.setValue": 3,
+        "com.ixisoft.gxdice.nokia40.GameController.getRowPlayerScore": 2,
+        "com.ixisoft.gxdice.nokia40.GameController.getColPlayerScore": 2,
+        "com.ixisoft.midlet.util.Region.setVisible": 2,
+        "javax.microedition.lcdui.Displayable.addCommand": 2,
+        "com.ixisoft.midlet.util.ContainerCanvas.getMIDletContext": 1,
+        "com.ixisoft.midlet.util.MIDletContext.getMIDlet": 1,
+        "javax.microedition.lcdui.Display.getDisplay": 1,
+        "javax.microedition.lcdui.AlertType.playSound": 1,
+        "javax.microedition.lcdui.Canvas.repaint": 1,
+        "javax.microedition.lcdui.Displayable.removeCommand": 1,
+        "java.lang.System.gc": 1
+      }
+    },
+    {
+      "class": "com.ixisoft.midlet.region.ImageRegion",
+      "signature": "public void paint(javax.microedition.lcdui.Graphics);",
+      "instructions": 72,
+      "branches": 9,
+      "priority_score": 171,
+      "calls": {
+        "javax.microedition.lcdui.Graphics.drawImage": 4,
+        "com.ixisoft.midlet.util.Region.getWidth": 2,
+        "com.ixisoft.midlet.util.Region.getHeight": 2,
+        "javax.microedition.lcdui.Graphics.drawString": 1
+      }
+    },
+    {
+      "class": "com.ixisoft.midlet.util.RegionContainer",
+      "signature": "protected void paintRegion(javax.microedition.lcdui.Graphics, com.ixisoft.midlet.util.Region);",
+      "instructions": 73,
+      "branches": 1,
+      "priority_score": 149,
+      "calls": {
+        "javax.microedition.lcdui.Graphics.translate": 2,
+        "javax.microedition.lcdui.Graphics.getClipX": 1,
+        "javax.microedition.lcdui.Graphics.getClipY": 1,
+        "javax.microedition.lcdui.Graphics.getClipWidth": 1,
+        "javax.microedition.lcdui.Graphics.getClipHeight": 1,
+        "com.ixisoft.midlet.util.Region.getX": 1,
+        "com.ixisoft.midlet.util.Region.getY": 1,
+        "com.ixisoft.midlet.util.Region.getWidth": 1,
+        "com.ixisoft.midlet.util.Region.getHeight": 1,
+        "com.ixisoft.midlet.util.MIDletUtils.rectangleIntersects": 1,
+        "javax.microedition.lcdui.Graphics.setColor": 1,
+        "javax.microedition.lcdui.Graphics.setFont": 1,
+        "javax.microedition.lcdui.Graphics.clipRect": 1,
+        "com.ixisoft.midlet.util.Region.paint": 1,
+        "javax.microedition.lcdui.Graphics.setClip": 1,
+        "javax.microedition.lcdui.Font.getFont": 1
+      }
+    },
+    {
+      "class": "com.ixisoft.gxdice.nokia40.MinimaxRobot",
+      "signature": "private int minimaxMove(com.ixisoft.gxdice.nokia40.GameController);",
+      "instructions": 100,
+      "branches": 15,
+      "priority_score": 145,
+      "calls": {
+        "com.ixisoft.gxdice.nokia40.GameModel.getRowSize": 3,
+        "com.ixisoft.gxdice.nokia40.GameModel.getColSize": 3,
+        "com.ixisoft.gxdice.nokia40.GameController.getGameModel": 1,
+        "com.ixisoft.gxdice.nokia40.GameController.isSelectableCol": 1,
+        "com.ixisoft.gxdice.nokia40.GameController.isSelectableRow": 1
+      }
+    },
+    {
+      "class": "com.ixisoft.gxdice.nokia40.WelcomeScreen",
+      "signature": "public com.ixisoft.gxdice.nokia40.WelcomeScreen(com.ixisoft.gxdice.nokia40.MainMIDlet);",
+      "instructions": 128,
+      "branches": 1,
+      "priority_score": 131,
+      "calls": {
+        "javax.microedition.lcdui.Displayable.addCommand": 4,
+        "javax.microedition.midlet.MIDlet.getAppProperty": 2,
+        "java.lang.StringBuffer.append": 2,
+        "javax.microedition.lcdui.Form.append": 2,
+        "javax.microedition.lcdui.Image.createImage": 1,
+        "java.lang.StringBuffer.toString": 1,
+        "javax.microedition.lcdui.Displayable.setCommandListener": 1
+      }
+    },
+    {
+      "class": "com.ixisoft.midlet.region.StringRegion",
+      "signature": "public void paint(javax.microedition.lcdui.Graphics);",
+      "instructions": 73,
+      "branches": 10,
+      "priority_score": 103,
+      "calls": {
+        "com.ixisoft.midlet.util.Region.getWidth": 2,
+        "com.ixisoft.midlet.util.Region.getHeight": 2,
+        "javax.microedition.lcdui.Graphics.setFont": 1,
+        "javax.microedition.lcdui.Graphics.setColor": 1,
+        "javax.microedition.lcdui.Graphics.drawString": 1
+      }
+    },
+    {
+      "class": "com.ixisoft.midlet.region.BorderRegion",
+      "signature": "public void paint(javax.microedition.lcdui.Graphics);",
+      "instructions": 95,
+      "branches": 2,
+      "priority_score": 101,
+      "calls": {
+        "javax.microedition.lcdui.Graphics.setColor": 4,
+        "javax.microedition.lcdui.Graphics.drawLine": 4,
+        "javax.microedition.lcdui.Graphics.drawRect": 2,
+        "com.ixisoft.midlet.util.Region.getWidth": 1,
+        "com.ixisoft.midlet.util.Region.getHeight": 1,
+        "javax.microedition.lcdui.Graphics.fillRect": 1
+      }
+    },
+    {
+      "class": "com.ixisoft.gxdice.nokia40.GamePlayScreen",
+      "signature": "public void resetGame();",
+      "instructions": 47,
+      "branches": 1,
+      "priority_score": 97,
+      "calls": {
+        "javax.microedition.lcdui.Displayable.addCommand": 2,
+        "javax.microedition.lcdui.Displayable.removeCommand": 1,
+        "com.ixisoft.midlet.util.Region.setVisible": 1,
+        "javax.microedition.lcdui.Canvas.repaint": 1
+      }
+    },
+    {
+      "class": "com.ixisoft.midlet.util.Region",
+      "signature": "void repaint(int, int, int, int);",
+      "instructions": 25,
+      "branches": 4,
+      "priority_score": 87,
+      "calls": {
+        "javax.microedition.lcdui.Canvas.repaint": 1,
+        "com.ixisoft.midlet.util.RegionContainer.repaintRegion": 1
+      }
+    }
+  ],
+  "class_details": [
+    {
+      "class_file": "com/ixisoft/gxdice/nokia40/ColOptionScreen.class",
+      "class_name": "com.ixisoft.gxdice.nokia40.ColOptionScreen",
+      "methods_count": 8,
+      "instructions_count": 119,
+      "branch_count": 4,
+      "methods": [
+        {
+          "signature": "public com.ixisoft.gxdice.nokia40.ColOptionScreen();",
+          "instructions": 52,
+          "branches": 0,
+          "calls": {
+            "javax.microedition.lcdui.List.append": 4,
+            "javax.microedition.lcdui.Displayable.addCommand": 2,
+            "javax.microedition.lcdui.Displayable.setCommandListener": 1
+          },
+          "opcodes": {
+            "aload_0": 13,
+            "ldc": 7,
+            "invokevirtual": 7,
+            "aconst_null": 4,
+            "pop": 4,
+            "invokespecial": 3,
+            "iconst_3": 2,
+            "new": 2,
+            "dup": 2,
+            "putfield": 2,
+            "getfield": 2,
+            "iconst_0": 1,
+            "iconst_2": 1,
+            "iconst_1": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "public void setMIDletContext(com.ixisoft.midlet.util.MIDletContext);",
+          "instructions": 4,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 1,
+            "aload_1": 1,
+            "putfield": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "public com.ixisoft.midlet.util.MIDletContext getMIDletContext();",
+          "instructions": 3,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 1,
+            "getfield": 1,
+            "areturn": 1
+          }
+        },
+        {
+          "signature": "public void initScreen();",
+          "instructions": 1,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "return": 1
+          }
+        },
+        {
+          "signature": "public void disposeScreen();",
+          "instructions": 1,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "return": 1
+          }
+        },
+        {
+          "signature": "public void showScreen();",
+          "instructions": 10,
+          "branches": 0,
+          "calls": {
+            "com.ixisoft.midlet.util.MIDletContext.getMIDlet": 1,
+            "javax.microedition.lcdui.Display.getDisplay": 1,
+            "javax.microedition.lcdui.Display.setCurrent": 1,
+            "javax.microedition.lcdui.Displayable.setCommandListener": 1
+          },
+          "opcodes": {
+            "aload_0": 4,
+            "invokevirtual": 2,
+            "getfield": 1,
+            "invokeinterface": 1,
+            "invokestatic": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "public void showScreen(com.ixisoft.gxdice.nokia40.ManagableScreen);",
+          "instructions": 6,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 2,
+            "aload_1": 1,
+            "putfield": 1,
+            "invokevirtual": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "public void commandAction(javax.microedition.lcdui.Command, javax.microedition.lcdui.Displayable);",
+          "instructions": 42,
+          "branches": 4,
+          "calls": {
+            "com.ixisoft.midlet.util.MIDletContext.getMIDlet": 1,
+            "javax.microedition.lcdui.Display.getDisplay": 1,
+            "javax.microedition.lcdui.Display.setCurrent": 1,
+            "com.ixisoft.gxdice.nokia40.RowOptionScreen.setMIDletContext": 1,
+            "com.ixisoft.gxdice.nokia40.RowOptionScreen.initScreen": 1,
+            "com.ixisoft.gxdice.nokia40.RowOptionScreen.setHomeScreen": 1,
+            "javax.microedition.lcdui.List.getSelectedIndex": 1,
+            "com.ixisoft.gxdice.nokia40.RowOptionScreen.setColPlayerOption": 1,
+            "com.ixisoft.gxdice.nokia40.RowOptionScreen.showScreen": 1
+          },
+          "opcodes": {
+            "aload_0": 8,
+            "invokevirtual": 7,
+            "getfield": 6,
+            "aload_3": 5,
+            "aload_1": 3,
+            "if_acmpne": 2,
+            "invokeinterface": 1,
+            "invokestatic": 1,
+            "checkcast": 1,
+            "goto": 1,
+            "getstatic": 1,
+            "if_acmpeq": 1,
+            "new": 1,
+            "dup": 1,
+            "invokespecial": 1
+          }
+        }
+      ]
+    },
+    {
+      "class_file": "com/ixisoft/gxdice/nokia40/GameController.class",
+      "class_name": "com.ixisoft.gxdice.nokia40.GameController",
+      "methods_count": 15,
+      "instructions_count": 133,
+      "branch_count": 6,
+      "methods": [
+        {
+          "signature": "public com.ixisoft.gxdice.nokia40.GameController(com.ixisoft.gxdice.nokia40.GameModel);",
+          "instructions": 18,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 6,
+            "putfield": 5,
+            "iconst_m1": 2,
+            "iconst_0": 2,
+            "invokespecial": 1,
+            "aload_1": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "public com.ixisoft.gxdice.nokia40.GameController(com.ixisoft.gxdice.nokia40.GameController);",
+          "instructions": 38,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 10,
+            "putfield": 9,
+            "aload_1": 5,
+            "getfield": 5,
+            "invokespecial": 2,
+            "iconst_m1": 2,
+            "iconst_0": 2,
+            "new": 1,
+            "dup": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "public com.ixisoft.gxdice.nokia40.GameModel getGameModel();",
+          "instructions": 3,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 1,
+            "getfield": 1,
+            "areturn": 1
+          }
+        },
+        {
+          "signature": "public int getSelectedRow();",
+          "instructions": 3,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 1,
+            "getfield": 1,
+            "ireturn": 1
+          }
+        },
+        {
+          "signature": "public void setSelectedRow(int);",
+          "instructions": 4,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 1,
+            "iload_1": 1,
+            "putfield": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "public int getSelectedCol();",
+          "instructions": 3,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 1,
+            "getfield": 1,
+            "ireturn": 1
+          }
+        },
+        {
+          "signature": "public void setSelectedCol(int);",
+          "instructions": 4,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 1,
+            "iload_1": 1,
+            "putfield": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "public boolean isSelectableRow(int);",
+          "instructions": 16,
+          "branches": 3,
+          "calls": {
+            "com.ixisoft.gxdice.nokia40.GameModel.getDieValue": 1
+          },
+          "opcodes": {
+            "aload_0": 3,
+            "getfield": 3,
+            "iconst_1": 2,
+            "ireturn": 2,
+            "ifge": 1,
+            "iload_1": 1,
+            "invokevirtual": 1,
+            "ifle": 1,
+            "goto": 1,
+            "iconst_0": 1
+          }
+        },
+        {
+          "signature": "public boolean isSelectableCol(int);",
+          "instructions": 16,
+          "branches": 3,
+          "calls": {
+            "com.ixisoft.gxdice.nokia40.GameModel.getDieValue": 1
+          },
+          "opcodes": {
+            "aload_0": 3,
+            "getfield": 3,
+            "iconst_1": 2,
+            "ireturn": 2,
+            "ifge": 1,
+            "iload_1": 1,
+            "invokevirtual": 1,
+            "ifle": 1,
+            "goto": 1,
+            "iconst_0": 1
+          }
+        },
+        {
+          "signature": "public int getRowPlayerScore();",
+          "instructions": 3,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 1,
+            "getfield": 1,
+            "ireturn": 1
+          }
+        },
+        {
+          "signature": "public int getColPlayerScore();",
+          "instructions": 3,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 1,
+            "getfield": 1,
+            "ireturn": 1
+          }
+        },
+        {
+          "signature": "public void setRowPlayerScore(int);",
+          "instructions": 4,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 1,
+            "iload_1": 1,
+            "putfield": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "public void setColPlayerScore(int);",
+          "instructions": 4,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 1,
+            "iload_1": 1,
+            "putfield": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "public void incrementRowPlayerScore(int);",
+          "instructions": 7,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 1,
+            "dup": 1,
+            "getfield": 1,
+            "iload_1": 1,
+            "iadd": 1,
+            "putfield": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "public void incrementColPlayerScore(int);",
+          "instructions": 7,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 1,
+            "dup": 1,
+            "getfield": 1,
+            "iload_1": 1,
+            "iadd": 1,
+            "putfield": 1,
+            "return": 1
+          }
+        }
+      ]
+    },
+    {
+      "class_file": "com/ixisoft/gxdice/nokia40/GameModel.class",
+      "class_name": "com.ixisoft.gxdice.nokia40.GameModel",
+      "methods_count": 6,
+      "instructions_count": 74,
+      "branch_count": 2,
+      "methods": [
+        {
+          "signature": "public com.ixisoft.gxdice.nokia40.GameModel(int, int);",
+          "instructions": 14,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 4,
+            "putfield": 3,
+            "iload_1": 2,
+            "iload_2": 2,
+            "invokespecial": 1,
+            "multianewarray": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "public com.ixisoft.gxdice.nokia40.GameModel(com.ixisoft.gxdice.nokia40.GameModel);",
+          "instructions": 39,
+          "branches": 2,
+          "calls": {
+            "java.lang.System.arraycopy": 1
+          },
+          "opcodes": {
+            "aload_0": 9,
+            "getfield": 8,
+            "aload_1": 3,
+            "putfield": 3,
+            "iconst_0": 3,
+            "iload_2": 3,
+            "aaload": 2,
+            "invokespecial": 1,
+            "multianewarray": 1,
+            "istore_2": 1,
+            "goto": 1,
+            "invokestatic": 1,
+            "iinc": 1,
+            "if_icmplt": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "public int getRowSize();",
+          "instructions": 3,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 1,
+            "getfield": 1,
+            "ireturn": 1
+          }
+        },
+        {
+          "signature": "public int getColSize();",
+          "instructions": 3,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 1,
+            "getfield": 1,
+            "ireturn": 1
+          }
+        },
+        {
+          "signature": "public byte getDieValue(int, int);",
+          "instructions": 7,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 1,
+            "getfield": 1,
+            "iload_1": 1,
+            "aaload": 1,
+            "iload_2": 1,
+            "baload": 1,
+            "ireturn": 1
+          }
+        },
+        {
+          "signature": "public void setDieValue(int, int, byte);",
+          "instructions": 8,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 1,
+            "getfield": 1,
+            "iload_1": 1,
+            "aaload": 1,
+            "iload_2": 1,
+            "iload_3": 1,
+            "bastore": 1,
+            "return": 1
+          }
+        }
+      ]
+    },
+    {
+      "class_file": "com/ixisoft/gxdice/nokia40/GamePlayScreen$1.class",
+      "class_name": "com.ixisoft.gxdice.nokia40.GamePlayScreen$1",
+      "methods_count": 2,
+      "instructions_count": 25,
+      "branch_count": 1,
+      "methods": [
+        {
+          "signature": "com.ixisoft.gxdice.nokia40.GamePlayScreen$1(com.ixisoft.gxdice.nokia40.GamePlayScreen);",
+          "instructions": 6,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 2,
+            "invokespecial": 1,
+            "aload_1": 1,
+            "putfield": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "public void run();",
+          "instructions": 19,
+          "branches": 1,
+          "calls": {
+            "com.ixisoft.gxdice.nokia40.GamePlayScreen.access$000": 2,
+            "java.lang.Object.notifyAll": 1
+          },
+          "opcodes": {
+            "aload_1": 3,
+            "aload_0": 2,
+            "getfield": 2,
+            "invokestatic": 2,
+            "monitorexit": 2,
+            "astore_1": 1,
+            "monitorenter": 1,
+            "invokevirtual": 1,
+            "goto": 1,
+            "astore_2": 1,
+            "aload_2": 1,
+            "athrow": 1,
+            "return": 1
+          }
+        }
+      ]
+    },
+    {
+      "class_file": "com/ixisoft/gxdice/nokia40/GamePlayScreen.class",
+      "class_name": "com.ixisoft.gxdice.nokia40.GamePlayScreen",
+      "methods_count": 24,
+      "instructions_count": 2149,
+      "branch_count": 129,
+      "methods": [
+        {
+          "signature": "public com.ixisoft.gxdice.nokia40.GamePlayScreen();",
+          "instructions": 328,
+          "branches": 0,
+          "calls": {
+            "javax.microedition.lcdui.Font.getFont": 2
+          },
+          "opcodes": {
+            "aload_0": 97,
+            "putfield": 96,
+            "bipush": 68,
+            "iconst_0": 10,
+            "invokespecial": 8,
+            "iconst_1": 8,
+            "new": 7,
+            "dup": 7,
+            "ldc": 6,
+            "iconst_2": 5,
+            "iconst_3": 4,
+            "iconst_4": 3,
+            "sipush": 2,
+            "invokestatic": 2,
+            "anewarray": 2
+          }
+        },
+        {
+          "signature": "public void initScreen();",
+          "instructions": 34,
+          "branches": 0,
+          "calls": {
+            "javax.microedition.lcdui.Displayable.addCommand": 2,
+            "javax.microedition.lcdui.Displayable.removeCommand": 1,
+            "javax.microedition.lcdui.Displayable.setCommandListener": 1
+          },
+          "opcodes": {
+            "aload_0": 13,
+            "invokevirtual": 5,
+            "getfield": 4,
+            "invokespecial": 3,
+            "new": 2,
+            "dup": 2,
+            "bipush": 2,
+            "putfield": 2,
+            "return": 1
+          }
+        },
+        {
+          "signature": "public void disposeScreen();",
+          "instructions": 1,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "return": 1
+          }
+        },
+        {
+          "signature": "public void showScreen();",
+          "instructions": 10,
+          "branches": 0,
+          "calls": {
+            "com.ixisoft.midlet.util.ContainerCanvas.getMIDletContext": 1,
+            "com.ixisoft.midlet.util.MIDletContext.getMIDlet": 1,
+            "javax.microedition.lcdui.Display.getDisplay": 1,
+            "javax.microedition.lcdui.Display.setCurrent": 1,
+            "javax.microedition.lcdui.Displayable.setCommandListener": 1
+          },
+          "opcodes": {
+            "aload_0": 4,
+            "invokevirtual": 3,
+            "invokeinterface": 1,
+            "invokestatic": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "public void showScreen(com.ixisoft.gxdice.nokia40.ManagableScreen);",
+          "instructions": 6,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 2,
+            "aload_1": 1,
+            "putfield": 1,
+            "invokevirtual": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "public void commandAction(javax.microedition.lcdui.Command, javax.microedition.lcdui.Displayable);",
+          "instructions": 22,
+          "branches": 5,
+          "calls": {
+            "com.ixisoft.gxdice.nokia40.ManagableScreen.showScreen": 1
+          },
+          "opcodes": {
+            "aload_0": 6,
+            "getfield": 4,
+            "aload_1": 3,
+            "if_acmpne": 3,
+            "goto": 2,
+            "invokespecial": 1,
+            "invokeinterface": 1,
+            "invokevirtual": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "private void createGameScreen();",
+          "instructions": 609,
+          "branches": 13,
+          "calls": {
+            "com.ixisoft.midlet.util.ContainerCanvas.addRegion": 19,
+            "com.ixisoft.midlet.region.BorderRegion.setBackground": 10,
+            "java.lang.StringBuffer.append": 9,
+            "com.ixisoft.midlet.imageloader.ImageLoader.getImage": 7,
+            "com.ixisoft.midlet.region.BorderRegion.setBorderColor": 7,
+            "com.ixisoft.midlet.region.StringRegion.setHorizontalAlignment": 5,
+            "com.ixisoft.midlet.region.StringRegion.setFont": 4,
+            "com.ixisoft.midlet.util.RegionContainer.addRegion": 4,
+            "java.lang.StringBuffer.toString": 3,
+            "com.ixisoft.midlet.region.StringRegion.setValue": 3,
+            "com.ixisoft.midlet.util.Region.setVisible": 3,
+            "com.ixisoft.midlet.region.StringRegion.setFontColor": 2,
+            "com.ixisoft.midlet.util.Region.setSize": 2,
+            "com.ixisoft.midlet.imageloader.ImageLoader.getInstance": 1,
+            "java.io.PrintStream.println": 1,
+            "com.ixisoft.midlet.region.ImageRegion.setHorizontalCentered": 1,
+            "com.ixisoft.midlet.region.ImageRegion.setVerticalCentered": 1,
+            "java.lang.System.gc": 1,
+            "javax.microedition.lcdui.Canvas.repaint": 1
+          },
+          "opcodes": {
+            "invokevirtual": 82,
+            "bipush": 81,
+            "aload_0": 79,
+            "getfield": 48,
+            "aload": 36,
+            "ldc": 31,
+            "new": 26,
+            "dup": 26,
+            "invokespecial": 26,
+            "iload": 24,
+            "iconst_0": 23,
+            "astore": 16,
+            "iconst_1": 11,
+            "putfield": 11,
+            "aastore": 9
+          }
+        },
+        {
+          "signature": "protected void showNotify();",
+          "instructions": 3,
+          "branches": 0,
+          "calls": {
+            "javax.microedition.lcdui.Canvas.repaint": 1
+          },
+          "opcodes": {
+            "aload_0": 1,
+            "invokevirtual": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "public void paint(javax.microedition.lcdui.Graphics);",
+          "instructions": 17,
+          "branches": 1,
+          "calls": {
+            "com.ixisoft.midlet.util.ContainerCanvas.paintContainerCanvas": 1
+          },
+          "opcodes": {
+            "aload_2": 3,
+            "aload_0": 2,
+            "monitorexit": 2,
+            "getfield": 1,
+            "astore_2": 1,
+            "monitorenter": 1,
+            "aload_1": 1,
+            "invokespecial": 1,
+            "goto": 1,
+            "astore_3": 1,
+            "aload_3": 1,
+            "athrow": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "private void updateSprites();",
+          "instructions": 126,
+          "branches": 18,
+          "calls": {
+            "com.ixisoft.gxdice.nokia40.SpriteRegion.setFrame": 7,
+            "java.lang.String.valueOf": 2,
+            "com.ixisoft.midlet.region.StringRegion.setValue": 2,
+            "com.ixisoft.gxdice.nokia40.GameModel.getDieValue": 1,
+            "com.ixisoft.gxdice.nokia40.GameController.getSelectedRow": 1,
+            "com.ixisoft.gxdice.nokia40.GameController.isSelectableRow": 1,
+            "com.ixisoft.gxdice.nokia40.GameController.getSelectedCol": 1,
+            "com.ixisoft.gxdice.nokia40.GameController.isSelectableCol": 1,
+            "com.ixisoft.gxdice.nokia40.GameController.getColPlayerScore": 1,
+            "com.ixisoft.gxdice.nokia40.GameController.getRowPlayerScore": 1
+          },
+          "opcodes": {
+            "aload_0": 18,
+            "getfield": 18,
+            "invokevirtual": 16,
+            "goto": 8,
+            "aaload": 8,
+            "iload": 8,
+            "iconst_0": 6,
+            "iload_3": 6,
+            "iinc": 4,
+            "bipush": 4,
+            "if_icmplt": 4,
+            "iload_1": 3,
+            "iload_2": 3,
+            "if_icmpne": 3,
+            "iconst_1": 3
+          }
+        },
+        {
+          "signature": "protected void keyPressed(int);",
+          "instructions": 223,
+          "branches": 32,
+          "calls": {
+            "com.ixisoft.midlet.util.Region.repaintRegion": 8,
+            "javax.microedition.lcdui.Canvas.getGameAction": 2,
+            "javax.microedition.lcdui.Canvas.repaint": 2,
+            "com.ixisoft.gxdice.nokia40.GameController.isSelectableCol": 2,
+            "com.ixisoft.gxdice.nokia40.GameController.setSelectedCol": 2,
+            "com.ixisoft.gxdice.nokia40.GameController.isSelectableRow": 2,
+            "com.ixisoft.gxdice.nokia40.GameController.setSelectedRow": 2,
+            "com.ixisoft.gxdice.nokia40.GameController.getSelectedCol": 1,
+            "com.ixisoft.gxdice.nokia40.GameController.getSelectedRow": 1
+          },
+          "opcodes": {
+            "aload_0": 37,
+            "getfield": 27,
+            "invokevirtual": 24,
+            "goto": 17,
+            "aload": 16,
+            "iload_2": 10,
+            "iload_3": 8,
+            "astore": 8,
+            "monitorexit": 8,
+            "aaload": 8,
+            "iload": 8,
+            "ifeq": 5,
+            "iconst_1": 5,
+            "monitorenter": 4,
+            "invokespecial": 4
+          }
+        },
+        {
+          "signature": "void takeRow(int);",
+          "instructions": 132,
+          "branches": 10,
+          "calls": {
+            "com.ixisoft.gxdice.nokia40.SpriteRegion.setFrame": 2,
+            "com.ixisoft.midlet.util.Region.setLocation": 2,
+            "com.ixisoft.midlet.util.Region.setVisible": 2,
+            "com.ixisoft.gxdice.nokia40.GameController.setSelectedRow": 1,
+            "com.ixisoft.gxdice.nokia40.GameController.getSelectedCol": 1,
+            "com.ixisoft.gxdice.nokia40.GameModel.getDieValue": 1,
+            "com.ixisoft.gxdice.nokia40.GameController.incrementRowPlayerScore": 1,
+            "com.ixisoft.gxdice.nokia40.GameModel.setDieValue": 1,
+            "com.ixisoft.gxdice.nokia40.GameController.isSelectableCol": 1,
+            "com.ixisoft.gxdice.nokia40.GameController.setSelectedCol": 1,
+            "javax.microedition.lcdui.Canvas.repaint": 1,
+            "java.lang.System.gc": 1
+          },
+          "opcodes": {
+            "aload_0": 22,
+            "getfield": 17,
+            "invokevirtual": 14,
+            "iload": 11,
+            "bipush": 7,
+            "iload_1": 6,
+            "iconst_1": 6,
+            "iadd": 6,
+            "imul": 4,
+            "return": 3,
+            "ifeq": 3,
+            "aload_3": 3,
+            "istore": 3,
+            "iconst_0": 3,
+            "goto": 3
+          }
+        },
+        {
+          "signature": "void takeCol(int);",
+          "instructions": 132,
+          "branches": 10,
+          "calls": {
+            "com.ixisoft.gxdice.nokia40.SpriteRegion.setFrame": 2,
+            "com.ixisoft.midlet.util.Region.setLocation": 2,
+            "com.ixisoft.midlet.util.Region.setVisible": 2,
+            "com.ixisoft.gxdice.nokia40.GameController.setSelectedCol": 1,
+            "com.ixisoft.gxdice.nokia40.GameController.getSelectedRow": 1,
+            "com.ixisoft.gxdice.nokia40.GameModel.getDieValue": 1,
+            "com.ixisoft.gxdice.nokia40.GameController.incrementColPlayerScore": 1,
+            "com.ixisoft.gxdice.nokia40.GameModel.setDieValue": 1,
+            "com.ixisoft.gxdice.nokia40.GameController.isSelectableRow": 1,
+            "com.ixisoft.gxdice.nokia40.GameController.setSelectedRow": 1,
+            "javax.microedition.lcdui.Canvas.repaint": 1,
+            "java.lang.System.gc": 1
+          },
+          "opcodes": {
+            "aload_0": 22,
+            "getfield": 17,
+            "invokevirtual": 14,
+            "iload": 11,
+            "iconst_1": 7,
+            "bipush": 7,
+            "iload_1": 6,
+            "iadd": 6,
+            "imul": 4,
+            "return": 3,
+            "ifeq": 3,
+            "aload_3": 3,
+            "istore": 3,
+            "goto": 3,
+            "invokespecial": 3
+          }
+        },
+        {
+          "signature": "public void resetGame();",
+          "instructions": 47,
+          "branches": 1,
+          "calls": {
+            "javax.microedition.lcdui.Displayable.addCommand": 2,
+            "javax.microedition.lcdui.Displayable.removeCommand": 1,
+            "com.ixisoft.midlet.util.Region.setVisible": 1,
+            "javax.microedition.lcdui.Canvas.repaint": 1
+          },
+          "opcodes": {
+            "aload_0": 15,
+            "getfield": 5,
+            "invokevirtual": 5,
+            "aload_1": 3,
+            "invokespecial": 3,
+            "putfield": 3,
+            "iconst_0": 2,
+            "iconst_1": 2,
+            "monitorexit": 2,
+            "astore_1": 1,
+            "monitorenter": 1,
+            "goto": 1,
+            "astore_2": 1,
+            "aload_2": 1,
+            "athrow": 1
+          }
+        },
+        {
+          "signature": "public void startGame();",
+          "instructions": 8,
+          "branches": 1,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 3,
+            "getfield": 1,
+            "ifne": 1,
+            "invokevirtual": 1,
+            "invokespecial": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "private void handleStartGame();",
+          "instructions": 89,
+          "branches": 5,
+          "calls": {
+            "com.ixisoft.midlet.util.Region.setVisible": 3,
+            "javax.microedition.lcdui.Displayable.removeCommand": 2,
+            "java.lang.Thread.currentThread": 2,
+            "javax.microedition.lcdui.Displayable.addCommand": 1,
+            "com.ixisoft.gxdice.nokia40.SpriteRegion.setFrame": 1,
+            "com.ixisoft.gxdice.nokia40.GameController.setSelectedCol": 1,
+            "javax.microedition.lcdui.Canvas.repaint": 1,
+            "java.lang.Thread.start": 1,
+            "java.lang.Thread.yield": 1,
+            "java.lang.Thread.sleep": 1
+          },
+          "opcodes": {
+            "aload_0": 25,
+            "getfield": 14,
+            "invokevirtual": 10,
+            "iconst_0": 6,
+            "putfield": 4,
+            "invokestatic": 4,
+            "aload_1": 3,
+            "invokespecial": 3,
+            "monitorexit": 2,
+            "goto": 2,
+            "astore_2": 2,
+            "ifeq": 2,
+            "pop": 2,
+            "astore_1": 1,
+            "monitorenter": 1
+          }
+        },
+        {
+          "signature": "private void handleEndGame();",
+          "instructions": 78,
+          "branches": 5,
+          "calls": {
+            "com.ixisoft.midlet.region.StringRegion.setValue": 3,
+            "com.ixisoft.gxdice.nokia40.GameController.getRowPlayerScore": 2,
+            "com.ixisoft.gxdice.nokia40.GameController.getColPlayerScore": 2,
+            "com.ixisoft.midlet.util.Region.setVisible": 2,
+            "javax.microedition.lcdui.Displayable.addCommand": 2,
+            "com.ixisoft.midlet.util.ContainerCanvas.getMIDletContext": 1,
+            "com.ixisoft.midlet.util.MIDletContext.getMIDlet": 1,
+            "javax.microedition.lcdui.Display.getDisplay": 1,
+            "javax.microedition.lcdui.AlertType.playSound": 1,
+            "javax.microedition.lcdui.Canvas.repaint": 1,
+            "javax.microedition.lcdui.Displayable.removeCommand": 1,
+            "java.lang.System.gc": 1
+          },
+          "opcodes": {
+            "aload_0": 20,
+            "invokevirtual": 15,
+            "getfield": 13,
+            "aload_1": 3,
+            "ldc": 3,
+            "goto": 3,
+            "iconst_1": 2,
+            "putfield": 2,
+            "invokestatic": 2,
+            "monitorexit": 2,
+            "aconst_null": 1,
+            "astore_1": 1,
+            "monitorenter": 1,
+            "if_icmple": 1,
+            "if_icmpge": 1
+          }
+        },
+        {
+          "signature": "private void resetGameModel();",
+          "instructions": 64,
+          "branches": 4,
+          "calls": {
+            "com.ixisoft.midlet.util.MIDletUtils.getRandomInt": 2,
+            "com.ixisoft.gxdice.nokia40.GameModel.setDieValue": 1
+          },
+          "opcodes": {
+            "bipush": 7,
+            "iload": 7,
+            "istore": 6,
+            "aload_1": 4,
+            "iload_3": 4,
+            "iconst_1": 4,
+            "iload_2": 3,
+            "goto": 2,
+            "iastore": 2,
+            "iinc": 2,
+            "invokestatic": 2,
+            "iaload": 2,
+            "isub": 2,
+            "idiv": 2,
+            "iadd": 2
+          }
+        },
+        {
+          "signature": "private void resetGameController();",
+          "instructions": 17,
+          "branches": 0,
+          "calls": {
+            "com.ixisoft.gxdice.nokia40.GameController.setSelectedRow": 1,
+            "com.ixisoft.gxdice.nokia40.GameController.setSelectedCol": 1,
+            "com.ixisoft.gxdice.nokia40.GameController.setRowPlayerScore": 1,
+            "com.ixisoft.gxdice.nokia40.GameController.setColPlayerScore": 1
+          },
+          "opcodes": {
+            "aload_0": 4,
+            "getfield": 4,
+            "invokevirtual": 4,
+            "iconst_m1": 2,
+            "iconst_0": 2,
+            "return": 1
+          }
+        },
+        {
+          "signature": "public void setColPlayerOption(int);",
+          "instructions": 37,
+          "branches": 5,
+          "calls": {},
+          "opcodes": {
+            "iconst_1": 5,
+            "astore_2": 4,
+            "new": 3,
+            "dup": 3,
+            "invokespecial": 3,
+            "goto": 3,
+            "aload_0": 3,
+            "putfield": 3,
+            "aload_2": 2,
+            "aconst_null": 1,
+            "iload_1": 1,
+            "tableswitch": 1,
+            "iconst_4": 1,
+            "bipush": 1,
+            "ifnonnull": 1
+          }
+        },
+        {
+          "signature": "public void setRowPlayerOption(int);",
+          "instructions": 37,
+          "branches": 5,
+          "calls": {},
+          "opcodes": {
+            "astore_2": 4,
+            "iconst_0": 4,
+            "new": 3,
+            "dup": 3,
+            "invokespecial": 3,
+            "goto": 3,
+            "aload_0": 3,
+            "putfield": 3,
+            "iconst_1": 2,
+            "aload_2": 2,
+            "aconst_null": 1,
+            "iload_1": 1,
+            "tableswitch": 1,
+            "iconst_3": 1,
+            "bipush": 1
+          }
+        },
+        {
+          "signature": "public void run();",
+          "instructions": 115,
+          "branches": 14,
+          "calls": {
+            "com.ixisoft.gxdice.nokia40.SpriteRegion.setFrame": 2,
+            "com.ixisoft.midlet.util.Region.repaintRegion": 2,
+            "com.ixisoft.gxdice.nokia40.XingDiceRobot.takeTurn": 2,
+            "java.lang.Thread.currentThread": 1,
+            "java.lang.Object.wait": 1,
+            "java.lang.Thread.sleep": 1
+          },
+          "opcodes": {
+            "aload_0": 21,
+            "getfield": 19,
+            "goto": 7,
+            "invokevirtual": 7,
+            "aload_3": 6,
+            "monitorexit": 6,
+            "aload_2": 3,
+            "monitorenter": 3,
+            "astore_3": 3,
+            "ifeq": 3,
+            "astore": 3,
+            "aload": 3,
+            "athrow": 3,
+            "aload_1": 3,
+            "if_acmpne": 3
+          }
+        },
+        {
+          "signature": "private void notifyRobots();",
+          "instructions": 11,
+          "branches": 0,
+          "calls": {
+            "java.lang.Thread.start": 1
+          },
+          "opcodes": {
+            "new": 2,
+            "dup": 2,
+            "invokespecial": 2,
+            "aload_0": 1,
+            "astore_1": 1,
+            "aload_1": 1,
+            "invokevirtual": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "static java.lang.Object access$000(com.ixisoft.gxdice.nokia40.GamePlayScreen);",
+          "instructions": 3,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 1,
+            "getfield": 1,
+            "areturn": 1
+          }
+        }
+      ]
+    },
+    {
+      "class_file": "com/ixisoft/gxdice/nokia40/MainMIDlet.class",
+      "class_name": "com.ixisoft.gxdice.nokia40.MainMIDlet",
+      "methods_count": 4,
+      "instructions_count": 34,
+      "branch_count": 0,
+      "methods": [
+        {
+          "signature": "public com.ixisoft.gxdice.nokia40.MainMIDlet();",
+          "instructions": 9,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 3,
+            "invokespecial": 2,
+            "new": 1,
+            "dup": 1,
+            "putfield": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "public void startApp();",
+          "instructions": 21,
+          "branches": 0,
+          "calls": {
+            "com.ixisoft.gxdice.nokia40.ManagableScreen.setMIDletContext": 1,
+            "com.ixisoft.gxdice.nokia40.ManagableScreen.initScreen": 1,
+            "javax.microedition.lcdui.Display.getDisplay": 1,
+            "javax.microedition.lcdui.Display.setCurrent": 1
+          },
+          "opcodes": {
+            "aload_0": 5,
+            "aload_1": 3,
+            "getfield": 2,
+            "invokeinterface": 2,
+            "new": 1,
+            "dup": 1,
+            "invokespecial": 1,
+            "astore_1": 1,
+            "invokestatic": 1,
+            "putfield": 1,
+            "checkcast": 1,
+            "invokevirtual": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "public void pauseApp();",
+          "instructions": 1,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "return": 1
+          }
+        },
+        {
+          "signature": "public void destroyApp(boolean);",
+          "instructions": 3,
+          "branches": 0,
+          "calls": {
+            "javax.microedition.midlet.MIDlet.notifyDestroyed": 1
+          },
+          "opcodes": {
+            "aload_0": 1,
+            "invokevirtual": 1,
+            "return": 1
+          }
+        }
+      ]
+    },
+    {
+      "class_file": "com/ixisoft/gxdice/nokia40/ManagableScreen.class",
+      "class_name": "com.ixisoft.gxdice.nokia40.ManagableScreen",
+      "methods_count": 6,
+      "instructions_count": 0,
+      "branch_count": 0,
+      "methods": [
+        {
+          "signature": "public abstract void setMIDletContext(com.ixisoft.midlet.util.MIDletContext);",
+          "instructions": 0,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {}
+        },
+        {
+          "signature": "public abstract com.ixisoft.midlet.util.MIDletContext getMIDletContext();",
+          "instructions": 0,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {}
+        },
+        {
+          "signature": "public abstract void initScreen();",
+          "instructions": 0,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {}
+        },
+        {
+          "signature": "public abstract void disposeScreen();",
+          "instructions": 0,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {}
+        },
+        {
+          "signature": "public abstract void showScreen();",
+          "instructions": 0,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {}
+        },
+        {
+          "signature": "public abstract void showScreen(com.ixisoft.gxdice.nokia40.ManagableScreen);",
+          "instructions": 0,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {}
+        }
+      ]
+    },
+    {
+      "class_file": "com/ixisoft/gxdice/nokia40/MinimaxRobot.class",
+      "class_name": "com.ixisoft.gxdice.nokia40.MinimaxRobot",
+      "methods_count": 7,
+      "instructions_count": 666,
+      "branch_count": 88,
+      "methods": [
+        {
+          "signature": "public com.ixisoft.gxdice.nokia40.MinimaxRobot(int, boolean);",
+          "instructions": 9,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 3,
+            "putfield": 2,
+            "invokespecial": 1,
+            "iload_1": 1,
+            "iload_2": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "public int takeTurn(com.ixisoft.gxdice.nokia40.GameController);",
+          "instructions": 4,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 1,
+            "aload_1": 1,
+            "invokespecial": 1,
+            "ireturn": 1
+          }
+        },
+        {
+          "signature": "private int minimaxMove(com.ixisoft.gxdice.nokia40.GameController);",
+          "instructions": 100,
+          "branches": 15,
+          "calls": {
+            "com.ixisoft.gxdice.nokia40.GameModel.getRowSize": 3,
+            "com.ixisoft.gxdice.nokia40.GameModel.getColSize": 3,
+            "com.ixisoft.gxdice.nokia40.GameController.getGameModel": 1,
+            "com.ixisoft.gxdice.nokia40.GameController.isSelectableCol": 1,
+            "com.ixisoft.gxdice.nokia40.GameController.isSelectableRow": 1
+          },
+          "opcodes": {
+            "iload": 19,
+            "istore": 10,
+            "invokevirtual": 9,
+            "aload_2": 8,
+            "aload_0": 6,
+            "aload_1": 5,
+            "getfield": 4,
+            "ifeq": 4,
+            "iinc": 4,
+            "goto": 4,
+            "istore_3": 3,
+            "if_icmpge": 3,
+            "invokestatic": 2,
+            "idiv": 2,
+            "iconst_0": 2
+          }
+        },
+        {
+          "signature": "private int minimaxValue(com.ixisoft.gxdice.nokia40.GameController, int, boolean, int);",
+          "instructions": 9,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "ldc": 2,
+            "aload_0": 1,
+            "aload_1": 1,
+            "iload_2": 1,
+            "iload_3": 1,
+            "iload": 1,
+            "invokespecial": 1,
+            "ireturn": 1
+          }
+        },
+        {
+          "signature": "private int minimaxValue(com.ixisoft.gxdice.nokia40.GameController, int, boolean, int, int, int);",
+          "instructions": 489,
+          "branches": 66,
+          "calls": {
+            "com.ixisoft.gxdice.nokia40.GameController.getRowPlayerScore": 6,
+            "com.ixisoft.gxdice.nokia40.GameController.getColPlayerScore": 6,
+            "com.ixisoft.gxdice.nokia40.GameController.isSelectableRow": 3,
+            "com.ixisoft.gxdice.nokia40.GameModel.getRowSize": 3,
+            "com.ixisoft.gxdice.nokia40.GameController.isSelectableCol": 3,
+            "com.ixisoft.gxdice.nokia40.GameModel.getColSize": 3,
+            "com.ixisoft.gxdice.nokia40.GameModel.getDieValue": 2,
+            "com.ixisoft.gxdice.nokia40.GameModel.setDieValue": 2,
+            "com.ixisoft.gxdice.nokia40.GameController.getGameModel": 1,
+            "com.ixisoft.gxdice.nokia40.GameController.getSelectedRow": 1,
+            "com.ixisoft.gxdice.nokia40.GameController.getSelectedCol": 1,
+            "com.ixisoft.gxdice.nokia40.GameController.setSelectedCol": 1,
+            "com.ixisoft.gxdice.nokia40.GameController.incrementColPlayerScore": 1,
+            "com.ixisoft.gxdice.nokia40.GameController.setSelectedRow": 1,
+            "com.ixisoft.gxdice.nokia40.GameController.incrementRowPlayerScore": 1
+          },
+          "opcodes": {
+            "iload": 173,
+            "istore": 59,
+            "aload_1": 38,
+            "invokevirtual": 35,
+            "ifeq": 21,
+            "goto": 19,
+            "iconst_0": 17,
+            "iconst_1": 14,
+            "if_icmplt": 12,
+            "aload": 10,
+            "isub": 10,
+            "ireturn": 10,
+            "invokestatic": 9,
+            "aload_0": 8,
+            "iload_3": 8
+          }
+        },
+        {
+          "signature": "private static int getTurnsTaken(com.ixisoft.gxdice.nokia40.GameModel);",
+          "instructions": 30,
+          "branches": 5,
+          "calls": {
+            "com.ixisoft.gxdice.nokia40.GameModel.getRowSize": 1,
+            "com.ixisoft.gxdice.nokia40.GameModel.getColSize": 1,
+            "com.ixisoft.gxdice.nokia40.GameModel.getDieValue": 1
+          },
+          "opcodes": {
+            "iload": 4,
+            "aload_0": 3,
+            "invokevirtual": 3,
+            "iconst_0": 3,
+            "iinc": 3,
+            "istore": 2,
+            "goto": 2,
+            "if_icmplt": 2,
+            "istore_1": 1,
+            "istore_2": 1,
+            "istore_3": 1,
+            "ifne": 1,
+            "iload_2": 1,
+            "iload_1": 1,
+            "iload_3": 1
+          }
+        },
+        {
+          "signature": "private static void undoMove(com.ixisoft.gxdice.nokia40.GameController, int, int, byte, int, int, int, int);",
+          "instructions": 25,
+          "branches": 2,
+          "calls": {
+            "com.ixisoft.gxdice.nokia40.GameController.getGameModel": 1,
+            "com.ixisoft.gxdice.nokia40.GameModel.setDieValue": 1,
+            "com.ixisoft.gxdice.nokia40.GameController.setSelectedRow": 1,
+            "com.ixisoft.gxdice.nokia40.GameController.setSelectedCol": 1,
+            "com.ixisoft.gxdice.nokia40.GameController.setRowPlayerScore": 1,
+            "com.ixisoft.gxdice.nokia40.GameController.setColPlayerScore": 1
+          },
+          "opcodes": {
+            "invokevirtual": 6,
+            "aload_0": 5,
+            "iload": 4,
+            "iload_2": 2,
+            "iconst_m1": 2,
+            "if_icmpeq": 2,
+            "iload_1": 2,
+            "iload_3": 1,
+            "return": 1
+          }
+        }
+      ]
+    },
+    {
+      "class_file": "com/ixisoft/gxdice/nokia40/RowOptionScreen.class",
+      "class_name": "com.ixisoft.gxdice.nokia40.RowOptionScreen",
+      "methods_count": 10,
+      "instructions_count": 140,
+      "branch_count": 4,
+      "methods": [
+        {
+          "signature": "public com.ixisoft.gxdice.nokia40.RowOptionScreen();",
+          "instructions": 58,
+          "branches": 0,
+          "calls": {
+            "javax.microedition.lcdui.List.append": 4,
+            "javax.microedition.lcdui.Displayable.addCommand": 2,
+            "javax.microedition.lcdui.Displayable.setCommandListener": 1
+          },
+          "opcodes": {
+            "aload_0": 15,
+            "ldc": 7,
+            "invokevirtual": 7,
+            "putfield": 4,
+            "aconst_null": 4,
+            "pop": 4,
+            "invokespecial": 3,
+            "iconst_0": 3,
+            "iconst_3": 2,
+            "new": 2,
+            "dup": 2,
+            "getfield": 2,
+            "iconst_2": 1,
+            "iconst_1": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "public void setMIDletContext(com.ixisoft.midlet.util.MIDletContext);",
+          "instructions": 4,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 1,
+            "aload_1": 1,
+            "putfield": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "public com.ixisoft.midlet.util.MIDletContext getMIDletContext();",
+          "instructions": 3,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 1,
+            "getfield": 1,
+            "areturn": 1
+          }
+        },
+        {
+          "signature": "public void initScreen();",
+          "instructions": 1,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "return": 1
+          }
+        },
+        {
+          "signature": "public void disposeScreen();",
+          "instructions": 1,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "return": 1
+          }
+        },
+        {
+          "signature": "public void showScreen();",
+          "instructions": 10,
+          "branches": 0,
+          "calls": {
+            "com.ixisoft.midlet.util.MIDletContext.getMIDlet": 1,
+            "javax.microedition.lcdui.Display.getDisplay": 1,
+            "javax.microedition.lcdui.Display.setCurrent": 1,
+            "javax.microedition.lcdui.Displayable.setCommandListener": 1
+          },
+          "opcodes": {
+            "aload_0": 4,
+            "invokevirtual": 2,
+            "getfield": 1,
+            "invokeinterface": 1,
+            "invokestatic": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "public void showScreen(com.ixisoft.gxdice.nokia40.ManagableScreen);",
+          "instructions": 6,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 2,
+            "aload_1": 1,
+            "putfield": 1,
+            "invokevirtual": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "public void setColPlayerOption(int);",
+          "instructions": 4,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 1,
+            "iload_1": 1,
+            "putfield": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "public void setHomeScreen(com.ixisoft.gxdice.nokia40.ManagableScreen);",
+          "instructions": 4,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 1,
+            "aload_1": 1,
+            "putfield": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "public void commandAction(javax.microedition.lcdui.Command, javax.microedition.lcdui.Displayable);",
+          "instructions": 49,
+          "branches": 4,
+          "calls": {
+            "com.ixisoft.midlet.util.MIDletContext.getMIDlet": 1,
+            "javax.microedition.lcdui.Display.getDisplay": 1,
+            "javax.microedition.lcdui.Display.setCurrent": 1,
+            "javax.microedition.lcdui.List.getSelectedIndex": 1,
+            "com.ixisoft.midlet.util.ContainerCanvas.setMIDletContext": 1,
+            "com.ixisoft.gxdice.nokia40.GamePlayScreen.initScreen": 1,
+            "com.ixisoft.gxdice.nokia40.GamePlayScreen.setColPlayerOption": 1,
+            "com.ixisoft.gxdice.nokia40.GamePlayScreen.setRowPlayerOption": 1,
+            "com.ixisoft.gxdice.nokia40.GamePlayScreen.resetGame": 1,
+            "com.ixisoft.gxdice.nokia40.GamePlayScreen.showScreen": 1
+          },
+          "opcodes": {
+            "aload_0": 10,
+            "getfield": 8,
+            "invokevirtual": 8,
+            "aload_3": 6,
+            "aload_1": 3,
+            "if_acmpne": 2,
+            "invokeinterface": 1,
+            "invokestatic": 1,
+            "checkcast": 1,
+            "goto": 1,
+            "getstatic": 1,
+            "if_acmpeq": 1,
+            "putfield": 1,
+            "new": 1,
+            "dup": 1
+          }
+        }
+      ]
+    },
+    {
+      "class_file": "com/ixisoft/gxdice/nokia40/SpriteRegion.class",
+      "class_name": "com.ixisoft.gxdice.nokia40.SpriteRegion",
+      "methods_count": 5,
+      "instructions_count": 101,
+      "branch_count": 9,
+      "methods": [
+        {
+          "signature": "public com.ixisoft.gxdice.nokia40.SpriteRegion(java.lang.String[]);",
+          "instructions": 10,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 3,
+            "aconst_null": 1,
+            "invokespecial": 1,
+            "aload_1": 1,
+            "putfield": 1,
+            "iconst_0": 1,
+            "invokevirtual": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "public com.ixisoft.gxdice.nokia40.SpriteRegion(javax.microedition.lcdui.Image[]);",
+          "instructions": 42,
+          "branches": 3,
+          "calls": {
+            "com.ixisoft.midlet.imageloader.ImageLoader.getInstance": 1,
+            "com.ixisoft.midlet.imageloader.ImageLoader.getImage": 1
+          },
+          "opcodes": {
+            "aload_0": 7,
+            "aload_1": 4,
+            "return": 3,
+            "getfield": 3,
+            "iload_3": 3,
+            "putfield": 2,
+            "iconst_0": 2,
+            "invokevirtual": 2,
+            "arraylength": 2,
+            "aconst_null": 1,
+            "invokespecial": 1,
+            "ifnull": 1,
+            "anewarray": 1,
+            "astore_1": 1,
+            "invokestatic": 1
+          }
+        },
+        {
+          "signature": "public void setFrame(int);",
+          "instructions": 30,
+          "branches": 4,
+          "calls": {
+            "com.ixisoft.midlet.region.ImageRegion.setImageLocator": 1,
+            "com.ixisoft.midlet.region.ImageRegion.setImage": 1
+          },
+          "opcodes": {
+            "aload_0": 7,
+            "iload_1": 5,
+            "invokevirtual": 3,
+            "getfield": 3,
+            "aaload": 2,
+            "iflt": 1,
+            "if_icmplt": 1,
+            "new": 1,
+            "dup": 1,
+            "invokespecial": 1,
+            "athrow": 1,
+            "ifnonnull": 1,
+            "goto": 1,
+            "putfield": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "public int getFrame();",
+          "instructions": 3,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 1,
+            "getfield": 1,
+            "ireturn": 1
+          }
+        },
+        {
+          "signature": "public int getFrames();",
+          "instructions": 16,
+          "branches": 2,
+          "calls": {},
+          "opcodes": {
+            "istore_1": 3,
+            "aload_0": 3,
+            "getfield": 3,
+            "arraylength": 2,
+            "iconst_0": 1,
+            "ifnonnull": 1,
+            "goto": 1,
+            "iload_1": 1,
+            "ireturn": 1
+          }
+        }
+      ]
+    },
+    {
+      "class_file": "com/ixisoft/gxdice/nokia40/WelcomeScreen.class",
+      "class_name": "com.ixisoft.gxdice.nokia40.WelcomeScreen",
+      "methods_count": 8,
+      "instructions_count": 547,
+      "branch_count": 35,
+      "methods": [
+        {
+          "signature": "public com.ixisoft.gxdice.nokia40.WelcomeScreen(com.ixisoft.gxdice.nokia40.MainMIDlet);",
+          "instructions": 128,
+          "branches": 1,
+          "calls": {
+            "javax.microedition.lcdui.Displayable.addCommand": 4,
+            "javax.microedition.midlet.MIDlet.getAppProperty": 2,
+            "java.lang.StringBuffer.append": 2,
+            "javax.microedition.lcdui.Form.append": 2,
+            "javax.microedition.lcdui.Image.createImage": 1,
+            "java.lang.StringBuffer.toString": 1,
+            "javax.microedition.lcdui.Displayable.setCommandListener": 1
+          },
+          "opcodes": {
+            "aload_0": 23,
+            "invokespecial": 13,
+            "ldc": 12,
+            "invokevirtual": 12,
+            "new": 12,
+            "dup": 12,
+            "putfield": 10,
+            "bipush": 5,
+            "iconst_2": 4,
+            "getfield": 4,
+            "aload_1": 3,
+            "iconst_1": 3,
+            "aconst_null": 3,
+            "astore_2": 2,
+            "pop": 2
+          }
+        },
+        {
+          "signature": "public void initScreen();",
+          "instructions": 1,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "return": 1
+          }
+        },
+        {
+          "signature": "public void disposeScreen();",
+          "instructions": 1,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "return": 1
+          }
+        },
+        {
+          "signature": "public void showScreen();",
+          "instructions": 9,
+          "branches": 0,
+          "calls": {
+            "javax.microedition.lcdui.Display.setCurrent": 1,
+            "javax.microedition.lcdui.Displayable.setCommandListener": 1
+          },
+          "opcodes": {
+            "aload_0": 4,
+            "getfield": 2,
+            "invokevirtual": 2,
+            "return": 1
+          }
+        },
+        {
+          "signature": "public void showScreen(com.ixisoft.gxdice.nokia40.ManagableScreen);",
+          "instructions": 3,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 1,
+            "invokevirtual": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "public void setMIDletContext(com.ixisoft.midlet.util.MIDletContext);",
+          "instructions": 4,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 1,
+            "aload_1": 1,
+            "putfield": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "public com.ixisoft.midlet.util.MIDletContext getMIDletContext();",
+          "instructions": 3,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 1,
+            "getfield": 1,
+            "areturn": 1
+          }
+        },
+        {
+          "signature": "public void commandAction(javax.microedition.lcdui.Command, javax.microedition.lcdui.Displayable);",
+          "instructions": 398,
+          "branches": 34,
+          "calls": {
+            "java.lang.StringBuffer.append": 11,
+            "javax.microedition.lcdui.Form.append": 10,
+            "javax.microedition.lcdui.Display.setCurrent": 6,
+            "javax.microedition.lcdui.Displayable.addCommand": 6,
+            "java.util.Vector.elementAt": 4,
+            "java.lang.StringBuffer.toString": 3,
+            "java.util.Vector.indexOf": 2,
+            "java.util.Vector.firstElement": 2,
+            "java.util.Vector.size": 2,
+            "javax.microedition.lcdui.Displayable.setCommandListener": 2,
+            "java.util.Vector.addElement": 2,
+            "com.ixisoft.gxdice.nokia40.MainMIDlet.destroyApp": 1,
+            "com.ixisoft.gxdice.nokia40.ColOptionScreen.setMIDletContext": 1,
+            "com.ixisoft.gxdice.nokia40.ColOptionScreen.initScreen": 1,
+            "com.ixisoft.gxdice.nokia40.ColOptionScreen.showScreen": 1,
+            "javax.microedition.midlet.MIDlet.getAppProperty": 1
+          },
+          "opcodes": {
+            "invokevirtual": 58,
+            "aload_0": 50,
+            "getfield": 44,
+            "ldc": 26,
+            "invokespecial": 22,
+            "aload_3": 20,
+            "dup": 18,
+            "new": 16,
+            "goto": 14,
+            "aload_1": 12,
+            "aload_2": 10,
+            "if_acmpne": 10,
+            "iconst_1": 10,
+            "iload_1": 10,
+            "pop": 10
+          }
+        }
+      ]
+    },
+    {
+      "class_file": "com/ixisoft/gxdice/nokia40/XingDiceRobot.class",
+      "class_name": "com.ixisoft.gxdice.nokia40.XingDiceRobot",
+      "methods_count": 1,
+      "instructions_count": 0,
+      "branch_count": 0,
+      "methods": [
+        {
+          "signature": "public abstract int takeTurn(com.ixisoft.gxdice.nokia40.GameController);",
+          "instructions": 0,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {}
+        }
+      ]
+    },
+    {
+      "class_file": "com/ixisoft/midlet/imageloader/ImageLoader.class",
+      "class_name": "com.ixisoft.midlet.imageloader.ImageLoader",
+      "methods_count": 6,
+      "instructions_count": 196,
+      "branch_count": 19,
+      "methods": [
+        {
+          "signature": "public static com.ixisoft.midlet.imageloader.ImageLoader getInstance();",
+          "instructions": 5,
+          "branches": 1,
+          "calls": {},
+          "opcodes": {
+            "getstatic": 2,
+            "ifnonnull": 1,
+            "invokestatic": 1,
+            "areturn": 1
+          }
+        },
+        {
+          "signature": "private static synchronized void ensureInstanceCreated();",
+          "instructions": 7,
+          "branches": 1,
+          "calls": {},
+          "opcodes": {
+            "getstatic": 1,
+            "ifnonnull": 1,
+            "new": 1,
+            "dup": 1,
+            "invokespecial": 1,
+            "putstatic": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "private com.ixisoft.midlet.imageloader.ImageLoader();",
+          "instructions": 65,
+          "branches": 6,
+          "calls": {
+            "java.util.Hashtable.get": 2
+          },
+          "opcodes": {
+            "aload_0": 9,
+            "aload_1": 7,
+            "aload": 6,
+            "invokespecial": 5,
+            "invokevirtual": 5,
+            "new": 3,
+            "dup": 3,
+            "areturn": 3,
+            "astore": 3,
+            "putfield": 2,
+            "iconst_0": 2,
+            "iload_2": 2,
+            "ifnonnull": 2,
+            "getfield": 2,
+            "checkcast": 2
+          }
+        },
+        {
+          "signature": "public javax.microedition.lcdui.Image putImage(java.lang.String, javax.microedition.lcdui.Image);",
+          "instructions": 106,
+          "branches": 11,
+          "calls": {
+            "java.lang.StringBuffer.append": 2,
+            "javax.microedition.lcdui.Image.createImage": 2,
+            "java.io.InputStream.close": 2,
+            "javax.microedition.io.Connection.close": 2,
+            "java.util.Hashtable.put": 1,
+            "java.util.Hashtable.get": 1,
+            "java.lang.String.startsWith": 1,
+            "javax.microedition.io.Connector.open": 1,
+            "javax.microedition.io.HttpConnection.getResponseCode": 1,
+            "javax.microedition.io.HttpConnection.getResponseMessage": 1,
+            "java.lang.StringBuffer.toString": 1,
+            "javax.microedition.io.InputConnection.openInputStream": 1,
+            "javax.microedition.io.ContentConnection.getLength": 1,
+            "java.io.InputStream.read": 1
+          },
+          "opcodes": {
+            "invokevirtual": 9,
+            "aload": 9,
+            "aload_3": 8,
+            "aload_1": 6,
+            "invokeinterface": 6,
+            "ifnull": 5,
+            "aload_2": 4,
+            "new": 4,
+            "dup": 4,
+            "invokespecial": 4,
+            "athrow": 4,
+            "astore": 4,
+            "checkcast": 3,
+            "astore_2": 3,
+            "ldc": 3
+          }
+        },
+        {
+          "signature": "public void putAlias(java.lang.String, java.lang.String);",
+          "instructions": 7,
+          "branches": 0,
+          "calls": {
+            "java.util.Hashtable.put": 1
+          },
+          "opcodes": {
+            "aload_0": 1,
+            "getfield": 1,
+            "aload_1": 1,
+            "aload_2": 1,
+            "invokevirtual": 1,
+            "pop": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "public void removeAlias(java.lang.String);",
+          "instructions": 6,
+          "branches": 0,
+          "calls": {
+            "java.util.Hashtable.remove": 1
+          },
+          "opcodes": {
+            "aload_0": 1,
+            "getfield": 1,
+            "aload_1": 1,
+            "invokevirtual": 1,
+            "pop": 1,
+            "return": 1
+          }
+        }
+      ]
+    },
+    {
+      "class_file": "com/ixisoft/midlet/region/BorderRegion.class",
+      "class_name": "com.ixisoft.midlet.region.BorderRegion",
+      "methods_count": 8,
+      "instructions_count": 184,
+      "branch_count": 7,
+      "methods": [
+        {
+          "signature": "public com.ixisoft.midlet.region.BorderRegion();",
+          "instructions": 4,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 1,
+            "iconst_1": 1,
+            "invokespecial": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "public com.ixisoft.midlet.region.BorderRegion(int);",
+          "instructions": 12,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 4,
+            "putfield": 2,
+            "invokespecial": 1,
+            "iconst_1": 1,
+            "ldc": 1,
+            "iload_1": 1,
+            "invokevirtual": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "public int getBorderType();",
+          "instructions": 3,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 1,
+            "getfield": 1,
+            "ireturn": 1
+          }
+        },
+        {
+          "signature": "public void setBorderType(int);",
+          "instructions": 55,
+          "branches": 5,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 16,
+            "putfield": 16,
+            "ldc": 13,
+            "goto": 4,
+            "iload_1": 2,
+            "iconst_0": 2,
+            "tableswitch": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "public void setTransparent(boolean);",
+          "instructions": 4,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 1,
+            "iload_1": 1,
+            "putfield": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "public void setBackground(int);",
+          "instructions": 7,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 2,
+            "iload_1": 1,
+            "putfield": 1,
+            "iconst_0": 1,
+            "invokevirtual": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "public void setBorderColor(int);",
+          "instructions": 4,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 1,
+            "iload_1": 1,
+            "putfield": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "public void paint(javax.microedition.lcdui.Graphics);",
+          "instructions": 95,
+          "branches": 2,
+          "calls": {
+            "javax.microedition.lcdui.Graphics.setColor": 4,
+            "javax.microedition.lcdui.Graphics.drawLine": 4,
+            "javax.microedition.lcdui.Graphics.drawRect": 2,
+            "com.ixisoft.midlet.util.Region.getWidth": 1,
+            "com.ixisoft.midlet.util.Region.getHeight": 1,
+            "javax.microedition.lcdui.Graphics.fillRect": 1
+          },
+          "opcodes": {
+            "iconst_1": 18,
+            "invokevirtual": 13,
+            "isub": 12,
+            "aload_1": 11,
+            "aload_0": 8,
+            "iload_2": 7,
+            "iload_3": 7,
+            "getfield": 6,
+            "iconst_0": 4,
+            "iconst_3": 4,
+            "istore_2": 1,
+            "istore_3": 1,
+            "ifne": 1,
+            "ifeq": 1,
+            "return": 1
+          }
+        }
+      ]
+    },
+    {
+      "class_file": "com/ixisoft/midlet/region/ImageRegion.class",
+      "class_name": "com.ixisoft.midlet.region.ImageRegion",
+      "methods_count": 14,
+      "instructions_count": 188,
+      "branch_count": 14,
+      "methods": [
+        {
+          "signature": "public com.ixisoft.midlet.region.ImageRegion(java.lang.String);",
+          "instructions": 7,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "iconst_0": 2,
+            "aload_0": 1,
+            "aload_1": 1,
+            "aconst_null": 1,
+            "invokespecial": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "public com.ixisoft.midlet.region.ImageRegion(java.lang.String, int, int);",
+          "instructions": 7,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 1,
+            "aload_1": 1,
+            "aconst_null": 1,
+            "iload_2": 1,
+            "iload_3": 1,
+            "invokespecial": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "public com.ixisoft.midlet.region.ImageRegion(javax.microedition.lcdui.Image, int, int);",
+          "instructions": 7,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 1,
+            "aconst_null": 1,
+            "aload_1": 1,
+            "iload_2": 1,
+            "iload_3": 1,
+            "invokespecial": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "public com.ixisoft.midlet.region.ImageRegion(java.lang.String, javax.microedition.lcdui.Image, int, int);",
+          "instructions": 16,
+          "branches": 2,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 4,
+            "invokevirtual": 3,
+            "aload_1": 2,
+            "invokespecial": 1,
+            "ifnull": 1,
+            "goto": 1,
+            "aload_2": 1,
+            "iload_3": 1,
+            "iload": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "public void setImageLocator(java.lang.String);",
+          "instructions": 6,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "iconst_0": 2,
+            "aload_0": 1,
+            "aload_1": 1,
+            "invokevirtual": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "public void setImageLocator(java.lang.String, int, int);",
+          "instructions": 11,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 3,
+            "putfield": 2,
+            "aload_1": 1,
+            "aconst_null": 1,
+            "iload_2": 1,
+            "iload_3": 1,
+            "invokevirtual": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "public void setImage(javax.microedition.lcdui.Image);",
+          "instructions": 6,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "iconst_0": 2,
+            "aload_0": 1,
+            "aload_1": 1,
+            "invokevirtual": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "public void setImage(javax.microedition.lcdui.Image, int, int);",
+          "instructions": 11,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 3,
+            "putfield": 2,
+            "aload_1": 1,
+            "aconst_null": 1,
+            "iload_2": 1,
+            "iload_3": 1,
+            "invokevirtual": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "public void setImageOffset(int, int);",
+          "instructions": 31,
+          "branches": 3,
+          "calls": {
+            "com.ixisoft.midlet.imageloader.ImageLoader.getInstance": 1,
+            "com.ixisoft.midlet.imageloader.ImageLoader.getImage": 1
+          },
+          "opcodes": {
+            "aload_0": 10,
+            "getfield": 5,
+            "putfield": 4,
+            "return": 2,
+            "ifnonnull": 2,
+            "invokevirtual": 2,
+            "iload_1": 1,
+            "iload_2": 1,
+            "areturn": 1,
+            "ifnull": 1,
+            "invokestatic": 1,
+            "aconst_null": 1
+          }
+        },
+        {
+          "signature": "public int getXOffset();",
+          "instructions": 3,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 1,
+            "getfield": 1,
+            "ireturn": 1
+          }
+        },
+        {
+          "signature": "public int getYOffset();",
+          "instructions": 3,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 1,
+            "getfield": 1,
+            "ireturn": 1
+          }
+        },
+        {
+          "signature": "public void setVerticalCentered(boolean);",
+          "instructions": 4,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 1,
+            "iload_1": 1,
+            "putfield": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "public void setHorizontalCentered(boolean);",
+          "instructions": 4,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 1,
+            "iload_1": 1,
+            "putfield": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "public void paint(javax.microedition.lcdui.Graphics);",
+          "instructions": 72,
+          "branches": 9,
+          "calls": {
+            "javax.microedition.lcdui.Graphics.drawImage": 4,
+            "com.ixisoft.midlet.util.Region.getWidth": 2,
+            "com.ixisoft.midlet.util.Region.getHeight": 2,
+            "javax.microedition.lcdui.Graphics.drawString": 1
+          },
+          "opcodes": {
+            "aload_0": 11,
+            "invokevirtual": 10,
+            "getfield": 6,
+            "aload_2": 5,
+            "aload_1": 5,
+            "ifeq": 4,
+            "iconst_2": 4,
+            "idiv": 4,
+            "goto": 4,
+            "iconst_0": 4,
+            "bipush": 4,
+            "astore_2": 2,
+            "return": 2,
+            "ineg": 2,
+            "aconst_null": 1
+          }
+        }
+      ]
+    },
+    {
+      "class_file": "com/ixisoft/midlet/region/StringRegion.class",
+      "class_name": "com.ixisoft.midlet.region.StringRegion",
+      "methods_count": 9,
+      "instructions_count": 145,
+      "branch_count": 11,
+      "methods": [
+        {
+          "signature": "public com.ixisoft.midlet.region.StringRegion();",
+          "instructions": 28,
+          "branches": 0,
+          "calls": {
+            "javax.microedition.lcdui.Font.getFont": 1
+          },
+          "opcodes": {
+            "aload_0": 9,
+            "putfield": 6,
+            "iconst_0": 3,
+            "bipush": 2,
+            "getfield": 2,
+            "invokespecial": 1,
+            "ldc": 1,
+            "iconst_4": 1,
+            "ior": 1,
+            "invokestatic": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "public java.lang.String getValue();",
+          "instructions": 3,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 1,
+            "getfield": 1,
+            "areturn": 1
+          }
+        },
+        {
+          "signature": "public void setValue(java.lang.String);",
+          "instructions": 8,
+          "branches": 1,
+          "calls": {},
+          "opcodes": {
+            "aload_1": 2,
+            "ifnonnull": 1,
+            "ldc": 1,
+            "astore_1": 1,
+            "aload_0": 1,
+            "putfield": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "public void setHorizontalAlignment(int);",
+          "instructions": 11,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 4,
+            "putfield": 2,
+            "getfield": 2,
+            "iload_1": 1,
+            "ior": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "public void setVerticalAlignment(int);",
+          "instructions": 11,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 4,
+            "putfield": 2,
+            "getfield": 2,
+            "iload_1": 1,
+            "ior": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "public void setFont(javax.microedition.lcdui.Font);",
+          "instructions": 4,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 1,
+            "aload_1": 1,
+            "putfield": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "public void setFontColor(int);",
+          "instructions": 4,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 1,
+            "iload_1": 1,
+            "putfield": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "public int getFontColor();",
+          "instructions": 3,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 1,
+            "getfield": 1,
+            "ireturn": 1
+          }
+        },
+        {
+          "signature": "public void paint(javax.microedition.lcdui.Graphics);",
+          "instructions": 73,
+          "branches": 10,
+          "calls": {
+            "com.ixisoft.midlet.util.Region.getWidth": 2,
+            "com.ixisoft.midlet.util.Region.getHeight": 2,
+            "javax.microedition.lcdui.Graphics.setFont": 1,
+            "javax.microedition.lcdui.Graphics.setColor": 1,
+            "javax.microedition.lcdui.Graphics.drawString": 1
+          },
+          "opcodes": {
+            "aload_0": 14,
+            "getfield": 10,
+            "invokevirtual": 7,
+            "iand": 6,
+            "ifeq": 6,
+            "iconst_0": 5,
+            "istore_2": 4,
+            "istore_3": 4,
+            "goto": 4,
+            "bipush": 4,
+            "aload_1": 3,
+            "iconst_4": 1,
+            "iconst_1": 1,
+            "iconst_2": 1,
+            "idiv": 1
+          }
+        }
+      ]
+    },
+    {
+      "class_file": "com/ixisoft/midlet/util/Container.class",
+      "class_name": "com.ixisoft.midlet.util.Container",
+      "methods_count": 9,
+      "instructions_count": 0,
+      "branch_count": 0,
+      "methods": [
+        {
+          "signature": "public abstract void addRegion(com.ixisoft.midlet.util.Region, int, int, int, int);",
+          "instructions": 0,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {}
+        },
+        {
+          "signature": "public abstract void addRegion(int, com.ixisoft.midlet.util.Region, int, int, int, int);",
+          "instructions": 0,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {}
+        },
+        {
+          "signature": "public abstract void addRegion(com.ixisoft.midlet.util.Region);",
+          "instructions": 0,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {}
+        },
+        {
+          "signature": "public abstract void addRegion(int, com.ixisoft.midlet.util.Region);",
+          "instructions": 0,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {}
+        },
+        {
+          "signature": "public abstract void removeRegion(com.ixisoft.midlet.util.Region);",
+          "instructions": 0,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {}
+        },
+        {
+          "signature": "public abstract com.ixisoft.midlet.util.Container getContainer();",
+          "instructions": 0,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {}
+        },
+        {
+          "signature": "public abstract void setContainer(com.ixisoft.midlet.util.Container);",
+          "instructions": 0,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {}
+        },
+        {
+          "signature": "public abstract void paint(javax.microedition.lcdui.Graphics);",
+          "instructions": 0,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {}
+        },
+        {
+          "signature": "public abstract void repaint();",
+          "instructions": 0,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {}
+        }
+      ]
+    },
+    {
+      "class_file": "com/ixisoft/midlet/util/ContainerCanvas.class",
+      "class_name": "com.ixisoft.midlet.util.ContainerCanvas",
+      "methods_count": 13,
+      "instructions_count": 77,
+      "branch_count": 0,
+      "methods": [
+        {
+          "signature": "public com.ixisoft.midlet.util.ContainerCanvas();",
+          "instructions": 12,
+          "branches": 0,
+          "calls": {
+            "com.ixisoft.midlet.util.Container.setContainer": 1
+          },
+          "opcodes": {
+            "aload_0": 4,
+            "invokespecial": 2,
+            "new": 1,
+            "dup": 1,
+            "putfield": 1,
+            "getfield": 1,
+            "invokeinterface": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "public com.ixisoft.midlet.util.MIDletContext getMIDletContext();",
+          "instructions": 3,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 1,
+            "getfield": 1,
+            "areturn": 1
+          }
+        },
+        {
+          "signature": "public void setMIDletContext(com.ixisoft.midlet.util.MIDletContext);",
+          "instructions": 4,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 1,
+            "aload_1": 1,
+            "putfield": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "public void destroy();",
+          "instructions": 7,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 2,
+            "aconst_null": 2,
+            "putfield": 2,
+            "return": 1
+          }
+        },
+        {
+          "signature": "public void addRegion(com.ixisoft.midlet.util.Region, int, int, int, int);",
+          "instructions": 9,
+          "branches": 0,
+          "calls": {
+            "com.ixisoft.midlet.util.Container.addRegion": 1
+          },
+          "opcodes": {
+            "iload": 2,
+            "aload_0": 1,
+            "getfield": 1,
+            "aload_1": 1,
+            "iload_2": 1,
+            "iload_3": 1,
+            "invokeinterface": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "public void addRegion(int, com.ixisoft.midlet.util.Region, int, int, int, int);",
+          "instructions": 10,
+          "branches": 0,
+          "calls": {
+            "com.ixisoft.midlet.util.Container.addRegion": 1
+          },
+          "opcodes": {
+            "iload": 3,
+            "aload_0": 1,
+            "getfield": 1,
+            "iload_1": 1,
+            "aload_2": 1,
+            "iload_3": 1,
+            "invokeinterface": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "public void addRegion(com.ixisoft.midlet.util.Region);",
+          "instructions": 5,
+          "branches": 0,
+          "calls": {
+            "com.ixisoft.midlet.util.Container.addRegion": 1
+          },
+          "opcodes": {
+            "aload_0": 1,
+            "getfield": 1,
+            "aload_1": 1,
+            "invokeinterface": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "public void addRegion(int, com.ixisoft.midlet.util.Region);",
+          "instructions": 6,
+          "branches": 0,
+          "calls": {
+            "com.ixisoft.midlet.util.Container.addRegion": 1
+          },
+          "opcodes": {
+            "aload_0": 1,
+            "getfield": 1,
+            "iload_1": 1,
+            "aload_2": 1,
+            "invokeinterface": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "public void removeRegion(com.ixisoft.midlet.util.Region);",
+          "instructions": 5,
+          "branches": 0,
+          "calls": {
+            "com.ixisoft.midlet.util.Container.removeRegion": 1
+          },
+          "opcodes": {
+            "aload_0": 1,
+            "getfield": 1,
+            "aload_1": 1,
+            "invokeinterface": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "public com.ixisoft.midlet.util.Container getContainer();",
+          "instructions": 2,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "aconst_null": 1,
+            "areturn": 1
+          }
+        },
+        {
+          "signature": "public void setContainer(com.ixisoft.midlet.util.Container);",
+          "instructions": 5,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "new": 1,
+            "dup": 1,
+            "ldc": 1,
+            "invokespecial": 1,
+            "athrow": 1
+          }
+        },
+        {
+          "signature": "public void paint(javax.microedition.lcdui.Graphics);",
+          "instructions": 4,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 1,
+            "aload_1": 1,
+            "invokevirtual": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "protected void paintContainerCanvas(javax.microedition.lcdui.Graphics);",
+          "instructions": 5,
+          "branches": 0,
+          "calls": {
+            "com.ixisoft.midlet.util.Container.paint": 1
+          },
+          "opcodes": {
+            "aload_0": 1,
+            "getfield": 1,
+            "aload_1": 1,
+            "invokeinterface": 1,
+            "return": 1
+          }
+        }
+      ]
+    },
+    {
+      "class_file": "com/ixisoft/midlet/util/MIDletContext.class",
+      "class_name": "com.ixisoft.midlet.util.MIDletContext",
+      "methods_count": 3,
+      "instructions_count": 0,
+      "branch_count": 0,
+      "methods": [
+        {
+          "signature": "public abstract javax.microedition.midlet.MIDlet getMIDlet();",
+          "instructions": 0,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {}
+        },
+        {
+          "signature": "public abstract java.lang.Object getAttribute(java.lang.Object);",
+          "instructions": 0,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {}
+        },
+        {
+          "signature": "public abstract java.lang.Object putAttribute(java.lang.Object, java.lang.Object);",
+          "instructions": 0,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {}
+        }
+      ]
+    },
+    {
+      "class_file": "com/ixisoft/midlet/util/MIDletContextImpl.class",
+      "class_name": "com.ixisoft.midlet.util.MIDletContextImpl",
+      "methods_count": 4,
+      "instructions_count": 25,
+      "branch_count": 0,
+      "methods": [
+        {
+          "signature": "public com.ixisoft.midlet.util.MIDletContextImpl(javax.microedition.midlet.MIDlet);",
+          "instructions": 11,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 3,
+            "invokespecial": 2,
+            "putfield": 2,
+            "new": 1,
+            "dup": 1,
+            "aload_1": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "public javax.microedition.midlet.MIDlet getMIDlet();",
+          "instructions": 3,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 1,
+            "getfield": 1,
+            "areturn": 1
+          }
+        },
+        {
+          "signature": "public java.lang.Object getAttribute(java.lang.Object);",
+          "instructions": 5,
+          "branches": 0,
+          "calls": {
+            "java.util.Hashtable.get": 1
+          },
+          "opcodes": {
+            "aload_0": 1,
+            "getfield": 1,
+            "aload_1": 1,
+            "invokevirtual": 1,
+            "areturn": 1
+          }
+        },
+        {
+          "signature": "public java.lang.Object putAttribute(java.lang.Object, java.lang.Object);",
+          "instructions": 6,
+          "branches": 0,
+          "calls": {
+            "java.util.Hashtable.put": 1
+          },
+          "opcodes": {
+            "aload_0": 1,
+            "getfield": 1,
+            "aload_1": 1,
+            "aload_2": 1,
+            "invokevirtual": 1,
+            "areturn": 1
+          }
+        }
+      ]
+    },
+    {
+      "class_file": "com/ixisoft/midlet/util/MIDletUtils.class",
+      "class_name": "com.ixisoft.midlet.util.MIDletUtils",
+      "methods_count": 13,
+      "instructions_count": 271,
+      "branch_count": 34,
+      "methods": [
+        {
+          "signature": "private com.ixisoft.midlet.util.MIDletUtils();",
+          "instructions": 3,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 1,
+            "invokespecial": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "public static com.ixisoft.midlet.util.MIDletUtils getInstance();",
+          "instructions": 2,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "getstatic": 1,
+            "areturn": 1
+          }
+        },
+        {
+          "signature": "public static int getRandomInt(int);",
+          "instructions": 10,
+          "branches": 2,
+          "calls": {
+            "java.util.Random.nextInt": 1
+          },
+          "opcodes": {
+            "goto": 1,
+            "getstatic": 1,
+            "invokevirtual": 1,
+            "dup": 1,
+            "istore_1": 1,
+            "iflt": 1,
+            "iload_1": 1,
+            "iload_0": 1,
+            "irem": 1,
+            "ireturn": 1
+          }
+        },
+        {
+          "signature": "public static com.ixisoft.midlet.util.ContainerCanvas getContainerCanvas(com.ixisoft.midlet.util.Region);",
+          "instructions": 19,
+          "branches": 4,
+          "calls": {
+            "com.ixisoft.midlet.util.Region.getContainer": 1
+          },
+          "opcodes": {
+            "aload_1": 4,
+            "areturn": 3,
+            "aload_0": 2,
+            "ifnonnull": 2,
+            "aconst_null": 2,
+            "invokevirtual": 1,
+            "astore_1": 1,
+            "ifnull": 1,
+            "instanceof": 1,
+            "ifeq": 1,
+            "checkcast": 1
+          }
+        },
+        {
+          "signature": "public static boolean rectangleIntersects(int, int, int, int, int, int, int, int);",
+          "instructions": 24,
+          "branches": 5,
+          "calls": {},
+          "opcodes": {
+            "iload": 6,
+            "iadd": 4,
+            "iload_0": 2,
+            "if_icmple": 2,
+            "iload_1": 2,
+            "if_icmpge": 2,
+            "iload_2": 1,
+            "iload_3": 1,
+            "iconst_1": 1,
+            "goto": 1,
+            "iconst_0": 1,
+            "ireturn": 1
+          }
+        },
+        {
+          "signature": "public static boolean circleIntersects(int, int, int, int, int, int, int);",
+          "instructions": 40,
+          "branches": 5,
+          "calls": {},
+          "opcodes": {
+            "iload": 8,
+            "iload_0": 4,
+            "iload_1": 4,
+            "iload_2": 4,
+            "iload_3": 4,
+            "invokestatic": 4,
+            "iadd": 4,
+            "ifne": 3,
+            "ifeq": 1,
+            "iconst_1": 1,
+            "goto": 1,
+            "iconst_0": 1,
+            "ireturn": 1
+          }
+        },
+        {
+          "signature": "public static boolean rectangularCircleIntersects(int, int, int, int, int, int, int);",
+          "instructions": 17,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "iload_2": 3,
+            "iload": 3,
+            "iconst_2": 2,
+            "imul": 2,
+            "iadd": 2,
+            "iload_0": 1,
+            "iload_1": 1,
+            "iload_3": 1,
+            "invokestatic": 1,
+            "ireturn": 1
+          }
+        },
+        {
+          "signature": "public static boolean circleIntersects(int, int, int, int, int, int);",
+          "instructions": 27,
+          "branches": 2,
+          "calls": {},
+          "opcodes": {
+            "iload": 8,
+            "istore": 3,
+            "imul": 3,
+            "isub": 2,
+            "iadd": 2,
+            "iload_3": 1,
+            "iload_0": 1,
+            "iload_1": 1,
+            "iload_2": 1,
+            "if_icmpgt": 1,
+            "iconst_1": 1,
+            "goto": 1,
+            "iconst_0": 1,
+            "ireturn": 1
+          }
+        },
+        {
+          "signature": "public static boolean rectangularCircleIntersects(int, int, int, int, int, int);",
+          "instructions": 24,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "iconst_2": 4,
+            "imul": 4,
+            "iadd": 4,
+            "iload": 4,
+            "iload_2": 3,
+            "iload_0": 1,
+            "iload_1": 1,
+            "iload_3": 1,
+            "invokestatic": 1,
+            "ireturn": 1
+          }
+        },
+        {
+          "signature": "public static boolean rectangleContains(int, int, int, int, int, int);",
+          "instructions": 20,
+          "branches": 5,
+          "calls": {},
+          "opcodes": {
+            "iload": 4,
+            "iload_0": 2,
+            "if_icmplt": 2,
+            "isub": 2,
+            "if_icmpge": 2,
+            "iload_1": 2,
+            "iload_2": 1,
+            "iload_3": 1,
+            "iconst_1": 1,
+            "goto": 1,
+            "iconst_0": 1,
+            "ireturn": 1
+          }
+        },
+        {
+          "signature": "public static boolean rectangleContains(int, int, int, int, int, int, int, int);",
+          "instructions": 34,
+          "branches": 9,
+          "calls": {},
+          "opcodes": {
+            "iload": 8,
+            "iadd": 4,
+            "ifle": 3,
+            "iload_2": 2,
+            "iload_3": 2,
+            "iconst_0": 2,
+            "ireturn": 2,
+            "iload_0": 2,
+            "if_icmplt": 2,
+            "iload_1": 2,
+            "if_icmpgt": 2,
+            "ifgt": 1,
+            "iconst_1": 1,
+            "goto": 1
+          }
+        },
+        {
+          "signature": "public static boolean circleContains(int, int, int, int, int);",
+          "instructions": 23,
+          "branches": 2,
+          "calls": {},
+          "opcodes": {
+            "iload": 5,
+            "imul": 3,
+            "isub": 2,
+            "istore": 2,
+            "iload_2": 2,
+            "iload_3": 1,
+            "iload_0": 1,
+            "iload_1": 1,
+            "iadd": 1,
+            "if_icmpgt": 1,
+            "iconst_1": 1,
+            "goto": 1,
+            "iconst_0": 1,
+            "ireturn": 1
+          }
+        },
+        {
+          "signature": "public static boolean rectanglarCircleContains(int, int, int, int, int);",
+          "instructions": 28,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "iconst_2": 4,
+            "imul": 4,
+            "iload_2": 3,
+            "iadd": 2,
+            "new": 2,
+            "dup": 2,
+            "invokespecial": 2,
+            "putstatic": 2,
+            "iload_0": 1,
+            "iload_1": 1,
+            "iload_3": 1,
+            "iload": 1,
+            "invokestatic": 1,
+            "ireturn": 1,
+            "return": 1
+          }
+        }
+      ]
+    },
+    {
+      "class_file": "com/ixisoft/midlet/util/Region.class",
+      "class_name": "com.ixisoft.midlet.util.Region",
+      "methods_count": 20,
+      "instructions_count": 211,
+      "branch_count": 15,
+      "methods": [
+        {
+          "signature": "protected com.ixisoft.midlet.util.Region();",
+          "instructions": 6,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 2,
+            "invokespecial": 1,
+            "iconst_1": 1,
+            "putfield": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "public int getX();",
+          "instructions": 3,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 1,
+            "getfield": 1,
+            "ireturn": 1
+          }
+        },
+        {
+          "signature": "public int getY();",
+          "instructions": 3,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 1,
+            "getfield": 1,
+            "ireturn": 1
+          }
+        },
+        {
+          "signature": "public int getWidth();",
+          "instructions": 3,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 1,
+            "getfield": 1,
+            "ireturn": 1
+          }
+        },
+        {
+          "signature": "public int getHeight();",
+          "instructions": 3,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 1,
+            "getfield": 1,
+            "ireturn": 1
+          }
+        },
+        {
+          "signature": "public void setLocation(int, int);",
+          "instructions": 7,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 2,
+            "putfield": 2,
+            "iload_1": 1,
+            "iload_2": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "public void setSize(int, int);",
+          "instructions": 7,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 2,
+            "putfield": 2,
+            "iload_1": 1,
+            "iload_2": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "public void reshape(int, int, int, int);",
+          "instructions": 9,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 2,
+            "invokevirtual": 2,
+            "iload_1": 1,
+            "iload_2": 1,
+            "iload_3": 1,
+            "iload": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "public void setVisible(boolean);",
+          "instructions": 4,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 1,
+            "iload_1": 1,
+            "putfield": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "public boolean isVisible();",
+          "instructions": 3,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 1,
+            "getfield": 1,
+            "ireturn": 1
+          }
+        },
+        {
+          "signature": "public com.ixisoft.midlet.util.Container getContainer();",
+          "instructions": 3,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 1,
+            "getfield": 1,
+            "areturn": 1
+          }
+        },
+        {
+          "signature": "public void setContainer(com.ixisoft.midlet.util.Container);",
+          "instructions": 4,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 1,
+            "aload_1": 1,
+            "putfield": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "public void repaint();",
+          "instructions": 8,
+          "branches": 1,
+          "calls": {
+            "com.ixisoft.midlet.util.Container.repaint": 1
+          },
+          "opcodes": {
+            "aload_1": 2,
+            "aload_0": 1,
+            "invokevirtual": 1,
+            "astore_1": 1,
+            "ifnull": 1,
+            "invokeinterface": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "public void repaintRegion();",
+          "instructions": 11,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 5,
+            "getfield": 4,
+            "invokevirtual": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "void repaint(int, int, int, int);",
+          "instructions": 25,
+          "branches": 4,
+          "calls": {
+            "javax.microedition.lcdui.Canvas.repaint": 1,
+            "com.ixisoft.midlet.util.RegionContainer.repaintRegion": 1
+          },
+          "opcodes": {
+            "aload": 5,
+            "invokevirtual": 3,
+            "aload_0": 2,
+            "return": 2,
+            "instanceof": 2,
+            "ifeq": 2,
+            "checkcast": 2,
+            "astore": 1,
+            "ifnonnull": 1,
+            "iload_1": 1,
+            "iload_2": 1,
+            "iload_3": 1,
+            "iload": 1,
+            "goto": 1
+          }
+        },
+        {
+          "signature": "public void requestPaintRegion(javax.microedition.lcdui.Graphics);",
+          "instructions": 12,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 5,
+            "getfield": 4,
+            "aload_1": 1,
+            "invokevirtual": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "void requestPaintRegion(javax.microedition.lcdui.Graphics, int, int, int, int);",
+          "instructions": 46,
+          "branches": 4,
+          "calls": {
+            "javax.microedition.lcdui.Graphics.getClipX": 1,
+            "javax.microedition.lcdui.Graphics.getClipY": 1,
+            "javax.microedition.lcdui.Graphics.getClipWidth": 1,
+            "javax.microedition.lcdui.Graphics.getClipHeight": 1,
+            "javax.microedition.lcdui.Graphics.clipRect": 1,
+            "javax.microedition.lcdui.Graphics.setClip": 1,
+            "com.ixisoft.midlet.util.RegionContainer.requestPaintRegion": 1
+          },
+          "opcodes": {
+            "invokevirtual": 9,
+            "aload_1": 8,
+            "iload": 6,
+            "aload": 4,
+            "istore": 4,
+            "aload_0": 3,
+            "return": 2,
+            "instanceof": 2,
+            "ifeq": 2,
+            "astore": 1,
+            "ifnonnull": 1,
+            "iload_2": 1,
+            "iload_3": 1,
+            "goto": 1,
+            "checkcast": 1
+          }
+        },
+        {
+          "signature": "public int getAbsoluteX();",
+          "instructions": 27,
+          "branches": 3,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 5,
+            "aload_1": 4,
+            "getfield": 4,
+            "ireturn": 4,
+            "invokevirtual": 2,
+            "instanceof": 2,
+            "ifeq": 2,
+            "astore_1": 1,
+            "ifnonnull": 1,
+            "checkcast": 1,
+            "iadd": 1
+          }
+        },
+        {
+          "signature": "public int getAbsoluteY();",
+          "instructions": 27,
+          "branches": 3,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 5,
+            "aload_1": 4,
+            "getfield": 4,
+            "ireturn": 4,
+            "invokevirtual": 2,
+            "instanceof": 2,
+            "ifeq": 2,
+            "astore_1": 1,
+            "ifnonnull": 1,
+            "checkcast": 1,
+            "iadd": 1
+          }
+        },
+        {
+          "signature": "public abstract void paint(javax.microedition.lcdui.Graphics);",
+          "instructions": 0,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {}
+        }
+      ]
+    },
+    {
+      "class_file": "com/ixisoft/midlet/util/RegionContainer.class",
+      "class_name": "com.ixisoft.midlet.util.RegionContainer",
+      "methods_count": 10,
+      "instructions_count": 223,
+      "branch_count": 13,
+      "methods": [
+        {
+          "signature": "public com.ixisoft.midlet.util.RegionContainer();",
+          "instructions": 6,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 2,
+            "invokespecial": 1,
+            "aconst_null": 1,
+            "putfield": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "public void addRegion(com.ixisoft.midlet.util.Region, int, int, int, int);",
+          "instructions": 16,
+          "branches": 2,
+          "calls": {
+            "java.util.Vector.size": 1
+          },
+          "opcodes": {
+            "aload_0": 3,
+            "getfield": 2,
+            "invokevirtual": 2,
+            "iload": 2,
+            "ifnonnull": 1,
+            "iconst_0": 1,
+            "goto": 1,
+            "aload_1": 1,
+            "iload_2": 1,
+            "iload_3": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "public void addRegion(int, com.ixisoft.midlet.util.Region, int, int, int, int);",
+          "instructions": 11,
+          "branches": 0,
+          "calls": {
+            "com.ixisoft.midlet.util.Region.reshape": 1
+          },
+          "opcodes": {
+            "iload": 3,
+            "aload_2": 2,
+            "invokevirtual": 2,
+            "iload_3": 1,
+            "aload_0": 1,
+            "iload_1": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "public void addRegion(com.ixisoft.midlet.util.Region);",
+          "instructions": 12,
+          "branches": 2,
+          "calls": {
+            "java.util.Vector.size": 1
+          },
+          "opcodes": {
+            "aload_0": 3,
+            "getfield": 2,
+            "invokevirtual": 2,
+            "ifnonnull": 1,
+            "iconst_0": 1,
+            "goto": 1,
+            "aload_1": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "public void addRegion(int, com.ixisoft.midlet.util.Region);",
+          "instructions": 35,
+          "branches": 2,
+          "calls": {
+            "java.util.Vector.size": 1,
+            "java.lang.Math.min": 1,
+            "java.util.Vector.insertElementAt": 1,
+            "com.ixisoft.midlet.util.Region.setContainer": 1
+          },
+          "opcodes": {
+            "aload_0": 6,
+            "getfield": 3,
+            "aload_3": 3,
+            "invokevirtual": 3,
+            "monitorexit": 2,
+            "aload_2": 2,
+            "ifnonnull": 1,
+            "astore_3": 1,
+            "monitorenter": 1,
+            "new": 1,
+            "dup": 1,
+            "invokespecial": 1,
+            "putfield": 1,
+            "goto": 1,
+            "astore": 1
+          }
+        },
+        {
+          "signature": "public void removeRegion(com.ixisoft.midlet.util.Region);",
+          "instructions": 12,
+          "branches": 2,
+          "calls": {
+            "java.util.Vector.removeElement": 1,
+            "com.ixisoft.midlet.util.Region.setContainer": 1
+          },
+          "opcodes": {
+            "aload_0": 2,
+            "getfield": 2,
+            "aload_1": 2,
+            "invokevirtual": 2,
+            "ifnull": 1,
+            "ifeq": 1,
+            "aconst_null": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "void repaintRegion(com.ixisoft.midlet.util.Region);",
+          "instructions": 17,
+          "branches": 0,
+          "calls": {
+            "com.ixisoft.midlet.util.Region.getX": 2,
+            "com.ixisoft.midlet.util.Region.getY": 2,
+            "com.ixisoft.midlet.util.Region.getWidth": 1,
+            "com.ixisoft.midlet.util.Region.getHeight": 1,
+            "com.ixisoft.midlet.util.Region.repaint": 1
+          },
+          "opcodes": {
+            "invokevirtual": 7,
+            "aload_1": 4,
+            "aload_0": 3,
+            "iadd": 2,
+            "return": 1
+          }
+        },
+        {
+          "signature": "void requestPaintRegion(javax.microedition.lcdui.Graphics, com.ixisoft.midlet.util.Region);",
+          "instructions": 18,
+          "branches": 0,
+          "calls": {
+            "com.ixisoft.midlet.util.Region.getX": 2,
+            "com.ixisoft.midlet.util.Region.getY": 2,
+            "com.ixisoft.midlet.util.Region.getWidth": 1,
+            "com.ixisoft.midlet.util.Region.getHeight": 1,
+            "com.ixisoft.midlet.util.Region.requestPaintRegion": 1
+          },
+          "opcodes": {
+            "invokevirtual": 7,
+            "aload_2": 4,
+            "aload_0": 3,
+            "iadd": 2,
+            "aload_1": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "public void paint(javax.microedition.lcdui.Graphics);",
+          "instructions": 23,
+          "branches": 4,
+          "calls": {
+            "java.util.Vector.elements": 1,
+            "java.util.Enumeration.nextElement": 1,
+            "com.ixisoft.midlet.util.Region.isVisible": 1,
+            "java.util.Enumeration.hasMoreElements": 1
+          },
+          "opcodes": {
+            "aload_0": 3,
+            "invokevirtual": 3,
+            "getfield": 2,
+            "aload_2": 2,
+            "invokeinterface": 2,
+            "aload_3": 2,
+            "ifnull": 1,
+            "astore_2": 1,
+            "goto": 1,
+            "checkcast": 1,
+            "astore_3": 1,
+            "ifeq": 1,
+            "aload_1": 1,
+            "ifne": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "protected void paintRegion(javax.microedition.lcdui.Graphics, com.ixisoft.midlet.util.Region);",
+          "instructions": 73,
+          "branches": 1,
+          "calls": {
+            "javax.microedition.lcdui.Graphics.translate": 2,
+            "javax.microedition.lcdui.Graphics.getClipX": 1,
+            "javax.microedition.lcdui.Graphics.getClipY": 1,
+            "javax.microedition.lcdui.Graphics.getClipWidth": 1,
+            "javax.microedition.lcdui.Graphics.getClipHeight": 1,
+            "com.ixisoft.midlet.util.Region.getX": 1,
+            "com.ixisoft.midlet.util.Region.getY": 1,
+            "com.ixisoft.midlet.util.Region.getWidth": 1,
+            "com.ixisoft.midlet.util.Region.getHeight": 1,
+            "com.ixisoft.midlet.util.MIDletUtils.rectangleIntersects": 1,
+            "javax.microedition.lcdui.Graphics.setColor": 1,
+            "javax.microedition.lcdui.Graphics.setFont": 1,
+            "javax.microedition.lcdui.Graphics.clipRect": 1,
+            "com.ixisoft.midlet.util.Region.paint": 1,
+            "javax.microedition.lcdui.Graphics.setClip": 1,
+            "javax.microedition.lcdui.Font.getFont": 1
+          },
+          "opcodes": {
+            "invokevirtual": 15,
+            "iload": 15,
+            "aload_1": 11,
+            "istore": 7,
+            "aload_2": 5,
+            "iconst_0": 5,
+            "iload_3": 3,
+            "return": 3,
+            "invokestatic": 2,
+            "ineg": 2,
+            "istore_3": 1,
+            "ifne": 1,
+            "getstatic": 1,
+            "bipush": 1,
+            "putstatic": 1
+          }
+        }
+      ]
+    }
+  ],
+  "errors": [
+    {
+      "class_file": "com/ixisoft/gxdice/nokia40/GameConstants.class",
+      "reason": "no method signatures detected (obfuscated/invalid class?)"
+    },
+    {
+      "class_file": "com/ixisoft/midlet/util/MIDletConstants.class",
+      "reason": "no method signatures detected (obfuscated/invalid class?)"
+    }
+  ],
+  "call_edges": [
+    {
+      "target": "java.lang.StringBuffer.append",
+      "count": 24
+    },
+    {
+      "target": "javax.microedition.lcdui.Displayable.addCommand",
+      "count": 21
+    },
+    {
+      "target": "com.ixisoft.midlet.util.ContainerCanvas.addRegion",
+      "count": 19
+    },
+    {
+      "target": "com.ixisoft.gxdice.nokia40.SpriteRegion.setFrame",
+      "count": 14
+    },
+    {
+      "target": "javax.microedition.lcdui.Display.setCurrent",
+      "count": 13
+    },
+    {
+      "target": "com.ixisoft.midlet.util.Region.setVisible",
+      "count": 13
+    },
+    {
+      "target": "javax.microedition.lcdui.Form.append",
+      "count": 12
+    },
+    {
+      "target": "javax.microedition.lcdui.Displayable.setCommandListener",
+      "count": 10
+    },
+    {
+      "target": "com.ixisoft.midlet.region.BorderRegion.setBackground",
+      "count": 10
+    },
+    {
+      "target": "javax.microedition.lcdui.Canvas.repaint",
+      "count": 10
+    },
+    {
+      "target": "com.ixisoft.midlet.util.Region.repaintRegion",
+      "count": 10
+    },
+    {
+      "target": "com.ixisoft.midlet.imageloader.ImageLoader.getImage",
+      "count": 9
+    },
+    {
+      "target": "com.ixisoft.gxdice.nokia40.GameController.getColPlayerScore",
+      "count": 9
+    },
+    {
+      "target": "com.ixisoft.gxdice.nokia40.GameController.getRowPlayerScore",
+      "count": 9
+    },
+    {
+      "target": "javax.microedition.lcdui.List.append",
+      "count": 8
+    },
+    {
+      "target": "com.ixisoft.gxdice.nokia40.GameModel.getDieValue",
+      "count": 8
+    },
+    {
+      "target": "java.lang.StringBuffer.toString",
+      "count": 8
+    },
+    {
+      "target": "com.ixisoft.midlet.region.StringRegion.setValue",
+      "count": 8
+    },
+    {
+      "target": "com.ixisoft.gxdice.nokia40.GameController.isSelectableRow",
+      "count": 8
+    },
+    {
+      "target": "com.ixisoft.gxdice.nokia40.GameController.isSelectableCol",
+      "count": 8
+    },
+    {
+      "target": "com.ixisoft.gxdice.nokia40.GameController.setSelectedCol",
+      "count": 8
+    },
+    {
+      "target": "com.ixisoft.midlet.util.Region.getWidth",
+      "count": 8
+    },
+    {
+      "target": "com.ixisoft.midlet.util.Region.getHeight",
+      "count": 8
+    },
+    {
+      "target": "javax.microedition.lcdui.Display.getDisplay",
+      "count": 7
+    },
+    {
+      "target": "com.ixisoft.midlet.region.BorderRegion.setBorderColor",
+      "count": 7
+    },
+    {
+      "target": "com.ixisoft.gxdice.nokia40.GameController.setSelectedRow",
+      "count": 7
+    },
+    {
+      "target": "com.ixisoft.gxdice.nokia40.GameModel.getRowSize",
+      "count": 7
+    },
+    {
+      "target": "com.ixisoft.gxdice.nokia40.GameModel.getColSize",
+      "count": 7
+    },
+    {
+      "target": "com.ixisoft.midlet.util.MIDletContext.getMIDlet",
+      "count": 6
+    },
+    {
+      "target": "com.ixisoft.gxdice.nokia40.GameModel.setDieValue",
+      "count": 6
+    },
+    {
+      "target": "javax.microedition.lcdui.Graphics.setColor",
+      "count": 6
+    },
+    {
+      "target": "javax.microedition.lcdui.Displayable.removeCommand",
+      "count": 5
+    },
+    {
+      "target": "com.ixisoft.midlet.region.StringRegion.setHorizontalAlignment",
+      "count": 5
+    },
+    {
+      "target": "java.util.Vector.size",
+      "count": 5
+    },
+    {
+      "target": "com.ixisoft.midlet.util.Region.getX",
+      "count": 5
+    },
+    {
+      "target": "com.ixisoft.midlet.util.Region.getY",
+      "count": 5
+    },
+    {
+      "target": "javax.microedition.lcdui.Font.getFont",
+      "count": 4
+    },
+    {
+      "target": "com.ixisoft.midlet.region.StringRegion.setFont",
+      "count": 4
+    },
+    {
+      "target": "com.ixisoft.midlet.util.RegionContainer.addRegion",
+      "count": 4
+    },
+    {
+      "target": "java.lang.System.gc",
+      "count": 4
+    },
+    {
+      "target": "com.ixisoft.gxdice.nokia40.GameController.getSelectedRow",
+      "count": 4
+    },
+    {
+      "target": "com.ixisoft.gxdice.nokia40.GameController.getSelectedCol",
+      "count": 4
+    },
+    {
+      "target": "com.ixisoft.midlet.util.Region.setLocation",
+      "count": 4
+    },
+    {
+      "target": "java.util.Vector.elementAt",
+      "count": 4
+    },
+    {
+      "target": "java.util.Hashtable.get",
+      "count": 4
+    },
+    {
+      "target": "javax.microedition.lcdui.Graphics.drawLine",
+      "count": 4
+    },
+    {
+      "target": "javax.microedition.lcdui.Graphics.drawImage",
+      "count": 4
+    },
+    {
+      "target": "com.ixisoft.midlet.util.Container.addRegion",
+      "count": 4
+    },
+    {
+      "target": "com.ixisoft.midlet.imageloader.ImageLoader.getInstance",
+      "count": 3
+    },
+    {
+      "target": "java.lang.Thread.currentThread",
+      "count": 3
+    },
+    {
+      "target": "com.ixisoft.gxdice.nokia40.GameController.getGameModel",
+      "count": 3
+    },
+    {
+      "target": "javax.microedition.midlet.MIDlet.getAppProperty",
+      "count": 3
+    },
+    {
+      "target": "javax.microedition.lcdui.Image.createImage",
+      "count": 3
+    },
+    {
+      "target": "java.util.Hashtable.put",
+      "count": 3
+    },
+    {
+      "target": "javax.microedition.lcdui.List.getSelectedIndex",
+      "count": 2
+    },
+    {
+      "target": "com.ixisoft.gxdice.nokia40.GamePlayScreen.access$000",
+      "count": 2
+    },
+    {
+      "target": "com.ixisoft.midlet.util.ContainerCanvas.getMIDletContext",
+      "count": 2
+    },
+    {
+      "target": "com.ixisoft.midlet.region.StringRegion.setFontColor",
+      "count": 2
+    },
+    {
+      "target": "com.ixisoft.midlet.util.Region.setSize",
+      "count": 2
+    },
+    {
+      "target": "java.lang.String.valueOf",
+      "count": 2
+    },
+    {
+      "target": "javax.microedition.lcdui.Canvas.getGameAction",
+      "count": 2
+    },
+    {
+      "target": "com.ixisoft.gxdice.nokia40.GameController.incrementRowPlayerScore",
+      "count": 2
+    },
+    {
+      "target": "com.ixisoft.gxdice.nokia40.GameController.incrementColPlayerScore",
+      "count": 2
+    },
+    {
+      "target": "java.lang.Thread.start",
+      "count": 2
+    },
+    {
+      "target": "java.lang.Thread.sleep",
+      "count": 2
+    },
+    {
+      "target": "com.ixisoft.midlet.util.MIDletUtils.getRandomInt",
+      "count": 2
+    },
+    {
+      "target": "com.ixisoft.gxdice.nokia40.GameController.setRowPlayerScore",
+      "count": 2
+    },
+    {
+      "target": "com.ixisoft.gxdice.nokia40.GameController.setColPlayerScore",
+      "count": 2
+    },
+    {
+      "target": "com.ixisoft.gxdice.nokia40.XingDiceRobot.takeTurn",
+      "count": 2
+    },
+    {
+      "target": "java.util.Vector.indexOf",
+      "count": 2
+    }
+  ],
+  "opcode_histogram": {
+    "aload_0": 870,
+    "invokevirtual": 503,
+    "getfield": 407,
+    "iload": 353,
+    "putfield": 247,
+    "aload_1": 218,
+    "bipush": 196,
+    "invokespecial": 158,
+    "return": 151,
+    "iconst_0": 145,
+    "goto": 138,
+    "ldc": 120,
+    "iconst_1": 119,
+    "istore": 112,
+    "dup": 103,
+    "new": 98,
+    "aload": 97,
+    "iload_1": 89,
+    "iload_2": 80,
+    "iload_3": 73,
+    "ifeq": 68,
+    "aload_2": 65,
+    "aload_3": 59,
+    "iadd": 57,
+    "invokestatic": 56,
+    "ireturn": 55,
+    "astore": 43,
+    "if_icmplt": 38,
+    "monitorexit": 36,
+    "aconst_null": 35,
+    "isub": 34,
+    "iconst_2": 33,
+    "iinc": 33,
+    "imul": 32,
+    "astore_2": 29
+  },
+  "resource_files": [
+    {
+      "path": "META-INF/MANIFEST.MF",
+      "size": 383
+    },
+    {
+      "path": "xd.png",
+      "size": 747
+    },
+    {
+      "path": "imgXingDice/col-anchor-0.png",
+      "size": 194
+    },
+    {
+      "path": "imgXingDice/col-anchor-1.png",
+      "size": 208
+    },
+    {
+      "path": "imgXingDice/col-anchor-2.png",
+      "size": 208
+    },
+    {
+      "path": "imgXingDice/controller-0.png",
+      "size": 481
+    },
+    {
+      "path": "imgXingDice/controller-1.png",
+      "size": 501
+    },
+    {
+      "path": "imgXingDice/controller-2.png",
+      "size": 530
+    },
+    {
+      "path": "imgXingDice/controller-3.png",
+      "size": 541
+    },
+    {
+      "path": "imgXingDice/crosshair.png",
+      "size": 311
+    },
+    {
+      "path": "imgXingDice/die-0.png",
+      "size": 247
+    },
+    {
+      "path": "imgXingDice/die-1.png",
+      "size": 266
+    },
+    {
+      "path": "imgXingDice/die-2.png",
+      "size": 261
+    },
+    {
+      "path": "imgXingDice/die-3.png",
+      "size": 274
+    },
+    {
+      "path": "imgXingDice/die-4.png",
+      "size": 265
+    },
+    {
+      "path": "imgXingDice/die-5.png",
+      "size": 271
+    },
+    {
+      "path": "imgXingDice/die-6.png",
+      "size": 275
+    },
+    {
+      "path": "imgXingDice/game-logo.png",
+      "size": 2451
+    },
+    {
+      "path": "imgXingDice/row-anchor-0.png",
+      "size": 194
+    },
+    {
+      "path": "imgXingDice/row-anchor-1.png",
+      "size": 218
+    },
+    {
+      "path": "imgXingDice/row-anchor-2.png",
+      "size": 218
+    },
+    {
+      "path": "imgXingDice/turn-col.png",
+      "size": 340
+    },
+    {
+      "path": "imgXingDice/turn-row.png",
+      "size": 333
+    },
+    {
+      "path": "imgXingDice/turn-thinking.png",
+      "size": 336
+    }
+  ]
+}
