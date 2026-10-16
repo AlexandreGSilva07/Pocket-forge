@@ -31,8 +31,11 @@
    function clear(color=0){pixels.fill(color&65535);}
    function rect(x,y,w,h,color){
      if(![x,y,w,h].every(Number.isFinite)||w<=0||h<=0)return 0;
-     const x0=Math.max(0,Math.floor(x)),y0=Math.max(0,Math.floor(y));
-     const x1=Math.min(width,Math.ceil(x+w)),y1=Math.min(height,Math.ceil(y+h));
+     const x0=Math.max(0,Math.min(width,Math.floor(x)));
+     const y0=Math.max(0,Math.min(height,Math.floor(y)));
+     const x1=Math.max(0,Math.min(width,Math.ceil(x+w)));
+     const y1=Math.max(0,Math.min(height,Math.ceil(y+h)));
+     if(x0>=x1||y0>=y1)return 0;
      for(let yy=y0;yy<y1;yy++)pixels.fill(color&65535,yy*width+x0,yy*width+x1);
      return Math.max(0,x1-x0)*Math.max(0,y1-y0);
    }
