@@ -22,10 +22,11 @@
     try { return window.localStorage; } catch (_) { return null; }
   })(), { namespace: "lumen-shift", version: 1 });
   store.migrateLegacyNumber("pocketforge-lumen-best", "best");
+  const audioBus = window.PocketForgeAudio.createAudio(window, { maxVoices: 12 });
   let width = 800, height = 600, dpr = 1, last = 0, now = 0;
   let state = "menu", score = 0, lives = 3, elapsed = 0, spawnTimer = 0, orbTimer = 0;
   let invulnerable = 0, dashTime = 0, dashCooldown = 0, muted = false;
-  let audio = null, touch = null, best = 0, shake = 0;
+  let touch = null, best = 0, shake = 0;
   let stars = [], enemies = [], orbs = [], particles = [], keys = new Set();
   const player = { x: 0, y: 0, r: 16, vx: 0, vy: 0, angle: -Math.PI / 2 };
   best = store.readNumber("best", 0);
@@ -50,25 +51,9 @@
   window.addEventListener("resize", resize);
   resize();
 
-  function unlockAudio() {
-    if (muted) return;
-    try {
-      const AC = window.AudioContext || window.webkitAudioContext;
-      if (!AC) return;
-      if (!audio) audio = new AC();
-      if (audio.state === "suspended") audio.resume().catch(() => {});
-    } catch (_) { audio = null; }
-  }
+  function unlockAudio() { if (!muted) audioBus.unlock(); }
   function beep(freq, dur = .13, kind = "sine", vol = .04) {
-    if (muted || !audio || audio.state !== "running") return;
-    try {
-      const o = audio.createOscillator(), g = audio.createGain(), t = audio.currentTime;
-      o.type = kind; o.frequency.setValueAtTime(freq, t);
-      o.frequency.exponentialRampToValueAtTime(Math.max(60, freq * .68), t + dur);
-      g.gain.setValueAtTime(Math.max(.001, vol), t);
-      g.gain.exponentialRampToValueAtTime(.001, t + dur);
-      o.connect(g); g.connect(audio.destination); o.start(t); o.stop(t + dur);
-    } catch (_) {}
+    audioBus.play(freq, dur, kind, vol);
   }
   function sparkle(x, y, color, count = 12, speed = 160) {
     const n = reducedMotion ? Math.min(4, count) : count;
@@ -134,7 +119,7 @@
   dashButton.addEventListener("click", e => { e.stopPropagation(); dash(); });
   pauseButton.addEventListener("click", togglePause);
   muteButton.addEventListener("click", () => {
-    muted = !muted; muteButton.textContent = muted ? "♩" : "♫";
+    muted = !muted; audioBus.setMuted(muted); muteButton.textContent = muted ? "♩" : "♫";
     muteButton.setAttribute("aria-pressed", String(muted));
     if (!muted) { unlockAudio(); beep(580, .09); }
   });
