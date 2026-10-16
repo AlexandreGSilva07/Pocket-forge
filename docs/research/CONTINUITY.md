@@ -38,6 +38,10 @@ O total agregado é 19.753 classes, 31.711 imagens, 27.410 PNGs indexados, 2.826
 
 Não mudar automaticamente o estado de nenhum jogo para as etapas detalhadas. Nomes de métodos presentes no classfile não demonstram como os métodos funcionam. Os três módulos existentes são **implementações próprias inspiradas por indícios**, e não ports reconstruídos dos 300 primeiros jogos.
 
+## Lista de aprofundamento já escolhida
+
+A lista de **100 jogos prioritários + 25 reservas** está em [deep/selection-100.md](deep/selection-100.md), com IDs completos, metadados e perguntas individuais em [deep/selection-100.json](deep/selection-100.json). Foi obtida dos 17 lotes, sem executar/descompilar os jogos; o benchmark JBenchmark3D é controle auxiliar, não jogo selecionado. O progresso real fica em [deep/registry.json](deep/registry.json), sem estudos concluídos ainda. O novo agente deve **começar pelas amostras prioritárias**, não repetir seleção nem inventário.
+
 ## Próxima etapa: auditoria detalhada completa
 
 1. Reutilizar a ordem/IDs do ledger; criar rastreador adicional de análise detalhada sem apagar o registro original.
