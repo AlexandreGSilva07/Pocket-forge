@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "phase": "detailed_reverse_engineering",
-  "status": "wave01_bytecode_12_method_review_3_in_progress",
+  "status": "wave01_bytecode_12_method_review_4_in_progress",
   "static_corpus_registry": "docs/research/batches/registry.json",
   "total_static_jar_sha256": 1649,
   "completed_studies": [],
@@ -47,6 +47,24 @@
       "engine_files": [
         "demo/engine/tilepack.js"
       ]
+    },
+    {
+      "jar_sha256": "493f99e040eba12023fba49af15c846de245da8880ac9820bdb85190c0e097b1",
+      "name": "5Chess",
+      "stage": "METHOD_REVIEW_PARTIAL",
+      "reviewed_methods": [
+        "five.d.run()",
+        "five.d.a(int)",
+        "five.d.if(int,int,int)",
+        "five.d.a(int,int,int,int)",
+        "five.d.a()"
+      ],
+      "report": "docs/research/deep/studies/493f99e040eb-5chess.md",
+      "original_executed": false,
+      "engine_files": [
+        "demo/engine/tactics.js",
+        "demo/tactics-lab.html"
+      ]
     }
   ],
   "engine_findings": [],
@@ -57,7 +75,7 @@
   "selection_reserves": 25,
   "technical_controls_not_games": 1,
   "selection_rationale": "Diversidade de APIs, render, mundos, IA, assets, física, áudio e compactação; lista gerada sobre 17 lotes com 1649 SHA-256 únicos; seleção não é decompilação.",
-  "next_step": "Revisar manualmente bytecode dos 12, comparar runtime original em emulador, investigar algoritmos completos. Continue com restantes dos 100 selecionados.",
+  "next_step": "Disassemble and index 88 remaining SHA-pinned games in PR20; analyze 5Chess and other games by method. No completed semantic full games.",
   "wave01_bytecode": {
     "target_count": 12,
     "actual_javap_processed": 12,
@@ -65,5 +83,5 @@
     "scope": "method signatures + opcode/call summary; not full human semantic reconstruction of all methods",
     "note": "Xrossing Dice has 2 method-less constant interfaces; parser initially reports as errors; address as a classification warning."
   },
-  "deep_method_review_partial": 3
+  "deep_method_review_partial": 4
 }
