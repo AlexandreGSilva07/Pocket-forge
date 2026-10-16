@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="pt-BR">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>PocketForge · AI Core Demo</title>
+<style>
+:root{color-scheme:dark;font:16px system-ui,Arial;background:#0b1020;color:#ecf4ff}
+body{margin:0;min-height:100vh;display:grid;place-items:center;padding:16px;box-sizing:border-box}
+main{width:min(550px,100%);background:#151e33;border:1px solid #354762;border-radius:20px;padding:24px;box-sizing:border-box}
+h1{font-size:1.6rem;margin:.2em 0}.muted{color:#a6b9d1}#piles{display:flex;flex-wrap:wrap;gap:8px;min-height:72px;margin:25px 0}
+#piles span{display:block;width:20px;height:40px;border:1px solid #54bfe7;border-radius:12px;background:linear-gradient(#32d5db,#316cbb)}
+button{cursor:pointer;border:1px solid #5b78af;border-radius:12px;padding:12px;background:#254979;color:white;font-size:1rem}
+button:disabled{opacity:.35;cursor:default}#controls{display:flex;gap:8px;flex-wrap:wrap}
+#reset{background:transparent;margin-top:18px}#turn{font-weight:700;min-height:46px}
+</style></head>
+<body>
+<main><p class="muted">POCKETFORGE / COMPONENT DEMO</p><h1>AI Core: jogo das peças</h1>
+<p class="muted">Pegue 1, 2 ou 3 peças. Quem pegar a última vence. O adversário usa busca minimax com poda alfa-beta e orçamento de nós — implementação original para testes, não uma cópia do Xrossing Dice.</p>
+<div id="piles" role="img" aria-label="Peças restantes"></div>
+<p id="turn" aria-live="polite"></p>
+<div id="controls"><button data-take="1">Pegar 1</button><button data-take="2">Pegar 2</button><button data-take="3">Pegar 3</button></div>
+<button id="reset">Reiniciar</button><p class="muted" id="stats" aria-live="polite"></p>
+</main>
+<script src="engine/ai.js"></script>
+<script>
+"use strict";
+(()=>{
+ const pieces=document.getElementById("piles"),turn=document.getElementById("turn"),stats=document.getElementById("stats");
+ const buttons=[...document.querySelectorAll("[data-take]")],state={remaining:15,playerTurn:true};
+ function show(){
+   pieces.replaceChildren(...Array.from({length:state.remaining},()=>document.createElement("span")));
+   pieces.setAttribute("aria-label",state.remaining+" peças restantes");
+   buttons.forEach(b=>b.disabled=!state.playerTurn||state.remaining===0||+b.dataset.take>state.remaining);
+   if(state.remaining===0)turn.textContent=state.playerTurn?"Você perdeu.":"Você venceu!";
+   else turn.textContent=state.playerTurn?"Sua vez: escolha de 1 a 3 peças.":"IA pensando...";
+ }
+ function cpu(){
+   if(state.remaining===0)return;
+   const search=window.PocketForgeAI.searchBestMove({
+     state,depth:12,maxNodes:50000,maximizing:true,
+     legalMoves:s=>Array.from({length:Math.min(3,s.remaining)},(_,i)=>i+1),
+     applyMove:(s,n,isMax)=>{const undo={remaining:s.remaining,playerTurn:s.playerTurn};s.remaining-=n;s.playerTurn=!s.playerTurn;return undo;},
+     undoMove:(s,n,isMax,old)=>{s.remaining=old.remaining;s.playerTurn=old.playerTurn;},
+     isTerminal:s=>s.remaining===0,
+     evaluate:s=>s.remaining===0?(s.playerTurn?-100:100):0
+   });
+   // At leaf, playerTurn means next to move; last mover wins.
+   // max side represents CPU (playerTurn=false at root); the evaluation
+   // uses parity of playerTurn only, keeping roles consistent recursively.
+   const step=search.move||1;
+   state.remaining-=Math.min(step,state.remaining);state.playerTurn=true;
+   stats.textContent="IA: "+step+" peça(s) · "+search.nodes+" nós · "+search.prunes+" podas";
+   show();
+ }
+ for(const b of buttons)b.addEventListener("click",()=>{
+   const take=+b.dataset.take;if(!state.playerTurn||take>state.remaining)return;
+   state.remaining-=take;state.playerTurn=false;
+   if(state.remaining===0){show();return;}
+   show();cpu();
+ });
+ document.getElementById("reset").addEventListener("click",()=>{
+   state.remaining=15;state.playerTurn=true;stats.textContent="";show();
+ });
+ show();
+})();
+</script>
+</body></html>
