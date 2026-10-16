@@ -157,8 +157,8 @@ Selecionados: 100 principais + 25 reservas; 100 âncoras verificadas; 55 princip
 | 21 | Física, corrida e esportes | `Golf tour (cacho pantalla)/Golf Tour.jar` | `4b0047291c8d486e` | 50 | 73 |
 | 22 | Arte, recursos e animação | `828 Java Games/Gangland.jar` | `2c0d116bdcfa4404` | 24 | 142 |
 | 23 | Arte, recursos e animação | `RTL Racing 2005/In_Fusio_RTL_Racing_2005.jar` | `730a555b8386eb12` | 15 | 82 |
-| 24 | 3D e rasterização | `JBenchmark 3D/JBenchmark3D.jar` | `fdbc8f9562787435` | 5 | 2 |
-| 25 | Arte, recursos e animação | `Fireblaster/fireblaster.jar` | `2a01922ab9e7277f` | 3 | 88 |
+| 24 | Arte, recursos e animação | `Fireblaster/fireblaster.jar` | `2a01922ab9e7277f` | 3 | 88 |
+| 25 | Arte, recursos e animação | `Tennis Pro/TennisPro.jar` | `b7334af7dbf1fb4d` | 12 | 83 |
 
 ## Protocolo para investigar, não apenas catalogar
 

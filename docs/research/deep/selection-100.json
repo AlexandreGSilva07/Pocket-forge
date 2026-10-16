@@ -6735,48 +6735,6 @@
       ]
     },
     {
-      "jar_sha256": "fdbc8f9562787435839f78f1a52920ca87e7eb77b3573c9930ea1e6424c0f6a4",
-      "jar_path": "All Java Mobile Phone Games/J/JBenchmark 3D/JBenchmark3D.jar",
-      "jad_path": "All Java Mobile Phone Games/J/JBenchmark 3D/JBenchmark3D.jad",
-      "game_title": "JBenchmark3D",
-      "batch": 13,
-      "bytes": 82274,
-      "classes": 5,
-      "images": 2,
-      "audio": 0,
-      "png_indexed": 0,
-      "api_refs": [
-        "GameCanvas",
-        "J2ME M3G",
-        "MIDP Graphics",
-        "Thread.sleep"
-      ],
-      "method_symbols": [
-        "fillRect",
-        "flushGraphics"
-      ],
-      "class_names": [
-        "JBenchmark3D/JBenchmark3D.class",
-        "a.class",
-        "b.class",
-        "c.class",
-        "d.class"
-      ],
-      "estimated_png_rgba_bytes": 14336,
-      "rank": 24,
-      "tier": "reserva",
-      "track": "render3d",
-      "track_name": "3D e rasterização",
-      "study_question": "Identificar algoritmos reais de projeção, buffers, M3G e rasterização em software.",
-      "id": "fdbc8f9562787435",
-      "score_metadata": 82.5,
-      "selection_basis": "pontuação estrutural",
-      "status": "selected_not_decompiled",
-      "investigation_targets": [
-        "Verificar se usa cenas, modelos, transformações e animações M3G; medir custo da representação."
-      ]
-    },
-    {
       "jar_sha256": "2a01922ab9e7277f1eebf82e0178142328052f03adbe880887723a73270c5492",
       "jar_path": "All Java Mobile Phone Games/F/Fireblaster/fireblaster.jar",
       "jad_path": "All Java Mobile Phone Games/F/Fireblaster/fireblaster.jad",
@@ -6801,7 +6759,7 @@
         "Fireblaster.class"
       ],
       "estimated_png_rgba_bytes": 101812,
-      "rank": 25,
+      "rank": 24,
       "tier": "reserva",
       "track": "assets",
       "track_name": "Arte, recursos e animação",
@@ -6813,6 +6771,60 @@
       "investigation_targets": [
         "Catalogar atlas, recursos gráficos e quantização; quantificar custo descompactado.",
         "Examinar como lógica e recursos são representados com poucas classes."
+      ]
+    },
+    {
+      "jar_sha256": "b7334af7dbf1fb4d1a071e346230c09e3f9e7b8952abde65cea3330d4f67e48f",
+      "jar_path": "All Java Mobile Phone Games/T/Tennis Pro/TennisPro.jar",
+      "jad_path": "All Java Mobile Phone Games/T/Tennis Pro/TennisPro.jad",
+      "game_title": "Tennis Pro",
+      "batch": 16,
+      "bytes": 94427,
+      "classes": 12,
+      "images": 83,
+      "audio": 5,
+      "png_indexed": 83,
+      "api_refs": [
+        "MIDP Graphics",
+        "MMAPI audio",
+        "Nokia DirectGraphics",
+        "RMS persistence",
+        "Thread.sleep"
+      ],
+      "method_symbols": [
+        "drawImage",
+        "drawPixels",
+        "fillRect",
+        "getResourceAsStream",
+        "repaint"
+      ],
+      "class_names": [
+        "b.class",
+        "c.class",
+        "d.class",
+        "e.class",
+        "TNS.class",
+        "com/nokia/mid/sound/Sound.class",
+        "com/nokia/mid/sound/SoundListener.class",
+        "com/nokia/mid/ui/DeviceControl.class",
+        "com/nokia/mid/ui/DirectGraphics.class",
+        "com/nokia/mid/ui/DirectGraphicsImplemented.class",
+        "com/nokia/mid/ui/DirectUtils.class",
+        "com/nokia/mid/ui/FullCanvas.class"
+      ],
+      "estimated_png_rgba_bytes": 597884,
+      "rank": 25,
+      "tier": "reserva",
+      "track": "assets",
+      "track_name": "Arte, recursos e animação",
+      "study_question": "Investigar compressão de texturas, spritesheets, efeitos e carregamento.",
+      "id": "b7334af7dbf1fb4d",
+      "score_metadata": 81.4,
+      "selection_basis": "pontuação estrutural",
+      "status": "selected_not_decompiled",
+      "investigation_targets": [
+        "Desmontar chamadas drawPixels e decidir se são efeitos, blit ou render de software.",
+        "Catalogar atlas, recursos gráficos e quantização; quantificar custo descompactado."
       ]
     }
   ],
