@@ -19,3 +19,9 @@ Criar testes de **pixel buffer 16-bit / blit parcial / imagem decodificada** em 
 ### Evidência/limites
 
 Estudo parcial de método de render real. Não houve execução do JAR original, nem prova de um motor 3D inteiro reconstruído. Não publicar código ou recursos originais; registrar apenas assinatura, estrutura e observações.
+
+## Experimento funcional adicionado ao motor (Pixel Surface)
+
+O módulo autoral `demo/engine/pixels.js` acrescenta framebuffer `Uint16Array` em RGBA4444 **definido pelo PocketForge**, desenho por pixel/linhas, clipping e conversão explícita para `ImageData` do Canvas 2D. A demonstração `demo/pixel-lab.html` gera uma cena estilizada original em resolução lógica 160×120 e mede FPS localmente; testes em `tests/pixel_engine.test.cjs` validam packing, bytes, clipping, rasterização e upload.
+
+**Comparação ainda pendente:** menor armazenamento do buffer CPU não garante menor gasto final ou render mais rápido, pois `Canvas.putImageData` recebe RGBA8 (dobro dos bytes por pixel) e pode dominar o custo. A amostra J2ME evidencia *a técnica*, não superioridade no hardware atual.
