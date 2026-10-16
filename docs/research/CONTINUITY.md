@@ -9,7 +9,7 @@
 - **Todos os PRs #1–#17 estão integrados à branch `main`**.
 - Fonte de verdade: [registry.json](batches/registry.json), com todos os hashes SHA-256 completos, uma entrada por arquivo JAR.
 - [Relatório de encerramento e índice de todos os 17 lotes](STATIC_COMPLETE.md).
-- **A fase seguinte é ENGENHARIA REVERSA DETALHADA**, não gerar novas cópias da auditoria sintética.
+- **A fase seguinte é ENGENHARIA REVERSA DETALHADA**, não gerar novas cópias da auditoria sintética. O controle de progresso fica em [deep/registry.json](deep/registry.json), inicialmente sem estudos concluídos.
 
 ## Hierarquia de fontes (não confiar na memória do chat)
 
