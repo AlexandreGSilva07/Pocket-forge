@@ -64,3 +64,9 @@ A função retorna novo estado; o sistema que a chama decide quando criar partí
 `demo/engine/compact.js` fornece componentes **originais, reutilizáveis e executados no Lumen Shift**: atlas horizontal com regiões de desenho, gerador de mapas tipados (`Uint8Array`), codificador/decodificador RLE com validação rígida e renderer Canvas 2D com culling de tiles. `demo/game.js` usa o atlas/mapa de fato para desenhar o fundo. Testes determinísticos estão em `tests/compact_engine.test.cjs`.
 
 **Evidência e limite:** o desenho via atlas, a representação compacta e a persistência simplificada são padrões observados nos JARs, mas os detalhes concretos deste módulo são **implementações próprias**. Ainda não foi provado que a nova implementação melhora FPS, RAM ou tamanho sobre a anterior; o desempenho deve ser medido. A decoração do fundo não é uma engine de plataforma/RPG completa.
+
+## Storage Core v0.2 — reconstrução incremental por evidência do corpus
+
+Em `demo/engine/state.js`, `PocketForgeState.createStore` implementa registros identificados, namespace, versão, persistência via `localStorage`, fallback de sessão e migração não destrutiva. O Lumen Shift migra o recorde do formato anterior e persiste através da API do motor. Testes em `tests/state_engine.test.cjs` cobrem roundtrip, versionamento, dados corrompidos, bloqueio de armazenamento e isolamento entre jogos.
+
+**Origem e diferença técnica:** o inventário do corpus J2ME encontrou numerosas referências a `javax.microedition.rms.RecordStore`. Isso motiva uma API moderna mínima de snapshots; **não é port de RecordStore nem prova de que a implementação seja equivalente**. Ainda faltam benchmarks de latência/durabilidade em aparelhos reais.

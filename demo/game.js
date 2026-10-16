@@ -18,13 +18,17 @@
   const rand = (min, max) => min + Math.random() * (max - min);
   const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
   const distance = (a, b) => Math.hypot(a.x - b.x, a.y - b.y);
+  const store = window.PocketForgeState.createStore((() => {
+    try { return window.localStorage; } catch (_) { return null; }
+  })(), { namespace: "lumen-shift", version: 1 });
+  store.migrateLegacyNumber("pocketforge-lumen-best", "best");
   let width = 800, height = 600, dpr = 1, last = 0, now = 0;
   let state = "menu", score = 0, lives = 3, elapsed = 0, spawnTimer = 0, orbTimer = 0;
   let invulnerable = 0, dashTime = 0, dashCooldown = 0, muted = false;
   let audio = null, touch = null, best = 0, shake = 0;
   let stars = [], enemies = [], orbs = [], particles = [], keys = new Set();
   const player = { x: 0, y: 0, r: 16, vx: 0, vy: 0, angle: -Math.PI / 2 };
-  try { best = Number(localStorage.getItem("pocketforge-lumen-best") || 0) || 0; } catch (_) {}
+  best = store.readNumber("best", 0);
   bestLabel.textContent = String(Math.floor(best)).padStart(4, "0");
 
   function resize() {
@@ -110,7 +114,7 @@
   function lose() {
     if (score > best) {
       best = Math.floor(score);
-      try { localStorage.setItem("pocketforge-lumen-best", String(best)); } catch (_) {}
+      store.writeNumber("best", best);
     }
     beep(190, .44, "sawtooth", .045);
     setUI("defeat", "Fim da <em>jornada</em>", "Você alcançou " + Math.floor(score) + " pontos. Cada tentativa deixa seu reflexo mais rápido.", "TENTAR DE NOVO");

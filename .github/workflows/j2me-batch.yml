@@ -55,8 +55,9 @@ jobs:
         shell: bash
         run: |
           node --check demo/engine/compact.js
+          node --check demo/engine/state.js
           node --check demo/game.js
-          node --test tests/compact_engine.test.cjs
+          node --test tests/compact_engine.test.cjs tests/state_engine.test.cjs
           python3 -m unittest discover -s tests -v
       - name: Commit audit results into PR branch (permanent)
         if: github.event_name == 'push'

@@ -1,0 +1,4336 @@
+{
+  "protocol_version": 1,
+  "batch": 2,
+  "batch_size_expected": 100,
+  "count": 100,
+  "selection": "First 100 unique valid JAR SHA256 per batch, sorted casefold by complete ZIP path; first occurrence representative",
+  "source": "https://archive.org/download/1000_J2ME_Games_Pack/1000JavaGames.zip",
+  "archive_filename": "1000JavaGames.zip",
+  "archive_bytes": 161222413,
+  "archive_sha256": "f8e3fb19f0cb451a1eebecccc16c4cb941c68293db2990a4e82df68bfa2c10dd",
+  "eligible_unique_jars": 1649,
+  "total_batches": 17,
+  "excluded_corrupt_count": 8,
+  "exclusion_examples": [
+    [
+      "828 Java Games/Dragon.jar",
+      "File is not a zip file"
+    ],
+    [
+      "All Java Mobile Phone Games/A/AH-6 Navy Battle/Ah6Navy.jar",
+      "File is not a zip file"
+    ],
+    [
+      "All Java Mobile Phone Games/D/DragonFire/Dragon.jar",
+      "File is not a zip file"
+    ],
+    [
+      "All Java Mobile Phone Games/M/Mighty Sword/MightySword.jar",
+      "File is not a zip file"
+    ],
+    [
+      "All Java Mobile Phone Games/S/Simon Says/simonsays.jar",
+      "File is not a zip file"
+    ],
+    [
+      "All Java Mobile Phone Games/S/Splinter Cell Pandora Tomorrow/Splinter_Cell-PT_pl.jar",
+      "File is not a zip file"
+    ],
+    [
+      "All Java Mobile Phone Games/T/Tomb Raider 2 - Quest For Cinnabar/TombRaider2QuestforCinnabar.jar",
+      "File is not a zip file"
+    ],
+    [
+      "All Java Mobile Phone Games/T/Triple Theat/triple_theat.jar",
+      "File is not a zip file"
+    ]
+  ],
+  "jad_matched": 0,
+  "total_classes": 1127,
+  "total_images": 1871,
+  "total_indexed_png": 1721,
+  "total_audio": 152,
+  "total_jar_bytes": 5798957,
+  "api_references": {
+    "MIDP Graphics": 100,
+    "RMS persistence": 96,
+    "Thread.sleep": 77,
+    "Nokia DirectGraphics": 32,
+    "MMAPI audio": 8
+  },
+  "method_symbols": {
+    "fillRect": 100,
+    "repaint": 100,
+    "drawImage": 99,
+    "getResourceAsStream": 66,
+    "drawPixels": 22
+  },
+  "identical_classfile_fingerprints_across_jars": 52,
+  "shared_class_examples": [
+    {
+      "class_sha256": "020b8bf6c35040e8dbfb0fcfbbc663651339f4d1578c015d798aad38abcb644e",
+      "file_ids": [
+        "80998253436c35d3",
+        "d9e44085672bb830",
+        "f7389826e9d941d1"
+      ],
+      "distinct_jars": 3
+    },
+    {
+      "class_sha256": "0f8dcf3a10e53c2c323dd730b955a8194fb166a364fe36845ccc8cfdbed7de5f",
+      "file_ids": [
+        "80998253436c35d3",
+        "d9e44085672bb830",
+        "f7389826e9d941d1"
+      ],
+      "distinct_jars": 3
+    },
+    {
+      "class_sha256": "16afa68ec77b85832ff33947325e14925fdb5dd55910267a2422978b4148676c",
+      "file_ids": [
+        "80998253436c35d3",
+        "d9e44085672bb830",
+        "f7389826e9d941d1"
+      ],
+      "distinct_jars": 3
+    },
+    {
+      "class_sha256": "209bc14cb7e096182fe02bb9c4ff08c0836a7f9c4aef9176e82447982b0dec41",
+      "file_ids": [
+        "80998253436c35d3",
+        "d9e44085672bb830",
+        "f7389826e9d941d1"
+      ],
+      "distinct_jars": 3
+    },
+    {
+      "class_sha256": "226275cdbe4820511089433b9a8f4241293f92d5da61223af051f3b75c7e0d6e",
+      "file_ids": [
+        "80998253436c35d3",
+        "d9e44085672bb830",
+        "f7389826e9d941d1"
+      ],
+      "distinct_jars": 3
+    },
+    {
+      "class_sha256": "26083a3cea70823ceb8a3ed57263db1419adfc032e53d9bbacc3fadf8a637be3",
+      "file_ids": [
+        "80998253436c35d3",
+        "d9e44085672bb830",
+        "f7389826e9d941d1"
+      ],
+      "distinct_jars": 3
+    },
+    {
+      "class_sha256": "2a74276dc81d2e4b5b97178367bfeee81d749dc32a945a7b07ca075a91e85626",
+      "file_ids": [
+        "80998253436c35d3",
+        "d9e44085672bb830",
+        "f7389826e9d941d1"
+      ],
+      "distinct_jars": 3
+    },
+    {
+      "class_sha256": "2cd9b6c1967ff79b6d233de340c2d1dbc211a4d1c91f5ae0dbd99912bde0fbb8",
+      "file_ids": [
+        "80998253436c35d3",
+        "d9e44085672bb830",
+        "f7389826e9d941d1"
+      ],
+      "distinct_jars": 3
+    },
+    {
+      "class_sha256": "3a83e782147fa595c9b2138eb286faefe9d5d72d3556b891cfba615092d0e233",
+      "file_ids": [
+        "80998253436c35d3",
+        "d9e44085672bb830",
+        "f7389826e9d941d1"
+      ],
+      "distinct_jars": 3
+    },
+    {
+      "class_sha256": "4954da8190828e4db5916fa9901b1bb6f6549fb40ab1077ba29a77049d9ea88a",
+      "file_ids": [
+        "80998253436c35d3",
+        "d9e44085672bb830",
+        "f7389826e9d941d1"
+      ],
+      "distinct_jars": 3
+    },
+    {
+      "class_sha256": "4e4b039e4b13175255d55fd58659444c3c5f9b239c4908f26e209924f7fc7516",
+      "file_ids": [
+        "80998253436c35d3",
+        "d9e44085672bb830",
+        "f7389826e9d941d1"
+      ],
+      "distinct_jars": 3
+    },
+    {
+      "class_sha256": "55b7498c6af7f98a9abfd367a4691dde180e882707eed270d62194a664e3679d",
+      "file_ids": [
+        "80998253436c35d3",
+        "d9e44085672bb830",
+        "f7389826e9d941d1"
+      ],
+      "distinct_jars": 3
+    },
+    {
+      "class_sha256": "5cb78440da528fee653e7b0eb761efd61ea5b289f6c69ffbfeb2cf7a19c70603",
+      "file_ids": [
+        "80998253436c35d3",
+        "d9e44085672bb830",
+        "f7389826e9d941d1"
+      ],
+      "distinct_jars": 3
+    },
+    {
+      "class_sha256": "5d103509e761ff53596bad470f7f84af9314d82de4dabf0438a7ce03675b793f",
+      "file_ids": [
+        "80998253436c35d3",
+        "d9e44085672bb830",
+        "f7389826e9d941d1"
+      ],
+      "distinct_jars": 3
+    },
+    {
+      "class_sha256": "76557bf50fa8d0cd28c445bc88cfaa630ae50769f9ce0ff08a399294530c38b1",
+      "file_ids": [
+        "80998253436c35d3",
+        "d9e44085672bb830",
+        "f7389826e9d941d1"
+      ],
+      "distinct_jars": 3
+    }
+  ],
+  "scope": "Static classfile/resource inspection. No MIDlet execution. No equivalence to 100 unique game titles.",
+  "records": [
+    {
+      "sequence": 101,
+      "id": "2dc34fc07d3bc52c",
+      "jar_path": "828 Java Games/Blocks.jar",
+      "jad_path": "",
+      "jar_sha256": "2dc34fc07d3bc52c239300d75210f629747489a5b1cc0dbb67d118b0c3dda0ce",
+      "game_title": "Blocks",
+      "bytes": 17848,
+      "classes": 3,
+      "images": 14,
+      "png_indexed": 2,
+      "audio": 0,
+      "midp": "MIDP-1.0",
+      "cldc": "CLDC-1.0",
+      "api_refs": [
+        "MIDP Graphics",
+        "Thread.sleep"
+      ],
+      "method_symbols": [
+        "drawImage",
+        "fillRect",
+        "repaint"
+      ],
+      "class_names": [
+        "Blocks.class",
+        "BlocksCanvas.class",
+        "BlocksHelp.class"
+      ],
+      "estimated_png_rgba_bytes": 124200,
+      "jad_available": false
+    },
+    {
+      "sequence": 102,
+      "id": "eab9487927d223e7",
+      "jar_path": "828 Java Games/Bloobz.jar",
+      "jad_path": "",
+      "jar_sha256": "eab9487927d223e78e253d5b584ba71dba859f11d15f81ea3405cf16dfe5f6cc",
+      "game_title": "Bloobz",
+      "bytes": 34833,
+      "classes": 11,
+      "images": 16,
+      "png_indexed": 16,
+      "audio": 9,
+      "midp": "MIDP-1.0",
+      "cldc": "CLDC-1.0",
+      "api_refs": [
+        "MIDP Graphics",
+        "RMS persistence"
+      ],
+      "method_symbols": [
+        "drawImage",
+        "fillRect",
+        "getResourceAsStream",
+        "repaint"
+      ],
+      "class_names": [
+        "ConfirmationDialog.class",
+        "Dialog.class",
+        "DialogListener.class",
+        "GameDataManager$InitGame.class",
+        "GameDataManager.class",
+        "randomLinesCanvas$timerTask.class",
+        "randomLinesCanvas.class",
+        "randomLines.class",
+        "SoundPlayer.class",
+        "LogoCanvas$TimeTick.class",
+        "LogoCanvas.class"
+      ],
+      "estimated_png_rgba_bytes": 184480,
+      "jad_available": false
+    },
+    {
+      "sequence": 103,
+      "id": "20c2b77d65ef521a",
+      "jar_path": "828 Java Games/BoarderFun.jar",
+      "jad_path": "",
+      "jar_sha256": "20c2b77d65ef521ab38a39c9f3e3870c7478e8eb659dc2d721bdf92934768d97",
+      "game_title": "BoarderFun",
+      "bytes": 45670,
+      "classes": 19,
+      "images": 20,
+      "png_indexed": 16,
+      "audio": 8,
+      "midp": "MIDP-1.0",
+      "cldc": "CLDC-1.0",
+      "api_refs": [
+        "MIDP Graphics",
+        "RMS persistence",
+        "Thread.sleep"
+      ],
+      "method_symbols": [
+        "drawImage",
+        "fillRect",
+        "getResourceAsStream",
+        "repaint"
+      ],
+      "class_names": [
+        "a.class",
+        "b.class",
+        "c.class",
+        "d.class",
+        "e$1.class",
+        "e.class",
+        "f.class",
+        "g.class",
+        "Game.class",
+        "h$a.class",
+        "h.class",
+        "i.class",
+        "j.class",
+        "k.class",
+        "l.class",
+        "m.class",
+        "n.class",
+        "o.class",
+        "p.class"
+      ],
+      "estimated_png_rgba_bytes": 247504,
+      "jad_available": false
+    },
+    {
+      "sequence": 104,
+      "id": "d9b5d585e6e970a1",
+      "jar_path": "828 Java Games/bobbybearing.jar",
+      "jad_path": "",
+      "jar_sha256": "d9b5d585e6e970a1c727d3c6a312971bf16873d792deb2b08e48b09bea5ad53b",
+      "game_title": "Bobby Bearing",
+      "bytes": 61862,
+      "classes": 19,
+      "images": 13,
+      "png_indexed": 9,
+      "audio": 0,
+      "midp": "MIDP-1.0",
+      "cldc": "CLDC-1.0",
+      "api_refs": [
+        "MIDP Graphics",
+        "RMS persistence",
+        "Thread.sleep"
+      ],
+      "method_symbols": [
+        "drawImage",
+        "fillRect",
+        "getResourceAsStream",
+        "repaint"
+      ],
+      "class_names": [
+        "net/jabler/midp/bobby/a.class",
+        "net/jabler/midp/bobby/b.class",
+        "net/jabler/midp/bobby/c.class",
+        "net/jabler/midp/bobby/d.class",
+        "net/jabler/midp/bobby/e.class",
+        "net/jabler/midp/bobby/f.class",
+        "net/jabler/midp/bobby/g.class",
+        "net/jabler/midp/bobby/Bobby.class",
+        "net/jabler/midp/bobby/h.class",
+        "net/jabler/midp/bobby/i.class",
+        "net/jabler/midp/bobby/j.class",
+        "net/jabler/midp/bobby/k.class",
+        "net/jabler/midp/bobby/l.class",
+        "net/jabler/midp/bobby/m.class",
+        "net/jabler/midp/arch/a.class",
+        "net/jabler/midp/game/a.class",
+        "net/jabler/midp/game/b.class",
+        "net/jabler/midp/game/c.class",
+        "net/jabler/midp/game/d.class"
+      ],
+      "estimated_png_rgba_bytes": 329104,
+      "jad_available": false
+    },
+    {
+      "sequence": 105,
+      "id": "7d862012c50c83b8",
+      "jar_path": "828 Java Games/BobbyCarrot.jar",
+      "jad_path": "",
+      "jar_sha256": "7d862012c50c83b8f8159eb71bc7ab95800c889f682c956ac9dc8be533c86cd2",
+      "game_title": "Bobby Carrot",
+      "bytes": 78070,
+      "classes": 4,
+      "images": 25,
+      "png_indexed": 25,
+      "audio": 3,
+      "midp": "MIDP-1.0",
+      "cldc": "CLDC-1.0",
+      "api_refs": [
+        "MIDP Graphics",
+        "RMS persistence",
+        "Thread.sleep"
+      ],
+      "method_symbols": [
+        "drawImage",
+        "fillRect",
+        "getResourceAsStream",
+        "repaint"
+      ],
+      "class_names": [
+        "a.class",
+        "b.class",
+        "Bobby.class",
+        "c.class"
+      ],
+      "estimated_png_rgba_bytes": 495768,
+      "jad_available": false
+    },
+    {
+      "sequence": 106,
+      "id": "e668e3ece82f17d9",
+      "jar_path": "828 Java Games/BomberMan.jar",
+      "jad_path": "",
+      "jar_sha256": "e668e3ece82f17d908cd788a435aaca2e911b3ed48051194a675dd6dc1264676",
+      "game_title": "B-Man",
+      "bytes": 52243,
+      "classes": 12,
+      "images": 44,
+      "png_indexed": 0,
+      "audio": 0,
+      "midp": "MIDP-1.0",
+      "cldc": "CLDC-1.0",
+      "api_refs": [
+        "MIDP Graphics",
+        "RMS persistence"
+      ],
+      "method_symbols": [
+        "drawImage",
+        "fillRect",
+        "repaint"
+      ],
+      "class_names": [
+        "bomber/Bomber.class",
+        "bomber/Enemies$Enemy.class",
+        "bomber/Enemies.class",
+        "bomber/GameScreen$FrameUpdateTask.class",
+        "bomber/GameScreen.class",
+        "bomber/HighScores.class",
+        "bomber/MenuScreen.class",
+        "bomber/Player.class",
+        "bomber/Playfield$Fire.class",
+        "bomber/Playfield.class",
+        "bomber/RandomNumbers.class",
+        "bomber/SingleItemDB.class"
+      ],
+      "estimated_png_rgba_bytes": 38128,
+      "jad_available": false
+    },
+    {
+      "sequence": 107,
+      "id": "8dea24379f875550",
+      "jar_path": "828 Java Games/Bombjack (s60).jar",
+      "jad_path": "",
+      "jar_sha256": "8dea24379f875550e2471f30fdf2311ba618547a87a9bf9466074c0f3d21cd59",
+      "game_title": "Bombjack",
+      "bytes": 78210,
+      "classes": 8,
+      "images": 26,
+      "png_indexed": 26,
+      "audio": 4,
+      "midp": "MIDP-1.0",
+      "cldc": "CLDC-1.0",
+      "api_refs": [
+        "MIDP Graphics",
+        "RMS persistence",
+        "Thread.sleep"
+      ],
+      "method_symbols": [
+        "drawImage",
+        "fillRect",
+        "getResourceAsStream",
+        "repaint"
+      ],
+      "class_names": [
+        "a.class",
+        "b.class",
+        "bombjack/BombJack.class",
+        "c.class",
+        "d.class",
+        "e.class",
+        "f.class",
+        "g.class"
+      ],
+      "estimated_png_rgba_bytes": 846748,
+      "jad_available": false
+    },
+    {
+      "sequence": 108,
+      "id": "3ad21254953d72ad",
+      "jar_path": "828 Java Games/bombjack.jar",
+      "jad_path": "",
+      "jar_sha256": "3ad21254953d72adf8d348433218ec32ab125e3859456107c26a6f4165b102db",
+      "game_title": "Bombjack",
+      "bytes": 62160,
+      "classes": 8,
+      "images": 26,
+      "png_indexed": 26,
+      "audio": 0,
+      "midp": "MIDP-1.0",
+      "cldc": "CLDC-1.0",
+      "api_refs": [
+        "MIDP Graphics",
+        "RMS persistence",
+        "Thread.sleep"
+      ],
+      "method_symbols": [
+        "drawImage",
+        "fillRect",
+        "getResourceAsStream",
+        "repaint"
+      ],
+      "class_names": [
+        "a.class",
+        "b.class",
+        "bombjack/BombJack.class",
+        "c.class",
+        "d.class",
+        "e.class",
+        "f.class",
+        "g.class"
+      ],
+      "estimated_png_rgba_bytes": 636512,
+      "jad_available": false
+    },
+    {
+      "sequence": 109,
+      "id": "011e1b9830d659e0",
+      "jar_path": "828 Java Games/BombSub.jar",
+      "jad_path": "",
+      "jar_sha256": "011e1b9830d659e0d0ad3f2d6d82439a206d7c5c8bbbecf5a3c007acaae6b867",
+      "game_title": "BombSub",
+      "bytes": 8747,
+      "classes": 3,
+      "images": 7,
+      "png_indexed": 0,
+      "audio": 0,
+      "midp": "MIDP-1.0",
+      "cldc": "CLDC-1.0",
+      "api_refs": [
+        "MIDP Graphics",
+        "Thread.sleep"
+      ],
+      "method_symbols": [
+        "drawImage",
+        "fillRect",
+        "repaint"
+      ],
+      "class_names": [
+        "com/anyEase/Game/BombSub.class",
+        "com/anyEase/Game/Main.class",
+        "com/anyEase/Game/Obj.class"
+      ],
+      "estimated_png_rgba_bytes": 3056,
+      "jad_available": false
+    },
+    {
+      "sequence": 110,
+      "id": "1b002bba6c65e0de",
+      "jar_path": "828 Java Games/bones.jar",
+      "jad_path": "",
+      "jar_sha256": "1b002bba6c65e0de0889cfe913aa90839cf097391324b09eb0eda36915a7f3b9",
+      "game_title": "Bones",
+      "bytes": 64612,
+      "classes": 27,
+      "images": 1,
+      "png_indexed": 1,
+      "audio": 0,
+      "midp": "MIDP-1.0",
+      "cldc": "CLDC-1.0",
+      "api_refs": [
+        "MIDP Graphics",
+        "RMS persistence",
+        "Thread.sleep"
+      ],
+      "method_symbols": [
+        "drawImage",
+        "fillRect",
+        "getResourceAsStream",
+        "repaint"
+      ],
+      "class_names": [
+        "a.class",
+        "b.class",
+        "c.class",
+        "d.class",
+        "e.class",
+        "f.class",
+        "g.class",
+        "h.class",
+        "i.class",
+        "j.class",
+        "k.class",
+        "l.class",
+        "m.class",
+        "n.class",
+        "o.class",
+        "p.class",
+        "q.class",
+        "r.class",
+        "s.class",
+        "t.class",
+        "u/Main.class",
+        "u.class",
+        "v.class",
+        "w.class",
+        "x.class",
+        "y.class",
+        "z.class"
+      ],
+      "estimated_png_rgba_bytes": 784,
+      "jad_available": false
+    },
+    {
+      "sequence": 111,
+      "id": "eac2c11367722b60",
+      "jar_path": "828 Java Games/BoobiSisters.jar",
+      "jad_path": "",
+      "jar_sha256": "eac2c11367722b607f9801d2867ff5f3208dd6da2ac4d5c465d916fe4c57eb5a",
+      "game_title": "BoobiSisters",
+      "bytes": 57416,
+      "classes": 10,
+      "images": 58,
+      "png_indexed": 58,
+      "audio": 0,
+      "midp": "MIDP-1.0",
+      "cldc": "CLDC-1.0",
+      "api_refs": [
+        "MIDP Graphics",
+        "RMS persistence"
+      ],
+      "method_symbols": [
+        "drawImage",
+        "fillRect",
+        "repaint"
+      ],
+      "class_names": [
+        "GameMIDlet.class",
+        "GameCanvas.class",
+        "GameImageLoader.class",
+        "GameMain.class",
+        "GameTimer.class",
+        "Loading.class",
+        "MyItem.class",
+        "NokiaGameEffects.class",
+        "ScoreBoard.class",
+        "TitleCanvas.class"
+      ],
+      "estimated_png_rgba_bytes": 409244,
+      "jad_available": false
+    },
+    {
+      "sequence": 112,
+      "id": "36803c770cac71dd",
+      "jar_path": "828 Java Games/Boulder-1.jar",
+      "jad_path": "",
+      "jar_sha256": "36803c770cac71dda00242786f1d1a81c6ba3c2fcfe2030969e4a20d4a14ddec",
+      "game_title": "Boulder",
+      "bytes": 31202,
+      "classes": 17,
+      "images": 4,
+      "png_indexed": 4,
+      "audio": 0,
+      "midp": "MIDP-1.0",
+      "cldc": "CLDC-1.0",
+      "api_refs": [
+        "MIDP Graphics",
+        "RMS persistence",
+        "Thread.sleep"
+      ],
+      "method_symbols": [
+        "drawImage",
+        "fillRect",
+        "repaint"
+      ],
+      "class_names": [
+        "b.class",
+        "c.class",
+        "d.class",
+        "e.class",
+        "f.class",
+        "g.class",
+        "h.class",
+        "i.class",
+        "j.class",
+        "k.class",
+        "l.class",
+        "m.class",
+        "Main.class",
+        "xlayer/drivers/DD.class",
+        "xlayer/drivers/ED.class",
+        "xlayer/drivers/ND.class",
+        "xlayer/drivers/SD.class"
+      ],
+      "estimated_png_rgba_bytes": 53760,
+      "jad_available": false
+    },
+    {
+      "sequence": 113,
+      "id": "b4317ff414075af6",
+      "jar_path": "828 Java Games/Boulder-2.jar",
+      "jad_path": "",
+      "jar_sha256": "b4317ff414075af638a3c9d1494ab3413f3cd6f02f4288c7a84259e3cefae2f9",
+      "game_title": "Boulder 2",
+      "bytes": 58554,
+      "classes": 17,
+      "images": 5,
+      "png_indexed": 5,
+      "audio": 0,
+      "midp": "MIDP-1.0",
+      "cldc": "CLDC-1.0",
+      "api_refs": [
+        "MIDP Graphics",
+        "RMS persistence",
+        "Thread.sleep"
+      ],
+      "method_symbols": [
+        "drawImage",
+        "fillRect",
+        "getResourceAsStream",
+        "repaint"
+      ],
+      "class_names": [
+        "b.class",
+        "c.class",
+        "d.class",
+        "e.class",
+        "f.class",
+        "g.class",
+        "h.class",
+        "i.class",
+        "j.class",
+        "k.class",
+        "l.class",
+        "m.class",
+        "Main.class",
+        "xlayer/drivers/DD.class",
+        "xlayer/drivers/ED.class",
+        "xlayer/drivers/ND.class",
+        "xlayer/drivers/SD.class"
+      ],
+      "estimated_png_rgba_bytes": 194668,
+      "jad_available": false
+    },
+    {
+      "sequence": 114,
+      "id": "999dfa8a4719bedd",
+      "jar_path": "828 Java Games/BoulderDashME.jar",
+      "jad_path": "",
+      "jar_sha256": "999dfa8a4719bedd95e3b6b40661e6ef2b6ab3f8e71d3c8960d602c56d5b3dbc",
+      "game_title": "Boulder Dash",
+      "bytes": 62186,
+      "classes": 11,
+      "images": 13,
+      "png_indexed": 13,
+      "audio": 10,
+      "midp": "MIDP-1.0",
+      "cldc": "CLDC-1.0",
+      "api_refs": [
+        "MIDP Graphics",
+        "RMS persistence",
+        "Thread.sleep"
+      ],
+      "method_symbols": [
+        "drawImage",
+        "fillRect",
+        "getResourceAsStream",
+        "repaint"
+      ],
+      "class_names": [
+        "a.class",
+        "b.class",
+        "c.class",
+        "d.class",
+        "e.class",
+        "f.class",
+        "g.class",
+        "h.class",
+        "i.class",
+        "j.class",
+        "net/instantcom/boulderdash/BoulderDashMIDlet.class"
+      ],
+      "estimated_png_rgba_bytes": 271916,
+      "jad_available": false
+    },
+    {
+      "sequence": 115,
+      "id": "396012a38375f688",
+      "jar_path": "828 Java Games/Boun_en_nl-NL_fr_de_it_pt-PT_es-ES_tr-TR.jar",
+      "jad_path": "",
+      "jar_sha256": "396012a38375f688e4eb3fb3b6658220ec25bb75c41181486f91ce910e2f2e34",
+      "game_title": "Bounce",
+      "bytes": 56396,
+      "classes": 9,
+      "images": 4,
+      "png_indexed": 3,
+      "audio": 3,
+      "midp": "MIDP-1.0",
+      "cldc": "CLDC-1.0",
+      "api_refs": [
+        "MIDP Graphics",
+        "Nokia DirectGraphics",
+        "RMS persistence"
+      ],
+      "method_symbols": [
+        "drawImage",
+        "fillRect",
+        "getResourceAsStream",
+        "repaint"
+      ],
+      "class_names": [
+        "com/nokia/mid/appl/boun/Local.class",
+        "com/nokia/mid/appl/boun/Profile.class",
+        "com/nokia/mid/appl/boun/Ball.class",
+        "com/nokia/mid/appl/boun/BounceCanvas.class",
+        "com/nokia/mid/appl/boun/TileCanvas$GameTimer.class",
+        "com/nokia/mid/appl/boun/TileCanvas.class",
+        "com/nokia/mid/appl/boun/BounceUI.class",
+        "com/nokia/mid/appl/boun/Bounce.class",
+        "com/nokia/mid/appl/boun/BounceConst.class"
+      ],
+      "estimated_png_rgba_bytes": 87040,
+      "jad_available": false
+    },
+    {
+      "sequence": 116,
+      "id": "de3eec815e8e75de",
+      "jar_path": "828 Java Games/Boun_V1_9_en.jar",
+      "jad_path": "",
+      "jar_sha256": "de3eec815e8e75de6026300872ee507ba1494e401d679a03438e1b5d2d8b588f",
+      "game_title": "Bounce",
+      "bytes": 56350,
+      "classes": 9,
+      "images": 4,
+      "png_indexed": 3,
+      "audio": 3,
+      "midp": "MIDP-1.0",
+      "cldc": "CLDC-1.0",
+      "api_refs": [
+        "MIDP Graphics",
+        "Nokia DirectGraphics",
+        "RMS persistence"
+      ],
+      "method_symbols": [
+        "drawImage",
+        "fillRect",
+        "getResourceAsStream",
+        "repaint"
+      ],
+      "class_names": [
+        "com/nokia/mid/appl/boun/Local.class",
+        "com/nokia/mid/appl/boun/Profile.class",
+        "com/nokia/mid/appl/boun/Ball.class",
+        "com/nokia/mid/appl/boun/BounceCanvas.class",
+        "com/nokia/mid/appl/boun/TileCanvas$GameTimer.class",
+        "com/nokia/mid/appl/boun/TileCanvas.class",
+        "com/nokia/mid/appl/boun/BounceUI.class",
+        "com/nokia/mid/appl/boun/Bounce.class",
+        "com/nokia/mid/appl/boun/BounceConst.class"
+      ],
+      "estimated_png_rgba_bytes": 87040,
+      "jad_available": false
+    },
+    {
+      "sequence": 117,
+      "id": "ae4468955ed31a61",
+      "jar_path": "828 Java Games/Bowlenm.Bohlen.jar",
+      "jad_path": "",
+      "jar_sha256": "ae4468955ed31a61ea1d7edcf5e64cfca892334a00d0fb7fe50c02b89f29af7a",
+      "game_title": "Bowlen m. Bohlen",
+      "bytes": 73879,
+      "classes": 6,
+      "images": 82,
+      "png_indexed": 82,
+      "audio": 3,
+      "midp": "MIDP-1.0",
+      "cldc": "CLDC-1.0",
+      "api_refs": [
+        "MIDP Graphics",
+        "MMAPI audio",
+        "RMS persistence",
+        "Thread.sleep"
+      ],
+      "method_symbols": [
+        "drawImage",
+        "fillRect",
+        "getResourceAsStream",
+        "repaint"
+      ],
+      "class_names": [
+        "b.class",
+        "bowling.class",
+        "c.class",
+        "d.class",
+        "e.class",
+        "f.class"
+      ],
+      "estimated_png_rgba_bytes": 679864,
+      "jad_available": false
+    },
+    {
+      "sequence": 118,
+      "id": "2486664fa408046c",
+      "jar_path": "828 Java Games/BOWLING.jar",
+      "jad_path": "",
+      "jar_sha256": "2486664fa408046c0e0769e4e077d28b1adc074f760017d3fd37b6564338175c",
+      "game_title": "BOWLING",
+      "bytes": 27855,
+      "classes": 4,
+      "images": 22,
+      "png_indexed": 22,
+      "audio": 0,
+      "midp": "MIDP-1.0",
+      "cldc": "CLDC-1.0",
+      "api_refs": [
+        "MIDP Graphics",
+        "RMS persistence",
+        "Thread.sleep"
+      ],
+      "method_symbols": [
+        "drawImage",
+        "fillRect",
+        "repaint"
+      ],
+      "class_names": [
+        "Bowling.class",
+        "BowlingCanvas.class",
+        "BowlingFn.class",
+        "BowlingSuperCanvas.class"
+      ],
+      "estimated_png_rgba_bytes": 126160,
+      "jad_available": false
+    },
+    {
+      "sequence": 119,
+      "id": "ac716bfd46b0d679",
+      "jar_path": "828 Java Games/box_p.jar",
+      "jad_path": "",
+      "jar_sha256": "ac716bfd46b0d679199ed6eeb07fc3beade830a3d8b4ef920305837358d5d16b",
+      "game_title": "BoxPanic",
+      "bytes": 47421,
+      "classes": 9,
+      "images": 57,
+      "png_indexed": 57,
+      "audio": 0,
+      "midp": "MIDP-1.0",
+      "cldc": "CLDC-1.0",
+      "api_refs": [
+        "MIDP Graphics",
+        "RMS persistence"
+      ],
+      "method_symbols": [
+        "drawImage",
+        "fillRect",
+        "repaint"
+      ],
+      "class_names": [
+        "GameMIDlet.class",
+        "GameCanvas.class",
+        "GameImageLoader.class",
+        "GameMain.class",
+        "GameTimer.class",
+        "Loading.class",
+        "NokiaGameEffects.class",
+        "ScoreBoard.class",
+        "TitleCanvas.class"
+      ],
+      "estimated_png_rgba_bytes": 230560,
+      "jad_available": false
+    },
+    {
+      "sequence": 120,
+      "id": "0a51b650c26d1214",
+      "jar_path": "828 Java Games/brainstorm.jar",
+      "jad_path": "",
+      "jar_sha256": "0a51b650c26d1214a0dbe91380321f48060587d659f62e44efa9bf611f3aa042",
+      "game_title": "Brainstorm",
+      "bytes": 61929,
+      "classes": 9,
+      "images": 1,
+      "png_indexed": 1,
+      "audio": 0,
+      "midp": "MIDP-1.0",
+      "cldc": "CLDC-1.0",
+      "api_refs": [
+        "MIDP Graphics",
+        "RMS persistence",
+        "Thread.sleep"
+      ],
+      "method_symbols": [
+        "drawImage",
+        "fillRect",
+        "getResourceAsStream",
+        "repaint"
+      ],
+      "class_names": [
+        "a.class",
+        "b.class",
+        "c.class",
+        "d.class",
+        "e.class",
+        "f.class",
+        "g.class",
+        "h.class",
+        "z.class"
+      ],
+      "estimated_png_rgba_bytes": 1024,
+      "jad_available": false
+    },
+    {
+      "sequence": 121,
+      "id": "3731c7bdc4dca4f3",
+      "jar_path": "828 Java Games/BreakM.jar",
+      "jad_path": "",
+      "jar_sha256": "3731c7bdc4dca4f3be283c4f5381c99fad7709bce7d77bda2301232933f9c0ef",
+      "game_title": "Break M",
+      "bytes": 63064,
+      "classes": 22,
+      "images": 9,
+      "png_indexed": 8,
+      "audio": 0,
+      "midp": "MIDP-1.0",
+      "cldc": "CLDC-1.0",
+      "api_refs": [
+        "MIDP Graphics",
+        "Nokia DirectGraphics",
+        "RMS persistence",
+        "Thread.sleep"
+      ],
+      "method_symbols": [
+        "drawImage",
+        "drawPixels",
+        "fillRect",
+        "getResourceAsStream",
+        "repaint"
+      ],
+      "class_names": [
+        "breakm/a.class",
+        "breakm/b.class",
+        "breakm/BreakMMIDlet.class",
+        "breakm/c.class",
+        "breakm/d.class",
+        "breakm/e.class",
+        "breakm/f.class",
+        "breakm/g.class",
+        "breakm/h.class",
+        "breakm/i.class",
+        "breakm/j.class",
+        "jg/a.class",
+        "jg/b.class",
+        "jg/c.class",
+        "jg/d.class",
+        "jg/e.class",
+        "jg/f.class",
+        "jg/g.class",
+        "jg/GameMIDlet.class",
+        "jg/h.class",
+        "jg/i.class",
+        "jg/j.class"
+      ],
+      "estimated_png_rgba_bytes": 82084,
+      "jad_available": false
+    },
+    {
+      "sequence": 122,
+      "id": "56e52c4196789a3b",
+      "jar_path": "828 Java Games/breakout.jar",
+      "jad_path": "",
+      "jar_sha256": "56e52c4196789a3b47e9dd90ccf016e54b717808682b8bd965b895b8a3d99563",
+      "game_title": "breakout",
+      "bytes": 46752,
+      "classes": 10,
+      "images": 32,
+      "png_indexed": 27,
+      "audio": 0,
+      "midp": "MIDP-1.0",
+      "cldc": "CLDC-1.0",
+      "api_refs": [
+        "MIDP Graphics",
+        "RMS persistence",
+        "Thread.sleep"
+      ],
+      "method_symbols": [
+        "drawImage",
+        "fillRect",
+        "repaint"
+      ],
+      "class_names": [
+        "breakout$FrmControls.class",
+        "breakout$FrmCred.class",
+        "breakout$FrmInstructions.class",
+        "breakout$FrmOption.class",
+        "breakout$FrmScore.class",
+        "breakout$ScoreBoard.class",
+        "breakout.class",
+        "CFrontend.class",
+        "CGame.class",
+        "CText.class"
+      ],
+      "estimated_png_rgba_bytes": 264536,
+      "jad_available": false
+    },
+    {
+      "sequence": 123,
+      "id": "b19b7a622994efd5",
+      "jar_path": "828 Java Games/BRICKET S40.jar",
+      "jad_path": "",
+      "jar_sha256": "b19b7a622994efd50e113a47dd93c7e20a8cb4fcd287d5ca9d4d1cb505c365a1",
+      "game_title": "Bricket",
+      "bytes": 31168,
+      "classes": 5,
+      "images": 12,
+      "png_indexed": 12,
+      "audio": 0,
+      "midp": "MIDP-1.0",
+      "cldc": "CLDC-1.0",
+      "api_refs": [
+        "MIDP Graphics",
+        "Nokia DirectGraphics",
+        "RMS persistence"
+      ],
+      "method_symbols": [
+        "drawImage",
+        "fillRect",
+        "repaint"
+      ],
+      "class_names": [
+        "Bricket$FieldMover.class",
+        "Bricket$GameCanvas.class",
+        "Bricket$Gameover.class",
+        "Bricket$Intro.class",
+        "Bricket.class"
+      ],
+      "estimated_png_rgba_bytes": 274340,
+      "jad_available": false
+    },
+    {
+      "sequence": 124,
+      "id": "faf6a8bd795889e5",
+      "jar_path": "828 Java Games/Bricks.jar",
+      "jad_path": "",
+      "jar_sha256": "faf6a8bd795889e5360326f9b05ba3e074630f2da09c4cb5f15fcf3c2712ca87",
+      "game_title": "Bricks",
+      "bytes": 16059,
+      "classes": 4,
+      "images": 9,
+      "png_indexed": 0,
+      "audio": 0,
+      "midp": "MIDP-1.0",
+      "cldc": "CLDC-1.0",
+      "api_refs": [
+        "MIDP Graphics",
+        "RMS persistence",
+        "Thread.sleep"
+      ],
+      "method_symbols": [
+        "drawImage",
+        "fillRect",
+        "repaint"
+      ],
+      "class_names": [
+        "AnyEase/Bricks.class",
+        "AnyEase/BricksMain.class",
+        "AnyEase/Map.class",
+        "AnyEase/Brick.class"
+      ],
+      "estimated_png_rgba_bytes": 66688,
+      "jad_available": false
+    },
+    {
+      "sequence": 125,
+      "id": "7040f6446ee8bd0c",
+      "jar_path": "828 Java Games/BricksBabes.jar",
+      "jad_path": "",
+      "jar_sha256": "7040f6446ee8bd0cfacf327b9e0ac3a09652ad55c2126ab62559bbaa96a340a4",
+      "game_title": "Bricks n Babes",
+      "bytes": 49232,
+      "classes": 17,
+      "images": 22,
+      "png_indexed": 22,
+      "audio": 7,
+      "midp": "MIDP-1.0",
+      "cldc": "CLDC-1.0",
+      "api_refs": [
+        "MIDP Graphics",
+        "RMS persistence"
+      ],
+      "method_symbols": [
+        "drawImage",
+        "fillRect",
+        "getResourceAsStream",
+        "repaint"
+      ],
+      "class_names": [
+        "k.class",
+        "b.class",
+        "f.class",
+        "l.class",
+        "h.class",
+        "g.class",
+        "Bricks.class",
+        "i.class",
+        "e.class",
+        "n.class",
+        "o.class",
+        "d$a.class",
+        "d.class",
+        "c.class",
+        "j.class",
+        "m.class",
+        "a.class"
+      ],
+      "estimated_png_rgba_bytes": 366420,
+      "jad_available": false
+    },
+    {
+      "sequence": 126,
+      "id": "01be32f47a8f50c8",
+      "jar_path": "828 Java Games/BricksMix7210.jar",
+      "jad_path": "",
+      "jar_sha256": "01be32f47a8f50c8723e1473124443a7394524c8810515b09e408cc5dc9b24d4",
+      "game_title": "BricksMix",
+      "bytes": 41570,
+      "classes": 12,
+      "images": 11,
+      "png_indexed": 10,
+      "audio": 0,
+      "midp": "MIDP-1.0",
+      "cldc": "CLDC-1.0",
+      "api_refs": [
+        "MIDP Graphics",
+        "RMS persistence",
+        "Thread.sleep"
+      ],
+      "method_symbols": [
+        "drawImage",
+        "fillRect",
+        "repaint"
+      ],
+      "class_names": [
+        "a.class",
+        "b.class",
+        "BricksMix.class",
+        "c.class",
+        "d.class",
+        "e.class",
+        "f.class",
+        "g.class",
+        "h.class",
+        "i.class",
+        "j.class",
+        "k.class"
+      ],
+      "estimated_png_rgba_bytes": 277164,
+      "jad_available": false
+    },
+    {
+      "sequence": 127,
+      "id": "f88a6c8e9649efa2",
+      "jar_path": "828 Java Games/BrightRoadCN.jar",
+      "jad_path": "",
+      "jar_sha256": "f88a6c8e9649efa210dbd2404686b7e1ba19c0fe58eb37166ff3dc020b852ea4",
+      "game_title": "LTå",
+      "bytes": 30363,
+      "classes": 2,
+      "images": 34,
+      "png_indexed": 34,
+      "audio": 0,
+      "midp": "MIDP-1.0",
+      "cldc": "CLDC-1.0",
+      "api_refs": [
+        "MIDP Graphics",
+        "RMS persistence",
+        "Thread.sleep"
+      ],
+      "method_symbols": [
+        "drawImage",
+        "fillRect",
+        "getResourceAsStream",
+        "repaint"
+      ],
+      "class_names": [
+        "LTQuest.class",
+        "a.class"
+      ],
+      "estimated_png_rgba_bytes": 85492,
+      "jad_available": false
+    },
+    {
+      "sequence": 128,
+      "id": "98ee5205ecf14781",
+      "jar_path": "828 Java Games/bringemback.jar",
+      "jad_path": "",
+      "jar_sha256": "98ee5205ecf147819de39893d5351b1993faf693b9c0221a7298901aa046b099",
+      "game_title": "BringemBack_S40",
+      "bytes": 63442,
+      "classes": 16,
+      "images": 53,
+      "png_indexed": 53,
+      "audio": 5,
+      "midp": "MIDP-1.0",
+      "cldc": "CLDC-1.0",
+      "api_refs": [
+        "MIDP Graphics",
+        "RMS persistence"
+      ],
+      "method_symbols": [
+        "drawImage",
+        "fillRect",
+        "getResourceAsStream",
+        "repaint"
+      ],
+      "class_names": [
+        "Bagdad.class",
+        "Bunker.class",
+        "Chopper.class",
+        "Clouds.class",
+        "Game.class",
+        "GameCanvas.class",
+        "GameScore.class",
+        "GameSettings.class",
+        "GameTimer.class",
+        "KeyBoard.class",
+        "SaveGame.class",
+        "Shell.class",
+        "Soldier.class",
+        "SoundPlayer.class",
+        "startScreens.class",
+        "Tank.class"
+      ],
+      "estimated_png_rgba_bytes": 287472,
+      "jad_available": false
+    },
+    {
+      "sequence": 129,
+      "id": "7b90eb6a18801e0c",
+      "jar_path": "828 Java Games/BrotherBear.jar",
+      "jad_path": "",
+      "jar_sha256": "7b90eb6a18801e0c8c01fceaf66d67dd564659b2cbe4c692552d21038e7dd8a7",
+      "game_title": "Brother Bear",
+      "bytes": 84991,
+      "classes": 9,
+      "images": 16,
+      "png_indexed": 16,
+      "audio": 0,
+      "midp": "MIDP-1.0",
+      "cldc": "CLDC-1.0",
+      "api_refs": [
+        "MIDP Graphics",
+        "RMS persistence",
+        "Thread.sleep"
+      ],
+      "method_symbols": [
+        "drawImage",
+        "fillRect",
+        "getResourceAsStream",
+        "repaint"
+      ],
+      "class_names": [
+        "a.class",
+        "b.class",
+        "BearMIDlet.class",
+        "c.class",
+        "d.class",
+        "e.class",
+        "f.class",
+        "g.class",
+        "h.class"
+      ],
+      "estimated_png_rgba_bytes": 1254012,
+      "jad_available": false
+    },
+    {
+      "sequence": 130,
+      "id": "6f7805e88345d518",
+      "jar_path": "828 Java Games/Brutal Fighting (s60).jar",
+      "jad_path": "",
+      "jar_sha256": "6f7805e88345d5187800c4c261e026b1831b50fbd958d999dae880f05a11532b",
+      "game_title": "BrutalFighting",
+      "bytes": 175427,
+      "classes": 5,
+      "images": 50,
+      "png_indexed": 50,
+      "audio": 2,
+      "midp": "MIDP-1.0",
+      "cldc": "CLDC-1.0",
+      "api_refs": [
+        "MIDP Graphics",
+        "RMS persistence"
+      ],
+      "method_symbols": [
+        "drawImage",
+        "fillRect",
+        "getResourceAsStream",
+        "repaint"
+      ],
+      "class_names": [
+        "a.class",
+        "b.class",
+        "c.class",
+        "d.class",
+        "BrutalFightingMIDlet.class"
+      ],
+      "estimated_png_rgba_bytes": 2161060,
+      "jad_available": false
+    },
+    {
+      "sequence": 131,
+      "id": "3ec3529b0ea70f2c",
+      "jar_path": "828 Java Games/Bubble_Bobble.jar",
+      "jad_path": "",
+      "jar_sha256": "3ec3529b0ea70f2ce6b37e53ffa92720929de86922a6f07e20ed723b1b305212",
+      "game_title": "Bubble Bobble",
+      "bytes": 43374,
+      "classes": 3,
+      "images": 0,
+      "png_indexed": 0,
+      "audio": 0,
+      "midp": "MIDP-1.0",
+      "cldc": "CLDC-1.0",
+      "api_refs": [
+        "MIDP Graphics",
+        "RMS persistence",
+        "Thread.sleep"
+      ],
+      "method_symbols": [
+        "drawImage",
+        "drawPixels",
+        "fillRect",
+        "getResourceAsStream",
+        "repaint"
+      ],
+      "class_names": [
+        "a.class",
+        "BubbleBobble.class",
+        "DirectGraphics.class"
+      ],
+      "estimated_png_rgba_bytes": 0,
+      "jad_available": false
+    },
+    {
+      "sequence": 132,
+      "id": "5d5599c329381b60",
+      "jar_path": "828 Java Games/bubblebobble.jar",
+      "jad_path": "",
+      "jar_sha256": "5d5599c329381b60e4880e82d2e9cacf2e7644c638df01aa725e49eff80ac1ad",
+      "game_title": "BubbleBobble",
+      "bytes": 41854,
+      "classes": 2,
+      "images": 0,
+      "png_indexed": 0,
+      "audio": 0,
+      "midp": "MIDP-1.0",
+      "cldc": "CLDC-1.0",
+      "api_refs": [
+        "MIDP Graphics",
+        "Nokia DirectGraphics",
+        "RMS persistence",
+        "Thread.sleep"
+      ],
+      "method_symbols": [
+        "drawImage",
+        "fillRect",
+        "getResourceAsStream",
+        "repaint"
+      ],
+      "class_names": [
+        "a.class",
+        "BubbleBobble.class"
+      ],
+      "estimated_png_rgba_bytes": 0,
+      "jad_available": false
+    },
+    {
+      "sequence": 133,
+      "id": "bafe056f30752680",
+      "jar_path": "828 Java Games/BubbleGun.jar",
+      "jad_path": "",
+      "jar_sha256": "bafe056f30752680779b1dba01cd1b83ee8d2681f51005659a51644e9992b656",
+      "game_title": "BubbleGun",
+      "bytes": 99863,
+      "classes": 4,
+      "images": 39,
+      "png_indexed": 38,
+      "audio": 5,
+      "midp": "MIDP-1.0",
+      "cldc": "CLDC-1.0",
+      "api_refs": [
+        "MIDP Graphics",
+        "RMS persistence",
+        "Thread.sleep"
+      ],
+      "method_symbols": [
+        "drawImage",
+        "fillRect",
+        "getResourceAsStream",
+        "repaint"
+      ],
+      "class_names": [
+        "Bubble/a.class",
+        "Bubble/b.class",
+        "Bubble/c.class",
+        "Bubble/MainPRG.class"
+      ],
+      "estimated_png_rgba_bytes": 1187664,
+      "jad_available": false
+    },
+    {
+      "sequence": 134,
+      "id": "4815b2dbac4e2a0e",
+      "jar_path": "828 Java Games/Bubbles7210.jar",
+      "jad_path": "",
+      "jar_sha256": "4815b2dbac4e2a0e38b7164b32ecf0d8a22c5b6d8dce11d18f8e3687039152b7",
+      "game_title": "Bubbles",
+      "bytes": 49291,
+      "classes": 12,
+      "images": 10,
+      "png_indexed": 9,
+      "audio": 0,
+      "midp": "MIDP-1.0",
+      "cldc": "CLDC-1.0",
+      "api_refs": [
+        "MIDP Graphics",
+        "RMS persistence",
+        "Thread.sleep"
+      ],
+      "method_symbols": [
+        "drawImage",
+        "fillRect",
+        "repaint"
+      ],
+      "class_names": [
+        "a.class",
+        "b.class",
+        "Bubbles.class",
+        "c.class",
+        "d.class",
+        "e.class",
+        "f.class",
+        "g.class",
+        "h.class",
+        "i.class",
+        "j.class",
+        "k.class"
+      ],
+      "estimated_png_rgba_bytes": 341332,
+      "jad_available": false
+    },
+    {
+      "sequence": 135,
+      "id": "cfc30d5c6c08a8d4",
+      "jar_path": "828 Java Games/bubbletots.jar",
+      "jad_path": "",
+      "jar_sha256": "cfc30d5c6c08a8d47afd2e8ace029f0cde8eb31895ebabfb06c6c02bf509e0a8",
+      "game_title": "Bubble Tots",
+      "bytes": 45342,
+      "classes": 21,
+      "images": 6,
+      "png_indexed": 6,
+      "audio": 0,
+      "midp": "MIDP-1.0",
+      "cldc": "CLDC-1.0",
+      "api_refs": [
+        "MIDP Graphics",
+        "Thread.sleep"
+      ],
+      "method_symbols": [
+        "drawImage",
+        "fillRect",
+        "getResourceAsStream",
+        "repaint"
+      ],
+      "class_names": [
+        "a/a.class",
+        "b/a.class",
+        "b/b.class",
+        "b/c.class",
+        "b/d.class",
+        "BubbleTotsJ2ME/BubbleTotsGameJ2ME.class",
+        "com/cheekygroup/J2ME/a.class",
+        "com/cheekygroup/J2ME/b.class",
+        "com/cheekygroup/J2ME/c.class",
+        "com/cheekygroup/J2ME/CheekyCanvas.class",
+        "com/cheekygroup/J2ME/CheekyMIDlet.class",
+        "com/cheekygroup/J2ME/GameJ2ME.class",
+        "com/cheekygroup/J2ME/JarLoader/CheekyLoaderDiet.class",
+        "com/cheekygroup/J2ME/JarLoader/CheekyLoaderDietText.class",
+        "com/cheekygroup/J2MEShared/a/a.class",
+        "com/cheekygroup/J2MEShared/a/b.class",
+        "com/cheekygroup/J2MEShared/a/c.class",
+        "com/cheekygroup/J2MEShared/a.class",
+        "com/cheekygroup/J2MEShared/CheekySoundBank.class",
+        "com/cheekygroup/J2MEShared/ckyLoader.class",
+        "com/cheekygroup/J2ME/CheekyCanvasNokia.class"
+      ],
+      "estimated_png_rgba_bytes": 85120,
+      "jad_available": false
+    },
+    {
+      "sequence": 136,
+      "id": "b4f001d73d085aa0",
+      "jar_path": "828 Java Games/BumbleBeez.jar",
+      "jad_path": "",
+      "jar_sha256": "b4f001d73d085aa0a15df73d34c19841d963ce5605cf03e7bd0c666e35e1bf6f",
+      "game_title": "BumbleBeez",
+      "bytes": 44419,
+      "classes": 8,
+      "images": 31,
+      "png_indexed": 27,
+      "audio": 8,
+      "midp": "MIDP-1.0",
+      "cldc": "CLDC-1.0",
+      "api_refs": [
+        "MIDP Graphics",
+        "RMS persistence"
+      ],
+      "method_symbols": [
+        "drawImage",
+        "fillRect",
+        "getResourceAsStream",
+        "repaint"
+      ],
+      "class_names": [
+        "GameDataManager.class",
+        "MineSweeperCanvas.class",
+        "startScreens.class",
+        "GameMap.class",
+        "MineSweeper.class",
+        "timeKeeper.class",
+        "SoundPlayer.class",
+        "MineSweeperTimer.class"
+      ],
+      "estimated_png_rgba_bytes": 350560,
+      "jad_available": false
+    },
+    {
+      "sequence": 137,
+      "id": "77e47f1d6bcb6c78",
+      "jar_path": "828 Java Games/button_s40.jar",
+      "jad_path": "",
+      "jar_sha256": "77e47f1d6bcb6c78e6431935ab29c001cbec3ee2e43773ca553e83e97f32e7eb",
+      "game_title": "Button_s40",
+      "bytes": 63894,
+      "classes": 14,
+      "images": 34,
+      "png_indexed": 34,
+      "audio": 0,
+      "midp": "MIDP-1.0",
+      "cldc": "CLDC-1.0",
+      "api_refs": [
+        "MIDP Graphics",
+        "Nokia DirectGraphics",
+        "RMS persistence",
+        "Thread.sleep"
+      ],
+      "method_symbols": [
+        "drawImage",
+        "drawPixels",
+        "fillRect",
+        "getResourceAsStream",
+        "repaint"
+      ],
+      "class_names": [
+        "com/kuju/j2me/button/ButtonMidlet.class",
+        "com/kuju/j2me/button/a.class",
+        "com/kuju/j2me/button/b.class",
+        "com/kuju/j2me/button/c.class",
+        "com/kuju/j2me/button/d.class",
+        "com/kuju/j2me/button/e.class",
+        "com/kuju/j2me/button/f.class",
+        "com/kuju/j2me/button/g.class",
+        "com/kuju/j2me/button/h.class",
+        "com/kuju/j2me/button/i.class",
+        "com/kuju/j2me/menu/a.class",
+        "com/kuju/j2me/menu/b.class",
+        "com/kuju/j2me/racetrack/a.class",
+        "com/kuju/j2me/racetrack/b.class"
+      ],
+      "estimated_png_rgba_bytes": 480676,
+      "jad_available": false
+    },
+    {
+      "sequence": 138,
+      "id": "3d87696440b404ec",
+      "jar_path": "828 Java Games/C2S_Bowling.jar",
+      "jad_path": "",
+      "jar_sha256": "3d87696440b404ec10c58a57e8a4fbea56b2074e0a6e28b45e535cca7c1c40ac",
+      "game_title": "C2S_Bowling",
+      "bytes": 37635,
+      "classes": 2,
+      "images": 27,
+      "png_indexed": 26,
+      "audio": 4,
+      "midp": "MIDP-1.0",
+      "cldc": "CLDC-1.0",
+      "api_refs": [
+        "MIDP Graphics",
+        "RMS persistence",
+        "Thread.sleep"
+      ],
+      "method_symbols": [
+        "drawImage",
+        "fillRect",
+        "getResourceAsStream",
+        "repaint"
+      ],
+      "class_names": [
+        "Bowling.class",
+        "BowlingCanvas.class"
+      ],
+      "estimated_png_rgba_bytes": 271544,
+      "jad_available": false
+    },
+    {
+      "sequence": 139,
+      "id": "c9391093dfb019e0",
+      "jar_path": "828 Java Games/C2S_SEED.jar",
+      "jad_path": "",
+      "jar_sha256": "c9391093dfb019e0192630c6c0722f3af23b8d9dbd029e9e5a0e49ee84eeb5b5",
+      "game_title": "C2S_SEED",
+      "bytes": 28951,
+      "classes": 3,
+      "images": 27,
+      "png_indexed": 25,
+      "audio": 4,
+      "midp": "MIDP-1.0",
+      "cldc": "CLDC-1.0",
+      "api_refs": [
+        "MIDP Graphics",
+        "RMS persistence",
+        "Thread.sleep"
+      ],
+      "method_symbols": [
+        "drawImage",
+        "fillRect",
+        "getResourceAsStream",
+        "repaint"
+      ],
+      "class_names": [
+        "SeedCanvas.class",
+        "SeedMIDlet.class",
+        "Text.class"
+      ],
+      "estimated_png_rgba_bytes": 71668,
+      "jad_available": false
+    },
+    {
+      "sequence": 140,
+      "id": "54bed58edb26d37c",
+      "jar_path": "828 Java Games/C2SBowling.jar",
+      "jad_path": "",
+      "jar_sha256": "54bed58edb26d37ce3c51e2adbcb8cec877f0c14c60c1316e98727d1aa1afb86",
+      "game_title": "C2S_Bowling",
+      "bytes": 95918,
+      "classes": 2,
+      "images": 19,
+      "png_indexed": 19,
+      "audio": 4,
+      "midp": "MIDP-1.0",
+      "cldc": "CLDC-1.0",
+      "api_refs": [
+        "MIDP Graphics",
+        "RMS persistence",
+        "Thread.sleep"
+      ],
+      "method_symbols": [
+        "drawImage",
+        "fillRect",
+        "getResourceAsStream",
+        "repaint"
+      ],
+      "class_names": [
+        "Bowling.class",
+        "BowlingCanvas.class"
+      ],
+      "estimated_png_rgba_bytes": 989452,
+      "jad_available": false
+    },
+    {
+      "sequence": 141,
+      "id": "ea585dc7c4e54d8a",
+      "jar_path": "828 Java Games/call_of_duty.jar",
+      "jad_path": "",
+      "jar_sha256": "ea585dc7c4e54d8a337262b3066df0d32987c3242a72598315ebf812f66cd2e8",
+      "game_title": "CallOfDuty",
+      "bytes": 58615,
+      "classes": 4,
+      "images": 12,
+      "png_indexed": 12,
+      "audio": 0,
+      "midp": "MIDP-1.0",
+      "cldc": "CLDC-1.0",
+      "api_refs": [
+        "MIDP Graphics",
+        "RMS persistence"
+      ],
+      "method_symbols": [
+        "drawImage",
+        "fillRect",
+        "getResourceAsStream",
+        "repaint"
+      ],
+      "class_names": [
+        "COD.class",
+        "mainCanvas.class",
+        "SimpleTimerTask.class",
+        "Strings.class"
+      ],
+      "estimated_png_rgba_bytes": 211868,
+      "jad_available": false
+    },
+    {
+      "sequence": 142,
+      "id": "3a9df61e73f07202",
+      "jar_path": "828 Java Games/CandyCatchup.jar",
+      "jad_path": "",
+      "jar_sha256": "3a9df61e73f072026d67ba692e3c9a6ca0c1aef9ca0e780e9a92bf2af772a9d5",
+      "game_title": "Candy Catchup",
+      "bytes": 93898,
+      "classes": 16,
+      "images": 1,
+      "png_indexed": 1,
+      "audio": 0,
+      "midp": "MIDP-1.0",
+      "cldc": "CLDC-1.0",
+      "api_refs": [
+        "MIDP Graphics",
+        "RMS persistence",
+        "Thread.sleep"
+      ],
+      "method_symbols": [
+        "drawImage",
+        "fillRect",
+        "getResourceAsStream",
+        "repaint"
+      ],
+      "class_names": [
+        "a.class",
+        "b.class",
+        "c.class",
+        "d.class",
+        "e.class",
+        "f.class",
+        "g.class",
+        "h.class",
+        "i.class",
+        "j.class",
+        "k.class",
+        "l.class",
+        "m.class",
+        "n.class",
+        "o.class",
+        "com/gamica/candycatchup/CandyCatchup.class"
+      ],
+      "estimated_png_rgba_bytes": 3136,
+      "jad_available": false
+    },
+    {
+      "sequence": 143,
+      "id": "49ecc37c180a8e1e",
+      "jar_path": "828 Java Games/Cannon.jar",
+      "jad_path": "",
+      "jar_sha256": "49ecc37c180a8e1e07e9c63b1cbd6b27dca6cb11eb77cabc5d1dfb114ddd2f87",
+      "game_title": "Cannons",
+      "bytes": 55897,
+      "classes": 5,
+      "images": 25,
+      "png_indexed": 23,
+      "audio": 0,
+      "midp": "MIDP-1.0",
+      "cldc": "CLDC-1.0",
+      "api_refs": [
+        "MIDP Graphics",
+        "RMS persistence",
+        "Thread.sleep"
+      ],
+      "method_symbols": [
+        "drawImage",
+        "fillRect",
+        "repaint"
+      ],
+      "class_names": [
+        "b.class",
+        "c.class",
+        "com/macrospace/games/cannons/full/common/CannonsMidlet.class",
+        "d.class",
+        "e.class"
+      ],
+      "estimated_png_rgba_bytes": 629128,
+      "jad_available": false
+    },
+    {
+      "sequence": 144,
+      "id": "ce8554da281d372a",
+      "jar_path": "828 Java Games/CannonBalls.jar",
+      "jad_path": "",
+      "jar_sha256": "ce8554da281d372af9361b2992ece60ddfefd46581536cf4f69b24978e3a7429",
+      "game_title": "CannonBalls",
+      "bytes": 51977,
+      "classes": 14,
+      "images": 13,
+      "png_indexed": 10,
+      "audio": 0,
+      "midp": "MIDP-1.0",
+      "cldc": "CLDC-1.0",
+      "api_refs": [
+        "MIDP Graphics",
+        "RMS persistence",
+        "Thread.sleep"
+      ],
+      "method_symbols": [
+        "drawImage",
+        "fillRect",
+        "repaint"
+      ],
+      "class_names": [
+        "a.class",
+        "b.class",
+        "c.class",
+        "CannonBalls.class",
+        "d.class",
+        "e.class",
+        "f.class",
+        "g.class",
+        "h.class",
+        "i.class",
+        "j.class",
+        "k.class",
+        "l.class",
+        "m.class"
+      ],
+      "estimated_png_rgba_bytes": 348224,
+      "jad_available": false
+    },
+    {
+      "sequence": 145,
+      "id": "fcaad8693362ac98",
+      "jar_path": "828 Java Games/CannonBalls7210.jar",
+      "jad_path": "",
+      "jar_sha256": "fcaad8693362ac989111afffa1bea3a8dffc68efddfaf421e366d6838cbb1ed3",
+      "game_title": "CannonBalls",
+      "bytes": 49999,
+      "classes": 14,
+      "images": 13,
+      "png_indexed": 11,
+      "audio": 0,
+      "midp": "MIDP-1.0",
+      "cldc": "CLDC-1.0",
+      "api_refs": [
+        "MIDP Graphics",
+        "RMS persistence",
+        "Thread.sleep"
+      ],
+      "method_symbols": [
+        "drawImage",
+        "fillRect",
+        "repaint"
+      ],
+      "class_names": [
+        "a.class",
+        "b.class",
+        "c.class",
+        "CannonBalls.class",
+        "d.class",
+        "e.class",
+        "f.class",
+        "g.class",
+        "h.class",
+        "i.class",
+        "j.class",
+        "k.class",
+        "l.class",
+        "m.class"
+      ],
+      "estimated_png_rgba_bytes": 348224,
+      "jad_available": false
+    },
+    {
+      "sequence": 146,
+      "id": "d67d0c2f12a5e876",
+      "jar_path": "828 Java Games/CannonBlocks7210.jar",
+      "jad_path": "",
+      "jar_sha256": "d67d0c2f12a5e87632ad16445e112c4e2c9d7312c7220e86d812e908013f518f",
+      "game_title": "CannonBlocks",
+      "bytes": 51032,
+      "classes": 12,
+      "images": 13,
+      "png_indexed": 10,
+      "audio": 0,
+      "midp": "MIDP-1.0",
+      "cldc": "CLDC-1.0",
+      "api_refs": [
+        "MIDP Graphics",
+        "RMS persistence",
+        "Thread.sleep"
+      ],
+      "method_symbols": [
+        "drawImage",
+        "fillRect",
+        "repaint"
+      ],
+      "class_names": [
+        "a.class",
+        "b.class",
+        "c.class",
+        "CannonBlocks.class",
+        "d.class",
+        "e.class",
+        "f.class",
+        "g.class",
+        "h.class",
+        "i.class",
+        "j.class",
+        "k.class"
+      ],
+      "estimated_png_rgba_bytes": 394736,
+      "jad_available": false
+    },
+    {
+      "sequence": 147,
+      "id": "150607e568e2ebea",
+      "jar_path": "828 Java Games/CannonsTournament.jar",
+      "jad_path": "",
+      "jar_sha256": "150607e568e2ebea429d089d531d800ea9497bd261afbce0527731125a4512b4",
+      "game_title": "Cannons Tournament",
+      "bytes": 63365,
+      "classes": 17,
+      "images": 2,
+      "png_indexed": 2,
+      "audio": 0,
+      "midp": "MIDP-1.0",
+      "cldc": "CLDC-1.0",
+      "api_refs": [
+        "MIDP Graphics",
+        "Nokia DirectGraphics",
+        "RMS persistence",
+        "Thread.sleep"
+      ],
+      "method_symbols": [
+        "drawImage",
+        "drawPixels",
+        "fillRect",
+        "getResourceAsStream",
+        "repaint"
+      ],
+      "class_names": [
+        "a.class",
+        "b.class",
+        "c.class",
+        "d.class",
+        "e.class",
+        "f.class",
+        "g.class",
+        "h.class",
+        "i.class",
+        "j.class",
+        "k.class",
+        "l.class",
+        "m.class",
+        "n.class",
+        "o.class",
+        "p.class",
+        "q.class"
+      ],
+      "estimated_png_rgba_bytes": 15168,
+      "jad_available": false
+    },
+    {
+      "sequence": 148,
+      "id": "447ce4631d5181ac",
+      "jar_path": "828 Java Games/Capture.jar",
+      "jad_path": "",
+      "jar_sha256": "447ce4631d5181ace61a5b3aad6262290a1c20a0f9d70948ce5e135c5b6ea345",
+      "game_title": "Capture",
+      "bytes": 25944,
+      "classes": 7,
+      "images": 5,
+      "png_indexed": 5,
+      "audio": 0,
+      "midp": "MIDP-1.0",
+      "cldc": "CLDC-1.0",
+      "api_refs": [
+        "MIDP Graphics",
+        "RMS persistence",
+        "Thread.sleep"
+      ],
+      "method_symbols": [
+        "drawImage",
+        "fillRect",
+        "repaint"
+      ],
+      "class_names": [
+        "a.class",
+        "b.class",
+        "c.class",
+        "Capture.class",
+        "d.class",
+        "e.class",
+        "f.class"
+      ],
+      "estimated_png_rgba_bytes": 76276,
+      "jad_available": false
+    },
+    {
+      "sequence": 149,
+      "id": "a3c33b9c8f57f0e1",
+      "jar_path": "828 Java Games/carlossainzrally.jar",
+      "jad_path": "",
+      "jar_sha256": "a3c33b9c8f57f0e1d83412060c6b4b16d3b2eb6cbb9fc0a6f40677da73c62582",
+      "game_title": "Carlos Sainz Rally",
+      "bytes": 64681,
+      "classes": 6,
+      "images": 1,
+      "png_indexed": 1,
+      "audio": 0,
+      "midp": "MIDP-1.0",
+      "cldc": "CLDC-1.0",
+      "api_refs": [
+        "MIDP Graphics",
+        "Nokia DirectGraphics",
+        "RMS persistence"
+      ],
+      "method_symbols": [
+        "drawImage",
+        "drawPixels",
+        "fillRect",
+        "getResourceAsStream",
+        "repaint"
+      ],
+      "class_names": [
+        "Zigurat/Car2003/MainClass.class",
+        "Zigurat/Car2003/a.class",
+        "Zigurat/Car2003/b.class",
+        "Zigurat/Car2003/c.class",
+        "Zigurat/Car2003/d.class",
+        "Zigurat/Car2003/e.class"
+      ],
+      "estimated_png_rgba_bytes": 1024,
+      "jad_available": false
+    },
+    {
+      "sequence": 150,
+      "id": "437168fabefe7aca",
+      "jar_path": "828 Java Games/CarRacer.jar",
+      "jad_path": "",
+      "jar_sha256": "437168fabefe7aca1cc56249fde8794595346e32acbdaec2669f576f49473034",
+      "game_title": "CarRacer",
+      "bytes": 34283,
+      "classes": 11,
+      "images": 23,
+      "png_indexed": 21,
+      "audio": 0,
+      "midp": "MIDP-1.0",
+      "cldc": "CLDC-1.0",
+      "api_refs": [
+        "MIDP Graphics",
+        "RMS persistence",
+        "Thread.sleep"
+      ],
+      "method_symbols": [
+        "drawImage",
+        "fillRect",
+        "getResourceAsStream",
+        "repaint"
+      ],
+      "class_names": [
+        "a.class",
+        "b.class",
+        "c.class",
+        "d.class",
+        "e.class",
+        "f$1.class",
+        "f.class",
+        "g$a.class",
+        "g.class",
+        "Game.class",
+        "h.class"
+      ],
+      "estimated_png_rgba_bytes": 161752,
+      "jad_available": false
+    },
+    {
+      "sequence": 151,
+      "id": "cad5a97c13246292",
+      "jar_path": "828 Java Games/CarSexKamasutra.jar",
+      "jad_path": "",
+      "jar_sha256": "cad5a97c13246292fab9c7559ed5eb6f0265a4e947092515450dd203a23639a1",
+      "game_title": "Car Sex Kamasutra",
+      "bytes": 96200,
+      "classes": 9,
+      "images": 25,
+      "png_indexed": 25,
+      "audio": 0,
+      "midp": "MIDP-1.0",
+      "cldc": "CLDC-1.0",
+      "api_refs": [
+        "MIDP Graphics",
+        "RMS persistence",
+        "Thread.sleep"
+      ],
+      "method_symbols": [
+        "drawImage",
+        "fillRect",
+        "repaint"
+      ],
+      "class_names": [
+        "carsexkamasutra/util/a.class",
+        "carsexkamasutra/util/b.class",
+        "carsexkamasutra/util/c.class",
+        "carsexkamasutra/a.class",
+        "carsexkamasutra/util/d.class",
+        "carsexkamasutra/util/e.class",
+        "carsexkamasutra/CarSexKamasutraMIDlet.class",
+        "carsexkamasutra/constants/a.class",
+        "carsexkamasutra/b.class"
+      ],
+      "estimated_png_rgba_bytes": 1837344,
+      "jad_available": false
+    },
+    {
+      "sequence": 152,
+      "id": "ccece1fdce17cd47",
+      "jar_path": "828 Java Games/Casino.jar",
+      "jad_path": "",
+      "jar_sha256": "ccece1fdce17cd47b2e81e23d512ed5a816bd00334696f2bae162c4cde79232c",
+      "game_title": "Casino VIP",
+      "bytes": 59470,
+      "classes": 14,
+      "images": 35,
+      "png_indexed": 31,
+      "audio": 0,
+      "midp": "MIDP-1.0",
+      "cldc": "CLDC-1.0",
+      "api_refs": [
+        "MIDP Graphics",
+        "RMS persistence",
+        "Thread.sleep"
+      ],
+      "method_symbols": [
+        "drawImage",
+        "fillRect",
+        "repaint"
+      ],
+      "class_names": [
+        "BlackJack.class",
+        "CardGame.class",
+        "CaribbeanPoker.class",
+        "Data.class",
+        "Game$1.class",
+        "Game.class",
+        "GameLaunch.class",
+        "Help.class",
+        "HorseRacing.class",
+        "Menu.class",
+        "Poker.class",
+        "Slots.class",
+        "SplashScreen$1.class",
+        "SplashScreen.class"
+      ],
+      "estimated_png_rgba_bytes": 236536,
+      "jad_available": false
+    },
+    {
+      "sequence": 153,
+      "id": "fcfaab62ca2497ec",
+      "jar_path": "828 Java Games/castleofspells.jar",
+      "jad_path": "",
+      "jar_sha256": "fcfaab62ca2497ecb5eb7639b01f57f1f7025521cd91c993b97966fc71f16158",
+      "game_title": "CastleofSpells",
+      "bytes": 64711,
+      "classes": 10,
+      "images": 1,
+      "png_indexed": 1,
+      "audio": 0,
+      "midp": "MIDP-1.0",
+      "cldc": "CLDC-1.0",
+      "api_refs": [
+        "MIDP Graphics",
+        "Nokia DirectGraphics",
+        "RMS persistence",
+        "Thread.sleep"
+      ],
+      "method_symbols": [
+        "drawImage",
+        "drawPixels",
+        "fillRect",
+        "getResourceAsStream",
+        "repaint"
+      ],
+      "class_names": [
+        "a.class",
+        "b.class",
+        "c.class",
+        "d.class",
+        "e.class",
+        "f.class",
+        "g.class",
+        "GMIDlet.class",
+        "h.class",
+        "i.class"
+      ],
+      "estimated_png_rgba_bytes": 1024,
+      "jad_available": false
+    },
+    {
+      "sequence": 154,
+      "id": "db84705a03a0c586",
+      "jar_path": "828 Java Games/castlevania1.jar",
+      "jad_path": "",
+      "jar_sha256": "db84705a03a0c586fce7c5241e440fff4be9da1653640f692ca9289212d61bc4",
+      "game_title": "Castlevania",
+      "bytes": 40122,
+      "classes": 6,
+      "images": 2,
+      "png_indexed": 2,
+      "audio": 0,
+      "midp": "MIDP-1.0",
+      "cldc": "CLDC-1.0",
+      "api_refs": [
+        "MIDP Graphics",
+        "RMS persistence",
+        "Thread.sleep"
+      ],
+      "method_symbols": [
+        "drawImage",
+        "fillRect",
+        "getResourceAsStream",
+        "repaint"
+      ],
+      "class_names": [
+        "a.class",
+        "b.class",
+        "c.class",
+        "d.class",
+        "e.class",
+        "Start.class"
+      ],
+      "estimated_png_rgba_bytes": 37696,
+      "jad_available": false
+    },
+    {
+      "sequence": 155,
+      "id": "c6d298ff7b6f4355",
+      "jar_path": "828 Java Games/Cave.jar",
+      "jad_path": "",
+      "jar_sha256": "c6d298ff7b6f43555b0d931cd05e97dfe522aca2f0858d11b66698b522b8009c",
+      "game_title": "Cave",
+      "bytes": 13873,
+      "classes": 11,
+      "images": 2,
+      "png_indexed": 2,
+      "audio": 0,
+      "midp": "MIDP-1.0",
+      "cldc": "CLDC-1.0",
+      "api_refs": [
+        "MIDP Graphics",
+        "RMS persistence",
+        "Thread.sleep"
+      ],
+      "method_symbols": [
+        "drawImage",
+        "fillRect",
+        "repaint"
+      ],
+      "class_names": [
+        "Cave.class",
+        "CanvasReturn.class",
+        "CaveCanvas.class",
+        "CaveTopScore.class",
+        "FinalScreen.class",
+        "FullCanvasAlert.class",
+        "GameMenu.class",
+        "InfoScreen.class",
+        "MenuReturn.class",
+        "SplashScreen.class",
+        "SplashScreenReturn.class"
+      ],
+      "estimated_png_rgba_bytes": 23200,
+      "jad_available": false
+    },
+    {
+      "sequence": 156,
+      "id": "33885d6735115738",
+      "jar_path": "828 Java Games/Cave2.jar",
+      "jad_path": "",
+      "jar_sha256": "33885d673511573818f0601369fc2454a737566522009030b0a17013962fce3e",
+      "game_title": "Cave 2",
+      "bytes": 33183,
+      "classes": 11,
+      "images": 1,
+      "png_indexed": 1,
+      "audio": 0,
+      "midp": "MIDP-1.0",
+      "cldc": "CLDC-1.0",
+      "api_refs": [
+        "MIDP Graphics",
+        "Nokia DirectGraphics",
+        "RMS persistence",
+        "Thread.sleep"
+      ],
+      "method_symbols": [
+        "drawImage",
+        "drawPixels",
+        "fillRect",
+        "getResourceAsStream",
+        "repaint"
+      ],
+      "class_names": [
+        "b.class",
+        "a.class",
+        "c.class",
+        "d.class",
+        "e.class",
+        "f.class",
+        "g.class",
+        "h.class",
+        "i.class",
+        "j.class",
+        "k.class"
+      ],
+      "estimated_png_rgba_bytes": 1296,
+      "jad_available": false
+    },
+    {
+      "sequence": 157,
+      "id": "f56071db982ba7fa",
+      "jar_path": "828 Java Games/CaveMan.jar",
+      "jad_path": "",
+      "jar_sha256": "f56071db982ba7fa463b23010f6b26777a29399e51da4a267a9617ccb5a2ec48",
+      "game_title": "Caveman",
+      "bytes": 40659,
+      "classes": 10,
+      "images": 9,
+      "png_indexed": 9,
+      "audio": 0,
+      "midp": "MIDP-1.0",
+      "cldc": "CLDC-1.0",
+      "api_refs": [
+        "MIDP Graphics",
+        "Nokia DirectGraphics",
+        "RMS persistence"
+      ],
+      "method_symbols": [
+        "drawImage",
+        "drawPixels",
+        "fillRect",
+        "repaint"
+      ],
+      "class_names": [
+        "b.class",
+        "c.class",
+        "d.class",
+        "e.class",
+        "f.class",
+        "g.class",
+        "h.class",
+        "i.class",
+        "j.class",
+        "k.class"
+      ],
+      "estimated_png_rgba_bytes": 237572,
+      "jad_available": false
+    },
+    {
+      "sequence": 158,
+      "id": "83f19dc5b60e8083",
+      "jar_path": "828 Java Games/CavemanX-mas.jar",
+      "jad_path": "",
+      "jar_sha256": "83f19dc5b60e808312d6bd9dda6cab554a38313eb9eb002353ccb822fad8cd29",
+      "game_title": "Caveman X-mas Edition",
+      "bytes": 56680,
+      "classes": 10,
+      "images": 14,
+      "png_indexed": 14,
+      "audio": 0,
+      "midp": "MIDP-1.0",
+      "cldc": "CLDC-1.0",
+      "api_refs": [
+        "MIDP Graphics",
+        "Nokia DirectGraphics",
+        "RMS persistence"
+      ],
+      "method_symbols": [
+        "drawImage",
+        "drawPixels",
+        "fillRect",
+        "getResourceAsStream",
+        "repaint"
+      ],
+      "class_names": [
+        "b.class",
+        "c.class",
+        "d.class",
+        "e.class",
+        "f.class",
+        "g.class",
+        "h.class",
+        "i.class",
+        "j.class",
+        "k.class"
+      ],
+      "estimated_png_rgba_bytes": 435912,
+      "jad_available": false
+    },
+    {
+      "sequence": 159,
+      "id": "778156de5bf8f2ce",
+      "jar_path": "828 Java Games/centipede.jar",
+      "jad_path": "",
+      "jar_sha256": "778156de5bf8f2ce77ede12c61c11d4970459d5fd0fe4eae00b82b80ce4434e6",
+      "game_title": "centipede",
+      "bytes": 47558,
+      "classes": 12,
+      "images": 49,
+      "png_indexed": 49,
+      "audio": 0,
+      "midp": "MIDP-1.0",
+      "cldc": "CLDC-1.0",
+      "api_refs": [
+        "MIDP Graphics",
+        "RMS persistence",
+        "Thread.sleep"
+      ],
+      "method_symbols": [
+        "drawImage",
+        "fillRect",
+        "repaint"
+      ],
+      "class_names": [
+        "centipede$FrmControls.class",
+        "centipede$FrmCred.class",
+        "centipede$FrmInstructions.class",
+        "centipede$FrmOption.class",
+        "centipede$ScoreBoard.class",
+        "centipede.class",
+        "CFrontend.class",
+        "CGame$Enemy.class",
+        "CGame$Insect.class",
+        "CGame.class",
+        "CInput.class",
+        "CText.class"
+      ],
+      "estimated_png_rgba_bytes": 215988,
+      "jad_available": false
+    },
+    {
+      "sequence": 160,
+      "id": "83323cacad6a4980",
+      "jar_path": "828 Java Games/ChaseHQ.jar",
+      "jad_path": "",
+      "jar_sha256": "83323cacad6a4980be947484213edca270cef319b784d8bfb85ba1c8e7ba70b9",
+      "game_title": "ChaseHQ",
+      "bytes": 64799,
+      "classes": 9,
+      "images": 1,
+      "png_indexed": 1,
+      "audio": 0,
+      "midp": "MIDP-1.0",
+      "cldc": "CLDC-1.0",
+      "api_refs": [
+        "MIDP Graphics",
+        "Nokia DirectGraphics",
+        "RMS persistence",
+        "Thread.sleep"
+      ],
+      "method_symbols": [
+        "drawImage",
+        "drawPixels",
+        "fillRect",
+        "getResourceAsStream",
+        "repaint"
+      ],
+      "class_names": [
+        "ChaseMIDlet.class",
+        "Front.class",
+        "Game.class",
+        "road_obj.class",
+        "road_slice.class",
+        "SavageCanvas_NOKIAUI.class",
+        "SavageScreen.class",
+        "slice_obj.class",
+        "Sprite.class"
+      ],
+      "estimated_png_rgba_bytes": 1296,
+      "jad_available": false
+    },
+    {
+      "sequence": 161,
+      "id": "bb3555d4d66228c4",
+      "jar_path": "828 Java Games/chasm.jar",
+      "jad_path": "",
+      "jar_sha256": "bb3555d4d66228c4da02e1585fea92ae057fc275dc25ddf9c43836260a9aacb8",
+      "game_title": "Chasm",
+      "bytes": 22735,
+      "classes": 4,
+      "images": 5,
+      "png_indexed": 4,
+      "audio": 0,
+      "midp": "MIDP-1.0",
+      "cldc": "CLDC-1.0",
+      "api_refs": [
+        "MIDP Graphics",
+        "RMS persistence",
+        "Thread.sleep"
+      ],
+      "method_symbols": [
+        "drawImage",
+        "fillRect",
+        "repaint"
+      ],
+      "class_names": [
+        "a.class",
+        "b.class",
+        "c.class",
+        "Minesweeper.class"
+      ],
+      "estimated_png_rgba_bytes": 84560,
+      "jad_available": false
+    },
+    {
+      "sequence": 162,
+      "id": "4db8d426500f38ed",
+      "jar_path": "828 Java Games/Checkers.jar",
+      "jad_path": "",
+      "jar_sha256": "4db8d426500f38ed2c01c10fe0f817684381d36837b9cb4ccaa090fdc19943d6",
+      "game_title": "Checkers",
+      "bytes": 38622,
+      "classes": 19,
+      "images": 15,
+      "png_indexed": 15,
+      "audio": 0,
+      "midp": "MIDP-1.0",
+      "cldc": "CLDC-1.0",
+      "api_refs": [
+        "MIDP Graphics",
+        "RMS persistence",
+        "Thread.sleep"
+      ],
+      "method_symbols": [
+        "drawImage",
+        "fillRect",
+        "repaint"
+      ],
+      "class_names": [
+        "b.class",
+        "c.class",
+        "d.class",
+        "e.class",
+        "f.class",
+        "g.class",
+        "h.class",
+        "i.class",
+        "j.class",
+        "k.class",
+        "l.class",
+        "m.class",
+        "n.class",
+        "o.class",
+        "p.class",
+        "q.class",
+        "r.class",
+        "s.class",
+        "t.class"
+      ],
+      "estimated_png_rgba_bytes": 201116,
+      "jad_available": false
+    },
+    {
+      "sequence": 163,
+      "id": "0a5b8be576458755",
+      "jar_path": "828 Java Games/Cheers.jar",
+      "jad_path": "",
+      "jar_sha256": "0a5b8be576458755a693d2c5d5cb677fcab0f68d3ed34bb532dea46d1360e147",
+      "game_title": "Cheers",
+      "bytes": 38337,
+      "classes": 5,
+      "images": 18,
+      "png_indexed": 18,
+      "audio": 0,
+      "midp": "MIDP-1.0",
+      "cldc": "CLDC-1.0",
+      "api_refs": [
+        "MIDP Graphics",
+        "Nokia DirectGraphics",
+        "RMS persistence"
+      ],
+      "method_symbols": [
+        "drawImage",
+        "fillRect",
+        "repaint"
+      ],
+      "class_names": [
+        "Cheers$FieldMover.class",
+        "Cheers$GameCanvas.class",
+        "Cheers$Gameover.class",
+        "Cheers$Intro.class",
+        "Cheers.class"
+      ],
+      "estimated_png_rgba_bytes": 276320,
+      "jad_available": false
+    },
+    {
+      "sequence": 164,
+      "id": "57288eeb9946cece",
+      "jar_path": "828 Java Games/ChessBuddy.jar",
+      "jad_path": "",
+      "jar_sha256": "57288eeb9946cece245102299db7535999d365619189d1eea52f8f3bfdfaa8d5",
+      "game_title": "ChessBuddy",
+      "bytes": 61428,
+      "classes": 34,
+      "images": 23,
+      "png_indexed": 23,
+      "audio": 0,
+      "midp": "MIDP-1.0",
+      "cldc": "CLDC-1.0",
+      "api_refs": [
+        "MIDP Graphics",
+        "RMS persistence",
+        "Thread.sleep"
+      ],
+      "method_symbols": [
+        "drawImage",
+        "fillRect",
+        "repaint"
+      ],
+      "class_names": [
+        "a.class",
+        "aa.class",
+        "ab.class",
+        "ac.class",
+        "ad.class",
+        "ae.class",
+        "af.class",
+        "ag.class",
+        "b.class",
+        "c.class",
+        "com/coffeebreakmedia/chessbuddy/ChessBuddy.class",
+        "d.class",
+        "e.class",
+        "f.class",
+        "g.class",
+        "h.class",
+        "i.class",
+        "j.class",
+        "k.class",
+        "l.class",
+        "m.class",
+        "n.class",
+        "o.class",
+        "p.class",
+        "q.class",
+        "r.class",
+        "s.class",
+        "t.class",
+        "u.class",
+        "v.class",
+        "w.class",
+        "x.class",
+        "y.class",
+        "z.class"
+      ],
+      "estimated_png_rgba_bytes": 219864,
+      "jad_available": false
+    },
+    {
+      "sequence": 165,
+      "id": "a6c3b4e7de653f95",
+      "jar_path": "828 Java Games/Chessmaster.jar",
+      "jad_path": "",
+      "jar_sha256": "a6c3b4e7de653f957283a6f101e2a3ccb75fff01aa5ebcb5824c0e567f3eb384",
+      "game_title": "Chessmaster",
+      "bytes": 142448,
+      "classes": 5,
+      "images": 1,
+      "png_indexed": 1,
+      "audio": 0,
+      "midp": "MIDP-1.0",
+      "cldc": "CLDC-1.0",
+      "api_refs": [
+        "MIDP Graphics",
+        "Nokia DirectGraphics",
+        "RMS persistence",
+        "Thread.sleep"
+      ],
+      "method_symbols": [
+        "drawImage",
+        "drawPixels",
+        "fillRect",
+        "getResourceAsStream",
+        "repaint"
+      ],
+      "class_names": [
+        "B.class",
+        "C.class",
+        "ChessMIDlet.class",
+        "I.class",
+        "Z.class"
+      ],
+      "estimated_png_rgba_bytes": 2704,
+      "jad_available": false
+    },
+    {
+      "sequence": 166,
+      "id": "41516940885040bb",
+      "jar_path": "828 Java Games/ChessPuzzle.jar",
+      "jad_path": "",
+      "jar_sha256": "41516940885040bb8b551818f02d588af2fff7220b63c4a1e2f47ba6f83c5011",
+      "game_title": "Chess Puzzle",
+      "bytes": 43919,
+      "classes": 9,
+      "images": 4,
+      "png_indexed": 1,
+      "audio": 0,
+      "midp": "MIDP-1.0",
+      "cldc": "CLDC-1.0",
+      "api_refs": [
+        "MIDP Graphics",
+        "RMS persistence"
+      ],
+      "method_symbols": [
+        "drawImage",
+        "fillRect",
+        "getResourceAsStream",
+        "repaint"
+      ],
+      "class_names": [
+        "com/nokia/mid/appl/chep/Local.class",
+        "com/nokia/mid/appl/chep/HighScores.class",
+        "com/nokia/mid/appl/chep/HuffNode.class",
+        "com/nokia/mid/appl/chep/PieceTypes.class",
+        "com/nokia/mid/appl/chep/ChessBoard.class",
+        "com/nokia/mid/appl/chep/ChessRMS.class",
+        "com/nokia/mid/appl/chep/FullCanvasScreen.class",
+        "com/nokia/mid/appl/chep/ChessPuzzleMidlet$CountDown.class",
+        "com/nokia/mid/appl/chep/ChessPuzzleMidlet.class"
+      ],
+      "estimated_png_rgba_bytes": 69700,
+      "jad_available": false
+    },
+    {
+      "sequence": 167,
+      "id": "10a8fc02459db3d7",
+      "jar_path": "828 Java Games/ChickenHunter.jar",
+      "jad_path": "",
+      "jar_sha256": "10a8fc02459db3d74e31535600aceff803db5d92d9b45dd0853ddd328bba3b03",
+      "game_title": "Chicken Hunter",
+      "bytes": 65351,
+      "classes": 12,
+      "images": 70,
+      "png_indexed": 70,
+      "audio": 0,
+      "midp": "MIDP-1.0",
+      "cldc": "CLDC-1.0",
+      "api_refs": [
+        "MIDP Graphics",
+        "Nokia DirectGraphics",
+        "RMS persistence"
+      ],
+      "method_symbols": [
+        "drawImage",
+        "fillRect",
+        "repaint"
+      ],
+      "class_names": [
+        "a.class",
+        "b.class",
+        "c.class",
+        "d.class",
+        "e.class",
+        "f.class",
+        "g.class",
+        "GameMIDlet.class",
+        "h.class",
+        "i.class",
+        "j.class",
+        "k.class"
+      ],
+      "estimated_png_rgba_bytes": 390660,
+      "jad_available": false
+    },
+    {
+      "sequence": 168,
+      "id": "ae2c99840ca5723c",
+      "jar_path": "828 Java Games/ChickenRace.jar",
+      "jad_path": "",
+      "jar_sha256": "ae2c99840ca5723c7fe09af474ef55ce8553d83569734b328ae4b6eebcac3bdb",
+      "game_title": "Moorhen Kart 2004",
+      "bytes": 65196,
+      "classes": 21,
+      "images": 46,
+      "png_indexed": 46,
+      "audio": 0,
+      "midp": "MIDP-1.0",
+      "cldc": "CLDC-1.0",
+      "api_refs": [
+        "MIDP Graphics",
+        "Nokia DirectGraphics",
+        "RMS persistence",
+        "Thread.sleep"
+      ],
+      "method_symbols": [
+        "drawImage",
+        "drawPixels",
+        "fillRect",
+        "getResourceAsStream",
+        "repaint"
+      ],
+      "class_names": [
+        "com/neomedia/mobile/nokia/util/a.class",
+        "racer3d/a.class",
+        "racer3d/b.class",
+        "racer3d/c.class",
+        "racer3d/d.class",
+        "racer3d/e.class",
+        "racer3d/f.class",
+        "racer3d/g.class",
+        "racer3d/h.class",
+        "racer3d/i.class",
+        "racer3d/j.class",
+        "racer3d/k.class",
+        "racer3d/l.class",
+        "racer3d/m.class",
+        "racer3d/Main.class",
+        "racer3d/n.class",
+        "racer3d/o.class",
+        "racer3d/p.class",
+        "racer3d/q.class",
+        "racer3d/r.class",
+        "racer3d/s.class"
+      ],
+      "estimated_png_rgba_bytes": 302428,
+      "jad_available": false
+    },
+    {
+      "sequence": 169,
+      "id": "387404196dfea34a",
+      "jar_path": "828 Java Games/ChickenRun.jar",
+      "jad_path": "",
+      "jar_sha256": "387404196dfea34a524ac0faa138a696c2cdcff365fc58ca58ac4283d5adbd75",
+      "game_title": "ChickenRun",
+      "bytes": 54169,
+      "classes": 5,
+      "images": 23,
+      "png_indexed": 22,
+      "audio": 0,
+      "midp": "MIDP-1.0",
+      "cldc": "CLDC-1.0",
+      "api_refs": [
+        "MIDP Graphics",
+        "Nokia DirectGraphics",
+        "RMS persistence"
+      ],
+      "method_symbols": [
+        "drawImage",
+        "fillRect",
+        "repaint"
+      ],
+      "class_names": [
+        "ChickenRun$FieldMover.class",
+        "ChickenRun$GameCanvas.class",
+        "ChickenRun$Gameover.class",
+        "ChickenRun$Intro.class",
+        "ChickenRun.class"
+      ],
+      "estimated_png_rgba_bytes": 337916,
+      "jad_available": false
+    },
+    {
+      "sequence": 170,
+      "id": "fd6839865d23cafd",
+      "jar_path": "828 Java Games/ChineseChess.jar",
+      "jad_path": "",
+      "jar_sha256": "fd6839865d23cafded13433feadb3626e0f3670efc9fc5696fecb0fccf07dd7e",
+      "game_title": "ChinaChess",
+      "bytes": 87654,
+      "classes": 11,
+      "images": 21,
+      "png_indexed": 19,
+      "audio": 0,
+      "midp": "MIDP-1.0",
+      "cldc": "CLDC-1.0",
+      "api_refs": [
+        "MIDP Graphics",
+        "Nokia DirectGraphics",
+        "Thread.sleep"
+      ],
+      "method_symbols": [
+        "drawImage",
+        "drawPixels",
+        "fillRect",
+        "getResourceAsStream",
+        "repaint"
+      ],
+      "class_names": [
+        "a/a/a/a.class",
+        "a/a/a/b.class",
+        "a/a/a/c.class",
+        "a/a/b/a.class",
+        "a/a/b/b.class",
+        "a/a/b/c.class",
+        "a/a/b/d.class",
+        "a$a.class",
+        "a.class",
+        "b.class",
+        "ChinaChess.class"
+      ],
+      "estimated_png_rgba_bytes": 360104,
+      "jad_available": false
+    },
+    {
+      "sequence": 171,
+      "id": "1db7e8e08a033dcf",
+      "jar_path": "828 Java Games/ChocABloc.jar",
+      "jad_path": "",
+      "jar_sha256": "1db7e8e08a033dcf283459dc27cc03151eb6277fbee6f4299d49e9acfe56aa1f",
+      "game_title": "Choc o Bloc",
+      "bytes": 63329,
+      "classes": 14,
+      "images": 44,
+      "png_indexed": 44,
+      "audio": 0,
+      "midp": "MIDP-1.0",
+      "cldc": "CLDC-1.0",
+      "api_refs": [
+        "MIDP Graphics",
+        "RMS persistence",
+        "Thread.sleep"
+      ],
+      "method_symbols": [
+        "drawImage",
+        "fillRect",
+        "getResourceAsStream",
+        "repaint"
+      ],
+      "class_names": [
+        "b.class",
+        "c.class",
+        "d.class",
+        "e.class",
+        "f.class",
+        "g.class",
+        "Gridlock.class",
+        "h.class",
+        "i.class",
+        "j.class",
+        "k.class",
+        "l.class",
+        "m.class",
+        "n.class"
+      ],
+      "estimated_png_rgba_bytes": 740272,
+      "jad_available": false
+    },
+    {
+      "sequence": 172,
+      "id": "4c559708a8b51cdf",
+      "jar_path": "828 Java Games/ChopperRescue.jar",
+      "jad_path": "",
+      "jar_sha256": "4c559708a8b51cdfa21cbef12949b03f6070c902e801dc462dd97b87102729da",
+      "game_title": "ChopperRescue",
+      "bytes": 40980,
+      "classes": 11,
+      "images": 31,
+      "png_indexed": 31,
+      "audio": 6,
+      "midp": "MIDP-1.0",
+      "cldc": "CLDC-1.0",
+      "api_refs": [
+        "MIDP Graphics",
+        "RMS persistence"
+      ],
+      "method_symbols": [
+        "drawImage",
+        "fillRect",
+        "getResourceAsStream",
+        "repaint"
+      ],
+      "class_names": [
+        "gametimer.class",
+        "gamecanvas$gametimer.class",
+        "gamecanvas.class",
+        "chopcanvas.class",
+        "roadcanvas.class",
+        "chopper.class",
+        "SoundPlayer.class",
+        "GameDataManager.class",
+        "Gameinterface.class",
+        "Rect.class",
+        "point.class"
+      ],
+      "estimated_png_rgba_bytes": 200644,
+      "jad_available": false
+    },
+    {
+      "sequence": 173,
+      "id": "5ae3046407306e7e",
+      "jar_path": "828 Java Games/cityknights.jar",
+      "jad_path": "",
+      "jar_sha256": "5ae3046407306e7edcd47b4423761df9b10b2803948fa194c7fc352fa150d801",
+      "game_title": "CityKnights",
+      "bytes": 63852,
+      "classes": 29,
+      "images": 33,
+      "png_indexed": 33,
+      "audio": 0,
+      "midp": "MIDP-1.0",
+      "cldc": "CLDC-1.0",
+      "api_refs": [
+        "MIDP Graphics",
+        "Nokia DirectGraphics",
+        "RMS persistence",
+        "Thread.sleep"
+      ],
+      "method_symbols": [
+        "drawImage",
+        "fillRect",
+        "repaint"
+      ],
+      "class_names": [
+        "cityKnights/AlertForm.class",
+        "cityKnights/common/DataItem.class",
+        "cityKnights/common/DrawingUnit.class",
+        "cityKnights/common/LoadGame.class",
+        "cityKnights/common/NameForm.class",
+        "cityKnights/common/OpponentCanvas.class",
+        "cityKnights/common/ScoreEntry.class",
+        "cityKnights/common/Scores.class",
+        "cityKnights/common/SFStatus.class",
+        "cityKnights/common/SFStatuses.class",
+        "cityKnights/common/SoundItem.class",
+        "cityKnights/common/SoundSelect.class",
+        "cityKnights/common/Storage.class",
+        "cityKnights/common/StoreGameForm.class",
+        "cityKnights/common/Utils.class",
+        "cityKnights/Constants.class",
+        "cityKnights/Game$1.class",
+        "cityKnights/Game$2.class",
+        "cityKnights/Game$3.class",
+        "cityKnights/Game.class",
+        "cityKnights/man/Fighter.class",
+        "cityKnights/man/MovableMan$1.class",
+        "cityKnights/man/MovableMan$2.class",
+        "cityKnights/man/MovableMan.class",
+        "cityKnights/man/Opponent.class",
+        "cityKnights/MenuCanvas.class",
+        "cityKnights/SplashScreen$1.class",
+        "cityKnights/SplashScreen.class",
+        "cityKnights/Starter.class"
+      ],
+      "estimated_png_rgba_bytes": 399912,
+      "jad_available": false
+    },
+    {
+      "sequence": 174,
+      "id": "e10121969c3b49e3",
+      "jar_path": "828 Java Games/CityRace.jar",
+      "jad_path": "",
+      "jar_sha256": "e10121969c3b49e35e78bdf413ba4ed060c10f7cbce183bee08eeaddb9ffa6fe",
+      "game_title": "CityRace",
+      "bytes": 22950,
+      "classes": 11,
+      "images": 5,
+      "png_indexed": 1,
+      "audio": 0,
+      "midp": "MIDP-1.0",
+      "cldc": "CLDC-1.0",
+      "api_refs": [
+        "MIDP Graphics",
+        "RMS persistence",
+        "Thread.sleep"
+      ],
+      "method_symbols": [
+        "drawImage",
+        "fillRect",
+        "repaint"
+      ],
+      "class_names": [
+        "ste/me/cityrace/StreetModel.class",
+        "ste/me/cityrace/StreetStrip.class",
+        "ste/me/cityrace/Car.class",
+        "ste/me/cityrace/RaceScreen$1.class",
+        "ste/me/cityrace/RaceScreen.class",
+        "ste/me/cityrace/CityRaceMIDlet.class",
+        "ste/me/cityrace/FullRaceScreen.class",
+        "ste/me/util/UISprite.class",
+        "ste/me/util/DeviceFX.class",
+        "ste/me/util/Util.class",
+        "ste/me/util/NokiaFX.class"
+      ],
+      "estimated_png_rgba_bytes": 24720,
+      "jad_available": false
+    },
+    {
+      "sequence": 175,
+      "id": "881137e1014d7075",
+      "jar_path": "828 Java Games/ClassicSolitaire.jar",
+      "jad_path": "",
+      "jar_sha256": "881137e1014d70755b502b06e3db3b5522077e0176544a18295837ae2436e9e9",
+      "game_title": "Classic Solitaire",
+      "bytes": 51062,
+      "classes": 15,
+      "images": 6,
+      "png_indexed": 6,
+      "audio": 0,
+      "midp": "MIDP-1.0",
+      "cldc": "CLDC-1.0",
+      "api_refs": [
+        "MIDP Graphics",
+        "RMS persistence"
+      ],
+      "method_symbols": [
+        "drawImage",
+        "fillRect",
+        "repaint"
+      ],
+      "class_names": [
+        "com/villemobile/gameapi/a.class",
+        "com/villemobile/solitaire/a.class",
+        "com/villemobile/solitaire/b.class",
+        "com/villemobile/solitaire/c.class",
+        "com/villemobile/solitaire/d.class",
+        "com/villemobile/solitaire/e.class",
+        "com/villemobile/solitaire/f.class",
+        "com/villemobile/solitaire/g.class",
+        "com/villemobile/solitaire/h.class",
+        "com/villemobile/solitaire/i.class",
+        "com/villemobile/solitaire/j.class",
+        "com/villemobile/solitaire/k.class",
+        "com/villemobile/solitaire/l.class",
+        "com/villemobile/solitaire/m.class",
+        "com/villemobile/solitaire/Solitaire.class"
+      ],
+      "estimated_png_rgba_bytes": 370744,
+      "jad_available": false
+    },
+    {
+      "sequence": 176,
+      "id": "9f65470f192ce0ab",
+      "jar_path": "828 Java Games/ClearOut.jar",
+      "jad_path": "",
+      "jar_sha256": "9f65470f192ce0ab4dc83cf84acc229ee00d51b411b069cef2be40a1c11e7536",
+      "game_title": "Clear Out",
+      "bytes": 107430,
+      "classes": 33,
+      "images": 10,
+      "png_indexed": 10,
+      "audio": 10,
+      "midp": "MIDP-1.0",
+      "cldc": "CLDC-1.0",
+      "api_refs": [
+        "MIDP Graphics",
+        "MMAPI audio",
+        "RMS persistence"
+      ],
+      "method_symbols": [
+        "drawImage",
+        "fillRect",
+        "getResourceAsStream",
+        "repaint"
+      ],
+      "class_names": [
+        "a.class",
+        "b.class",
+        "c.class",
+        "d.class",
+        "e.class",
+        "f.class",
+        "g.class",
+        "h.class",
+        "i.class",
+        "j.class",
+        "k.class",
+        "l.class",
+        "m.class",
+        "n.class",
+        "o.class",
+        "p.class",
+        "q.class",
+        "r.class",
+        "s.class",
+        "t.class",
+        "u.class",
+        "v.class",
+        "w.class",
+        "x.class",
+        "y.class",
+        "z.class",
+        "aa.class",
+        "ab.class",
+        "ac.class",
+        "ad.class",
+        "ae.class",
+        "af.class",
+        "common_games/CommonMidlet.class"
+      ],
+      "estimated_png_rgba_bytes": 797808,
+      "jad_available": false
+    },
+    {
+      "sequence": 177,
+      "id": "38184c35c4b7bcd6",
+      "jar_path": "828 Java Games/CLEO S40.jar",
+      "jad_path": "",
+      "jar_sha256": "38184c35c4b7bcd6a89710f0745f26fcaa15012a7f91dc3c0386fdfa596dbc0c",
+      "game_title": "Cleo",
+      "bytes": 63638,
+      "classes": 3,
+      "images": 1,
+      "png_indexed": 1,
+      "audio": 0,
+      "midp": "MIDP-1.0",
+      "cldc": "CLDC-1.0",
+      "api_refs": [
+        "MIDP Graphics",
+        "Nokia DirectGraphics",
+        "RMS persistence",
+        "Thread.sleep"
+      ],
+      "method_symbols": [
+        "drawPixels",
+        "fillRect",
+        "getResourceAsStream",
+        "repaint"
+      ],
+      "class_names": [
+        "CleoApp.class",
+        "a.class",
+        "b.class"
+      ],
+      "estimated_png_rgba_bytes": 1024,
+      "jad_available": false
+    },
+    {
+      "sequence": 178,
+      "id": "da4223516c8af4c3",
+      "jar_path": "828 Java Games/Clix.jar",
+      "jad_path": "",
+      "jar_sha256": "da4223516c8af4c3b8da96900bf27a9cc60eba2a82e5409570d7e6df7b621292",
+      "game_title": "Clix",
+      "bytes": 16133,
+      "classes": 4,
+      "images": 2,
+      "png_indexed": 2,
+      "audio": 0,
+      "midp": "MIDP-1.0",
+      "cldc": "CLDC-1.0",
+      "api_refs": [
+        "MIDP Graphics",
+        "RMS persistence",
+        "Thread.sleep"
+      ],
+      "method_symbols": [
+        "drawImage",
+        "fillRect",
+        "repaint"
+      ],
+      "class_names": [
+        "Clix$a.class",
+        "Clix.class",
+        "b.class",
+        "a.class"
+      ],
+      "estimated_png_rgba_bytes": 74352,
+      "jad_available": false
+    },
+    {
+      "sequence": 179,
+      "id": "9e7d012324d0d037",
+      "jar_path": "828 Java Games/CocoRescue.jar",
+      "jad_path": "",
+      "jar_sha256": "9e7d012324d0d03758b25909101a58c7094c190b9f7b5a20656d95f94f6ad2df",
+      "game_title": "CocoRescue",
+      "bytes": 55698,
+      "classes": 20,
+      "images": 23,
+      "png_indexed": 7,
+      "audio": 9,
+      "midp": "MIDP-1.0",
+      "cldc": "CLDC-1.0",
+      "api_refs": [
+        "MIDP Graphics",
+        "Nokia DirectGraphics",
+        "RMS persistence",
+        "Thread.sleep"
+      ],
+      "method_symbols": [
+        "drawImage",
+        "fillRect",
+        "getResourceAsStream",
+        "repaint"
+      ],
+      "class_names": [
+        "cocoRescue/a.class",
+        "cocoRescue/b.class",
+        "cocoRescue/c.class",
+        "cocoRescue/d.class",
+        "cocoRescue/e.class",
+        "cocoRescue/f.class",
+        "cocoRescue/g.class",
+        "cocoRescue/h.class",
+        "cocoRescue/i.class",
+        "cocoRescue/j.class",
+        "cocoRescue/k.class",
+        "cocoRescue/l.class",
+        "cocoRescue/m.class",
+        "cocoRescue/n.class",
+        "cocoRescue/o.class",
+        "cocoRescue/p.class",
+        "cocoRescue/q.class",
+        "cocoRescue/r.class",
+        "cocoRescue/s.class",
+        "cocoRescue/coco_rescueMIDlet.class"
+      ],
+      "estimated_png_rgba_bytes": 91392,
+      "jad_available": false
+    },
+    {
+      "sequence": 180,
+      "id": "eb05f180891e1f8d",
+      "jar_path": "828 Java Games/Colin McRae 04 (s60).jar",
+      "jad_path": "",
+      "jar_sha256": "eb05f180891e1f8d182933911abf905d8467503ef8598edd8dea1da717ab15ec",
+      "game_title": "colin mcrae rally 4",
+      "bytes": 130726,
+      "classes": 7,
+      "images": 55,
+      "png_indexed": 55,
+      "audio": 9,
+      "midp": "MIDP-1.0",
+      "cldc": "CLDC-1.0",
+      "api_refs": [
+        "MIDP Graphics",
+        "MMAPI audio",
+        "Nokia DirectGraphics",
+        "RMS persistence",
+        "Thread.sleep"
+      ],
+      "method_symbols": [
+        "drawImage",
+        "fillRect",
+        "getResourceAsStream",
+        "repaint"
+      ],
+      "class_names": [
+        "a.class",
+        "b.class",
+        "Main.class",
+        "c.class",
+        "d.class",
+        "e.class",
+        "f.class"
+      ],
+      "estimated_png_rgba_bytes": 1298448,
+      "jad_available": false
+    },
+    {
+      "sequence": 181,
+      "id": "3e946f31f95968ed",
+      "jar_path": "828 Java Games/Colin_McRae_Rally_4-N6230.jar",
+      "jad_path": "",
+      "jar_sha256": "3e946f31f95968ed61adbca578089d2852aea8d437b56ede32bd8a5c4e23d972",
+      "game_title": "Colin_McRae_Rally_4-N6230",
+      "bytes": 64166,
+      "classes": 6,
+      "images": 33,
+      "png_indexed": 33,
+      "audio": 0,
+      "midp": "MIDP-1.0",
+      "cldc": "CLDC-1.0",
+      "api_refs": [
+        "MIDP Graphics",
+        "Nokia DirectGraphics",
+        "RMS persistence",
+        "Thread.sleep"
+      ],
+      "method_symbols": [
+        "drawImage",
+        "drawPixels",
+        "fillRect",
+        "getResourceAsStream",
+        "repaint"
+      ],
+      "class_names": [
+        "a.class",
+        "b.class",
+        "c.class",
+        "d.class",
+        "e.class",
+        "Main.class"
+      ],
+      "estimated_png_rgba_bytes": 427736,
+      "jad_available": false
+    },
+    {
+      "sequence": 182,
+      "id": "20f2f7ef09ec8e97",
+      "jar_path": "828 Java Games/ColinMcRally2005.jar",
+      "jad_path": "",
+      "jar_sha256": "20f2f7ef09ec8e9779763264d36e57b9d459acfb7974da63ebbf3317024dddcb",
+      "game_title": "Colin McRae 05",
+      "bytes": 107390,
+      "classes": 3,
+      "images": 1,
+      "png_indexed": 1,
+      "audio": 0,
+      "midp": "MIDP-1.0",
+      "cldc": "CLDC-1.0",
+      "api_refs": [
+        "MIDP Graphics",
+        "MMAPI audio",
+        "RMS persistence",
+        "Thread.sleep"
+      ],
+      "method_symbols": [
+        "drawImage",
+        "fillRect",
+        "getResourceAsStream",
+        "repaint"
+      ],
+      "class_names": [
+        "a.class",
+        "b.class",
+        "midlet.class"
+      ],
+      "estimated_png_rgba_bytes": 900,
+      "jad_available": false
+    },
+    {
+      "sequence": 183,
+      "id": "1a1ff0cec106cfe1",
+      "jar_path": "828 Java Games/Collision.jar",
+      "jad_path": "",
+      "jar_sha256": "1a1ff0cec106cfe1ceff24289a581e17932ae7e085925af764622e6cf6cdc969",
+      "game_title": "Collision",
+      "bytes": 63849,
+      "classes": 2,
+      "images": 25,
+      "png_indexed": 24,
+      "audio": 0,
+      "midp": "MIDP-1.0",
+      "cldc": "CLDC-1.0",
+      "api_refs": [
+        "MIDP Graphics",
+        "Nokia DirectGraphics",
+        "RMS persistence",
+        "Thread.sleep"
+      ],
+      "method_symbols": [
+        "drawImage",
+        "drawPixels",
+        "fillRect",
+        "getResourceAsStream",
+        "repaint"
+      ],
+      "class_names": [
+        "Collision7210$Game.class",
+        "Collision7210.class"
+      ],
+      "estimated_png_rgba_bytes": 390912,
+      "jad_available": false
+    },
+    {
+      "sequence": 184,
+      "id": "31f499de06105178",
+      "jar_path": "828 Java Games/ColorClash.jar",
+      "jad_path": "",
+      "jar_sha256": "31f499de061051781f82f48ce5f8dd3fc9492762e8aee8c76e636ee56e65c288",
+      "game_title": "ColorClash",
+      "bytes": 53959,
+      "classes": 15,
+      "images": 0,
+      "png_indexed": 0,
+      "audio": 0,
+      "midp": "",
+      "cldc": "",
+      "api_refs": [
+        "MIDP Graphics",
+        "Nokia DirectGraphics",
+        "RMS persistence",
+        "Thread.sleep"
+      ],
+      "method_symbols": [
+        "drawImage",
+        "drawPixels",
+        "fillRect",
+        "getResourceAsStream",
+        "repaint"
+      ],
+      "class_names": [
+        "a/a/a.class",
+        "a/a/b.class",
+        "a/a/c.class",
+        "a/a/d.class",
+        "a/a/e.class",
+        "a/a/f.class",
+        "a.class",
+        "b.class",
+        "c.class",
+        "colorclash.class",
+        "d.class",
+        "e.class",
+        "f.class",
+        "g.class",
+        "h.class"
+      ],
+      "estimated_png_rgba_bytes": 0,
+      "jad_available": false
+    },
+    {
+      "sequence": 185,
+      "id": "59f85479ab478914",
+      "jar_path": "828 Java Games/COM2US Dragon.jar",
+      "jad_path": "",
+      "jar_sha256": "59f85479ab4789143b312838188af027bf12db725d416d613eeef2d5eac9bcf5",
+      "game_title": "COM2US Dragon",
+      "bytes": 43212,
+      "classes": 3,
+      "images": 23,
+      "png_indexed": 20,
+      "audio": 7,
+      "midp": "MIDP-1.0",
+      "cldc": "CLDC-1.0",
+      "api_refs": [
+        "MIDP Graphics",
+        "RMS persistence",
+        "Thread.sleep"
+      ],
+      "method_symbols": [
+        "drawImage",
+        "fillRect",
+        "getResourceAsStream",
+        "repaint"
+      ],
+      "class_names": [
+        "Dragon.class",
+        "DragonCanvas.class",
+        "Unit.class"
+      ],
+      "estimated_png_rgba_bytes": 262492,
+      "jad_available": false
+    },
+    {
+      "sequence": 186,
+      "id": "6c8a97105aaedcdd",
+      "jar_path": "828 Java Games/Com2usTennis.jar",
+      "jad_path": "",
+      "jar_sha256": "6c8a97105aaedcdd0d33cf1ee9613013a28b17e89e84edc24ad00bb036f30636",
+      "game_title": "C2S_Tennis",
+      "bytes": 40791,
+      "classes": 2,
+      "images": 46,
+      "png_indexed": 46,
+      "audio": 7,
+      "midp": "MIDP-1.0",
+      "cldc": "CLDC-1.0",
+      "api_refs": [
+        "MIDP Graphics",
+        "RMS persistence",
+        "Thread.sleep"
+      ],
+      "method_symbols": [
+        "drawImage",
+        "fillRect",
+        "getResourceAsStream",
+        "repaint"
+      ],
+      "class_names": [
+        "Tennis.class",
+        "TennisCanvas.class"
+      ],
+      "estimated_png_rgba_bytes": 209824,
+      "jad_available": false
+    },
+    {
+      "sequence": 187,
+      "id": "ef6041db87c56f73",
+      "jar_path": "828 Java Games/CombatJetAttack.jar",
+      "jad_path": "",
+      "jar_sha256": "ef6041db87c56f73468109ee8baae25903426efe4fc7bb59463d9ec2504e856d",
+      "game_title": "CombatJetAttack",
+      "bytes": 46381,
+      "classes": 17,
+      "images": 38,
+      "png_indexed": 38,
+      "audio": 5,
+      "midp": "MIDP-1.0",
+      "cldc": "CLDC-1.0",
+      "api_refs": [
+        "MIDP Graphics",
+        "RMS persistence",
+        "Thread.sleep"
+      ],
+      "method_symbols": [
+        "drawImage",
+        "fillRect",
+        "getResourceAsStream",
+        "repaint"
+      ],
+      "class_names": [
+        "EWeaponVector.class",
+        "GameCanvas$GameTimer.class",
+        "GameCanvas.class",
+        "Bullet.class",
+        "Sprite.class",
+        "EWeapon.class",
+        "JetAttack.class",
+        "BackGround.class",
+        "PlayerShip.class",
+        "EShipVector.class",
+        "PowerUp.class",
+        "Explosion.class",
+        "SoundPlayer.class",
+        "GameDataManager.class",
+        "LogoCanvas$TimeTick.class",
+        "LogoCanvas.class",
+        "EShip.class"
+      ],
+      "estimated_png_rgba_bytes": 104784,
+      "jad_available": false
+    },
+    {
+      "sequence": 188,
+      "id": "408f31f3484d5f8f",
+      "jar_path": "828 Java Games/CombatTankAttack.jar",
+      "jad_path": "",
+      "jar_sha256": "408f31f3484d5f8f93cbb53c00d9a982652b39ff90c8f53d2f2715b1294c2776",
+      "game_title": "CombatTankAttack",
+      "bytes": 38954,
+      "classes": 12,
+      "images": 29,
+      "png_indexed": 24,
+      "audio": 6,
+      "midp": "MIDP-1.0",
+      "cldc": "CLDC-1.0",
+      "api_refs": [
+        "MIDP Graphics",
+        "Nokia DirectGraphics",
+        "RMS persistence"
+      ],
+      "method_symbols": [
+        "drawImage",
+        "fillRect",
+        "getResourceAsStream",
+        "repaint"
+      ],
+      "class_names": [
+        "Bullet.class",
+        "Explosion.class",
+        "LogoCanvas$TimeTick.class",
+        "LogoCanvas.class",
+        "TankAttack.class",
+        "GameCanvas$GameTimer.class",
+        "GameCanvas.class",
+        "Plane.class",
+        "SoundPlayer.class",
+        "TrooperVector.class",
+        "GameDataManager.class",
+        "Trooper.class"
+      ],
+      "estimated_png_rgba_bytes": 138732,
+      "jad_available": false
+    },
+    {
+      "sequence": 189,
+      "id": "f42bc7baacb51775",
+      "jar_path": "828 Java Games/Commanders.jar",
+      "jad_path": "",
+      "jar_sha256": "f42bc7baacb51775c63a38619f0e62813bb588c488149ff3eb4b52275e484574",
+      "game_title": "Commanders",
+      "bytes": 62656,
+      "classes": 5,
+      "images": 3,
+      "png_indexed": 3,
+      "audio": 5,
+      "midp": "MIDP-1.0",
+      "cldc": "CLDC-1.0",
+      "api_refs": [
+        "MIDP Graphics",
+        "Nokia DirectGraphics",
+        "RMS persistence",
+        "Thread.sleep"
+      ],
+      "method_symbols": [
+        "drawImage",
+        "drawPixels",
+        "fillRect",
+        "getResourceAsStream",
+        "repaint"
+      ],
+      "class_names": [
+        "commanders/Commanders.class",
+        "commanders/a.class",
+        "commanders/b.class",
+        "commanders/c.class",
+        "commanders/d.class"
+      ],
+      "estimated_png_rgba_bytes": 51284,
+      "jad_available": false
+    },
+    {
+      "sequence": 190,
+      "id": "d9e44085672bb830",
+      "jar_path": "828 Java Games/Commando1.jar",
+      "jad_path": "",
+      "jar_sha256": "d9e44085672bb8308e3044ca9e79efc259edae68e91831a92e3403e269811d65",
+      "game_title": "Commando 1 (english)",
+      "bytes": 99407,
+      "classes": 27,
+      "images": 1,
+      "png_indexed": 1,
+      "audio": 0,
+      "midp": "MIDP-1.0",
+      "cldc": "CLDC-1.0",
+      "api_refs": [
+        "MIDP Graphics",
+        "MMAPI audio",
+        "RMS persistence",
+        "Thread.sleep"
+      ],
+      "method_symbols": [
+        "drawImage",
+        "fillRect",
+        "getResourceAsStream",
+        "repaint"
+      ],
+      "class_names": [
+        "a.class",
+        "b.class",
+        "c.class",
+        "d.class",
+        "e.class",
+        "f.class",
+        "g.class",
+        "GameMIDlet.class",
+        "h.class",
+        "i.class",
+        "j.class",
+        "k.class",
+        "l.class",
+        "m.class",
+        "n.class",
+        "o.class",
+        "p.class",
+        "q.class",
+        "r.class",
+        "s.class",
+        "t.class",
+        "u.class",
+        "v.class",
+        "w.class",
+        "x.class",
+        "y.class",
+        "z.class"
+      ],
+      "estimated_png_rgba_bytes": 4872,
+      "jad_available": false
+    },
+    {
+      "sequence": 191,
+      "id": "f7389826e9d941d1",
+      "jar_path": "828 Java Games/Commando2.jar",
+      "jad_path": "",
+      "jar_sha256": "f7389826e9d941d16bc70ba6283ee15e169ac4faeb71d8356f8edeba1ff4f3bf",
+      "game_title": "Commando 2 (english)",
+      "bytes": 99912,
+      "classes": 27,
+      "images": 1,
+      "png_indexed": 1,
+      "audio": 0,
+      "midp": "MIDP-1.0",
+      "cldc": "CLDC-1.0",
+      "api_refs": [
+        "MIDP Graphics",
+        "MMAPI audio",
+        "RMS persistence",
+        "Thread.sleep"
+      ],
+      "method_symbols": [
+        "drawImage",
+        "fillRect",
+        "getResourceAsStream",
+        "repaint"
+      ],
+      "class_names": [
+        "a.class",
+        "b.class",
+        "c.class",
+        "d.class",
+        "e.class",
+        "f.class",
+        "g.class",
+        "GameMIDlet.class",
+        "h.class",
+        "i.class",
+        "j.class",
+        "k.class",
+        "l.class",
+        "m.class",
+        "n.class",
+        "o.class",
+        "p.class",
+        "q.class",
+        "r.class",
+        "s.class",
+        "t.class",
+        "u.class",
+        "v.class",
+        "w.class",
+        "x.class",
+        "y.class",
+        "z.class"
+      ],
+      "estimated_png_rgba_bytes": 4872,
+      "jad_available": false
+    },
+    {
+      "sequence": 192,
+      "id": "80998253436c35d3",
+      "jar_path": "828 Java Games/Commando3.jar",
+      "jad_path": "",
+      "jar_sha256": "80998253436c35d3317d0afec02d90d8d6804dd7032ee98ccff85acb7fa646c3",
+      "game_title": "Commando 3 (english)",
+      "bytes": 102001,
+      "classes": 27,
+      "images": 1,
+      "png_indexed": 1,
+      "audio": 0,
+      "midp": "MIDP-1.0",
+      "cldc": "CLDC-1.0",
+      "api_refs": [
+        "MIDP Graphics",
+        "MMAPI audio",
+        "RMS persistence",
+        "Thread.sleep"
+      ],
+      "method_symbols": [
+        "drawImage",
+        "fillRect",
+        "getResourceAsStream",
+        "repaint"
+      ],
+      "class_names": [
+        "a.class",
+        "b.class",
+        "c.class",
+        "d.class",
+        "e.class",
+        "f.class",
+        "g.class",
+        "GameMIDlet.class",
+        "h.class",
+        "i.class",
+        "j.class",
+        "k.class",
+        "l.class",
+        "m.class",
+        "n.class",
+        "o.class",
+        "p.class",
+        "q.class",
+        "r.class",
+        "s.class",
+        "t.class",
+        "u.class",
+        "v.class",
+        "w.class",
+        "x.class",
+        "y.class",
+        "z.class"
+      ],
+      "estimated_png_rgba_bytes": 4872,
+      "jad_available": false
+    },
+    {
+      "sequence": 193,
+      "id": "91a5793d3a8d57ce",
+      "jar_path": "828 Java Games/ConcealedChess.jar",
+      "jad_path": "",
+      "jar_sha256": "91a5793d3a8d57ceb11b9b57a4d3d1787051f68682477395bd20d01ac5aeae92",
+      "game_title": "ConcealedChess",
+      "bytes": 52508,
+      "classes": 29,
+      "images": 37,
+      "png_indexed": 37,
+      "audio": 0,
+      "midp": "MIDP-1.0",
+      "cldc": "CLDC-1.0",
+      "api_refs": [
+        "MIDP Graphics",
+        "RMS persistence",
+        "Thread.sleep"
+      ],
+      "method_symbols": [
+        "drawImage",
+        "fillRect",
+        "repaint"
+      ],
+      "class_names": [
+        "com/softstar/a/a/a.class",
+        "com/softstar/a/a/b.class",
+        "com/softstar/a/a/c.class",
+        "com/softstar/darkchess/a/a.class",
+        "com/softstar/darkchess/a.class",
+        "com/softstar/darkchess/b/a.class",
+        "com/softstar/darkchess/b/b.class",
+        "com/softstar/darkchess/b/c.class",
+        "com/softstar/darkchess/b/d.class",
+        "com/softstar/darkchess/b/e.class",
+        "com/softstar/darkchess/b/f.class",
+        "com/softstar/darkchess/b/g.class",
+        "com/softstar/darkchess/b/h.class",
+        "com/softstar/darkchess/b/i$1.class",
+        "com/softstar/darkchess/b/i$2.class",
+        "com/softstar/darkchess/b/i.class",
+        "com/softstar/darkchess/b/j.class",
+        "com/softstar/darkchess/b/k.class",
+        "com/softstar/darkchess/b/l.class",
+        "com/softstar/darkchess/b/m.class",
+        "com/softstar/darkchess/b/n.class",
+        "com/softstar/darkchess/b/o.class",
+        "com/softstar/darkchess/b/p.class",
+        "com/softstar/darkchess/b/q.class",
+        "com/softstar/darkchess/b/r.class",
+        "com/softstar/darkchess/b/s.class",
+        "com/softstar/darkchess/b.class",
+        "com/softstar/darkchess/c.class",
+        "com/softstar/darkchess/midp/DarkChessMIDlet.class"
+      ],
+      "estimated_png_rgba_bytes": 129196,
+      "jad_available": false
+    },
+    {
+      "sequence": 194,
+      "id": "c94daca50b1d46c8",
+      "jar_path": "828 Java Games/conquest.jar",
+      "jad_path": "",
+      "jar_sha256": "c94daca50b1d46c89f107175d50d2712134e5c1cbc4b5be4360f712de1e65d7b",
+      "game_title": "ConQuest 1773",
+      "bytes": 61862,
+      "classes": 12,
+      "images": 29,
+      "png_indexed": 29,
+      "audio": 6,
+      "midp": "MIDP-1.0",
+      "cldc": "CLDC-1.0",
+      "api_refs": [
+        "MIDP Graphics",
+        "RMS persistence",
+        "Thread.sleep"
+      ],
+      "method_symbols": [
+        "drawImage",
+        "fillRect",
+        "getResourceAsStream",
+        "repaint"
+      ],
+      "class_names": [
+        "e.class",
+        "f.class",
+        "c.class",
+        "g.class",
+        "d.class",
+        "h$a.class",
+        "h.class",
+        "i.class",
+        "Quest.class",
+        "b$1.class",
+        "b.class",
+        "a.class"
+      ],
+      "estimated_png_rgba_bytes": 1102820,
+      "jad_available": false
+    },
+    {
+      "sequence": 195,
+      "id": "813896320f01bafa",
+      "jar_path": "828 Java Games/CookAMania.jar",
+      "jad_path": "",
+      "jar_sha256": "813896320f01bafaf7e6ebe6c664ebd2a28d12ccc8300139510da99d3e167f0a",
+      "game_title": "Cook-a-Mania",
+      "bytes": 50106,
+      "classes": 5,
+      "images": 35,
+      "png_indexed": 35,
+      "audio": 0,
+      "midp": "MIDP-1.0",
+      "cldc": "CLDC-1.0",
+      "api_refs": [
+        "MIDP Graphics",
+        "RMS persistence",
+        "Thread.sleep"
+      ],
+      "method_symbols": [
+        "drawImage",
+        "fillRect",
+        "repaint"
+      ],
+      "class_names": [
+        "CookManMIDlet.class",
+        "a.class",
+        "b.class",
+        "c.class",
+        "d.class"
+      ],
+      "estimated_png_rgba_bytes": 750592,
+      "jad_available": false
+    },
+    {
+      "sequence": 196,
+      "id": "41a6615a44c00ee3",
+      "jar_path": "828 Java Games/courage.jar",
+      "jad_path": "",
+      "jar_sha256": "41a6615a44c00ee333b90d31227219bb221171f9a9bc10030fe21d0d5c646dec",
+      "game_title": "courage",
+      "bytes": 56880,
+      "classes": 15,
+      "images": 1,
+      "png_indexed": 1,
+      "audio": 0,
+      "midp": "MIDP-1.0",
+      "cldc": "CLDC-1.0",
+      "api_refs": [
+        "MIDP Graphics",
+        "Nokia DirectGraphics",
+        "RMS persistence",
+        "Thread.sleep"
+      ],
+      "method_symbols": [
+        "drawImage",
+        "drawPixels",
+        "fillRect",
+        "getResourceAsStream",
+        "repaint"
+      ],
+      "class_names": [
+        "b.class",
+        "c.class",
+        "d.class",
+        "e.class",
+        "f.class",
+        "g.class",
+        "h.class",
+        "i.class",
+        "j.class",
+        "k.class",
+        "l.class",
+        "m.class",
+        "Main.class",
+        "n.class",
+        "o.class"
+      ],
+      "estimated_png_rgba_bytes": 1024,
+      "jad_available": false
+    },
+    {
+      "sequence": 197,
+      "id": "eed460614ff77e3a",
+      "jar_path": "828 Java Games/CouragetheCowardlyDog.jar",
+      "jad_path": "",
+      "jar_sha256": "eed460614ff77e3abaf938f8ee81ee786e9a65736afb8363b0600eb7ba39781a",
+      "game_title": "Courage the Cowardly Dog Haunted House",
+      "bytes": 67106,
+      "classes": 14,
+      "images": 1,
+      "png_indexed": 1,
+      "audio": 0,
+      "midp": "MIDP-1.0",
+      "cldc": "CLDC-1.0",
+      "api_refs": [
+        "MIDP Graphics",
+        "MMAPI audio",
+        "RMS persistence",
+        "Thread.sleep"
+      ],
+      "method_symbols": [
+        "drawImage",
+        "fillRect",
+        "getResourceAsStream",
+        "repaint"
+      ],
+      "class_names": [
+        "b.class",
+        "c.class",
+        "d.class",
+        "e.class",
+        "f.class",
+        "g.class",
+        "h.class",
+        "i.class",
+        "j.class",
+        "k.class",
+        "l.class",
+        "m.class",
+        "Main.class",
+        "n.class"
+      ],
+      "estimated_png_rgba_bytes": 2304,
+      "jad_available": false
+    },
+    {
+      "sequence": 198,
+      "id": "b5337e09a31cdb17",
+      "jar_path": "828 Java Games/crashandburn.jar",
+      "jad_path": "",
+      "jar_sha256": "b5337e09a31cdb17f4846cc33860b13543cf64033715d4332042f18500da9cf7",
+      "game_title": "CrashNBurn",
+      "bytes": 64956,
+      "classes": 14,
+      "images": 1,
+      "png_indexed": 1,
+      "audio": 0,
+      "midp": "MIDP-1.0",
+      "cldc": "CLDC-1.0",
+      "api_refs": [
+        "MIDP Graphics",
+        "Nokia DirectGraphics",
+        "RMS persistence",
+        "Thread.sleep"
+      ],
+      "method_symbols": [
+        "drawImage",
+        "drawPixels",
+        "fillRect",
+        "getResourceAsStream",
+        "repaint"
+      ],
+      "class_names": [
+        "a.class",
+        "b.class",
+        "c.class",
+        "d.class",
+        "e.class",
+        "f.class",
+        "g.class",
+        "h.class",
+        "i.class",
+        "j.class",
+        "k.class",
+        "l.class",
+        "m.class",
+        "n.class"
+      ],
+      "estimated_png_rgba_bytes": 640,
+      "jad_available": false
+    },
+    {
+      "sequence": 199,
+      "id": "159ad014783c7a1c",
+      "jar_path": "828 Java Games/CrashBandicoot_1.jar",
+      "jad_path": "",
+      "jar_sha256": "159ad014783c7a1c46bfd7c80ea4115065df31477ed85ba6fddc13eb525b776b",
+      "game_title": "CrashBandicoot_1",
+      "bytes": 65158,
+      "classes": 12,
+      "images": 0,
+      "png_indexed": 0,
+      "audio": 0,
+      "midp": "MIDP-1.0",
+      "cldc": "CLDC-1.0",
+      "api_refs": [
+        "MIDP Graphics",
+        "Nokia DirectGraphics",
+        "RMS persistence",
+        "Thread.sleep"
+      ],
+      "method_symbols": [
+        "drawImage",
+        "drawPixels",
+        "fillRect",
+        "getResourceAsStream",
+        "repaint"
+      ],
+      "class_names": [
+        "CrashBandicoot/a.class",
+        "CrashBandicoot/b.class",
+        "CrashBandicoot/c.class",
+        "CrashBandicoot/d.class",
+        "CrashBandicoot/e.class",
+        "CrashBandicoot/f.class",
+        "CrashBandicoot/g.class",
+        "CrashBandicoot/GameTopLevel.class",
+        "CrashBandicoot/h.class",
+        "CrashBandicoot/i.class",
+        "CrashBandicoot/j.class",
+        "CrashBandicoot/k.class"
+      ],
+      "estimated_png_rgba_bytes": 0,
+      "jad_available": false
+    },
+    {
+      "sequence": 200,
+      "id": "ce8761c5af5495f7",
+      "jar_path": "828 Java Games/CrashBandicoot_2.jar",
+      "jad_path": "",
+      "jar_sha256": "ce8761c5af5495f7994b77c1e92600561d83e2d062ef40dd97d989f81caaebd7",
+      "game_title": "CrashBandicoot_2",
+      "bytes": 65048,
+      "classes": 12,
+      "images": 0,
+      "png_indexed": 0,
+      "audio": 0,
+      "midp": "MIDP-1.0",
+      "cldc": "CLDC-1.0",
+      "api_refs": [
+        "MIDP Graphics",
+        "Nokia DirectGraphics",
+        "RMS persistence",
+        "Thread.sleep"
+      ],
+      "method_symbols": [
+        "drawImage",
+        "drawPixels",
+        "fillRect",
+        "getResourceAsStream",
+        "repaint"
+      ],
+      "class_names": [
+        "CrashBandicoot/a.class",
+        "CrashBandicoot/b.class",
+        "CrashBandicoot/c.class",
+        "CrashBandicoot/d.class",
+        "CrashBandicoot/e.class",
+        "CrashBandicoot/f.class",
+        "CrashBandicoot/g.class",
+        "CrashBandicoot/GameTopLevel.class",
+        "CrashBandicoot/h.class",
+        "CrashBandicoot/i.class",
+        "CrashBandicoot/j.class",
+        "CrashBandicoot/k.class"
+      ],
+      "estimated_png_rgba_bytes": 0,
+      "jad_available": false
+    }
+  ]
+}
