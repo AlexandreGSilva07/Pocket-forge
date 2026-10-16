@@ -23,11 +23,10 @@
     let tiles;
     if(mode===1){
       tiles=input.slice(5,dataEnd);
-      if(input.length!==dataEnd)throw new RangeError("extra 8-bit payload");
-      return {cols,rows,tileWidth,tileHeight,mode,tiles,flags:null};
+    } else {
+      tiles=new Uint16Array(cells);
+      for(let i=0,k=5;i<cells;i++,k+=2)tiles[i]=input[k]|(input[k+1]<<8);
     }
-    tiles=new Uint16Array(cells);
-    for(let i=0,k=5;i<cells;i++,k+=2)tiles[i]=input[k]|(input[k+1]<<8);
     if(input.length===dataEnd)throw new RangeError("missing optional-layer flag");
     const hasExtra=input[dataEnd];
     if(hasExtra!==0&&hasExtra!==1)throw new RangeError("invalid layer flag");
