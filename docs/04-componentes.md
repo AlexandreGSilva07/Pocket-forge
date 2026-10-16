@@ -70,3 +70,9 @@ A função retorna novo estado; o sistema que a chama decide quando criar partí
 Em `demo/engine/state.js`, `PocketForgeState.createStore` implementa registros identificados, namespace, versão, persistência via `localStorage`, fallback de sessão e migração não destrutiva. O Lumen Shift migra o recorde do formato anterior e persiste através da API do motor. Testes em `tests/state_engine.test.cjs` cobrem roundtrip, versionamento, dados corrompidos, bloqueio de armazenamento e isolamento entre jogos.
 
 **Origem e diferença técnica:** o inventário do corpus J2ME encontrou numerosas referências a `javax.microedition.rms.RecordStore`. Isso motiva uma API moderna mínima de snapshots; **não é port de RecordStore nem prova de que a implementação seja equivalente**. Ainda faltam benchmarks de latência/durabilidade em aparelhos reais.
+
+## Pixel Surface RGBA4444 — experiência de software rendering
+
+`demo/engine/pixels.js`: framebuffer 16-bit via `Uint16Array`, desenhador por célula, retângulo clipado, linha de Bresenham, conversão para RGBA8 e upload via Canvas. `demo/pixel-lab.html` utiliza o motor em uma animação própria. `tests/pixel_engine.test.cjs` cobre canais de cor, memória temporária, clipping e upload. Origem metodológica: estudo de chamadas `drawPixels` e buffers `short[][]` de `3D Adventure` (veja `docs/research/deep/studies/f2667dd8ee20-3d-adventure.md`).
+
+**Não é o formato de pixel da Nokia copiado bit a bit.** A ordem de canais RGBA4444 é uma especificação independente, e nenhum ganho em FPS ou memória total foi ainda demonstrado por comparação instrumentada.
