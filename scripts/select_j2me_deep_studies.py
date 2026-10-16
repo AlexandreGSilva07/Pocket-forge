@@ -22,7 +22,7 @@ TRACKS={
 }
 # All basenames are search targets, not assumed facts about game behavior.
 PINS={
- "render3d":"""3D-Adventure.jar|doom_rpg_kr.jar|JBenchmark3D.jar|GeopodDC3D.jar|3DFerrariExperience.jar|3D Sentry.jar|FreeFlight3D.jar|FormulaGP3D.jar|fastNfourious3D_6630_6680.jar|River Storm 3D.jar|wolf.jar|mdoom.jar|3DAlphaZone.jar|AlphaWing2.NP.jar|Submarine3D.jar|BOMBERMAN3D.jar|3DBalloonRace.jar|Mini Golf Castles 3D From Sumea.jar|PlaymanWinterGames3D_K750I.jar|RacingFeverGT3D.jar|3d_qblast.jar|Xmas_Gifts_3D.jar|3DBoxing.jar|Speedchaser3D_6630_6680.jar""",
+ "render3d":"""3D-Adventure.jar|doom_rpg_kr.jar|Speedchaser3D_6630_6680.jar|GeopodDC3D.jar|3DFerrariExperience.jar|3D Sentry.jar|FreeFlight3D.jar|FormulaGP3D.jar|fastNfourious3D_6630_6680.jar|River Storm 3D.jar|wolf.jar|mdoom.jar|3DAlphaZone.jar|AlphaWing2.NP.jar|Submarine3D.jar|BOMBERMAN3D.jar|3DBalloonRace.jar|Mini Golf Castles 3D From Sumea.jar|PlaymanWinterGames3D_K750I.jar|RacingFeverGT3D.jar|3d_qblast.jar|Xmas_Gifts_3D.jar|3DBoxing.jar|Speedchaser3D_6630_6680.jar""",
  "worlds":"""princepersia_tt.jar|MarioMp2.jar|Lemmings.jar|MetalSlug.jar|ForsakenFortress.jar|sabrewulfmod.jar|Arkanoid_Revenge_of_DOTH_6230i.jar|AtomicBetty-byhizir.jar|Rayman3.jar|PrinceOfPersia.jar|SplinterCell.jar|Warior_Within_kr.jar|LotrTwoTowers.jar|LordoftheRings-TwoTowers.jar|DragonIsland.jar|GalleonDawn.jar|TombRaide1osiriscodex.jar|underworldVampiresNight.jar|DragonFire2Episode1.jar|Scooby-Doo2DarkDungeons.jar|Caveman.jar|PrinceHA.jar|Mad Monkey.jar|MikisWorld.jar""",
  "strategy":"""1XCrossingDice.jar|AncientEmpires.jar|age_kr.jar|anno_1503.jar|ChessBuddy3.jar|StrategyWar-1[1].3.2.jar|BattleOfEmpires.jar|200611230940787945.jar|Chessmaster.jar|NetMobileChess.jar|SoccerManager.jar|5Chess.jar|ChessPuzzle.jar|ChineseChess.jar|SpruceChess.jar|FiveStones.jar|ConcealedChess.jar|KX3D Chess.jar|chessbuddy2.jar|AirTraffic.jar|Age Of Marco Polo Gold.jar""",
  "assets":"""DragonFire2Episode1.jar|WorldFighting.jar|SpeedAddict.jar|AgassiTennis.jar|C2S_ProBaseball__v600_.jar|C2S__Dragon.jar|King_Of_Fighters_M2_K750.jar|MetalSlug.jar|AtomicBetty-byhizir.jar|KamikazeQuest.jar|RacingFeverDeluxe2.jar|SpaceEncounter.jar|PuzzleBobble.jar|5Goldminer.jar|EontheDragon.jar|C2S_Bowling2.jar|Stealth.jar|FreeFlight.jar|StreetSoccer.jar|Dragon_Fire2.jar""",
@@ -64,6 +64,21 @@ def score(r,g):
  if g=="physics":s+=18*("GameCanvas" in a)+16*("Sprite" in a)+min(n,40)*.44+min(img,80)*.16+10*("drawPixels" in m)
  if g=="compact":s+=min(aud,30)*2.1+(25 if size<27000 else 12 if size<55000 else 0)+min(n,20)*.3+12*("MMAPI audio" in a)
  return round(s+(7 if 20000<=size<=220000 else 0),2)
+def investigation_targets(r,g):
+ a=set(r["api_refs"]);m=set(r["method_symbols"]);q=[]
+ if "J2ME M3G" in a:q.append("Verificar se usa cenas, modelos, transformações e animações M3G; medir custo da representação.")
+ if "drawPixels" in m:q.append("Desmontar chamadas drawPixels e decidir se são efeitos, blit ou render de software.")
+ if "drawRegion" in m:q.append("Identificar retângulos de atlas, pivôs e extração de frames por região.")
+ if "TiledLayer" in a:q.append("Investigar layout/colisão de tilemaps e formato dos dados de nível.")
+ if "Sprite" in a:q.append("Examinar estados, frames, colisão e composição de sprites.")
+ if "minimax" in m:q.append("Reconstituir minimax: avaliação, profundidade e possível poda.")
+ if r["images"]>=50:q.append("Catalogar atlas, recursos gráficos e quantização; quantificar custo descompactado.")
+ if r["audio"]>=8:q.append("Identificar formatos de áudio, política de disparos e armazenamento.")
+ if r["classes"]<=4:q.append("Examinar como lógica e recursos são representados com poucas classes.")
+ if r["bytes"]<30000:q.append("Auditar distribuição dos bytes entre lógica e recursos, inclusive formatos binários.")
+ if not q:q.append(TRACKS[g][2]+" Confirmar a hipótese com classes e métodos reais.")
+ return q
+
 def read_all():
  ledger=json.loads((SOURCE/"registry.json").read_text(encoding="utf-8"))
  assert ledger["total_recorded"]==1649 and len(ledger["batches"])==17
@@ -90,7 +105,8 @@ def main():
                "track_name":TRACKS[g][0],"study_question":TRACKS[g][2],
                "id":r["jar_sha256"][:16],"score_metadata":score(r,g),
                "selection_basis":"âncora verificada" if manual else "pontuação estrutural",
-               "status":"selected_not_decompiled"})
+               "status":"selected_not_decompiled",
+               "investigation_targets":investigation_targets(r,g)})
   dest.append(item);ids.add(r["jar_sha256"]);families.add(r["family"]);batch_counts[r["batch"]]+=1
   return True
  anchors={}
@@ -130,8 +146,10 @@ def main():
         "com_jad":sum(bool(r["jad_path"]) for r in primary),
         "ancoras_verificadas":sum(r["selection_basis"]=="âncora verificada" for r in primary),
         "âncoras_não_encontradas":missing}
+ control=index.get("jbenchmark3d.jar",[])
+ technical_controls=[{"jar_sha256":x["jar_sha256"],"jar_path":x["jar_path"],"purpose":"Benchmark M3G, não jogo: controle técnico separado das 100 vagas."} for x in control[:1]]
  output={"schema_version":1,"status":"seleção_sem_descompilação","source_zip_sha256":ledger["archive_sha256"],
-         "source":"17 arquivos JSON sintéticos versionados","statistics":stats,"principal":primary,"reserva":reserves,
+         "source":"17 arquivos JSON sintéticos versionados","statistics":stats,"principal":primary,"reserva":reserves,"technical_controls_not_games":technical_controls,
          "limitations":"Títulos, APIs, símbolos, quantidades e classes são indícios, não prova de comportamento nem qualidade"}
  DEST.mkdir(parents=True,exist_ok=True)
  (DEST/"selection-100.json").write_text(json.dumps(output,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
@@ -150,6 +168,7 @@ def main():
     "- O escore mede potencial investigativo, NÃO qualidade ou eficiência confirmada.",
     "- JAD não encontrado significa ausência de descritor com nome/caminho correspondente; não inventar.",
     "- Nenhum JAR, código proprietário ou asset original é incluído.",
+    "- JBenchmark3D é uma ferramenta de benchmark, não um jogo: fica apenas como controle técnico fora das 100 vagas.",
     "",f"Selecionados: {len(primary)} principais + {len(reserves)} reservas; "+str(stats["ancoras_verificadas"])+" âncoras verificadas; "+str(stats["com_jad"])+" principais com JAD associado.",
     "","## Frentes e metas de pesquisa","",
     "| Área | Vagas | Investigação real planejada |","|---|---:|---|"]
@@ -177,7 +196,7 @@ def main():
       "7. Testar e fazer benchmarks comparativos antes de qualquer alegação de aumento de FPS, economia de RAM ou tamanho.",
       "",
       "## Arquivos e continuidade","",
-      "- selection-100.json contém 125 SHA-256 completos, nomes, caminhos JAR/JAD e perguntas técnicas por candidato.",
+      "- selection-100.json contém 125 SHA-256 completos, nomes, caminhos JAR/JAD e perguntas técnicas individualizadas por candidato.",
       "- selection-100.csv permite filtrar por frente, tamanho, origem e prioridade.",
       "- A situação atual da engenharia reversa profunda permanece registrada em deep/registry.json: nenhum jogo promovido automaticamente.",
       "- Script reprodutível: scripts/select_j2me_deep_studies.py.",
