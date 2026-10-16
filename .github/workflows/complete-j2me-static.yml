@@ -1,0 +1,106 @@
+name: Complete J2ME static audit — 100 JARs per branch
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/complete-j2me-static.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: pocketforge-j2me-static-completion
+  cancel-in-progress: false
+
+jobs:
+  audit-remaining:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: true
+      - name: Download and verify original 1000JavaGames ZIP
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl --fail --location --retry 3 --retry-all-errors --retry-delay 5 \
+            --connect-timeout 20 --max-time 900 --silent --show-error \
+            'https://archive.org/download/1000_J2ME_Games_Pack/1000JavaGames.zip' \
+            --output "$RUNNER_TEMP/1000JavaGames.zip"
+          python3 - "$RUNNER_TEMP/1000JavaGames.zip" <<'PY'
+          import hashlib,sys,zipfile
+          path=sys.argv[1]
+          with open(path,'rb') as f: actual=hashlib.file_digest(f,'sha256').hexdigest()
+          expected="f8e3fb19f0cb451a1eebecccc16c4cb941c68293db2990a4e82df68bfa2c10dd"
+          if actual!=expected: raise ValueError(f"ZIP checksum changed: {actual}")
+          with zipfile.ZipFile(path) as z:
+              print(f"Verified original archive SHA-256 {actual}, {len(z.infolist())} entries")
+          PY
+      - name: Run static analyzer for batches 004–017, commit, and push one branch per batch
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "pocketforge-audit-bot"
+          git config user.email "pocketforge-audit-bot@users.noreply.github.com"
+          git fetch origin main
+          git switch -c audit/j2me-batch-004 origin/main
+          for N in $(seq 4 17); do
+            ID=$(printf '%03d' "$N")
+            BRANCH="audit/j2me-batch-$ID"
+            if [ "$N" -ne 4 ]; then git switch -c "$BRANCH"; fi
+            if git ls-remote --exit-code --heads origin "refs/heads/$BRANCH" >/dev/null 2>&1; then
+              echo "Refusing to overwrite existing remote $BRANCH" >&2
+              exit 12
+            fi
+            python3 scripts/audit_j2me_batch.py \
+              "$RUNNER_TEMP/1000JavaGames.zip" --batch "$N" --out docs/research/batches
+            python3 - "$N" <<'PY'
+          import json,sys
+          n=int(sys.argv[1]);tag=f"{n:03d}"
+          base="docs/research/batches/"
+          d=json.load(open(base+tag+".json",encoding="utf8"))
+          r=json.load(open(base+"registry.json",encoding="utf8"))
+          expect=100 if n<17 else 49
+          assert d["count"]==expect,(n,d["count"],expect)
+          assert r["total_recorded"]==300+min(100*n-300,1349),(n,r["total_recorded"])
+          ids=[h for b in r["batches"] for h in b["file_ids_sha256"]]
+          assert len(ids)==len(set(ids))==r["total_recorded"],"duplicate or missing hashes"
+          assert len(r["batches"])==n,(n,len(r["batches"]))
+          print("VALIDATED",tag,"batch_size",expect,"cumulative",r["total_recorded"],"unique_hashes",len(ids))
+          PY
+            python3 - "$N" <<'PY'
+          import json,sys
+          path="config/j2me-batch.json"
+          obj=json.load(open(path,encoding="utf8"));obj["batch"]=int(sys.argv[1])
+          with open(path,"w",encoding="utf8") as f:json.dump(obj,f,ensure_ascii=False,indent=2);f.write("\n")
+          PY
+            git add "docs/research/batches/$ID.json" \
+                    "docs/research/batches/$ID.csv" \
+                    "docs/research/batches/$ID.md" \
+                    docs/research/batches/registry.json \
+                    config/j2me-batch.json
+            git commit -m "research(j2me-$ID): audit $([ "$N" -eq 17 ] && echo 49 || echo 100) unique JARs with persistent IDs"
+            git push origin "HEAD:refs/heads/$BRANCH"
+            echo "Batch $ID published on $BRANCH"
+          done
+          python3 - <<'PY'
+          import json
+          r=json.load(open("docs/research/batches/registry.json",encoding="utf8"))
+          assert r["total_recorded"]==1649
+          assert len(r["batches"])==17
+          assert sum(b["count"] for b in r["batches"])==1649
+          print("COMPLETE — all",r["total_recorded"],"unique JAR hashes analyzed, 17 batches")
+          PY
+      - name: Verify PocketForge engine quality after audit
+        shell: bash
+        run: |
+          node --check demo/game.js
+          node --check demo/engine/compact.js
+          node --check demo/engine/state.js
+          node --check demo/engine/audio.js
+          node --test tests/*.test.cjs
+          python3 -m unittest discover -s tests -v
