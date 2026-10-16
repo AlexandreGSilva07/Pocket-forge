@@ -11,6 +11,10 @@ Este repositório é uma super-skill para criar jogos modernos ultraleves. Nenhu
 ## Estado de auditorias
 A **auditoria sintética dos 1.649 JARs com hashes distintos está concluída**, em 17 PRs mesclados na main. Ver [relatório final](docs/research/STATIC_COMPLETE.md). Não repetir os 17 lotes: começar a engenharia reversa detalhada com análise real de código/algoritmos. 1.649 SHA-256 distintos não significam 1.649 títulos únicos.
 
+## Seleção documentada da próxima fase
+
+A curadoria de **100 jogos prioritários e 25 reservas** já foi produzida: ver [deep/selection-100.md](docs/research/deep/selection-100.md) e [JSON detalhado](docs/research/deep/selection-100.json). Não substituir nomes, hashes ou perguntas sem registrar a razão; o benchmark JBenchmark3D é controle externo à lista de jogos. A curadoria é apenas triagem baseada nos 1.649 inventários estáticos — **não implica decompilação, execução ou compreensão real dos jogos**.
+
 ## Para os PRs da fase DETALHADA (a próxima etapa)
 - Aproveitar os IDs e metadados já existentes em registry.json, sem reauditar o inventário. Manter um registro adicional do avanço detalhado por hash e classe/função.
 - Descrever análise estática versus análise profunda; não afirmar que o programa foi executado se apenas leu bytecode.

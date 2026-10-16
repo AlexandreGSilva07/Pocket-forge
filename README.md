@@ -12,7 +12,8 @@
 - [Contrato de continuidade para qualquer agente/chat](docs/research/CONTINUITY.md)
 - [Ledger com hashes completos, sem duplicação](docs/research/batches/registry.json)
 - [Relatório final, estatísticas e índice dos 17 PRs](docs/research/STATIC_COMPLETE.md)
-- [Fase seguinte: engenharia reversa detalhada e tracker independente](docs/research/deep/README.md) · [Lote 001](docs/research/batches/001.md) · [Lote 017](docs/research/batches/017.md)
+- [Fase seguinte: engenharia reversa detalhada e tracker independente](docs/research/deep/README.md)
+- [**100 jogos selecionados + 25 reservas, com motivos e IDs completos**](docs/research/deep/selection-100.md) · [Lote 001](docs/research/batches/001.md) · [Lote 017](docs/research/batches/017.md)
 - Motor operacional já integrado ao demo: [compact](demo/engine/compact.js), [estado](demo/engine/state.js) e [áudio](demo/engine/audio.js), com testes e CI.
 
 **Não colocar JARs/JADs originais no repositório.** O processamento sintético terminou: cada PR contém os metadados dos arquivos, sem executar ou descompilar integralmente os jogos. Os próximos PRs, da fase detalhada, deverão estudar algoritmos de verdade e incorporar melhorias funcionais do motor com testes e benchmarks.

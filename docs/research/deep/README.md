@@ -2,6 +2,14 @@
 
 **Estado:** não iniciada. A fase 1 de inventário foi concluída para 1.649 SHA-256 de JAR. O objetivo desta fase não é varrer novamente nomes e classes, mas **investigar arquitetura e comportamento de programas reais** e reconstruir progressivamente as melhores técnicas em componentes originais do PocketForge.
 
+## Seleção inicial concluída (100 principais + 25 reservas)
+
+- **[Relatório de curadoria e lista de todos os candidatos](selection-100.md)**: 100 vagas para jogos, divididas em seis frentes de engenharia, mais 25 reservas.
+- **[Metadados detalhados da seleção](selection-100.json)**: SHA-256, caminho JAR e JAD, classe, dados gráficos, sinais de bytecode e perguntas técnicas por arquivo.
+- **[Seleção tabular](selection-100.csv)**: filtragem rápida por lote, frente e tamanho.
+- O programa **JBenchmark3D** é controle técnico extra e não consome vaga dos 100 jogos.
+- Esses arquivos representam apenas escolha de candidatos: **nenhum jogo foi descompilado ou executado nesta etapa**; o rastreador mantém os estudos como não iniciados.
+
 ## Fluxo por jogo
 
 1. Selecionar o arquivo pelo SHA-256 e nome já existentes em [../batches/registry.json](../batches/registry.json) e no arquivo JSON do lote correspondente.
