@@ -13,6 +13,9 @@ test("byte budget and clipped draw",()=>{
  assert.equal(s.rect(-2,-2,5,5,0xf00f),9);
  assert.equal(s.get(0,0),0xf00f);
  assert.equal(s.get(4,4),0);
+ assert.equal(s.rect(-500,-500,10,10,0xaaaa),0);
+ assert.equal(s.rect(500,500,10,10,0xaaaa),0);
+ assert.equal(s.get(9,9),0);
  assert.throws(()=>P.createSurface(2000,2000),RangeError);
 });
 test("Bresenham line respects clip and endpoints",()=>{
