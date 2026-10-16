@@ -32,6 +32,7 @@ jobs:
           assert len({r["jar_path"] for r in a+b})==125
           assert all(r["investigation_targets"] for r in a+b)
           assert all(r["game_title"] != "JBenchmark3D" for r in a)
+          assert all(not r["jar_path"].lower().endswith("/jbenchmark3d.jar") for r in a+b)
           assert p["technical_controls_not_games"]
           assert {i["rank"] for i in a}==set(range(1,101))
           assert {i["rank"] for i in b}==set(range(1,26))
