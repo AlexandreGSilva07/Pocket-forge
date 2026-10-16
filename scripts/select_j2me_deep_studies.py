@@ -98,6 +98,7 @@ def main():
  primary=[];reserves=[];ids=set();families=set();batch_counts=collections.Counter();missing=[]
  def put(r,g,primary_status,manual):
   if r["jar_sha256"] in ids or r["family"] in families or r.get("entry_errors"):return False
+  if pathlib.PurePosixPath(r["jar_path"]).name.casefold()=="jbenchmark3d.jar":return False
   if AVOID.search(r["game_title"]+" "+r["jar_path"]):return False
   dest=primary if primary_status else reserves
   item={k:r.get(k) for k in ("jar_sha256","jar_path","jad_path","game_title","batch","bytes","classes","images","audio","png_indexed","api_refs","method_symbols","class_names","estimated_png_rgba_bytes")}
