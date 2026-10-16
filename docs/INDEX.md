@@ -17,8 +17,9 @@
 
 ## Continuidade e engenharia reversa em lotes de 100
 - [Como retomar em outro chat: CONTINUITY](research/CONTINUITY.md)
-- [Registro permanente (ledger) com 300 arquivos auditados](research/batches/registry.json)
-- [Lote 001](research/batches/001.md) · [Lote 002](research/batches/002.md) · [Lote 003](research/batches/003.md)
+- [Registro permanente (ledger) com os 1.649 hashes](research/batches/registry.json)
+- [Auditoria sintética concluída: estatísticas e índices de todos os 17 lotes](research/STATIC_COMPLETE.md)
+- [Lote 001](research/batches/001.md) · [Lote 017](research/batches/017.md)
 
 ## Pesquisa empírica
 - [Auditoria massiva J2ME — 2.309 JARs (1.649 hashes distintos)](research/02-auditoria-j2me-2309-jars.md) — resultados reais de download e inspeção automatizada
