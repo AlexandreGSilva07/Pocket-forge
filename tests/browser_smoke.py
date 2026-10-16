@@ -77,6 +77,18 @@ def run():
             assert ai_page.locator("#piles span").count() == 15
             ai_page.screenshot(path=str(SHOT_DIR / "ai-lab.png"))
             ai_page.context.close()
+            pixel_context = browser.new_context(viewport={"width": 820, "height": 760})
+            pixel_page = pixel_context.new_page()
+            pixel_page.on("pageerror", lambda error: errors.append(str(error)))
+            pixel_response = pixel_page.goto(url + "pixel-lab.html", wait_until="load")
+            assert pixel_response is not None and pixel_response.status == 200
+            pixel_page.wait_for_function(
+                "document.querySelector('#info').textContent.includes('Framebuffer')",
+                timeout=8000
+            )
+            assert pixel_page.locator("#lab").evaluate("(c) => c.width === 160 && c.height === 120")
+            pixel_page.screenshot(path=str(SHOT_DIR / "pixel-lab.png"))
+            pixel_context.close()
             browser.close()
     finally:
         server.shutdown()
