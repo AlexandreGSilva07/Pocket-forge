@@ -15,6 +15,9 @@
 - [UI e design system](17-design-system-ui.md)
 - [Receitas por gênero](10-receitas.md)
 
+## Pesquisa empírica
+- [Engenharia reversa de jogos J2ME — lote 01](research/01-analise-j2me-lote01.md) — 10 JARs efetivamente inspecionados, evidências técnicas, limites e experimentos propostos
+
 ## Garantia de qualidade
 - [Performance e profiling](07-performance.md)
 - [Testes, gates e evidências](08-qa-testes.md)
