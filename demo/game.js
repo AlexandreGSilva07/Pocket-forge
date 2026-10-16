@@ -12,6 +12,7 @@
   const reducedMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const TAU = Math.PI * 2;
   const PF = window.PocketForgeCompact;
+  const TilePack = window.PocketForgeTilePack;
   if (!PF) throw new Error("PocketForge compact renderer not loaded");
   const TILE = 48, tileAtlas = PF.createTileAtlas(document, TILE);
   let tileMap;
@@ -38,10 +39,17 @@
     dpr = Math.min(window.devicePixelRatio || 1, 2);
     canvas.width = Math.round(width * dpr); canvas.height = Math.round(height * dpr);
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-    tileMap = PF.createTileMap(Math.ceil(width / TILE) + 1, Math.ceil(height / TILE) + 1, (x, y) => {
+    const generated = PF.createTileMap(Math.ceil(width / TILE) + 1, Math.ceil(height / TILE) + 1, (x, y) => {
       const variant = (x * 23 + y * 41 + x * y) % 17;
       return variant === 0 ? 2 : variant === 7 ? 3 : 1;
     });
+    // Roundtrip through our versioned compact binary level format.
+    const packed = TilePack.encodePFLevel({
+      cols: generated.width, rows: generated.height,
+      tileWidth: TILE, tileHeight: TILE, tiles: generated.tiles
+    });
+    const decoded = TilePack.decodePFLevel(packed);
+    tileMap = { width: decoded.cols, height: decoded.rows, tiles: decoded.tiles };
     stars = Array.from({ length: Math.min(130, Math.floor(width * height / 5700)) }, () => ({
       x: rand(0, width), y: rand(0, height), size: rand(.5, 2.1), phase: rand(0, TAU)
     }));
