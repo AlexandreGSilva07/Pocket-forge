@@ -83,6 +83,10 @@ Pocket-forge/
 └── LICENSE
 ```
 
+## Pesquisa de plataformas e ferramentas históricas
+
+O [catálogo de SDKs, runtimes, emuladores e sistemas móveis](docs/research/plataformas-mobile-sdks-runtimes.md) reúne fontes verificáveis de Java ME/phoneME, Symbian/S60/UIQ/N-Gage, Palm OS, Windows Mobile e BlackBerry. A escolha do Nokia 5320/Symbian 9.3 foi **uma amostra avançada de época, não um alvo do PocketForge**. O estudo serve para entender técnicas generalizáveis e validá-las em jogos HTML5 próprios; os downloads históricos não foram executados nem avaliados em benchmark.
+
 ## Pesquisa baseada em jogos reais
 
 O [relatório da coleção Nokia64](docs/research/02-auditoria-j2me-2309-jars.md) registra a análise estática de **2.309 JARs, sendo 1.649 binariamente distintos**, obtidos de um ZIP de ~154 MiB pelo GitHub Actions. O jogo original não foi executado nem integrado ao repositório.
