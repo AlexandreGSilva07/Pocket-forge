@@ -70,6 +70,10 @@ Pocket-forge/
 └── LICENSE
 ```
 
+## Pesquisa baseada em jogos reais
+
+O [primeiro relatório J2ME](docs/research/01-analise-j2me-lote01.md) documenta **análise estática de dez arquivos JAR**, com padrões de assets e renderização e experimentos para orientar a futura revisão da skill. **Não** foram analisados 1.000 jogos, executados jogos em emulador ou medidos FPS/RAM nesse estudo.
+
 ## Índice temático
 
 **Começar:** [Visão](docs/00-visao.md) · [Pipeline](docs/01-pipeline.md) · [Arquitetura](docs/02-arquitetura.md) · [Tutorial](docs/13-tutorial-primeiro-jogo.md)
