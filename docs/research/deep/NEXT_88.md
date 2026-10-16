@@ -30,7 +30,7 @@ python3 -m unittest discover -s tests -v
 
 **Desmontar não é compreender integralmente.** Não foi feita interpretação semântica método a método de todos os 100 nem execução em emulador. Os módulos AI, TilePack, Pixel Surface e Tactics Core são implementações autorais derivadas de estudos parciais específicos; não representam a reconstituição de 100 motores.
 
-O registro de progresso `docs/research/deep/registry.json` mantém **quatro estudos parciais por método** (3D Adventure, Xrossing Dice, 7 Zwerge e 5Chess), **zero jogos com engenharia integral concluída** e **zero originais emulados**.
+O registro de progresso `docs/research/deep/registry.json` mantém **cinco estudos parciais por método** (3D Adventure, Xrossing Dice, 7 Zwerge e 5Chess), **zero jogos com engenharia integral concluída** e **zero originais emulados**.
 
 ## Próxima fase tecnicamente necessária
 
