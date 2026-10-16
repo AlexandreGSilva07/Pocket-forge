@@ -9,10 +9,10 @@ Este repositório é uma super-skill para criar jogos modernos ultraleves. Nenhu
 4. [docs/INDEX.md](docs/INDEX.md) — referência completa de arquitetura, assets, arte, QA, harness e benchmarks.
 
 ## Estado de auditorias
-Há **300 JARs com SHA-256 distintos** registrados nos lotes 001–003. Começar pelo **lote 004**, desde que a branch main e o ledger confirmem esses números. A coleção tem 1.649 hashes distintos disponíveis, não necessariamente 1.649 títulos.
+A **auditoria sintética dos 1.649 JARs com hashes distintos está concluída**, em 17 PRs mesclados na main. Ver [relatório final](docs/research/STATIC_COMPLETE.md). Não repetir os 17 lotes: começar a engenharia reversa detalhada com análise real de código/algoritmos. 1.649 SHA-256 distintos não significam 1.649 títulos únicos.
 
-## Cada PR de auditoria deve
-- Incluir exatamente 100 JARs SHA-distintos (último pode conter menos), com nome/caminho JAR, SHA-256 completo, título do MIDlet e caminho JAD quando houver. Se não houver arquivo JAD, escrever **não encontrado**.
+## Para os PRs da fase DETALHADA (a próxima etapa)
+- Aproveitar os IDs e metadados já existentes em registry.json, sem reauditar o inventário. Manter um registro adicional do avanço detalhado por hash e classe/função.
 - Descrever análise estática versus análise profunda; não afirmar que o programa foi executado se apenas leu bytecode.
 - Alterar **código funcional do motor** com testes; jamais só gerar relatórios.
 - Integrar o componente em uma demonstração ou teste executável, avaliar regressões e medir benefícios antes de alegar ganho de desempenho.
