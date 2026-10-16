@@ -4,6 +4,12 @@ on:
     branches: [main]
     paths:
       - .github/workflows/deep-bytecode-88.yml
+  pull_request:
+    branches: [main]
+    paths:
+      - scripts/deep_bytecode_100.py
+      - scripts/run_deep88.py
+      - docs/research/deep/NEXT_88.md
   workflow_dispatch:
 permissions:
   contents: write
