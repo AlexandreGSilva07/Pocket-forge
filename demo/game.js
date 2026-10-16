@@ -11,6 +11,10 @@
   const bestLabel = $("best"), statusLabel = $("status"), cooldownLabel = $("cooldown");
   const reducedMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const TAU = Math.PI * 2;
+  const PF = window.PocketForgeCompact;
+  if (!PF) throw new Error("PocketForge compact renderer not loaded");
+  const TILE = 48, tileAtlas = PF.createTileAtlas(document, TILE);
+  let tileMap;
   const rand = (min, max) => min + Math.random() * (max - min);
   const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
   const distance = (a, b) => Math.hypot(a.x - b.x, a.y - b.y);
@@ -29,6 +33,10 @@
     dpr = Math.min(window.devicePixelRatio || 1, 2);
     canvas.width = Math.round(width * dpr); canvas.height = Math.round(height * dpr);
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    tileMap = PF.createTileMap(Math.ceil(width / TILE) + 1, Math.ceil(height / TILE) + 1, (x, y) => {
+      const variant = (x * 23 + y * 41 + x * y) % 17;
+      return variant === 0 ? 2 : variant === 7 ? 3 : 1;
+    });
     stars = Array.from({ length: Math.min(130, Math.floor(width * height / 5700)) }, () => ({
       x: rand(0, width), y: rand(0, height), size: rand(.5, 2.1), phase: rand(0, TAU)
     }));
@@ -218,12 +226,9 @@
     }
   }
   function drawGrid() {
-    ctx.strokeStyle = "rgba(80,126,167,.095)"; ctx.lineWidth = 1;
-    const size = 56, shift = (now * 3) % size;
-    ctx.beginPath();
-    for (let x = shift; x < width; x += size) { ctx.moveTo(x, 0); ctx.lineTo(x, height); }
-    for (let y = shift; y < height; y += size) { ctx.moveTo(0, y); ctx.lineTo(width, y); }
-    ctx.stroke();
+    ctx.save(); ctx.globalAlpha = .3;
+    PF.drawTileMap(ctx, tileAtlas, tileMap, { size: TILE, viewWidth: width, viewHeight: height });
+    ctx.restore();
     stars.forEach(s => {
       ctx.fillStyle = "rgba(163,217,255," + (.12 + Math.sin(now * 1.8 + s.phase) * .12) + ")";
       ctx.beginPath(); ctx.arc(s.x, s.y, s.size, 0, TAU); ctx.fill();
