@@ -1,0 +1,1056 @@
+{
+  "rank": 84,
+  "jar_path": "All Java Mobile Phone Games/I/Icy Pinball/Icy Pinball.jar",
+  "jar_sha256": "112eb7c3ba7733cfe74012acbf653b5fb4272a3bcbc7cbd1ef4c57f5d0db7c2b",
+  "title": "IcyPinball",
+  "track": "physics",
+  "status": "BYTECODE_DISASSEMBLED_INDEXED_NOT_FULLY_REVIEWED",
+  "tool": "OpenJDK javap -p -c; JAR never executed",
+  "classes": 8,
+  "classes_decoded": 8,
+  "methods": 77,
+  "instructions": 12153,
+  "branches": 764,
+  "errors": [],
+  "hot_methods_by_static_instruction_count": [
+    {
+      "class": "game.IcyPinball",
+      "signature": "public int run();",
+      "instructions": 2470,
+      "branches": 221,
+      "priority_score": 3133,
+      "calls": {
+        "java.util.Random.nextInt": 3
+      }
+    },
+    {
+      "class": "game.GameScreen",
+      "signature": "public void run();",
+      "instructions": 741,
+      "branches": 57,
+      "priority_score": 2394,
+      "calls": {
+        "java.lang.System.gc": 14,
+        "game.Store.loadHiscores": 2,
+        "game.IcyPinball.run": 1,
+        "game.Keyboard.run": 1,
+        "game.Store.entersHiscore": 1,
+        "game.Store.addHiscore": 1,
+        "game.Store.saveHiscores": 1,
+        "game.Game.quit": 1
+      }
+    },
+    {
+      "class": "game.IcyPinball",
+      "signature": "public game.IcyPinball(int, int, game.Key, int);",
+      "instructions": 2071,
+      "branches": 18,
+      "priority_score": 2125,
+      "calls": {
+        "java.lang.System.gc": 2
+      }
+    },
+    {
+      "class": "game.GameScreen",
+      "signature": "public void paint(javax.microedition.lcdui.Graphics);",
+      "instructions": 353,
+      "branches": 31,
+      "priority_score": 1152,
+      "calls": {
+        "game.Key.print": 8,
+        "game.Image2.draw": 6,
+        "java.lang.String.valueOf": 2,
+        "game.Image2.drawFrame": 2,
+        "javax.microedition.lcdui.Graphics.setColor": 1,
+        "javax.microedition.lcdui.Graphics.setClip": 1,
+        "javax.microedition.lcdui.Graphics.fillRect": 1,
+        "game.Keyboard.paint": 1,
+        "java.lang.String.concat": 1,
+        "game.Store.saveHiscores": 1,
+        "java.lang.System.gc": 1,
+        "game.IcyPinball.paint": 1
+      }
+    },
+    {
+      "class": "game.IcyPinball",
+      "signature": "public void paint(javax.microedition.lcdui.Graphics);",
+      "instructions": 955,
+      "branches": 65,
+      "priority_score": 1150,
+      "calls": {
+        "game.Image2.draw": 17,
+        "game.Image2.drawFrame": 12,
+        "java.lang.String.valueOf": 8,
+        "game.Key.print": 7,
+        "java.lang.String.concat": 4,
+        "javax.microedition.lcdui.Graphics.setClip": 3,
+        "javax.microedition.lcdui.Graphics.setColor": 1,
+        "javax.microedition.lcdui.Graphics.fillRect": 1
+      }
+    },
+    {
+      "class": "game.IcyPinball",
+      "signature": "private boolean move();",
+      "instructions": 723,
+      "branches": 44,
+      "priority_score": 855,
+      "calls": {
+        "game.Line.closestPointOnLine": 5,
+        "game.Line.slide": 2
+      }
+    },
+    {
+      "class": "game.IcyPinball",
+      "signature": "public void loadLevel(int);",
+      "instructions": 241,
+      "branches": 25,
+      "priority_score": 798,
+      "calls": {
+        "java.io.InputStream.read": 4,
+        "java.lang.StringBuffer.append": 2,
+        "java.lang.String.valueOf": 2,
+        "java.lang.Object.getClass": 1,
+        "java.lang.Class.getResourceAsStream": 1,
+        "java.io.InputStream.close": 1
+      }
+    },
+    {
+      "class": "game.IcyPinball",
+      "signature": "void checkFlippers();",
+      "instructions": 558,
+      "branches": 56,
+      "priority_score": 726,
+      "calls": {
+        "game.Line.leftTurn": 6,
+        "game.Line.rightTurn": 6
+      }
+    },
+    {
+      "class": "game.GameScreen",
+      "signature": "public game.GameScreen(game.Game);",
+      "instructions": 278,
+      "branches": 0,
+      "priority_score": 556,
+      "calls": {
+        "java.lang.Thread.start": 1
+      }
+    },
+    {
+      "class": "game.Keyboard",
+      "signature": "public void paint(javax.microedition.lcdui.Graphics);",
+      "instructions": 464,
+      "branches": 12,
+      "priority_score": 500,
+      "calls": {
+        "javax.microedition.lcdui.Graphics.drawLine": 8,
+        "game.Key.print": 5,
+        "java.lang.String.valueOf": 4,
+        "javax.microedition.lcdui.Graphics.setColor": 2,
+        "java.lang.String.concat": 2,
+        "game.Image2.draw": 1,
+        "javax.microedition.lcdui.Graphics.fillRect": 1,
+        "javax.microedition.lcdui.Graphics.setClip": 1
+      }
+    },
+    {
+      "class": "game.Key",
+      "signature": "public void print(javax.microedition.lcdui.Graphics, int, int, java.lang.String);",
+      "instructions": 175,
+      "branches": 24,
+      "priority_score": 422,
+      "calls": {
+        "java.lang.String.length": 1,
+        "java.lang.String.charAt": 1,
+        "javax.microedition.lcdui.Graphics.setClip": 1,
+        "javax.microedition.lcdui.Graphics.drawImage": 1
+      }
+    },
+    {
+      "class": "game.Line",
+      "signature": "public int closestPointOnLine(int, int);",
+      "instructions": 293,
+      "branches": 10,
+      "priority_score": 323,
+      "calls": {}
+    }
+  ],
+  "call_targets": [
+    {
+      "target": "java.lang.String.valueOf",
+      "count": 64
+    },
+    {
+      "target": "game.Image2.draw",
+      "count": 24
+    },
+    {
+      "target": "java.lang.String.concat",
+      "count": 23
+    },
+    {
+      "target": "game.Key.print",
+      "count": 20
+    },
+    {
+      "target": "java.lang.System.gc",
+      "count": 18
+    },
+    {
+      "target": "game.Image2.drawFrame",
+      "count": 14
+    },
+    {
+      "target": "java.lang.String.length",
+      "count": 12
+    },
+    {
+      "target": "game.Line.rightTurn",
+      "count": 9
+    },
+    {
+      "target": "game.Line.leftTurn",
+      "count": 9
+    },
+    {
+      "target": "javax.microedition.lcdui.Graphics.setClip",
+      "count": 8
+    },
+    {
+      "target": "javax.microedition.lcdui.Graphics.drawLine",
+      "count": 8
+    },
+    {
+      "target": "java.lang.StringBuffer.append",
+      "count": 6
+    },
+    {
+      "target": "java.lang.String.charAt",
+      "count": 6
+    },
+    {
+      "target": "java.util.Random.nextInt",
+      "count": 5
+    },
+    {
+      "target": "game.Line.closestPointOnLine",
+      "count": 5
+    },
+    {
+      "target": "javax.microedition.lcdui.Graphics.setColor",
+      "count": 4
+    },
+    {
+      "target": "java.io.InputStream.read",
+      "count": 4
+    },
+    {
+      "target": "java.lang.String.substring",
+      "count": 4
+    },
+    {
+      "target": "javax.microedition.lcdui.Graphics.fillRect",
+      "count": 3
+    },
+    {
+      "target": "javax.microedition.lcdui.Graphics.drawImage",
+      "count": 3
+    },
+    {
+      "target": "java.lang.String.equals",
+      "count": 3
+    },
+    {
+      "target": "javax.microedition.rms.RecordStore.enumerateRecords",
+      "count": 3
+    },
+    {
+      "target": "java.io.PrintStream.println",
+      "count": 3
+    },
+    {
+      "target": "javax.microedition.lcdui.Display.getDisplay",
+      "count": 2
+    },
+    {
+      "target": "game.Store.loadHiscores",
+      "count": 2
+    },
+    {
+      "target": "game.Store.saveHiscores",
+      "count": 2
+    },
+    {
+      "target": "game.Line.slide",
+      "count": 2
+    },
+    {
+      "target": "javax.microedition.lcdui.Image.createImage",
+      "count": 2
+    },
+    {
+      "target": "javax.microedition.rms.RecordEnumeration.hasNextElement",
+      "count": 2
+    },
+    {
+      "target": "javax.microedition.rms.RecordEnumeration.nextRecord",
+      "count": 2
+    },
+    {
+      "target": "java.lang.String.getBytes",
+      "count": 2
+    },
+    {
+      "target": "javax.microedition.lcdui.Display.getCurrent",
+      "count": 1
+    },
+    {
+      "target": "javax.microedition.lcdui.Display.setCurrent",
+      "count": 1
+    },
+    {
+      "target": "java.lang.Thread.start",
+      "count": 1
+    },
+    {
+      "target": "game.Key.keyPressed",
+      "count": 1
+    }
+  ],
+  "opcode_histogram": {
+    "aload_0": 2037,
+    "getfield": 1575,
+    "bipush": 892,
+    "putfield": 560,
+    "iload": 542,
+    "iconst_0": 532,
+    "iconst_1": 423,
+    "dup": 392,
+    "iastore": 318,
+    "invokevirtual": 283,
+    "iadd": 280,
+    "istore": 207,
+    "imul": 180,
+    "iload_1": 169,
+    "ifeq": 168,
+    "baload": 154,
+    "isub": 150,
+    "sipush": 149,
+    "iaload": 148,
+    "iload_2": 146,
+    "aload": 143,
+    "goto": 131,
+    "iconst_2": 130,
+    "ishl": 121,
+    "ldc": 118,
+    "aload_1": 117,
+    "ishr": 110,
+    "if_icmpne": 105,
+    "ifne": 103,
+    "iload_3": 95,
+    "invokespecial": 94,
+    "iconst_3": 93,
+    "invokestatic": 91,
+    "bastore": 91,
+    "if_icmpge": 89
+  },
+  "resource_file_count": 40,
+  "resources_by_suffix": {
+    ".mf": 1,
+    ".png": 34,
+    ".txt": 5
+  },
+  "class_methods": [
+    {
+      "class": "game.Game",
+      "method_count": 5,
+      "instructions": 25,
+      "branches": 0,
+      "methods": [
+        {
+          "signature": "public game.Game();",
+          "instructions": 3,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public void startApp();",
+          "instructions": 14,
+          "branches": 0,
+          "calls": {
+            "javax.microedition.lcdui.Display.getDisplay": 2,
+            "javax.microedition.lcdui.Display.getCurrent": 1,
+            "javax.microedition.lcdui.Display.setCurrent": 1
+          }
+        },
+        {
+          "signature": "public void pauseApp();",
+          "instructions": 1,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public void destroyApp(boolean);",
+          "instructions": 1,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public void quit();",
+          "instructions": 6,
+          "branches": 0,
+          "calls": {}
+        }
+      ]
+    },
+    {
+      "class": "game.GameScreen",
+      "method_count": 7,
+      "instructions": 1425,
+      "branches": 89,
+      "methods": [
+        {
+          "signature": "public game.GameScreen(game.Game);",
+          "instructions": 278,
+          "branches": 0,
+          "calls": {
+            "java.lang.Thread.start": 1
+          }
+        },
+        {
+          "signature": "public void keyPressed(int);",
+          "instructions": 5,
+          "branches": 0,
+          "calls": {
+            "game.Key.keyPressed": 1
+          }
+        },
+        {
+          "signature": "public void keyReleased(int);",
+          "instructions": 5,
+          "branches": 0,
+          "calls": {
+            "game.Key.keyReleased": 1
+          }
+        },
+        {
+          "signature": "void loadMenuGFX();",
+          "instructions": 37,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public void run();",
+          "instructions": 741,
+          "branches": 57,
+          "calls": {
+            "java.lang.System.gc": 14,
+            "game.Store.loadHiscores": 2,
+            "game.IcyPinball.run": 1,
+            "game.Keyboard.run": 1,
+            "game.Store.entersHiscore": 1,
+            "game.Store.addHiscore": 1,
+            "game.Store.saveHiscores": 1,
+            "game.Game.quit": 1
+          }
+        },
+        {
+          "signature": "public void paint(javax.microedition.lcdui.Graphics);",
+          "instructions": 353,
+          "branches": 31,
+          "calls": {
+            "game.Key.print": 8,
+            "game.Image2.draw": 6,
+            "java.lang.String.valueOf": 2,
+            "game.Image2.drawFrame": 2,
+            "javax.microedition.lcdui.Graphics.setColor": 1,
+            "javax.microedition.lcdui.Graphics.setClip": 1,
+            "javax.microedition.lcdui.Graphics.fillRect": 1,
+            "game.Keyboard.paint": 1
+          }
+        },
+        {
+          "signature": "void sleep(int);",
+          "instructions": 6,
+          "branches": 1,
+          "calls": {
+            "java.lang.Thread.sleep": 1
+          }
+        }
+      ]
+    },
+    {
+      "class": "game.IcyPinball",
+      "method_count": 20,
+      "instructions": 7722,
+      "branches": 467,
+      "methods": [
+        {
+          "signature": "public game.IcyPinball(int, int, game.Key, int);",
+          "instructions": 2071,
+          "branches": 18,
+          "calls": {
+            "java.lang.System.gc": 2
+          }
+        },
+        {
+          "signature": "private void addBall();",
+          "instructions": 70,
+          "branches": 6,
+          "calls": {}
+        },
+        {
+          "signature": "public int run();",
+          "instructions": 2470,
+          "branches": 221,
+          "calls": {
+            "java.util.Random.nextInt": 3
+          }
+        },
+        {
+          "signature": "public void paint(javax.microedition.lcdui.Graphics);",
+          "instructions": 955,
+          "branches": 65,
+          "calls": {
+            "game.Image2.draw": 17,
+            "game.Image2.drawFrame": 12,
+            "java.lang.String.valueOf": 8,
+            "game.Key.print": 7,
+            "java.lang.String.concat": 4,
+            "javax.microedition.lcdui.Graphics.setClip": 3,
+            "javax.microedition.lcdui.Graphics.setColor": 1,
+            "javax.microedition.lcdui.Graphics.fillRect": 1
+          }
+        },
+        {
+          "signature": "int abs(int);",
+          "instructions": 7,
+          "branches": 1,
+          "calls": {}
+        },
+        {
+          "signature": "void newYeti();",
+          "instructions": 145,
+          "branches": 4,
+          "calls": {
+            "java.util.Random.nextInt": 2
+          }
+        },
+        {
+          "signature": "void checkBumperBug(int);",
+          "instructions": 68,
+          "branches": 3,
+          "calls": {}
+        },
+        {
+          "signature": "void setFlipper(int, boolean, int, int, int, int, int, int, int, int, int, int);",
+          "instructions": 147,
+          "branches": 1,
+          "calls": {}
+        },
+        {
+          "signature": "boolean inTriangleClockwise(game.Line, game.Line, game.Line, int, int);",
+          "instructions": 19,
+          "branches": 3,
+          "calls": {
+            "game.Line.rightTurn": 3
+          }
+        },
+        {
+          "signature": "boolean inTriangleCounterClockwise(game.Line, game.Line, game.Line, int, int);",
+          "instructions": 19,
+          "branches": 3,
+          "calls": {
+            "game.Line.leftTurn": 3
+          }
+        },
+        {
+          "signature": "void checkFlippers();",
+          "instructions": 558,
+          "branches": 56,
+          "calls": {
+            "game.Line.leftTurn": 6,
+            "game.Line.rightTurn": 6
+          }
+        },
+        {
+          "signature": "int min(int, int);",
+          "instructions": 7,
+          "branches": 1,
+          "calls": {}
+        },
+        {
+          "signature": "int max(int, int);",
+          "instructions": 7,
+          "branches": 1,
+          "calls": {}
+        },
+        {
+          "signature": "private boolean move();",
+          "instructions": 723,
+          "branches": 44,
+          "calls": {
+            "game.Line.closestPointOnLine": 5,
+            "game.Line.slide": 2
+          }
+        },
+        {
+          "signature": "boolean cross(int, int, int, int, int, int, int, int);",
+          "instructions": 52,
+          "branches": 8,
+          "calls": {}
+        },
+        {
+          "signature": "private void add(int, int, boolean, int);",
+          "instructions": 105,
+          "branches": 7,
+          "calls": {}
+        },
+        {
+          "signature": "void swapLightsRight();",
+          "instructions": 27,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "void swapLightsLeft();",
+          "instructions": 27,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public void loadLevel(int);",
+          "instructions": 241,
+          "branches": 25,
+          "calls": {
+            "java.io.InputStream.read": 4,
+            "java.lang.StringBuffer.append": 2,
+            "java.lang.String.valueOf": 2,
+            "java.lang.Object.getClass": 1,
+            "java.lang.Class.getResourceAsStream": 1,
+            "java.io.InputStream.close": 1
+          }
+        },
+        {
+          "signature": "void vibr(int, int);",
+          "instructions": 4,
+          "branches": 0,
+          "calls": {}
+        }
+      ]
+    },
+    {
+      "class": "game.Image2",
+      "method_count": 6,
+      "instructions": 295,
+      "branches": 13,
+      "methods": [
+        {
+          "signature": "public game.Image2(java.lang.String, int, int, boolean);",
+          "instructions": 50,
+          "branches": 1,
+          "calls": {}
+        },
+        {
+          "signature": "public game.Image2(java.lang.String, int, int, boolean, int, int);",
+          "instructions": 56,
+          "branches": 1,
+          "calls": {}
+        },
+        {
+          "signature": "private boolean load();",
+          "instructions": 40,
+          "branches": 1,
+          "calls": {
+            "javax.microedition.lcdui.Image.createImage": 1,
+            "javax.microedition.lcdui.Image.getWidth": 1,
+            "javax.microedition.lcdui.Image.getHeight": 1
+          }
+        },
+        {
+          "signature": "public void draw(javax.microedition.lcdui.Graphics, int, int, int);",
+          "instructions": 43,
+          "branches": 4,
+          "calls": {}
+        },
+        {
+          "signature": "public void draw(javax.microedition.lcdui.Graphics, int, int);",
+          "instructions": 54,
+          "branches": 3,
+          "calls": {
+            "javax.microedition.lcdui.Graphics.setClip": 1,
+            "javax.microedition.lcdui.Graphics.drawImage": 1
+          }
+        },
+        {
+          "signature": "public void drawFrame(javax.microedition.lcdui.Graphics, int, int, int);",
+          "instructions": 52,
+          "branches": 3,
+          "calls": {
+            "javax.microedition.lcdui.Graphics.setClip": 1,
+            "javax.microedition.lcdui.Graphics.drawImage": 1
+          }
+        }
+      ]
+    },
+    {
+      "class": "game.Key",
+      "method_count": 9,
+      "instructions": 514,
+      "branches": 52,
+      "methods": [
+        {
+          "signature": "public game.Key(int, int);",
+          "instructions": 95,
+          "branches": 3,
+          "calls": {
+            "javax.microedition.lcdui.Image.createImage": 1
+          }
+        },
+        {
+          "signature": "public void keyPressed(int);",
+          "instructions": 84,
+          "branches": 12,
+          "calls": {}
+        },
+        {
+          "signature": "public void keyReleased(int);",
+          "instructions": 53,
+          "branches": 9,
+          "calls": {}
+        },
+        {
+          "signature": "private int length(java.lang.String);",
+          "instructions": 5,
+          "branches": 0,
+          "calls": {
+            "java.lang.String.length": 1
+          }
+        },
+        {
+          "signature": "public void print(javax.microedition.lcdui.Graphics, int, int, java.lang.String);",
+          "instructions": 175,
+          "branches": 24,
+          "calls": {
+            "java.lang.String.length": 1,
+            "java.lang.String.charAt": 1,
+            "javax.microedition.lcdui.Graphics.setClip": 1,
+            "javax.microedition.lcdui.Graphics.drawImage": 1
+          }
+        },
+        {
+          "signature": "public void printMiddle(javax.microedition.lcdui.Graphics, int, java.lang.String);",
+          "instructions": 17,
+          "branches": 0,
+          "calls": {
+            "java.lang.String.length": 1
+          }
+        },
+        {
+          "signature": "public void print(javax.microedition.lcdui.Graphics, java.lang.String[], int);",
+          "instructions": 33,
+          "branches": 2,
+          "calls": {}
+        },
+        {
+          "signature": "public void print(javax.microedition.lcdui.Graphics, java.lang.String[]);",
+          "instructions": 6,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public void print(javax.microedition.lcdui.Graphics, int, int, java.lang.String, int);",
+          "instructions": 46,
+          "branches": 2,
+          "calls": {}
+        }
+      ]
+    },
+    {
+      "class": "game.Keyboard",
+      "method_count": 3,
+      "instructions": 698,
+      "branches": 32,
+      "methods": [
+        {
+          "signature": "public game.Keyboard(int, int, int, int, int, int, int, int, game.Key, java.lang.String, int);",
+          "instructions": 58,
+          "branches": 1,
+          "calls": {
+            "java.lang.String.equals": 1
+          }
+        },
+        {
+          "signature": "boolean run();",
+          "instructions": 176,
+          "branches": 19,
+          "calls": {
+            "java.lang.String.valueOf": 6,
+            "java.lang.String.length": 3,
+            "java.lang.String.concat": 2,
+            "java.lang.String.substring": 1
+          }
+        },
+        {
+          "signature": "public void paint(javax.microedition.lcdui.Graphics);",
+          "instructions": 464,
+          "branches": 12,
+          "calls": {
+            "javax.microedition.lcdui.Graphics.drawLine": 8,
+            "game.Key.print": 5,
+            "java.lang.String.valueOf": 4,
+            "javax.microedition.lcdui.Graphics.setColor": 2,
+            "java.lang.String.concat": 2,
+            "game.Image2.draw": 1,
+            "javax.microedition.lcdui.Graphics.fillRect": 1,
+            "javax.microedition.lcdui.Graphics.setClip": 1
+          }
+        }
+      ]
+    },
+    {
+      "class": "game.Line",
+      "method_count": 7,
+      "instructions": 615,
+      "branches": 23,
+      "methods": [
+        {
+          "signature": "public game.Line(int, int, int, int, boolean, int);",
+          "instructions": 54,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public boolean rightTurn(int, int);",
+          "instructions": 26,
+          "branches": 1,
+          "calls": {}
+        },
+        {
+          "signature": "public boolean leftTurn(int, int);",
+          "instructions": 26,
+          "branches": 1,
+          "calls": {}
+        },
+        {
+          "signature": "private int dot(int, int, int, int);",
+          "instructions": 18,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public int closestPointOnLine(int, int);",
+          "instructions": 293,
+          "branches": 10,
+          "calls": {}
+        },
+        {
+          "signature": "public void slide(int, int);",
+          "instructions": 135,
+          "branches": 3,
+          "calls": {}
+        },
+        {
+          "signature": "public int sqrt(int);",
+          "instructions": 63,
+          "branches": 8,
+          "calls": {}
+        }
+      ]
+    },
+    {
+      "class": "game.Store",
+      "method_count": 20,
+      "instructions": 859,
+      "branches": 88,
+      "methods": [
+        {
+          "signature": "public game.Store(java.lang.String);",
+          "instructions": 40,
+          "branches": 2,
+          "calls": {}
+        },
+        {
+          "signature": "private boolean matchTag(java.lang.String, java.lang.String);",
+          "instructions": 14,
+          "branches": 1,
+          "calls": {
+            "java.lang.String.length": 1,
+            "java.lang.String.substring": 1,
+            "java.lang.String.equals": 1
+          }
+        },
+        {
+          "signature": "private boolean exactMatchTag(java.lang.String, java.lang.String);",
+          "instructions": 21,
+          "branches": 2,
+          "calls": {
+            "java.lang.String.length": 2,
+            "java.lang.String.substring": 1,
+            "java.lang.String.equals": 1,
+            "java.lang.String.charAt": 1
+          }
+        },
+        {
+          "signature": "private java.lang.String tkwTag(java.lang.String);",
+          "instructions": 20,
+          "branches": 2,
+          "calls": {
+            "java.lang.String.charAt": 1,
+            "java.lang.String.length": 1,
+            "java.lang.String.substring": 1
+          }
+        },
+        {
+          "signature": "public java.lang.String[] getRecords(java.lang.String);",
+          "instructions": 103,
+          "branches": 11,
+          "calls": {
+            "java.lang.String.valueOf": 4,
+            "javax.microedition.rms.RecordStore.enumerateRecords": 1,
+            "javax.microedition.rms.RecordEnumeration.hasNextElement": 1,
+            "javax.microedition.rms.RecordEnumeration.nextRecord": 1,
+            "java.lang.String.concat": 1,
+            "java.lang.System.gc": 1
+          }
+        },
+        {
+          "signature": "public java.lang.String[] getRecord(java.lang.String);",
+          "instructions": 114,
+          "branches": 15,
+          "calls": {
+            "java.lang.String.valueOf": 8,
+            "java.lang.String.concat": 2,
+            "javax.microedition.rms.RecordStore.getRecord": 1
+          }
+        },
+        {
+          "signature": "private int getRecordID(java.lang.String);",
+          "instructions": 67,
+          "branches": 6,
+          "calls": {
+            "java.lang.String.valueOf": 4,
+            "javax.microedition.rms.RecordStore.enumerateRecords": 2,
+            "javax.microedition.rms.RecordEnumeration.hasNextElement": 1,
+            "javax.microedition.rms.RecordEnumeration.nextRecord": 1,
+            "javax.microedition.rms.RecordEnumeration.nextRecordId": 1,
+            "java.lang.String.concat": 1
+          }
+        },
+        {
+          "signature": "public void saveRecord(java.lang.String, java.lang.String[]);",
+          "instructions": 69,
+          "branches": 7,
+          "calls": {
+            "java.lang.String.valueOf": 6,
+            "java.lang.String.concat": 2,
+            "java.lang.String.getBytes": 2,
+            "javax.microedition.rms.RecordStore.setRecord": 1,
+            "javax.microedition.rms.RecordStore.addRecord": 1,
+            "java.io.PrintStream.println": 1
+          }
+        },
+        {
+          "signature": "public void deleteRecord(java.lang.String);",
+          "instructions": 26,
+          "branches": 4,
+          "calls": {
+            "javax.microedition.rms.RecordStore.deleteRecord": 1,
+            "java.io.PrintStream.println": 1
+          }
+        },
+        {
+          "signature": "public static int multiLength(java.lang.String);",
+          "instructions": 25,
+          "branches": 4,
+          "calls": {
+            "java.lang.String.length": 1,
+            "java.lang.String.charAt": 1
+          }
+        },
+        {
+          "signature": "public static java.lang.String[] multi(java.lang.String);",
+          "instructions": 51,
+          "branches": 6,
+          "calls": {
+            "java.lang.String.valueOf": 4,
+            "java.lang.String.charAt": 2,
+            "java.lang.String.length": 1,
+            "java.lang.String.concat": 1
+          }
+        },
+        {
+          "signature": "public void loadHiscores();",
+          "instructions": 109,
+          "branches": 10,
+          "calls": {
+            "java.lang.String.valueOf": 8,
+            "java.lang.String.concat": 4,
+            "java.lang.Integer.parseInt": 1
+          }
+        },
+        {
+          "signature": "public void saveHiscores();",
+          "instructions": 40,
+          "branches": 3,
+          "calls": {
+            "java.lang.String.valueOf": 6,
+            "java.lang.String.concat": 3
+          }
+        },
+        {
+          "signature": "public boolean entersHiscore(int);",
+          "instructions": 15,
+          "branches": 2,
+          "calls": {}
+        },
+        {
+          "signature": "public void addHiscore(java.lang.String, int);",
+          "instructions": 64,
+          "branches": 7,
+          "calls": {}
+        },
+        {
+          "signature": "public void flushHiScores();",
+          "instructions": 35,
+          "branches": 3,
+          "calls": {
+            "java.lang.StringBuffer.append": 4,
+            "java.lang.String.valueOf": 2,
+            "java.io.PrintStream.println": 1
+          }
+        },
+        {
+          "signature": "static void kill(java.lang.String);",
+          "instructions": 5,
+          "branches": 1,
+          "calls": {
+            "javax.microedition.rms.RecordStore.deleteRecordStore": 1
+          }
+        },
+        {
+          "signature": "public void saveRecord(java.lang.String, java.lang.String);",
+          "instructions": 12,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "private boolean openRecStore();",
+          "instructions": 16,
+          "branches": 0,
+          "calls": {
+            "javax.microedition.rms.RecordStore.openRecordStore": 1
+          }
+        },
+        {
+          "signature": "private void closeRecStore();",
+          "instructions": 13,
+          "branches": 2,
+          "calls": {
+            "javax.microedition.rms.RecordStore.closeRecordStore": 1
+          }
+        }
+      ]
+    }
+  ],
+  "limitation": "Static method inspection, no game execution, no proof of hot paths or semantic equivalence."
+}

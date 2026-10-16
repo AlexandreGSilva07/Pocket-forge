@@ -1,0 +1,1268 @@
+{
+  "rank": 53,
+  "jar_path": "828 Java Games/ChessPuzzle.jar",
+  "jar_sha256": "41516940885040bb8b551818f02d588af2fff7220b63c4a1e2f47ba6f83c5011",
+  "title": "Chess Puzzle",
+  "track": "strategy",
+  "status": "BYTECODE_DISASSEMBLED_INDEXED_NOT_FULLY_REVIEWED",
+  "tool": "OpenJDK javap -p -c; JAR never executed",
+  "classes": 9,
+  "classes_decoded": 8,
+  "methods": 84,
+  "instructions": 5484,
+  "branches": 331,
+  "errors": [
+    {
+      "class_file": "com/nokia/mid/appl/chep/PieceTypes.class",
+      "reason": "no method signatures detected (obfuscated/invalid class?)"
+    }
+  ],
+  "hot_methods_by_static_instruction_count": [
+    {
+      "class": "com.nokia.mid.appl.chep.ChessBoard",
+      "signature": "private int MakeBoard(int, int, int, int[]);",
+      "instructions": 223,
+      "branches": 13,
+      "priority_score": 708,
+      "calls": {
+        "java.io.InputStream.read": 4,
+        "java.io.InputStream.skip": 2,
+        "java.io.PrintStream.println": 2,
+        "java.lang.Object.getClass": 1,
+        "java.lang.Class.getResourceAsStream": 1,
+        "java.lang.Throwable.toString": 1,
+        "java.io.InputStream.close": 1
+      }
+    },
+    {
+      "class": "com.nokia.mid.appl.chep.ChessPuzzleMidlet",
+      "signature": "public void commandAction(javax.microedition.lcdui.Command, javax.microedition.lcdui.Displayable);",
+      "instructions": 461,
+      "branches": 38,
+      "priority_score": 575,
+      "calls": {
+        "javax.microedition.lcdui.List.getSelectedIndex": 10,
+        "com.nokia.mid.appl.chep.Local.getText": 8,
+        "javax.microedition.lcdui.Command.getCommandType": 5,
+        "javax.microedition.lcdui.List.getString": 3,
+        "com.nokia.mid.appl.chep.ChessRMS.ManageScoreRecord": 1
+      }
+    },
+    {
+      "class": "com.nokia.mid.appl.chep.Local",
+      "signature": "public static synchronized java.lang.String getText(int, java.lang.String[]);",
+      "instructions": 107,
+      "branches": 8,
+      "priority_score": 452,
+      "calls": {
+        "java.lang.StringBuffer.append": 5,
+        "java.lang.Object.getClass": 2,
+        "java.lang.StringBuffer.toString": 2,
+        "java.lang.Class.getResourceAsStream": 2,
+        "java.io.DataInputStream.skipBytes": 2,
+        "java.io.DataInputStream.readShort": 1,
+        "java.io.DataInputStream.readUTF": 1,
+        "java.io.DataInputStream.close": 1,
+        "java.lang.System.getProperty": 1
+      }
+    },
+    {
+      "class": "com.nokia.mid.appl.chep.ChessRMS",
+      "signature": "public void ManageScoreRecord(int, int, java.lang.String, com.nokia.mid.appl.chep.HighScores[]);",
+      "instructions": 126,
+      "branches": 9,
+      "priority_score": 405,
+      "calls": {
+        "java.io.DataOutputStream.writeInt": 2,
+        "java.io.DataOutputStream.writeUTF": 2,
+        "java.io.DataOutputStream.flush": 2,
+        "java.io.ByteArrayOutputStream.toByteArray": 2,
+        "java.io.ByteArrayOutputStream.reset": 2,
+        "javax.microedition.rms.RecordStore.openRecordStore": 1,
+        "javax.microedition.rms.RecordStore.getNumRecords": 1,
+        "javax.microedition.rms.RecordStore.addRecord": 1,
+        "javax.microedition.rms.RecordStore.setRecord": 1,
+        "javax.microedition.rms.RecordStore.getRecord": 1,
+        "java.io.DataInputStream.readInt": 1,
+        "java.io.DataInputStream.readUTF": 1,
+        "java.io.DataInputStream.reset": 1,
+        "javax.microedition.rms.RecordStore.closeRecordStore": 1,
+        "java.io.PrintStream.println": 1
+      }
+    },
+    {
+      "class": "com.nokia.mid.appl.chep.ChessPuzzleMidlet",
+      "signature": "protected void PuzzleKeyPressed(int);",
+      "instructions": 162,
+      "branches": 21,
+      "priority_score": 387,
+      "calls": {
+        "javax.microedition.lcdui.Canvas.getGameAction": 5,
+        "com.nokia.mid.appl.chep.ChessBoard.IsBoardLoaded": 1,
+        "com.nokia.mid.appl.chep.Local.getText": 1,
+        "javax.microedition.lcdui.Canvas.repaint": 1
+      }
+    },
+    {
+      "class": "com.nokia.mid.appl.chep.ChessRMS",
+      "signature": "public void ManagePuzzleRecord(boolean, int, int, int, int, int, int);",
+      "instructions": 178,
+      "branches": 10,
+      "priority_score": 386,
+      "calls": {
+        "java.io.DataOutputStream.writeInt": 14,
+        "java.io.DataInputStream.readInt": 6,
+        "java.io.DataOutputStream.flush": 2,
+        "java.io.ByteArrayOutputStream.toByteArray": 2,
+        "java.io.ByteArrayOutputStream.reset": 2,
+        "javax.microedition.rms.RecordStore.openRecordStore": 1,
+        "javax.microedition.rms.RecordStore.addRecord": 1,
+        "javax.microedition.rms.RecordStore.enumerateRecords": 1,
+        "javax.microedition.rms.RecordEnumeration.nextRecordId": 1,
+        "javax.microedition.rms.RecordStore.getRecord": 1,
+        "javax.microedition.rms.RecordStore.setRecord": 1,
+        "java.io.DataInputStream.reset": 1,
+        "javax.microedition.rms.RecordEnumeration.hasNextElement": 1,
+        "javax.microedition.rms.RecordStore.closeRecordStore": 1,
+        "java.io.PrintStream.println": 1
+      }
+    },
+    {
+      "class": "com.nokia.mid.appl.chep.ChessBoard",
+      "signature": "public void StorePuzzleHeader();",
+      "instructions": 116,
+      "branches": 10,
+      "priority_score": 378,
+      "calls": {
+        "java.io.InputStream.read": 3,
+        "com.nokia.mid.appl.chep.ChessRMS.ManagePuzzleRecord": 2,
+        "java.lang.Object.getClass": 1,
+        "java.lang.Class.getResourceAsStream": 1,
+        "com.nokia.mid.appl.chep.ChessRMS.GetPuzzleRecordCount": 1,
+        "com.nokia.mid.appl.chep.ChessRMS.DeleteChessStore": 1,
+        "com.nokia.mid.appl.chep.ChessRMS.GetPuzzleRecord": 1,
+        "java.io.InputStream.close": 1,
+        "java.lang.Throwable.toString": 1,
+        "java.io.PrintStream.println": 1
+      }
+    },
+    {
+      "class": "com.nokia.mid.appl.chep.ChessBoard",
+      "signature": "public com.nokia.mid.appl.chep.ChessBoard(com.nokia.mid.appl.chep.ChessRMS);",
+      "instructions": 298,
+      "branches": 0,
+      "priority_score": 298,
+      "calls": {}
+    },
+    {
+      "class": "com.nokia.mid.appl.chep.ChessPuzzleMidlet",
+      "signature": "private void MainMenuScreenDone(int);",
+      "instructions": 232,
+      "branches": 17,
+      "priority_score": 283,
+      "calls": {
+        "com.nokia.mid.appl.chep.Local.getText": 6,
+        "java.lang.StringBuffer.append": 2,
+        "javax.microedition.lcdui.Display.setCurrent": 1,
+        "java.lang.StringBuffer.toString": 1,
+        "java.lang.String.concat": 1
+      }
+    },
+    {
+      "class": "com.nokia.mid.appl.chep.ChessPuzzleMidlet",
+      "signature": "protected void PaintPuzzleScr(javax.microedition.lcdui.Graphics);",
+      "instructions": 217,
+      "branches": 18,
+      "priority_score": 271,
+      "calls": {
+        "javax.microedition.lcdui.Graphics.setColor": 3,
+        "javax.microedition.lcdui.Graphics.drawRect": 2,
+        "javax.microedition.lcdui.Displayable.isShown": 1,
+        "javax.microedition.lcdui.Font.getDefaultFont": 1
+      }
+    },
+    {
+      "class": "com.nokia.mid.appl.chep.ChessPuzzleMidlet",
+      "signature": "private void InitMenuScr(int, int[], java.lang.String, java.lang.String, java.lang.String, int);",
+      "instructions": 182,
+      "branches": 19,
+      "priority_score": 239,
+      "calls": {
+        "com.nokia.mid.appl.chep.Local.getText": 3,
+        "javax.microedition.lcdui.List.append": 3,
+        "javax.microedition.lcdui.Displayable.removeCommand": 2,
+        "javax.microedition.lcdui.Display.setCurrent": 2,
+        "javax.microedition.lcdui.Displayable.addCommand": 2,
+        "javax.microedition.lcdui.Alert.setTimeout": 1,
+        "javax.microedition.lcdui.List.setSelectedIndex": 1,
+        "javax.microedition.lcdui.Displayable.setCommandListener": 1,
+        "javax.microedition.lcdui.Screen.setTitle": 1
+      }
+    },
+    {
+      "class": "com.nokia.mid.appl.chep.ChessRMS",
+      "signature": "public void ManageUserSettings(int, int, int, int, int);",
+      "instructions": 112,
+      "branches": 5,
+      "priority_score": 239,
+      "calls": {
+        "java.io.DataInputStream.readInt": 5,
+        "java.io.DataOutputStream.writeInt": 5,
+        "javax.microedition.rms.RecordStore.getNumRecords": 2,
+        "javax.microedition.rms.RecordStore.closeRecordStore": 2,
+        "javax.microedition.rms.RecordStore.openRecordStore": 1,
+        "javax.microedition.rms.RecordStore.getRecord": 1,
+        "java.io.DataInputStream.reset": 1,
+        "java.io.DataOutputStream.flush": 1,
+        "java.io.ByteArrayOutputStream.toByteArray": 1,
+        "javax.microedition.rms.RecordStore.addRecord": 1,
+        "javax.microedition.rms.RecordStore.setRecord": 1,
+        "java.io.ByteArrayOutputStream.reset": 1,
+        "java.io.PrintStream.println": 1
+      }
+    }
+  ],
+  "call_targets": [
+    {
+      "target": "com.nokia.mid.appl.chep.Local.getText",
+      "count": 34
+    },
+    {
+      "target": "java.lang.StringBuffer.append",
+      "count": 26
+    },
+    {
+      "target": "javax.microedition.lcdui.Graphics.setColor",
+      "count": 23
+    },
+    {
+      "target": "java.io.DataOutputStream.writeInt",
+      "count": 21
+    },
+    {
+      "target": "java.io.DataInputStream.readInt",
+      "count": 19
+    },
+    {
+      "target": "java.lang.StringBuffer.toString",
+      "count": 11
+    },
+    {
+      "target": "javax.microedition.lcdui.List.getSelectedIndex",
+      "count": 10
+    },
+    {
+      "target": "javax.microedition.lcdui.Font.stringWidth",
+      "count": 10
+    },
+    {
+      "target": "java.io.PrintStream.println",
+      "count": 9
+    },
+    {
+      "target": "javax.microedition.lcdui.Graphics.drawImage",
+      "count": 9
+    },
+    {
+      "target": "javax.microedition.lcdui.Graphics.fillRect",
+      "count": 9
+    },
+    {
+      "target": "javax.microedition.lcdui.Graphics.drawString",
+      "count": 8
+    },
+    {
+      "target": "java.io.InputStream.read",
+      "count": 7
+    },
+    {
+      "target": "javax.microedition.lcdui.Display.setCurrent",
+      "count": 7
+    },
+    {
+      "target": "javax.microedition.rms.RecordStore.closeRecordStore",
+      "count": 7
+    },
+    {
+      "target": "javax.microedition.lcdui.Graphics.drawRect",
+      "count": 6
+    },
+    {
+      "target": "javax.microedition.rms.RecordStore.openRecordStore",
+      "count": 6
+    },
+    {
+      "target": "javax.microedition.lcdui.Command.getCommandType",
+      "count": 5
+    },
+    {
+      "target": "javax.microedition.lcdui.Font.getFont",
+      "count": 5
+    },
+    {
+      "target": "javax.microedition.lcdui.Graphics.setFont",
+      "count": 5
+    },
+    {
+      "target": "javax.microedition.lcdui.Canvas.getGameAction",
+      "count": 5
+    },
+    {
+      "target": "javax.microedition.lcdui.Canvas.repaint",
+      "count": 5
+    },
+    {
+      "target": "javax.microedition.lcdui.Font.getHeight",
+      "count": 5
+    },
+    {
+      "target": "javax.microedition.rms.RecordStore.getNumRecords",
+      "count": 5
+    },
+    {
+      "target": "javax.microedition.rms.RecordStore.getRecord",
+      "count": 5
+    },
+    {
+      "target": "java.io.DataInputStream.reset",
+      "count": 5
+    },
+    {
+      "target": "java.io.DataOutputStream.flush",
+      "count": 5
+    },
+    {
+      "target": "java.io.ByteArrayOutputStream.toByteArray",
+      "count": 5
+    },
+    {
+      "target": "java.io.ByteArrayOutputStream.reset",
+      "count": 5
+    },
+    {
+      "target": "java.lang.Object.getClass",
+      "count": 4
+    },
+    {
+      "target": "java.lang.Class.getResourceAsStream",
+      "count": 4
+    },
+    {
+      "target": "com.nokia.mid.appl.chep.ChessRMS.ManagePuzzleRecord",
+      "count": 4
+    },
+    {
+      "target": "com.nokia.mid.appl.chep.ChessRMS.ManageScoreRecord",
+      "count": 4
+    },
+    {
+      "target": "javax.microedition.lcdui.Image.createImage",
+      "count": 4
+    },
+    {
+      "target": "javax.microedition.lcdui.Displayable.removeCommand",
+      "count": 4
+    }
+  ],
+  "opcode_histogram": {
+    "aload_0": 1052,
+    "getfield": 702,
+    "invokevirtual": 370,
+    "putfield": 292,
+    "bipush": 262,
+    "iconst_0": 228,
+    "iconst_1": 164,
+    "dup": 154,
+    "iload": 154,
+    "invokespecial": 146,
+    "iconst_2": 92,
+    "aload_1": 91,
+    "iadd": 89,
+    "if_icmpne": 88,
+    "return": 87,
+    "aload": 83,
+    "iload_1": 74,
+    "goto": 72,
+    "istore": 70,
+    "ldc": 61,
+    "invokestatic": 61,
+    "new": 56,
+    "ifeq": 49,
+    "isub": 49,
+    "iload_2": 48,
+    "astore": 48,
+    "iastore": 47,
+    "aconst_null": 42,
+    "aload_3": 41,
+    "iconst_4": 34,
+    "ireturn": 32,
+    "iconst_3": 31,
+    "aload_2": 31,
+    "idiv": 30,
+    "aastore": 29
+  },
+  "resource_file_count": 7,
+  "resources_by_suffix": {
+    ".mf": 1,
+    ".bin": 1,
+    ".png": 4,
+    ".xx": 1
+  },
+  "class_methods": [
+    {
+      "class": "com.nokia.mid.appl.chep.ChessBoard",
+      "source_mode": "jar_classpath",
+      "method_count": 13,
+      "instructions": 851,
+      "branches": 31,
+      "methods": [
+        {
+          "signature": "public com.nokia.mid.appl.chep.ChessBoard(com.nokia.mid.appl.chep.ChessRMS);",
+          "instructions": 298,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public void NextPuzzle(int);",
+          "instructions": 42,
+          "branches": 1,
+          "calls": {}
+        },
+        {
+          "signature": "public boolean IsSquareWhite(int);",
+          "instructions": 30,
+          "branches": 4,
+          "calls": {}
+        },
+        {
+          "signature": "public int GetRow(int);",
+          "instructions": 4,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public int GetColumn(int);",
+          "instructions": 4,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public void StorePuzzleHeader();",
+          "instructions": 116,
+          "branches": 10,
+          "calls": {
+            "java.io.InputStream.read": 3,
+            "com.nokia.mid.appl.chep.ChessRMS.ManagePuzzleRecord": 2,
+            "java.lang.Object.getClass": 1,
+            "java.lang.Class.getResourceAsStream": 1,
+            "com.nokia.mid.appl.chep.ChessRMS.GetPuzzleRecordCount": 1,
+            "com.nokia.mid.appl.chep.ChessRMS.DeleteChessStore": 1,
+            "com.nokia.mid.appl.chep.ChessRMS.GetPuzzleRecord": 1,
+            "java.io.InputStream.close": 1
+          }
+        },
+        {
+          "signature": "private int ConvertByteToInt(byte[]);",
+          "instructions": 44,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "private int UnsignedByteToInt(byte);",
+          "instructions": 4,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "private void SetBoardLoadState(boolean);",
+          "instructions": 4,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public boolean IsBoardLoaded();",
+          "instructions": 3,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "private void ReadPuzzle();",
+          "instructions": 33,
+          "branches": 0,
+          "calls": {
+            "com.nokia.mid.appl.chep.ChessRMS.GetPuzzleRecord": 1
+          }
+        },
+        {
+          "signature": "private int MakeBoard(int, int, int, int[]);",
+          "instructions": 223,
+          "branches": 13,
+          "calls": {
+            "java.io.InputStream.read": 4,
+            "java.io.InputStream.skip": 2,
+            "java.io.PrintStream.println": 2,
+            "java.lang.Object.getClass": 1,
+            "java.lang.Class.getResourceAsStream": 1,
+            "java.lang.Throwable.toString": 1,
+            "java.io.InputStream.close": 1
+          }
+        },
+        {
+          "signature": "public void IncrementPuzzle();",
+          "instructions": 46,
+          "branches": 3,
+          "calls": {
+            "com.nokia.mid.appl.chep.ChessRMS.ManagePuzzleRecord": 2
+          }
+        }
+      ]
+    },
+    {
+      "class": "com.nokia.mid.appl.chep.ChessPuzzleMidlet$CountDown",
+      "source_mode": "jar_classpath",
+      "method_count": 2,
+      "instructions": 25,
+      "branches": 2,
+      "methods": [
+        {
+          "signature": "protected com.nokia.mid.appl.chep.ChessPuzzleMidlet$CountDown(com.nokia.mid.appl.chep.ChessPuzzleMidlet);",
+          "instructions": 6,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public void run();",
+          "instructions": 19,
+          "branches": 2,
+          "calls": {
+            "com.nokia.mid.appl.chep.ChessPuzzleMidlet.UpdateClock": 1
+          }
+        }
+      ]
+    },
+    {
+      "class": "com.nokia.mid.appl.chep.ChessPuzzleMidlet",
+      "source_mode": "jar_classpath",
+      "method_count": 48,
+      "instructions": 3713,
+      "branches": 244,
+      "methods": [
+        {
+          "signature": "public com.nokia.mid.appl.chep.ChessPuzzleMidlet();",
+          "instructions": 208,
+          "branches": 0,
+          "calls": {
+            "com.nokia.mid.appl.chep.Local.getText": 3,
+            "javax.microedition.lcdui.Display.getDisplay": 1,
+            "com.nokia.mid.appl.chep.ChessRMS.ManageUserSettings": 1,
+            "java.util.Timer.scheduleAtFixedRate": 1,
+            "com.nokia.mid.appl.chep.ChessRMS.ManageScoreRecord": 1
+          }
+        },
+        {
+          "signature": "public void startApp();",
+          "instructions": 24,
+          "branches": 2,
+          "calls": {
+            "javax.microedition.lcdui.Display.setCurrent": 2,
+            "com.nokia.mid.ui.DeviceControl.setLights": 1,
+            "javax.microedition.lcdui.Display.getCurrent": 1
+          }
+        },
+        {
+          "signature": "public void pauseApp();",
+          "instructions": 13,
+          "branches": 2,
+          "calls": {}
+        },
+        {
+          "signature": "public void destroyApp(boolean);",
+          "instructions": 13,
+          "branches": 2,
+          "calls": {}
+        },
+        {
+          "signature": "public static void QuitApp();",
+          "instructions": 8,
+          "branches": 0,
+          "calls": {
+            "javax.microedition.midlet.MIDlet.notifyDestroyed": 1
+          }
+        },
+        {
+          "signature": "private void MainMenuScreenDone(int);",
+          "instructions": 232,
+          "branches": 17,
+          "calls": {
+            "com.nokia.mid.appl.chep.Local.getText": 6,
+            "java.lang.StringBuffer.append": 2,
+            "javax.microedition.lcdui.Display.setCurrent": 1,
+            "java.lang.StringBuffer.toString": 1,
+            "java.lang.String.concat": 1
+          }
+        },
+        {
+          "signature": "private javax.microedition.lcdui.Image CreateImage(java.lang.String);",
+          "instructions": 13,
+          "branches": 1,
+          "calls": {
+            "javax.microedition.lcdui.Image.createImage": 1,
+            "java.lang.Throwable.toString": 1,
+            "java.io.PrintStream.println": 1
+          }
+        },
+        {
+          "signature": "private void InitMenuScr(int, int[], java.lang.String, java.lang.String, java.lang.String, int);",
+          "instructions": 182,
+          "branches": 19,
+          "calls": {
+            "com.nokia.mid.appl.chep.Local.getText": 3,
+            "javax.microedition.lcdui.List.append": 3,
+            "javax.microedition.lcdui.Displayable.removeCommand": 2,
+            "javax.microedition.lcdui.Display.setCurrent": 2,
+            "javax.microedition.lcdui.Displayable.addCommand": 2,
+            "javax.microedition.lcdui.Alert.setTimeout": 1,
+            "javax.microedition.lcdui.List.setSelectedIndex": 1,
+            "javax.microedition.lcdui.Displayable.setCommandListener": 1
+          }
+        },
+        {
+          "signature": "public void commandAction(javax.microedition.lcdui.Command, javax.microedition.lcdui.Displayable);",
+          "instructions": 461,
+          "branches": 38,
+          "calls": {
+            "javax.microedition.lcdui.List.getSelectedIndex": 10,
+            "com.nokia.mid.appl.chep.Local.getText": 8,
+            "javax.microedition.lcdui.Command.getCommandType": 5,
+            "javax.microedition.lcdui.List.getString": 3,
+            "com.nokia.mid.appl.chep.ChessRMS.ManageScoreRecord": 1
+          }
+        },
+        {
+          "signature": "private short GetModeTextID();",
+          "instructions": 14,
+          "branches": 2,
+          "calls": {}
+        },
+        {
+          "signature": "private short GetLevelTextID();",
+          "instructions": 14,
+          "branches": 2,
+          "calls": {}
+        },
+        {
+          "signature": "private short GetTypeTextID();",
+          "instructions": 42,
+          "branches": 8,
+          "calls": {}
+        },
+        {
+          "signature": "private void InitFormScr(java.lang.String, java.lang.String, int);",
+          "instructions": 71,
+          "branches": 2,
+          "calls": {
+            "javax.microedition.lcdui.Displayable.removeCommand": 2,
+            "javax.microedition.lcdui.Displayable.addCommand": 2,
+            "java.lang.StringBuffer.append": 2,
+            "javax.microedition.lcdui.Displayable.setCommandListener": 1,
+            "javax.microedition.lcdui.Form.size": 1,
+            "javax.microedition.lcdui.Form.delete": 1,
+            "java.lang.StringBuffer.toString": 1,
+            "javax.microedition.lcdui.Form.append": 1
+          }
+        },
+        {
+          "signature": "private void InitResetHighScoreDisScr();",
+          "instructions": 9,
+          "branches": 0,
+          "calls": {
+            "com.nokia.mid.appl.chep.Local.getText": 2
+          }
+        },
+        {
+          "signature": "private void UpdateHighScores(int);",
+          "instructions": 56,
+          "branches": 3,
+          "calls": {
+            "com.nokia.mid.appl.chep.ChessRMS.ManageScoreRecord": 2
+          }
+        },
+        {
+          "signature": "private void InitHighScoreDisScr(int);",
+          "instructions": 96,
+          "branches": 8,
+          "calls": {
+            "java.lang.StringBuffer.append": 4,
+            "com.nokia.mid.appl.chep.Local.getText": 2,
+            "java.lang.StringBuffer.toString": 2,
+            "java.lang.String.concat": 2
+          }
+        },
+        {
+          "signature": "protected void PaintSplashScr(javax.microedition.lcdui.Graphics);",
+          "instructions": 95,
+          "branches": 2,
+          "calls": {
+            "javax.microedition.lcdui.Graphics.setColor": 2,
+            "javax.microedition.lcdui.Graphics.drawImage": 1,
+            "javax.microedition.lcdui.Graphics.drawLine": 1,
+            "com.nokia.mid.appl.chep.Local.getText": 1,
+            "javax.microedition.lcdui.Font.getFont": 1,
+            "javax.microedition.lcdui.Graphics.setFont": 1,
+            "javax.microedition.lcdui.Font.stringWidth": 1,
+            "javax.microedition.lcdui.Graphics.drawString": 1
+          }
+        },
+        {
+          "signature": "protected void Dismiss();",
+          "instructions": 38,
+          "branches": 0,
+          "calls": {
+            "com.nokia.mid.appl.chep.Local.getText": 1
+          }
+        },
+        {
+          "signature": "private void InitPuzzleScr();",
+          "instructions": 125,
+          "branches": 4,
+          "calls": {
+            "javax.microedition.lcdui.Image.getWidth": 1,
+            "javax.microedition.lcdui.Image.getHeight": 1,
+            "javax.microedition.lcdui.Image.createImage": 1,
+            "javax.microedition.lcdui.Display.getCurrent": 1,
+            "javax.microedition.lcdui.Display.setCurrent": 1
+          }
+        },
+        {
+          "signature": "private int GetSquareX(int);",
+          "instructions": 10,
+          "branches": 0,
+          "calls": {
+            "com.nokia.mid.appl.chep.ChessBoard.GetColumn": 1
+          }
+        },
+        {
+          "signature": "private int GetSquareY(int);",
+          "instructions": 10,
+          "branches": 0,
+          "calls": {
+            "com.nokia.mid.appl.chep.ChessBoard.GetRow": 1
+          }
+        },
+        {
+          "signature": "protected void PuzzleKeyPressed(int);",
+          "instructions": 162,
+          "branches": 21,
+          "calls": {
+            "javax.microedition.lcdui.Canvas.getGameAction": 5,
+            "com.nokia.mid.appl.chep.ChessBoard.IsBoardLoaded": 1,
+            "com.nokia.mid.appl.chep.Local.getText": 1,
+            "javax.microedition.lcdui.Canvas.repaint": 1
+          }
+        },
+        {
+          "signature": "private void GetHighLightSquare(int);",
+          "instructions": 57,
+          "branches": 10,
+          "calls": {}
+        },
+        {
+          "signature": "private void DragPiece();",
+          "instructions": 17,
+          "branches": 1,
+          "calls": {}
+        },
+        {
+          "signature": "private void DropPiece();",
+          "instructions": 200,
+          "branches": 12,
+          "calls": {
+            "com.nokia.mid.appl.chep.Local.getText": 3,
+            "com.nokia.mid.appl.chep.ChessBoard.IncrementPuzzle": 2,
+            "com.nokia.mid.appl.chep.ChessRMS.GetLowestScore": 1
+          }
+        },
+        {
+          "signature": "private void NextDrill();",
+          "instructions": 34,
+          "branches": 2,
+          "calls": {
+            "com.nokia.mid.appl.chep.ChessBoard.NextPuzzle": 1
+          }
+        },
+        {
+          "signature": "private void DrawText(java.lang.String, int, int, int, javax.microedition.lcdui.Graphics);",
+          "instructions": 88,
+          "branches": 0,
+          "calls": {
+            "javax.microedition.lcdui.Graphics.setColor": 4,
+            "javax.microedition.lcdui.Graphics.fillRect": 2,
+            "javax.microedition.lcdui.Font.getDefaultFont": 1,
+            "javax.microedition.lcdui.Font.stringWidth": 1,
+            "javax.microedition.lcdui.Font.getHeight": 1,
+            "javax.microedition.lcdui.Graphics.drawRect": 1,
+            "javax.microedition.lcdui.Graphics.drawString": 1
+          }
+        },
+        {
+          "signature": "private void DrawGameSettings(int, int, javax.microedition.lcdui.Graphics);",
+          "instructions": 205,
+          "branches": 5,
+          "calls": {
+            "javax.microedition.lcdui.Graphics.setColor": 4,
+            "com.nokia.mid.appl.chep.Local.getText": 3,
+            "javax.microedition.lcdui.Font.stringWidth": 3,
+            "javax.microedition.lcdui.Graphics.drawString": 3,
+            "javax.microedition.lcdui.Graphics.fillRect": 2,
+            "javax.microedition.lcdui.Font.getFont": 1,
+            "javax.microedition.lcdui.Graphics.setFont": 1,
+            "javax.microedition.lcdui.Graphics.getFont": 1
+          }
+        },
+        {
+          "signature": "private boolean IsAnswerRight();",
+          "instructions": 16,
+          "branches": 2,
+          "calls": {}
+        },
+        {
+          "signature": "private void InitPuzzleImages();",
+          "instructions": 48,
+          "branches": 0,
+          "calls": {
+            "javax.microedition.lcdui.Image.createImage": 2,
+            "javax.microedition.lcdui.Image.getGraphics": 2,
+            "javax.microedition.lcdui.Graphics.drawImage": 2
+          }
+        },
+        {
+          "signature": "private void DrawBoard(javax.microedition.lcdui.Graphics);",
+          "instructions": 64,
+          "branches": 5,
+          "calls": {
+            "javax.microedition.lcdui.Graphics.setColor": 1,
+            "javax.microedition.lcdui.Graphics.drawRect": 1
+          }
+        },
+        {
+          "signature": "private void DrawEmptyBoard(javax.microedition.lcdui.Graphics);",
+          "instructions": 43,
+          "branches": 2,
+          "calls": {
+            "javax.microedition.lcdui.Graphics.setColor": 1,
+            "javax.microedition.lcdui.Graphics.drawRect": 1
+          }
+        },
+        {
+          "signature": "private void DrawBoardSquare(int, javax.microedition.lcdui.Graphics);",
+          "instructions": 78,
+          "branches": 5,
+          "calls": {
+            "javax.microedition.lcdui.Graphics.drawImage": 2,
+            "com.nokia.mid.appl.chep.ChessBoard.GetRow": 1,
+            "com.nokia.mid.appl.chep.ChessBoard.GetColumn": 1
+          }
+        },
+        {
+          "signature": "private void DrawPiece(javax.microedition.lcdui.Graphics);",
+          "instructions": 29,
+          "branches": 4,
+          "calls": {}
+        },
+        {
+          "signature": "private void DrawPiece(int, int, javax.microedition.lcdui.Graphics);",
+          "instructions": 101,
+          "branches": 9,
+          "calls": {
+            "javax.microedition.lcdui.Graphics.drawImage": 3,
+            "com.nokia.mid.appl.chep.ChessBoard.IsSquareWhite": 1,
+            "javax.microedition.lcdui.Image.getGraphics": 1,
+            "com.nokia.mid.appl.chep.ChessBoard.GetColumn": 1,
+            "com.nokia.mid.appl.chep.ChessBoard.GetRow": 1
+          }
+        },
+        {
+          "signature": "private void ReDrawBoardSquare(int, javax.microedition.lcdui.Graphics);",
+          "instructions": 26,
+          "branches": 3,
+          "calls": {}
+        },
+        {
+          "signature": "private void DrawDisplayBounds(int, int, javax.microedition.lcdui.Graphics);",
+          "instructions": 31,
+          "branches": 0,
+          "calls": {
+            "javax.microedition.lcdui.Graphics.setColor": 2,
+            "javax.microedition.lcdui.Graphics.fillRect": 2,
+            "javax.microedition.lcdui.Canvas.getWidth": 1,
+            "javax.microedition.lcdui.Canvas.getHeight": 1
+          }
+        },
+        {
+          "signature": "private void DrawSolvedCount(javax.microedition.lcdui.Graphics);",
+          "instructions": 63,
+          "branches": 0,
+          "calls": {
+            "java.lang.StringBuffer.append": 3,
+            "javax.microedition.lcdui.Graphics.setColor": 2,
+            "java.lang.StringBuffer.toString": 1,
+            "javax.microedition.lcdui.Font.getFont": 1,
+            "javax.microedition.lcdui.Graphics.setFont": 1,
+            "javax.microedition.lcdui.Font.stringWidth": 1,
+            "javax.microedition.lcdui.Font.getHeight": 1,
+            "javax.microedition.lcdui.Graphics.fillRect": 1
+          }
+        },
+        {
+          "signature": "private boolean DismissMessage();",
+          "instructions": 90,
+          "branches": 7,
+          "calls": {
+            "javax.microedition.lcdui.Canvas.repaint": 2,
+            "com.nokia.mid.appl.chep.Local.getText": 1,
+            "java.lang.String.equals": 1
+          }
+        },
+        {
+          "signature": "protected void UpdateClock();",
+          "instructions": 76,
+          "branches": 10,
+          "calls": {
+            "javax.microedition.lcdui.Displayable.isShown": 2,
+            "javax.microedition.lcdui.Canvas.repaint": 1
+          }
+        },
+        {
+          "signature": "private java.lang.String FormatTime(long);",
+          "instructions": 55,
+          "branches": 3,
+          "calls": {
+            "java.lang.StringBuffer.append": 7,
+            "java.lang.StringBuffer.toString": 3
+          }
+        },
+        {
+          "signature": "private void DrawClock(javax.microedition.lcdui.Graphics);",
+          "instructions": 65,
+          "branches": 2,
+          "calls": {
+            "javax.microedition.lcdui.Graphics.setColor": 2,
+            "javax.microedition.lcdui.Font.stringWidth": 2,
+            "javax.microedition.lcdui.Font.getFont": 1,
+            "javax.microedition.lcdui.Graphics.setFont": 1,
+            "javax.microedition.lcdui.Font.getHeight": 1,
+            "javax.microedition.lcdui.Graphics.fillRect": 1,
+            "javax.microedition.lcdui.Graphics.drawString": 1
+          }
+        },
+        {
+          "signature": "private void DrawTopScore(javax.microedition.lcdui.Graphics);",
+          "instructions": 79,
+          "branches": 4,
+          "calls": {
+            "javax.microedition.lcdui.Graphics.setColor": 2,
+            "javax.microedition.lcdui.Font.stringWidth": 2,
+            "javax.microedition.lcdui.Font.getFont": 1,
+            "javax.microedition.lcdui.Graphics.setFont": 1,
+            "javax.microedition.lcdui.Font.getHeight": 1,
+            "javax.microedition.lcdui.Graphics.fillRect": 1,
+            "javax.microedition.lcdui.Graphics.drawString": 1
+          }
+        },
+        {
+          "signature": "protected void PaintPuzzleScr(javax.microedition.lcdui.Graphics);",
+          "instructions": 217,
+          "branches": 18,
+          "calls": {
+            "javax.microedition.lcdui.Graphics.setColor": 3,
+            "javax.microedition.lcdui.Graphics.drawRect": 2,
+            "javax.microedition.lcdui.Displayable.isShown": 1,
+            "javax.microedition.lcdui.Font.getDefaultFont": 1
+          }
+        },
+        {
+          "signature": "protected void PausePuzzleGame();",
+          "instructions": 9,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "protected void StartPuzzleGame();",
+          "instructions": 52,
+          "branches": 5,
+          "calls": {
+            "com.nokia.mid.ui.DeviceControl.setLights": 1,
+            "javax.microedition.lcdui.Canvas.repaint": 1
+          }
+        },
+        {
+          "signature": "private void DrawTrophy(javax.microedition.lcdui.Graphics);",
+          "instructions": 40,
+          "branches": 0,
+          "calls": {
+            "javax.microedition.lcdui.Image.getWidth": 1,
+            "javax.microedition.lcdui.Image.getHeight": 1,
+            "javax.microedition.lcdui.Graphics.drawImage": 1
+          }
+        },
+        {
+          "signature": "public void SaveGame(boolean);",
+          "instructions": 34,
+          "branches": 2,
+          "calls": {
+            "com.nokia.mid.appl.chep.ChessRMS.ManageUserSettings": 1
+          }
+        }
+      ]
+    },
+    {
+      "class": "com.nokia.mid.appl.chep.ChessRMS",
+      "source_mode": "jar_classpath",
+      "method_count": 10,
+      "instructions": 651,
+      "branches": 35,
+      "methods": [
+        {
+          "signature": "public com.nokia.mid.appl.chep.ChessRMS();",
+          "instructions": 72,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public int GetLowestScore(int);",
+          "instructions": 36,
+          "branches": 2,
+          "calls": {
+            "javax.microedition.rms.RecordStore.openRecordStore": 1,
+            "javax.microedition.rms.RecordStore.getNumRecords": 1,
+            "javax.microedition.rms.RecordStore.getRecord": 1,
+            "java.io.DataInputStream.readInt": 1,
+            "java.io.DataInputStream.reset": 1,
+            "javax.microedition.rms.RecordStore.closeRecordStore": 1,
+            "java.io.PrintStream.println": 1
+          }
+        },
+        {
+          "signature": "public void ManageScoreRecord(int, int, java.lang.String, com.nokia.mid.appl.chep.HighScores[]);",
+          "instructions": 126,
+          "branches": 9,
+          "calls": {
+            "java.io.DataOutputStream.writeInt": 2,
+            "java.io.DataOutputStream.writeUTF": 2,
+            "java.io.DataOutputStream.flush": 2,
+            "java.io.ByteArrayOutputStream.toByteArray": 2,
+            "java.io.ByteArrayOutputStream.reset": 2,
+            "javax.microedition.rms.RecordStore.openRecordStore": 1,
+            "javax.microedition.rms.RecordStore.getNumRecords": 1,
+            "javax.microedition.rms.RecordStore.addRecord": 1
+          }
+        },
+        {
+          "signature": "public void ManagePuzzleRecord(boolean, int, int, int, int, int, int);",
+          "instructions": 178,
+          "branches": 10,
+          "calls": {
+            "java.io.DataOutputStream.writeInt": 14,
+            "java.io.DataInputStream.readInt": 6,
+            "java.io.DataOutputStream.flush": 2,
+            "java.io.ByteArrayOutputStream.toByteArray": 2,
+            "java.io.ByteArrayOutputStream.reset": 2,
+            "javax.microedition.rms.RecordStore.openRecordStore": 1,
+            "javax.microedition.rms.RecordStore.addRecord": 1,
+            "javax.microedition.rms.RecordStore.enumerateRecords": 1
+          }
+        },
+        {
+          "signature": "public void ManageUserSettings(int, int, int, int, int);",
+          "instructions": 112,
+          "branches": 5,
+          "calls": {
+            "java.io.DataInputStream.readInt": 5,
+            "java.io.DataOutputStream.writeInt": 5,
+            "javax.microedition.rms.RecordStore.getNumRecords": 2,
+            "javax.microedition.rms.RecordStore.closeRecordStore": 2,
+            "javax.microedition.rms.RecordStore.openRecordStore": 1,
+            "javax.microedition.rms.RecordStore.getRecord": 1,
+            "java.io.DataInputStream.reset": 1,
+            "java.io.DataOutputStream.flush": 1
+          }
+        },
+        {
+          "signature": "public boolean GetPuzzleRecord(int);",
+          "instructions": 83,
+          "branches": 5,
+          "calls": {
+            "java.io.DataInputStream.readInt": 6,
+            "javax.microedition.rms.RecordStore.openRecordStore": 1,
+            "javax.microedition.rms.RecordStore.enumerateRecords": 1,
+            "javax.microedition.rms.RecordEnumeration.nextRecordId": 1,
+            "javax.microedition.rms.RecordStore.getRecord": 1,
+            "java.io.DataInputStream.reset": 1,
+            "javax.microedition.rms.RecordEnumeration.hasNextElement": 1,
+            "javax.microedition.rms.RecordStore.closeRecordStore": 1
+          }
+        },
+        {
+          "signature": "public int GetPuzzleRecordCount();",
+          "instructions": 20,
+          "branches": 1,
+          "calls": {
+            "javax.microedition.rms.RecordStore.openRecordStore": 1,
+            "javax.microedition.rms.RecordStore.getNumRecords": 1,
+            "javax.microedition.rms.RecordStore.closeRecordStore": 1,
+            "java.lang.Throwable.printStackTrace": 1
+          }
+        },
+        {
+          "signature": "public boolean DeleteChessStore(boolean);",
+          "instructions": 17,
+          "branches": 3,
+          "calls": {
+            "javax.microedition.rms.RecordStore.deleteRecordStore": 2,
+            "java.lang.Throwable.printStackTrace": 1
+          }
+        },
+        {
+          "signature": "public boolean GetTopScoreDBLock();",
+          "instructions": 3,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public void SetTopScoreDBLock(boolean);",
+          "instructions": 4,
+          "branches": 0,
+          "calls": {}
+        }
+      ]
+    },
+    {
+      "class": "com.nokia.mid.appl.chep.FullCanvasScreen",
+      "source_mode": "jar_classpath",
+      "method_count": 5,
+      "instructions": 82,
+      "branches": 9,
+      "methods": [
+        {
+          "signature": "public com.nokia.mid.appl.chep.FullCanvasScreen(com.nokia.mid.appl.chep.ChessPuzzleMidlet);",
+          "instructions": 6,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "protected void keyPressed(int);",
+          "instructions": 23,
+          "branches": 3,
+          "calls": {
+            "com.nokia.mid.appl.chep.ChessPuzzleMidlet.Dismiss": 1,
+            "com.nokia.mid.appl.chep.ChessPuzzleMidlet.PuzzleKeyPressed": 1
+          }
+        },
+        {
+          "signature": "protected void paint(javax.microedition.lcdui.Graphics);",
+          "instructions": 24,
+          "branches": 3,
+          "calls": {
+            "com.nokia.mid.appl.chep.ChessPuzzleMidlet.PaintSplashScr": 1,
+            "com.nokia.mid.appl.chep.ChessPuzzleMidlet.PaintPuzzleScr": 1
+          }
+        },
+        {
+          "signature": "protected void showNotify();",
+          "instructions": 11,
+          "branches": 1,
+          "calls": {
+            "com.nokia.mid.appl.chep.ChessPuzzleMidlet.StartPuzzleGame": 1
+          }
+        },
+        {
+          "signature": "protected void hideNotify();",
+          "instructions": 18,
+          "branches": 2,
+          "calls": {
+            "com.nokia.mid.appl.chep.ChessPuzzleMidlet.PausePuzzleGame": 1
+          }
+        }
+      ]
+    },
+    {
+      "class": "com.nokia.mid.appl.chep.HighScores",
+      "source_mode": "jar_classpath",
+      "method_count": 1,
+      "instructions": 9,
+      "branches": 0,
+      "methods": [
+        {
+          "signature": "public com.nokia.mid.appl.chep.HighScores(int, java.lang.String);",
+          "instructions": 9,
+          "branches": 0,
+          "calls": {}
+        }
+      ]
+    },
+    {
+      "class": "com.nokia.mid.appl.chep.HuffNode",
+      "source_mode": "jar_classpath",
+      "method_count": 1,
+      "instructions": 12,
+      "branches": 0,
+      "methods": [
+        {
+          "signature": "public com.nokia.mid.appl.chep.HuffNode(int, char, int);",
+          "instructions": 12,
+          "branches": 0,
+          "calls": {}
+        }
+      ]
+    },
+    {
+      "class": "com.nokia.mid.appl.chep.Local",
+      "source_mode": "jar_classpath",
+      "method_count": 4,
+      "instructions": 141,
+      "branches": 10,
+      "methods": [
+        {
+          "signature": "private com.nokia.mid.appl.chep.Local();",
+          "instructions": 3,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "private static java.lang.String replace(java.lang.String, java.lang.String, java.lang.String);",
+          "instructions": 27,
+          "branches": 2,
+          "calls": {
+            "java.lang.StringBuffer.append": 3,
+            "java.lang.String.substring": 2,
+            "java.lang.String.indexOf": 1,
+            "java.lang.String.length": 1,
+            "java.lang.StringBuffer.toString": 1
+          }
+        },
+        {
+          "signature": "public static synchronized java.lang.String getText(int);",
+          "instructions": 4,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public static synchronized java.lang.String getText(int, java.lang.String[]);",
+          "instructions": 107,
+          "branches": 8,
+          "calls": {
+            "java.lang.StringBuffer.append": 5,
+            "java.lang.Object.getClass": 2,
+            "java.lang.StringBuffer.toString": 2,
+            "java.lang.Class.getResourceAsStream": 2,
+            "java.io.DataInputStream.skipBytes": 2,
+            "java.io.DataInputStream.readShort": 1,
+            "java.io.DataInputStream.readUTF": 1,
+            "java.io.DataInputStream.close": 1
+          }
+        }
+      ]
+    }
+  ],
+  "limitation": "Static method inspection, no game execution, no proof of hot paths or semantic equivalence."
+}

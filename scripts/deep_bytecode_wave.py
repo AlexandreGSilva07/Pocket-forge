@@ -70,13 +70,31 @@ def inspect(path,raw,selected,temp_root):
             try:
                 cp=subprocess.run(["javap","-classpath",str(jarpath),"-p","-c",class_id],
                                   capture_output=True,text=True,timeout=25)
-                if cp.returncode:raise RuntimeError(cp.stderr[:250])
+                source_mode="jar_classpath"
+                if cp.returncode:
+                    # Some old J2ME archives contain unsafe-looking ZIP entries
+                    # or nonstandard central directories rejected by Java ZipFS,
+                    # even though individual classfile bytes remain readable.
+                    info=jar.getinfo(name)
+                    if info.file_size>2097152:
+                        raise RuntimeError("classfile too large for fallback: "+name)
+                    blob=jar.read(name)
+                    if not blob.startswith(bytes.fromhex("cafebabe")):
+                        raise RuntimeError("classfile magic invalid: "+name)
+                    direct_class=temp_root/"pocketforge_disassemble_only.class"
+                    direct_class.write_bytes(blob)
+                    fallback=subprocess.run(["javap","-p","-c",str(direct_class)],
+                                            capture_output=True,text=True,timeout=25)
+                    if fallback.returncode:
+                        raise RuntimeError(("jar: "+cp.stderr[:100]+"; class: "+fallback.stderr[:170]))
+                    cp=fallback
+                    source_mode="isolated_classfile_fallback"
                 methods,ops,calls=parse_disassembly(cp.stdout)
                 if not methods:
                     raise RuntimeError("no method signatures detected (obfuscated/invalid class?)")
                 all_ops.update(ops);all_calls.update(calls)
                 out["methods_count"]+=len(methods)
-                class_report={"class_file":name,"class_name":class_id,
+                class_report={"class_file":name,"class_name":class_id,"source_mode":source_mode,
                     "methods_count":len(methods),
                     "instructions_count":sum(m["instructions"] for m in methods),
                     "branch_count":sum(m["branches"] for m in methods),

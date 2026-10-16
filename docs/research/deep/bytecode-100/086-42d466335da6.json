@@ -1,0 +1,620 @@
+{
+  "rank": 86,
+  "jar_path": "All Java Mobile Phone Games/P/Pinball Dreams/pinbdream.jar",
+  "jar_sha256": "42d466335da60c67ebbf0dc025a5554caa7a0feefd55989c04d133520bb2f825",
+  "title": "Pinball",
+  "track": "physics",
+  "status": "BYTECODE_DISASSEMBLED_INDEXED_NOT_FULLY_REVIEWED",
+  "tool": "OpenJDK javap -p -c; JAR never executed",
+  "classes": 3,
+  "classes_decoded": 3,
+  "methods": 46,
+  "instructions": 11508,
+  "branches": 659,
+  "errors": [],
+  "hot_methods_by_static_instruction_count": [
+    {
+      "class": "gameCanvas",
+      "signature": "public void paint(javax.microedition.lcdui.Graphics);",
+      "instructions": 3405,
+      "branches": 206,
+      "priority_score": 7428,
+      "calls": {
+        "javax.microedition.lcdui.Graphics.drawImage": 31,
+        "java.lang.StringBuffer.append": 8,
+        "javax.microedition.lcdui.Graphics.fillRect": 8,
+        "java.lang.StringBuffer.toString": 3,
+        "java.io.PrintStream.println": 3,
+        "javax.microedition.lcdui.Image.createImage": 2,
+        "javax.microedition.lcdui.Graphics.setColor": 2,
+        "javax.microedition.lcdui.Image.getGraphics": 1
+      }
+    },
+    {
+      "class": "gameCanvas",
+      "signature": "void InitStage(int);",
+      "instructions": 2466,
+      "branches": 14,
+      "priority_score": 2508,
+      "calls": {}
+    },
+    {
+      "class": "gameCanvas",
+      "signature": "int PutImage(int, int, int);",
+      "instructions": 1070,
+      "branches": 48,
+      "priority_score": 1214,
+      "calls": {}
+    },
+    {
+      "class": "gameCanvas",
+      "signature": "void InitShapes();",
+      "instructions": 694,
+      "branches": 90,
+      "priority_score": 964,
+      "calls": {}
+    },
+    {
+      "class": "gameCanvas",
+      "signature": "int FindAngle(int, int);",
+      "instructions": 529,
+      "branches": 52,
+      "priority_score": 685,
+      "calls": {}
+    },
+    {
+      "class": "gameCanvas",
+      "signature": "public synchronized void loadImage();",
+      "instructions": 350,
+      "branches": 26,
+      "priority_score": 428,
+      "calls": {
+        "java.lang.StringBuffer.append": 33,
+        "javax.microedition.lcdui.Image.createImage": 24,
+        "java.lang.StringBuffer.toString": 11
+      }
+    },
+    {
+      "class": "gameCanvas",
+      "signature": "int GetAngle(int, int);",
+      "instructions": 304,
+      "branches": 39,
+      "priority_score": 421,
+      "calls": {}
+    },
+    {
+      "class": "gameCanvas",
+      "signature": "void InitAngles();",
+      "instructions": 385,
+      "branches": 0,
+      "priority_score": 385,
+      "calls": {}
+    },
+    {
+      "class": "gameCanvas",
+      "signature": "public void keyPressed(int);",
+      "instructions": 218,
+      "branches": 40,
+      "priority_score": 338,
+      "calls": {
+        "javax.microedition.lcdui.Canvas.getGameAction": 1
+      }
+    },
+    {
+      "class": "gameCanvas",
+      "signature": "void CheckWibble(int, int);",
+      "instructions": 217,
+      "branches": 19,
+      "priority_score": 274,
+      "calls": {}
+    },
+    {
+      "class": "gameCanvas",
+      "signature": "void CheckBonus(int, int);",
+      "instructions": 184,
+      "branches": 24,
+      "priority_score": 256,
+      "calls": {}
+    },
+    {
+      "class": "gameCanvas",
+      "signature": "public gameCanvas(gameMidlet);",
+      "instructions": 253,
+      "branches": 0,
+      "priority_score": 253,
+      "calls": {
+        "javax.microedition.lcdui.Canvas.getWidth": 1,
+        "javax.microedition.lcdui.Canvas.getHeight": 1,
+        "javax.microedition.lcdui.Displayable.addCommand": 1,
+        "javax.microedition.lcdui.Displayable.setCommandListener": 1
+      }
+    }
+  ],
+  "call_targets": [
+    {
+      "target": "java.lang.StringBuffer.append",
+      "count": 41
+    },
+    {
+      "target": "javax.microedition.lcdui.Graphics.drawImage",
+      "count": 32
+    },
+    {
+      "target": "javax.microedition.lcdui.Image.createImage",
+      "count": 26
+    },
+    {
+      "target": "java.lang.StringBuffer.toString",
+      "count": 14
+    },
+    {
+      "target": "javax.microedition.lcdui.Graphics.fillRect",
+      "count": 8
+    },
+    {
+      "target": "java.io.PrintStream.println",
+      "count": 5
+    },
+    {
+      "target": "javax.microedition.lcdui.Graphics.setColor",
+      "count": 2
+    },
+    {
+      "target": "javax.microedition.lcdui.Canvas.getGameAction",
+      "count": 2
+    },
+    {
+      "target": "gameCanvas.stop",
+      "count": 2
+    },
+    {
+      "target": "javax.microedition.lcdui.Canvas.getWidth",
+      "count": 1
+    },
+    {
+      "target": "javax.microedition.lcdui.Canvas.getHeight",
+      "count": 1
+    },
+    {
+      "target": "javax.microedition.lcdui.Displayable.addCommand",
+      "count": 1
+    },
+    {
+      "target": "javax.microedition.lcdui.Displayable.setCommandListener",
+      "count": 1
+    },
+    {
+      "target": "java.util.Random.nextInt",
+      "count": 1
+    },
+    {
+      "target": "java.lang.Thread.start",
+      "count": 1
+    },
+    {
+      "target": "java.lang.Thread.currentThread",
+      "count": 1
+    },
+    {
+      "target": "javax.microedition.lcdui.Canvas.repaint",
+      "count": 1
+    },
+    {
+      "target": "java.lang.Thread.sleep",
+      "count": 1
+    },
+    {
+      "target": "javax.microedition.lcdui.Image.getGraphics",
+      "count": 1
+    },
+    {
+      "target": "gameMidlet.exitRequested",
+      "count": 1
+    },
+    {
+      "target": "javax.microedition.lcdui.Display.getDisplay",
+      "count": 1
+    },
+    {
+      "target": "javax.microedition.lcdui.Display.setCurrent",
+      "count": 1
+    },
+    {
+      "target": "gameCanvas.start",
+      "count": 1
+    },
+    {
+      "target": "javax.microedition.midlet.MIDlet.notifyDestroyed",
+      "count": 1
+    }
+  ],
+  "opcode_histogram": {
+    "aload_0": 1815,
+    "bipush": 1329,
+    "getfield": 1249,
+    "iload": 894,
+    "invokevirtual": 618,
+    "aaload": 516,
+    "sipush": 472,
+    "putfield": 432,
+    "iconst_1": 409,
+    "pop": 381,
+    "iadd": 298,
+    "iconst_0": 265,
+    "iload_3": 243,
+    "istore": 181,
+    "if_icmple": 173,
+    "iload_1": 171,
+    "goto": 170,
+    "sastore": 146,
+    "if_icmpne": 143,
+    "iinc": 141,
+    "iload_2": 122,
+    "isub": 108,
+    "idiv": 107,
+    "dup": 98,
+    "istore_3": 98,
+    "iconst_2": 94,
+    "imul": 72,
+    "iastore": 64,
+    "istore_1": 59,
+    "ldc": 49,
+    "istore_2": 48,
+    "return": 40,
+    "if_icmpeq": 37,
+    "ineg": 30,
+    "i2s": 29
+  },
+  "resource_file_count": 80,
+  "resources_by_suffix": {
+    ".mf": 1,
+    ".png": 79
+  },
+  "class_methods": [
+    {
+      "class": "gameCanvas$Thing",
+      "method_count": 1,
+      "instructions": 6,
+      "branches": 0,
+      "methods": [
+        {
+          "signature": "gameCanvas$Thing(gameCanvas);",
+          "instructions": 6,
+          "branches": 0,
+          "calls": {}
+        }
+      ]
+    },
+    {
+      "class": "gameCanvas",
+      "method_count": 41,
+      "instructions": 11456,
+      "branches": 657,
+      "methods": [
+        {
+          "signature": "public gameCanvas(gameMidlet);",
+          "instructions": 253,
+          "branches": 0,
+          "calls": {
+            "javax.microedition.lcdui.Canvas.getWidth": 1,
+            "javax.microedition.lcdui.Canvas.getHeight": 1,
+            "javax.microedition.lcdui.Displayable.addCommand": 1,
+            "javax.microedition.lcdui.Displayable.setCommandListener": 1
+          }
+        },
+        {
+          "signature": "int DoReflection(int, int);",
+          "instructions": 77,
+          "branches": 11,
+          "calls": {}
+        },
+        {
+          "signature": "int FindAngle(int, int);",
+          "instructions": 529,
+          "branches": 52,
+          "calls": {}
+        },
+        {
+          "signature": "int GetAngle(int, int);",
+          "instructions": 304,
+          "branches": 39,
+          "calls": {}
+        },
+        {
+          "signature": "void InitAngles();",
+          "instructions": 385,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "int PutImage(int, int, int);",
+          "instructions": 1070,
+          "branches": 48,
+          "calls": {}
+        },
+        {
+          "signature": "void InitShapes();",
+          "instructions": 694,
+          "branches": 90,
+          "calls": {}
+        },
+        {
+          "signature": "void InitMovement(gameCanvas$Thing);",
+          "instructions": 10,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "void InitAction(gameCanvas$Thing, int);",
+          "instructions": 13,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "void KillMan(gameCanvas$Thing);",
+          "instructions": 7,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "int NewMan(int, int, int, int);",
+          "instructions": 14,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "int NewMan(int, int, int);",
+          "instructions": 85,
+          "branches": 7,
+          "calls": {}
+        },
+        {
+          "signature": "void GetAngle2(int, int, gameCanvas$Thing);",
+          "instructions": 127,
+          "branches": 8,
+          "calls": {}
+        },
+        {
+          "signature": "void DoHitBall();",
+          "instructions": 227,
+          "branches": 7,
+          "calls": {}
+        },
+        {
+          "signature": "int CheckBallStuck();",
+          "instructions": 144,
+          "branches": 2,
+          "calls": {}
+        },
+        {
+          "signature": "void DoBallBounce();",
+          "instructions": 144,
+          "branches": 5,
+          "calls": {}
+        },
+        {
+          "signature": "void Fix(gameCanvas$Thing, int, int);",
+          "instructions": 29,
+          "branches": 3,
+          "calls": {}
+        },
+        {
+          "signature": "int FindImage(int, int);",
+          "instructions": 32,
+          "branches": 4,
+          "calls": {}
+        },
+        {
+          "signature": "void AddScore(int);",
+          "instructions": 30,
+          "branches": 1,
+          "calls": {}
+        },
+        {
+          "signature": "void UpdateFlash();",
+          "instructions": 98,
+          "branches": 9,
+          "calls": {}
+        },
+        {
+          "signature": "void CheckWibble(int, int);",
+          "instructions": 217,
+          "branches": 19,
+          "calls": {}
+        },
+        {
+          "signature": "void CheckBonus(int, int);",
+          "instructions": 184,
+          "branches": 24,
+          "calls": {}
+        },
+        {
+          "signature": "void DoControls();",
+          "instructions": 1,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "void InitStage(int);",
+          "instructions": 2466,
+          "branches": 14,
+          "calls": {}
+        },
+        {
+          "signature": "void ShowBlock(int);",
+          "instructions": 52,
+          "branches": 3,
+          "calls": {}
+        },
+        {
+          "signature": "int GetShape(int, int);",
+          "instructions": 59,
+          "branches": 3,
+          "calls": {}
+        },
+        {
+          "signature": "public int GetRandomNo(int);",
+          "instructions": 14,
+          "branches": 1,
+          "calls": {
+            "java.util.Random.nextInt": 1
+          }
+        },
+        {
+          "signature": "void reset();",
+          "instructions": 20,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public synchronized void loadImage();",
+          "instructions": 350,
+          "branches": 26,
+          "calls": {
+            "java.lang.StringBuffer.append": 33,
+            "javax.microedition.lcdui.Image.createImage": 24,
+            "java.lang.StringBuffer.toString": 11
+          }
+        },
+        {
+          "signature": "private void init();",
+          "instructions": 1,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public void start();",
+          "instructions": 6,
+          "branches": 0,
+          "calls": {
+            "java.lang.Thread.start": 1
+          }
+        },
+        {
+          "signature": "public void stop();",
+          "instructions": 1,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public void run();",
+          "instructions": 12,
+          "branches": 3,
+          "calls": {
+            "java.lang.Thread.currentThread": 1,
+            "javax.microedition.lcdui.Canvas.repaint": 1,
+            "java.lang.Thread.sleep": 1
+          }
+        },
+        {
+          "signature": "private void drawMenu();",
+          "instructions": 9,
+          "branches": 0,
+          "calls": {
+            "javax.microedition.lcdui.Graphics.drawImage": 1
+          }
+        },
+        {
+          "signature": "public void paint(javax.microedition.lcdui.Graphics);",
+          "instructions": 3405,
+          "branches": 206,
+          "calls": {
+            "javax.microedition.lcdui.Graphics.drawImage": 31,
+            "java.lang.StringBuffer.append": 8,
+            "javax.microedition.lcdui.Graphics.fillRect": 8,
+            "java.lang.StringBuffer.toString": 3,
+            "java.io.PrintStream.println": 3,
+            "javax.microedition.lcdui.Image.createImage": 2,
+            "javax.microedition.lcdui.Graphics.setColor": 2,
+            "javax.microedition.lcdui.Image.getGraphics": 1
+          }
+        },
+        {
+          "signature": "public void keyPressed(int);",
+          "instructions": 218,
+          "branches": 40,
+          "calls": {
+            "javax.microedition.lcdui.Canvas.getGameAction": 1
+          }
+        },
+        {
+          "signature": "public void keyReleased(int);",
+          "instructions": 158,
+          "branches": 31,
+          "calls": {
+            "javax.microedition.lcdui.Canvas.getGameAction": 1
+          }
+        },
+        {
+          "signature": "protected void pointerPressed(int, int);",
+          "instructions": 1,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "protected void pointerReleased(int, int);",
+          "instructions": 1,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "protected void pointerDragged(int, int);",
+          "instructions": 1,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public void commandAction(javax.microedition.lcdui.Command, javax.microedition.lcdui.Displayable);",
+          "instructions": 8,
+          "branches": 1,
+          "calls": {
+            "gameMidlet.exitRequested": 1
+          }
+        }
+      ]
+    },
+    {
+      "class": "gameMidlet",
+      "method_count": 4,
+      "instructions": 46,
+      "branches": 2,
+      "methods": [
+        {
+          "signature": "public gameMidlet();",
+          "instructions": 25,
+          "branches": 0,
+          "calls": {
+            "javax.microedition.lcdui.Display.getDisplay": 1,
+            "java.io.PrintStream.println": 1,
+            "javax.microedition.lcdui.Display.setCurrent": 1,
+            "gameCanvas.start": 1
+          }
+        },
+        {
+          "signature": "protected void pauseApp();",
+          "instructions": 11,
+          "branches": 0,
+          "calls": {
+            "gameCanvas.stop": 2,
+            "java.io.PrintStream.println": 1
+          }
+        },
+        {
+          "signature": "public void exitRequested();",
+          "instructions": 9,
+          "branches": 2,
+          "calls": {
+            "javax.microedition.midlet.MIDlet.notifyDestroyed": 1
+          }
+        },
+        {
+          "signature": "public void commandAction(javax.microedition.lcdui.Command, javax.microedition.lcdui.Displayable);",
+          "instructions": 1,
+          "branches": 0,
+          "calls": {}
+        }
+      ]
+    }
+  ],
+  "limitation": "Static method inspection, no game execution, no proof of hot paths or semantic equivalence."
+}

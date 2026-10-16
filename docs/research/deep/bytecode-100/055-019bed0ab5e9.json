@@ -1,0 +1,1231 @@
+{
+  "rank": 55,
+  "jar_path": "All Java Mobile Phone Games/C/Chess/SpruceChess.jar",
+  "jar_sha256": "019bed0ab5e9510e760e5847a86dfb5e5e15c5054b688f147e7a0c81f2a33d2d",
+  "title": "Spruce Chess",
+  "track": "strategy",
+  "status": "BYTECODE_DISASSEMBLED_INDEXED_NOT_FULLY_REVIEWED",
+  "tool": "OpenJDK javap -p -c; JAR never executed",
+  "classes": 7,
+  "classes_decoded": 6,
+  "methods": 103,
+  "instructions": 8790,
+  "branches": 761,
+  "errors": [
+    {
+      "class_file": "org/spruce/midp/common/a.class",
+      "reason": "no method signatures detected (obfuscated/invalid class?)"
+    }
+  ],
+  "hot_methods_by_static_instruction_count": [
+    {
+      "class": "org.spruce.midp.common.c",
+      "signature": "public org.spruce.midp.common.c(javax.microedition.lcdui.Display, javax.microedition.lcdui.Displayable);",
+      "instructions": 1889,
+      "branches": 0,
+      "priority_score": 1889,
+      "calls": {
+        "javax.microedition.lcdui.Display.setCurrent": 1
+      }
+    },
+    {
+      "class": "org.spruce.midp.chess.c",
+      "signature": "public void b(javax.microedition.lcdui.Graphics, int, int, int);",
+      "instructions": 528,
+      "branches": 40,
+      "priority_score": 1176,
+      "calls": {
+        "javax.microedition.lcdui.Graphics.drawImage": 24,
+        "java.lang.Math.max": 2
+      }
+    },
+    {
+      "class": "org.spruce.midp.chess.c",
+      "signature": "boolean f();",
+      "instructions": 344,
+      "branches": 37,
+      "priority_score": 1143,
+      "calls": {
+        "javax.microedition.lcdui.Canvas.repaint": 8,
+        "org.spruce.midp.chess.a.c": 6,
+        "javax.microedition.lcdui.List.append": 4,
+        "org.spruce.midp.chess.a.f": 2,
+        "org.spruce.midp.chess.a.j": 1,
+        "javax.microedition.lcdui.Canvas.serviceRepaints": 1,
+        "org.spruce.midp.chess.a.d": 1,
+        "javax.microedition.lcdui.Displayable.setCommandListener": 1,
+        "javax.microedition.lcdui.Display.setCurrent": 1,
+        "org.spruce.midp.chess.a.i": 1
+      }
+    },
+    {
+      "class": "org.spruce.midp.chess.a",
+      "signature": "int[] k();",
+      "instructions": 427,
+      "branches": 79,
+      "priority_score": 664,
+      "calls": {}
+    },
+    {
+      "class": "org.spruce.midp.chess.c",
+      "signature": "org.spruce.midp.chess.c(org.spruce.midp.chess.SpruceChessMidlet);",
+      "instructions": 487,
+      "branches": 11,
+      "priority_score": 520,
+      "calls": {
+        "javax.microedition.lcdui.Font.getHeight": 4,
+        "java.lang.Math.max": 4,
+        "java.lang.StringBuffer.append": 2,
+        "javax.microedition.lcdui.Canvas.getWidth": 1,
+        "javax.microedition.lcdui.Canvas.getHeight": 1,
+        "javax.microedition.lcdui.Font.getFont": 1,
+        "javax.microedition.lcdui.Display.numColors": 1,
+        "javax.microedition.lcdui.Image.createImage": 1,
+        "java.lang.Throwable.getMessage": 1,
+        "java.lang.StringBuffer.toString": 1,
+        "java.io.PrintStream.println": 1,
+        "javax.microedition.lcdui.Image.getWidth": 1,
+        "javax.microedition.lcdui.Image.getHeight": 1
+      }
+    },
+    {
+      "class": "org.spruce.midp.chess.c",
+      "signature": "public void keyPressed(int);",
+      "instructions": 167,
+      "branches": 36,
+      "priority_score": 442,
+      "calls": {
+        "javax.microedition.lcdui.Canvas.repaint": 5,
+        "javax.microedition.lcdui.Canvas.getGameAction": 1
+      }
+    },
+    {
+      "class": "org.spruce.midp.chess.a",
+      "signature": "boolean a(int, int);",
+      "instructions": 243,
+      "branches": 59,
+      "priority_score": 420,
+      "calls": {}
+    },
+    {
+      "class": "org.spruce.midp.chess.a",
+      "signature": "void b(int[], int, int);",
+      "instructions": 209,
+      "branches": 27,
+      "priority_score": 290,
+      "calls": {}
+    },
+    {
+      "class": "org.spruce.midp.chess.a",
+      "signature": "void b();",
+      "instructions": 119,
+      "branches": 15,
+      "priority_score": 283,
+      "calls": {
+        "java.io.DataOutputStream.writeInt": 5,
+        "java.io.DataInputStream.readInt": 5
+      }
+    },
+    {
+      "class": "org.spruce.midp.chess.c",
+      "signature": "void b();",
+      "instructions": 85,
+      "branches": 6,
+      "priority_score": 273,
+      "calls": {
+        "java.io.DataInputStream.readInt": 2,
+        "java.io.DataInputStream.close": 2,
+        "javax.microedition.rms.RecordStore.closeRecordStore": 2,
+        "javax.microedition.rms.RecordStore.openRecordStore": 1,
+        "javax.microedition.rms.RecordStore.getNumRecords": 1,
+        "javax.microedition.rms.RecordStore.getRecord": 1,
+        "java.io.DataInputStream.readLong": 1,
+        "org.spruce.midp.chess.a.a": 1,
+        "javax.microedition.rms.RecordStore.deleteRecordStore": 1
+      }
+    },
+    {
+      "class": "org.spruce.midp.chess.b",
+      "signature": "void c();",
+      "instructions": 105,
+      "branches": 10,
+      "priority_score": 240,
+      "calls": {
+        "java.lang.System.currentTimeMillis": 2,
+        "org.spruce.midp.chess.a.j": 1,
+        "org.spruce.midp.chess.a.k": 1,
+        "org.spruce.midp.chess.a.g": 1,
+        "java.lang.Thread.sleep": 1,
+        "org.spruce.midp.chess.c.b": 1
+      }
+    },
+    {
+      "class": "org.spruce.midp.chess.a",
+      "signature": "void k(int);",
+      "instructions": 173,
+      "branches": 14,
+      "priority_score": 215,
+      "calls": {}
+    }
+  ],
+  "call_targets": [
+    {
+      "target": "javax.microedition.lcdui.Graphics.drawImage",
+      "count": 26
+    },
+    {
+      "target": "javax.microedition.lcdui.Canvas.repaint",
+      "count": 21
+    },
+    {
+      "target": "org.spruce.midp.chess.a.c",
+      "count": 16
+    },
+    {
+      "target": "javax.microedition.lcdui.Graphics.setColor",
+      "count": 15
+    },
+    {
+      "target": "java.lang.StringBuffer.append",
+      "count": 13
+    },
+    {
+      "target": "javax.microedition.lcdui.Displayable.addCommand",
+      "count": 12
+    },
+    {
+      "target": "javax.microedition.lcdui.Display.setCurrent",
+      "count": 10
+    },
+    {
+      "target": "java.io.DataOutputStream.writeInt",
+      "count": 7
+    },
+    {
+      "target": "java.io.DataInputStream.readInt",
+      "count": 7
+    },
+    {
+      "target": "org.spruce.midp.chess.a.g",
+      "count": 7
+    },
+    {
+      "target": "org.spruce.midp.chess.a.k",
+      "count": 6
+    },
+    {
+      "target": "org.spruce.midp.chess.a.a",
+      "count": 6
+    },
+    {
+      "target": "java.lang.Math.max",
+      "count": 6
+    },
+    {
+      "target": "org.spruce.midp.chess.a.j",
+      "count": 5
+    },
+    {
+      "target": "javax.microedition.lcdui.Canvas.getWidth",
+      "count": 5
+    },
+    {
+      "target": "javax.microedition.lcdui.Canvas.getHeight",
+      "count": 5
+    },
+    {
+      "target": "javax.microedition.lcdui.Font.getHeight",
+      "count": 5
+    },
+    {
+      "target": "javax.microedition.lcdui.Image.createImage",
+      "count": 5
+    },
+    {
+      "target": "java.lang.StringBuffer.toString",
+      "count": 5
+    },
+    {
+      "target": "javax.microedition.rms.RecordStore.closeRecordStore",
+      "count": 5
+    },
+    {
+      "target": "javax.microedition.lcdui.Graphics.drawRect",
+      "count": 5
+    },
+    {
+      "target": "javax.microedition.lcdui.Display.getDisplay",
+      "count": 4
+    },
+    {
+      "target": "javax.microedition.lcdui.Displayable.setCommandListener",
+      "count": 4
+    },
+    {
+      "target": "java.lang.String.toCharArray",
+      "count": 4
+    },
+    {
+      "target": "java.io.PrintStream.println",
+      "count": 4
+    },
+    {
+      "target": "org.spruce.midp.chess.a.b",
+      "count": 4
+    },
+    {
+      "target": "org.spruce.midp.chess.a.i",
+      "count": 4
+    },
+    {
+      "target": "org.spruce.midp.chess.a.f",
+      "count": 4
+    },
+    {
+      "target": "javax.microedition.lcdui.Graphics.drawString",
+      "count": 4
+    },
+    {
+      "target": "javax.microedition.lcdui.List.append",
+      "count": 4
+    },
+    {
+      "target": "java.io.DataOutputStream.close",
+      "count": 3
+    },
+    {
+      "target": "javax.microedition.lcdui.Graphics.fillRect",
+      "count": 3
+    },
+    {
+      "target": "javax.microedition.lcdui.List.getSelectedIndex",
+      "count": 3
+    },
+    {
+      "target": "javax.microedition.lcdui.Alert.setTimeout",
+      "count": 2
+    },
+    {
+      "target": "org.spruce.midp.chess.c.b",
+      "count": 2
+    }
+  ],
+  "opcode_histogram": {
+    "aload_0": 935,
+    "bipush": 750,
+    "iload": 626,
+    "dup": 575,
+    "bastore": 464,
+    "getfield": 451,
+    "invokevirtual": 413,
+    "sipush": 378,
+    "ifne": 272,
+    "putfield": 208,
+    "iload_3": 203,
+    "iconst_0": 201,
+    "aload_1": 200,
+    "iadd": 195,
+    "ifeq": 190,
+    "iconst_1": 187,
+    "invokestatic": 155,
+    "iload_2": 140,
+    "ldc": 127,
+    "istore": 115,
+    "iastore": 114,
+    "iload_1": 100,
+    "iaload": 100,
+    "invokespecial": 97,
+    "getstatic": 95,
+    "if_icmpne": 81,
+    "isub": 80,
+    "imul": 77,
+    "ireturn": 76,
+    "iconst_2": 72,
+    "return": 72,
+    "goto": 71,
+    "aconst_null": 61,
+    "aload_2": 49,
+    "iinc": 44
+  },
+  "resource_file_count": 73,
+  "resources_by_suffix": {
+    ".mf": 1,
+    ".png": 72
+  },
+  "class_methods": [
+    {
+      "class": "org.spruce.midp.chess.SpruceChessMidlet",
+      "source_mode": "jar_classpath",
+      "method_count": 6,
+      "instructions": 349,
+      "branches": 37,
+      "methods": [
+        {
+          "signature": "public org.spruce.midp.chess.SpruceChessMidlet();",
+          "instructions": 121,
+          "branches": 3,
+          "calls": {
+            "javax.microedition.lcdui.Alert.setTimeout": 2
+          }
+        },
+        {
+          "signature": "public void startApp();",
+          "instructions": 81,
+          "branches": 3,
+          "calls": {
+            "javax.microedition.lcdui.Displayable.addCommand": 8,
+            "javax.microedition.lcdui.Display.getDisplay": 2,
+            "javax.microedition.lcdui.Displayable.setCommandListener": 1,
+            "javax.microedition.lcdui.Display.setCurrent": 1
+          }
+        },
+        {
+          "signature": "public void pauseApp();",
+          "instructions": 1,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public void commandAction(javax.microedition.lcdui.Command, javax.microedition.lcdui.Displayable);",
+          "instructions": 97,
+          "branches": 22,
+          "calls": {
+            "javax.microedition.lcdui.Display.getDisplay": 2,
+            "javax.microedition.lcdui.Display.setCurrent": 2,
+            "javax.microedition.midlet.MIDlet.notifyDestroyed": 1,
+            "org.spruce.midp.chess.c.a": 1,
+            "org.spruce.midp.chess.c.b": 1,
+            "org.spruce.midp.chess.c.c": 1,
+            "org.spruce.midp.chess.c.g": 1,
+            "org.spruce.midp.chess.c.i": 1
+          }
+        },
+        {
+          "signature": "public void destroyApp(boolean);",
+          "instructions": 4,
+          "branches": 0,
+          "calls": {
+            "org.spruce.midp.chess.c.k": 1
+          }
+        },
+        {
+          "signature": "private static java.lang.String a(java.lang.String);",
+          "instructions": 45,
+          "branches": 9,
+          "calls": {
+            "java.lang.String.toCharArray": 1
+          }
+        }
+      ]
+    },
+    {
+      "class": "org.spruce.midp.chess.a",
+      "source_mode": "jar_classpath",
+      "method_count": 39,
+      "instructions": 2279,
+      "branches": 306,
+      "methods": [
+        {
+          "signature": "org.spruce.midp.chess.a();",
+          "instructions": 34,
+          "branches": 3,
+          "calls": {}
+        },
+        {
+          "signature": "org.spruce.midp.chess.a(org.spruce.midp.chess.a);",
+          "instructions": 69,
+          "branches": 6,
+          "calls": {}
+        },
+        {
+          "signature": "void a();",
+          "instructions": 111,
+          "branches": 5,
+          "calls": {}
+        },
+        {
+          "signature": "void b();",
+          "instructions": 119,
+          "branches": 15,
+          "calls": {
+            "java.io.DataOutputStream.writeInt": 5,
+            "java.io.DataInputStream.readInt": 5
+          }
+        },
+        {
+          "signature": "int c();",
+          "instructions": 5,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "int a(int);",
+          "instructions": 40,
+          "branches": 7,
+          "calls": {}
+        },
+        {
+          "signature": "boolean a(int, int);",
+          "instructions": 243,
+          "branches": 59,
+          "calls": {}
+        },
+        {
+          "signature": "static int b(int, int);",
+          "instructions": 6,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "static int a(int, int, int);",
+          "instructions": 10,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "static int b(int);",
+          "instructions": 4,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "static int c(int);",
+          "instructions": 6,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "static int d(int);",
+          "instructions": 4,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "boolean e(int);",
+          "instructions": 17,
+          "branches": 4,
+          "calls": {}
+        },
+        {
+          "signature": "int f(int);",
+          "instructions": 13,
+          "branches": 1,
+          "calls": {}
+        },
+        {
+          "signature": "int g(int);",
+          "instructions": 14,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "boolean h(int);",
+          "instructions": 10,
+          "branches": 2,
+          "calls": {}
+        },
+        {
+          "signature": "void i(int);",
+          "instructions": 46,
+          "branches": 9,
+          "calls": {}
+        },
+        {
+          "signature": "void d();",
+          "instructions": 20,
+          "branches": 3,
+          "calls": {}
+        },
+        {
+          "signature": "void a(int, int, boolean);",
+          "instructions": 35,
+          "branches": 3,
+          "calls": {}
+        },
+        {
+          "signature": "int j(int);",
+          "instructions": 7,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "int e();",
+          "instructions": 17,
+          "branches": 1,
+          "calls": {}
+        },
+        {
+          "signature": "boolean f();",
+          "instructions": 13,
+          "branches": 2,
+          "calls": {}
+        },
+        {
+          "signature": "void k(int);",
+          "instructions": 173,
+          "branches": 14,
+          "calls": {}
+        },
+        {
+          "signature": "void g();",
+          "instructions": 160,
+          "branches": 16,
+          "calls": {}
+        },
+        {
+          "signature": "static int[] h();",
+          "instructions": 11,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "static int a(int[]);",
+          "instructions": 4,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "static void a(int[], int);",
+          "instructions": 23,
+          "branches": 1,
+          "calls": {
+            "java.io.PrintStream.println": 1
+          }
+        },
+        {
+          "signature": "static void b(int[], int);",
+          "instructions": 16,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "static void a(int[], int, int);",
+          "instructions": 36,
+          "branches": 2,
+          "calls": {}
+        },
+        {
+          "signature": "void b(int[], int, int);",
+          "instructions": 209,
+          "branches": 27,
+          "calls": {}
+        },
+        {
+          "signature": "void a(int[], int, int, int[]);",
+          "instructions": 39,
+          "branches": 5,
+          "calls": {}
+        },
+        {
+          "signature": "void a(int[], int, int, int);",
+          "instructions": 46,
+          "branches": 10,
+          "calls": {}
+        },
+        {
+          "signature": "boolean l(int);",
+          "instructions": 16,
+          "branches": 1,
+          "calls": {}
+        },
+        {
+          "signature": "boolean i();",
+          "instructions": 7,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "int[] j();",
+          "instructions": 37,
+          "branches": 6,
+          "calls": {}
+        },
+        {
+          "signature": "int[] k();",
+          "instructions": 427,
+          "branches": 79,
+          "calls": {}
+        },
+        {
+          "signature": "int c(int[], int, int);",
+          "instructions": 33,
+          "branches": 7,
+          "calls": {}
+        },
+        {
+          "signature": "int b(int[], int, int, int);",
+          "instructions": 154,
+          "branches": 9,
+          "calls": {}
+        },
+        {
+          "signature": "private static java.lang.String a(java.lang.String);",
+          "instructions": 45,
+          "branches": 9,
+          "calls": {
+            "java.lang.String.toCharArray": 1
+          }
+        }
+      ]
+    },
+    {
+      "class": "org.spruce.midp.chess.b",
+      "source_mode": "jar_classpath",
+      "method_count": 18,
+      "instructions": 1012,
+      "branches": 124,
+      "methods": [
+        {
+          "signature": "org.spruce.midp.chess.b(org.spruce.midp.chess.a, org.spruce.midp.chess.c, int);",
+          "instructions": 25,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "static void a();",
+          "instructions": 72,
+          "branches": 9,
+          "calls": {}
+        },
+        {
+          "signature": "public void run();",
+          "instructions": 3,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "void b();",
+          "instructions": 17,
+          "branches": 1,
+          "calls": {}
+        },
+        {
+          "signature": "void c();",
+          "instructions": 105,
+          "branches": 10,
+          "calls": {
+            "java.lang.System.currentTimeMillis": 2,
+            "org.spruce.midp.chess.a.j": 1,
+            "org.spruce.midp.chess.a.k": 1,
+            "org.spruce.midp.chess.a.g": 1,
+            "java.lang.Thread.sleep": 1,
+            "org.spruce.midp.chess.c.b": 1
+          }
+        },
+        {
+          "signature": "void a(int[], int[], int, int);",
+          "instructions": 29,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "void a(int[], int[]);",
+          "instructions": 9,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "void b(int[], int[], int, int);",
+          "instructions": 25,
+          "branches": 1,
+          "calls": {}
+        },
+        {
+          "signature": "int c(int[], int[], int, int);",
+          "instructions": 48,
+          "branches": 9,
+          "calls": {}
+        },
+        {
+          "signature": "int[] a(int[]);",
+          "instructions": 112,
+          "branches": 16,
+          "calls": {
+            "org.spruce.midp.chess.a.d": 1,
+            "org.spruce.midp.chess.a.c": 1,
+            "org.spruce.midp.chess.a.g": 1
+          }
+        },
+        {
+          "signature": "int[] d();",
+          "instructions": 14,
+          "branches": 0,
+          "calls": {
+            "org.spruce.midp.chess.a.j": 1
+          }
+        },
+        {
+          "signature": "int a(int, int, int);",
+          "instructions": 98,
+          "branches": 15,
+          "calls": {
+            "org.spruce.midp.chess.a.c": 1,
+            "org.spruce.midp.chess.a.l": 1,
+            "org.spruce.midp.chess.a.k": 1,
+            "org.spruce.midp.chess.a.g": 1
+          }
+        },
+        {
+          "signature": "int[] e();",
+          "instructions": 47,
+          "branches": 7,
+          "calls": {
+            "org.spruce.midp.chess.a.k": 1,
+            "org.spruce.midp.chess.a.b": 1,
+            "org.spruce.midp.chess.a.a": 1
+          }
+        },
+        {
+          "signature": "int b(int, int, int);",
+          "instructions": 77,
+          "branches": 11,
+          "calls": {
+            "org.spruce.midp.chess.a.k": 1,
+            "org.spruce.midp.chess.a.g": 1
+          }
+        },
+        {
+          "signature": "int a(int);",
+          "instructions": 18,
+          "branches": 1,
+          "calls": {}
+        },
+        {
+          "signature": "int a(int, int);",
+          "instructions": 103,
+          "branches": 16,
+          "calls": {
+            "org.spruce.midp.chess.a.c": 2,
+            "org.spruce.midp.chess.a.i": 1,
+            "org.spruce.midp.chess.a.j": 1,
+            "org.spruce.midp.chess.a.a": 1,
+            "org.spruce.midp.chess.a.k": 1,
+            "org.spruce.midp.chess.a.g": 1
+          }
+        },
+        {
+          "signature": "int[] f();",
+          "instructions": 58,
+          "branches": 7,
+          "calls": {
+            "org.spruce.midp.chess.a.c": 2,
+            "org.spruce.midp.chess.a.k": 1,
+            "org.spruce.midp.chess.a.j": 1,
+            "org.spruce.midp.chess.a.b": 1,
+            "org.spruce.midp.chess.a.a": 1
+          }
+        },
+        {
+          "signature": "int g();",
+          "instructions": 152,
+          "branches": 21,
+          "calls": {
+            "org.spruce.midp.chess.a.f": 1,
+            "org.spruce.midp.chess.a.g": 1,
+            "org.spruce.midp.chess.a.c": 1
+          }
+        }
+      ]
+    },
+    {
+      "class": "org.spruce.midp.chess.c",
+      "source_mode": "jar_classpath",
+      "method_count": 28,
+      "instructions": 3046,
+      "branches": 276,
+      "methods": [
+        {
+          "signature": "org.spruce.midp.chess.c(org.spruce.midp.chess.SpruceChessMidlet);",
+          "instructions": 487,
+          "branches": 11,
+          "calls": {
+            "javax.microedition.lcdui.Font.getHeight": 4,
+            "java.lang.Math.max": 4,
+            "java.lang.StringBuffer.append": 2,
+            "javax.microedition.lcdui.Canvas.getWidth": 1,
+            "javax.microedition.lcdui.Canvas.getHeight": 1,
+            "javax.microedition.lcdui.Font.getFont": 1,
+            "javax.microedition.lcdui.Display.numColors": 1,
+            "javax.microedition.lcdui.Image.createImage": 1
+          }
+        },
+        {
+          "signature": "void a();",
+          "instructions": 21,
+          "branches": 0,
+          "calls": {
+            "org.spruce.midp.chess.a.a": 1,
+            "java.lang.System.gc": 1,
+            "javax.microedition.lcdui.Canvas.repaint": 1
+          }
+        },
+        {
+          "signature": "void b();",
+          "instructions": 85,
+          "branches": 6,
+          "calls": {
+            "java.io.DataInputStream.readInt": 2,
+            "java.io.DataInputStream.close": 2,
+            "javax.microedition.rms.RecordStore.closeRecordStore": 2,
+            "javax.microedition.rms.RecordStore.openRecordStore": 1,
+            "javax.microedition.rms.RecordStore.getNumRecords": 1,
+            "javax.microedition.rms.RecordStore.getRecord": 1,
+            "java.io.DataInputStream.readLong": 1,
+            "org.spruce.midp.chess.a.a": 1
+          }
+        },
+        {
+          "signature": "void c();",
+          "instructions": 130,
+          "branches": 21,
+          "calls": {
+            "java.io.DataOutputStream.close": 3,
+            "javax.microedition.rms.RecordStore.closeRecordStore": 3,
+            "java.io.DataOutputStream.writeInt": 2,
+            "java.io.ByteArrayOutputStream.toByteArray": 2,
+            "java.io.ByteArrayOutputStream.size": 2,
+            "javax.microedition.rms.RecordStore.openRecordStore": 1,
+            "java.io.DataOutputStream.writeLong": 1,
+            "org.spruce.midp.chess.a.a": 1
+          }
+        },
+        {
+          "signature": "void d();",
+          "instructions": 43,
+          "branches": 6,
+          "calls": {
+            "javax.microedition.lcdui.Canvas.repaint": 2
+          }
+        },
+        {
+          "signature": "public void a(javax.microedition.lcdui.Graphics, int, int, int);",
+          "instructions": 84,
+          "branches": 15,
+          "calls": {
+            "javax.microedition.lcdui.Graphics.setColor": 2,
+            "javax.microedition.lcdui.Graphics.drawString": 1
+          }
+        },
+        {
+          "signature": "public void paint(javax.microedition.lcdui.Graphics);",
+          "instructions": 8,
+          "branches": 0,
+          "calls": {
+            "javax.microedition.lcdui.Graphics.drawImage": 1
+          }
+        },
+        {
+          "signature": "private void e();",
+          "instructions": 179,
+          "branches": 12,
+          "calls": {
+            "javax.microedition.lcdui.Graphics.setColor": 5,
+            "javax.microedition.lcdui.Graphics.fillRect": 2,
+            "javax.microedition.lcdui.Image.getGraphics": 1,
+            "javax.microedition.lcdui.Graphics.setFont": 1,
+            "javax.microedition.lcdui.Graphics.drawRect": 1,
+            "javax.microedition.lcdui.Graphics.drawString": 1
+          }
+        },
+        {
+          "signature": "private void a(javax.microedition.lcdui.Graphics, int, int, boolean);",
+          "instructions": 156,
+          "branches": 11,
+          "calls": {
+            "javax.microedition.lcdui.Graphics.setColor": 6,
+            "javax.microedition.lcdui.Graphics.drawRect": 4
+          }
+        },
+        {
+          "signature": "public void b(javax.microedition.lcdui.Graphics, int, int, int);",
+          "instructions": 528,
+          "branches": 40,
+          "calls": {
+            "javax.microedition.lcdui.Graphics.drawImage": 24,
+            "java.lang.Math.max": 2
+          }
+        },
+        {
+          "signature": "boolean a(int, int);",
+          "instructions": 10,
+          "branches": 2,
+          "calls": {}
+        },
+        {
+          "signature": "public void keyPressed(int);",
+          "instructions": 167,
+          "branches": 36,
+          "calls": {
+            "javax.microedition.lcdui.Canvas.repaint": 5,
+            "javax.microedition.lcdui.Canvas.getGameAction": 1
+          }
+        },
+        {
+          "signature": "protected void pointerPressed(int, int);",
+          "instructions": 55,
+          "branches": 4,
+          "calls": {
+            "javax.microedition.lcdui.Canvas.repaint": 1
+          }
+        },
+        {
+          "signature": "boolean f();",
+          "instructions": 344,
+          "branches": 37,
+          "calls": {
+            "javax.microedition.lcdui.Canvas.repaint": 8,
+            "org.spruce.midp.chess.a.c": 6,
+            "javax.microedition.lcdui.List.append": 4,
+            "org.spruce.midp.chess.a.f": 2,
+            "org.spruce.midp.chess.a.j": 1,
+            "javax.microedition.lcdui.Canvas.serviceRepaints": 1,
+            "org.spruce.midp.chess.a.d": 1,
+            "javax.microedition.lcdui.Displayable.setCommandListener": 1
+          }
+        },
+        {
+          "signature": "public void a(int);",
+          "instructions": 53,
+          "branches": 1,
+          "calls": {
+            "javax.microedition.lcdui.Display.setCurrent": 1,
+            "org.spruce.midp.chess.a.b": 1,
+            "org.spruce.midp.chess.a.i": 1,
+            "javax.microedition.lcdui.Canvas.repaint": 1,
+            "javax.microedition.lcdui.Canvas.serviceRepaints": 1
+          }
+        },
+        {
+          "signature": "public void commandAction(javax.microedition.lcdui.Command, javax.microedition.lcdui.Displayable);",
+          "instructions": 119,
+          "branches": 25,
+          "calls": {
+            "javax.microedition.lcdui.List.getSelectedIndex": 3,
+            "javax.microedition.lcdui.Display.setCurrent": 1,
+            "java.lang.System.gc": 1
+          }
+        },
+        {
+          "signature": "public void g();",
+          "instructions": 57,
+          "branches": 2,
+          "calls": {
+            "javax.microedition.lcdui.Displayable.addCommand": 2,
+            "javax.microedition.lcdui.List.setSelectedIndex": 1,
+            "javax.microedition.lcdui.Displayable.setCommandListener": 1,
+            "javax.microedition.lcdui.Display.setCurrent": 1
+          }
+        },
+        {
+          "signature": "public int h();",
+          "instructions": 27,
+          "branches": 6,
+          "calls": {
+            "org.spruce.midp.chess.a.c": 2
+          }
+        },
+        {
+          "signature": "public void i();",
+          "instructions": 76,
+          "branches": 3,
+          "calls": {
+            "javax.microedition.lcdui.Displayable.addCommand": 2,
+            "javax.microedition.lcdui.List.setSelectedIndex": 1,
+            "javax.microedition.lcdui.Displayable.setCommandListener": 1,
+            "javax.microedition.lcdui.Display.setCurrent": 1
+          }
+        },
+        {
+          "signature": "void j();",
+          "instructions": 36,
+          "branches": 1,
+          "calls": {
+            "javax.microedition.lcdui.Canvas.repaint": 1,
+            "java.lang.Thread.start": 1
+          }
+        },
+        {
+          "signature": "void k();",
+          "instructions": 11,
+          "branches": 1,
+          "calls": {
+            "org.spruce.midp.chess.b.b": 1
+          }
+        },
+        {
+          "signature": "public void b(int);",
+          "instructions": 88,
+          "branches": 10,
+          "calls": {
+            "java.lang.StringBuffer.append": 2,
+            "org.spruce.midp.chess.a.i": 1,
+            "java.lang.StringBuffer.toString": 1,
+            "javax.microedition.lcdui.Canvas.repaint": 1
+          }
+        },
+        {
+          "signature": "java.lang.String a(int, boolean);",
+          "instructions": 89,
+          "branches": 3,
+          "calls": {
+            "java.lang.StringBuffer.append": 9,
+            "java.lang.StringBuffer.toString": 3,
+            "javax.microedition.lcdui.Image.createImage": 3,
+            "org.spruce.midp.chess.a.b": 1,
+            "org.spruce.midp.chess.a.c": 1
+          }
+        },
+        {
+          "signature": "int b(int, int);",
+          "instructions": 6,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "int c(int);",
+          "instructions": 6,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "int d(int);",
+          "instructions": 6,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "int c(int, int);",
+          "instructions": 130,
+          "branches": 14,
+          "calls": {
+            "org.spruce.midp.chess.a.f": 1,
+            "org.spruce.midp.chess.a.g": 1
+          }
+        },
+        {
+          "signature": "private static java.lang.String b(java.lang.String);",
+          "instructions": 45,
+          "branches": 9,
+          "calls": {
+            "java.lang.String.toCharArray": 1
+          }
+        }
+      ]
+    },
+    {
+      "class": "org.spruce.midp.common.b",
+      "source_mode": "jar_classpath",
+      "method_count": 3,
+      "instructions": 14,
+      "branches": 0,
+      "methods": [
+        {
+          "signature": "private org.spruce.midp.common.b(org.spruce.midp.common.c);",
+          "instructions": 6,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public void run();",
+          "instructions": 4,
+          "branches": 0,
+          "calls": {
+            "org.spruce.midp.common.c.a": 1
+          }
+        },
+        {
+          "signature": "org.spruce.midp.common.b(org.spruce.midp.common.c, org.spruce.midp.common.a);",
+          "instructions": 4,
+          "branches": 0,
+          "calls": {}
+        }
+      ]
+    },
+    {
+      "class": "org.spruce.midp.common.c",
+      "source_mode": "jar_classpath",
+      "method_count": 9,
+      "instructions": 2090,
+      "branches": 18,
+      "methods": [
+        {
+          "signature": "public org.spruce.midp.common.c(javax.microedition.lcdui.Display, javax.microedition.lcdui.Displayable);",
+          "instructions": 1889,
+          "branches": 0,
+          "calls": {
+            "javax.microedition.lcdui.Display.setCurrent": 1
+          }
+        },
+        {
+          "signature": "protected void keyPressed(int);",
+          "instructions": 3,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "protected void paint(javax.microedition.lcdui.Graphics);",
+          "instructions": 96,
+          "branches": 5,
+          "calls": {
+            "javax.microedition.lcdui.Canvas.getWidth": 4,
+            "javax.microedition.lcdui.Canvas.getHeight": 4,
+            "javax.microedition.lcdui.Graphics.setColor": 2,
+            "java.io.PrintStream.println": 2,
+            "javax.microedition.lcdui.Graphics.drawString": 2,
+            "javax.microedition.lcdui.Graphics.fillRect": 1,
+            "javax.microedition.lcdui.Image.createImage": 1,
+            "java.lang.Throwable.getMessage": 1
+          }
+        },
+        {
+          "signature": "protected void pointerPressed(int, int);",
+          "instructions": 3,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "protected void showNotify();",
+          "instructions": 18,
+          "branches": 0,
+          "calls": {
+            "java.util.Timer.schedule": 1,
+            "java.lang.Thread.start": 1
+          }
+        },
+        {
+          "signature": "private void a();",
+          "instructions": 9,
+          "branches": 0,
+          "calls": {
+            "java.util.Timer.cancel": 1,
+            "javax.microedition.lcdui.Display.setCurrent": 1
+          }
+        },
+        {
+          "signature": "public void run();",
+          "instructions": 24,
+          "branches": 4,
+          "calls": {
+            "java.lang.Thread.sleep": 1,
+            "javax.microedition.lcdui.Canvas.repaint": 1
+          }
+        },
+        {
+          "signature": "static void a(org.spruce.midp.common.c);",
+          "instructions": 3,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "private static java.lang.String a(java.lang.String);",
+          "instructions": 45,
+          "branches": 9,
+          "calls": {
+            "java.lang.String.toCharArray": 1
+          }
+        }
+      ]
+    }
+  ],
+  "limitation": "Static method inspection, no game execution, no proof of hot paths or semantic equivalence."
+}
