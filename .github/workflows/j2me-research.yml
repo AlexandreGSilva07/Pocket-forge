@@ -6,6 +6,12 @@ on:
     paths:
       - scripts/audit_j2me_archive.py
       - .github/workflows/j2me-research.yml
+  pull_request:
+    branches:
+      - main
+    paths:
+      - scripts/audit_j2me_archive.py
+      - .github/workflows/j2me-research.yml
   workflow_dispatch:
 
 permissions:
