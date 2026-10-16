@@ -40,7 +40,18 @@ Pedido recomendado:
 
 > Continue PocketForge no repo AlexandreGSilva07/Pocket-forge. Leia docs/research/CONTINUITY.md, docs/research/batches/registry.json e verifique os PRs abertos. Processe o próximo lote de 100 JARs não repetidos e produza PR separado com todos os nomes e hashes. Reconstrua de fato um componente funcional do motor, integre ao jogo de demonstração, teste e reporte diferenças medidas. Não confunda inspeção estática com reconstrução de código.
 
-## Estado da primeira execução
+## Estado confirmado após integração dos primeiros PRs (15/10/2026)
+
+- **300 JARs binariamente distintos já analisados estaticamente**, SHA-256 completos em registry.json e registros CSV/JSON/MD para cada lote.
+- **PR #1** (lote 001, renderer atlas/RLE): https://github.com/AlexandreGSilva07/Pocket-forge/pull/1 — integrado à main.
+- **PR #2** (lote 002, State Core): https://github.com/AlexandreGSilva07/Pocket-forge/pull/2 — integrado à main.
+- **PR #3** (lote 003, Audio Core): https://github.com/AlexandreGSilva07/Pocket-forge/pull/3 — integrado à main.
+- **Próximo lote:** 004, IDs 301–400; restam 1.349 SHA-256 distintos ainda não registrados, sujeitos à integridade do corpus.
+- **Motor integrado no Lumen Shift:** demo/engine/compact.js, state.js e audio.js; testes Node para os três módulos e smoke Playwright.
+- Nenhum título foi emulado/executado individualmente no estudo; observação foi de bytecode/resources. Não há benchmark de FPS/RAM do motor.
+- As branches temporárias e de reparo usadas nos merges não são fonte de verdade. A **main + registry.json** é canônica.
+
+## Histórico da primeira execução
 
 - Corpus original: 2.309 JARs analisados em inventário amplo; 1.649 hashes diferentes.
 - Lote 001: 100 hashes distintos, docs/research/batches/001.md, .csv, .json e registry.json.
