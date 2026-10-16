@@ -1,11 +1,54 @@
 {
   "schema_version": 1,
   "phase": "detailed_reverse_engineering",
-  "status": "selection_completed_studies_not_started",
+  "status": "wave01_bytecode_12_method_review_3_in_progress",
   "static_corpus_registry": "docs/research/batches/registry.json",
   "total_static_jar_sha256": 1649,
   "completed_studies": [],
-  "studies_in_progress": [],
+  "studies_in_progress": [
+    {
+      "jar_sha256": "f2667dd8ee20f37d323d16a705ef9e26ed4e61f704af185e1dbb187cf7cf5761",
+      "name": "3D Adventure",
+      "stage": "METHOD_REVIEW_PARTIAL",
+      "reviewed_methods": [
+        "adventure.a.paint(Graphics)",
+        "adventure.a.run() [signature only]"
+      ],
+      "report": "docs/research/deep/studies/f2667dd8ee20-3d-adventure.md",
+      "original_executed": false
+    },
+    {
+      "jar_sha256": "8db1413d8135bfc300525375ae0ff398548707d0d8f824cb610d797130e67c9d",
+      "name": "Xrossing Dice",
+      "stage": "METHOD_REVIEW_PARTIAL",
+      "reviewed_methods": [
+        "MinimaxRobot.minimaxMove(GameController)",
+        "MinimaxRobot.minimaxValue(GameController,int,boolean,int,int,int)",
+        "MinimaxRobot.undoMove(GameController,int,int,byte,int,int,int,int)"
+      ],
+      "report": "docs/research/deep/studies/8db1413d8135-xrossing-dice.md",
+      "original_executed": false,
+      "engine_files": [
+        "demo/engine/ai.js",
+        "demo/ai-lab.html"
+      ]
+    },
+    {
+      "jar_sha256": "6df7ffc301a3524aa0935ac23311d9e132ce4c1dbf81129e5485052afc0828f2",
+      "name": "7Zwerge",
+      "stage": "METHOD_REVIEW_PARTIAL",
+      "reviewed_methods": [
+        "e.a(String,int,int)",
+        "i.a(String)",
+        "c [MMAPI reference]"
+      ],
+      "report": "docs/research/deep/studies/6df7ffc301a3-7zwerge.md",
+      "original_executed": false,
+      "engine_files": [
+        "demo/engine/tilepack.js"
+      ]
+    }
+  ],
   "engine_findings": [],
   "notes": "Register studies only when actual class/method behavior is inspected and evidence attached. Do not promote static inventory automatically.",
   "selection_file": "docs/research/deep/selection-100.json",
@@ -14,5 +57,13 @@
   "selection_reserves": 25,
   "technical_controls_not_games": 1,
   "selection_rationale": "Diversidade de APIs, render, mundos, IA, assets, física, áudio e compactação; lista gerada sobre 17 lotes com 1649 SHA-256 únicos; seleção não é decompilação.",
-  "next_step": "Validar amostra em emulador, analisar bytecode/metodologia, iniciar estudos por SHA e atualizar completed_studies com evidências sem promover seleção."
+  "next_step": "Revisar manualmente bytecode dos 12, comparar runtime original em emulador, investigar algoritmos completos. Continue com restantes dos 100 selecionados.",
+  "wave01_bytecode": {
+    "target_count": 12,
+    "actual_javap_processed": 12,
+    "method_inventory_dir": "docs/research/deep/wave01",
+    "scope": "method signatures + opcode/call summary; not full human semantic reconstruction of all methods",
+    "note": "Xrossing Dice has 2 method-less constant interfaces; parser initially reports as errors; address as a classification warning."
+  },
+  "deep_method_review_partial": 3
 }
