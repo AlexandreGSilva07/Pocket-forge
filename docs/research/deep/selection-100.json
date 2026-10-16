@@ -18,35 +18,30 @@
       "1": 12,
       "2": 5,
       "3": 5,
-      "4": 2,
+      "4": 1,
       "5": 2,
       "6": 4,
       "7": 6,
       "8": 4,
       "9": 8,
       "10": 6,
-      "11": 5,
+      "11": 6,
       "12": 9,
-      "13": 6,
+      "13": 5,
       "14": 8,
       "15": 5,
-      "16": 10,
+      "16": 11,
       "17": 3
     },
     "api_raras": {
-      "GameCanvas": 27,
+      "GameCanvas": 28,
       "J2ME M3G": 13,
-      "Sprite": 6,
+      "Sprite": 7,
       "TiledLayer": 7
     },
-    "com_jad": 54,
-    "ancoras_verificadas": 99,
-    "âncoras_não_encontradas": [
-      {
-        "track": "assets",
-        "basename": "C2S_Bowling2.jar"
-      }
-    ]
+    "com_jad": 55,
+    "ancoras_verificadas": 100,
+    "âncoras_não_encontradas": []
   },
   "principal": [
     {
@@ -85,7 +80,12 @@
       "id": "f2667dd8ee20f37d",
       "score_metadata": 51.6,
       "selection_basis": "âncora verificada",
-      "status": "selected_not_decompiled"
+      "status": "selected_not_decompiled",
+      "investigation_targets": [
+        "Desmontar chamadas drawPixels e decidir se são efeitos, blit ou render de software.",
+        "Examinar como lógica e recursos são representados com poucas classes.",
+        "Auditar distribuição dos bytes entre lógica e recursos, inclusive formatos binários."
+      ]
     },
     {
       "jar_sha256": "6925de2ce810de09f989fdcc2ead3afeed5ebb287cb55ea0d237936d2f32a370",
@@ -147,46 +147,62 @@
       "id": "6925de2ce810de09",
       "score_metadata": 41.9,
       "selection_basis": "âncora verificada",
-      "status": "selected_not_decompiled"
+      "status": "selected_not_decompiled",
+      "investigation_targets": [
+        "Identificar retângulos de atlas, pivôs e extração de frames por região."
+      ]
     },
     {
-      "jar_sha256": "fdbc8f9562787435839f78f1a52920ca87e7eb77b3573c9930ea1e6424c0f6a4",
-      "jar_path": "All Java Mobile Phone Games/J/JBenchmark 3D/JBenchmark3D.jar",
-      "jad_path": "All Java Mobile Phone Games/J/JBenchmark 3D/JBenchmark3D.jad",
-      "game_title": "JBenchmark3D",
-      "batch": 13,
-      "bytes": 82274,
-      "classes": 5,
-      "images": 2,
-      "audio": 0,
-      "png_indexed": 0,
+      "jar_sha256": "570137fb12a30c7d010d071d7792c8f9450e29ce77e26206a690bd41c511f75d",
+      "jar_path": "All Java Mobile Phone Games/S/Speedchaser3D(1pant)/Speedchaser3D_6630_6680.jar",
+      "jad_path": "All Java Mobile Phone Games/S/Speedchaser3D(1pant)/Speedchaser3D_6630_6680.jad",
+      "game_title": "SpeedChaser3D",
+      "batch": 16,
+      "bytes": 176783,
+      "classes": 11,
+      "images": 22,
+      "audio": 3,
+      "png_indexed": 22,
       "api_refs": [
         "GameCanvas",
         "J2ME M3G",
         "MIDP Graphics",
+        "MMAPI audio",
+        "RMS persistence",
         "Thread.sleep"
       ],
       "method_symbols": [
+        "drawImage",
         "fillRect",
-        "flushGraphics"
+        "flushGraphics",
+        "getResourceAsStream"
       ],
       "class_names": [
-        "JBenchmark3D/JBenchmark3D.class",
         "a.class",
         "b.class",
         "c.class",
-        "d.class"
+        "d.class",
+        "e.class",
+        "f.class",
+        "g.class",
+        "h.class",
+        "i.class",
+        "j.class",
+        "z.class"
       ],
-      "estimated_png_rgba_bytes": 14336,
+      "estimated_png_rgba_bytes": 616704,
       "rank": 3,
       "tier": "principal",
       "track": "render3d",
       "track_name": "3D e rasterização",
       "study_question": "Identificar algoritmos reais de projeção, buffers, M3G e rasterização em software.",
-      "id": "fdbc8f9562787435",
-      "score_metadata": 82.5,
+      "id": "570137fb12a30c7d",
+      "score_metadata": 84.3,
       "selection_basis": "âncora verificada",
-      "status": "selected_not_decompiled"
+      "status": "selected_not_decompiled",
+      "investigation_targets": [
+        "Verificar se usa cenas, modelos, transformações e animações M3G; medir custo da representação."
+      ]
     },
     {
       "jar_sha256": "595a04f90efc3ab0ea705116b59ea7cff4fd06281b34f121be8231b1a25fe02c",
@@ -239,7 +255,12 @@
       "id": "595a04f90efc3ab0",
       "score_metadata": 86.6,
       "selection_basis": "âncora verificada",
-      "status": "selected_not_decompiled"
+      "status": "selected_not_decompiled",
+      "investigation_targets": [
+        "Verificar se usa cenas, modelos, transformações e animações M3G; medir custo da representação.",
+        "Identificar retângulos de atlas, pivôs e extração de frames por região.",
+        "Catalogar atlas, recursos gráficos e quantização; quantificar custo descompactado."
+      ]
     },
     {
       "jar_sha256": "7820f0e4feaa34d92ee32b139017a490975d07daaec8bf1a6176474bf4183fb9",
@@ -306,7 +327,12 @@
       "id": "7820f0e4feaa34d9",
       "score_metadata": 113.1,
       "selection_basis": "âncora verificada",
-      "status": "selected_not_decompiled"
+      "status": "selected_not_decompiled",
+      "investigation_targets": [
+        "Verificar se usa cenas, modelos, transformações e animações M3G; medir custo da representação.",
+        "Desmontar chamadas drawPixels e decidir se são efeitos, blit ou render de software.",
+        "Identificar retângulos de atlas, pivôs e extração de frames por região."
+      ]
     },
     {
       "jar_sha256": "91dc9b076607f65c64acc45f928becdded230a055392d4606b3b0d291029c670",
@@ -367,7 +393,12 @@
       "id": "91dc9b076607f65c",
       "score_metadata": 96.6,
       "selection_basis": "âncora verificada",
-      "status": "selected_not_decompiled"
+      "status": "selected_not_decompiled",
+      "investigation_targets": [
+        "Verificar se usa cenas, modelos, transformações e animações M3G; medir custo da representação.",
+        "Identificar retângulos de atlas, pivôs e extração de frames por região.",
+        "Identificar formatos de áudio, política de disparos e armazenamento."
+      ]
     },
     {
       "jar_sha256": "0061ce9a799a5182ff105ae2123b6c35b5c2fa895c2d6dc87da491b215abe6c8",
@@ -404,7 +435,11 @@
       "id": "0061ce9a799a5182",
       "score_metadata": 74.6,
       "selection_basis": "âncora verificada",
-      "status": "selected_not_decompiled"
+      "status": "selected_not_decompiled",
+      "investigation_targets": [
+        "Verificar se usa cenas, modelos, transformações e animações M3G; medir custo da representação.",
+        "Examinar como lógica e recursos são representados com poucas classes."
+      ]
     },
     {
       "jar_sha256": "7cd885f2f3b6673a55e0f1a5b1eacb881de4b6eafe816aa5fa12374cf759d4a8",
@@ -465,7 +500,11 @@
       "id": "7cd885f2f3b6673a",
       "score_metadata": 80.6,
       "selection_basis": "âncora verificada",
-      "status": "selected_not_decompiled"
+      "status": "selected_not_decompiled",
+      "investigation_targets": [
+        "Verificar se usa cenas, modelos, transformações e animações M3G; medir custo da representação.",
+        "Catalogar atlas, recursos gráficos e quantização; quantificar custo descompactado."
+      ]
     },
     {
       "jar_sha256": "fdb3878423d958d66e0508fb32b6fd21f520ba43815963a18c5c02dabbfeaf47",
@@ -522,7 +561,11 @@
       "id": "fdb3878423d958d6",
       "score_metadata": 79.1,
       "selection_basis": "âncora verificada",
-      "status": "selected_not_decompiled"
+      "status": "selected_not_decompiled",
+      "investigation_targets": [
+        "Verificar se usa cenas, modelos, transformações e animações M3G; medir custo da representação.",
+        "Catalogar atlas, recursos gráficos e quantização; quantificar custo descompactado."
+      ]
     },
     {
       "jar_sha256": "1c257b8f4750fa4f5eefe8a75046e43775b8b73a98c75852d435571e133dab8c",
@@ -594,7 +637,10 @@
       "id": "1c257b8f4750fa4f",
       "score_metadata": 50.4,
       "selection_basis": "âncora verificada",
-      "status": "selected_not_decompiled"
+      "status": "selected_not_decompiled",
+      "investigation_targets": [
+        "Identificar retângulos de atlas, pivôs e extração de frames por região."
+      ]
     },
     {
       "jar_sha256": "5fca5ecb35d810294e2e7aeb002ddf1bff849efa51cf29b2e6ee6363c37894ed",
@@ -630,7 +676,12 @@
       "id": "5fca5ecb35d81029",
       "score_metadata": 48.6,
       "selection_basis": "âncora verificada",
-      "status": "selected_not_decompiled"
+      "status": "selected_not_decompiled",
+      "investigation_targets": [
+        "Desmontar chamadas drawPixels e decidir se são efeitos, blit ou render de software.",
+        "Examinar como lógica e recursos são representados com poucas classes.",
+        "Auditar distribuição dos bytes entre lógica e recursos, inclusive formatos binários."
+      ]
     },
     {
       "jar_sha256": "7e9255bdb69bfff8fa79024f83d7ee765b56d1de1f18b534e427ea8110c30e3f",
@@ -669,7 +720,10 @@
       "id": "7e9255bdb69bfff8",
       "score_metadata": 30.5,
       "selection_basis": "âncora verificada",
-      "status": "selected_not_decompiled"
+      "status": "selected_not_decompiled",
+      "investigation_targets": [
+        "Auditar distribuição dos bytes entre lógica e recursos, inclusive formatos binários."
+      ]
     },
     {
       "jar_sha256": "aca04f45a763262b1252819b49e459a0d05e326ff22c25e0c9f669879f0aeaae",
@@ -719,7 +773,10 @@
       "id": "aca04f45a763262b",
       "score_metadata": 58.3,
       "selection_basis": "âncora verificada",
-      "status": "selected_not_decompiled"
+      "status": "selected_not_decompiled",
+      "investigation_targets": [
+        "Desmontar chamadas drawPixels e decidir se são efeitos, blit ou render de software."
+      ]
     },
     {
       "jar_sha256": "f12cba37444efb1d566fb6b108c14aa90cdeb849760155223412a5ecbef022c7",
@@ -778,7 +835,12 @@
       "id": "f12cba37444efb1d",
       "score_metadata": 67.0,
       "selection_basis": "âncora verificada",
-      "status": "selected_not_decompiled"
+      "status": "selected_not_decompiled",
+      "investigation_targets": [
+        "Verificar se usa cenas, modelos, transformações e animações M3G; medir custo da representação.",
+        "Identificar retângulos de atlas, pivôs e extração de frames por região.",
+        "Identificar formatos de áudio, política de disparos e armazenamento."
+      ]
     },
     {
       "jar_sha256": "54900dfbeae417d9ebdd947ae6160facabb208c16d2faec9442d2cc1736604fa",
@@ -853,7 +915,11 @@
       "id": "54900dfbeae417d9",
       "score_metadata": 89.4,
       "selection_basis": "âncora verificada",
-      "status": "selected_not_decompiled"
+      "status": "selected_not_decompiled",
+      "investigation_targets": [
+        "Verificar se usa cenas, modelos, transformações e animações M3G; medir custo da representação.",
+        "Examinar estados, frames, colisão e composição de sprites."
+      ]
     },
     {
       "jar_sha256": "68ff95bdb6a98ae93f0b18d084b1051e1328b5d9ffd5af6fa9ec6436051fa459",
@@ -898,7 +964,12 @@
       "id": "68ff95bdb6a98ae9",
       "score_metadata": 92.1,
       "selection_basis": "âncora verificada",
-      "status": "selected_not_decompiled"
+      "status": "selected_not_decompiled",
+      "investigation_targets": [
+        "Verificar se usa cenas, modelos, transformações e animações M3G; medir custo da representação.",
+        "Identificar retângulos de atlas, pivôs e extração de frames por região.",
+        "Identificar formatos de áudio, política de disparos e armazenamento."
+      ]
     },
     {
       "jar_sha256": "12e9d0c928e3887efec1e44a467ab592fc4d42194fb95540ef8f8c680d51ba93",
@@ -946,7 +1017,10 @@
       "id": "12e9d0c928e3887e",
       "score_metadata": 54.3,
       "selection_basis": "âncora verificada",
-      "status": "selected_not_decompiled"
+      "status": "selected_not_decompiled",
+      "investigation_targets": [
+        "Desmontar chamadas drawPixels e decidir se são efeitos, blit ou render de software."
+      ]
     },
     {
       "jar_sha256": "327b40c1880c5d00335080c91b97aeb6e05e5a995ebce7e3e561a10be6b7308b",
@@ -1016,7 +1090,11 @@
       "id": "327b40c1880c5d00",
       "score_metadata": 104.4,
       "selection_basis": "âncora verificada",
-      "status": "selected_not_decompiled"
+      "status": "selected_not_decompiled",
+      "investigation_targets": [
+        "Verificar se usa cenas, modelos, transformações e animações M3G; medir custo da representação.",
+        "Desmontar chamadas drawPixels e decidir se são efeitos, blit ou render de software."
+      ]
     },
     {
       "jar_sha256": "7fe2dcf68a2f0a379a38332cd99234ee035bfd343befabef688e17be1c563207",
@@ -1078,7 +1156,11 @@
       "id": "7fe2dcf68a2f0a37",
       "score_metadata": 102.6,
       "selection_basis": "âncora verificada",
-      "status": "selected_not_decompiled"
+      "status": "selected_not_decompiled",
+      "investigation_targets": [
+        "Verificar se usa cenas, modelos, transformações e animações M3G; medir custo da representação.",
+        "Desmontar chamadas drawPixels e decidir se são efeitos, blit ou render de software."
+      ]
     },
     {
       "jar_sha256": "4a982ba640ed1eb1f97e51aa79579d90fa67e01fce3e23a0c02798b3e5c0765c",
@@ -1154,7 +1236,11 @@
       "id": "4a982ba640ed1eb1",
       "score_metadata": 104.4,
       "selection_basis": "âncora verificada",
-      "status": "selected_not_decompiled"
+      "status": "selected_not_decompiled",
+      "investigation_targets": [
+        "Verificar se usa cenas, modelos, transformações e animações M3G; medir custo da representação.",
+        "Desmontar chamadas drawPixels e decidir se são efeitos, blit ou render de software."
+      ]
     },
     {
       "jar_sha256": "eb16778a12aa0bac8b7fc40787c4757c0910f4d6622c77d00ed2ead147c7ea86",
@@ -1198,7 +1284,11 @@
       "id": "eb16778a12aa0bac",
       "score_metadata": 83.02,
       "selection_basis": "âncora verificada",
-      "status": "selected_not_decompiled"
+      "status": "selected_not_decompiled",
+      "investigation_targets": [
+        "Identificar retângulos de atlas, pivôs e extração de frames por região.",
+        "Investigar layout/colisão de tilemaps e formato dos dados de nível."
+      ]
     },
     {
       "jar_sha256": "16ede07fe8584bf2453ee78d165a9cfc9896bfb4cc460e8f72b826468d4ed407",
@@ -1253,7 +1343,11 @@
       "id": "16ede07fe8584bf2",
       "score_metadata": 98.06,
       "selection_basis": "âncora verificada",
-      "status": "selected_not_decompiled"
+      "status": "selected_not_decompiled",
+      "investigation_targets": [
+        "Investigar layout/colisão de tilemaps e formato dos dados de nível.",
+        "Examinar estados, frames, colisão e composição de sprites."
+      ]
     },
     {
       "jar_sha256": "41f07e9dc3318123334483cd9ecda3e3a7d7f5cb18086883f896368c895d4b28",
@@ -1300,7 +1394,10 @@
       "id": "41f07e9dc3318123",
       "score_metadata": 52.78,
       "selection_basis": "âncora verificada",
-      "status": "selected_not_decompiled"
+      "status": "selected_not_decompiled",
+      "investigation_targets": [
+        "Identificar retângulos de atlas, pivôs e extração de frames por região."
+      ]
     },
     {
       "jar_sha256": "6ee6abe79fa3384ae088bfff5b3121e38d6fc178812f1a26b8de72a7ad4bf586",
@@ -1340,7 +1437,11 @@
       "id": "6ee6abe79fa3384a",
       "score_metadata": 71.85,
       "selection_basis": "âncora verificada",
-      "status": "selected_not_decompiled"
+      "status": "selected_not_decompiled",
+      "investigation_targets": [
+        "Investigar layout/colisão de tilemaps e formato dos dados de nível.",
+        "Examinar como lógica e recursos são representados com poucas classes."
+      ]
     },
     {
       "jar_sha256": "b2123515834acbf6670685aac80e51e28cc15b2ec7dc0af6ad2d715b00f68c19",
@@ -1384,7 +1485,11 @@
       "id": "b2123515834acbf6",
       "score_metadata": 67.85,
       "selection_basis": "âncora verificada",
-      "status": "selected_not_decompiled"
+      "status": "selected_not_decompiled",
+      "investigation_targets": [
+        "Identificar retângulos de atlas, pivôs e extração de frames por região.",
+        "Investigar layout/colisão de tilemaps e formato dos dados de nível."
+      ]
     },
     {
       "jar_sha256": "f5bb40fc57fa1a777c2a7a49a43c8020bbe8e07ea71e20b21241e99b046e7898",
@@ -1424,7 +1529,11 @@
       "id": "f5bb40fc57fa1a77",
       "score_metadata": 56.4,
       "selection_basis": "âncora verificada",
-      "status": "selected_not_decompiled"
+      "status": "selected_not_decompiled",
+      "investigation_targets": [
+        "Investigar layout/colisão de tilemaps e formato dos dados de nível.",
+        "Examinar como lógica e recursos são representados com poucas classes."
+      ]
     },
     {
       "jar_sha256": "419981c167210fe40c51e14a81f4e522b34388b5df42492d20c335fc4a8b51ce",
@@ -1483,7 +1592,11 @@
       "id": "419981c167210fe4",
       "score_metadata": 76.57,
       "selection_basis": "âncora verificada",
-      "status": "selected_not_decompiled"
+      "status": "selected_not_decompiled",
+      "investigation_targets": [
+        "Investigar layout/colisão de tilemaps e formato dos dados de nível.",
+        "Examinar estados, frames, colisão e composição de sprites."
+      ]
     },
     {
       "jar_sha256": "653f9f36ae9fa3e9c5b5ec88b14a097ff686adb78bd571ef072418579ce8e7b7",
@@ -1548,7 +1661,12 @@
       "id": "653f9f36ae9fa3e9",
       "score_metadata": 71.61,
       "selection_basis": "âncora verificada",
-      "status": "selected_not_decompiled"
+      "status": "selected_not_decompiled",
+      "investigation_targets": [
+        "Investigar layout/colisão de tilemaps e formato dos dados de nível.",
+        "Examinar estados, frames, colisão e composição de sprites.",
+        "Identificar formatos de áudio, política de disparos e armazenamento."
+      ]
     },
     {
       "jar_sha256": "e0ebfff6e4d0991710477e2ccccfa4cea3bc3732adf03807531d92df177a78c2",
@@ -1591,7 +1709,10 @@
       "id": "e0ebfff6e4d09917",
       "score_metadata": 47.17,
       "selection_basis": "âncora verificada",
-      "status": "selected_not_decompiled"
+      "status": "selected_not_decompiled",
+      "investigation_targets": [
+        "Identificar retângulos de atlas, pivôs e extração de frames por região."
+      ]
     },
     {
       "jar_sha256": "0496747ec2e5457157e03104e99f318099f1eaffb5e5c04afeb83251208cd1f8",
@@ -1643,7 +1764,10 @@
       "id": "0496747ec2e54571",
       "score_metadata": 49.72,
       "selection_basis": "âncora verificada",
-      "status": "selected_not_decompiled"
+      "status": "selected_not_decompiled",
+      "investigation_targets": [
+        "Identificar retângulos de atlas, pivôs e extração de frames por região."
+      ]
     },
     {
       "jar_sha256": "f6f67084e36fc572430cbd9c58ba3fe8cef69cbff06a2c73e85487e74ee7d420",
@@ -1706,7 +1830,10 @@
       "id": "f6f67084e36fc572",
       "score_metadata": 35.8,
       "selection_basis": "âncora verificada",
-      "status": "selected_not_decompiled"
+      "status": "selected_not_decompiled",
+      "investigation_targets": [
+        "Examinar formatos de mapas, colisão, câmera, atlas e ciclos de animação. Confirmar a hipótese com classes e métodos reais."
+      ]
     },
     {
       "jar_sha256": "dc4613d8ca496141a48666c1cb101b08d98dd7a3347e7cee829867171f71250d",
@@ -1749,7 +1876,10 @@
       "id": "dc4613d8ca496141",
       "score_metadata": 47.0,
       "selection_basis": "âncora verificada",
-      "status": "selected_not_decompiled"
+      "status": "selected_not_decompiled",
+      "investigation_targets": [
+        "Identificar retângulos de atlas, pivôs e extração de frames por região."
+      ]
     },
     {
       "jar_sha256": "b43de60be499614c7f6396cd6c295188bb5fb8e748acfc8a622d01607a8b7336",
@@ -1801,7 +1931,10 @@
       "id": "b43de60be499614c",
       "score_metadata": 16.86,
       "selection_basis": "âncora verificada",
-      "status": "selected_not_decompiled"
+      "status": "selected_not_decompiled",
+      "investigation_targets": [
+        "Catalogar atlas, recursos gráficos e quantização; quantificar custo descompactado."
+      ]
     },
     {
       "jar_sha256": "833ee0c0dd63b0f1277cc9f62f0d32e4c81dd989bd27da0e1727aa84a67a52da",
@@ -1858,7 +1991,10 @@
       "id": "833ee0c0dd63b0f1",
       "score_metadata": 33.17,
       "selection_basis": "âncora verificada",
-      "status": "selected_not_decompiled"
+      "status": "selected_not_decompiled",
+      "investigation_targets": [
+        "Examinar formatos de mapas, colisão, câmera, atlas e ciclos de animação. Confirmar a hipótese com classes e métodos reais."
+      ]
     },
     {
       "jar_sha256": "dccfcc099abc54d5f2057a0283406d4eed01f1de88bf66405a3cecb7cdd957b5",
@@ -1901,7 +2037,10 @@
       "id": "dccfcc099abc54d5",
       "score_metadata": 32.99,
       "selection_basis": "âncora verificada",
-      "status": "selected_not_decompiled"
+      "status": "selected_not_decompiled",
+      "investigation_targets": [
+        "Identificar retângulos de atlas, pivôs e extração de frames por região."
+      ]
     },
     {
       "jar_sha256": "53ff23af45a60829e2020fe81626dba6089fbdb4de2608dccd9356cc83ba3d05",
@@ -1941,7 +2080,10 @@
       "id": "53ff23af45a60829",
       "score_metadata": 33.17,
       "selection_basis": "âncora verificada",
-      "status": "selected_not_decompiled"
+      "status": "selected_not_decompiled",
+      "investigation_targets": [
+        "Examinar formatos de mapas, colisão, câmera, atlas e ciclos de animação. Confirmar a hipótese com classes e métodos reais."
+      ]
     },
     {
       "jar_sha256": "dad3e0b342a6a4a7e71f27a15b96f53752b3c79908b12bc9964009719582962b",
@@ -1990,7 +2132,10 @@
       "id": "dad3e0b342a6a4a7",
       "score_metadata": 35.55,
       "selection_basis": "âncora verificada",
-      "status": "selected_not_decompiled"
+      "status": "selected_not_decompiled",
+      "investigation_targets": [
+        "Desmontar chamadas drawPixels e decidir se são efeitos, blit ou render de software."
+      ]
     },
     {
       "jar_sha256": "fec5387bb46a363fc1194096c152c840698244794580b8225de97b9f1c7f8184",
@@ -2034,7 +2179,10 @@
       "id": "fec5387bb46a363f",
       "score_metadata": 44.3,
       "selection_basis": "âncora verificada",
-      "status": "selected_not_decompiled"
+      "status": "selected_not_decompiled",
+      "investigation_targets": [
+        "Catalogar atlas, recursos gráficos e quantização; quantificar custo descompactado."
+      ]
     },
     {
       "jar_sha256": "1d6f0b6fd11c1bbc75703403952b980933b7844fca5929695a2086691aa6fa1f",
@@ -2079,7 +2227,10 @@
       "id": "1d6f0b6fd11c1bbc",
       "score_metadata": 29.17,
       "selection_basis": "âncora verificada",
-      "status": "selected_not_decompiled"
+      "status": "selected_not_decompiled",
+      "investigation_targets": [
+        "Examinar formatos de mapas, colisão, câmera, atlas e ciclos de animação. Confirmar a hipótese com classes e métodos reais."
+      ]
     },
     {
       "jar_sha256": "e0161e5b7091297286827fdb96257e030c69c3a007770d01d58dbe6720701c24",
@@ -2122,7 +2273,10 @@
       "id": "e0161e5b70912972",
       "score_metadata": 37.76,
       "selection_basis": "âncora verificada",
-      "status": "selected_not_decompiled"
+      "status": "selected_not_decompiled",
+      "investigation_targets": [
+        "Examinar formatos de mapas, colisão, câmera, atlas e ciclos de animação. Confirmar a hipótese com classes e métodos reais."
+      ]
     },
     {
       "jar_sha256": "8db1413d8135bfc300525375ae0ff398548707d0d8f824cb610d797130e67c9d",
@@ -2181,7 +2335,10 @@
       "id": "8db1413d8135bfc3",
       "score_metadata": 122.0,
       "selection_basis": "âncora verificada",
-      "status": "selected_not_decompiled"
+      "status": "selected_not_decompiled",
+      "investigation_targets": [
+        "Reconstituir minimax: avaliação, profundidade e possível poda."
+      ]
     },
     {
       "jar_sha256": "2dda1c490d8783642cc783164af2e57057098fc73b9fb656ac57974f1b2b8cc4",
@@ -2225,7 +2382,10 @@
       "id": "2dda1c490d878364",
       "score_metadata": 53.4,
       "selection_basis": "âncora verificada",
-      "status": "selected_not_decompiled"
+      "status": "selected_not_decompiled",
+      "investigation_targets": [
+        "Desmontar chamadas drawPixels e decidir se são efeitos, blit ou render de software."
+      ]
     },
     {
       "jar_sha256": "88895f7d3f1c792f040116fa42cf87bb35a402780e2af22630f82cec2098c11e",
@@ -2280,7 +2440,11 @@
       "id": "88895f7d3f1c792f",
       "score_metadata": 65.4,
       "selection_basis": "âncora verificada",
-      "status": "selected_not_decompiled"
+      "status": "selected_not_decompiled",
+      "investigation_targets": [
+        "Desmontar chamadas drawPixels e decidir se são efeitos, blit ou render de software.",
+        "Identificar retângulos de atlas, pivôs e extração de frames por região."
+      ]
     },
     {
       "jar_sha256": "7437e29bc1ea3548bfda897d6adbf4ea5ec541f4489d30d7b26a4154c05626d0",
@@ -2332,7 +2496,10 @@
       "id": "7437e29bc1ea3548",
       "score_metadata": 54.8,
       "selection_basis": "âncora verificada",
-      "status": "selected_not_decompiled"
+      "status": "selected_not_decompiled",
+      "investigation_targets": [
+        "Analisar busca, heurísticas, regras, simulação e serialização. Confirmar a hipótese com classes e métodos reais."
+      ]
     },
     {
       "jar_sha256": "a09af1e67c5a9b3b3a236702ff37e05c38bc2375259be6a00263fc6e6140e546",
@@ -2405,7 +2572,10 @@
       "id": "a09af1e67c5a9b3b",
       "score_metadata": 69.2,
       "selection_basis": "âncora verificada",
-      "status": "selected_not_decompiled"
+      "status": "selected_not_decompiled",
+      "investigation_targets": [
+        "Analisar busca, heurísticas, regras, simulação e serialização. Confirmar a hipótese com classes e métodos reais."
+      ]
     },
     {
       "jar_sha256": "1feea4b29398c20fd4d1af2d389c763d83566f36254233e4b3583d2cb7d0d2f7",
@@ -2464,7 +2634,10 @@
       "id": "1feea4b29398c20f",
       "score_metadata": 60.4,
       "selection_basis": "âncora verificada",
-      "status": "selected_not_decompiled"
+      "status": "selected_not_decompiled",
+      "investigation_targets": [
+        "Identificar formatos de áudio, política de disparos e armazenamento."
+      ]
     },
     {
       "jar_sha256": "b92476850bab71c9949a595ec059a32897ac0ea2eba434abbcab331285c16a9c",
@@ -2510,7 +2683,10 @@
       "id": "b92476850bab71c9",
       "score_metadata": 38.6,
       "selection_basis": "âncora verificada",
-      "status": "selected_not_decompiled"
+      "status": "selected_not_decompiled",
+      "investigation_targets": [
+        "Catalogar atlas, recursos gráficos e quantização; quantificar custo descompactado."
+      ]
     },
     {
       "jar_sha256": "b4520a37c965441b65012b0e4550f4d4ad19d45662cdff3cc3c912df563abe95",
@@ -2549,7 +2725,12 @@
       "id": "b4520a37c965441b",
       "score_metadata": 43.6,
       "selection_basis": "âncora verificada",
-      "status": "selected_not_decompiled"
+      "status": "selected_not_decompiled",
+      "investigation_targets": [
+        "Identificar retângulos de atlas, pivôs e extração de frames por região.",
+        "Catalogar atlas, recursos gráficos e quantização; quantificar custo descompactado.",
+        "Examinar como lógica e recursos são representados com poucas classes."
+      ]
     },
     {
       "jar_sha256": "a6c3b4e7de653f957283a6f101e2a3ccb75fff01aa5ebcb5824c0e567f3eb384",
@@ -2591,7 +2772,10 @@
       "id": "a6c3b4e7de653f95",
       "score_metadata": 51.0,
       "selection_basis": "âncora verificada",
-      "status": "selected_not_decompiled"
+      "status": "selected_not_decompiled",
+      "investigation_targets": [
+        "Desmontar chamadas drawPixels e decidir se são efeitos, blit ou render de software."
+      ]
     },
     {
       "jar_sha256": "55b180a980b1cc2bb29b9d661a5a65131e1b25ace919aa83a6b5683232b980a8",
@@ -2647,7 +2831,10 @@
       "id": "55b180a980b1cc2b",
       "score_metadata": 55.6,
       "selection_basis": "âncora verificada",
-      "status": "selected_not_decompiled"
+      "status": "selected_not_decompiled",
+      "investigation_targets": [
+        "Catalogar atlas, recursos gráficos e quantização; quantificar custo descompactado."
+      ]
     },
     {
       "jar_sha256": "7735ee34ba383ab83b768c5b0f1deec13f4ff880d5593f3faf99622a9055f90c",
@@ -2693,7 +2880,10 @@
       "id": "7735ee34ba383ab8",
       "score_metadata": 59.0,
       "selection_basis": "âncora verificada",
-      "status": "selected_not_decompiled"
+      "status": "selected_not_decompiled",
+      "investigation_targets": [
+        "Desmontar chamadas drawPixels e decidir se são efeitos, blit ou render de software."
+      ]
     },
     {
       "jar_sha256": "493f99e040eba12023fba49af15c846de245da8880ac9820bdb85190c0e097b1",
@@ -2732,7 +2922,10 @@
       "id": "493f99e040eba120",
       "score_metadata": 33.8,
       "selection_basis": "âncora verificada",
-      "status": "selected_not_decompiled"
+      "status": "selected_not_decompiled",
+      "investigation_targets": [
+        "Auditar distribuição dos bytes entre lógica e recursos, inclusive formatos binários."
+      ]
     },
     {
       "jar_sha256": "41516940885040bb8b551818f02d588af2fff7220b63c4a1e2f47ba6f83c5011",
@@ -2775,7 +2968,10 @@
       "id": "41516940885040bb",
       "score_metadata": 45.2,
       "selection_basis": "âncora verificada",
-      "status": "selected_not_decompiled"
+      "status": "selected_not_decompiled",
+      "investigation_targets": [
+        "Analisar busca, heurísticas, regras, simulação e serialização. Confirmar a hipótese com classes e métodos reais."
+      ]
     },
     {
       "jar_sha256": "fd6839865d23cafded13433feadb3626e0f3670efc9fc5696fecb0fccf07dd7e",
@@ -2822,7 +3018,10 @@
       "id": "fd6839865d23cafd",
       "score_metadata": 46.8,
       "selection_basis": "âncora verificada",
-      "status": "selected_not_decompiled"
+      "status": "selected_not_decompiled",
+      "investigation_targets": [
+        "Desmontar chamadas drawPixels e decidir se são efeitos, blit ou render de software."
+      ]
     },
     {
       "jar_sha256": "019bed0ab5e9510e760e5847a86dfb5e5e15c5054b688f147e7a0c81f2a33d2d",
@@ -2863,7 +3062,10 @@
       "id": "019bed0ab5e9510e",
       "score_metadata": 47.6,
       "selection_basis": "âncora verificada",
-      "status": "selected_not_decompiled"
+      "status": "selected_not_decompiled",
+      "investigation_targets": [
+        "Catalogar atlas, recursos gráficos e quantização; quantificar custo descompactado."
+      ]
     },
     {
       "jar_sha256": "ca2ac0f3a761209eaf82fef6df33300b5393c701162589d59be180c3af715b2d",
@@ -2922,7 +3124,10 @@
       "id": "ca2ac0f3a761209e",
       "score_metadata": 37.6,
       "selection_basis": "âncora verificada",
-      "status": "selected_not_decompiled"
+      "status": "selected_not_decompiled",
+      "investigation_targets": [
+        "Analisar busca, heurísticas, regras, simulação e serialização. Confirmar a hipótese com classes e métodos reais."
+      ]
     },
     {
       "jar_sha256": "91a5793d3a8d57ceb11b9b57a4d3d1787051f68682477395bd20d01ac5aeae92",
@@ -2985,7 +3190,10 @@
       "id": "91a5793d3a8d57ce",
       "score_metadata": 61.2,
       "selection_basis": "âncora verificada",
-      "status": "selected_not_decompiled"
+      "status": "selected_not_decompiled",
+      "investigation_targets": [
+        "Analisar busca, heurísticas, regras, simulação e serialização. Confirmar a hipótese com classes e métodos reais."
+      ]
     },
     {
       "jar_sha256": "d5d3da079ac379e9a90a5ce65a9596b39c5fcb66de4cb868f9004e4141f71201",
@@ -3034,7 +3242,11 @@
       "id": "d5d3da079ac379e9",
       "score_metadata": 108.75,
       "selection_basis": "âncora verificada",
-      "status": "selected_not_decompiled"
+      "status": "selected_not_decompiled",
+      "investigation_targets": [
+        "Catalogar atlas, recursos gráficos e quantização; quantificar custo descompactado.",
+        "Identificar formatos de áudio, política de disparos e armazenamento."
+      ]
     },
     {
       "jar_sha256": "a42501ccf16b7e00d9f8e3a3a75a25e3e235d9652343f2b9298738eb86bd7b44",
@@ -3079,7 +3291,10 @@
       "id": "a42501ccf16b7e00",
       "score_metadata": 70.15,
       "selection_basis": "âncora verificada",
-      "status": "selected_not_decompiled"
+      "status": "selected_not_decompiled",
+      "investigation_targets": [
+        "Catalogar atlas, recursos gráficos e quantização; quantificar custo descompactado."
+      ]
     },
     {
       "jar_sha256": "8e52c49e9e419c9bc463dcc429cf85e9e633616c1e18f7f30f150388f5788db6",
@@ -3118,7 +3333,12 @@
       "id": "8e52c49e9e419c9b",
       "score_metadata": 93.8,
       "selection_basis": "âncora verificada",
-      "status": "selected_not_decompiled"
+      "status": "selected_not_decompiled",
+      "investigation_targets": [
+        "Catalogar atlas, recursos gráficos e quantização; quantificar custo descompactado.",
+        "Identificar formatos de áudio, política de disparos e armazenamento.",
+        "Examinar como lógica e recursos são representados com poucas classes."
+      ]
     },
     {
       "jar_sha256": "cbbc05ac00ad362425dd6a70a6b6f75094310b5a13c1ac8a3d51f7fcf3348729",
@@ -3160,7 +3380,13 @@
       "id": "cbbc05ac00ad3624",
       "score_metadata": 104.95,
       "selection_basis": "âncora verificada",
-      "status": "selected_not_decompiled"
+      "status": "selected_not_decompiled",
+      "investigation_targets": [
+        "Examinar estados, frames, colisão e composição de sprites.",
+        "Catalogar atlas, recursos gráficos e quantização; quantificar custo descompactado.",
+        "Identificar formatos de áudio, política de disparos e armazenamento.",
+        "Examinar como lógica e recursos são representados com poucas classes."
+      ]
     },
     {
       "jar_sha256": "2ea836c6af6cb0ff1f10cc8ef92bce77bccf7367b5c0ddd5c27f60f248c0d4b8",
@@ -3198,7 +3424,10 @@
       "id": "2ea836c6af6cb0ff",
       "score_metadata": 45.5,
       "selection_basis": "âncora verificada",
-      "status": "selected_not_decompiled"
+      "status": "selected_not_decompiled",
+      "investigation_targets": [
+        "Examinar como lógica e recursos são representados com poucas classes."
+      ]
     },
     {
       "jar_sha256": "fa19c43c48e7e587cea7b9eed081dec848b71a4f14303f038b4973a56db8bbfa",
@@ -3244,7 +3473,10 @@
       "id": "fa19c43c48e7e587",
       "score_metadata": 51.85,
       "selection_basis": "âncora verificada",
-      "status": "selected_not_decompiled"
+      "status": "selected_not_decompiled",
+      "investigation_targets": [
+        "Examinar estados, frames, colisão e composição de sprites."
+      ]
     },
     {
       "jar_sha256": "3a3bacdeac964a802cd8159c035ca8c197a15f55eb2c951691aa14cd4675c9e0",
@@ -3300,7 +3532,10 @@
       "id": "3a3bacdeac964a80",
       "score_metadata": 70.0,
       "selection_basis": "âncora verificada",
-      "status": "selected_not_decompiled"
+      "status": "selected_not_decompiled",
+      "investigation_targets": [
+        "Catalogar atlas, recursos gráficos e quantização; quantificar custo descompactado."
+      ]
     },
     {
       "jar_sha256": "454b6b9b846ec70d093d893f020cda90186e64392ef5117f188112b442348eb4",
@@ -3354,7 +3589,11 @@
       "id": "454b6b9b846ec70d",
       "score_metadata": 52.8,
       "selection_basis": "âncora verificada",
-      "status": "selected_not_decompiled"
+      "status": "selected_not_decompiled",
+      "investigation_targets": [
+        "Desmontar chamadas drawPixels e decidir se são efeitos, blit ou render de software.",
+        "Identificar formatos de áudio, política de disparos e armazenamento."
+      ]
     },
     {
       "jar_sha256": "327a5cb31aa29a6f7c04122f42d7b74b56dfd4e534dab1152003d7b09bee6bc1",
@@ -3406,7 +3645,10 @@
       "id": "327a5cb31aa29a6f",
       "score_metadata": 41.65,
       "selection_basis": "âncora verificada",
-      "status": "selected_not_decompiled"
+      "status": "selected_not_decompiled",
+      "investigation_targets": [
+        "Catalogar atlas, recursos gráficos e quantização; quantificar custo descompactado."
+      ]
     },
     {
       "jar_sha256": "80e42bf52df75a45350f23420e0115af318a7aac8df578bb31719b812729c6ff",
@@ -3453,7 +3695,10 @@
       "id": "80e42bf52df75a45",
       "score_metadata": 52.65,
       "selection_basis": "âncora verificada",
-      "status": "selected_not_decompiled"
+      "status": "selected_not_decompiled",
+      "investigation_targets": [
+        "Desmontar chamadas drawPixels e decidir se são efeitos, blit ou render de software."
+      ]
     },
     {
       "jar_sha256": "ce01f323fe1808870767f5a6d1563d35ee5d18b7262e42b0a07191193f6f304f",
@@ -3495,7 +3740,10 @@
       "id": "ce01f323fe180887",
       "score_metadata": 17.45,
       "selection_basis": "âncora verificada",
-      "status": "selected_not_decompiled"
+      "status": "selected_not_decompiled",
+      "investigation_targets": [
+        "Investigar compressão de texturas, spritesheets, efeitos e carregamento. Confirmar a hipótese com classes e métodos reais."
+      ]
     },
     {
       "jar_sha256": "26afb501d7baa3339b1c56e755e5d8753678f14b0b5f91820d4d84ec3501880b",
@@ -3538,7 +3786,57 @@
       "id": "26afb501d7baa333",
       "score_metadata": 52.1,
       "selection_basis": "âncora verificada",
-      "status": "selected_not_decompiled"
+      "status": "selected_not_decompiled",
+      "investigation_targets": [
+        "Identificar formatos de áudio, política de disparos e armazenamento."
+      ]
+    },
+    {
+      "jar_sha256": "f83ec4dc56cc9cb747e485d6bb60c500278986ec6c48b0f2a5b0f6a00ec8eebe",
+      "jar_path": "All Java Mobile Phone Games/C/Com2Us Bowling 2/c2ubowling2.jar",
+      "jad_path": "All Java Mobile Phone Games/C/Com2Us Bowling 2/c2ubowling2.jad",
+      "game_title": "C2S_Bowling2",
+      "batch": 11,
+      "bytes": 89813,
+      "classes": 4,
+      "images": 19,
+      "audio": 10,
+      "png_indexed": 19,
+      "api_refs": [
+        "GameCanvas",
+        "MIDP Graphics",
+        "MMAPI audio",
+        "RMS persistence",
+        "Sprite",
+        "Thread.sleep"
+      ],
+      "method_symbols": [
+        "drawImage",
+        "fillRect",
+        "getResourceAsStream",
+        "repaint"
+      ],
+      "class_names": [
+        "Midlet.class",
+        "a.class",
+        "b.class",
+        "c.class"
+      ],
+      "estimated_png_rgba_bytes": 884952,
+      "rank": 70,
+      "tier": "principal",
+      "track": "assets",
+      "track_name": "Arte, recursos e animação",
+      "study_question": "Investigar compressão de texturas, spritesheets, efeitos e carregamento.",
+      "id": "f83ec4dc56cc9cb7",
+      "score_metadata": 71.95,
+      "selection_basis": "âncora verificada",
+      "status": "selected_not_decompiled",
+      "investigation_targets": [
+        "Examinar estados, frames, colisão e composição de sprites.",
+        "Identificar formatos de áudio, política de disparos e armazenamento.",
+        "Examinar como lógica e recursos são representados com poucas classes."
+      ]
     },
     {
       "jar_sha256": "a61a572ffbf67fe2d4a2d03255bf868a605c9937d43029a36eeff6265b0c311c",
@@ -3572,7 +3870,7 @@
         "StealthMidlet.class"
       ],
       "estimated_png_rgba_bytes": 2304,
-      "rank": 70,
+      "rank": 71,
       "tier": "principal",
       "track": "assets",
       "track_name": "Arte, recursos e animação",
@@ -3580,7 +3878,10 @@
       "id": "a61a572ffbf67fe2",
       "score_metadata": 37.7,
       "selection_basis": "âncora verificada",
-      "status": "selected_not_decompiled"
+      "status": "selected_not_decompiled",
+      "investigation_targets": [
+        "Investigar compressão de texturas, spritesheets, efeitos e carregamento. Confirmar a hipótese com classes e métodos reais."
+      ]
     },
     {
       "jar_sha256": "c058b21868b721d0aa3f6e661bf8c72150a93eb09a5aee390300a089574c8aa5",
@@ -3625,7 +3926,7 @@
         "com/nokia/mid/sound/SoundListener.class"
       ],
       "estimated_png_rgba_bytes": 434492,
-      "rank": 71,
+      "rank": 72,
       "tier": "principal",
       "track": "assets",
       "track_name": "Arte, recursos e animação",
@@ -3633,7 +3934,11 @@
       "id": "c058b21868b721d0",
       "score_metadata": 44.0,
       "selection_basis": "âncora verificada",
-      "status": "selected_not_decompiled"
+      "status": "selected_not_decompiled",
+      "investigation_targets": [
+        "Desmontar chamadas drawPixels e decidir se são efeitos, blit ou render de software.",
+        "Identificar formatos de áudio, política de disparos e armazenamento."
+      ]
     },
     {
       "jar_sha256": "1407822bcd622f558b014d5380cff685c2e6e7cade068cdb8b42b08047265b52",
@@ -3672,7 +3977,7 @@
         "com/nokia/mid/sound/SoundListener.class"
       ],
       "estimated_png_rgba_bytes": 262492,
-      "rank": 72,
+      "rank": 73,
       "tier": "principal",
       "track": "assets",
       "track_name": "Arte, recursos e animação",
@@ -3680,48 +3985,10 @@
       "id": "1407822bcd622f55",
       "score_metadata": 49.5,
       "selection_basis": "âncora verificada",
-      "status": "selected_not_decompiled"
-    },
-    {
-      "jar_sha256": "083213262d2922ec494dfeb18f85c7d6872587c4921bcff2bbd495fcb06c0159",
-      "jar_path": "828 Java Games/GhostsnGoblins.jar",
-      "jad_path": "",
-      "game_title": "Ghosts n Goblins [terjef]",
-      "batch": 4,
-      "bytes": 193819,
-      "classes": 4,
-      "images": 195,
-      "audio": 4,
-      "png_indexed": 191,
-      "api_refs": [
-        "MIDP Graphics",
-        "MMAPI audio",
-        "RMS persistence",
-        "Thread.sleep"
-      ],
-      "method_symbols": [
-        "drawImage",
-        "fillRect",
-        "flushGraphics",
-        "getResourceAsStream",
-        "repaint"
-      ],
-      "class_names": [
-        "b.class",
-        "c.class",
-        "d.class",
-        "ghostsnGoblins.class"
-      ],
-      "estimated_png_rgba_bytes": 397288,
-      "rank": 73,
-      "tier": "principal",
-      "track": "assets",
-      "track_name": "Arte, recursos e animação",
-      "study_question": "Investigar compressão de texturas, spritesheets, efeitos e carregamento.",
-      "id": "083213262d2922ec",
-      "score_metadata": 108.2,
-      "selection_basis": "pontuação estrutural",
-      "status": "selected_not_decompiled"
+      "status": "selected_not_decompiled",
+      "investigation_targets": [
+        "Desmontar chamadas drawPixels e decidir se são efeitos, blit ou render de software."
+      ]
     },
     {
       "jar_sha256": "eb05f180891e1f8d182933911abf905d8467503ef8598edd8dea1da717ab15ec",
@@ -3765,7 +4032,11 @@
       "id": "eb05f180891e1f8d",
       "score_metadata": 40.88,
       "selection_basis": "âncora verificada",
-      "status": "selected_not_decompiled"
+      "status": "selected_not_decompiled",
+      "investigation_targets": [
+        "Catalogar atlas, recursos gráficos e quantização; quantificar custo descompactado.",
+        "Identificar formatos de áudio, política de disparos e armazenamento."
+      ]
     },
     {
       "jar_sha256": "6da9561396445c91ec5c82f04d53b98922f846f4fe61b94fd576a0a575b7e0d8",
@@ -3816,7 +4087,10 @@
       "id": "6da9561396445c91",
       "score_metadata": 46.44,
       "selection_basis": "âncora verificada",
-      "status": "selected_not_decompiled"
+      "status": "selected_not_decompiled",
+      "investigation_targets": [
+        "Desmontar chamadas drawPixels e decidir se são efeitos, blit ou render de software."
+      ]
     },
     {
       "jar_sha256": "2fd5294dcb1b7130eea61170e0249ca0b4d9505e8d142508ceace4f993318672",
@@ -3860,7 +4134,10 @@
       "id": "2fd5294dcb1b7130",
       "score_metadata": 34.08,
       "selection_basis": "âncora verificada",
-      "status": "selected_not_decompiled"
+      "status": "selected_not_decompiled",
+      "investigation_targets": [
+        "Investigar movimento, colisão, física simplificada e ritmo de atualização. Confirmar a hipótese com classes e métodos reais."
+      ]
     },
     {
       "jar_sha256": "94bcbb2f4110505805eee2109d1cfd03ae3805345c8ae04f67b8f9ae17791e7d",
@@ -3901,7 +4178,10 @@
       "id": "94bcbb2f41105058",
       "score_metadata": 41.36,
       "selection_basis": "âncora verificada",
-      "status": "selected_not_decompiled"
+      "status": "selected_not_decompiled",
+      "investigation_targets": [
+        "Desmontar chamadas drawPixels e decidir se são efeitos, blit ou render de software."
+      ]
     },
     {
       "jar_sha256": "14f89ecbf00ce4e6df9546181446855965ad212aae10376b568a9faa8d967b39",
@@ -3955,7 +4235,10 @@
       "id": "14f89ecbf00ce4e6",
       "score_metadata": 51.12,
       "selection_basis": "âncora verificada",
-      "status": "selected_not_decompiled"
+      "status": "selected_not_decompiled",
+      "investigation_targets": [
+        "Desmontar chamadas drawPixels e decidir se são efeitos, blit ou render de software."
+      ]
     },
     {
       "jar_sha256": "d691b7148bf9eb895555c913a6e9036089e4063b551e964b4128f4e9212ea532",
@@ -4000,7 +4283,10 @@
       "id": "d691b7148bf9eb89",
       "score_metadata": 59.92,
       "selection_basis": "âncora verificada",
-      "status": "selected_not_decompiled"
+      "status": "selected_not_decompiled",
+      "investigation_targets": [
+        "Catalogar atlas, recursos gráficos e quantização; quantificar custo descompactado."
+      ]
     },
     {
       "jar_sha256": "cc731afda2bfb6d6c7f93b326f59a029f6568d3fd1b7379215f213cf333d33a2",
@@ -4038,7 +4324,10 @@
       "id": "cc731afda2bfb6d6",
       "score_metadata": 33.52,
       "selection_basis": "âncora verificada",
-      "status": "selected_not_decompiled"
+      "status": "selected_not_decompiled",
+      "investigation_targets": [
+        "Examinar como lógica e recursos são representados com poucas classes."
+      ]
     },
     {
       "jar_sha256": "dce18d77d23d7dd42c8b6482e459af5fa56c136c38350254e8d9cc14abcb8d1e",
@@ -4077,7 +4366,10 @@
       "id": "dce18d77d23d7dd4",
       "score_metadata": 33.84,
       "selection_basis": "âncora verificada",
-      "status": "selected_not_decompiled"
+      "status": "selected_not_decompiled",
+      "investigation_targets": [
+        "Examinar como lógica e recursos são representados com poucas classes."
+      ]
     },
     {
       "jar_sha256": "2b22b8c7a1039077682cff17d9c8eb4545be4484f734112f80ae5ae958de3f4b",
@@ -4143,7 +4435,10 @@
       "id": "2b22b8c7a1039077",
       "score_metadata": 42.36,
       "selection_basis": "âncora verificada",
-      "status": "selected_not_decompiled"
+      "status": "selected_not_decompiled",
+      "investigation_targets": [
+        "Investigar movimento, colisão, física simplificada e ritmo de atualização. Confirmar a hipótese com classes e métodos reais."
+      ]
     },
     {
       "jar_sha256": "3a353fe99e21627c6e3abdf99c83936166e6b350d08e1c7042f232904083d467",
@@ -4190,7 +4485,10 @@
       "id": "3a353fe99e21627c",
       "score_metadata": 35.12,
       "selection_basis": "âncora verificada",
-      "status": "selected_not_decompiled"
+      "status": "selected_not_decompiled",
+      "investigation_targets": [
+        "Investigar movimento, colisão, física simplificada e ritmo de atualização. Confirmar a hipótese com classes e métodos reais."
+      ]
     },
     {
       "jar_sha256": "112eb7c3ba7733cfe74012acbf653b5fb4272a3bcbc7cbd1ef4c57f5d0db7c2b",
@@ -4234,7 +4532,10 @@
       "id": "112eb7c3ba7733cf",
       "score_metadata": 59.96,
       "selection_basis": "âncora verificada",
-      "status": "selected_not_decompiled"
+      "status": "selected_not_decompiled",
+      "investigation_targets": [
+        "Investigar movimento, colisão, física simplificada e ritmo de atualização. Confirmar a hipótese com classes e métodos reais."
+      ]
     },
     {
       "jar_sha256": "14ffb8a0614093f6292487e49c9dd490ec7839457b291070c57559f218883e3c",
@@ -4278,7 +4579,10 @@
       "id": "14ffb8a0614093f6",
       "score_metadata": 38.4,
       "selection_basis": "âncora verificada",
-      "status": "selected_not_decompiled"
+      "status": "selected_not_decompiled",
+      "investigation_targets": [
+        "Identificar formatos de áudio, política de disparos e armazenamento."
+      ]
     },
     {
       "jar_sha256": "42d466335da60c67ebbf0dc025a5554caa7a0feefd55989c04d133520bb2f825",
@@ -4314,7 +4618,11 @@
       "id": "42d466335da60c67",
       "score_metadata": 46.96,
       "selection_basis": "âncora verificada",
-      "status": "selected_not_decompiled"
+      "status": "selected_not_decompiled",
+      "investigation_targets": [
+        "Catalogar atlas, recursos gráficos e quantização; quantificar custo descompactado.",
+        "Examinar como lógica e recursos são representados com poucas classes."
+      ]
     },
     {
       "jar_sha256": "03e77dd47bcf8147540eaaae0fdeccbefcde9444e531f3938b758ddae93135fc",
@@ -4356,7 +4664,10 @@
       "id": "03e77dd47bcf8147",
       "score_metadata": 41.8,
       "selection_basis": "âncora verificada",
-      "status": "selected_not_decompiled"
+      "status": "selected_not_decompiled",
+      "investigation_targets": [
+        "Desmontar chamadas drawPixels e decidir se são efeitos, blit ou render de software."
+      ]
     },
     {
       "jar_sha256": "5a6f6133dd6a39cf71392583be54dbb6404fc5e9d010ececca90fe189de051d9",
@@ -4399,7 +4710,10 @@
       "id": "5a6f6133dd6a39cf",
       "score_metadata": 39.8,
       "selection_basis": "âncora verificada",
-      "status": "selected_not_decompiled"
+      "status": "selected_not_decompiled",
+      "investigation_targets": [
+        "Catalogar atlas, recursos gráficos e quantização; quantificar custo descompactado."
+      ]
     },
     {
       "jar_sha256": "17f8b346030777648e4e2dc9a56b2e8f1330b6f4221b4ad298bcfe9c0bc881ea",
@@ -4444,7 +4758,10 @@
       "id": "17f8b34603077764",
       "score_metadata": 50.6,
       "selection_basis": "âncora verificada",
-      "status": "selected_not_decompiled"
+      "status": "selected_not_decompiled",
+      "investigation_targets": [
+        "Auditar distribuição dos bytes entre lógica e recursos, inclusive formatos binários."
+      ]
     },
     {
       "jar_sha256": "954ec9e0a69acbe7794f057b2a217d98939edbe00a4666bb61216e203c93d3a7",
@@ -4484,7 +4801,10 @@
       "id": "954ec9e0a69acbe7",
       "score_metadata": 49.1,
       "selection_basis": "âncora verificada",
-      "status": "selected_not_decompiled"
+      "status": "selected_not_decompiled",
+      "investigation_targets": [
+        "Auditar distribuição dos bytes entre lógica e recursos, inclusive formatos binários."
+      ]
     },
     {
       "jar_sha256": "52714b323033b2573af147239c08be01382dccd852ec72726fe7021f73fea289",
@@ -4574,7 +4894,10 @@
       "id": "52714b323033b257",
       "score_metadata": 53.7,
       "selection_basis": "âncora verificada",
-      "status": "selected_not_decompiled"
+      "status": "selected_not_decompiled",
+      "investigation_targets": [
+        "Desmontar chamadas drawPixels e decidir se são efeitos, blit ou render de software."
+      ]
     },
     {
       "jar_sha256": "28ed3efc8184427e2887d7d0ea360e031595b12c2fee6cd6445f17ec0f29017f",
@@ -4619,7 +4942,10 @@
       "id": "28ed3efc8184427e",
       "score_metadata": 50.6,
       "selection_basis": "âncora verificada",
-      "status": "selected_not_decompiled"
+      "status": "selected_not_decompiled",
+      "investigation_targets": [
+        "Auditar distribuição dos bytes entre lógica e recursos, inclusive formatos binários."
+      ]
     },
     {
       "jar_sha256": "413932bfdf18c0ba19759c04142c6b078e396589561401bf3b737cd64bbe607b",
@@ -4664,7 +4990,10 @@
       "id": "413932bfdf18c0ba",
       "score_metadata": 47.0,
       "selection_basis": "âncora verificada",
-      "status": "selected_not_decompiled"
+      "status": "selected_not_decompiled",
+      "investigation_targets": [
+        "Investigar recursos binários, som e estruturas ultraleves. Confirmar a hipótese com classes e métodos reais."
+      ]
     },
     {
       "jar_sha256": "6df7ffc301a3524aa0935ac23311d9e132ce4c1dbf81129e5485052afc0828f2",
@@ -4709,7 +5038,10 @@
       "id": "6df7ffc301a3524a",
       "score_metadata": 38.8,
       "selection_basis": "âncora verificada",
-      "status": "selected_not_decompiled"
+      "status": "selected_not_decompiled",
+      "investigation_targets": [
+        "Identificar formatos de áudio, política de disparos e armazenamento."
+      ]
     },
     {
       "jar_sha256": "42c9116c1b1933d80d17ad5bf2e7f6a96a0a8dbaa2b828a9a05d1b9c6336e9b1",
@@ -4757,7 +5089,11 @@
       "id": "42c9116c1b1933d8",
       "score_metadata": 44.5,
       "selection_basis": "âncora verificada",
-      "status": "selected_not_decompiled"
+      "status": "selected_not_decompiled",
+      "investigation_targets": [
+        "Identificar retângulos de atlas, pivôs e extração de frames por região.",
+        "Identificar formatos de áudio, política de disparos e armazenamento."
+      ]
     },
     {
       "jar_sha256": "4de25ce2e634a03a1c9fb37d7994cf1cf23431e415c858bb8764fec577257689",
@@ -4841,7 +5177,10 @@
       "id": "4de25ce2e634a03a",
       "score_metadata": 68.0,
       "selection_basis": "âncora verificada",
-      "status": "selected_not_decompiled"
+      "status": "selected_not_decompiled",
+      "investigation_targets": [
+        "Identificar formatos de áudio, política de disparos e armazenamento."
+      ]
     },
     {
       "jar_sha256": "8fb080ee4f7c4699f0dfae08c409fd4cc97af32744b01c9d3ee43318950ce58b",
@@ -4881,7 +5220,10 @@
       "id": "8fb080ee4f7c4699",
       "score_metadata": 42.5,
       "selection_basis": "âncora verificada",
-      "status": "selected_not_decompiled"
+      "status": "selected_not_decompiled",
+      "investigation_targets": [
+        "Investigar recursos binários, som e estruturas ultraleves. Confirmar a hipótese com classes e métodos reais."
+      ]
     },
     {
       "jar_sha256": "66cfeea9801ae9ac22179755fc726b5c10d7890353c155690d34d633ad8fb648",
@@ -4924,7 +5266,10 @@
       "id": "66cfeea9801ae9ac",
       "score_metadata": 20.5,
       "selection_basis": "âncora verificada",
-      "status": "selected_not_decompiled"
+      "status": "selected_not_decompiled",
+      "investigation_targets": [
+        "Desmontar chamadas drawPixels e decidir se são efeitos, blit ou render de software."
+      ]
     },
     {
       "jar_sha256": "ffb5580c8cf5f05cc64adab3fb2a412441201e6d586ecb4b7676540b966b6843",
@@ -4966,7 +5311,10 @@
       "id": "ffb5580c8cf5f05c",
       "score_metadata": 33.7,
       "selection_basis": "âncora verificada",
-      "status": "selected_not_decompiled"
+      "status": "selected_not_decompiled",
+      "investigation_targets": [
+        "Investigar recursos binários, som e estruturas ultraleves. Confirmar a hipótese com classes e métodos reais."
+      ]
     },
     {
       "jar_sha256": "2d9af4f5b5b2335ea158c07ab635c8b8bde1474db5dc0f67fc769dec531ad28f",
@@ -5019,7 +5367,10 @@
       "id": "2d9af4f5b5b2335e",
       "score_metadata": 37.8,
       "selection_basis": "âncora verificada",
-      "status": "selected_not_decompiled"
+      "status": "selected_not_decompiled",
+      "investigation_targets": [
+        "Desmontar chamadas drawPixels e decidir se são efeitos, blit ou render de software."
+      ]
     }
   ],
   "reserva": [
@@ -5069,7 +5420,10 @@
       "id": "286ac91396a4041d",
       "score_metadata": 36.6,
       "selection_basis": "âncora verificada",
-      "status": "selected_not_decompiled"
+      "status": "selected_not_decompiled",
+      "investigation_targets": [
+        "Identificar algoritmos reais de projeção, buffers, M3G e rasterização em software. Confirmar a hipótese com classes e métodos reais."
+      ]
     },
     {
       "jar_sha256": "82c41d4a746ec3e9231be5d8ae5e00ffe56c32cea943c6b9c4f1d6aa8931fe2a",
@@ -5121,7 +5475,10 @@
       "id": "82c41d4a746ec3e9",
       "score_metadata": 85.2,
       "selection_basis": "âncora verificada",
-      "status": "selected_not_decompiled"
+      "status": "selected_not_decompiled",
+      "investigation_targets": [
+        "Verificar se usa cenas, modelos, transformações e animações M3G; medir custo da representação."
+      ]
     },
     {
       "jar_sha256": "6de103577398de73acd1c127fc419194bac95ff84091b2d595b6a66f2075fab4",
@@ -5164,56 +5521,10 @@
       "id": "6de103577398de73",
       "score_metadata": 31.1,
       "selection_basis": "âncora verificada",
-      "status": "selected_not_decompiled"
-    },
-    {
-      "jar_sha256": "570137fb12a30c7d010d071d7792c8f9450e29ce77e26206a690bd41c511f75d",
-      "jar_path": "All Java Mobile Phone Games/S/Speedchaser3D(1pant)/Speedchaser3D_6630_6680.jar",
-      "jad_path": "All Java Mobile Phone Games/S/Speedchaser3D(1pant)/Speedchaser3D_6630_6680.jad",
-      "game_title": "SpeedChaser3D",
-      "batch": 16,
-      "bytes": 176783,
-      "classes": 11,
-      "images": 22,
-      "audio": 3,
-      "png_indexed": 22,
-      "api_refs": [
-        "GameCanvas",
-        "J2ME M3G",
-        "MIDP Graphics",
-        "MMAPI audio",
-        "RMS persistence",
-        "Thread.sleep"
-      ],
-      "method_symbols": [
-        "drawImage",
-        "fillRect",
-        "flushGraphics",
-        "getResourceAsStream"
-      ],
-      "class_names": [
-        "a.class",
-        "b.class",
-        "c.class",
-        "d.class",
-        "e.class",
-        "f.class",
-        "g.class",
-        "h.class",
-        "i.class",
-        "j.class",
-        "z.class"
-      ],
-      "estimated_png_rgba_bytes": 616704,
-      "rank": 4,
-      "tier": "reserva",
-      "track": "render3d",
-      "track_name": "3D e rasterização",
-      "study_question": "Identificar algoritmos reais de projeção, buffers, M3G e rasterização em software.",
-      "id": "570137fb12a30c7d",
-      "score_metadata": 84.3,
-      "selection_basis": "âncora verificada",
-      "status": "selected_not_decompiled"
+      "status": "selected_not_decompiled",
+      "investigation_targets": [
+        "Identificar algoritmos reais de projeção, buffers, M3G e rasterização em software. Confirmar a hipótese com classes e métodos reais."
+      ]
     },
     {
       "jar_sha256": "ac265a82ef05383d838406944b42b72406bcbd56f9614aa046612ede63012d4c",
@@ -5255,7 +5566,7 @@
         "mm/utils/b.class"
       ],
       "estimated_png_rgba_bytes": 1049148,
-      "rank": 5,
+      "rank": 4,
       "tier": "reserva",
       "track": "worlds",
       "track_name": "Mundos, mapas, sprites",
@@ -5263,7 +5574,12 @@
       "id": "ac265a82ef05383d",
       "score_metadata": 36.78,
       "selection_basis": "âncora verificada",
-      "status": "selected_not_decompiled"
+      "status": "selected_not_decompiled",
+      "investigation_targets": [
+        "Desmontar chamadas drawPixels e decidir se são efeitos, blit ou render de software.",
+        "Examinar estados, frames, colisão e composição de sprites.",
+        "Identificar formatos de áudio, política de disparos e armazenamento."
+      ]
     },
     {
       "jar_sha256": "ff78f2a545ad67cbaa7859d770016e28c24b67beae44c0adc86bb46dfc784bcf",
@@ -5303,7 +5619,7 @@
         "l.class"
       ],
       "estimated_png_rgba_bytes": 209632,
-      "rank": 6,
+      "rank": 5,
       "tier": "reserva",
       "track": "worlds",
       "track_name": "Mundos, mapas, sprites",
@@ -5311,7 +5627,10 @@
       "id": "ff78f2a545ad67cb",
       "score_metadata": 9.55,
       "selection_basis": "âncora verificada",
-      "status": "selected_not_decompiled"
+      "status": "selected_not_decompiled",
+      "investigation_targets": [
+        "Identificar formatos de áudio, política de disparos e armazenamento."
+      ]
     },
     {
       "jar_sha256": "01af4daf2a76da6e2d33c5ad3b3640bdbffd3d6d869f3e9c0cff5d9266ac0cf4",
@@ -5343,7 +5662,7 @@
         "jchessmid/e.class"
       ],
       "estimated_png_rgba_bytes": 192364,
-      "rank": 7,
+      "rank": 6,
       "tier": "reserva",
       "track": "strategy",
       "track_name": "IA, regras e estratégia",
@@ -5351,7 +5670,10 @@
       "id": "01af4daf2a76da6e",
       "score_metadata": 42.8,
       "selection_basis": "âncora verificada",
-      "status": "selected_not_decompiled"
+      "status": "selected_not_decompiled",
+      "investigation_targets": [
+        "Analisar busca, heurísticas, regras, simulação e serialização. Confirmar a hipótese com classes e métodos reais."
+      ]
     },
     {
       "jar_sha256": "b180c06d53ea23c98f44730c0181397a0203b16d6f77865e49176bdd1d01a221",
@@ -5385,7 +5707,7 @@
         "com/lunagames/dig/b.class"
       ],
       "estimated_png_rgba_bytes": 1167740,
-      "rank": 8,
+      "rank": 7,
       "tier": "reserva",
       "track": "strategy",
       "track_name": "IA, regras e estratégia",
@@ -5393,7 +5715,10 @@
       "id": "b180c06d53ea23c9",
       "score_metadata": 46.8,
       "selection_basis": "âncora verificada",
-      "status": "selected_not_decompiled"
+      "status": "selected_not_decompiled",
+      "investigation_targets": [
+        "Analisar busca, heurísticas, regras, simulação e serialização. Confirmar a hipótese com classes e métodos reais."
+      ]
     },
     {
       "jar_sha256": "c0ac2803ad62edbcd7908e4184884ea5f942ebcfdc44866298f2fc34ff74431b",
@@ -5455,7 +5780,7 @@
         "y.class"
       ],
       "estimated_png_rgba_bytes": 1193056,
-      "rank": 9,
+      "rank": 8,
       "tier": "reserva",
       "track": "strategy",
       "track_name": "IA, regras e estratégia",
@@ -5463,7 +5788,10 @@
       "id": "c0ac2803ad62edbc",
       "score_metadata": 56.2,
       "selection_basis": "âncora verificada",
-      "status": "selected_not_decompiled"
+      "status": "selected_not_decompiled",
+      "investigation_targets": [
+        "Desmontar chamadas drawPixels e decidir se são efeitos, blit ou render de software."
+      ]
     },
     {
       "jar_sha256": "9ea60fbe22b3201a260b709fabcb82c4b406e77d8c6062050d0e46c1734c7848",
@@ -5496,7 +5824,7 @@
         "StuntmanMIDlet.class"
       ],
       "estimated_png_rgba_bytes": 900,
-      "rank": 10,
+      "rank": 9,
       "tier": "reserva",
       "track": "physics",
       "track_name": "Física, corrida e esportes",
@@ -5504,7 +5832,10 @@
       "id": "9ea60fbe22b3201a",
       "score_metadata": 53.36,
       "selection_basis": "âncora verificada",
-      "status": "selected_not_decompiled"
+      "status": "selected_not_decompiled",
+      "investigation_targets": [
+        "Investigar movimento, colisão, física simplificada e ritmo de atualização. Confirmar a hipótese com classes e métodos reais."
+      ]
     },
     {
       "jar_sha256": "c5df487a27e39dfec33e9a5822630a21cc3458769c5ce52fe2e6596168ecf931",
@@ -5546,7 +5877,7 @@
         "GolfMaster.class"
       ],
       "estimated_png_rgba_bytes": 2115200,
-      "rank": 11,
+      "rank": 10,
       "tier": "reserva",
       "track": "physics",
       "track_name": "Física, corrida e esportes",
@@ -5554,7 +5885,11 @@
       "id": "c5df487a27e39dfe",
       "score_metadata": 58.52,
       "selection_basis": "âncora verificada",
-      "status": "selected_not_decompiled"
+      "status": "selected_not_decompiled",
+      "investigation_targets": [
+        "Desmontar chamadas drawPixels e decidir se são efeitos, blit ou render de software.",
+        "Catalogar atlas, recursos gráficos e quantização; quantificar custo descompactado."
+      ]
     },
     {
       "jar_sha256": "5d64f0df7f85bfa107354336bcab5577540f022839230afede028b878861564c",
@@ -5593,7 +5928,7 @@
         "Main.class"
       ],
       "estimated_png_rgba_bytes": 0,
-      "rank": 12,
+      "rank": 11,
       "tier": "reserva",
       "track": "compact",
       "track_name": "Compactação, áudio e minimalismo",
@@ -5601,7 +5936,10 @@
       "id": "5d64f0df7f85bfa1",
       "score_metadata": 48.6,
       "selection_basis": "âncora verificada",
-      "status": "selected_not_decompiled"
+      "status": "selected_not_decompiled",
+      "investigation_targets": [
+        "Investigar recursos binários, som e estruturas ultraleves. Confirmar a hipótese com classes e métodos reais."
+      ]
     },
     {
       "jar_sha256": "7de4c559cd6114d384f26284dfc396e54d3909ca95d352d0bca2070b39387b7c",
@@ -5630,7 +5968,7 @@
         "PhotoPuzzleCanvas.class"
       ],
       "estimated_png_rgba_bytes": 134848,
-      "rank": 13,
+      "rank": 12,
       "tier": "reserva",
       "track": "compact",
       "track_name": "Compactação, áudio e minimalismo",
@@ -5638,7 +5976,10 @@
       "id": "7de4c559cd6114d3",
       "score_metadata": 42.5,
       "selection_basis": "âncora verificada",
-      "status": "selected_not_decompiled"
+      "status": "selected_not_decompiled",
+      "investigation_targets": [
+        "Investigar recursos binários, som e estruturas ultraleves. Confirmar a hipótese com classes e métodos reais."
+      ]
     },
     {
       "jar_sha256": "61cd3ba8a9b8ea63966646761912d29f98eca6e4b05b6c1f10fb575803334981",
@@ -5706,7 +6047,7 @@
         "GameSound$MyThread.class"
       ],
       "estimated_png_rgba_bytes": 2032056,
-      "rank": 14,
+      "rank": 13,
       "tier": "reserva",
       "track": "assets",
       "track_name": "Arte, recursos e animação",
@@ -5714,7 +6055,11 @@
       "id": "61cd3ba8a9b8ea63",
       "score_metadata": 110.7,
       "selection_basis": "pontuação estrutural",
-      "status": "selected_not_decompiled"
+      "status": "selected_not_decompiled",
+      "investigation_targets": [
+        "Catalogar atlas, recursos gráficos e quantização; quantificar custo descompactado.",
+        "Identificar formatos de áudio, política de disparos e armazenamento."
+      ]
     },
     {
       "jar_sha256": "f08c8034da70871fc6b0674288fc7b9f0d9d8a332b2b6cdb40d915372bfd25d1",
@@ -5743,7 +6088,7 @@
         "GameScreen.class"
       ],
       "estimated_png_rgba_bytes": 815648,
-      "rank": 15,
+      "rank": 14,
       "tier": "reserva",
       "track": "assets",
       "track_name": "Arte, recursos e animação",
@@ -5751,7 +6096,56 @@
       "id": "f08c8034da70871f",
       "score_metadata": 110.0,
       "selection_basis": "pontuação estrutural",
-      "status": "selected_not_decompiled"
+      "status": "selected_not_decompiled",
+      "investigation_targets": [
+        "Catalogar atlas, recursos gráficos e quantização; quantificar custo descompactado.",
+        "Examinar como lógica e recursos são representados com poucas classes."
+      ]
+    },
+    {
+      "jar_sha256": "083213262d2922ec494dfeb18f85c7d6872587c4921bcff2bbd495fcb06c0159",
+      "jar_path": "828 Java Games/GhostsnGoblins.jar",
+      "jad_path": "",
+      "game_title": "Ghosts n Goblins [terjef]",
+      "batch": 4,
+      "bytes": 193819,
+      "classes": 4,
+      "images": 195,
+      "audio": 4,
+      "png_indexed": 191,
+      "api_refs": [
+        "MIDP Graphics",
+        "MMAPI audio",
+        "RMS persistence",
+        "Thread.sleep"
+      ],
+      "method_symbols": [
+        "drawImage",
+        "fillRect",
+        "flushGraphics",
+        "getResourceAsStream",
+        "repaint"
+      ],
+      "class_names": [
+        "b.class",
+        "c.class",
+        "d.class",
+        "ghostsnGoblins.class"
+      ],
+      "estimated_png_rgba_bytes": 397288,
+      "rank": 15,
+      "tier": "reserva",
+      "track": "assets",
+      "track_name": "Arte, recursos e animação",
+      "study_question": "Investigar compressão de texturas, spritesheets, efeitos e carregamento.",
+      "id": "083213262d2922ec",
+      "score_metadata": 108.2,
+      "selection_basis": "pontuação estrutural",
+      "status": "selected_not_decompiled",
+      "investigation_targets": [
+        "Catalogar atlas, recursos gráficos e quantização; quantificar custo descompactado.",
+        "Examinar como lógica e recursos são representados com poucas classes."
+      ]
     },
     {
       "jar_sha256": "0e8834d696de2fadcfd1c1b6b9322c753dbf68cb5c7f99fc7fce42b52a57803a",
@@ -5839,7 +6233,12 @@
       "id": "0e8834d696de2fad",
       "score_metadata": 103.0,
       "selection_basis": "pontuação estrutural",
-      "status": "selected_not_decompiled"
+      "status": "selected_not_decompiled",
+      "investigation_targets": [
+        "Desmontar chamadas drawPixels e decidir se são efeitos, blit ou render de software.",
+        "Identificar retângulos de atlas, pivôs e extração de frames por região.",
+        "Catalogar atlas, recursos gráficos e quantização; quantificar custo descompactado."
+      ]
     },
     {
       "jar_sha256": "c85397f627eca2e05134bd27488fe5e1b5a8060b1ea6d717f753cb15cbd9e101",
@@ -5875,7 +6274,11 @@
       "id": "c85397f627eca2e0",
       "score_metadata": 97.2,
       "selection_basis": "pontuação estrutural",
-      "status": "selected_not_decompiled"
+      "status": "selected_not_decompiled",
+      "investigation_targets": [
+        "Catalogar atlas, recursos gráficos e quantização; quantificar custo descompactado.",
+        "Examinar como lógica e recursos são representados com poucas classes."
+      ]
     },
     {
       "jar_sha256": "9e4d006f9f0286e818c29c7c4c32c3419146619dd3b8588ce5a01b04c02ec6d4",
@@ -5966,7 +6369,10 @@
       "id": "9e4d006f9f0286e8",
       "score_metadata": 92.0,
       "selection_basis": "pontuação estrutural",
-      "status": "selected_not_decompiled"
+      "status": "selected_not_decompiled",
+      "investigation_targets": [
+        "Catalogar atlas, recursos gráficos e quantização; quantificar custo descompactado."
+      ]
     },
     {
       "jar_sha256": "75d8932f0a7d47d5b31be28a8052228015f717aefdbfe889274976bf9ee2410d",
@@ -6017,7 +6423,11 @@
       "id": "75d8932f0a7d47d5",
       "score_metadata": 89.9,
       "selection_basis": "pontuação estrutural",
-      "status": "selected_not_decompiled"
+      "status": "selected_not_decompiled",
+      "investigation_targets": [
+        "Desmontar chamadas drawPixels e decidir se são efeitos, blit ou render de software.",
+        "Identificar formatos de áudio, política de disparos e armazenamento."
+      ]
     },
     {
       "jar_sha256": "0609585cbbd5ff21ef11ab0ff6a0b5e4fd9fef4b2d1471a22b2c6dca8ea19618",
@@ -6103,7 +6513,11 @@
       "id": "0609585cbbd5ff21",
       "score_metadata": 89.65,
       "selection_basis": "pontuação estrutural",
-      "status": "selected_not_decompiled"
+      "status": "selected_not_decompiled",
+      "investigation_targets": [
+        "Catalogar atlas, recursos gráficos e quantização; quantificar custo descompactado.",
+        "Identificar formatos de áudio, política de disparos e armazenamento."
+      ]
     },
     {
       "jar_sha256": "4b0047291c8d486ee68444bc772ff5f78e81cf700fdd192bdc4c1930aa36064b",
@@ -6193,7 +6607,12 @@
       "id": "4b0047291c8d486e",
       "score_metadata": 89.28,
       "selection_basis": "pontuação estrutural",
-      "status": "selected_not_decompiled"
+      "status": "selected_not_decompiled",
+      "investigation_targets": [
+        "Verificar se usa cenas, modelos, transformações e animações M3G; medir custo da representação.",
+        "Examinar estados, frames, colisão e composição de sprites.",
+        "Catalogar atlas, recursos gráficos e quantização; quantificar custo descompactado."
+      ]
     },
     {
       "jar_sha256": "2c0d116bdcfa4404e27e3e3b293fc8faab75e15c8d4fab984527be247a22b83e",
@@ -6252,7 +6671,10 @@
       "id": "2c0d116bdcfa4404",
       "score_metadata": 85.1,
       "selection_basis": "pontuação estrutural",
-      "status": "selected_not_decompiled"
+      "status": "selected_not_decompiled",
+      "investigation_targets": [
+        "Catalogar atlas, recursos gráficos e quantização; quantificar custo descompactado."
+      ]
     },
     {
       "jar_sha256": "730a555b8386eb123d41f1dc4f52b87511d91c3da555cf547b33cd657e9417aa",
@@ -6305,7 +6727,54 @@
       "id": "730a555b8386eb12",
       "score_metadata": 82.5,
       "selection_basis": "pontuação estrutural",
-      "status": "selected_not_decompiled"
+      "status": "selected_not_decompiled",
+      "investigation_targets": [
+        "Desmontar chamadas drawPixels e decidir se são efeitos, blit ou render de software.",
+        "Catalogar atlas, recursos gráficos e quantização; quantificar custo descompactado.",
+        "Identificar formatos de áudio, política de disparos e armazenamento."
+      ]
+    },
+    {
+      "jar_sha256": "fdbc8f9562787435839f78f1a52920ca87e7eb77b3573c9930ea1e6424c0f6a4",
+      "jar_path": "All Java Mobile Phone Games/J/JBenchmark 3D/JBenchmark3D.jar",
+      "jad_path": "All Java Mobile Phone Games/J/JBenchmark 3D/JBenchmark3D.jad",
+      "game_title": "JBenchmark3D",
+      "batch": 13,
+      "bytes": 82274,
+      "classes": 5,
+      "images": 2,
+      "audio": 0,
+      "png_indexed": 0,
+      "api_refs": [
+        "GameCanvas",
+        "J2ME M3G",
+        "MIDP Graphics",
+        "Thread.sleep"
+      ],
+      "method_symbols": [
+        "fillRect",
+        "flushGraphics"
+      ],
+      "class_names": [
+        "JBenchmark3D/JBenchmark3D.class",
+        "a.class",
+        "b.class",
+        "c.class",
+        "d.class"
+      ],
+      "estimated_png_rgba_bytes": 14336,
+      "rank": 24,
+      "tier": "reserva",
+      "track": "render3d",
+      "track_name": "3D e rasterização",
+      "study_question": "Identificar algoritmos reais de projeção, buffers, M3G e rasterização em software.",
+      "id": "fdbc8f9562787435",
+      "score_metadata": 82.5,
+      "selection_basis": "pontuação estrutural",
+      "status": "selected_not_decompiled",
+      "investigation_targets": [
+        "Verificar se usa cenas, modelos, transformações e animações M3G; medir custo da representação."
+      ]
     },
     {
       "jar_sha256": "2a01922ab9e7277f1eebf82e0178142328052f03adbe880887723a73270c5492",
@@ -6332,7 +6801,7 @@
         "Fireblaster.class"
       ],
       "estimated_png_rgba_bytes": 101812,
-      "rank": 24,
+      "rank": 25,
       "tier": "reserva",
       "track": "assets",
       "track_name": "Arte, recursos e animação",
@@ -6340,57 +6809,18 @@
       "id": "2a01922ab9e7277f",
       "score_metadata": 81.4,
       "selection_basis": "pontuação estrutural",
-      "status": "selected_not_decompiled"
-    },
+      "status": "selected_not_decompiled",
+      "investigation_targets": [
+        "Catalogar atlas, recursos gráficos e quantização; quantificar custo descompactado.",
+        "Examinar como lógica e recursos são representados com poucas classes."
+      ]
+    }
+  ],
+  "technical_controls_not_games": [
     {
-      "jar_sha256": "b7334af7dbf1fb4d1a071e346230c09e3f9e7b8952abde65cea3330d4f67e48f",
-      "jar_path": "All Java Mobile Phone Games/T/Tennis Pro/TennisPro.jar",
-      "jad_path": "All Java Mobile Phone Games/T/Tennis Pro/TennisPro.jad",
-      "game_title": "Tennis Pro",
-      "batch": 16,
-      "bytes": 94427,
-      "classes": 12,
-      "images": 83,
-      "audio": 5,
-      "png_indexed": 83,
-      "api_refs": [
-        "MIDP Graphics",
-        "MMAPI audio",
-        "Nokia DirectGraphics",
-        "RMS persistence",
-        "Thread.sleep"
-      ],
-      "method_symbols": [
-        "drawImage",
-        "drawPixels",
-        "fillRect",
-        "getResourceAsStream",
-        "repaint"
-      ],
-      "class_names": [
-        "b.class",
-        "c.class",
-        "d.class",
-        "e.class",
-        "TNS.class",
-        "com/nokia/mid/sound/Sound.class",
-        "com/nokia/mid/sound/SoundListener.class",
-        "com/nokia/mid/ui/DeviceControl.class",
-        "com/nokia/mid/ui/DirectGraphics.class",
-        "com/nokia/mid/ui/DirectGraphicsImplemented.class",
-        "com/nokia/mid/ui/DirectUtils.class",
-        "com/nokia/mid/ui/FullCanvas.class"
-      ],
-      "estimated_png_rgba_bytes": 597884,
-      "rank": 25,
-      "tier": "reserva",
-      "track": "assets",
-      "track_name": "Arte, recursos e animação",
-      "study_question": "Investigar compressão de texturas, spritesheets, efeitos e carregamento.",
-      "id": "b7334af7dbf1fb4d",
-      "score_metadata": 81.4,
-      "selection_basis": "pontuação estrutural",
-      "status": "selected_not_decompiled"
+      "jar_sha256": "fdbc8f9562787435839f78f1a52920ca87e7eb77b3573c9930ea1e6424c0f6a4",
+      "jar_path": "All Java Mobile Phone Games/J/JBenchmark 3D/JBenchmark3D.jar",
+      "purpose": "Benchmark M3G, não jogo: controle técnico separado das 100 vagas."
     }
   ],
   "limitations": "Títulos, APIs, símbolos, quantidades e classes são indícios, não prova de comportamento nem qualidade"

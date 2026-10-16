@@ -10,8 +10,9 @@
 - O escore mede potencial investigativo, NÃO qualidade ou eficiência confirmada.
 - JAD não encontrado significa ausência de descritor com nome/caminho correspondente; não inventar.
 - Nenhum JAR, código proprietário ou asset original é incluído.
+- JBenchmark3D é uma ferramenta de benchmark, não um jogo: fica apenas como controle técnico fora das 100 vagas.
 
-Selecionados: 100 principais + 25 reservas; 99 âncoras verificadas; 54 principais com JAD associado.
+Selecionados: 100 principais + 25 reservas; 100 âncoras verificadas; 55 principais com JAD associado.
 
 ## Frentes e metas de pesquisa
 
@@ -30,7 +31,7 @@ Selecionados: 100 principais + 25 reservas; 99 âncoras verificadas; 54 principa
 |---:|---|---|---|---:|---:|---:|---|
 | 1 | 3D e rasterização | `828 Java Games/3D-Adventure.jar` | `f2667dd8ee20f37d` | 2 | 5 | 0 | drawPixels |
 | 2 | 3D e rasterização | `Doom RPG (motorola)/doom_rpg_kr.jar` | `6925de2ce810de09` | 23 | 17 | 2 | GameCanvas, drawRGB, drawRegion |
-| 3 | 3D e rasterização | `JBenchmark 3D/JBenchmark3D.jar` | `fdbc8f9562787435` | 5 | 2 | 0 | GameCanvas, J2ME M3G |
+| 3 | 3D e rasterização | `Speedchaser3D(1pant)/Speedchaser3D_6630_6680.jar` | `570137fb12a30c7d` | 11 | 22 | 3 | GameCanvas, J2ME M3G |
 | 4 | 3D e rasterização | `GeopodDC 3D/GeopodDC3D.jar` | `595a04f90efc3ab0` | 12 | 88 | 3 | GameCanvas, J2ME M3G, drawRegion |
 | 5 | 3D e rasterização | `3D Ferrari Experience/3DFerrariExperience.jar` | `7820f0e4feaa34d9` | 27 | 1 | 0 | J2ME M3G, drawPixels, drawRegion |
 | 6 | 3D e rasterização | `3D Sentris/3D Sentry.jar` | `91dc9b076607f65c` | 22 | 26 | 8 | GameCanvas, J2ME M3G, drawRegion |
@@ -97,10 +98,10 @@ Selecionados: 100 principais + 25 reservas; 99 âncoras verificadas; 54 principa
 | 67 | Arte, recursos e animação | `Puzzle Bobble/PuzzleBobble.jar` | `80e42bf52df75a45` | 10 | 40 | 3 | drawPixels |
 | 68 | Arte, recursos e animação | `828 Java Games/5Goldminer.jar` | `ce01f323fe180887` | 9 | 19 | 0 | estrutura e assets |
 | 69 | Arte, recursos e animação | `828 Java Games/EontheDragon.jar` | `26afb501d7baa333` | 7 | 26 | 16 | estrutura e assets |
-| 70 | Arte, recursos e animação | `Stealth/Stealth.jar` | `a61a572ffbf67fe2` | 5 | 28 | 6 | GameCanvas |
-| 71 | Arte, recursos e animação | `Street Soccer/streetsoccer.jar` | `c058b21868b721d0` | 16 | 9 | 11 | drawPixels |
-| 72 | Arte, recursos e animação | `Dragon Fire 2/dragon_fire2.jar` | `1407822bcd622f55` | 10 | 23 | 7 | drawPixels |
-| 73 | Arte, recursos e animação | `828 Java Games/GhostsnGoblins.jar` | `083213262d2922ec` | 4 | 195 | 4 | estrutura e assets |
+| 70 | Arte, recursos e animação | `Com2Us Bowling 2/c2ubowling2.jar` | `f83ec4dc56cc9cb7` | 4 | 19 | 10 | GameCanvas, Sprite |
+| 71 | Arte, recursos e animação | `Stealth/Stealth.jar` | `a61a572ffbf67fe2` | 5 | 28 | 6 | GameCanvas |
+| 72 | Arte, recursos e animação | `Street Soccer/streetsoccer.jar` | `c058b21868b721d0` | 16 | 9 | 11 | drawPixels |
+| 73 | Arte, recursos e animação | `Dragon Fire 2/dragon_fire2.jar` | `1407822bcd622f55` | 10 | 23 | 7 | drawPixels |
 | 74 | Física, corrida e esportes | `828 Java Games/Colin McRae 04 (s60).jar` | `eb05f180891e1f8d` | 7 | 55 | 9 | estrutura e assets |
 | 75 | Física, corrida e esportes | `V-Rally/vrally.jar` | `6da9561396445c91` | 14 | 8 | 0 | drawPixels |
 | 76 | Física, corrida e esportes | `828 Java Games/RacingFever.jar` | `2fd5294dcb1b7130` | 9 | 7 | 5 | estrutura e assets |
@@ -136,18 +137,18 @@ Selecionados: 100 principais + 25 reservas; 99 âncoras verificadas; 54 principa
 | 1 | 3D e rasterização | `3D QBlast/3d_qblast.jar` | `286ac91396a4041d` | 12 | 16 |
 | 2 | 3D e rasterização | `Xmas Gifts 3D/Xmas_Gifts_3D.jar` | `82c41d4a746ec3e9` | 14 | 0 |
 | 3 | 3D e rasterização | `3D Boxing/3DBoxing.jar` | `6de103577398de73` | 7 | 8 |
-| 4 | 3D e rasterização | `Speedchaser3D(1pant)/Speedchaser3D_6630_6680.jar` | `570137fb12a30c7d` | 11 | 22 |
-| 5 | Mundos, mapas, sprites | `Mad Monkey (sonido)/Mad Monkey.jar` | `ac265a82ef05383d` | 12 | 34 |
-| 6 | Mundos, mapas, sprites | `828 Java Games/MikisWorld.jar` | `ff78f2a545ad67cb` | 13 | 15 |
-| 7 | IA, regras e estratégia | `KX3D Chess/KX3D Chess.jar` | `01af4daf2a76da6e` | 6 | 36 |
-| 8 | IA, regras e estratégia | `Air Traffic/AirTraffic.jar` | `b180c06d53ea23c9` | 6 | 41 |
-| 9 | IA, regras e estratégia | `Age Of Marco Polo Gold(sonido)/Age Of Marco Polo Gold.jar` | `c0ac2803ad62edbc` | 34 | 13 |
-| 10 | Física, corrida e esportes | `Stuntman/stuntman.jar` | `9ea60fbe22b3201a` | 5 | 1 |
-| 11 | Física, corrida e esportes | `Ballesteros 3D/Seve B 3D.jar` | `c5df487a27e39dfe` | 12 | 64 |
-| 12 | Compactação, áudio e minimalismo | `Atomic Space Rocks/AtomicSpaceRocks.jar` | `5d64f0df7f85bfa1` | 12 | 0 |
-| 13 | Compactação, áudio e minimalismo | `828 Java Games/PhotoPuzzle.jar` | `7de4c559cd6114d3` | 5 | 20 |
-| 14 | Arte, recursos e animação | `Ex Bubble/EXBUBBLE.JAR` | `61cd3ba8a9b8ea63` | 40 | 236 |
-| 15 | Arte, recursos e animação | `Forgotten Warrior (sonido)/Warrior_suite2.jar` | `f08c8034da70871f` | 2 | 181 |
+| 4 | Mundos, mapas, sprites | `Mad Monkey (sonido)/Mad Monkey.jar` | `ac265a82ef05383d` | 12 | 34 |
+| 5 | Mundos, mapas, sprites | `828 Java Games/MikisWorld.jar` | `ff78f2a545ad67cb` | 13 | 15 |
+| 6 | IA, regras e estratégia | `KX3D Chess/KX3D Chess.jar` | `01af4daf2a76da6e` | 6 | 36 |
+| 7 | IA, regras e estratégia | `Air Traffic/AirTraffic.jar` | `b180c06d53ea23c9` | 6 | 41 |
+| 8 | IA, regras e estratégia | `Age Of Marco Polo Gold(sonido)/Age Of Marco Polo Gold.jar` | `c0ac2803ad62edbc` | 34 | 13 |
+| 9 | Física, corrida e esportes | `Stuntman/stuntman.jar` | `9ea60fbe22b3201a` | 5 | 1 |
+| 10 | Física, corrida e esportes | `Ballesteros 3D/Seve B 3D.jar` | `c5df487a27e39dfe` | 12 | 64 |
+| 11 | Compactação, áudio e minimalismo | `Atomic Space Rocks/AtomicSpaceRocks.jar` | `5d64f0df7f85bfa1` | 12 | 0 |
+| 12 | Compactação, áudio e minimalismo | `828 Java Games/PhotoPuzzle.jar` | `7de4c559cd6114d3` | 5 | 20 |
+| 13 | Arte, recursos e animação | `Ex Bubble/EXBUBBLE.JAR` | `61cd3ba8a9b8ea63` | 40 | 236 |
+| 14 | Arte, recursos e animação | `Forgotten Warrior (sonido)/Warrior_suite2.jar` | `f08c8034da70871f` | 2 | 181 |
+| 15 | Arte, recursos e animação | `828 Java Games/GhostsnGoblins.jar` | `083213262d2922ec` | 4 | 195 |
 | 16 | Arte, recursos e animação | `Condition Zero/stoperation_kr.jar` | `0e8834d696de2fad` | 52 | 237 |
 | 17 | Arte, recursos e animação | `828 Java Games/ViolenceCombat.jar` | `c85397f627eca2e0` | 2 | 124 |
 | 18 | Arte, recursos e animação | `Moto City/MotoCity.jar` | `9e4d006f9f0286e8` | 57 | 160 |
@@ -156,8 +157,8 @@ Selecionados: 100 principais + 25 reservas; 99 âncoras verificadas; 54 principa
 | 21 | Física, corrida e esportes | `Golf tour (cacho pantalla)/Golf Tour.jar` | `4b0047291c8d486e` | 50 | 73 |
 | 22 | Arte, recursos e animação | `828 Java Games/Gangland.jar` | `2c0d116bdcfa4404` | 24 | 142 |
 | 23 | Arte, recursos e animação | `RTL Racing 2005/In_Fusio_RTL_Racing_2005.jar` | `730a555b8386eb12` | 15 | 82 |
-| 24 | Arte, recursos e animação | `Fireblaster/fireblaster.jar` | `2a01922ab9e7277f` | 3 | 88 |
-| 25 | Arte, recursos e animação | `Tennis Pro/TennisPro.jar` | `b7334af7dbf1fb4d` | 12 | 83 |
+| 24 | 3D e rasterização | `JBenchmark 3D/JBenchmark3D.jar` | `fdbc8f9562787435` | 5 | 2 |
+| 25 | Arte, recursos e animação | `Fireblaster/fireblaster.jar` | `2a01922ab9e7277f` | 3 | 88 |
 
 ## Protocolo para investigar, não apenas catalogar
 
@@ -171,7 +172,7 @@ Selecionados: 100 principais + 25 reservas; 99 âncoras verificadas; 54 principa
 
 ## Arquivos e continuidade
 
-- selection-100.json contém 125 SHA-256 completos, nomes, caminhos JAR/JAD e perguntas técnicas por candidato.
+- selection-100.json contém 125 SHA-256 completos, nomes, caminhos JAR/JAD e perguntas técnicas individualizadas por candidato.
 - selection-100.csv permite filtrar por frente, tamanho, origem e prioridade.
 - A situação atual da engenharia reversa profunda permanece registrada em deep/registry.json: nenhum jogo promovido automaticamente.
 - Script reprodutível: scripts/select_j2me_deep_studies.py.
