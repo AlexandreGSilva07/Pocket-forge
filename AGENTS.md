@@ -43,7 +43,7 @@ Use a branch nova, produzindo um PR por lote. Antes de abrir PR, verifique CI, d
 ## Progresso autenticado de engenharia reversa profunda
 
 - [Wave 01: 12 JARs com inventários reais de bytecode](docs/research/deep/wave01/overview.md), SHA-256 verificados. Ainda não são 12 reconstruções completas.
-- [Três estudos de métodos parciais](docs/research/deep/studies/) (3D Adventure, Xrossing Dice, 7 Zwerge), sem execução dos originais.
+- [Cinco estudos de métodos parciais](docs/research/deep/studies/) (3D Adventure, Xrossing Dice, 7 Zwerge, 5Chess, 3D Balloon Race), sem execução dos originais.
 - [Registro da fase detalhada](docs/research/deep/registry.json) é a fonte de verdade do progresso.
-- Novos módulos: `demo/engine/ai.js`, `demo/engine/tilepack.js` e `demo/engine/pixels.js`, além de `compact.js`, `state.js` e `audio.js`. Demos `demo/ai-lab.html` e `demo/pixel-lab.html`, testes Node e Playwright.
-- PR #20 em rascunho prepara os 88 JARs restantes; **nenhum arquivo desses 88 foi marcado como desmontado**. Próximo trabalho: destravar execução real, fazer engenharia semântica e emulação por jogo, medir melhorias com baseline.
+- Novos módulos: `demo/engine/ai.js`, `tilepack.js`, `pixels.js`, `tactics.js`, `assets.js`, além de `compact.js`, `state.js`, `audio.js`. Demos `ai-lab.html`, `pixel-lab.html`, `tactics-lab.html` e `assets-lab.html` em `demo/`; testes Node e Playwright.
+- [PR #20 integrado](https://github.com/AlexandreGSilva07/Pocket-forge/pull/20): todos os 100 candidatos têm inventários de classes/métodos, com 10 avisos de classes individuais. Veja [bytecode-100](docs/research/deep/bytecode-100/README.md). São **cinco** estudos de métodos parciais e **zero** motores integralmente reconstruídos. Próximo trabalho: engenharia semântica e emulação individual, benchmarking e testes.
