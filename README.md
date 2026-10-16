@@ -5,6 +5,17 @@
 > [!IMPORTANT]
 > **v0.1 = fundação operacional**, não criação autônoma de qualquer jogo. Existem documentação, scripts, demo, testes estruturais e smoke interativo de navegador. Agentes autônomos de criação e QA visual em navegador ainda constam no roadmap. J2ME é uma referência de engenharia enxuta; PocketForge **não usa Java, não é emulador e não obriga pixel art**.
 
+## Pesquisa reproduzível: 100 jogos por PR
+
+**Status atual: 300/1.649 JARs com SHA-256 distintos registrados permanentemente**, distribuídos em três PRs integrados; o próximo é o lote 004. A análise é estática (classfiles, recursos e referências), **não** a execução de cada jogo.
+
+- [Contrato de continuidade para qualquer agente/chat](docs/research/CONTINUITY.md)
+- [Ledger com hashes completos, sem duplicação](docs/research/batches/registry.json)
+- [Lote 001](docs/research/batches/001.md) · [Lote 002](docs/research/batches/002.md) · [Lote 003](docs/research/batches/003.md)
+- Motor operacional já integrado ao demo: [compact](demo/engine/compact.js), [estado](demo/engine/state.js) e [áudio](demo/engine/audio.js), com testes e CI.
+
+**Não colocar os JARs/JADs originais no repositório.** O pipeline baixa o corpus em ambiente temporário e mantém apenas os resultados. Cada PR precisa trazer mudança concreta e verificada no motor, não só documentação.
+
 ## Comece aqui
 
 | Recurso | O que contém |
