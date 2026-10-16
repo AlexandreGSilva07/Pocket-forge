@@ -15,6 +15,11 @@
 - [UI e design system](17-design-system-ui.md)
 - [Receitas por gênero](10-receitas.md)
 
+## Continuidade e engenharia reversa em lotes de 100
+- [Como retomar em outro chat: CONTINUITY](research/CONTINUITY.md)
+- [Registro permanente (ledger) com 300 arquivos auditados](research/batches/registry.json)
+- [Lote 001](research/batches/001.md) · [Lote 002](research/batches/002.md) · [Lote 003](research/batches/003.md)
+
 ## Pesquisa empírica
 - [Auditoria massiva J2ME — 2.309 JARs (1.649 hashes distintos)](research/02-auditoria-j2me-2309-jars.md) — resultados reais de download e inspeção automatizada
 - [Engenharia reversa de jogos J2ME — lote 01](research/01-analise-j2me-lote01.md) — 10 JARs efetivamente inspecionados, evidências técnicas, limites e experimentos propostos
