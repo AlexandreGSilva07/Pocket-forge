@@ -89,6 +89,22 @@ def run():
             assert pixel_page.locator("#lab").evaluate("(c) => c.width === 160 && c.height === 120")
             pixel_page.screenshot(path=str(SHOT_DIR / "pixel-lab.png"))
             pixel_context.close()
+            tactics_ctx = browser.new_context(viewport={"width": 820, "height": 820})
+            tactics_page = tactics_ctx.new_page()
+            tactics_page.on("pageerror", lambda error: errors.append(str(error)))
+            response = tactics_page.goto(url + "tactics-lab.html", wait_until="load")
+            assert response is not None and response.status == 200
+            assert tactics_page.locator(".cell").count() == 121
+            tactics_page.locator(".cell[data-x='5'][data-y='5']").click()
+            tactics_page.wait_for_function(
+                "document.querySelectorAll('.cell.cpu').length === 1",timeout=10000
+            )
+            assert tactics_page.locator(".cell.you").count() == 1
+            tactics_page.locator("#reset").click()
+            assert tactics_page.locator(".cell.cpu").count() == 0
+            assert tactics_page.locator(".cell.you").count() == 0
+            tactics_page.screenshot(path=str(SHOT_DIR / "tactics-lab.png"))
+            tactics_ctx.close()
             browser.close()
     finally:
         server.shutdown()
