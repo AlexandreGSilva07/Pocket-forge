@@ -2,8 +2,8 @@
 const {test}=require("node:test"),assert=require("node:assert/strict");
 const P=require("../demo/engine/tilepack.js");
 test("legacy 8-bit 37x30 levels follow observed header/stride",()=>{
- const a=new Uint8Array(5+37*30);
- a.set([37,30,16,16,1]);a.fill(7,5);
+ const a=new Uint8Array(5+37*30+1);
+ a.set([37,30,16,16,1]);a.fill(7,5,5+37*30);a[a.length-1]=0;
  const d=P.decodeLegacyLevel(a);
  assert.equal(d.tiles.length,1110);assert.equal(d.tiles[1099],7);assert.equal(d.flags,null);
 });
