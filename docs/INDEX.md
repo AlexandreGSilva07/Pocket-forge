@@ -49,3 +49,11 @@
 - [Playbooks dos oito agentes](../agents/INDEX.md): Director, Architect, Gameplay, Visual, Audio, Profiler, Reviewer e Release
 
 **Status:** a documentação distingue capacidades implementadas (v0.1) de projetos futuros; consulte o [roadmap](11-roadmap.md).
+
+## Resultados reais de engenharia reversa
+
+- [Wave 01: 12 JARs desmontados e métodos catalogados](research/deep/wave01/overview.md)
+- [Estudo 3D Adventure](research/deep/studies/f2667dd8ee20-3d-adventure.md)
+- [Estudo Xrossing Dice](research/deep/studies/8db1413d8135-xrossing-dice.md)
+- [Estudo 7 Zwerge](research/deep/studies/6df7ffc301a3-7zwerge.md)
+- [Estado real dos estudos aprofundados](research/deep/registry.json)
