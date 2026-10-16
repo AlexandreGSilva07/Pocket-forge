@@ -2,9 +2,9 @@
 """Download and inspect research archives, never execute imported programs."""
 import collections, hashlib, json, os, pathlib, sys, time, urllib.request, zipfile
 SOURCES = {
-"emulators":[("freej2me","https://api.github.com/repos/hex007/freej2me/zipball"),("freej2me-pro","https://api.github.com/repos/digitalgust/freej2mePro/zipball"),("j2me-loader","https://api.github.com/repos/nikita36078/J2ME-Loader/zipball"),("eka2l1","https://api.github.com/repos/EKA2L1/EKA2L1/zipball"),("squirreljme","https://api.github.com/repos/SquirrelJME/SquirrelJME/zipball")],
-"runtimes":[("phoneme-source","https://api.github.com/repos/magicus/phoneME/zipball"),("phoneme-mr2-source","https://phonej2me.github.io/downloads-10-06-2007/phoneme_feature-mr2-rel-src-b23-08_may_2007.zip"),("phoneme-mr2-linux-x86","https://phonej2me.github.io/downloads-10-06-2007/phoneme_feature-mr2-rel-bin-b23-linuxx86-08_may_2007.zip"),("phoneme-mr2-linux-arm","https://phonej2me.github.io/downloads-10-06-2007/phoneme_feature-mr2-rel-bin-b23-linuxarm-08_may_2007.zip"),("phoneme-mr2-win-x86","https://phonej2me.github.io/downloads-10-06-2007/phoneme_feature-mr2-rel-bin-b23-win-08_may_2007.zip")],
-"documents":[("symbian-archive","https://api.github.com/repos/mrRosset/Symbian-Archive/zipball"),("blackberry-jde-samples","https://api.github.com/repos/blackberry/JDE-Samples/zipball"),("palm-dev-docs","https://api.github.com/repos/pmastrosimone/palm-dev-docs/zipball"),("j2me-polish","https://api.github.com/repos/Enough-Software/j2mepolish/zipball"),("docomo-doja5-guide","https://www.docomo.ne.jp/english/binary/pdf/service/developer/make/content/iappli/technical_data/doja/jguidefordoja5_x_en_080527.pdf")]
+"emulators":[("freej2me","https://codeload.github.com/hex007/freej2me/zip/refs/heads/master"),("freej2me-pro","https://codeload.github.com/digitalgust/freej2mePro/zip/refs/heads/master"),("j2me-loader","https://codeload.github.com/nikita36078/J2ME-Loader/zip/refs/heads/master"),("eka2l1","https://codeload.github.com/EKA2L1/EKA2L1/zip/refs/heads/master"),("squirreljme","https://codeload.github.com/SquirrelJME/SquirrelJME/zip/refs/heads/trunk")],
+"runtimes":[("phoneme-source","https://codeload.github.com/magicus/phoneME/zip/refs/heads/master"),("phoneme-mr2-source","https://phonej2me.github.io/downloads-10-06-2007/phoneme_feature-mr2-rel-src-b23-08_may_2007.zip"),("phoneme-mr2-linux-x86","https://phonej2me.github.io/downloads-10-06-2007/phoneme_feature-mr2-rel-bin-b23-linuxx86-08_may_2007.zip"),("phoneme-mr2-linux-arm","https://phonej2me.github.io/downloads-10-06-2007/phoneme_feature-mr2-rel-bin-b23-linuxarm-08_may_2007.zip"),("phoneme-mr2-win-x86","https://phonej2me.github.io/downloads-10-06-2007/phoneme_feature-mr2-rel-bin-b23-win-08_may_2007.zip")],
+"documents":[("symbian-archive","https://codeload.github.com/mrRosset/Symbian-Archive/zip/refs/heads/master"),("blackberry-jde-samples","https://codeload.github.com/blackberry/JDE-Samples/zip/refs/heads/master"),("palm-dev-docs","https://codeload.github.com/pmastrosimone/palm-dev-docs/zip/refs/heads/main"),("j2me-polish","https://codeload.github.com/Enough-Software/j2mepolish/zip/refs/heads/master"),("docomo-doja5-guide","https://www.docomo.ne.jp/english/binary/pdf/service/developer/make/content/iappli/technical_data/doja/jguidefordoja5_x_en_080527.pdf")]
 }
 MAX_FILE=85*1024*1024
 MAX_GROUP=190*1024*1024
@@ -25,7 +25,7 @@ def analyze(path):
                 if key.lower() in sample:found[key]+=1
         return {"type":"zip","entries":len(entries),"top_extensions":ext.most_common(12),"source_samples":scanned,"signals_in_sample":dict(found)}
 def fetch(url,dest,max_bytes):
-    req=urllib.request.Request(url,headers={"User-Agent":"PocketForge-research/1.0","Accept":"application/octet-stream"})
+    req=urllib.request.Request(url,headers={"User-Agent":"PocketForge-research/1.0","Accept":"*/*"})
     with urllib.request.urlopen(req,timeout=70) as response:
         size=response.headers.get("Content-Length")
         if size and int(size)>max_bytes:raise ValueError("content length exceeded limit: "+size)
