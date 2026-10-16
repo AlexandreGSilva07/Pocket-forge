@@ -1,0 +1,796 @@
+{
+  "rank": 52,
+  "jar_path": "828 Java Games/5Chess.jar",
+  "jar_sha256": "493f99e040eba12023fba49af15c846de245da8880ac9820bdb85190c0e097b1",
+  "title": "My MIDlet Suite",
+  "track": "strategy",
+  "status": "BYTECODE_DISASSEMBLED_INDEXED_NOT_FULLY_REVIEWED",
+  "tool": "OpenJDK javap -p -c; JAR never executed",
+  "classes": 6,
+  "classes_decoded": 6,
+  "methods": 51,
+  "instructions": 3562,
+  "branches": 360,
+  "errors": [],
+  "hot_methods_by_static_instruction_count": [
+    {
+      "class": "five.a",
+      "signature": "protected void keyPressed(int);",
+      "instructions": 506,
+      "branches": 77,
+      "priority_score": 1243,
+      "calls": {
+        "five.d.if": 3,
+        "five.d.a": 3,
+        "javax.microedition.lcdui.Canvas.getGameAction": 1,
+        "javax.microedition.lcdui.Canvas.repaint": 1
+      }
+    },
+    {
+      "class": "five.a",
+      "signature": "public five.a(int);",
+      "instructions": 234,
+      "branches": 1,
+      "priority_score": 471,
+      "calls": {
+        "javax.microedition.lcdui.Image.createImage": 4,
+        "javax.microedition.lcdui.Displayable.addCommand": 3,
+        "javax.microedition.lcdui.Canvas.getWidth": 1,
+        "javax.microedition.lcdui.Canvas.getHeight": 1,
+        "java.lang.Thread.start": 1,
+        "java.lang.Throwable.printStackTrace": 1,
+        "javax.microedition.lcdui.Displayable.setCommandListener": 1,
+        "javax.microedition.lcdui.Image.getGraphics": 1,
+        "javax.microedition.lcdui.Display.getDisplay": 1,
+        "javax.microedition.lcdui.Display.isColor": 1
+      }
+    },
+    {
+      "class": "five.d",
+      "signature": "int a(int, int, int, int);",
+      "instructions": 286,
+      "branches": 59,
+      "priority_score": 463,
+      "calls": {}
+    },
+    {
+      "class": "five.a",
+      "signature": "void if(javax.microedition.lcdui.Graphics);",
+      "instructions": 209,
+      "branches": 9,
+      "priority_score": 445,
+      "calls": {
+        "javax.microedition.lcdui.Graphics.drawImage": 4,
+        "javax.microedition.lcdui.Graphics.drawRect": 2,
+        "javax.microedition.lcdui.Graphics.drawLine": 2,
+        "javax.microedition.lcdui.Graphics.setColor": 1
+      }
+    },
+    {
+      "class": "five.a",
+      "signature": "protected void paint(javax.microedition.lcdui.Graphics);",
+      "instructions": 163,
+      "branches": 18,
+      "priority_score": 380,
+      "calls": {
+        "javax.microedition.lcdui.Graphics.drawImage": 5,
+        "java.lang.System.gc": 1,
+        "javax.microedition.lcdui.Graphics.setColor": 1,
+        "javax.microedition.lcdui.Graphics.fillRect": 1
+      }
+    },
+    {
+      "class": "five.a",
+      "signature": "public void if(int);",
+      "instructions": 153,
+      "branches": 8,
+      "priority_score": 330,
+      "calls": {
+        "java.lang.Math.min": 2,
+        "five.d.int": 1,
+        "five.d.do": 1,
+        "javax.microedition.lcdui.Canvas.repaint": 1
+      }
+    },
+    {
+      "class": "five.c",
+      "signature": "void do();",
+      "instructions": 200,
+      "branches": 38,
+      "priority_score": 314,
+      "calls": {}
+    },
+    {
+      "class": "five.d",
+      "signature": "int if(int, int, int);",
+      "instructions": 215,
+      "branches": 30,
+      "priority_score": 305,
+      "calls": {
+        "java.lang.Math.max": 1
+      }
+    },
+    {
+      "class": "five.e",
+      "signature": "public void commandAction(javax.microedition.lcdui.Command, javax.microedition.lcdui.Displayable);",
+      "instructions": 205,
+      "branches": 26,
+      "priority_score": 283,
+      "calls": {
+        "javax.microedition.lcdui.Display.getDisplay": 7,
+        "javax.microedition.lcdui.Display.setCurrent": 7,
+        "javax.microedition.lcdui.List.setSelectedIndex": 4,
+        "javax.microedition.lcdui.Command.getCommandType": 2,
+        "javax.microedition.lcdui.List.getSelectedIndex": 2,
+        "five.Five.a": 1,
+        "five.d.a": 1,
+        "java.lang.System.gc": 1
+      }
+    },
+    {
+      "class": "five.d",
+      "signature": "public int a(int);",
+      "instructions": 184,
+      "branches": 16,
+      "priority_score": 232,
+      "calls": {
+        "java.lang.Math.max": 1,
+        "java.util.Random.nextInt": 1
+      }
+    },
+    {
+      "class": "five.a",
+      "signature": "void a(javax.microedition.lcdui.Graphics, int, int, int);",
+      "instructions": 200,
+      "branches": 4,
+      "priority_score": 212,
+      "calls": {
+        "javax.microedition.lcdui.Graphics.setColor": 3,
+        "javax.microedition.lcdui.Graphics.fillArc": 2,
+        "javax.microedition.lcdui.Graphics.fillRect": 1,
+        "javax.microedition.lcdui.Graphics.drawArc": 1
+      }
+    },
+    {
+      "class": "five.d",
+      "signature": "public five.d(int);",
+      "instructions": 107,
+      "branches": 3,
+      "priority_score": 116,
+      "calls": {}
+    }
+  ],
+  "call_targets": [
+    {
+      "target": "javax.microedition.lcdui.Display.getDisplay",
+      "count": 10
+    },
+    {
+      "target": "javax.microedition.lcdui.Graphics.drawImage",
+      "count": 10
+    },
+    {
+      "target": "javax.microedition.lcdui.Graphics.setColor",
+      "count": 10
+    },
+    {
+      "target": "javax.microedition.lcdui.Display.setCurrent",
+      "count": 9
+    },
+    {
+      "target": "javax.microedition.lcdui.Displayable.addCommand",
+      "count": 5
+    },
+    {
+      "target": "five.d.a",
+      "count": 5
+    },
+    {
+      "target": "javax.microedition.lcdui.Graphics.drawRect",
+      "count": 5
+    },
+    {
+      "target": "javax.microedition.lcdui.Image.createImage",
+      "count": 4
+    },
+    {
+      "target": "javax.microedition.lcdui.Canvas.repaint",
+      "count": 4
+    },
+    {
+      "target": "javax.microedition.lcdui.Command.getCommandType",
+      "count": 4
+    },
+    {
+      "target": "javax.microedition.lcdui.List.setSelectedIndex",
+      "count": 4
+    },
+    {
+      "target": "javax.microedition.lcdui.Displayable.setCommandListener",
+      "count": 3
+    },
+    {
+      "target": "five.d.if",
+      "count": 3
+    },
+    {
+      "target": "java.lang.System.gc",
+      "count": 3
+    },
+    {
+      "target": "java.lang.Throwable.printStackTrace",
+      "count": 2
+    },
+    {
+      "target": "java.lang.Math.min",
+      "count": 2
+    },
+    {
+      "target": "five.Five.a",
+      "count": 2
+    },
+    {
+      "target": "javax.microedition.lcdui.Graphics.drawLine",
+      "count": 2
+    },
+    {
+      "target": "javax.microedition.lcdui.Graphics.fillArc",
+      "count": 2
+    },
+    {
+      "target": "javax.microedition.lcdui.Graphics.fillRect",
+      "count": 2
+    },
+    {
+      "target": "javax.microedition.lcdui.Graphics.drawString",
+      "count": 2
+    },
+    {
+      "target": "java.lang.Math.max",
+      "count": 2
+    },
+    {
+      "target": "javax.microedition.lcdui.List.getSelectedIndex",
+      "count": 2
+    },
+    {
+      "target": "javax.microedition.midlet.MIDlet.notifyDestroyed",
+      "count": 1
+    },
+    {
+      "target": "javax.microedition.lcdui.Canvas.getWidth",
+      "count": 1
+    },
+    {
+      "target": "javax.microedition.lcdui.Canvas.getHeight",
+      "count": 1
+    },
+    {
+      "target": "java.lang.Thread.start",
+      "count": 1
+    },
+    {
+      "target": "javax.microedition.lcdui.Image.getGraphics",
+      "count": 1
+    },
+    {
+      "target": "javax.microedition.lcdui.Display.isColor",
+      "count": 1
+    },
+    {
+      "target": "five.d.int",
+      "count": 1
+    },
+    {
+      "target": "five.d.do",
+      "count": 1
+    },
+    {
+      "target": "five.d.for",
+      "count": 1
+    },
+    {
+      "target": "java.util.Timer.cancel",
+      "count": 1
+    },
+    {
+      "target": "javax.microedition.lcdui.Canvas.getGameAction",
+      "count": 1
+    },
+    {
+      "target": "javax.microedition.lcdui.Graphics.drawArc",
+      "count": 1
+    }
+  ],
+  "opcode_histogram": {
+    "aload_0": 696,
+    "getfield": 491,
+    "putfield": 173,
+    "invokevirtual": 154,
+    "iconst_0": 141,
+    "goto": 141,
+    "iconst_1": 140,
+    "iadd": 107,
+    "iload_2": 104,
+    "iconst_2": 100,
+    "iload": 94,
+    "bipush": 85,
+    "imul": 55,
+    "isub": 52,
+    "iload_1": 51,
+    "dup": 49,
+    "if_icmpne": 49,
+    "iload_3": 45,
+    "aload_1": 44,
+    "ldc": 43,
+    "idiv": 42,
+    "sipush": 41,
+    "iinc": 40,
+    "ireturn": 38,
+    "return": 34,
+    "ifeq": 33,
+    "aaload": 32,
+    "if_icmpge": 31,
+    "istore": 31,
+    "ifne": 29,
+    "iastore": 26,
+    "invokestatic": 25,
+    "iconst_3": 25,
+    "istore_2": 25,
+    "istore_1": 25
+  },
+  "resource_file_count": 4,
+  "resources_by_suffix": {
+    ".mf": 1,
+    ".png": 3
+  },
+  "class_methods": [
+    {
+      "class": "five.Five",
+      "method_count": 5,
+      "instructions": 27,
+      "branches": 0,
+      "methods": [
+        {
+          "signature": "public five.Five();",
+          "instructions": 10,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public void startApp();",
+          "instructions": 7,
+          "branches": 0,
+          "calls": {
+            "javax.microedition.lcdui.Display.getDisplay": 1,
+            "javax.microedition.lcdui.Display.setCurrent": 1
+          }
+        },
+        {
+          "signature": "public void pauseApp();",
+          "instructions": 1,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public void destroyApp(boolean);",
+          "instructions": 1,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public static void a();",
+          "instructions": 8,
+          "branches": 0,
+          "calls": {
+            "javax.microedition.midlet.MIDlet.notifyDestroyed": 1
+          }
+        }
+      ]
+    },
+    {
+      "class": "five.a",
+      "method_count": 15,
+      "instructions": 1791,
+      "branches": 142,
+      "methods": [
+        {
+          "signature": "public five.a(int);",
+          "instructions": 234,
+          "branches": 1,
+          "calls": {
+            "javax.microedition.lcdui.Image.createImage": 4,
+            "javax.microedition.lcdui.Displayable.addCommand": 3,
+            "javax.microedition.lcdui.Canvas.getWidth": 1,
+            "javax.microedition.lcdui.Canvas.getHeight": 1,
+            "java.lang.Thread.start": 1,
+            "java.lang.Throwable.printStackTrace": 1,
+            "javax.microedition.lcdui.Displayable.setCommandListener": 1,
+            "javax.microedition.lcdui.Image.getGraphics": 1
+          }
+        },
+        {
+          "signature": "boolean do(int);",
+          "instructions": 58,
+          "branches": 10,
+          "calls": {}
+        },
+        {
+          "signature": "boolean a(int);",
+          "instructions": 58,
+          "branches": 10,
+          "calls": {}
+        },
+        {
+          "signature": "public void if(int);",
+          "instructions": 153,
+          "branches": 8,
+          "calls": {
+            "java.lang.Math.min": 2,
+            "five.d.int": 1,
+            "five.d.do": 1,
+            "javax.microedition.lcdui.Canvas.repaint": 1
+          }
+        },
+        {
+          "signature": "public void a(int, int, int);",
+          "instructions": 12,
+          "branches": 0,
+          "calls": {
+            "javax.microedition.lcdui.Canvas.repaint": 1
+          }
+        },
+        {
+          "signature": "public void commandAction(javax.microedition.lcdui.Command, javax.microedition.lcdui.Displayable);",
+          "instructions": 43,
+          "branches": 5,
+          "calls": {
+            "javax.microedition.lcdui.Command.getCommandType": 2,
+            "five.Five.a": 1,
+            "five.d.a": 1,
+            "javax.microedition.lcdui.Canvas.repaint": 1,
+            "five.d.for": 1,
+            "java.util.Timer.cancel": 1,
+            "javax.microedition.lcdui.Display.getDisplay": 1,
+            "javax.microedition.lcdui.Display.setCurrent": 1
+          }
+        },
+        {
+          "signature": "void if(javax.microedition.lcdui.Graphics);",
+          "instructions": 209,
+          "branches": 9,
+          "calls": {
+            "javax.microedition.lcdui.Graphics.drawImage": 4,
+            "javax.microedition.lcdui.Graphics.drawRect": 2,
+            "javax.microedition.lcdui.Graphics.drawLine": 2,
+            "javax.microedition.lcdui.Graphics.setColor": 1
+          }
+        },
+        {
+          "signature": "protected void keyRepeated(int);",
+          "instructions": 4,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "protected void keyPressed(int);",
+          "instructions": 506,
+          "branches": 77,
+          "calls": {
+            "five.d.if": 3,
+            "five.d.a": 3,
+            "javax.microedition.lcdui.Canvas.getGameAction": 1,
+            "javax.microedition.lcdui.Canvas.repaint": 1
+          }
+        },
+        {
+          "signature": "void a(javax.microedition.lcdui.Graphics);",
+          "instructions": 83,
+          "branches": 0,
+          "calls": {
+            "javax.microedition.lcdui.Graphics.setColor": 2,
+            "javax.microedition.lcdui.Graphics.drawRect": 2
+          }
+        },
+        {
+          "signature": "void a(javax.microedition.lcdui.Graphics, int, int, int);",
+          "instructions": 200,
+          "branches": 4,
+          "calls": {
+            "javax.microedition.lcdui.Graphics.setColor": 3,
+            "javax.microedition.lcdui.Graphics.fillArc": 2,
+            "javax.microedition.lcdui.Graphics.fillRect": 1,
+            "javax.microedition.lcdui.Graphics.drawArc": 1
+          }
+        },
+        {
+          "signature": "void a();",
+          "instructions": 14,
+          "branches": 0,
+          "calls": {
+            "java.util.Timer.scheduleAtFixedRate": 1
+          }
+        },
+        {
+          "signature": "void a(javax.microedition.lcdui.Graphics, java.lang.String);",
+          "instructions": 29,
+          "branches": 0,
+          "calls": {
+            "javax.microedition.lcdui.Graphics.setColor": 2,
+            "javax.microedition.lcdui.Graphics.drawString": 2,
+            "javax.microedition.lcdui.Graphics.getFont": 1,
+            "javax.microedition.lcdui.Font.getFont": 1,
+            "javax.microedition.lcdui.Graphics.setFont": 1
+          }
+        },
+        {
+          "signature": "protected void paint(javax.microedition.lcdui.Graphics);",
+          "instructions": 163,
+          "branches": 18,
+          "calls": {
+            "javax.microedition.lcdui.Graphics.drawImage": 5,
+            "java.lang.System.gc": 1,
+            "javax.microedition.lcdui.Graphics.setColor": 1,
+            "javax.microedition.lcdui.Graphics.fillRect": 1
+          }
+        },
+        {
+          "signature": "void a(java.lang.String);",
+          "instructions": 25,
+          "branches": 0,
+          "calls": {
+            "javax.microedition.lcdui.Graphics.drawImage": 1,
+            "javax.microedition.lcdui.Graphics.setColor": 1,
+            "javax.microedition.lcdui.Graphics.drawRect": 1
+          }
+        }
+      ]
+    },
+    {
+      "class": "five.b",
+      "method_count": 2,
+      "instructions": 65,
+      "branches": 1,
+      "methods": [
+        {
+          "signature": "public five.b();",
+          "instructions": 41,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public void run();",
+          "instructions": 24,
+          "branches": 1,
+          "calls": {
+            "five.a.a": 1
+          }
+        }
+      ]
+    },
+    {
+      "class": "five.c",
+      "method_count": 15,
+      "instructions": 349,
+      "branches": 53,
+      "methods": [
+        {
+          "signature": "public five.c();",
+          "instructions": 52,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public void a(int);",
+          "instructions": 4,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public void a(int, int);",
+          "instructions": 48,
+          "branches": 10,
+          "calls": {}
+        },
+        {
+          "signature": "public void if();",
+          "instructions": 1,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public int a();",
+          "instructions": 26,
+          "branches": 5,
+          "calls": {}
+        },
+        {
+          "signature": "public boolean if(int, int, int);",
+          "instructions": 2,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "boolean do(int, int, int);",
+          "instructions": 2,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "boolean try(int, int, int);",
+          "instructions": 2,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "boolean byte(int, int, int);",
+          "instructions": 2,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "boolean case(int, int, int);",
+          "instructions": 2,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "boolean for(int, int, int);",
+          "instructions": 2,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "boolean new(int, int, int);",
+          "instructions": 2,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "boolean a(int, int, int);",
+          "instructions": 2,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "boolean int(int, int, int);",
+          "instructions": 2,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "void do();",
+          "instructions": 200,
+          "branches": 38,
+          "calls": {}
+        }
+      ]
+    },
+    {
+      "class": "five.d",
+      "method_count": 12,
+      "instructions": 1036,
+      "branches": 137,
+      "methods": [
+        {
+          "signature": "public int a(int, int, int);",
+          "instructions": 79,
+          "branches": 11,
+          "calls": {}
+        },
+        {
+          "signature": "public int if();",
+          "instructions": 3,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public void run();",
+          "instructions": 22,
+          "branches": 4,
+          "calls": {
+            "five.a.if": 1,
+            "java.lang.Thread.sleep": 1
+          }
+        },
+        {
+          "signature": "public int int();",
+          "instructions": 3,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public int do();",
+          "instructions": 3,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public void for();",
+          "instructions": 50,
+          "branches": 5,
+          "calls": {
+            "java.lang.System.gc": 1,
+            "java.util.Date.getTime": 1
+          }
+        },
+        {
+          "signature": "public int a(int);",
+          "instructions": 184,
+          "branches": 16,
+          "calls": {
+            "java.lang.Math.max": 1,
+            "java.util.Random.nextInt": 1
+          }
+        },
+        {
+          "signature": "public void a();",
+          "instructions": 44,
+          "branches": 6,
+          "calls": {}
+        },
+        {
+          "signature": "int if(int, int, int);",
+          "instructions": 215,
+          "branches": 30,
+          "calls": {
+            "java.lang.Math.max": 1
+          }
+        },
+        {
+          "signature": "boolean if(int, int, int, int);",
+          "instructions": 40,
+          "branches": 3,
+          "calls": {}
+        },
+        {
+          "signature": "int a(int, int, int, int);",
+          "instructions": 286,
+          "branches": 59,
+          "calls": {}
+        },
+        {
+          "signature": "public five.d(int);",
+          "instructions": 107,
+          "branches": 3,
+          "calls": {}
+        }
+      ]
+    },
+    {
+      "class": "five.e",
+      "method_count": 2,
+      "instructions": 294,
+      "branches": 27,
+      "methods": [
+        {
+          "signature": "public five.e();",
+          "instructions": 89,
+          "branches": 1,
+          "calls": {
+            "javax.microedition.lcdui.Displayable.setCommandListener": 2,
+            "javax.microedition.lcdui.Displayable.addCommand": 2,
+            "java.lang.Throwable.printStackTrace": 1,
+            "javax.microedition.lcdui.Alert.setString": 1
+          }
+        },
+        {
+          "signature": "public void commandAction(javax.microedition.lcdui.Command, javax.microedition.lcdui.Displayable);",
+          "instructions": 205,
+          "branches": 26,
+          "calls": {
+            "javax.microedition.lcdui.Display.getDisplay": 7,
+            "javax.microedition.lcdui.Display.setCurrent": 7,
+            "javax.microedition.lcdui.List.setSelectedIndex": 4,
+            "javax.microedition.lcdui.Command.getCommandType": 2,
+            "javax.microedition.lcdui.List.getSelectedIndex": 2,
+            "five.Five.a": 1,
+            "five.d.a": 1,
+            "java.lang.System.gc": 1
+          }
+        }
+      ]
+    }
+  ],
+  "limitation": "Static method inspection, no game execution, no proof of hot paths or semantic equivalence."
+}

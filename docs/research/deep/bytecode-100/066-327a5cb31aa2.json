@@ -1,0 +1,1452 @@
+{
+  "rank": 66,
+  "jar_path": "828 Java Games/SpaceEncounter.jar",
+  "jar_sha256": "327a5cb31aa29a6f7c04122f42d7b74b56dfd4e534dab1152003d7b09bee6bc1",
+  "title": "Space Encounter",
+  "track": "assets",
+  "status": "BYTECODE_DISASSEMBLED_INDEXED_NOT_FULLY_REVIEWED",
+  "tool": "OpenJDK javap -p -c; JAR never executed",
+  "classes": 18,
+  "classes_decoded": 18,
+  "methods": 112,
+  "instructions": 6755,
+  "branches": 416,
+  "errors": [],
+  "hot_methods_by_static_instruction_count": [
+    {
+      "class": "Enemies",
+      "signature": "public void hitEnemy(int, int);",
+      "instructions": 1092,
+      "branches": 9,
+      "priority_score": 1119,
+      "calls": {
+        "Shooter.getImage": 13,
+        "Explosions.makeNormalExplosion": 1,
+        "Weaponry.throwPowerup": 1
+      }
+    },
+    {
+      "class": "PlayerShip",
+      "signature": "public void update(javax.microedition.lcdui.Graphics);",
+      "instructions": 405,
+      "branches": 43,
+      "priority_score": 939,
+      "calls": {
+        "javax.microedition.lcdui.Graphics.setColor": 3,
+        "java.lang.Integer.toString": 2,
+        "javax.microedition.lcdui.Graphics.drawString": 2,
+        "javax.microedition.lcdui.Graphics.drawImage": 1,
+        "javax.microedition.lcdui.Graphics.drawRect": 1,
+        "javax.microedition.lcdui.Graphics.fillRect": 1,
+        "Weaponry.fire": 1,
+        "Weaponry.load": 1,
+        "Enemies.isHit": 1
+      }
+    },
+    {
+      "class": "Enemies",
+      "signature": "public void update(javax.microedition.lcdui.Graphics);",
+      "instructions": 369,
+      "branches": 31,
+      "priority_score": 831,
+      "calls": {
+        "Weaponry.fireWeapon": 8,
+        "javax.microedition.lcdui.Graphics.drawImage": 1,
+        "java.lang.Throwable.getMessage": 1,
+        "javax.microedition.lcdui.Graphics.drawString": 1
+      }
+    },
+    {
+      "class": "Weaponry",
+      "signature": "static void updateShots(javax.microedition.lcdui.Graphics);",
+      "instructions": 320,
+      "branches": 41,
+      "priority_score": 763,
+      "calls": {
+        "Enemies.isHit": 1,
+        "PlayerShip.hit": 1,
+        "javax.microedition.lcdui.Graphics.drawImage": 1
+      }
+    },
+    {
+      "class": "LanguageLoader",
+      "signature": "public java.lang.String[] ReadLangFile(int);",
+      "instructions": 190,
+      "branches": 14,
+      "priority_score": 612,
+      "calls": {
+        "java.lang.Class.getResourceAsStream": 5,
+        "java.lang.StringBuffer.append": 5,
+        "java.lang.String.valueOf": 4,
+        "java.io.PrintStream.println": 3,
+        "java.lang.String.indexOf": 2,
+        "java.lang.String.substring": 2,
+        "java.lang.String.trim": 2,
+        "java.lang.Object.getClass": 1,
+        "java.io.InputStreamReader.read": 1,
+        "java.io.InputStream.close": 1,
+        "java.lang.StringBuffer.toString": 1,
+        "java.lang.Throwable.printStackTrace": 1
+      }
+    },
+    {
+      "class": "MenuScreen",
+      "signature": "public MenuScreen();",
+      "instructions": 479,
+      "branches": 2,
+      "priority_score": 485,
+      "calls": {
+        "javax.microedition.lcdui.Form.append": 8,
+        "javax.microedition.lcdui.Displayable.setCommandListener": 6,
+        "javax.microedition.lcdui.Displayable.addCommand": 5,
+        "javax.microedition.lcdui.ChoiceGroup.append": 5,
+        "javax.microedition.lcdui.ChoiceGroup.setSelectedIndex": 2,
+        "java.lang.Throwable.printStackTrace": 1,
+        "LanguageLoader.ReadLangFile": 1,
+        "Shooter.getImage": 1,
+        "HighScores.loadHighScores": 1
+      }
+    },
+    {
+      "class": "Weaponry",
+      "signature": "static void fireWeapon(int, int, int, int, boolean);",
+      "instructions": 330,
+      "branches": 29,
+      "priority_score": 417,
+      "calls": {
+        "java.lang.Math.abs": 3
+      }
+    },
+    {
+      "class": "GameScreen",
+      "signature": "protected void paint(javax.microedition.lcdui.Graphics);",
+      "instructions": 150,
+      "branches": 7,
+      "priority_score": 321,
+      "calls": {
+        "javax.microedition.lcdui.Graphics.drawImage": 5,
+        "javax.microedition.lcdui.Graphics.setColor": 3,
+        "javax.microedition.lcdui.Graphics.fillRect": 2,
+        "javax.microedition.lcdui.Image.createImage": 1,
+        "javax.microedition.lcdui.Image.getGraphics": 1,
+        "javax.microedition.lcdui.Graphics.drawString": 1
+      }
+    },
+    {
+      "class": "Enemies",
+      "signature": "public void addEnemy(byte, int, int, int);",
+      "instructions": 242,
+      "branches": 22,
+      "priority_score": 308,
+      "calls": {}
+    },
+    {
+      "class": "HighScores",
+      "signature": "private static HighScores _$6130(byte[]);",
+      "instructions": 94,
+      "branches": 7,
+      "priority_score": 303,
+      "calls": {
+        "java.io.DataInputStream.readInt": 1,
+        "java.lang.StringBuffer.length": 1,
+        "java.lang.StringBuffer.delete": 1,
+        "java.io.DataInputStream.readChar": 1,
+        "java.lang.StringBuffer.append": 1,
+        "java.lang.StringBuffer.toString": 1,
+        "java.lang.String.length": 1,
+        "java.lang.String.substring": 1,
+        "java.io.DataInputStream.close": 1,
+        "java.io.ByteArrayInputStream.close": 1
+      }
+    },
+    {
+      "class": "Weaponry",
+      "signature": "boolean fire(int, int, boolean);",
+      "instructions": 226,
+      "branches": 10,
+      "priority_score": 256,
+      "calls": {}
+    },
+    {
+      "class": "GameScreen",
+      "signature": "private void _$6177(javax.microedition.lcdui.Graphics);",
+      "instructions": 35,
+      "branches": 0,
+      "priority_score": 245,
+      "calls": {
+        "javax.microedition.lcdui.Graphics.setColor": 1,
+        "javax.microedition.lcdui.Graphics.fillRect": 1,
+        "LevelHandler.update": 1,
+        "Starfield.update": 1,
+        "Weaponry.updateShots": 1,
+        "Enemies.update": 1,
+        "PlayerShip.update": 1,
+        "Explosions.update": 1
+      }
+    }
+  ],
+  "call_targets": [
+    {
+      "target": "java.lang.String.valueOf",
+      "count": 26
+    },
+    {
+      "target": "javax.microedition.lcdui.Graphics.setColor",
+      "count": 18
+    },
+    {
+      "target": "Shooter.getImage",
+      "count": 17
+    },
+    {
+      "target": "java.lang.StringBuffer.append",
+      "count": 15
+    },
+    {
+      "target": "javax.microedition.lcdui.Displayable.addCommand",
+      "count": 13
+    },
+    {
+      "target": "Shooter.setDisplayable",
+      "count": 11
+    },
+    {
+      "target": "javax.microedition.lcdui.Graphics.drawImage",
+      "count": 10
+    },
+    {
+      "target": "javax.microedition.lcdui.Graphics.fillRect",
+      "count": 9
+    },
+    {
+      "target": "javax.microedition.lcdui.Form.append",
+      "count": 9
+    },
+    {
+      "target": "javax.microedition.lcdui.Displayable.removeCommand",
+      "count": 9
+    },
+    {
+      "target": "Weaponry.fireWeapon",
+      "count": 8
+    },
+    {
+      "target": "javax.microedition.lcdui.Graphics.drawString",
+      "count": 8
+    },
+    {
+      "target": "java.lang.String.substring",
+      "count": 7
+    },
+    {
+      "target": "java.lang.String.indexOf",
+      "count": 6
+    },
+    {
+      "target": "Shooter.quitApp",
+      "count": 6
+    },
+    {
+      "target": "javax.microedition.lcdui.Displayable.setCommandListener",
+      "count": 6
+    },
+    {
+      "target": "java.lang.String.concat",
+      "count": 5
+    },
+    {
+      "target": "java.lang.Class.getResourceAsStream",
+      "count": 5
+    },
+    {
+      "target": "javax.microedition.lcdui.ChoiceGroup.append",
+      "count": 5
+    },
+    {
+      "target": "Weaponry.throwPowerup",
+      "count": 4
+    },
+    {
+      "target": "java.lang.Throwable.printStackTrace",
+      "count": 4
+    },
+    {
+      "target": "javax.microedition.lcdui.ChoiceGroup.setSelectedIndex",
+      "count": 4
+    },
+    {
+      "target": "java.util.Random.nextInt",
+      "count": 4
+    },
+    {
+      "target": "java.lang.Math.abs",
+      "count": 4
+    },
+    {
+      "target": "javax.microedition.lcdui.Canvas.getWidth",
+      "count": 3
+    },
+    {
+      "target": "javax.microedition.lcdui.Canvas.getHeight",
+      "count": 3
+    },
+    {
+      "target": "java.io.DataInputStream.readInt",
+      "count": 3
+    },
+    {
+      "target": "java.io.DataOutputStream.writeInt",
+      "count": 3
+    },
+    {
+      "target": "SingleItemDB.load",
+      "count": 3
+    },
+    {
+      "target": "java.io.PrintStream.println",
+      "count": 3
+    },
+    {
+      "target": "Explosions.makeNormalExplosion",
+      "count": 2
+    },
+    {
+      "target": "javax.microedition.lcdui.Image.createImage",
+      "count": 2
+    },
+    {
+      "target": "HighScores.isHighScore",
+      "count": 2
+    },
+    {
+      "target": "javax.microedition.lcdui.Canvas.getGameAction",
+      "count": 2
+    },
+    {
+      "target": "MenuScreen.showMenu",
+      "count": 2
+    }
+  ],
+  "opcode_histogram": {
+    "aload_0": 689,
+    "getfield": 629,
+    "bipush": 508,
+    "iconst_0": 411,
+    "dup": 331,
+    "invokevirtual": 275,
+    "putfield": 273,
+    "getstatic": 268,
+    "iconst_1": 194,
+    "bastore": 162,
+    "iload": 162,
+    "invokestatic": 138,
+    "goto": 133,
+    "aaload": 128,
+    "return": 117,
+    "aload_3": 117,
+    "iload_1": 114,
+    "putstatic": 113,
+    "iconst_2": 106,
+    "invokespecial": 103,
+    "iadd": 103,
+    "aload_1": 102,
+    "ldc": 91,
+    "iload_2": 90,
+    "if_icmpne": 89,
+    "aload_2": 88,
+    "iconst_3": 85,
+    "iload_3": 77,
+    "aastore": 75,
+    "new": 60,
+    "iconst_5": 58,
+    "iconst_4": 54,
+    "isub": 51,
+    "if_icmpge": 48,
+    "istore": 42
+  },
+  "resource_file_count": 65,
+  "resources_by_suffix": {
+    ".png": 63,
+    ".txt": 1,
+    ".mf": 1
+  },
+  "class_methods": [
+    {
+      "class": "Enemies$Enemy",
+      "method_count": 1,
+      "instructions": 6,
+      "branches": 0,
+      "methods": [
+        {
+          "signature": "public Enemies$Enemy(Enemies, int);",
+          "instructions": 6,
+          "branches": 0,
+          "calls": {}
+        }
+      ]
+    },
+    {
+      "class": "Enemies",
+      "method_count": 11,
+      "instructions": 1981,
+      "branches": 82,
+      "methods": [
+        {
+          "signature": "private static void _$36659(byte, int, int, int, int, int);",
+          "instructions": 26,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public Enemies(int, int);",
+          "instructions": 24,
+          "branches": 2,
+          "calls": {}
+        },
+        {
+          "signature": "public void addEnemy(byte, int, int, int);",
+          "instructions": 242,
+          "branches": 22,
+          "calls": {}
+        },
+        {
+          "signature": "public void addEnemy(int, int, int, int, int, int, int);",
+          "instructions": 19,
+          "branches": 1,
+          "calls": {}
+        },
+        {
+          "signature": "private int _$36576(byte, int, int, int, int, int, int, int, int, int, int, int);",
+          "instructions": 89,
+          "branches": 5,
+          "calls": {}
+        },
+        {
+          "signature": "private static void _$36686(int);",
+          "instructions": 11,
+          "branches": 1,
+          "calls": {}
+        },
+        {
+          "signature": "public void reset();",
+          "instructions": 35,
+          "branches": 4,
+          "calls": {}
+        },
+        {
+          "signature": "public void update(javax.microedition.lcdui.Graphics);",
+          "instructions": 369,
+          "branches": 31,
+          "calls": {
+            "Weaponry.fireWeapon": 8,
+            "javax.microedition.lcdui.Graphics.drawImage": 1,
+            "java.lang.Throwable.getMessage": 1,
+            "javax.microedition.lcdui.Graphics.drawString": 1
+          }
+        },
+        {
+          "signature": "public int isHit(int, int, int, int, int);",
+          "instructions": 65,
+          "branches": 7,
+          "calls": {}
+        },
+        {
+          "signature": "public void setWavePoints(int, int, int);",
+          "instructions": 9,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public void hitEnemy(int, int);",
+          "instructions": 1092,
+          "branches": 9,
+          "calls": {
+            "Shooter.getImage": 13,
+            "Explosions.makeNormalExplosion": 1,
+            "Weaponry.throwPowerup": 1
+          }
+        }
+      ]
+    },
+    {
+      "class": "Explosions$Explosion",
+      "method_count": 1,
+      "instructions": 6,
+      "branches": 0,
+      "methods": [
+        {
+          "signature": "public Explosions$Explosion(Explosions);",
+          "instructions": 6,
+          "branches": 0,
+          "calls": {}
+        }
+      ]
+    },
+    {
+      "class": "Explosions",
+      "method_count": 6,
+      "instructions": 222,
+      "branches": 19,
+      "methods": [
+        {
+          "signature": "public Explosions();",
+          "instructions": 59,
+          "branches": 4,
+          "calls": {
+            "java.lang.String.valueOf": 2,
+            "java.lang.StringBuffer.append": 1,
+            "Shooter.getImage": 1
+          }
+        },
+        {
+          "signature": "public void reset();",
+          "instructions": 14,
+          "branches": 2,
+          "calls": {}
+        },
+        {
+          "signature": "private void _$36722(int, int, int, int, int, int);",
+          "instructions": 59,
+          "branches": 5,
+          "calls": {}
+        },
+        {
+          "signature": "private void _$36723(int);",
+          "instructions": 13,
+          "branches": 1,
+          "calls": {}
+        },
+        {
+          "signature": "public void makeNormalExplosion(int, int);",
+          "instructions": 9,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public void update(javax.microedition.lcdui.Graphics);",
+          "instructions": 68,
+          "branches": 7,
+          "calls": {
+            "javax.microedition.lcdui.Graphics.drawImage": 1
+          }
+        }
+      ]
+    },
+    {
+      "class": "GameScreen$FrameUpdateTask",
+      "method_count": 2,
+      "instructions": 10,
+      "branches": 0,
+      "methods": [
+        {
+          "signature": "public GameScreen$FrameUpdateTask(GameScreen);",
+          "instructions": 6,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public void run();",
+          "instructions": 4,
+          "branches": 0,
+          "calls": {
+            "GameScreen.updateAll": 1
+          }
+        }
+      ]
+    },
+    {
+      "class": "GameScreen",
+      "method_count": 18,
+      "instructions": 715,
+      "branches": 47,
+      "methods": [
+        {
+          "signature": "public GameScreen(MenuScreen);",
+          "instructions": 15,
+          "branches": 1,
+          "calls": {
+            "java.lang.Throwable.printStackTrace": 1
+          }
+        },
+        {
+          "signature": "public void cleanUp();",
+          "instructions": 101,
+          "branches": 0,
+          "calls": {
+            "javax.microedition.lcdui.Canvas.getWidth": 1,
+            "javax.microedition.lcdui.Canvas.getHeight": 1,
+            "Weaponry.setBounds": 1
+          }
+        },
+        {
+          "signature": "public void newGame();",
+          "instructions": 10,
+          "branches": 0,
+          "calls": {
+            "PlayerShip.resetShip": 1
+          }
+        },
+        {
+          "signature": "protected void paint(javax.microedition.lcdui.Graphics);",
+          "instructions": 150,
+          "branches": 7,
+          "calls": {
+            "javax.microedition.lcdui.Graphics.drawImage": 5,
+            "javax.microedition.lcdui.Graphics.setColor": 3,
+            "javax.microedition.lcdui.Graphics.fillRect": 2,
+            "javax.microedition.lcdui.Image.createImage": 1,
+            "javax.microedition.lcdui.Image.getGraphics": 1,
+            "javax.microedition.lcdui.Graphics.drawString": 1
+          }
+        },
+        {
+          "signature": "private void _$6177(javax.microedition.lcdui.Graphics);",
+          "instructions": 35,
+          "branches": 0,
+          "calls": {
+            "javax.microedition.lcdui.Graphics.setColor": 1,
+            "javax.microedition.lcdui.Graphics.fillRect": 1,
+            "LevelHandler.update": 1,
+            "Starfield.update": 1,
+            "Weaponry.updateShots": 1,
+            "Enemies.update": 1,
+            "PlayerShip.update": 1,
+            "Explosions.update": 1
+          }
+        },
+        {
+          "signature": "public void renderLevelStartMode(javax.microedition.lcdui.Graphics);",
+          "instructions": 43,
+          "branches": 0,
+          "calls": {
+            "java.lang.String.valueOf": 4,
+            "javax.microedition.lcdui.Graphics.setColor": 2,
+            "javax.microedition.lcdui.Graphics.fillRect": 1,
+            "java.lang.String.concat": 1,
+            "javax.microedition.lcdui.Graphics.drawString": 1
+          }
+        },
+        {
+          "signature": "public void renderGameOverMode(javax.microedition.lcdui.Graphics);",
+          "instructions": 35,
+          "branches": 0,
+          "calls": {
+            "javax.microedition.lcdui.Graphics.setColor": 2,
+            "javax.microedition.lcdui.Graphics.fillRect": 1,
+            "javax.microedition.lcdui.Graphics.drawString": 1
+          }
+        },
+        {
+          "signature": "public void renderLevelEndMode(javax.microedition.lcdui.Graphics);",
+          "instructions": 35,
+          "branches": 0,
+          "calls": {
+            "javax.microedition.lcdui.Graphics.setColor": 2,
+            "javax.microedition.lcdui.Graphics.fillRect": 1,
+            "javax.microedition.lcdui.Graphics.drawString": 1
+          }
+        },
+        {
+          "signature": "public void nextLevel();",
+          "instructions": 22,
+          "branches": 2,
+          "calls": {
+            "LevelHandler.loadNextLevel": 1,
+            "Enemies.reset": 1,
+            "Explosions.reset": 1,
+            "Weaponry.reset": 1,
+            "PlayerShip.resetShipPos": 1
+          }
+        },
+        {
+          "signature": "public void keyPressed(int);",
+          "instructions": 43,
+          "branches": 8,
+          "calls": {
+            "Shooter.setDisplayable": 2,
+            "HighScores.isHighScore": 1
+          }
+        },
+        {
+          "signature": "void keyPressedWaitMode(int);",
+          "instructions": 4,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "void keyPressedLevelEndMode(int);",
+          "instructions": 3,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "void keyPressedPlayMode(int);",
+          "instructions": 114,
+          "branches": 14,
+          "calls": {
+            "Weaponry.throwPowerup": 3,
+            "javax.microedition.lcdui.Canvas.getGameAction": 1,
+            "MenuScreen.showMenu": 1
+          }
+        },
+        {
+          "signature": "public void keyReleased(int);",
+          "instructions": 59,
+          "branches": 14,
+          "calls": {
+            "javax.microedition.lcdui.Canvas.getGameAction": 1
+          }
+        },
+        {
+          "signature": "public void update(javax.microedition.lcdui.Graphics);",
+          "instructions": 4,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public void updateAll();",
+          "instructions": 3,
+          "branches": 0,
+          "calls": {
+            "javax.microedition.lcdui.Canvas.repaint": 1
+          }
+        },
+        {
+          "signature": "public void showNotify();",
+          "instructions": 21,
+          "branches": 1,
+          "calls": {
+            "PlayerShip.resetControls": 1,
+            "java.util.Timer.schedule": 1
+          }
+        },
+        {
+          "signature": "public void hideNotify();",
+          "instructions": 18,
+          "branches": 0,
+          "calls": {
+            "java.util.Timer.cancel": 1
+          }
+        }
+      ]
+    },
+    {
+      "class": "HighScoreManager",
+      "method_count": 1,
+      "instructions": 3,
+      "branches": 0,
+      "methods": [
+        {
+          "signature": "public HighScoreManager();",
+          "instructions": 3,
+          "branches": 0,
+          "calls": {}
+        }
+      ]
+    },
+    {
+      "class": "HighScores",
+      "method_count": 10,
+      "instructions": 337,
+      "branches": 34,
+      "methods": [
+        {
+          "signature": "private HighScores(int[], java.lang.String[]);",
+          "instructions": 55,
+          "branches": 7,
+          "calls": {}
+        },
+        {
+          "signature": "private static HighScores _$6130(byte[]);",
+          "instructions": 94,
+          "branches": 7,
+          "calls": {
+            "java.io.DataInputStream.readInt": 1,
+            "java.lang.StringBuffer.length": 1,
+            "java.lang.StringBuffer.delete": 1,
+            "java.io.DataInputStream.readChar": 1,
+            "java.lang.StringBuffer.append": 1,
+            "java.lang.StringBuffer.toString": 1,
+            "java.lang.String.length": 1,
+            "java.lang.String.substring": 1
+          }
+        },
+        {
+          "signature": "private byte[] _$6132();",
+          "instructions": 57,
+          "branches": 4,
+          "calls": {
+            "java.lang.String.valueOf": 4,
+            "java.io.DataOutputStream.writeInt": 1,
+            "java.lang.String.concat": 1,
+            "java.io.DataOutputStream.writeChars": 1,
+            "java.io.DataOutputStream.close": 1,
+            "java.io.ByteArrayOutputStream.toByteArray": 1,
+            "java.io.ByteArrayOutputStream.close": 1
+          }
+        },
+        {
+          "signature": "public int getScore(int);",
+          "instructions": 12,
+          "branches": 2,
+          "calls": {}
+        },
+        {
+          "signature": "public java.lang.String getName(int);",
+          "instructions": 12,
+          "branches": 2,
+          "calls": {}
+        },
+        {
+          "signature": "public boolean isHighScore(int);",
+          "instructions": 10,
+          "branches": 2,
+          "calls": {}
+        },
+        {
+          "signature": "public boolean setHighScore(int, java.lang.String);",
+          "instructions": 63,
+          "branches": 8,
+          "calls": {}
+        },
+        {
+          "signature": "public static void resetHighScores();",
+          "instructions": 4,
+          "branches": 0,
+          "calls": {
+            "SingleItemDB.delete": 1
+          }
+        },
+        {
+          "signature": "public static HighScores loadHighScores();",
+          "instructions": 16,
+          "branches": 1,
+          "calls": {
+            "SingleItemDB.load": 1
+          }
+        },
+        {
+          "signature": "public static boolean saveHighScores(HighScores);",
+          "instructions": 14,
+          "branches": 1,
+          "calls": {
+            "SingleItemDB.save": 1
+          }
+        }
+      ]
+    },
+    {
+      "class": "LanguageLoader",
+      "method_count": 2,
+      "instructions": 193,
+      "branches": 14,
+      "methods": [
+        {
+          "signature": "public LanguageLoader();",
+          "instructions": 3,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public java.lang.String[] ReadLangFile(int);",
+          "instructions": 190,
+          "branches": 14,
+          "calls": {
+            "java.lang.Class.getResourceAsStream": 5,
+            "java.lang.StringBuffer.append": 5,
+            "java.lang.String.valueOf": 4,
+            "java.io.PrintStream.println": 3,
+            "java.lang.String.indexOf": 2,
+            "java.lang.String.substring": 2,
+            "java.lang.String.trim": 2,
+            "java.lang.Object.getClass": 1
+          }
+        }
+      ]
+    },
+    {
+      "class": "LevelHandler",
+      "method_count": 6,
+      "instructions": 283,
+      "branches": 22,
+      "methods": [
+        {
+          "signature": "private void _$36561();",
+          "instructions": 35,
+          "branches": 3,
+          "calls": {
+            "java.lang.String.indexOf": 1,
+            "java.lang.String.substring": 1
+          }
+        },
+        {
+          "signature": "private boolean _$36564(java.lang.String, int);",
+          "instructions": 52,
+          "branches": 5,
+          "calls": {
+            "Shooter.quitApp": 3,
+            "java.lang.String.indexOf": 2,
+            "java.lang.String.substring": 2,
+            "java.lang.Integer.parseInt": 1,
+            "java.lang.String.charAt": 1
+          }
+        },
+        {
+          "signature": "public LevelHandler();",
+          "instructions": 25,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public boolean loadNextLevel();",
+          "instructions": 36,
+          "branches": 1,
+          "calls": {}
+        },
+        {
+          "signature": "public void update();",
+          "instructions": 10,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "void parseEvent(java.lang.String);",
+          "instructions": 125,
+          "branches": 13,
+          "calls": {
+            "Enemies.addEnemy": 2,
+            "Shooter.quitApp": 2,
+            "java.lang.String.charAt": 1,
+            "java.lang.String.indexOf": 1,
+            "java.lang.String.length": 1,
+            "java.lang.String.substring": 1,
+            "java.lang.Integer.parseInt": 1,
+            "Enemies.setWavePoints": 1
+          }
+        }
+      ]
+    },
+    {
+      "class": "MenuScreen",
+      "method_count": 16,
+      "instructions": 940,
+      "branches": 40,
+      "methods": [
+        {
+          "signature": "public MenuScreen();",
+          "instructions": 479,
+          "branches": 2,
+          "calls": {
+            "javax.microedition.lcdui.Form.append": 8,
+            "javax.microedition.lcdui.Displayable.setCommandListener": 6,
+            "javax.microedition.lcdui.Displayable.addCommand": 5,
+            "javax.microedition.lcdui.ChoiceGroup.append": 5,
+            "javax.microedition.lcdui.ChoiceGroup.setSelectedIndex": 2,
+            "java.lang.Throwable.printStackTrace": 1,
+            "LanguageLoader.ReadLangFile": 1,
+            "Shooter.getImage": 1
+          }
+        },
+        {
+          "signature": "public void commandAction(javax.microedition.lcdui.Command, javax.microedition.lcdui.Displayable);",
+          "instructions": 123,
+          "branches": 26,
+          "calls": {
+            "Shooter.setDisplayable": 2,
+            "javax.microedition.lcdui.Command.getCommandType": 1,
+            "Shooter.quitApp": 1,
+            "javax.microedition.lcdui.TextField.getString": 1,
+            "HighScores.setHighScore": 1,
+            "HighScores.isHighScore": 1
+          }
+        },
+        {
+          "signature": "public void showMenu();",
+          "instructions": 49,
+          "branches": 1,
+          "calls": {
+            "javax.microedition.lcdui.Displayable.addCommand": 7,
+            "javax.microedition.lcdui.Displayable.removeCommand": 2,
+            "SingleItemDB.load": 1,
+            "Shooter.setDisplayable": 1
+          }
+        },
+        {
+          "signature": "public void showInstructions();",
+          "instructions": 5,
+          "branches": 0,
+          "calls": {
+            "Shooter.setDisplayable": 1
+          }
+        },
+        {
+          "signature": "public void showSettings();",
+          "instructions": 5,
+          "branches": 0,
+          "calls": {
+            "Shooter.setDisplayable": 1
+          }
+        },
+        {
+          "signature": "public void showHighScores();",
+          "instructions": 60,
+          "branches": 5,
+          "calls": {
+            "java.lang.StringBuffer.append": 6,
+            "java.lang.String.valueOf": 2,
+            "javax.microedition.lcdui.Form.size": 1,
+            "javax.microedition.lcdui.Form.delete": 1,
+            "HighScores.loadHighScores": 1,
+            "HighScores.getScore": 1,
+            "HighScores.getName": 1,
+            "javax.microedition.lcdui.Form.append": 1
+          }
+        },
+        {
+          "signature": "public void showGameOver(int);",
+          "instructions": 42,
+          "branches": 0,
+          "calls": {
+            "javax.microedition.lcdui.Displayable.removeCommand": 7,
+            "javax.microedition.lcdui.Displayable.addCommand": 1,
+            "Shooter.setDisplayable": 1
+          }
+        },
+        {
+          "signature": "public void showAbout();",
+          "instructions": 5,
+          "branches": 0,
+          "calls": {
+            "Shooter.setDisplayable": 1
+          }
+        },
+        {
+          "signature": "public void newGame();",
+          "instructions": 11,
+          "branches": 0,
+          "calls": {
+            "SingleItemDB.delete": 1,
+            "GameScreen.newGame": 1,
+            "Shooter.setDisplayable": 1
+          }
+        },
+        {
+          "signature": "public void update(javax.microedition.lcdui.Graphics);",
+          "instructions": 4,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "protected void paint(javax.microedition.lcdui.Graphics);",
+          "instructions": 11,
+          "branches": 2,
+          "calls": {}
+        },
+        {
+          "signature": "private void _$3715(javax.microedition.lcdui.Graphics);",
+          "instructions": 34,
+          "branches": 0,
+          "calls": {
+            "javax.microedition.lcdui.Graphics.setColor": 2,
+            "javax.microedition.lcdui.Canvas.getWidth": 1,
+            "javax.microedition.lcdui.Canvas.getHeight": 1,
+            "javax.microedition.lcdui.Graphics.fillRect": 1,
+            "javax.microedition.lcdui.Graphics.drawImage": 1
+          }
+        },
+        {
+          "signature": "private void _$6179(javax.microedition.lcdui.Graphics);",
+          "instructions": 36,
+          "branches": 0,
+          "calls": {
+            "javax.microedition.lcdui.Graphics.setColor": 2,
+            "javax.microedition.lcdui.Canvas.getWidth": 1,
+            "javax.microedition.lcdui.Canvas.getHeight": 1,
+            "javax.microedition.lcdui.Graphics.fillRect": 1,
+            "javax.microedition.lcdui.Graphics.drawString": 1
+          }
+        },
+        {
+          "signature": "public void cleanUp();",
+          "instructions": 6,
+          "branches": 0,
+          "calls": {
+            "GameScreen.cleanUp": 1
+          }
+        },
+        {
+          "signature": "private void _$28424();",
+          "instructions": 36,
+          "branches": 3,
+          "calls": {
+            "java.io.DataInputStream.readInt": 2,
+            "javax.microedition.lcdui.ChoiceGroup.setSelectedIndex": 2,
+            "SingleItemDB.load": 1,
+            "java.io.DataInputStream.close": 1
+          }
+        },
+        {
+          "signature": "private void _$28431();",
+          "instructions": 34,
+          "branches": 1,
+          "calls": {
+            "javax.microedition.lcdui.ChoiceGroup.getSelectedIndex": 2,
+            "java.io.DataOutputStream.writeInt": 2,
+            "java.io.DataOutputStream.close": 1,
+            "java.io.ByteArrayOutputStream.toByteArray": 1,
+            "SingleItemDB.save": 1
+          }
+        }
+      ]
+    },
+    {
+      "class": "PlayerShip",
+      "method_count": 7,
+      "instructions": 622,
+      "branches": 56,
+      "methods": [
+        {
+          "signature": "public PlayerShip(int, int, int, int);",
+          "instructions": 51,
+          "branches": 2,
+          "calls": {
+            "java.lang.String.valueOf": 2,
+            "java.lang.String.concat": 1,
+            "Shooter.getImage": 1
+          }
+        },
+        {
+          "signature": "public javax.microedition.lcdui.Image getImage();",
+          "instructions": 29,
+          "branches": 8,
+          "calls": {}
+        },
+        {
+          "signature": "public void resetShipPos();",
+          "instructions": 46,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public void resetShip();",
+          "instructions": 15,
+          "branches": 0,
+          "calls": {
+            "Weaponry.resetWeapons": 1
+          }
+        },
+        {
+          "signature": "public void resetControls();",
+          "instructions": 19,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public void update(javax.microedition.lcdui.Graphics);",
+          "instructions": 405,
+          "branches": 43,
+          "calls": {
+            "javax.microedition.lcdui.Graphics.setColor": 3,
+            "java.lang.Integer.toString": 2,
+            "javax.microedition.lcdui.Graphics.drawString": 2,
+            "javax.microedition.lcdui.Graphics.drawImage": 1,
+            "javax.microedition.lcdui.Graphics.drawRect": 1,
+            "javax.microedition.lcdui.Graphics.fillRect": 1,
+            "Weaponry.fire": 1,
+            "Weaponry.load": 1
+          }
+        },
+        {
+          "signature": "public void hit(int);",
+          "instructions": 57,
+          "branches": 3,
+          "calls": {
+            "Explosions.makeNormalExplosion": 1
+          }
+        }
+      ]
+    },
+    {
+      "class": "Shooter",
+      "method_count": 7,
+      "instructions": 58,
+      "branches": 0,
+      "methods": [
+        {
+          "signature": "public Shooter();",
+          "instructions": 22,
+          "branches": 0,
+          "calls": {
+            "javax.microedition.lcdui.Display.getDisplay": 1,
+            "javax.microedition.lcdui.Display.setCurrent": 1,
+            "MenuScreen.showMenu": 1
+          }
+        },
+        {
+          "signature": "public void setDisplayable(javax.microedition.lcdui.Displayable);",
+          "instructions": 5,
+          "branches": 0,
+          "calls": {
+            "javax.microedition.lcdui.Display.getDisplay": 1,
+            "javax.microedition.lcdui.Display.setCurrent": 1
+          }
+        },
+        {
+          "signature": "public void startApp();",
+          "instructions": 1,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public void pauseApp();",
+          "instructions": 1,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public void destroyApp(boolean);",
+          "instructions": 1,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public static void quitApp();",
+          "instructions": 8,
+          "branches": 0,
+          "calls": {
+            "javax.microedition.midlet.MIDlet.notifyDestroyed": 1
+          }
+        },
+        {
+          "signature": "public static javax.microedition.lcdui.Image getImage(java.lang.String);",
+          "instructions": 20,
+          "branches": 0,
+          "calls": {
+            "java.lang.StringBuffer.append": 2,
+            "java.lang.String.valueOf": 2,
+            "javax.microedition.lcdui.Image.createImage": 1,
+            "java.lang.Throwable.printStackTrace": 1
+          }
+        }
+      ]
+    },
+    {
+      "class": "SingleItemDB",
+      "method_count": 4,
+      "instructions": 80,
+      "branches": 4,
+      "methods": [
+        {
+          "signature": "private SingleItemDB();",
+          "instructions": 3,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public static boolean save(java.lang.String, byte[]);",
+          "instructions": 35,
+          "branches": 3,
+          "calls": {
+            "javax.microedition.rms.RecordStore.openRecordStore": 1,
+            "javax.microedition.rms.RecordStore.enumerateRecords": 1,
+            "javax.microedition.rms.RecordEnumeration.hasNextElement": 1,
+            "javax.microedition.rms.RecordEnumeration.nextRecordId": 1,
+            "javax.microedition.rms.RecordStore.deleteRecord": 1,
+            "javax.microedition.rms.RecordStore.addRecord": 1,
+            "javax.microedition.rms.RecordStore.closeRecordStore": 1
+          }
+        },
+        {
+          "signature": "public static byte[] load(java.lang.String);",
+          "instructions": 31,
+          "branches": 1,
+          "calls": {
+            "javax.microedition.rms.RecordStore.openRecordStore": 1,
+            "javax.microedition.rms.RecordStore.enumerateRecords": 1,
+            "javax.microedition.rms.RecordEnumeration.hasNextElement": 1,
+            "javax.microedition.rms.RecordEnumeration.nextRecord": 1,
+            "javax.microedition.rms.RecordStore.closeRecordStore": 1
+          }
+        },
+        {
+          "signature": "public static boolean delete(java.lang.String);",
+          "instructions": 11,
+          "branches": 0,
+          "calls": {
+            "javax.microedition.rms.RecordStore.deleteRecordStore": 1
+          }
+        }
+      ]
+    },
+    {
+      "class": "Starfield$Star",
+      "method_count": 1,
+      "instructions": 3,
+      "branches": 0,
+      "methods": [
+        {
+          "signature": "public Starfield$Star();",
+          "instructions": 3,
+          "branches": 0,
+          "calls": {}
+        }
+      ]
+    },
+    {
+      "class": "Starfield",
+      "method_count": 3,
+      "instructions": 176,
+      "branches": 5,
+      "methods": [
+        {
+          "signature": "public Starfield(int, int);",
+          "instructions": 89,
+          "branches": 2,
+          "calls": {
+            "java.util.Random.nextInt": 3,
+            "java.lang.Math.abs": 1
+          }
+        },
+        {
+          "signature": "public void update(javax.microedition.lcdui.Graphics);",
+          "instructions": 74,
+          "branches": 3,
+          "calls": {
+            "javax.microedition.lcdui.Graphics.setColor": 1,
+            "javax.microedition.lcdui.Graphics.drawLine": 1,
+            "java.util.Random.nextInt": 1
+          }
+        },
+        {
+          "signature": "public int makeRGB(int, int, int);",
+          "instructions": 13,
+          "branches": 0,
+          "calls": {}
+        }
+      ]
+    },
+    {
+      "class": "Weaponry$Shot",
+      "method_count": 2,
+      "instructions": 7,
+      "branches": 0,
+      "methods": [
+        {
+          "signature": "public Weaponry$Shot();",
+          "instructions": 6,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public void update();",
+          "instructions": 1,
+          "branches": 0,
+          "calls": {}
+        }
+      ]
+    },
+    {
+      "class": "Weaponry",
+      "method_count": 14,
+      "instructions": 1113,
+      "branches": 93,
+      "methods": [
+        {
+          "signature": "private static void _$36539(int, java.lang.String, int);",
+          "instructions": 36,
+          "branches": 4,
+          "calls": {
+            "java.lang.String.valueOf": 6,
+            "java.lang.String.concat": 2,
+            "Shooter.getImage": 1
+          }
+        },
+        {
+          "signature": "public static void setBounds(int, int);",
+          "instructions": 5,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "static void fireWeapon(int, int, int, int);",
+          "instructions": 7,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "static void fireWeapon(int, int, int, int, boolean);",
+          "instructions": 330,
+          "branches": 29,
+          "calls": {
+            "java.lang.Math.abs": 3
+          }
+        },
+        {
+          "signature": "static void throwPowerup(int, int, int);",
+          "instructions": 13,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "static void fireWeapon(int, int, int, int, int, int);",
+          "instructions": 16,
+          "branches": 1,
+          "calls": {}
+        },
+        {
+          "signature": "private static void _$9410(int, int, int, int, int, int, int, int, int, int, int);",
+          "instructions": 76,
+          "branches": 5,
+          "calls": {}
+        },
+        {
+          "signature": "private static void _$36550(int);",
+          "instructions": 11,
+          "branches": 1,
+          "calls": {}
+        },
+        {
+          "signature": "static void updateShots(javax.microedition.lcdui.Graphics);",
+          "instructions": 320,
+          "branches": 41,
+          "calls": {
+            "Enemies.isHit": 1,
+            "PlayerShip.hit": 1,
+            "javax.microedition.lcdui.Graphics.drawImage": 1
+          }
+        },
+        {
+          "signature": "public Weaponry();",
+          "instructions": 5,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public static void reset();",
+          "instructions": 13,
+          "branches": 2,
+          "calls": {}
+        },
+        {
+          "signature": "public void resetWeapons();",
+          "instructions": 36,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "void load();",
+          "instructions": 19,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "boolean fire(int, int, boolean);",
+          "instructions": 226,
+          "branches": 10,
+          "calls": {}
+        }
+      ]
+    }
+  ],
+  "limitation": "Static method inspection, no game execution, no proof of hot paths or semantic equivalence."
+}

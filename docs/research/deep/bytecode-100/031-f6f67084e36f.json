@@ -1,0 +1,2343 @@
+{
+  "rank": 31,
+  "jar_path": "All Java Mobile Phone Games/S/Splinter Cell/SplinterCell.jar",
+  "jar_sha256": "f6f67084e36fc572430cbd9c58ba3fe8cef69cbff06a2c73e85487e74ee7d420",
+  "title": "SplinterCell",
+  "track": "worlds",
+  "status": "BYTECODE_DISASSEMBLED_INDEXED_NOT_FULLY_REVIEWED",
+  "tool": "OpenJDK javap -p -c; JAR never executed",
+  "classes": 29,
+  "classes_decoded": 29,
+  "methods": 197,
+  "instructions": 24717,
+  "branches": 1897,
+  "errors": [],
+  "hot_methods_by_static_instruction_count": [
+    {
+      "class": "SplinterCell.i",
+      "signature": "void a(javax.microedition.lcdui.Graphics);",
+      "instructions": 4193,
+      "branches": 234,
+      "priority_score": 9088,
+      "calls": {
+        "javax.microedition.lcdui.Graphics.drawString": 103,
+        "javax.microedition.lcdui.Graphics.setColor": 80,
+        "javax.microedition.lcdui.Graphics.fillRect": 33,
+        "javax.microedition.lcdui.Graphics.setClip": 29,
+        "javax.microedition.lcdui.Graphics.drawImage": 17,
+        "javax.microedition.lcdui.Graphics.setFont": 15,
+        "java.lang.StringBuffer.append": 14,
+        "java.lang.System.gc": 11,
+        "javax.microedition.lcdui.Font.getFont": 10,
+        "javax.microedition.lcdui.Image.createImage": 10,
+        "java.lang.String.length": 7,
+        "javax.microedition.lcdui.Font.stringWidth": 6,
+        "javax.microedition.lcdui.Font.substringWidth": 5,
+        "java.lang.StringBuffer.toString": 5,
+        "java.lang.String.charAt": 4,
+        "javax.microedition.lcdui.Graphics.drawChar": 4,
+        "javax.microedition.lcdui.Graphics.drawLine": 4,
+        "SplinterCell.a.try": 4,
+        "SplinterCell.j.for": 3,
+        "SplinterCell.j.a": 3
+      }
+    },
+    {
+      "class": "SplinterCell.j",
+      "signature": "boolean a(javax.microedition.lcdui.Graphics, int);",
+      "instructions": 1745,
+      "branches": 164,
+      "priority_score": 2237,
+      "calls": {
+        "SplinterCell.a.int": 49,
+        "SplinterCell.k.do": 8,
+        "SplinterCell.q.w": 3,
+        "javax.microedition.lcdui.Graphics.setClip": 2,
+        "javax.microedition.lcdui.Graphics.fillRect": 2,
+        "SplinterCell.k.a": 1,
+        "SplinterCell.a.a": 1,
+        "javax.microedition.lcdui.Graphics.setColor": 1
+      }
+    },
+    {
+      "class": "SplinterCell.o",
+      "signature": "boolean if(javax.microedition.lcdui.Graphics);",
+      "instructions": 851,
+      "branches": 56,
+      "priority_score": 1870,
+      "calls": {
+        "javax.microedition.lcdui.Graphics.setColor": 18,
+        "javax.microedition.lcdui.Graphics.setClip": 12,
+        "javax.microedition.lcdui.Graphics.fillRect": 11,
+        "javax.microedition.lcdui.Graphics.fillArc": 6,
+        "SplinterCell.a.a": 4,
+        "java.util.Random.nextInt": 4,
+        "javax.microedition.lcdui.Graphics.drawString": 3,
+        "SplinterCell.a.int": 2,
+        "javax.microedition.lcdui.Graphics.drawImage": 2,
+        "javax.microedition.lcdui.Graphics.drawLine": 2,
+        "javax.microedition.lcdui.Graphics.setFont": 1,
+        "java.lang.System.gc": 1,
+        "javax.microedition.lcdui.Image.createImage": 1
+      }
+    },
+    {
+      "class": "SplinterCell.q",
+      "signature": "void s();",
+      "instructions": 1291,
+      "branches": 143,
+      "priority_score": 1720,
+      "calls": {
+        "SplinterCell.a.int": 22,
+        "SplinterCell.k.if": 14,
+        "SplinterCell.k.a": 4,
+        "java.lang.System.currentTimeMillis": 1,
+        "SplinterCell.a.for": 1
+      }
+    },
+    {
+      "class": "SplinterCell.q",
+      "signature": "void a(javax.microedition.lcdui.Graphics);",
+      "instructions": 525,
+      "branches": 26,
+      "priority_score": 1128,
+      "calls": {
+        "javax.microedition.lcdui.Graphics.drawImage": 5,
+        "javax.microedition.lcdui.Graphics.setClip": 4,
+        "javax.microedition.lcdui.Graphics.clipRect": 3,
+        "SplinterCell.k.if": 2,
+        "SplinterCell.a.try": 1
+      }
+    },
+    {
+      "class": "SplinterCell.j",
+      "signature": "void do(int);",
+      "instructions": 870,
+      "branches": 41,
+      "priority_score": 993,
+      "calls": {
+        "SplinterCell.a.try": 3,
+        "SplinterCell.a.for": 3,
+        "java.lang.String.length": 3
+      }
+    },
+    {
+      "class": "SplinterCell.q",
+      "signature": "boolean B();",
+      "instructions": 688,
+      "branches": 52,
+      "priority_score": 844,
+      "calls": {
+        "SplinterCell.k.a": 14,
+        "SplinterCell.a.int": 6,
+        "SplinterCell.k.if": 3
+      }
+    },
+    {
+      "class": "SplinterCell.q",
+      "signature": "void m();",
+      "instructions": 597,
+      "branches": 57,
+      "priority_score": 768,
+      "calls": {
+        "SplinterCell.k.a": 10,
+        "SplinterCell.a.case": 5,
+        "SplinterCell.k.if": 4,
+        "SplinterCell.a.int": 3,
+        "SplinterCell.a.byte": 1
+      }
+    },
+    {
+      "class": "SplinterCell.j",
+      "signature": "void for(int);",
+      "instructions": 540,
+      "branches": 58,
+      "priority_score": 714,
+      "calls": {
+        "javax.microedition.lcdui.Image.createImage": 2,
+        "SplinterCell.k.if": 1,
+        "SplinterCell.k.a": 1,
+        "SplinterCell.k.do": 1
+      }
+    },
+    {
+      "class": "SplinterCell.i",
+      "signature": "void a(javax.microedition.lcdui.Graphics, int, int, int, int);",
+      "instructions": 319,
+      "branches": 1,
+      "priority_score": 641,
+      "calls": {
+        "javax.microedition.lcdui.Graphics.drawLine": 16,
+        "javax.microedition.lcdui.Graphics.setClip": 5,
+        "javax.microedition.lcdui.Graphics.setColor": 5,
+        "javax.microedition.lcdui.Graphics.drawImage": 4,
+        "javax.microedition.lcdui.Graphics.fillRect": 1,
+        "javax.microedition.lcdui.Image.createImage": 1
+      }
+    },
+    {
+      "class": "SplinterCell.i",
+      "signature": "void if();",
+      "instructions": 144,
+      "branches": 10,
+      "priority_score": 606,
+      "calls": {
+        "javax.microedition.lcdui.Image.createImage": 3,
+        "javax.microedition.lcdui.Canvas.repaint": 3,
+        "javax.microedition.lcdui.Canvas.serviceRepaints": 3,
+        "java.lang.Thread.sleep": 2,
+        "java.lang.System.currentTimeMillis": 2,
+        "SplinterCell.r.a": 2,
+        "SplinterCell.q.w": 1,
+        "java.lang.System.gc": 1
+      }
+    },
+    {
+      "class": "SplinterCell.q",
+      "signature": "void h();",
+      "instructions": 479,
+      "branches": 38,
+      "priority_score": 593,
+      "calls": {
+        "SplinterCell.k.if": 9,
+        "SplinterCell.a.int": 8,
+        "SplinterCell.k.a": 2,
+        "SplinterCell.a.case": 1
+      }
+    }
+  ],
+  "call_targets": [
+    {
+      "target": "SplinterCell.a.int",
+      "count": 172
+    },
+    {
+      "target": "javax.microedition.lcdui.Graphics.setColor",
+      "count": 132
+    },
+    {
+      "target": "javax.microedition.lcdui.Graphics.drawString",
+      "count": 108
+    },
+    {
+      "target": "SplinterCell.a.try",
+      "count": 92
+    },
+    {
+      "target": "javax.microedition.lcdui.Graphics.setClip",
+      "count": 70
+    },
+    {
+      "target": "SplinterCell.a.a",
+      "count": 66
+    },
+    {
+      "target": "SplinterCell.k.if",
+      "count": 63
+    },
+    {
+      "target": "SplinterCell.k.a",
+      "count": 61
+    },
+    {
+      "target": "javax.microedition.lcdui.Graphics.fillRect",
+      "count": 61
+    },
+    {
+      "target": "SplinterCell.a.byte",
+      "count": 59
+    },
+    {
+      "target": "SplinterCell.a.for",
+      "count": 50
+    },
+    {
+      "target": "SplinterCell.a.case",
+      "count": 42
+    },
+    {
+      "target": "javax.microedition.lcdui.Graphics.drawImage",
+      "count": 40
+    },
+    {
+      "target": "javax.microedition.lcdui.Graphics.drawLine",
+      "count": 33
+    },
+    {
+      "target": "java.lang.StringBuffer.append",
+      "count": 24
+    },
+    {
+      "target": "javax.microedition.lcdui.Image.createImage",
+      "count": 23
+    },
+    {
+      "target": "java.lang.System.gc",
+      "count": 22
+    },
+    {
+      "target": "javax.microedition.lcdui.Graphics.setFont",
+      "count": 16
+    },
+    {
+      "target": "java.lang.String.length",
+      "count": 15
+    },
+    {
+      "target": "SplinterCell.k.do",
+      "count": 13
+    },
+    {
+      "target": "java.lang.String.charAt",
+      "count": 12
+    },
+    {
+      "target": "javax.microedition.lcdui.Font.getFont",
+      "count": 11
+    },
+    {
+      "target": "java.util.Random.nextInt",
+      "count": 11
+    },
+    {
+      "target": "java.lang.System.currentTimeMillis",
+      "count": 9
+    },
+    {
+      "target": "java.io.InputStream.read",
+      "count": 9
+    },
+    {
+      "target": "java.lang.StringBuffer.toString",
+      "count": 9
+    },
+    {
+      "target": "javax.microedition.lcdui.Graphics.fillArc",
+      "count": 9
+    },
+    {
+      "target": "SplinterCell.m.else",
+      "count": 8
+    },
+    {
+      "target": "javax.microedition.lcdui.Graphics.clipRect",
+      "count": 8
+    },
+    {
+      "target": "SplinterCell.i.a",
+      "count": 7
+    },
+    {
+      "target": "SplinterCell.j.do",
+      "count": 7
+    },
+    {
+      "target": "SplinterCell.a.char",
+      "count": 7
+    },
+    {
+      "target": "SplinterCell.r.if",
+      "count": 6
+    },
+    {
+      "target": "SplinterCell.q.void",
+      "count": 6
+    },
+    {
+      "target": "SplinterCell.i.for",
+      "count": 6
+    }
+  ],
+  "opcode_histogram": {
+    "aload_0": 2830,
+    "bipush": 2225,
+    "getfield": 2191,
+    "invokevirtual": 1423,
+    "iconst_0": 976,
+    "putfield": 917,
+    "iconst_1": 797,
+    "sipush": 700,
+    "dup": 658,
+    "aload_1": 636,
+    "iadd": 626,
+    "goto": 620,
+    "iload": 566,
+    "getstatic": 550,
+    "ldc": 550,
+    "isub": 463,
+    "iconst_2": 348,
+    "iand": 340,
+    "ifeq": 323,
+    "iconst_4": 314,
+    "ishr": 310,
+    "iload_2": 309,
+    "return": 296,
+    "iload_3": 278,
+    "aastore": 268,
+    "aaload": 255,
+    "iload_1": 236,
+    "aload": 233,
+    "iconst_3": 229,
+    "imul": 218,
+    "istore": 211,
+    "ifne": 159,
+    "invokespecial": 157,
+    "ior": 149,
+    "if_icmpne": 145
+  },
+  "resource_file_count": 43,
+  "resources_by_suffix": {
+    ".png": 40,
+    ".dat": 2,
+    ".mf": 1
+  },
+  "class_methods": [
+    {
+      "class": "SplinterCell.a",
+      "method_count": 19,
+      "instructions": 1047,
+      "branches": 33,
+      "methods": [
+        {
+          "signature": "SplinterCell.a();",
+          "instructions": 25,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "SplinterCell.a(int, SplinterCell.aa, int, int, byte);",
+          "instructions": 42,
+          "branches": 0,
+          "calls": {
+            "SplinterCell.r.if": 1,
+            "SplinterCell.k.a": 1
+          }
+        },
+        {
+          "signature": "SplinterCell.a(int, SplinterCell.aa, int, int, boolean);",
+          "instructions": 46,
+          "branches": 0,
+          "calls": {
+            "SplinterCell.r.if": 1,
+            "SplinterCell.k.a": 1
+          }
+        },
+        {
+          "signature": "SplinterCell.a(int, SplinterCell.aa, int, int, byte, boolean);",
+          "instructions": 42,
+          "branches": 0,
+          "calls": {
+            "SplinterCell.r.if": 1,
+            "SplinterCell.k.a": 1
+          }
+        },
+        {
+          "signature": "SplinterCell.a(int, SplinterCell.aa, int, int);",
+          "instructions": 32,
+          "branches": 0,
+          "calls": {
+            "SplinterCell.r.if": 1
+          }
+        },
+        {
+          "signature": "boolean new(int);",
+          "instructions": 14,
+          "branches": 1,
+          "calls": {
+            "SplinterCell.r.if": 1
+          }
+        },
+        {
+          "signature": "void a(javax.microedition.lcdui.Graphics);",
+          "instructions": 171,
+          "branches": 9,
+          "calls": {
+            "SplinterCell.r.a": 1
+          }
+        },
+        {
+          "signature": "void int(int);",
+          "instructions": 24,
+          "branches": 2,
+          "calls": {}
+        },
+        {
+          "signature": "boolean byte();",
+          "instructions": 72,
+          "branches": 3,
+          "calls": {}
+        },
+        {
+          "signature": "boolean char(int);",
+          "instructions": 8,
+          "branches": 2,
+          "calls": {}
+        },
+        {
+          "signature": "short case();",
+          "instructions": 76,
+          "branches": 2,
+          "calls": {}
+        },
+        {
+          "signature": "int[] try();",
+          "instructions": 201,
+          "branches": 4,
+          "calls": {}
+        },
+        {
+          "signature": "int try(int);",
+          "instructions": 48,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "short byte(int);",
+          "instructions": 23,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "byte case(int);",
+          "instructions": 5,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "void for(int, int);",
+          "instructions": 53,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "void a(int, short);",
+          "instructions": 25,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "void a(int, byte);",
+          "instructions": 6,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "boolean a();",
+          "instructions": 134,
+          "branches": 10,
+          "calls": {}
+        }
+      ]
+    },
+    {
+      "class": "SplinterCell.aa",
+      "method_count": 8,
+      "instructions": 75,
+      "branches": 4,
+      "methods": [
+        {
+          "signature": "SplinterCell.aa();",
+          "instructions": 15,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "void do();",
+          "instructions": 1,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "void a(javax.microedition.lcdui.Graphics);",
+          "instructions": 1,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "void if();",
+          "instructions": 1,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "void for();",
+          "instructions": 1,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "static void a(byte[], byte[], int, int);",
+          "instructions": 19,
+          "branches": 2,
+          "calls": {}
+        },
+        {
+          "signature": "static void a(short[], byte[], int, int);",
+          "instructions": 35,
+          "branches": 2,
+          "calls": {}
+        },
+        {
+          "signature": "boolean a();",
+          "instructions": 2,
+          "branches": 0,
+          "calls": {}
+        }
+      ]
+    },
+    {
+      "class": "SplinterCell.ab",
+      "method_count": 2,
+      "instructions": 199,
+      "branches": 26,
+      "methods": [
+        {
+          "signature": "SplinterCell.ab(int, SplinterCell.aa, int, int, byte);",
+          "instructions": 8,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "void do();",
+          "instructions": 191,
+          "branches": 26,
+          "calls": {
+            "SplinterCell.a.try": 13,
+            "SplinterCell.a.for": 9,
+            "SplinterCell.q.void": 2,
+            "SplinterCell.i.a": 1,
+            "SplinterCell.a.case": 1,
+            "SplinterCell.a.byte": 1
+          }
+        }
+      ]
+    },
+    {
+      "class": "SplinterCell.b",
+      "method_count": 2,
+      "instructions": 38,
+      "branches": 1,
+      "methods": [
+        {
+          "signature": "SplinterCell.b(int, SplinterCell.aa, int, int, int, int);",
+          "instructions": 15,
+          "branches": 0,
+          "calls": {
+            "SplinterCell.a.int": 1,
+            "SplinterCell.a.for": 1
+          }
+        },
+        {
+          "signature": "void do();",
+          "instructions": 23,
+          "branches": 1,
+          "calls": {
+            "SplinterCell.a.try": 3,
+            "SplinterCell.i.a": 1,
+            "SplinterCell.j.do": 1,
+            "SplinterCell.k.a": 1
+          }
+        }
+      ]
+    },
+    {
+      "class": "SplinterCell.c",
+      "method_count": 2,
+      "instructions": 70,
+      "branches": 4,
+      "methods": [
+        {
+          "signature": "SplinterCell.c(int, SplinterCell.aa, int, int);",
+          "instructions": 33,
+          "branches": 0,
+          "calls": {
+            "SplinterCell.a.a": 1,
+            "SplinterCell.a.for": 1
+          }
+        },
+        {
+          "signature": "void do();",
+          "instructions": 37,
+          "branches": 4,
+          "calls": {
+            "SplinterCell.a.case": 2,
+            "SplinterCell.a.a": 2,
+            "SplinterCell.a.try": 2
+          }
+        }
+      ]
+    },
+    {
+      "class": "SplinterCell.cMIDlet",
+      "method_count": 4,
+      "instructions": 23,
+      "branches": 0,
+      "methods": [
+        {
+          "signature": "public SplinterCell.cMIDlet();",
+          "instructions": 12,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public void startApp();",
+          "instructions": 3,
+          "branches": 0,
+          "calls": {
+            "SplinterCell.i.for": 1
+          }
+        },
+        {
+          "signature": "public void pauseApp();",
+          "instructions": 3,
+          "branches": 0,
+          "calls": {
+            "SplinterCell.i.new": 1
+          }
+        },
+        {
+          "signature": "public void destroyApp(boolean);",
+          "instructions": 5,
+          "branches": 0,
+          "calls": {
+            "SplinterCell.i.int": 1,
+            "javax.microedition.midlet.MIDlet.notifyDestroyed": 1
+          }
+        }
+      ]
+    },
+    {
+      "class": "SplinterCell.d",
+      "method_count": 8,
+      "instructions": 619,
+      "branches": 60,
+      "methods": [
+        {
+          "signature": "SplinterCell.d(int, SplinterCell.aa, int, int, int, int);",
+          "instructions": 35,
+          "branches": 4,
+          "calls": {
+            "SplinterCell.a.a": 2
+          }
+        },
+        {
+          "signature": "void do();",
+          "instructions": 13,
+          "branches": 4,
+          "calls": {}
+        },
+        {
+          "signature": "void goto();",
+          "instructions": 150,
+          "branches": 12,
+          "calls": {
+            "SplinterCell.a.a": 12,
+            "SplinterCell.a.byte": 9,
+            "SplinterCell.a.int": 4
+          }
+        },
+        {
+          "signature": "void char();",
+          "instructions": 85,
+          "branches": 10,
+          "calls": {
+            "SplinterCell.a.byte": 4,
+            "SplinterCell.a.a": 2,
+            "SplinterCell.a.int": 1
+          }
+        },
+        {
+          "signature": "void goto(int);",
+          "instructions": 45,
+          "branches": 2,
+          "calls": {
+            "SplinterCell.a.int": 1
+          }
+        },
+        {
+          "signature": "void else();",
+          "instructions": 7,
+          "branches": 0,
+          "calls": {
+            "SplinterCell.a.int": 1
+          }
+        },
+        {
+          "signature": "void a(javax.microedition.lcdui.Graphics);",
+          "instructions": 168,
+          "branches": 14,
+          "calls": {
+            "SplinterCell.k.if": 2,
+            "SplinterCell.i.for": 2,
+            "SplinterCell.m.a": 1,
+            "javax.microedition.lcdui.Graphics.setClip": 1,
+            "javax.microedition.lcdui.Graphics.setColor": 1,
+            "javax.microedition.lcdui.Graphics.drawLine": 1
+          }
+        },
+        {
+          "signature": "boolean else(int);",
+          "instructions": 116,
+          "branches": 14,
+          "calls": {
+            "SplinterCell.k.if": 2,
+            "SplinterCell.q.null": 2,
+            "SplinterCell.a.try": 1
+          }
+        }
+      ]
+    },
+    {
+      "class": "SplinterCell.e",
+      "method_count": 11,
+      "instructions": 1075,
+      "branches": 98,
+      "methods": [
+        {
+          "signature": "SplinterCell.e(int, SplinterCell.aa, int, int, int, int, long, boolean);",
+          "instructions": 56,
+          "branches": 1,
+          "calls": {
+            "SplinterCell.a.a": 4,
+            "SplinterCell.a.int": 1
+          }
+        },
+        {
+          "signature": "void do();",
+          "instructions": 24,
+          "branches": 7,
+          "calls": {}
+        },
+        {
+          "signature": "void b();",
+          "instructions": 343,
+          "branches": 27,
+          "calls": {
+            "SplinterCell.a.a": 11,
+            "SplinterCell.a.case": 9,
+            "SplinterCell.a.int": 9,
+            "SplinterCell.a.byte": 8,
+            "SplinterCell.m.else": 2
+          }
+        },
+        {
+          "signature": "void c();",
+          "instructions": 110,
+          "branches": 8,
+          "calls": {
+            "SplinterCell.m.else": 2,
+            "SplinterCell.a.case": 2,
+            "SplinterCell.a.int": 2,
+            "SplinterCell.a.a": 1,
+            "SplinterCell.a.byte": 1
+          }
+        },
+        {
+          "signature": "void void();",
+          "instructions": 203,
+          "branches": 27,
+          "calls": {
+            "SplinterCell.a.int": 6,
+            "SplinterCell.m.else": 4,
+            "SplinterCell.a.a": 3,
+            "SplinterCell.a.case": 2,
+            "SplinterCell.a.char": 2,
+            "SplinterCell.a.try": 2,
+            "SplinterCell.a.byte": 1
+          }
+        },
+        {
+          "signature": "void e();",
+          "instructions": 67,
+          "branches": 9,
+          "calls": {
+            "SplinterCell.a.byte": 1
+          }
+        },
+        {
+          "signature": "void d();",
+          "instructions": 75,
+          "branches": 6,
+          "calls": {
+            "SplinterCell.a.case": 1,
+            "SplinterCell.k.a": 1,
+            "SplinterCell.a.int": 1,
+            "SplinterCell.a.a": 1,
+            "java.lang.System.currentTimeMillis": 1,
+            "SplinterCell.a.try": 1
+          }
+        },
+        {
+          "signature": "void long();",
+          "instructions": 63,
+          "branches": 4,
+          "calls": {
+            "SplinterCell.a.int": 2,
+            "SplinterCell.a.a": 2,
+            "SplinterCell.k.a": 1,
+            "SplinterCell.a.byte": 1
+          }
+        },
+        {
+          "signature": "void goto(int);",
+          "instructions": 72,
+          "branches": 6,
+          "calls": {
+            "SplinterCell.a.int": 4,
+            "SplinterCell.a.char": 2,
+            "java.lang.System.currentTimeMillis": 1,
+            "SplinterCell.a.for": 1,
+            "SplinterCell.k.a": 1
+          }
+        },
+        {
+          "signature": "void a(javax.microedition.lcdui.Graphics);",
+          "instructions": 4,
+          "branches": 0,
+          "calls": {
+            "SplinterCell.m.a": 1
+          }
+        },
+        {
+          "signature": "void null();",
+          "instructions": 58,
+          "branches": 3,
+          "calls": {
+            "SplinterCell.a.case": 2,
+            "SplinterCell.k.a": 1,
+            "SplinterCell.a.int": 1,
+            "SplinterCell.a.a": 1
+          }
+        }
+      ]
+    },
+    {
+      "class": "SplinterCell.f",
+      "method_count": 3,
+      "instructions": 150,
+      "branches": 12,
+      "methods": [
+        {
+          "signature": "SplinterCell.f(SplinterCell.aa, SplinterCell.a, int, int, int, int, int, boolean);",
+          "instructions": 52,
+          "branches": 1,
+          "calls": {
+            "SplinterCell.k.a": 1
+          }
+        },
+        {
+          "signature": "void a(javax.microedition.lcdui.Graphics);",
+          "instructions": 1,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "void do();",
+          "instructions": 97,
+          "branches": 11,
+          "calls": {
+            "SplinterCell.a.try": 1,
+            "SplinterCell.k.a": 1,
+            "SplinterCell.j.do": 1
+          }
+        }
+      ]
+    },
+    {
+      "class": "SplinterCell.g",
+      "method_count": 2,
+      "instructions": 9,
+      "branches": 0,
+      "methods": [
+        {
+          "signature": "SplinterCell.g(int, SplinterCell.aa, int, int, int);",
+          "instructions": 8,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "void do();",
+          "instructions": 1,
+          "branches": 0,
+          "calls": {}
+        }
+      ]
+    },
+    {
+      "class": "SplinterCell.h",
+      "method_count": 2,
+      "instructions": 47,
+      "branches": 4,
+      "methods": [
+        {
+          "signature": "SplinterCell.h(int, SplinterCell.aa, int, int, boolean);",
+          "instructions": 30,
+          "branches": 1,
+          "calls": {
+            "SplinterCell.a.for": 1,
+            "SplinterCell.a.int": 1
+          }
+        },
+        {
+          "signature": "void do();",
+          "instructions": 17,
+          "branches": 3,
+          "calls": {
+            "SplinterCell.a.try": 1,
+            "SplinterCell.k.a": 1,
+            "SplinterCell.a.byte": 1,
+            "SplinterCell.a.for": 1
+          }
+        }
+      ]
+    },
+    {
+      "class": "SplinterCell.i",
+      "method_count": 23,
+      "instructions": 5541,
+      "branches": 300,
+      "methods": [
+        {
+          "signature": "static boolean a(java.lang.String, boolean);",
+          "instructions": 133,
+          "branches": 9,
+          "calls": {
+            "java.io.InputStream.read": 7,
+            "java.lang.System.gc": 2,
+            "java.lang.Object.getClass": 1,
+            "java.lang.Class.getResourceAsStream": 1,
+            "java.io.InputStream.close": 1
+          }
+        },
+        {
+          "signature": "static byte[] a(int);",
+          "instructions": 42,
+          "branches": 4,
+          "calls": {
+            "java.lang.Object.getClass": 1,
+            "java.lang.Class.getResourceAsStream": 1,
+            "java.io.InputStream.skip": 1,
+            "java.io.InputStream.read": 1,
+            "java.io.InputStream.close": 1
+          }
+        },
+        {
+          "signature": "void if();",
+          "instructions": 144,
+          "branches": 10,
+          "calls": {
+            "javax.microedition.lcdui.Image.createImage": 3,
+            "javax.microedition.lcdui.Canvas.repaint": 3,
+            "javax.microedition.lcdui.Canvas.serviceRepaints": 3,
+            "java.lang.Thread.sleep": 2,
+            "java.lang.System.currentTimeMillis": 2,
+            "SplinterCell.r.a": 2,
+            "SplinterCell.q.w": 1,
+            "java.lang.System.gc": 1
+          }
+        },
+        {
+          "signature": "void a(javax.microedition.lcdui.Graphics);",
+          "instructions": 4193,
+          "branches": 234,
+          "calls": {
+            "javax.microedition.lcdui.Graphics.drawString": 103,
+            "javax.microedition.lcdui.Graphics.setColor": 80,
+            "javax.microedition.lcdui.Graphics.fillRect": 33,
+            "javax.microedition.lcdui.Graphics.setClip": 29,
+            "javax.microedition.lcdui.Graphics.drawImage": 17,
+            "javax.microedition.lcdui.Graphics.setFont": 15,
+            "java.lang.StringBuffer.append": 14,
+            "java.lang.System.gc": 11
+          }
+        },
+        {
+          "signature": "void if(javax.microedition.lcdui.Graphics);",
+          "instructions": 328,
+          "branches": 11,
+          "calls": {
+            "javax.microedition.lcdui.Graphics.setColor": 4,
+            "javax.microedition.lcdui.Graphics.fillArc": 3,
+            "javax.microedition.lcdui.Graphics.drawArc": 2,
+            "javax.microedition.lcdui.Graphics.drawLine": 2,
+            "javax.microedition.lcdui.Graphics.setClip": 1
+          }
+        },
+        {
+          "signature": "void a(javax.microedition.lcdui.Graphics, int, int, int, int);",
+          "instructions": 319,
+          "branches": 1,
+          "calls": {
+            "javax.microedition.lcdui.Graphics.drawLine": 16,
+            "javax.microedition.lcdui.Graphics.setClip": 5,
+            "javax.microedition.lcdui.Graphics.setColor": 5,
+            "javax.microedition.lcdui.Graphics.drawImage": 4,
+            "javax.microedition.lcdui.Graphics.fillRect": 1,
+            "javax.microedition.lcdui.Image.createImage": 1
+          }
+        },
+        {
+          "signature": "byte[] a(java.lang.String, int);",
+          "instructions": 39,
+          "branches": 4,
+          "calls": {
+            "java.lang.Object.getClass": 1,
+            "java.lang.Class.getResourceAsStream": 1,
+            "java.io.InputStream.read": 1,
+            "java.io.InputStream.close": 1
+          }
+        },
+        {
+          "signature": "static boolean a(int[], int[]);",
+          "instructions": 81,
+          "branches": 4,
+          "calls": {}
+        },
+        {
+          "signature": "static boolean for(int);",
+          "instructions": 17,
+          "branches": 3,
+          "calls": {}
+        },
+        {
+          "signature": "static boolean if(int);",
+          "instructions": 32,
+          "branches": 6,
+          "calls": {}
+        },
+        {
+          "signature": "void try();",
+          "instructions": 1,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "SplinterCell.i();",
+          "instructions": 18,
+          "branches": 0,
+          "calls": {
+            "javax.microedition.lcdui.Display.getDisplay": 1,
+            "javax.microedition.lcdui.Display.setCurrent": 1,
+            "java.lang.Thread.start": 1
+          }
+        },
+        {
+          "signature": "protected void keyPressed(int);",
+          "instructions": 5,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "protected void keyRepeated(int);",
+          "instructions": 5,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "protected void keyReleased(int);",
+          "instructions": 22,
+          "branches": 2,
+          "calls": {}
+        },
+        {
+          "signature": "private int do(int);",
+          "instructions": 44,
+          "branches": 1,
+          "calls": {}
+        },
+        {
+          "signature": "private void a();",
+          "instructions": 15,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "private void do();",
+          "instructions": 7,
+          "branches": 1,
+          "calls": {}
+        },
+        {
+          "signature": "public void for();",
+          "instructions": 11,
+          "branches": 1,
+          "calls": {
+            "javax.microedition.lcdui.Display.getDisplay": 1,
+            "javax.microedition.lcdui.Display.setCurrent": 1,
+            "javax.microedition.lcdui.Canvas.repaint": 1
+          }
+        },
+        {
+          "signature": "public void new();",
+          "instructions": 13,
+          "branches": 2,
+          "calls": {}
+        },
+        {
+          "signature": "public void int();",
+          "instructions": 1,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public void run();",
+          "instructions": 43,
+          "branches": 6,
+          "calls": {
+            "java.lang.System.currentTimeMillis": 2,
+            "javax.microedition.lcdui.Canvas.repaint": 1,
+            "javax.microedition.lcdui.Canvas.serviceRepaints": 1,
+            "java.lang.Thread.yield": 1,
+            "java.lang.Thread.sleep": 1,
+            "SplinterCell.cMIDlet.destroyApp": 1
+          }
+        },
+        {
+          "signature": "public void paint(javax.microedition.lcdui.Graphics);",
+          "instructions": 28,
+          "branches": 1,
+          "calls": {}
+        }
+      ]
+    },
+    {
+      "class": "SplinterCell.j",
+      "method_count": 11,
+      "instructions": 3928,
+      "branches": 342,
+      "methods": [
+        {
+          "signature": "SplinterCell.j(int);",
+          "instructions": 243,
+          "branches": 20,
+          "calls": {
+            "java.lang.StringBuffer.append": 5,
+            "javax.microedition.lcdui.Image.createImage": 3,
+            "java.lang.StringBuffer.toString": 2,
+            "SplinterCell.i.a": 2,
+            "SplinterCell.q.if": 1,
+            "SplinterCell.k.a": 1,
+            "java.lang.System.gc": 1
+          }
+        },
+        {
+          "signature": "void for();",
+          "instructions": 80,
+          "branches": 12,
+          "calls": {
+            "SplinterCell.aa.for": 1,
+            "java.lang.System.gc": 1
+          }
+        },
+        {
+          "signature": "void a(javax.microedition.lcdui.Graphics);",
+          "instructions": 194,
+          "branches": 12,
+          "calls": {
+            "javax.microedition.lcdui.Graphics.setClip": 6,
+            "javax.microedition.lcdui.Graphics.drawImage": 6,
+            "SplinterCell.aa.a": 2,
+            "SplinterCell.k.a": 1,
+            "javax.microedition.lcdui.Graphics.setColor": 1,
+            "javax.microedition.lcdui.Graphics.fillRect": 1,
+            "javax.microedition.lcdui.Graphics.clipRect": 1
+          }
+        },
+        {
+          "signature": "java.lang.String for(java.lang.String);",
+          "instructions": 71,
+          "branches": 11,
+          "calls": {
+            "java.lang.String.charAt": 3,
+            "java.lang.String.indexOf": 1,
+            "java.lang.String.length": 1,
+            "java.lang.String.substring": 1
+          }
+        },
+        {
+          "signature": "java.lang.String a(java.lang.String);",
+          "instructions": 54,
+          "branches": 5,
+          "calls": {
+            "java.lang.String.trim": 2,
+            "java.lang.String.length": 2,
+            "java.lang.String.substring": 2,
+            "java.lang.String.indexOf": 1,
+            "java.lang.String.charAt": 1
+          }
+        },
+        {
+          "signature": "int if(java.lang.String);",
+          "instructions": 46,
+          "branches": 6,
+          "calls": {
+            "java.lang.String.charAt": 3,
+            "java.lang.String.trim": 1,
+            "java.lang.String.length": 1,
+            "java.lang.String.substring": 1,
+            "java.lang.Integer.parseInt": 1
+          }
+        },
+        {
+          "signature": "java.lang.String do(java.lang.String);",
+          "instructions": 37,
+          "branches": 6,
+          "calls": {
+            "java.lang.String.trim": 1,
+            "java.lang.String.charAt": 1,
+            "java.lang.String.length": 1,
+            "java.lang.String.substring": 1
+          }
+        },
+        {
+          "signature": "void for(int);",
+          "instructions": 540,
+          "branches": 58,
+          "calls": {
+            "javax.microedition.lcdui.Image.createImage": 2,
+            "SplinterCell.k.if": 1,
+            "SplinterCell.k.a": 1,
+            "SplinterCell.k.do": 1
+          }
+        },
+        {
+          "signature": "void do(int);",
+          "instructions": 870,
+          "branches": 41,
+          "calls": {
+            "SplinterCell.a.try": 3,
+            "SplinterCell.a.for": 3,
+            "java.lang.String.length": 3
+          }
+        },
+        {
+          "signature": "boolean a(javax.microedition.lcdui.Graphics, int);",
+          "instructions": 1745,
+          "branches": 164,
+          "calls": {
+            "SplinterCell.a.int": 49,
+            "SplinterCell.k.do": 8,
+            "SplinterCell.q.w": 3,
+            "javax.microedition.lcdui.Graphics.setClip": 2,
+            "javax.microedition.lcdui.Graphics.fillRect": 2,
+            "SplinterCell.k.a": 1,
+            "SplinterCell.a.a": 1,
+            "javax.microedition.lcdui.Graphics.setColor": 1
+          }
+        },
+        {
+          "signature": "void do();",
+          "instructions": 48,
+          "branches": 7,
+          "calls": {
+            "SplinterCell.aa.a": 1,
+            "SplinterCell.aa.do": 1
+          }
+        }
+      ]
+    },
+    {
+      "class": "SplinterCell.k",
+      "method_count": 12,
+      "instructions": 781,
+      "branches": 68,
+      "methods": [
+        {
+          "signature": "SplinterCell.k();",
+          "instructions": 35,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "boolean a(byte[]);",
+          "instructions": 186,
+          "branches": 9,
+          "calls": {
+            "SplinterCell.aa.a": 2,
+            "javax.microedition.lcdui.Image.createImage": 1,
+            "java.lang.System.gc": 1
+          }
+        },
+        {
+          "signature": "void a(javax.microedition.lcdui.Graphics);",
+          "instructions": 16,
+          "branches": 0,
+          "calls": {
+            "javax.microedition.lcdui.Graphics.setClip": 1,
+            "javax.microedition.lcdui.Graphics.drawImage": 1
+          }
+        },
+        {
+          "signature": "void do(int, int);",
+          "instructions": 220,
+          "branches": 19,
+          "calls": {
+            "javax.microedition.lcdui.Image.getGraphics": 1,
+            "javax.microedition.lcdui.Graphics.setClip": 1,
+            "javax.microedition.lcdui.Graphics.drawImage": 1,
+            "javax.microedition.lcdui.Image.getWidth": 1,
+            "SplinterCell.aa.a": 1
+          }
+        },
+        {
+          "signature": "void a(int, int, int);",
+          "instructions": 34,
+          "branches": 0,
+          "calls": {
+            "javax.microedition.lcdui.Image.getGraphics": 1,
+            "javax.microedition.lcdui.Graphics.setClip": 1,
+            "javax.microedition.lcdui.Graphics.drawImage": 1
+          }
+        },
+        {
+          "signature": "void if(int);",
+          "instructions": 69,
+          "branches": 9,
+          "calls": {}
+        },
+        {
+          "signature": "void a(int);",
+          "instructions": 69,
+          "branches": 9,
+          "calls": {}
+        },
+        {
+          "signature": "int if(int, int);",
+          "instructions": 33,
+          "branches": 5,
+          "calls": {}
+        },
+        {
+          "signature": "int a(int, int);",
+          "instructions": 11,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "boolean a(SplinterCell.aa, boolean);",
+          "instructions": 42,
+          "branches": 8,
+          "calls": {}
+        },
+        {
+          "signature": "void a(SplinterCell.aa);",
+          "instructions": 20,
+          "branches": 3,
+          "calls": {
+            "java.lang.System.gc": 1
+          }
+        },
+        {
+          "signature": "public void if();",
+          "instructions": 46,
+          "branches": 6,
+          "calls": {
+            "SplinterCell.aa.if": 2,
+            "java.lang.System.gc": 1
+          }
+        }
+      ]
+    },
+    {
+      "class": "SplinterCell.l",
+      "method_count": 2,
+      "instructions": 33,
+      "branches": 2,
+      "methods": [
+        {
+          "signature": "SplinterCell.l(int, SplinterCell.aa, int, int, byte);",
+          "instructions": 14,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "void do();",
+          "instructions": 19,
+          "branches": 2,
+          "calls": {}
+        }
+      ]
+    },
+    {
+      "class": "SplinterCell.m",
+      "method_count": 4,
+      "instructions": 155,
+      "branches": 20,
+      "methods": [
+        {
+          "signature": "SplinterCell.m(int, SplinterCell.aa, int, int, byte);",
+          "instructions": 11,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "void a(javax.microedition.lcdui.Graphics);",
+          "instructions": 4,
+          "branches": 0,
+          "calls": {
+            "SplinterCell.a.a": 1
+          }
+        },
+        {
+          "signature": "void goto(int);",
+          "instructions": 1,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "boolean else(int);",
+          "instructions": 139,
+          "branches": 20,
+          "calls": {
+            "SplinterCell.k.if": 2,
+            "SplinterCell.q.null": 2,
+            "SplinterCell.a.try": 1
+          }
+        }
+      ]
+    },
+    {
+      "class": "SplinterCell.n",
+      "method_count": 6,
+      "instructions": 688,
+      "branches": 72,
+      "methods": [
+        {
+          "signature": "SplinterCell.n(SplinterCell.a, int, int, boolean, boolean);",
+          "instructions": 34,
+          "branches": 0,
+          "calls": {
+            "SplinterCell.k.a": 1
+          }
+        },
+        {
+          "signature": "void do();",
+          "instructions": 9,
+          "branches": 2,
+          "calls": {}
+        },
+        {
+          "signature": "void a(javax.microedition.lcdui.Graphics);",
+          "instructions": 97,
+          "branches": 8,
+          "calls": {
+            "javax.microedition.lcdui.Graphics.drawLine": 2,
+            "javax.microedition.lcdui.Graphics.setClip": 1,
+            "javax.microedition.lcdui.Graphics.setColor": 1
+          }
+        },
+        {
+          "signature": "void a(SplinterCell.a);",
+          "instructions": 105,
+          "branches": 13,
+          "calls": {
+            "SplinterCell.a.int": 1
+          }
+        },
+        {
+          "signature": "void new();",
+          "instructions": 415,
+          "branches": 49,
+          "calls": {
+            "SplinterCell.a.try": 2,
+            "SplinterCell.k.a": 1,
+            "SplinterCell.q.void": 1,
+            "SplinterCell.a.byte": 1,
+            "SplinterCell.m.goto": 1,
+            "SplinterCell.k.if": 1,
+            "SplinterCell.i.for": 1
+          }
+        },
+        {
+          "signature": "void int();",
+          "instructions": 28,
+          "branches": 0,
+          "calls": {
+            "SplinterCell.k.a": 1
+          }
+        }
+      ]
+    },
+    {
+      "class": "SplinterCell.o",
+      "method_count": 5,
+      "instructions": 1567,
+      "branches": 81,
+      "methods": [
+        {
+          "signature": "SplinterCell.o();",
+          "instructions": 18,
+          "branches": 0,
+          "calls": {
+            "javax.microedition.lcdui.Font.getFont": 1
+          }
+        },
+        {
+          "signature": "boolean if(javax.microedition.lcdui.Graphics);",
+          "instructions": 851,
+          "branches": 56,
+          "calls": {
+            "javax.microedition.lcdui.Graphics.setColor": 18,
+            "javax.microedition.lcdui.Graphics.setClip": 12,
+            "javax.microedition.lcdui.Graphics.fillRect": 11,
+            "javax.microedition.lcdui.Graphics.fillArc": 6,
+            "SplinterCell.a.a": 4,
+            "java.util.Random.nextInt": 4,
+            "javax.microedition.lcdui.Graphics.drawString": 3,
+            "SplinterCell.a.int": 2
+          }
+        },
+        {
+          "signature": "void a(javax.microedition.lcdui.Graphics, java.lang.String, int);",
+          "instructions": 73,
+          "branches": 5,
+          "calls": {
+            "javax.microedition.lcdui.Graphics.setColor": 3,
+            "javax.microedition.lcdui.Graphics.drawString": 1
+          }
+        },
+        {
+          "signature": "void a(javax.microedition.lcdui.Graphics);",
+          "instructions": 149,
+          "branches": 11,
+          "calls": {
+            "javax.microedition.lcdui.Graphics.setColor": 5,
+            "javax.microedition.lcdui.Graphics.drawLine": 3,
+            "javax.microedition.lcdui.Graphics.setClip": 1
+          }
+        },
+        {
+          "signature": "void a(javax.microedition.lcdui.Graphics, int);",
+          "instructions": 476,
+          "branches": 9,
+          "calls": {
+            "javax.microedition.lcdui.Graphics.fillRect": 13,
+            "javax.microedition.lcdui.Graphics.setColor": 10,
+            "java.util.Random.nextInt": 7,
+            "java.lang.Math.abs": 2,
+            "java.lang.StringBuffer.append": 2,
+            "javax.microedition.lcdui.Graphics.setClip": 1,
+            "javax.microedition.lcdui.Graphics.drawLine": 1,
+            "java.util.Random.nextLong": 1
+          }
+        }
+      ]
+    },
+    {
+      "class": "SplinterCell.p",
+      "method_count": 2,
+      "instructions": 306,
+      "branches": 22,
+      "methods": [
+        {
+          "signature": "SplinterCell.p(SplinterCell.aa, SplinterCell.a, int, int, int, int, int, int);",
+          "instructions": 48,
+          "branches": 0,
+          "calls": {
+            "SplinterCell.k.a": 1
+          }
+        },
+        {
+          "signature": "void do();",
+          "instructions": 258,
+          "branches": 22,
+          "calls": {
+            "SplinterCell.a.try": 4
+          }
+        }
+      ]
+    },
+    {
+      "class": "SplinterCell.q",
+      "method_count": 31,
+      "instructions": 5580,
+      "branches": 514,
+      "methods": [
+        {
+          "signature": "SplinterCell.q();",
+          "instructions": 6,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "boolean w();",
+          "instructions": 14,
+          "branches": 1,
+          "calls": {
+            "SplinterCell.r.if": 1,
+            "javax.microedition.lcdui.Image.createImage": 1
+          }
+        },
+        {
+          "signature": "void if();",
+          "instructions": 37,
+          "branches": 0,
+          "calls": {
+            "SplinterCell.a.int": 1
+          }
+        },
+        {
+          "signature": "void do();",
+          "instructions": 102,
+          "branches": 21,
+          "calls": {}
+        },
+        {
+          "signature": "void a(javax.microedition.lcdui.Graphics);",
+          "instructions": 525,
+          "branches": 26,
+          "calls": {
+            "javax.microedition.lcdui.Graphics.drawImage": 5,
+            "javax.microedition.lcdui.Graphics.setClip": 4,
+            "javax.microedition.lcdui.Graphics.clipRect": 3,
+            "SplinterCell.k.if": 2,
+            "SplinterCell.a.try": 1
+          }
+        },
+        {
+          "signature": "boolean int(int, int);",
+          "instructions": 96,
+          "branches": 15,
+          "calls": {
+            "SplinterCell.k.if": 3
+          }
+        },
+        {
+          "signature": "boolean B();",
+          "instructions": 688,
+          "branches": 52,
+          "calls": {
+            "SplinterCell.k.a": 14,
+            "SplinterCell.a.int": 6,
+            "SplinterCell.k.if": 3
+          }
+        },
+        {
+          "signature": "boolean A();",
+          "instructions": 88,
+          "branches": 12,
+          "calls": {
+            "SplinterCell.a.try": 2,
+            "SplinterCell.i.a": 1,
+            "SplinterCell.m.goto": 1
+          }
+        },
+        {
+          "signature": "boolean void(int);",
+          "instructions": 67,
+          "branches": 4,
+          "calls": {
+            "SplinterCell.a.try": 2,
+            "SplinterCell.a.int": 2
+          }
+        },
+        {
+          "signature": "void s();",
+          "instructions": 1291,
+          "branches": 143,
+          "calls": {
+            "SplinterCell.a.int": 22,
+            "SplinterCell.k.if": 14,
+            "SplinterCell.k.a": 4,
+            "java.lang.System.currentTimeMillis": 1,
+            "SplinterCell.a.for": 1
+          }
+        },
+        {
+          "signature": "void k();",
+          "instructions": 156,
+          "branches": 20,
+          "calls": {
+            "SplinterCell.k.a": 2,
+            "SplinterCell.a.int": 2,
+            "SplinterCell.a.case": 1,
+            "SplinterCell.a.byte": 1
+          }
+        },
+        {
+          "signature": "void h();",
+          "instructions": 479,
+          "branches": 38,
+          "calls": {
+            "SplinterCell.k.if": 9,
+            "SplinterCell.a.int": 8,
+            "SplinterCell.k.a": 2,
+            "SplinterCell.a.case": 1
+          }
+        },
+        {
+          "signature": "void p();",
+          "instructions": 43,
+          "branches": 5,
+          "calls": {
+            "SplinterCell.a.int": 2,
+            "SplinterCell.a.byte": 1
+          }
+        },
+        {
+          "signature": "void q();",
+          "instructions": 115,
+          "branches": 16,
+          "calls": {
+            "SplinterCell.a.int": 2,
+            "SplinterCell.a.byte": 1
+          }
+        },
+        {
+          "signature": "void x();",
+          "instructions": 72,
+          "branches": 6,
+          "calls": {
+            "SplinterCell.k.if": 2,
+            "SplinterCell.a.case": 1,
+            "SplinterCell.a.byte": 1
+          }
+        },
+        {
+          "signature": "void l();",
+          "instructions": 18,
+          "branches": 2,
+          "calls": {
+            "SplinterCell.a.byte": 1
+          }
+        },
+        {
+          "signature": "void u();",
+          "instructions": 73,
+          "branches": 6,
+          "calls": {
+            "SplinterCell.k.if": 2,
+            "SplinterCell.i.for": 2,
+            "SplinterCell.a.byte": 1,
+            "SplinterCell.a.char": 1,
+            "SplinterCell.a.int": 1
+          }
+        },
+        {
+          "signature": "void o();",
+          "instructions": 285,
+          "branches": 24,
+          "calls": {
+            "SplinterCell.k.if": 6,
+            "SplinterCell.a.int": 5
+          }
+        },
+        {
+          "signature": "void v();",
+          "instructions": 70,
+          "branches": 5,
+          "calls": {
+            "SplinterCell.a.int": 2,
+            "SplinterCell.a.byte": 1,
+            "SplinterCell.k.if": 1
+          }
+        },
+        {
+          "signature": "void m();",
+          "instructions": 597,
+          "branches": 57,
+          "calls": {
+            "SplinterCell.k.a": 10,
+            "SplinterCell.a.case": 5,
+            "SplinterCell.k.if": 4,
+            "SplinterCell.a.int": 3,
+            "SplinterCell.a.byte": 1
+          }
+        },
+        {
+          "signature": "void y();",
+          "instructions": 15,
+          "branches": 2,
+          "calls": {
+            "SplinterCell.a.byte": 1,
+            "SplinterCell.a.char": 1
+          }
+        },
+        {
+          "signature": "void z();",
+          "instructions": 195,
+          "branches": 19,
+          "calls": {
+            "SplinterCell.k.if": 4,
+            "SplinterCell.a.byte": 1,
+            "SplinterCell.a.int": 1
+          }
+        },
+        {
+          "signature": "void j();",
+          "instructions": 12,
+          "branches": 1,
+          "calls": {
+            "SplinterCell.a.int": 1
+          }
+        },
+        {
+          "signature": "void r();",
+          "instructions": 167,
+          "branches": 9,
+          "calls": {
+            "SplinterCell.k.if": 3,
+            "SplinterCell.a.int": 1
+          }
+        },
+        {
+          "signature": "void t();",
+          "instructions": 23,
+          "branches": 1,
+          "calls": {
+            "SplinterCell.a.byte": 1,
+            "SplinterCell.a.int": 1
+          }
+        },
+        {
+          "signature": "void n();",
+          "instructions": 13,
+          "branches": 2,
+          "calls": {
+            "SplinterCell.a.int": 2
+          }
+        },
+        {
+          "signature": "void g();",
+          "instructions": 188,
+          "branches": 10,
+          "calls": {
+            "SplinterCell.k.a": 6,
+            "SplinterCell.a.byte": 1
+          }
+        },
+        {
+          "signature": "void i();",
+          "instructions": 79,
+          "branches": 5,
+          "calls": {
+            "SplinterCell.a.int": 1,
+            "SplinterCell.k.do": 1
+          }
+        },
+        {
+          "signature": "private boolean long(int);",
+          "instructions": 17,
+          "branches": 3,
+          "calls": {}
+        },
+        {
+          "signature": "static boolean null(int);",
+          "instructions": 27,
+          "branches": 5,
+          "calls": {}
+        },
+        {
+          "signature": "private boolean b(int);",
+          "instructions": 22,
+          "branches": 4,
+          "calls": {}
+        }
+      ]
+    },
+    {
+      "class": "SplinterCell.r",
+      "method_count": 9,
+      "instructions": 641,
+      "branches": 21,
+      "methods": [
+        {
+          "signature": "SplinterCell.r();",
+          "instructions": 12,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "SplinterCell.r(boolean);",
+          "instructions": 12,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "boolean do(int);",
+          "instructions": 306,
+          "branches": 7,
+          "calls": {
+            "java.lang.StringBuffer.append": 3,
+            "java.lang.System.gc": 1,
+            "java.lang.StringBuffer.toString": 1,
+            "javax.microedition.lcdui.Image.createImage": 1
+          }
+        },
+        {
+          "signature": "void a(javax.microedition.lcdui.Graphics, int, int, int, int);",
+          "instructions": 25,
+          "branches": 3,
+          "calls": {}
+        },
+        {
+          "signature": "void a(javax.microedition.lcdui.Graphics, int, int, int);",
+          "instructions": 123,
+          "branches": 4,
+          "calls": {
+            "javax.microedition.lcdui.Graphics.setClip": 2,
+            "javax.microedition.lcdui.Graphics.clipRect": 2,
+            "javax.microedition.lcdui.Graphics.drawImage": 2
+          }
+        },
+        {
+          "signature": "void if(javax.microedition.lcdui.Graphics, int, int, int);",
+          "instructions": 107,
+          "branches": 2,
+          "calls": {
+            "javax.microedition.lcdui.Graphics.clipRect": 2,
+            "javax.microedition.lcdui.Graphics.setClip": 1,
+            "javax.microedition.lcdui.Image.getHeight": 1,
+            "javax.microedition.lcdui.Graphics.drawImage": 1
+          }
+        },
+        {
+          "signature": "static void a(int, int);",
+          "instructions": 26,
+          "branches": 2,
+          "calls": {
+            "java.lang.System.gc": 1
+          }
+        },
+        {
+          "signature": "static void a(int);",
+          "instructions": 9,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "static SplinterCell.r if(int);",
+          "instructions": 21,
+          "branches": 3,
+          "calls": {}
+        }
+      ]
+    },
+    {
+      "class": "SplinterCell.s",
+      "method_count": 4,
+      "instructions": 230,
+      "branches": 21,
+      "methods": [
+        {
+          "signature": "SplinterCell.s(int, SplinterCell.aa, int, int, int, int);",
+          "instructions": 16,
+          "branches": 0,
+          "calls": {
+            "SplinterCell.a.for": 2
+          }
+        },
+        {
+          "signature": "void do();",
+          "instructions": 9,
+          "branches": 2,
+          "calls": {}
+        },
+        {
+          "signature": "void C();",
+          "instructions": 154,
+          "branches": 16,
+          "calls": {
+            "SplinterCell.a.try": 11,
+            "SplinterCell.a.for": 4,
+            "SplinterCell.a.int": 2,
+            "SplinterCell.a.byte": 2,
+            "SplinterCell.i.a": 1
+          }
+        },
+        {
+          "signature": "void D();",
+          "instructions": 51,
+          "branches": 3,
+          "calls": {
+            "SplinterCell.a.try": 4,
+            "SplinterCell.a.int": 1,
+            "SplinterCell.i.a": 1
+          }
+        }
+      ]
+    },
+    {
+      "class": "SplinterCell.t",
+      "method_count": 2,
+      "instructions": 349,
+      "branches": 37,
+      "methods": [
+        {
+          "signature": "SplinterCell.t(int, SplinterCell.aa, int, int, int, int, int);",
+          "instructions": 65,
+          "branches": 4,
+          "calls": {
+            "SplinterCell.a.for": 4,
+            "SplinterCell.a.int": 1
+          }
+        },
+        {
+          "signature": "void do();",
+          "instructions": 284,
+          "branches": 33,
+          "calls": {
+            "SplinterCell.a.for": 6,
+            "SplinterCell.a.try": 5,
+            "SplinterCell.a.int": 2,
+            "SplinterCell.q.void": 1
+          }
+        }
+      ]
+    },
+    {
+      "class": "SplinterCell.u",
+      "method_count": 6,
+      "instructions": 598,
+      "branches": 54,
+      "methods": [
+        {
+          "signature": "SplinterCell.u(int, SplinterCell.aa, int, int, int, int, int, boolean);",
+          "instructions": 31,
+          "branches": 1,
+          "calls": {
+            "SplinterCell.a.a": 3
+          }
+        },
+        {
+          "signature": "void do();",
+          "instructions": 9,
+          "branches": 2,
+          "calls": {}
+        },
+        {
+          "signature": "void E();",
+          "instructions": 196,
+          "branches": 16,
+          "calls": {
+            "SplinterCell.k.if": 2,
+            "SplinterCell.i.if": 2,
+            "SplinterCell.a.a": 2,
+            "SplinterCell.a.try": 1
+          }
+        },
+        {
+          "signature": "void G();",
+          "instructions": 224,
+          "branches": 23,
+          "calls": {
+            "SplinterCell.a.a": 11,
+            "SplinterCell.a.case": 9,
+            "SplinterCell.a.byte": 8,
+            "SplinterCell.a.try": 1
+          }
+        },
+        {
+          "signature": "void F();",
+          "instructions": 56,
+          "branches": 4,
+          "calls": {
+            "SplinterCell.a.case": 3,
+            "SplinterCell.a.a": 1
+          }
+        },
+        {
+          "signature": "void a(javax.microedition.lcdui.Graphics);",
+          "instructions": 82,
+          "branches": 8,
+          "calls": {
+            "javax.microedition.lcdui.Graphics.setColor": 3,
+            "SplinterCell.a.byte": 2,
+            "SplinterCell.a.case": 2,
+            "javax.microedition.lcdui.Graphics.drawLine": 2,
+            "SplinterCell.a.a": 1,
+            "javax.microedition.lcdui.Graphics.setClip": 1
+          }
+        }
+      ]
+    },
+    {
+      "class": "SplinterCell.v",
+      "method_count": 4,
+      "instructions": 167,
+      "branches": 21,
+      "methods": [
+        {
+          "signature": "SplinterCell.v(int, SplinterCell.aa, int, int, int, int, int);",
+          "instructions": 26,
+          "branches": 0,
+          "calls": {
+            "SplinterCell.a.for": 3,
+            "SplinterCell.a.int": 1
+          }
+        },
+        {
+          "signature": "void do();",
+          "instructions": 9,
+          "branches": 2,
+          "calls": {}
+        },
+        {
+          "signature": "void H();",
+          "instructions": 118,
+          "branches": 16,
+          "calls": {
+            "SplinterCell.a.try": 3,
+            "SplinterCell.a.int": 2,
+            "SplinterCell.a.char": 1,
+            "SplinterCell.k.a": 1,
+            "SplinterCell.a.case": 1,
+            "SplinterCell.a.byte": 1
+          }
+        },
+        {
+          "signature": "void I();",
+          "instructions": 14,
+          "branches": 3,
+          "calls": {}
+        }
+      ]
+    },
+    {
+      "class": "SplinterCell.w",
+      "method_count": 2,
+      "instructions": 157,
+      "branches": 15,
+      "methods": [
+        {
+          "signature": "SplinterCell.w(int, SplinterCell.aa, int, int, int);",
+          "instructions": 21,
+          "branches": 0,
+          "calls": {
+            "SplinterCell.a.for": 1
+          }
+        },
+        {
+          "signature": "void do();",
+          "instructions": 136,
+          "branches": 15,
+          "calls": {
+            "SplinterCell.a.try": 4,
+            "SplinterCell.a.for": 2,
+            "SplinterCell.k.a": 2,
+            "SplinterCell.a.int": 1,
+            "SplinterCell.j.do": 1
+          }
+        }
+      ]
+    },
+    {
+      "class": "SplinterCell.x",
+      "method_count": 4,
+      "instructions": 206,
+      "branches": 17,
+      "methods": [
+        {
+          "signature": "SplinterCell.x(int, SplinterCell.aa, int, int, byte);",
+          "instructions": 23,
+          "branches": 0,
+          "calls": {
+            "SplinterCell.a.int": 1
+          }
+        },
+        {
+          "signature": "void do();",
+          "instructions": 9,
+          "branches": 2,
+          "calls": {}
+        },
+        {
+          "signature": "void K();",
+          "instructions": 39,
+          "branches": 4,
+          "calls": {
+            "SplinterCell.a.int": 1
+          }
+        },
+        {
+          "signature": "void J();",
+          "instructions": 135,
+          "branches": 11,
+          "calls": {
+            "SplinterCell.q.void": 2,
+            "SplinterCell.a.int": 2,
+            "SplinterCell.a.byte": 1,
+            "SplinterCell.a.try": 1,
+            "SplinterCell.k.a": 1
+          }
+        }
+      ]
+    },
+    {
+      "class": "SplinterCell.y",
+      "method_count": 4,
+      "instructions": 276,
+      "branches": 32,
+      "methods": [
+        {
+          "signature": "SplinterCell.y(int, SplinterCell.aa, int, int, int, int, int);",
+          "instructions": 39,
+          "branches": 1,
+          "calls": {
+            "SplinterCell.a.for": 3
+          }
+        },
+        {
+          "signature": "void do();",
+          "instructions": 194,
+          "branches": 28,
+          "calls": {
+            "SplinterCell.a.try": 12,
+            "SplinterCell.a.int": 5,
+            "SplinterCell.a.byte": 3,
+            "SplinterCell.j.do": 2
+          }
+        },
+        {
+          "signature": "void goto(int);",
+          "instructions": 7,
+          "branches": 0,
+          "calls": {
+            "SplinterCell.a.int": 1
+          }
+        },
+        {
+          "signature": "int f();",
+          "instructions": 36,
+          "branches": 3,
+          "calls": {
+            "SplinterCell.a.try": 2
+          }
+        }
+      ]
+    },
+    {
+      "class": "SplinterCell.z",
+      "method_count": 3,
+      "instructions": 162,
+      "branches": 16,
+      "methods": [
+        {
+          "signature": "SplinterCell.z(int, SplinterCell.aa, int, int, int);",
+          "instructions": 43,
+          "branches": 3,
+          "calls": {
+            "SplinterCell.a.for": 2
+          }
+        },
+        {
+          "signature": "void do();",
+          "instructions": 115,
+          "branches": 13,
+          "calls": {
+            "SplinterCell.a.try": 5,
+            "SplinterCell.a.for": 5,
+            "SplinterCell.a.byte": 1
+          }
+        },
+        {
+          "signature": "void goto(int);",
+          "instructions": 4,
+          "branches": 0,
+          "calls": {}
+        }
+      ]
+    }
+  ],
+  "limitation": "Static method inspection, no game execution, no proof of hot paths or semantic equivalence."
+}

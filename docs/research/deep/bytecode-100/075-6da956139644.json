@@ -1,0 +1,1709 @@
+{
+  "rank": 75,
+  "jar_path": "All Java Mobile Phone Games/V/V-Rally/vrally.jar",
+  "jar_sha256": "6da9561396445c91ec5c82f04d53b98922f846f4fe61b94fd576a0a575b7e0d8",
+  "title": "VRally-UK",
+  "track": "physics",
+  "status": "BYTECODE_DISASSEMBLED_INDEXED_NOT_FULLY_REVIEWED",
+  "tool": "OpenJDK javap -p -c; JAR never executed",
+  "classes": 14,
+  "classes_decoded": 14,
+  "methods": 158,
+  "instructions": 19345,
+  "branches": 1004,
+  "errors": [],
+  "hot_methods_by_static_instruction_count": [
+    {
+      "class": "CGame",
+      "signature": "final void ProcessFE();",
+      "instructions": 2771,
+      "branches": 222,
+      "priority_score": 3437,
+      "calls": {
+        "java.lang.String.charAt": 8,
+        "CCanvas.ForceFlip": 1
+      }
+    },
+    {
+      "class": "CGame",
+      "signature": "final void RenderFE();",
+      "instructions": 2387,
+      "branches": 100,
+      "priority_score": 2687,
+      "calls": {
+        "globals.DrawFERect": 24,
+        "CSprite.DrawSprite": 17,
+        "globals.CenterText": 16,
+        "javax.microedition.lcdui.Graphics.setColor": 15,
+        "javax.microedition.lcdui.Graphics.setClip": 8,
+        "CSprite.SetSpriteData": 6,
+        "javax.microedition.lcdui.Graphics.fillRect": 5,
+        "java.lang.Integer.toString": 5,
+        "javax.microedition.lcdui.Graphics.drawRect": 4,
+        "javax.microedition.lcdui.Graphics.drawString": 3,
+        "javax.microedition.lcdui.Font.stringWidth": 3,
+        "java.lang.StringBuffer.append": 3,
+        "CSprite.SetClipWindow": 2,
+        "CSprite.GetSpriteWidth": 2,
+        "javax.microedition.lcdui.Graphics.setFont": 1,
+        "javax.microedition.lcdui.Font.getHeight": 1,
+        "javax.microedition.lcdui.Graphics.drawChar": 1,
+        "javax.microedition.lcdui.Graphics.getFont": 1,
+        "java.lang.StringBuffer.toString": 1
+      }
+    },
+    {
+      "class": "CGame",
+      "signature": "public final void RenderGameLoop();",
+      "instructions": 1373,
+      "branches": 113,
+      "priority_score": 1712,
+      "calls": {
+        "CSprite.DrawSprite": 15,
+        "javax.microedition.lcdui.Graphics.getFont": 13,
+        "javax.microedition.lcdui.Font.stringWidth": 13,
+        "globals.CenterText": 9,
+        "CSprite.SetClipWindow": 8,
+        "javax.microedition.lcdui.Graphics.setClip": 7,
+        "CSprite.SetSpriteData": 5,
+        "javax.microedition.lcdui.Graphics.setColor": 5,
+        "javax.microedition.lcdui.Graphics.fillRect": 5,
+        "CSprite.GetSpriteWidth": 5,
+        "CSprite.GetSpriteHeight": 3,
+        "javax.microedition.lcdui.Graphics.setFont": 1,
+        "globals.randi": 1
+      }
+    },
+    {
+      "class": "CGame",
+      "signature": "public final void Render();",
+      "instructions": 1488,
+      "branches": 5,
+      "priority_score": 1503,
+      "calls": {}
+    },
+    {
+      "class": "CGame",
+      "signature": "public final void ProcessGameLoop();",
+      "instructions": 1071,
+      "branches": 96,
+      "priority_score": 1359,
+      "calls": {
+        "globals.randi": 1
+      }
+    },
+    {
+      "class": "CGame",
+      "signature": "public final void ProcessObjects();",
+      "instructions": 868,
+      "branches": 82,
+      "priority_score": 1114,
+      "calls": {
+        "globals.randi": 3
+      }
+    },
+    {
+      "class": "CGame",
+      "signature": "public CGame();",
+      "instructions": 963,
+      "branches": 4,
+      "priority_score": 975,
+      "calls": {
+        "javax.microedition.lcdui.Font.getFont": 4
+      }
+    },
+    {
+      "class": "globals",
+      "signature": "public globals();",
+      "instructions": 893,
+      "branches": 0,
+      "priority_score": 893,
+      "calls": {}
+    },
+    {
+      "class": "globals",
+      "signature": "final void DrawFERect(int, int, int, int, int, char[], int, int, int, int);",
+      "instructions": 768,
+      "branches": 1,
+      "priority_score": 771,
+      "calls": {
+        "javax.microedition.lcdui.Graphics.getFont": 2,
+        "javax.microedition.lcdui.Graphics.setColor": 1,
+        "javax.microedition.lcdui.Graphics.setFont": 1,
+        "javax.microedition.lcdui.Font.charsWidth": 1,
+        "javax.microedition.lcdui.Font.getHeight": 1,
+        "javax.microedition.lcdui.Graphics.drawChars": 1
+      }
+    },
+    {
+      "class": "CText",
+      "signature": "public CText();",
+      "instructions": 582,
+      "branches": 0,
+      "priority_score": 582,
+      "calls": {}
+    },
+    {
+      "class": "CGame",
+      "signature": "public int RenderMap();",
+      "instructions": 373,
+      "branches": 17,
+      "priority_score": 424,
+      "calls": {
+        "javax.microedition.lcdui.Graphics.setColor": 5,
+        "javax.microedition.lcdui.Graphics.fillRect": 1,
+        "javax.microedition.lcdui.Graphics.setClip": 1,
+        "javax.microedition.lcdui.Graphics.drawLine": 1,
+        "CSprite.SetClipWindow": 1
+      }
+    },
+    {
+      "class": "CGame",
+      "signature": "public int LoadResource(java.lang.String, short[]);",
+      "instructions": 120,
+      "branches": 10,
+      "priority_score": 390,
+      "calls": {
+        "java.lang.Object.getClass": 1,
+        "java.lang.Class.getResourceAsStream": 1,
+        "java.io.InputStream.available": 1,
+        "java.io.InputStream.read": 1,
+        "java.io.InputStream.close": 1
+      }
+    }
+  ],
+  "call_targets": [
+    {
+      "target": "CSprite.DrawSprite",
+      "count": 52
+    },
+    {
+      "target": "javax.microedition.lcdui.Graphics.setColor",
+      "count": 49
+    },
+    {
+      "target": "globals.CenterText",
+      "count": 27
+    },
+    {
+      "target": "javax.microedition.lcdui.Graphics.getFont",
+      "count": 27
+    },
+    {
+      "target": "javax.microedition.lcdui.Graphics.setClip",
+      "count": 26
+    },
+    {
+      "target": "globals.DrawFERect",
+      "count": 25
+    },
+    {
+      "target": "java.lang.StringBuffer.append",
+      "count": 25
+    },
+    {
+      "target": "javax.microedition.lcdui.Font.stringWidth",
+      "count": 23
+    },
+    {
+      "target": "javax.microedition.lcdui.Graphics.drawLine",
+      "count": 21
+    },
+    {
+      "target": "javax.microedition.lcdui.Graphics.fillRect",
+      "count": 20
+    },
+    {
+      "target": "globals.DB_AddItem",
+      "count": 18
+    },
+    {
+      "target": "CSprite.SetSpriteData",
+      "count": 15
+    },
+    {
+      "target": "CSprite.SetClipWindow",
+      "count": 13
+    },
+    {
+      "target": "javax.microedition.lcdui.Graphics.drawString",
+      "count": 13
+    },
+    {
+      "target": "CGame.LoadResource",
+      "count": 12
+    },
+    {
+      "target": "java.lang.String.charAt",
+      "count": 11
+    },
+    {
+      "target": "CSprite.GetSpriteWidth",
+      "count": 11
+    },
+    {
+      "target": "java.lang.Integer.toString",
+      "count": 10
+    },
+    {
+      "target": "globals.DB_GetItem_IntArray",
+      "count": 10
+    },
+    {
+      "target": "java.lang.StringBuffer.toString",
+      "count": 8
+    },
+    {
+      "target": "javax.microedition.lcdui.Font.getHeight",
+      "count": 7
+    },
+    {
+      "target": "CSprite.GetSpriteHeight",
+      "count": 6
+    },
+    {
+      "target": "javax.microedition.lcdui.Graphics.setFont",
+      "count": 5
+    },
+    {
+      "target": "javax.microedition.lcdui.Graphics.drawRect",
+      "count": 5
+    },
+    {
+      "target": "javax.microedition.lcdui.Graphics.drawChars",
+      "count": 5
+    },
+    {
+      "target": "globals.randi",
+      "count": 5
+    },
+    {
+      "target": "java.lang.System.gc",
+      "count": 4
+    },
+    {
+      "target": "javax.microedition.lcdui.Font.charsWidth",
+      "count": 4
+    },
+    {
+      "target": "java.io.InputStream.read",
+      "count": 4
+    },
+    {
+      "target": "javax.microedition.lcdui.Font.getFont",
+      "count": 4
+    },
+    {
+      "target": "javax.microedition.lcdui.Image.createImage",
+      "count": 4
+    },
+    {
+      "target": "java.lang.System.currentTimeMillis",
+      "count": 3
+    },
+    {
+      "target": "globals.DB_GetItem_Int",
+      "count": 3
+    },
+    {
+      "target": "java.lang.Object.getClass",
+      "count": 3
+    },
+    {
+      "target": "java.lang.Class.getResourceAsStream",
+      "count": 3
+    }
+  ],
+  "opcode_histogram": {
+    "aload_0": 2133,
+    "bipush": 2005,
+    "getfield": 1398,
+    "dup": 1139,
+    "iload": 757,
+    "getstatic": 667,
+    "iconst_0": 665,
+    "putfield": 646,
+    "bastore": 629,
+    "invokevirtual": 551,
+    "iconst_1": 500,
+    "iadd": 474,
+    "ldc": 457,
+    "istore": 388,
+    "sipush": 369,
+    "iconst_2": 364,
+    "iload_1": 357,
+    "iastore": 345,
+    "goto": 344,
+    "putstatic": 247,
+    "iaload": 245,
+    "iconst_4": 241,
+    "iconst_3": 229,
+    "ishr": 203,
+    "aastore": 201,
+    "isub": 190,
+    "iconst_5": 184,
+    "iload_2": 173,
+    "iand": 151,
+    "iload_3": 146,
+    "iinc": 144,
+    "aaload": 137,
+    "invokestatic": 135,
+    "ldc_w": 130,
+    "return": 126
+  },
+  "resource_file_count": 56,
+  "resources_by_suffix": {
+    ".mf": 1,
+    ".png": 8,
+    ".crc": 10,
+    "[none]": 4,
+    ".gfx": 2,
+    ".bin": 4,
+    ".dat": 3,
+    ".pal": 1,
+    ".raw": 7,
+    ".hillcorn": 4,
+    ".misc": 4,
+    ".objects": 4,
+    ".track": 4
+  },
+  "class_methods": [
+    {
+      "class": "CCanvas",
+      "method_count": 6,
+      "instructions": 394,
+      "branches": 56,
+      "methods": [
+        {
+          "signature": "public CCanvas();",
+          "instructions": 40,
+          "branches": 1,
+          "calls": {
+            "java.lang.System.currentTimeMillis": 1,
+            "globals.initGame": 1,
+            "java.lang.Thread.start": 1
+          }
+        },
+        {
+          "signature": "public void run();",
+          "instructions": 82,
+          "branches": 11,
+          "calls": {
+            "java.lang.System.currentTimeMillis": 2,
+            "CGame.MainLoop": 1,
+            "javax.microedition.lcdui.Canvas.repaint": 1,
+            "javax.microedition.lcdui.Canvas.serviceRepaints": 1,
+            "java.lang.Thread.sleep": 1,
+            "VRally.destroyApp": 1,
+            "javax.microedition.midlet.MIDlet.notifyDestroyed": 1
+          }
+        },
+        {
+          "signature": "protected void keyReleased(int);",
+          "instructions": 126,
+          "branches": 21,
+          "calls": {
+            "javax.microedition.lcdui.Canvas.getGameAction": 1
+          }
+        },
+        {
+          "signature": "protected void keyPressed(int);",
+          "instructions": 132,
+          "branches": 22,
+          "calls": {
+            "javax.microedition.lcdui.Canvas.getGameAction": 1
+          }
+        },
+        {
+          "signature": "public void ForceFlip();",
+          "instructions": 5,
+          "branches": 0,
+          "calls": {
+            "javax.microedition.lcdui.Canvas.repaint": 1,
+            "javax.microedition.lcdui.Canvas.serviceRepaints": 1
+          }
+        },
+        {
+          "signature": "public void paint(javax.microedition.lcdui.Graphics);",
+          "instructions": 9,
+          "branches": 1,
+          "calls": {
+            "CGame.Render": 1
+          }
+        }
+      ]
+    },
+    {
+      "class": "CDevice",
+      "method_count": 5,
+      "instructions": 7,
+      "branches": 0,
+      "methods": [
+        {
+          "signature": "public CDevice();",
+          "instructions": 3,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public void Vibrate();",
+          "instructions": 1,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public void PlayTone(int, int);",
+          "instructions": 1,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public void PlayWin();",
+          "instructions": 1,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public void PlayLose();",
+          "instructions": 1,
+          "branches": 0,
+          "calls": {}
+        }
+      ]
+    },
+    {
+      "class": "CGame",
+      "method_count": 50,
+      "instructions": 14934,
+      "branches": 861,
+      "methods": [
+        {
+          "signature": "void SetImagePalette(byte[], byte[]);",
+          "instructions": 78,
+          "branches": 3,
+          "calls": {}
+        },
+        {
+          "signature": "final void SetupFE(int);",
+          "instructions": 18,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "final void ResetFE();",
+          "instructions": 67,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "final int UseCode(int);",
+          "instructions": 110,
+          "branches": 11,
+          "calls": {}
+        },
+        {
+          "signature": "final int GenerateCode();",
+          "instructions": 37,
+          "branches": 2,
+          "calls": {}
+        },
+        {
+          "signature": "protected final int NumTracksRaced();",
+          "instructions": 19,
+          "branches": 3,
+          "calls": {}
+        },
+        {
+          "signature": "protected final int CalcPoints();",
+          "instructions": 40,
+          "branches": 3,
+          "calls": {}
+        },
+        {
+          "signature": "protected final void ChooseCar(int);",
+          "instructions": 53,
+          "branches": 4,
+          "calls": {}
+        },
+        {
+          "signature": "protected final void CalcCurrentPos(int);",
+          "instructions": 46,
+          "branches": 6,
+          "calls": {}
+        },
+        {
+          "signature": "final void ProcessFE();",
+          "instructions": 2771,
+          "branches": 222,
+          "calls": {
+            "java.lang.String.charAt": 8,
+            "CCanvas.ForceFlip": 1
+          }
+        },
+        {
+          "signature": "final int IsHiScore(int, int, int);",
+          "instructions": 145,
+          "branches": 13,
+          "calls": {
+            "java.lang.String.charAt": 2,
+            "java.lang.System.gc": 1
+          }
+        },
+        {
+          "signature": "final void RenderFE();",
+          "instructions": 2387,
+          "branches": 100,
+          "calls": {
+            "globals.DrawFERect": 24,
+            "CSprite.DrawSprite": 17,
+            "globals.CenterText": 16,
+            "javax.microedition.lcdui.Graphics.setColor": 15,
+            "javax.microedition.lcdui.Graphics.setClip": 8,
+            "CSprite.SetSpriteData": 6,
+            "javax.microedition.lcdui.Graphics.fillRect": 5,
+            "java.lang.Integer.toString": 5
+          }
+        },
+        {
+          "signature": "public final void drawJustifiedText(int, int, int, java.lang.String, int, int);",
+          "instructions": 73,
+          "branches": 4,
+          "calls": {
+            "javax.microedition.lcdui.Graphics.drawString": 3,
+            "javax.microedition.lcdui.Graphics.getFont": 2,
+            "javax.microedition.lcdui.Graphics.setColor": 1,
+            "javax.microedition.lcdui.Font.stringWidth": 1,
+            "javax.microedition.lcdui.Font.getHeight": 1
+          }
+        },
+        {
+          "signature": "public final void drawJustifiedText(int, int, int, char[], int, int, int);",
+          "instructions": 81,
+          "branches": 4,
+          "calls": {
+            "javax.microedition.lcdui.Graphics.drawChars": 3,
+            "javax.microedition.lcdui.Graphics.getFont": 2,
+            "javax.microedition.lcdui.Graphics.setColor": 1,
+            "javax.microedition.lcdui.Font.charsWidth": 1,
+            "javax.microedition.lcdui.Font.getHeight": 1
+          }
+        },
+        {
+          "signature": "public final java.lang.String createTimeString(int);",
+          "instructions": 52,
+          "branches": 0,
+          "calls": {
+            "java.lang.StringBuffer.append": 8,
+            "java.lang.Integer.toString": 5,
+            "java.lang.StringBuffer.toString": 1
+          }
+        },
+        {
+          "signature": "public final void SaveHSData();",
+          "instructions": 167,
+          "branches": 10,
+          "calls": {
+            "globals.DB_AddItem": 18,
+            "globals.DeleteMCData": 1,
+            "globals.OpenMCData": 1,
+            "globals.AddItem": 1,
+            "globals.CloseMCData": 1
+          }
+        },
+        {
+          "signature": "public final void LoadHSData();",
+          "instructions": 168,
+          "branches": 11,
+          "calls": {
+            "globals.DB_GetItem_IntArray": 10,
+            "globals.DB_GetItem_Int": 3,
+            "globals.DB_GetItem_Byte": 2,
+            "globals.DB_GetItem_String": 2,
+            "globals.OpenMCData": 1,
+            "globals.EnumerateMCData": 1,
+            "globals.GetItem": 1,
+            "globals.DB_GetItem_CharArray": 1
+          }
+        },
+        {
+          "signature": "public void ResetMap();",
+          "instructions": 93,
+          "branches": 2,
+          "calls": {}
+        },
+        {
+          "signature": "public final void SortCars(int[], byte[]);",
+          "instructions": 102,
+          "branches": 10,
+          "calls": {}
+        },
+        {
+          "signature": "public int RenderMap();",
+          "instructions": 373,
+          "branches": 17,
+          "calls": {
+            "javax.microedition.lcdui.Graphics.setColor": 5,
+            "javax.microedition.lcdui.Graphics.fillRect": 1,
+            "javax.microedition.lcdui.Graphics.setClip": 1,
+            "javax.microedition.lcdui.Graphics.drawLine": 1,
+            "CSprite.SetClipWindow": 1
+          }
+        },
+        {
+          "signature": "void ProcessSprites(int, int, int);",
+          "instructions": 44,
+          "branches": 7,
+          "calls": {
+            "globals.ProcessSprite": 2,
+            "CSprite.SetSpriteData": 1
+          }
+        },
+        {
+          "signature": "void ProcessCarSprite();",
+          "instructions": 124,
+          "branches": 2,
+          "calls": {
+            "CSprite.SetSpriteData": 3,
+            "CSprite.GetSpriteWidth": 2,
+            "CSprite.DrawSprite": 2,
+            "CSprite.GetSpriteHeight": 1
+          }
+        },
+        {
+          "signature": "public void RenderInstructions();",
+          "instructions": 275,
+          "branches": 25,
+          "calls": {
+            "javax.microedition.lcdui.Font.getHeight": 2,
+            "javax.microedition.lcdui.Graphics.drawString": 2,
+            "javax.microedition.lcdui.Graphics.setFont": 1,
+            "javax.microedition.lcdui.Graphics.setColor": 1,
+            "java.lang.String.length": 1,
+            "java.lang.String.charAt": 1,
+            "javax.microedition.lcdui.Font.charsWidth": 1,
+            "globals.CenterText": 1
+          }
+        },
+        {
+          "signature": "public void ProcessInstructions();",
+          "instructions": 59,
+          "branches": 4,
+          "calls": {
+            "java.lang.String.length": 1
+          }
+        },
+        {
+          "signature": "public int Load(java.lang.String, byte[]);",
+          "instructions": 77,
+          "branches": 8,
+          "calls": {
+            "java.io.InputStream.read": 2,
+            "java.lang.Object.getClass": 1,
+            "java.lang.Class.getResourceAsStream": 1,
+            "java.io.InputStream.close": 1
+          }
+        },
+        {
+          "signature": "public void DisplayLoadInfo();",
+          "instructions": 16,
+          "branches": 2,
+          "calls": {
+            "CCanvas.ForceFlip": 1
+          }
+        },
+        {
+          "signature": "public int LoadResource(java.lang.String, byte[]);",
+          "instructions": 74,
+          "branches": 8,
+          "calls": {
+            "java.lang.Object.getClass": 1,
+            "java.lang.Class.getResourceAsStream": 1,
+            "java.io.InputStream.read": 1,
+            "java.io.InputStream.close": 1
+          }
+        },
+        {
+          "signature": "public int LoadResource(java.lang.String, short[]);",
+          "instructions": 120,
+          "branches": 10,
+          "calls": {
+            "java.lang.Object.getClass": 1,
+            "java.lang.Class.getResourceAsStream": 1,
+            "java.io.InputStream.available": 1,
+            "java.io.InputStream.read": 1,
+            "java.io.InputStream.close": 1
+          }
+        },
+        {
+          "signature": "public void CreateSoundEffect(java.lang.String, int);",
+          "instructions": 1,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public void PlaySound(int, int);",
+          "instructions": 1,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public CGame();",
+          "instructions": 963,
+          "branches": 4,
+          "calls": {
+            "javax.microedition.lcdui.Font.getFont": 4
+          }
+        },
+        {
+          "signature": "public void InitData();",
+          "instructions": 291,
+          "branches": 2,
+          "calls": {
+            "java.lang.StringBuffer.append": 6,
+            "java.lang.StringBuffer.toString": 3,
+            "globals.InitMap": 1
+          }
+        },
+        {
+          "signature": "public final void ProcessPowerON();",
+          "instructions": 60,
+          "branches": 5,
+          "calls": {
+            "java.lang.StringBuffer.append": 2,
+            "java.lang.StringBuffer.toString": 1,
+            "globals.CleanUp": 1,
+            "globals.Sleep": 1
+          }
+        },
+        {
+          "signature": "public void RenderPowerOn();",
+          "instructions": 45,
+          "branches": 1,
+          "calls": {
+            "javax.microedition.lcdui.Graphics.setClip": 1,
+            "CSprite.SetClipWindow": 1,
+            "CSprite.Draw": 1
+          }
+        },
+        {
+          "signature": "public final void InitGameOver();",
+          "instructions": 3,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public final void ResetGameData();",
+          "instructions": 148,
+          "branches": 4,
+          "calls": {}
+        },
+        {
+          "signature": "protected final void FinishedRace();",
+          "instructions": 115,
+          "branches": 9,
+          "calls": {}
+        },
+        {
+          "signature": "public final void InitGame();",
+          "instructions": 11,
+          "branches": 0,
+          "calls": {
+            "globals.CleanUp": 1,
+            "java.lang.System.gc": 1
+          }
+        },
+        {
+          "signature": "public final void ProcessObjects();",
+          "instructions": 868,
+          "branches": 82,
+          "calls": {
+            "globals.randi": 3
+          }
+        },
+        {
+          "signature": "final void DrawTime(int, int, int, boolean);",
+          "instructions": 150,
+          "branches": 4,
+          "calls": {
+            "CSprite.DrawSprite": 9
+          }
+        },
+        {
+          "signature": "final void RenderTime(boolean, boolean, int);",
+          "instructions": 263,
+          "branches": 12,
+          "calls": {
+            "CSprite.DrawSprite": 7,
+            "javax.microedition.lcdui.Graphics.setClip": 5,
+            "javax.microedition.lcdui.Graphics.fillRect": 5,
+            "javax.microedition.lcdui.Graphics.setColor": 1,
+            "CSprite.SetClipWindow": 1
+          }
+        },
+        {
+          "signature": "public final void ProcessGameLoop();",
+          "instructions": 1071,
+          "branches": 96,
+          "calls": {
+            "globals.randi": 1
+          }
+        },
+        {
+          "signature": "final void DrawStrip(int, CSprite, int);",
+          "instructions": 33,
+          "branches": 0,
+          "calls": {
+            "CSprite.Draw": 2
+          }
+        },
+        {
+          "signature": "public final void RenderBackGround();",
+          "instructions": 22,
+          "branches": 0,
+          "calls": {
+            "javax.microedition.lcdui.Graphics.setClip": 1
+          }
+        },
+        {
+          "signature": "protected final void DrawBoxWithText(int, int, int, java.lang.String, int, boolean);",
+          "instructions": 66,
+          "branches": 2,
+          "calls": {
+            "javax.microedition.lcdui.Graphics.setColor": 4,
+            "javax.microedition.lcdui.Graphics.fillRect": 2,
+            "javax.microedition.lcdui.Graphics.setClip": 1,
+            "javax.microedition.lcdui.Graphics.drawRect": 1
+          }
+        },
+        {
+          "signature": "protected final void DrawYesNoBox(java.lang.String, int, boolean);",
+          "instructions": 120,
+          "branches": 8,
+          "calls": {
+            "javax.microedition.lcdui.Graphics.getFont": 3,
+            "javax.microedition.lcdui.Font.stringWidth": 3,
+            "javax.microedition.lcdui.Graphics.setColor": 3,
+            "javax.microedition.lcdui.Graphics.drawString": 3,
+            "javax.microedition.lcdui.Graphics.setClip": 1,
+            "globals.DrawFERect": 1,
+            "globals.CenterText": 1
+          }
+        },
+        {
+          "signature": "public final void RenderGameLoop();",
+          "instructions": 1373,
+          "branches": 113,
+          "calls": {
+            "CSprite.DrawSprite": 15,
+            "javax.microedition.lcdui.Graphics.getFont": 13,
+            "javax.microedition.lcdui.Font.stringWidth": 13,
+            "globals.CenterText": 9,
+            "CSprite.SetClipWindow": 8,
+            "javax.microedition.lcdui.Graphics.setClip": 7,
+            "CSprite.SetSpriteData": 5,
+            "javax.microedition.lcdui.Graphics.setColor": 5
+          }
+        },
+        {
+          "signature": "protected final void CreateRaceTimes(int);",
+          "instructions": 47,
+          "branches": 3,
+          "calls": {}
+        },
+        {
+          "signature": "public final void MainLoop();",
+          "instructions": 126,
+          "branches": 20,
+          "calls": {}
+        },
+        {
+          "signature": "public final void Render();",
+          "instructions": 1488,
+          "branches": 5,
+          "calls": {}
+        }
+      ]
+    },
+    {
+      "class": "CSprite",
+      "method_count": 8,
+      "instructions": 165,
+      "branches": 2,
+      "methods": [
+        {
+          "signature": "public CSprite(java.lang.String, boolean);",
+          "instructions": 44,
+          "branches": 1,
+          "calls": {
+            "java.lang.StringBuffer.append": 6,
+            "java.lang.StringBuffer.toString": 2,
+            "javax.microedition.lcdui.Image.createImage": 1,
+            "javax.microedition.lcdui.Image.getWidth": 1,
+            "javax.microedition.lcdui.Image.getHeight": 1,
+            "java.lang.Throwable.getMessage": 1,
+            "java.io.PrintStream.println": 1
+          }
+        },
+        {
+          "signature": "public CSprite(byte[], int, int);",
+          "instructions": 15,
+          "branches": 0,
+          "calls": {
+            "CGame.DisplayLoadInfo": 1,
+            "javax.microedition.lcdui.Image.createImage": 1,
+            "java.lang.System.gc": 1
+          }
+        },
+        {
+          "signature": "public static void SetClipWindow(int, int, int, int);",
+          "instructions": 9,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public static void SetSpriteData(short[]);",
+          "instructions": 3,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public static int GetSpriteWidth(int);",
+          "instructions": 8,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public static int GetSpriteHeight(int);",
+          "instructions": 8,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public void Draw(int, int, boolean);",
+          "instructions": 13,
+          "branches": 1,
+          "calls": {
+            "javax.microedition.lcdui.Graphics.drawImage": 1
+          }
+        },
+        {
+          "signature": "public static void DrawSprite(int, int, int, CSprite);",
+          "instructions": 65,
+          "branches": 0,
+          "calls": {
+            "javax.microedition.lcdui.Graphics.setClip": 1,
+            "javax.microedition.lcdui.Graphics.clipRect": 1,
+            "javax.microedition.lcdui.Graphics.drawImage": 1
+          }
+        }
+      ]
+    },
+    {
+      "class": "CText",
+      "method_count": 1,
+      "instructions": 582,
+      "branches": 0,
+      "methods": [
+        {
+          "signature": "public CText();",
+          "instructions": 582,
+          "branches": 0,
+          "calls": {}
+        }
+      ]
+    },
+    {
+      "class": "VRally",
+      "method_count": 4,
+      "instructions": 41,
+      "branches": 2,
+      "methods": [
+        {
+          "signature": "public VRally();",
+          "instructions": 20,
+          "branches": 0,
+          "calls": {
+            "globals.init": 1,
+            "javax.microedition.lcdui.Display.getDisplay": 1
+          }
+        },
+        {
+          "signature": "public void startApp();",
+          "instructions": 8,
+          "branches": 0,
+          "calls": {
+            "javax.microedition.lcdui.Display.setCurrent": 1
+          }
+        },
+        {
+          "signature": "public void pauseApp();",
+          "instructions": 12,
+          "branches": 2,
+          "calls": {
+            "javax.microedition.midlet.MIDlet.notifyDestroyed": 1
+          }
+        },
+        {
+          "signature": "public void commandAction(javax.microedition.lcdui.Command, javax.microedition.lcdui.Displayable);",
+          "instructions": 1,
+          "branches": 0,
+          "calls": {}
+        }
+      ]
+    },
+    {
+      "class": "com.nokia.mid.sound.Sound",
+      "method_count": 14,
+      "instructions": 29,
+      "branches": 0,
+      "methods": [
+        {
+          "signature": "public com.nokia.mid.sound.Sound(byte[], int);",
+          "instructions": 3,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public com.nokia.mid.sound.Sound(int, long);",
+          "instructions": 3,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public void init(int, long);",
+          "instructions": 1,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public void init(byte[], int);",
+          "instructions": 1,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public int getState();",
+          "instructions": 2,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public void play(int);",
+          "instructions": 1,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public void stop();",
+          "instructions": 1,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public void resume();",
+          "instructions": 1,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public void release();",
+          "instructions": 1,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public void setGain(int);",
+          "instructions": 1,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public int getGain();",
+          "instructions": 2,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public static int getConcurrentSoundCount(int);",
+          "instructions": 2,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public static int[] getSupportedFormats();",
+          "instructions": 9,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public void setSoundListener(com.nokia.mid.sound.SoundListener);",
+          "instructions": 1,
+          "branches": 0,
+          "calls": {}
+        }
+      ]
+    },
+    {
+      "class": "com.nokia.mid.sound.SoundListener",
+      "method_count": 1,
+      "instructions": 0,
+      "branches": 0,
+      "methods": [
+        {
+          "signature": "public abstract void soundStateChanged(com.nokia.mid.sound.Sound, int);",
+          "instructions": 0,
+          "branches": 0,
+          "calls": {}
+        }
+      ]
+    },
+    {
+      "class": "com.nokia.mid.ui.DeviceControl",
+      "method_count": 5,
+      "instructions": 7,
+      "branches": 0,
+      "methods": [
+        {
+          "signature": "public com.nokia.mid.ui.DeviceControl();",
+          "instructions": 3,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public static void setLights(int, int);",
+          "instructions": 1,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public static void flashLights(long);",
+          "instructions": 1,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public static void startVibra(int, long);",
+          "instructions": 1,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public static void stopVibra();",
+          "instructions": 1,
+          "branches": 0,
+          "calls": {}
+        }
+      ]
+    },
+    {
+      "class": "com.nokia.mid.ui.DirectGraphics",
+      "method_count": 12,
+      "instructions": 0,
+      "branches": 0,
+      "methods": [
+        {
+          "signature": "public abstract void setARGBColor(int);",
+          "instructions": 0,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public abstract void drawTriangle(int, int, int, int, int, int, int);",
+          "instructions": 0,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public abstract void fillTriangle(int, int, int, int, int, int, int);",
+          "instructions": 0,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public abstract void drawPolygon(int[], int, int[], int, int, int);",
+          "instructions": 0,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public abstract void fillPolygon(int[], int, int[], int, int, int);",
+          "instructions": 0,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public abstract void drawPixels(int[], boolean, int, int, int, int, int, int, int, int);",
+          "instructions": 0,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public abstract void drawPixels(byte[], byte[], int, int, int, int, int, int, int, int);",
+          "instructions": 0,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public abstract void drawPixels(short[], boolean, int, int, int, int, int, int, int, int);",
+          "instructions": 0,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public abstract void getPixels(int[], int, int, int, int, int, int, int);",
+          "instructions": 0,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public abstract void getPixels(byte[], byte[], int, int, int, int, int, int, int);",
+          "instructions": 0,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public abstract void getPixels(short[], int, int, int, int, int, int, int);",
+          "instructions": 0,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public abstract void drawImage(javax.microedition.lcdui.Image, int, int, int, int);",
+          "instructions": 0,
+          "branches": 0,
+          "calls": {}
+        }
+      ]
+    },
+    {
+      "class": "com.nokia.mid.ui.DirectGraphicsImplemented",
+      "method_count": 15,
+      "instructions": 404,
+      "branches": 33,
+      "methods": [
+        {
+          "signature": "protected com.nokia.mid.ui.DirectGraphicsImplemented(javax.microedition.lcdui.Graphics);",
+          "instructions": 12,
+          "branches": 0,
+          "calls": {
+            "javax.microedition.lcdui.Graphics.setStrokeStyle": 1
+          }
+        },
+        {
+          "signature": "public void setARGBColor(int);",
+          "instructions": 5,
+          "branches": 0,
+          "calls": {
+            "javax.microedition.lcdui.Graphics.setColor": 1
+          }
+        },
+        {
+          "signature": "public void drawTriangle(int, int, int, int, int, int, int);",
+          "instructions": 26,
+          "branches": 0,
+          "calls": {
+            "javax.microedition.lcdui.Graphics.drawLine": 3,
+            "javax.microedition.lcdui.Graphics.setColor": 1
+          }
+        },
+        {
+          "signature": "public void fillTriangle(int, int, int, int, int, int, int);",
+          "instructions": 167,
+          "branches": 18,
+          "calls": {
+            "javax.microedition.lcdui.Graphics.drawLine": 7,
+            "java.lang.Math.abs": 2,
+            "javax.microedition.lcdui.Graphics.setColor": 1
+          }
+        },
+        {
+          "signature": "public void drawPolygon(int[], int, int[], int, int, int);",
+          "instructions": 41,
+          "branches": 2,
+          "calls": {
+            "javax.microedition.lcdui.Graphics.setColor": 1,
+            "javax.microedition.lcdui.Graphics.drawLine": 1
+          }
+        },
+        {
+          "signature": "public void fillPolygon(int[], int, int[], int, int, int);",
+          "instructions": 9,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public int getNativePixelFormat();",
+          "instructions": 2,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public int getAlphaComponent();",
+          "instructions": 2,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public void drawImage(javax.microedition.lcdui.Image, int, int, int, int);",
+          "instructions": 8,
+          "branches": 0,
+          "calls": {
+            "javax.microedition.lcdui.Graphics.drawImage": 1
+          }
+        },
+        {
+          "signature": "public void drawPixels(int[], boolean, int, int, int, int, int, int, int, int);",
+          "instructions": 30,
+          "branches": 4,
+          "calls": {
+            "javax.microedition.lcdui.Graphics.setColor": 1,
+            "javax.microedition.lcdui.Graphics.drawLine": 1
+          }
+        },
+        {
+          "signature": "public void drawPixels(short[], boolean, int, int, int, int, int, int, int, int);",
+          "instructions": 91,
+          "branches": 9,
+          "calls": {
+            "javax.microedition.lcdui.Graphics.setColor": 1,
+            "javax.microedition.lcdui.Graphics.drawLine": 1
+          }
+        },
+        {
+          "signature": "public void drawPixels(byte[], byte[], int, int, int, int, int, int, int, int);",
+          "instructions": 8,
+          "branches": 0,
+          "calls": {
+            "javax.microedition.lcdui.Graphics.drawLine": 1
+          }
+        },
+        {
+          "signature": "public void getPixels(int[], int, int, int, int, int, int, int);",
+          "instructions": 1,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public void getPixels(byte[], byte[], int, int, int, int, int, int, int);",
+          "instructions": 1,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public void getPixels(short[], int, int, int, int, int, int, int);",
+          "instructions": 1,
+          "branches": 0,
+          "calls": {}
+        }
+      ]
+    },
+    {
+      "class": "com.nokia.mid.ui.DirectUtils",
+      "method_count": 4,
+      "instructions": 41,
+      "branches": 0,
+      "methods": [
+        {
+          "signature": "public com.nokia.mid.ui.DirectUtils();",
+          "instructions": 3,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public static com.nokia.mid.ui.DirectGraphics getDirectGraphics(javax.microedition.lcdui.Graphics);",
+          "instructions": 5,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public static javax.microedition.lcdui.Image createImage(byte[], int, int);",
+          "instructions": 5,
+          "branches": 0,
+          "calls": {
+            "javax.microedition.lcdui.Image.createImage": 1
+          }
+        },
+        {
+          "signature": "public static javax.microedition.lcdui.Image createImage(int, int, int);",
+          "instructions": 28,
+          "branches": 0,
+          "calls": {
+            "javax.microedition.lcdui.Graphics.setColor": 2,
+            "javax.microedition.lcdui.Image.createImage": 1,
+            "javax.microedition.lcdui.Image.getGraphics": 1,
+            "javax.microedition.lcdui.Graphics.getColor": 1,
+            "javax.microedition.lcdui.Graphics.fillRect": 1
+          }
+        }
+      ]
+    },
+    {
+      "class": "com.nokia.mid.ui.FullCanvas",
+      "method_count": 1,
+      "instructions": 6,
+      "branches": 0,
+      "methods": [
+        {
+          "signature": "protected com.nokia.mid.ui.FullCanvas();",
+          "instructions": 6,
+          "branches": 0,
+          "calls": {}
+        }
+      ]
+    },
+    {
+      "class": "globals",
+      "method_count": 32,
+      "instructions": 2735,
+      "branches": 50,
+      "methods": [
+        {
+          "signature": "public globals();",
+          "instructions": 893,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public static void init(VRally);",
+          "instructions": 11,
+          "branches": 0,
+          "calls": {
+            "java.lang.Runtime.getRuntime": 1
+          }
+        },
+        {
+          "signature": "public static void initGame(CCanvas);",
+          "instructions": 3,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public static void Sleep(int);",
+          "instructions": 6,
+          "branches": 1,
+          "calls": {
+            "java.lang.Thread.sleep": 1
+          }
+        },
+        {
+          "signature": "public int randi();",
+          "instructions": 13,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public static void CleanUp();",
+          "instructions": 18,
+          "branches": 3,
+          "calls": {
+            "java.lang.System.gc": 1
+          }
+        },
+        {
+          "signature": "void ProcessSprite();",
+          "instructions": 183,
+          "branches": 15,
+          "calls": {
+            "CSprite.GetSpriteHeight": 2,
+            "CSprite.GetSpriteWidth": 2,
+            "CSprite.DrawSprite": 2
+          }
+        },
+        {
+          "signature": "public final javax.microedition.rms.RecordStore OpenMCData(java.lang.String, boolean);",
+          "instructions": 10,
+          "branches": 1,
+          "calls": {
+            "javax.microedition.rms.RecordStore.openRecordStore": 1
+          }
+        },
+        {
+          "signature": "public final void CloseMCData(javax.microedition.rms.RecordStore);",
+          "instructions": 7,
+          "branches": 2,
+          "calls": {
+            "javax.microedition.rms.RecordStore.closeRecordStore": 1
+          }
+        },
+        {
+          "signature": "public final void DeleteMCData(java.lang.String);",
+          "instructions": 5,
+          "branches": 1,
+          "calls": {
+            "javax.microedition.rms.RecordStore.deleteRecordStore": 1
+          }
+        },
+        {
+          "signature": "public final javax.microedition.rms.RecordEnumeration EnumerateMCData(javax.microedition.rms.RecordStore);",
+          "instructions": 19,
+          "branches": 3,
+          "calls": {
+            "javax.microedition.rms.RecordStore.enumerateRecords": 1,
+            "javax.microedition.rms.RecordEnumeration.hasNextElement": 1
+          }
+        },
+        {
+          "signature": "public final boolean AddItem(javax.microedition.rms.RecordStore, byte[]);",
+          "instructions": 17,
+          "branches": 2,
+          "calls": {
+            "javax.microedition.rms.RecordStore.addRecord": 1
+          }
+        },
+        {
+          "signature": "public final byte[] GetItem(javax.microedition.rms.RecordEnumeration);",
+          "instructions": 11,
+          "branches": 2,
+          "calls": {
+            "javax.microedition.rms.RecordEnumeration.nextRecord": 1
+          }
+        },
+        {
+          "signature": "public final void DB_AddItem(byte[], int[]);",
+          "instructions": 15,
+          "branches": 2,
+          "calls": {}
+        },
+        {
+          "signature": "public final void DB_AddItem(byte[], char[]);",
+          "instructions": 15,
+          "branches": 2,
+          "calls": {}
+        },
+        {
+          "signature": "public final void DB_AddItem(byte[], int);",
+          "instructions": 51,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public final void DB_AddItem(byte[], java.lang.String);",
+          "instructions": 45,
+          "branches": 4,
+          "calls": {
+            "java.lang.String.getBytes": 1
+          }
+        },
+        {
+          "signature": "public final void DB_AddItem(byte[], byte);",
+          "instructions": 9,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public final void DB_AddItem(byte[], char);",
+          "instructions": 25,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public final java.lang.String DB_GetItem_String(byte[]);",
+          "instructions": 25,
+          "branches": 1,
+          "calls": {}
+        },
+        {
+          "signature": "public final byte DB_GetItem_Byte(byte[]);",
+          "instructions": 8,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public final char DB_GetItem_Char(byte[]);",
+          "instructions": 39,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public final void DB_GetItem_IntArray(byte[], int[]);",
+          "instructions": 15,
+          "branches": 2,
+          "calls": {}
+        },
+        {
+          "signature": "public final void DB_GetItem_CharArray(byte[], char[]);",
+          "instructions": 15,
+          "branches": 2,
+          "calls": {}
+        },
+        {
+          "signature": "public final void DB_GetItem_ByteArray(byte[], byte[]);",
+          "instructions": 15,
+          "branches": 2,
+          "calls": {}
+        },
+        {
+          "signature": "public final int DB_GetItem_Int(byte[]);",
+          "instructions": 70,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public void InitMap();",
+          "instructions": 91,
+          "branches": 0,
+          "calls": {
+            "CGame.LoadResource": 12
+          }
+        },
+        {
+          "signature": "final void CenterText(int, java.lang.String);",
+          "instructions": 18,
+          "branches": 0,
+          "calls": {
+            "javax.microedition.lcdui.Graphics.getFont": 1,
+            "javax.microedition.lcdui.Font.stringWidth": 1,
+            "javax.microedition.lcdui.Graphics.drawString": 1
+          }
+        },
+        {
+          "signature": "final void CenterText(int, char[], int);",
+          "instructions": 22,
+          "branches": 0,
+          "calls": {
+            "javax.microedition.lcdui.Graphics.getFont": 1,
+            "javax.microedition.lcdui.Font.charsWidth": 1,
+            "javax.microedition.lcdui.Graphics.drawChars": 1
+          }
+        },
+        {
+          "signature": "final void DrawFERectOnly(int, int, int, int, int, int);",
+          "instructions": 226,
+          "branches": 3,
+          "calls": {
+            "javax.microedition.lcdui.Graphics.drawLine": 6,
+            "javax.microedition.lcdui.Graphics.setColor": 3,
+            "javax.microedition.lcdui.Graphics.fillRect": 1
+          }
+        },
+        {
+          "signature": "final void DrawFERect(int, int, int, int, int, java.lang.String, int, int);",
+          "instructions": 67,
+          "branches": 1,
+          "calls": {
+            "javax.microedition.lcdui.Graphics.getFont": 2,
+            "javax.microedition.lcdui.Graphics.setColor": 1,
+            "javax.microedition.lcdui.Graphics.setFont": 1,
+            "javax.microedition.lcdui.Font.stringWidth": 1,
+            "javax.microedition.lcdui.Font.getHeight": 1,
+            "javax.microedition.lcdui.Graphics.drawString": 1
+          }
+        },
+        {
+          "signature": "final void DrawFERect(int, int, int, int, int, char[], int, int, int, int);",
+          "instructions": 768,
+          "branches": 1,
+          "calls": {
+            "javax.microedition.lcdui.Graphics.getFont": 2,
+            "javax.microedition.lcdui.Graphics.setColor": 1,
+            "javax.microedition.lcdui.Graphics.setFont": 1,
+            "javax.microedition.lcdui.Font.charsWidth": 1,
+            "javax.microedition.lcdui.Font.getHeight": 1,
+            "javax.microedition.lcdui.Graphics.drawChars": 1
+          }
+        }
+      ]
+    }
+  ],
+  "limitation": "Static method inspection, no game execution, no proof of hot paths or semantic equivalence."
+}

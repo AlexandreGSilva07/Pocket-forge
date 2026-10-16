@@ -1,0 +1,377 @@
+{
+  "rank": 11,
+  "jar_path": "All Java Mobile Phone Games/W/WOLF/wolf.jar",
+  "jar_sha256": "5fca5ecb35d810294e2e7aeb002ddf1bff849efa51cf29b2e6ee6363c37894ed",
+  "title": "Quake",
+  "track": "render3d",
+  "status": "BYTECODE_DISASSEMBLED_INDEXED_NOT_FULLY_REVIEWED",
+  "tool": "OpenJDK javap -p -c; JAR never executed",
+  "classes": 2,
+  "classes_decoded": 2,
+  "methods": 17,
+  "instructions": 5580,
+  "branches": 130,
+  "errors": [],
+  "hot_methods_by_static_instruction_count": [
+    {
+      "class": "quake.a",
+      "signature": "public quake.a();",
+      "instructions": 3958,
+      "branches": 1,
+      "priority_score": 3961,
+      "calls": {
+        "javax.microedition.lcdui.Image.createImage": 2,
+        "java.lang.Throwable.printStackTrace": 1
+      }
+    },
+    {
+      "class": "quake.a",
+      "signature": "public void run();",
+      "instructions": 366,
+      "branches": 26,
+      "priority_score": 1176,
+      "calls": {
+        "javax.microedition.lcdui.Canvas.repaint": 1,
+        "java.lang.Thread.sleep": 1
+      }
+    },
+    {
+      "class": "quake.a",
+      "signature": "private void do();",
+      "instructions": 384,
+      "branches": 36,
+      "priority_score": 492,
+      "calls": {}
+    },
+    {
+      "class": "quake.a",
+      "signature": "private void if(byte, byte, byte);",
+      "instructions": 277,
+      "branches": 24,
+      "priority_score": 349,
+      "calls": {}
+    },
+    {
+      "class": "quake.a",
+      "signature": "private void a(byte, byte, byte);",
+      "instructions": 277,
+      "branches": 24,
+      "priority_score": 349,
+      "calls": {}
+    },
+    {
+      "class": "quake.a",
+      "signature": "void a();",
+      "instructions": 83,
+      "branches": 0,
+      "priority_score": 166,
+      "calls": {
+        "com.nokia.mid.ui.DirectGraphics.getPixels": 5,
+        "javax.microedition.lcdui.Image.createImage": 1,
+        "javax.microedition.lcdui.Image.getGraphics": 1,
+        "javax.microedition.lcdui.Graphics.drawImage": 1,
+        "com.nokia.mid.ui.DirectUtils.getDirectGraphics": 1
+      }
+    },
+    {
+      "class": "quake.a",
+      "signature": "protected void paint(javax.microedition.lcdui.Graphics);",
+      "instructions": 46,
+      "branches": 1,
+      "priority_score": 141,
+      "calls": {
+        "com.nokia.mid.ui.DirectGraphics.drawPixels": 2,
+        "com.nokia.mid.ui.DirectUtils.getDirectGraphics": 1,
+        "javax.microedition.lcdui.Graphics.drawImage": 1
+      }
+    },
+    {
+      "class": "quake.a",
+      "signature": "void for();",
+      "instructions": 59,
+      "branches": 8,
+      "priority_score": 83,
+      "calls": {}
+    },
+    {
+      "class": "quake.a",
+      "signature": "void a(int, int);",
+      "instructions": 57,
+      "branches": 0,
+      "priority_score": 57,
+      "calls": {}
+    },
+    {
+      "class": "quake.a",
+      "signature": "void if();",
+      "instructions": 11,
+      "branches": 2,
+      "priority_score": 39,
+      "calls": {
+        "java.lang.Thread.currentThread": 2,
+        "java.lang.Thread.start": 2
+      }
+    },
+    {
+      "class": "quake.a",
+      "signature": "protected void keyPressed(int);",
+      "instructions": 18,
+      "branches": 4,
+      "priority_score": 30,
+      "calls": {}
+    },
+    {
+      "class": "quake.a",
+      "signature": "protected void keyReleased(int);",
+      "instructions": 18,
+      "branches": 4,
+      "priority_score": 30,
+      "calls": {}
+    }
+  ],
+  "call_targets": [
+    {
+      "target": "com.nokia.mid.ui.DirectGraphics.getPixels",
+      "count": 5
+    },
+    {
+      "target": "javax.microedition.lcdui.Image.createImage",
+      "count": 3
+    },
+    {
+      "target": "java.lang.Thread.currentThread",
+      "count": 2
+    },
+    {
+      "target": "java.lang.Thread.start",
+      "count": 2
+    },
+    {
+      "target": "com.nokia.mid.ui.DirectUtils.getDirectGraphics",
+      "count": 2
+    },
+    {
+      "target": "javax.microedition.lcdui.Graphics.drawImage",
+      "count": 2
+    },
+    {
+      "target": "com.nokia.mid.ui.DirectGraphics.drawPixels",
+      "count": 2
+    },
+    {
+      "target": "javax.microedition.lcdui.Display.getDisplay",
+      "count": 1
+    },
+    {
+      "target": "javax.microedition.lcdui.Display.setCurrent",
+      "count": 1
+    },
+    {
+      "target": "javax.microedition.midlet.MIDlet.notifyDestroyed",
+      "count": 1
+    },
+    {
+      "target": "java.lang.Throwable.printStackTrace",
+      "count": 1
+    },
+    {
+      "target": "javax.microedition.lcdui.Canvas.repaint",
+      "count": 1
+    },
+    {
+      "target": "java.lang.Thread.sleep",
+      "count": 1
+    },
+    {
+      "target": "javax.microedition.lcdui.Image.getGraphics",
+      "count": 1
+    }
+  ],
+  "opcode_histogram": {
+    "bipush": 1072,
+    "dup": 965,
+    "bastore": 740,
+    "iconst_0": 529,
+    "aload_0": 256,
+    "sipush": 216,
+    "getfield": 157,
+    "iastore": 152,
+    "iconst_1": 141,
+    "iload": 113,
+    "iconst_2": 104,
+    "iconst_3": 78,
+    "putfield": 77,
+    "iadd": 62,
+    "iload_1": 61,
+    "goto": 59,
+    "aaload": 59,
+    "iload_2": 51,
+    "iconst_4": 50,
+    "iconst_5": 50,
+    "idiv": 48,
+    "istore": 44,
+    "newarray": 43,
+    "sastore": 42,
+    "iaload": 40,
+    "aastore": 37,
+    "isub": 27,
+    "invokespecial": 26,
+    "imul": 26,
+    "return": 23,
+    "if_icmple": 22,
+    "if_icmpge": 20,
+    "i2l": 15,
+    "invokevirtual": 14,
+    "invokestatic": 9
+  },
+  "resource_file_count": 5,
+  "resources_by_suffix": {
+    ".mf": 1,
+    ".png": 4
+  },
+  "class_methods": [
+    {
+      "class": "quake.MIDlet1",
+      "method_count": 5,
+      "instructions": 26,
+      "branches": 0,
+      "methods": [
+        {
+          "signature": "public quake.MIDlet1();",
+          "instructions": 10,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public void startApp();",
+          "instructions": 6,
+          "branches": 0,
+          "calls": {
+            "javax.microedition.lcdui.Display.getDisplay": 1,
+            "javax.microedition.lcdui.Display.setCurrent": 1
+          }
+        },
+        {
+          "signature": "public void pauseApp();",
+          "instructions": 1,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public void destroyApp(boolean);",
+          "instructions": 1,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public static void a();",
+          "instructions": 8,
+          "branches": 0,
+          "calls": {
+            "javax.microedition.midlet.MIDlet.notifyDestroyed": 1
+          }
+        }
+      ]
+    },
+    {
+      "class": "quake.a",
+      "method_count": 12,
+      "instructions": 5554,
+      "branches": 130,
+      "methods": [
+        {
+          "signature": "public quake.a();",
+          "instructions": 3958,
+          "branches": 1,
+          "calls": {
+            "javax.microedition.lcdui.Image.createImage": 2,
+            "java.lang.Throwable.printStackTrace": 1
+          }
+        },
+        {
+          "signature": "void if();",
+          "instructions": 11,
+          "branches": 2,
+          "calls": {
+            "java.lang.Thread.currentThread": 2,
+            "java.lang.Thread.start": 2
+          }
+        },
+        {
+          "signature": "protected void keyPressed(int);",
+          "instructions": 18,
+          "branches": 4,
+          "calls": {}
+        },
+        {
+          "signature": "protected void keyReleased(int);",
+          "instructions": 18,
+          "branches": 4,
+          "calls": {}
+        },
+        {
+          "signature": "public void run();",
+          "instructions": 366,
+          "branches": 26,
+          "calls": {
+            "javax.microedition.lcdui.Canvas.repaint": 1,
+            "java.lang.Thread.sleep": 1
+          }
+        },
+        {
+          "signature": "protected void paint(javax.microedition.lcdui.Graphics);",
+          "instructions": 46,
+          "branches": 1,
+          "calls": {
+            "com.nokia.mid.ui.DirectGraphics.drawPixels": 2,
+            "com.nokia.mid.ui.DirectUtils.getDirectGraphics": 1,
+            "javax.microedition.lcdui.Graphics.drawImage": 1
+          }
+        },
+        {
+          "signature": "void a(int, int);",
+          "instructions": 57,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "private void do();",
+          "instructions": 384,
+          "branches": 36,
+          "calls": {}
+        },
+        {
+          "signature": "private void if(byte, byte, byte);",
+          "instructions": 277,
+          "branches": 24,
+          "calls": {}
+        },
+        {
+          "signature": "private void a(byte, byte, byte);",
+          "instructions": 277,
+          "branches": 24,
+          "calls": {}
+        },
+        {
+          "signature": "void a();",
+          "instructions": 83,
+          "branches": 0,
+          "calls": {
+            "com.nokia.mid.ui.DirectGraphics.getPixels": 5,
+            "javax.microedition.lcdui.Image.createImage": 1,
+            "javax.microedition.lcdui.Image.getGraphics": 1,
+            "javax.microedition.lcdui.Graphics.drawImage": 1,
+            "com.nokia.mid.ui.DirectUtils.getDirectGraphics": 1
+          }
+        },
+        {
+          "signature": "void for();",
+          "instructions": 59,
+          "branches": 8,
+          "calls": {}
+        }
+      ]
+    }
+  ],
+  "limitation": "Static method inspection, no game execution, no proof of hot paths or semantic equivalence."
+}

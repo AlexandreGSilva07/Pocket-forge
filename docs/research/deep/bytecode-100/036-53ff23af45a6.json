@@ -1,0 +1,1006 @@
+{
+  "rank": 36,
+  "jar_path": "All Java Mobile Phone Games/T/Tomb Raider - Osiris Codex/TombRaide1osiriscodex.jar",
+  "jar_sha256": "53ff23af45a60829e2020fe81626dba6089fbdb4de2608dccd9356cc83ba3d05",
+  "title": "TombRaider1",
+  "track": "worlds",
+  "status": "BYTECODE_DISASSEMBLED_INDEXED_NOT_FULLY_REVIEWED",
+  "tool": "OpenJDK javap -p -c; JAR never executed",
+  "classes": 5,
+  "classes_decoded": 5,
+  "methods": 61,
+  "instructions": 21487,
+  "branches": 1713,
+  "errors": [],
+  "hot_methods_by_static_instruction_count": [
+    {
+      "class": "b",
+      "signature": "public final void j();",
+      "instructions": 6807,
+      "branches": 674,
+      "priority_score": 8829,
+      "calls": {
+        "TombRaiderMIDlet.o": 7,
+        "c.aq": 3,
+        "c.ap": 1,
+        "javax.microedition.lcdui.Font.getHeight": 1
+      }
+    },
+    {
+      "class": "b",
+      "signature": "public final void k(javax.microedition.lcdui.Graphics);",
+      "instructions": 2812,
+      "branches": 196,
+      "priority_score": 6212,
+      "calls": {
+        "javax.microedition.lcdui.Image.getWidth": 32,
+        "javax.microedition.lcdui.Graphics.drawImage": 23,
+        "javax.microedition.lcdui.Image.getHeight": 23,
+        "TombRaiderMIDlet.c": 14,
+        "javax.microedition.lcdui.Graphics.setColor": 10,
+        "javax.microedition.lcdui.Graphics.fillRect": 6,
+        "javax.microedition.lcdui.Graphics.drawLine": 4,
+        "javax.microedition.lcdui.Graphics.setClip": 2,
+        "javax.microedition.lcdui.Font.getHeight": 2,
+        "TombRaiderMIDlet.d": 1,
+        "javax.microedition.lcdui.Image.getGraphics": 1,
+        "javax.microedition.lcdui.Graphics.clipRect": 1,
+        "java.lang.String.valueOf": 1,
+        "javax.microedition.lcdui.Graphics.drawString": 1,
+        "javax.microedition.lcdui.Font.charWidth": 1,
+        "javax.microedition.lcdui.Graphics.drawRect": 1,
+        "javax.microedition.lcdui.Graphics.setFont": 1,
+        "javax.microedition.lcdui.Graphics.drawChar": 1,
+        "c.k": 1
+      }
+    },
+    {
+      "class": "TombRaiderMIDlet",
+      "signature": "public final void j();",
+      "instructions": 1165,
+      "branches": 123,
+      "priority_score": 3864,
+      "calls": {
+        "java.io.ByteArrayInputStream.read": 7,
+        "java.io.InputStream.read": 5,
+        "java.lang.System.arraycopy": 3,
+        "javax.microedition.lcdui.Display.flashBacklight": 1,
+        "b.u": 1,
+        "javax.microedition.rms.RecordStore.openRecordStore": 1,
+        "javax.microedition.rms.RecordStore.getRecord": 1,
+        "javax.microedition.rms.RecordStore.closeRecordStore": 1,
+        "java.io.ByteArrayInputStream.close": 1,
+        "c.ap": 1,
+        "b.y": 1,
+        "b.j": 1
+      }
+    },
+    {
+      "class": "TombRaiderMIDlet",
+      "signature": "public final void k(javax.microedition.lcdui.Graphics);",
+      "instructions": 1294,
+      "branches": 79,
+      "priority_score": 2825,
+      "calls": {
+        "c.ap": 11,
+        "c.k": 9,
+        "java.lang.StringBuffer.append": 9,
+        "javax.microedition.lcdui.Graphics.setColor": 8,
+        "javax.microedition.lcdui.Graphics.fillRect": 7,
+        "javax.microedition.lcdui.Graphics.drawImage": 5,
+        "javax.microedition.lcdui.Image.getHeight": 3,
+        "javax.microedition.lcdui.Graphics.drawRect": 2,
+        "c.aq": 2,
+        "javax.microedition.lcdui.Image.getWidth": 2,
+        "javax.microedition.lcdui.Display.vibrate": 2,
+        "b.x": 1,
+        "javax.microedition.lcdui.Font.getHeight": 1,
+        "java.lang.StringBuffer.toString": 1,
+        "javax.microedition.lcdui.Graphics.drawLine": 1,
+        "b.ag": 1,
+        "b.k": 1,
+        "b.af": 1
+      }
+    },
+    {
+      "class": "c",
+      "signature": "public final void k(javax.microedition.lcdui.Graphics, int, int);",
+      "instructions": 1259,
+      "branches": 53,
+      "priority_score": 2677,
+      "calls": {
+        "javax.microedition.lcdui.Graphics.drawImage": 10,
+        "javax.microedition.lcdui.Graphics.setColor": 10,
+        "javax.microedition.lcdui.Graphics.drawLine": 10,
+        "javax.microedition.lcdui.Graphics.clipRect": 7,
+        "TombRaiderMIDlet.c": 5,
+        "javax.microedition.lcdui.Image.getHeight": 4,
+        "javax.microedition.lcdui.Graphics.drawRect": 4,
+        "javax.microedition.lcdui.Graphics.fillRect": 2,
+        "javax.microedition.lcdui.Graphics.drawChar": 2,
+        "javax.microedition.lcdui.Graphics.getClipX": 1,
+        "javax.microedition.lcdui.Graphics.getClipY": 1,
+        "javax.microedition.lcdui.Graphics.getClipWidth": 1,
+        "javax.microedition.lcdui.Graphics.getClipHeight": 1,
+        "javax.microedition.lcdui.Graphics.setFont": 1,
+        "javax.microedition.lcdui.Font.getHeight": 1,
+        "javax.microedition.lcdui.Font.charWidth": 1,
+        "javax.microedition.lcdui.Graphics.drawChars": 1
+      }
+    },
+    {
+      "class": "TombRaiderMIDlet",
+      "signature": "public final void n(int);",
+      "instructions": 1732,
+      "branches": 105,
+      "priority_score": 2047,
+      "calls": {
+        "c.aq": 15,
+        "javax.microedition.lcdui.Graphics.drawLine": 14,
+        "javax.microedition.lcdui.Graphics.setColor": 11,
+        "b.x": 8,
+        "c.ap": 5,
+        "javax.microedition.lcdui.Graphics.fillRect": 2,
+        "b.ah": 2,
+        "java.lang.System.arraycopy": 2,
+        "java.lang.System.gc": 1,
+        "javax.microedition.lcdui.Image.createImage": 1,
+        "javax.microedition.lcdui.Font.getHeight": 1,
+        "javax.microedition.lcdui.Image.getGraphics": 1,
+        "b.aj": 1,
+        "b.ai": 1
+      }
+    },
+    {
+      "class": "b",
+      "signature": "public final void ao();",
+      "instructions": 1287,
+      "branches": 95,
+      "priority_score": 1572,
+      "calls": {
+        "TombRaiderMIDlet.g": 3,
+        "TombRaiderMIDlet.o": 3,
+        "c.aq": 2,
+        "TombRaiderMIDlet.e": 1,
+        "java.util.Random.setSeed": 1
+      }
+    },
+    {
+      "class": "b",
+      "signature": "public final void ag(javax.microedition.lcdui.Graphics, boolean);",
+      "instructions": 541,
+      "branches": 25,
+      "priority_score": 1157,
+      "calls": {
+        "javax.microedition.lcdui.Graphics.drawLine": 14,
+        "java.lang.StringBuffer.append": 8,
+        "javax.microedition.lcdui.Graphics.setColor": 4,
+        "c.k": 3,
+        "c.aq": 3,
+        "javax.microedition.lcdui.Font.getHeight": 2,
+        "javax.microedition.lcdui.Image.getWidth": 1,
+        "javax.microedition.lcdui.Image.getHeight": 1,
+        "javax.microedition.lcdui.Graphics.drawImage": 1,
+        "java.lang.StringBuffer.toString": 1
+      }
+    },
+    {
+      "class": "TombRaiderMIDlet",
+      "signature": "public final int i();",
+      "instructions": 393,
+      "branches": 56,
+      "priority_score": 561,
+      "calls": {
+        "c.ap": 3,
+        "b.x": 2
+      }
+    },
+    {
+      "class": "b",
+      "signature": "public final void u();",
+      "instructions": 496,
+      "branches": 21,
+      "priority_score": 559,
+      "calls": {
+        "TombRaiderMIDlet.h": 17,
+        "TombRaiderMIDlet.e": 7,
+        "TombRaiderMIDlet.t": 4,
+        "TombRaiderMIDlet.g": 4,
+        "TombRaiderMIDlet.r": 1,
+        "TombRaiderMIDlet.f": 1
+      }
+    },
+    {
+      "class": "b",
+      "signature": "public final void aj();",
+      "instructions": 375,
+      "branches": 25,
+      "priority_score": 450,
+      "calls": {
+        "java.lang.System.arraycopy": 3,
+        "TombRaiderMIDlet.r": 1,
+        "TombRaiderMIDlet.g": 1
+      }
+    },
+    {
+      "class": "b",
+      "signature": "public final boolean aa(byte[], int);",
+      "instructions": 306,
+      "branches": 40,
+      "priority_score": 426,
+      "calls": {
+        "java.lang.System.arraycopy": 1
+      }
+    }
+  ],
+  "call_targets": [
+    {
+      "target": "javax.microedition.lcdui.Graphics.setColor",
+      "count": 43
+    },
+    {
+      "target": "javax.microedition.lcdui.Graphics.drawLine",
+      "count": 43
+    },
+    {
+      "target": "javax.microedition.lcdui.Graphics.drawImage",
+      "count": 41
+    },
+    {
+      "target": "javax.microedition.lcdui.Image.getWidth",
+      "count": 40
+    },
+    {
+      "target": "javax.microedition.lcdui.Image.getHeight",
+      "count": 33
+    },
+    {
+      "target": "c.aq",
+      "count": 30
+    },
+    {
+      "target": "c.ap",
+      "count": 22
+    },
+    {
+      "target": "java.lang.StringBuffer.append",
+      "count": 19
+    },
+    {
+      "target": "TombRaiderMIDlet.c",
+      "count": 19
+    },
+    {
+      "target": "javax.microedition.lcdui.Graphics.fillRect",
+      "count": 17
+    },
+    {
+      "target": "TombRaiderMIDlet.h",
+      "count": 17
+    },
+    {
+      "target": "java.lang.System.arraycopy",
+      "count": 15
+    },
+    {
+      "target": "b.x",
+      "count": 14
+    },
+    {
+      "target": "c.k",
+      "count": 13
+    },
+    {
+      "target": "TombRaiderMIDlet.o",
+      "count": 12
+    },
+    {
+      "target": "java.io.ByteArrayOutputStream.write",
+      "count": 11
+    },
+    {
+      "target": "javax.microedition.lcdui.Font.getHeight",
+      "count": 9
+    },
+    {
+      "target": "java.lang.System.gc",
+      "count": 8
+    },
+    {
+      "target": "TombRaiderMIDlet.e",
+      "count": 8
+    },
+    {
+      "target": "TombRaiderMIDlet.g",
+      "count": 8
+    },
+    {
+      "target": "javax.microedition.lcdui.Graphics.clipRect",
+      "count": 8
+    },
+    {
+      "target": "javax.microedition.lcdui.Graphics.drawRect",
+      "count": 7
+    },
+    {
+      "target": "java.io.ByteArrayInputStream.read",
+      "count": 7
+    },
+    {
+      "target": "java.io.InputStream.read",
+      "count": 6
+    },
+    {
+      "target": "javax.microedition.lcdui.Font.charWidth",
+      "count": 5
+    },
+    {
+      "target": "TombRaiderMIDlet.t",
+      "count": 4
+    },
+    {
+      "target": "java.lang.Object.getClass",
+      "count": 3
+    },
+    {
+      "target": "java.lang.Class.getResourceAsStream",
+      "count": 3
+    },
+    {
+      "target": "java.lang.StringBuffer.toString",
+      "count": 3
+    },
+    {
+      "target": "javax.microedition.lcdui.Image.createImage",
+      "count": 3
+    },
+    {
+      "target": "javax.microedition.lcdui.Graphics.setClip",
+      "count": 3
+    },
+    {
+      "target": "javax.microedition.lcdui.Graphics.drawChar",
+      "count": 3
+    },
+    {
+      "target": "java.lang.String.toCharArray",
+      "count": 2
+    },
+    {
+      "target": "java.io.InputStream.close",
+      "count": 2
+    },
+    {
+      "target": "javax.microedition.lcdui.Canvas.repaint",
+      "count": 2
+    }
+  ],
+  "opcode_histogram": {
+    "aload_0": 3022,
+    "getfield": 2447,
+    "iload": 1463,
+    "bipush": 1326,
+    "iadd": 1081,
+    "iconst_1": 842,
+    "invokevirtual": 809,
+    "putfield": 661,
+    "iconst_0": 659,
+    "isub": 561,
+    "goto": 529,
+    "istore": 512,
+    "sipush": 481,
+    "iand": 407,
+    "iload_1": 394,
+    "imul": 362,
+    "iload_2": 332,
+    "aaload": 314,
+    "iconst_2": 280,
+    "baload": 275,
+    "if_icmpne": 273,
+    "ishr": 235,
+    "iconst_m1": 232,
+    "aload_1": 232,
+    "iconst_3": 218,
+    "iaload": 207,
+    "if_icmpeq": 195,
+    "iload_3": 194,
+    "iconst_4": 193,
+    "ifeq": 178,
+    "dup": 165,
+    "ifne": 157,
+    "iinc": 156,
+    "aload": 150,
+    "if_icmplt": 135
+  },
+  "resource_file_count": 8,
+  "resources_by_suffix": {
+    ".mf": 1,
+    ".png": 1,
+    "[none]": 5,
+    ".mid": 1
+  },
+  "class_methods": [
+    {
+      "class": "TombRaiderMIDlet",
+      "method_count": 25,
+      "instructions": 5886,
+      "branches": 452,
+      "methods": [
+        {
+          "signature": "public TombRaiderMIDlet();",
+          "instructions": 99,
+          "branches": 0,
+          "calls": {
+            "java.lang.System.gc": 1,
+            "javax.microedition.lcdui.Font.getFont": 1,
+            "javax.microedition.lcdui.Display.getDisplay": 1,
+            "java.util.Timer.schedule": 1
+          }
+        },
+        {
+          "signature": "public final void u(boolean);",
+          "instructions": 95,
+          "branches": 10,
+          "calls": {
+            "java.lang.System.gc": 2,
+            "java.lang.Object.getClass": 1,
+            "java.lang.Class.getResourceAsStream": 1,
+            "java.io.DataInputStream.readUTF": 1,
+            "java.lang.String.toCharArray": 1,
+            "java.io.InputStream.close": 1
+          }
+        },
+        {
+          "signature": "public final void t(int);",
+          "instructions": 50,
+          "branches": 2,
+          "calls": {
+            "c.aq": 1,
+            "javax.microedition.lcdui.Canvas.repaint": 1
+          }
+        },
+        {
+          "signature": "public final void s();",
+          "instructions": 124,
+          "branches": 8,
+          "calls": {
+            "b.x": 3
+          }
+        },
+        {
+          "signature": "public final void r(int);",
+          "instructions": 51,
+          "branches": 5,
+          "calls": {
+            "java.lang.System.gc": 2,
+            "java.lang.StringBuffer.append": 2,
+            "java.lang.Object.getClass": 1,
+            "java.lang.StringBuffer.toString": 1,
+            "java.lang.Class.getResourceAsStream": 1,
+            "java.io.InputStream.read": 1,
+            "java.io.InputStream.close": 1
+          }
+        },
+        {
+          "signature": "public final void q(int[]);",
+          "instructions": 48,
+          "branches": 8,
+          "calls": {
+            "javax.microedition.media.Player.stop": 1,
+            "java.lang.Object.getClass": 1,
+            "java.lang.Class.getResourceAsStream": 1,
+            "javax.microedition.media.Manager.createPlayer": 1,
+            "javax.microedition.media.Player.realize": 1,
+            "javax.microedition.media.Player.prefetch": 1,
+            "javax.microedition.media.Player.setLoopCount": 1,
+            "javax.microedition.media.Player.getState": 1
+          }
+        },
+        {
+          "signature": "public final void p();",
+          "instructions": 105,
+          "branches": 4,
+          "calls": {
+            "java.io.ByteArrayOutputStream.write": 11,
+            "javax.microedition.rms.RecordStore.deleteRecordStore": 1,
+            "java.lang.System.gc": 1,
+            "java.io.OutputStream.write": 1,
+            "java.io.ByteArrayOutputStream.close": 1,
+            "java.io.ByteArrayOutputStream.toByteArray": 1,
+            "javax.microedition.rms.RecordStore.openRecordStore": 1,
+            "javax.microedition.rms.RecordStore.addRecord": 1
+          }
+        },
+        {
+          "signature": "public final int o();",
+          "instructions": 23,
+          "branches": 3,
+          "calls": {}
+        },
+        {
+          "signature": "public final void startApp();",
+          "instructions": 29,
+          "branches": 4,
+          "calls": {
+            "javax.microedition.lcdui.Display.setCurrent": 1
+          }
+        },
+        {
+          "signature": "public final void pauseApp();",
+          "instructions": 14,
+          "branches": 1,
+          "calls": {}
+        },
+        {
+          "signature": "public final void destroyApp(boolean);",
+          "instructions": 10,
+          "branches": 0,
+          "calls": {
+            "java.util.Timer.cancel": 1,
+            "javax.microedition.midlet.MIDlet.notifyDestroyed": 1
+          }
+        },
+        {
+          "signature": "public final void n(int);",
+          "instructions": 1732,
+          "branches": 105,
+          "calls": {
+            "c.aq": 15,
+            "javax.microedition.lcdui.Graphics.drawLine": 14,
+            "javax.microedition.lcdui.Graphics.setColor": 11,
+            "b.x": 8,
+            "c.ap": 5,
+            "javax.microedition.lcdui.Graphics.fillRect": 2,
+            "b.ah": 2,
+            "java.lang.System.arraycopy": 2
+          }
+        },
+        {
+          "signature": "public final void m(int, boolean);",
+          "instructions": 58,
+          "branches": 2,
+          "calls": {
+            "java.lang.String.charAt": 1,
+            "c.aq": 1
+          }
+        },
+        {
+          "signature": "public final void l();",
+          "instructions": 245,
+          "branches": 15,
+          "calls": {
+            "c.aq": 3,
+            "c.ap": 1
+          }
+        },
+        {
+          "signature": "public final void k(javax.microedition.lcdui.Graphics);",
+          "instructions": 1294,
+          "branches": 79,
+          "calls": {
+            "c.ap": 11,
+            "c.k": 9,
+            "java.lang.StringBuffer.append": 9,
+            "javax.microedition.lcdui.Graphics.setColor": 8,
+            "javax.microedition.lcdui.Graphics.fillRect": 7,
+            "javax.microedition.lcdui.Graphics.drawImage": 5,
+            "javax.microedition.lcdui.Image.getHeight": 3,
+            "javax.microedition.lcdui.Graphics.drawRect": 2
+          }
+        },
+        {
+          "signature": "public final void j();",
+          "instructions": 1165,
+          "branches": 123,
+          "calls": {
+            "java.io.ByteArrayInputStream.read": 7,
+            "java.io.InputStream.read": 5,
+            "java.lang.System.arraycopy": 3,
+            "javax.microedition.lcdui.Display.flashBacklight": 1,
+            "b.u": 1,
+            "javax.microedition.rms.RecordStore.openRecordStore": 1,
+            "javax.microedition.rms.RecordStore.getRecord": 1,
+            "javax.microedition.rms.RecordStore.closeRecordStore": 1
+          }
+        },
+        {
+          "signature": "public final int i();",
+          "instructions": 393,
+          "branches": 56,
+          "calls": {
+            "c.ap": 3,
+            "b.x": 2
+          }
+        },
+        {
+          "signature": "public final javax.microedition.lcdui.Image h(int, int);",
+          "instructions": 8,
+          "branches": 0,
+          "calls": {
+            "javax.microedition.lcdui.Image.createImage": 1
+          }
+        },
+        {
+          "signature": "public final byte[] g(int, int);",
+          "instructions": 44,
+          "branches": 4,
+          "calls": {
+            "java.lang.System.arraycopy": 3
+          }
+        },
+        {
+          "signature": "public final short[] f(int, int);",
+          "instructions": 40,
+          "branches": 2,
+          "calls": {}
+        },
+        {
+          "signature": "public final int[] e(int, int);",
+          "instructions": 59,
+          "branches": 2,
+          "calls": {}
+        },
+        {
+          "signature": "public final javax.microedition.lcdui.Image d(int, int);",
+          "instructions": 7,
+          "branches": 0,
+          "calls": {
+            "javax.microedition.lcdui.Image.createImage": 1,
+            "java.lang.System.gc": 1
+          }
+        },
+        {
+          "signature": "public final void c(javax.microedition.lcdui.Graphics, int, int, int, int);",
+          "instructions": 43,
+          "branches": 6,
+          "calls": {
+            "javax.microedition.lcdui.Graphics.setClip": 1
+          }
+        },
+        {
+          "signature": "public final byte[] b(byte[], int, int, byte[]);",
+          "instructions": 67,
+          "branches": 6,
+          "calls": {
+            "java.lang.System.arraycopy": 1
+          }
+        },
+        {
+          "signature": "public final char[] a(char[]);",
+          "instructions": 83,
+          "branches": 7,
+          "calls": {
+            "java.lang.System.arraycopy": 2,
+            "java.lang.String.charAt": 1
+          }
+        }
+      ]
+    },
+    {
+      "class": "a",
+      "method_count": 2,
+      "instructions": 58,
+      "branches": 8,
+      "methods": [
+        {
+          "signature": "public a(TombRaiderMIDlet);",
+          "instructions": 6,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public final synchronized void run();",
+          "instructions": 52,
+          "branches": 8,
+          "calls": {
+            "java.lang.System.currentTimeMillis": 2,
+            "TombRaiderMIDlet.j": 1,
+            "b.w": 1
+          }
+        }
+      ]
+    },
+    {
+      "class": "b",
+      "method_count": 27,
+      "instructions": 14015,
+      "branches": 1187,
+      "methods": [
+        {
+          "signature": "public b(TombRaiderMIDlet);",
+          "instructions": 26,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public final void u();",
+          "instructions": 496,
+          "branches": 21,
+          "calls": {
+            "TombRaiderMIDlet.h": 17,
+            "TombRaiderMIDlet.e": 7,
+            "TombRaiderMIDlet.t": 4,
+            "TombRaiderMIDlet.g": 4,
+            "TombRaiderMIDlet.r": 1,
+            "TombRaiderMIDlet.f": 1
+          }
+        },
+        {
+          "signature": "public final void ao();",
+          "instructions": 1287,
+          "branches": 95,
+          "calls": {
+            "TombRaiderMIDlet.g": 3,
+            "TombRaiderMIDlet.o": 3,
+            "c.aq": 2,
+            "TombRaiderMIDlet.e": 1,
+            "java.util.Random.setSeed": 1
+          }
+        },
+        {
+          "signature": "public final int an();",
+          "instructions": 5,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public final int am();",
+          "instructions": 11,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public final int al();",
+          "instructions": 28,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public final int ak();",
+          "instructions": 12,
+          "branches": 2,
+          "calls": {}
+        },
+        {
+          "signature": "public final void aj();",
+          "instructions": 375,
+          "branches": 25,
+          "calls": {
+            "java.lang.System.arraycopy": 3,
+            "TombRaiderMIDlet.r": 1,
+            "TombRaiderMIDlet.g": 1
+          }
+        },
+        {
+          "signature": "public final void ai();",
+          "instructions": 67,
+          "branches": 3,
+          "calls": {}
+        },
+        {
+          "signature": "public final void k(javax.microedition.lcdui.Graphics);",
+          "instructions": 2812,
+          "branches": 196,
+          "calls": {
+            "javax.microedition.lcdui.Image.getWidth": 32,
+            "javax.microedition.lcdui.Graphics.drawImage": 23,
+            "javax.microedition.lcdui.Image.getHeight": 23,
+            "TombRaiderMIDlet.c": 14,
+            "javax.microedition.lcdui.Graphics.setColor": 10,
+            "javax.microedition.lcdui.Graphics.fillRect": 6,
+            "javax.microedition.lcdui.Graphics.drawLine": 4,
+            "javax.microedition.lcdui.Graphics.setClip": 2
+          }
+        },
+        {
+          "signature": "public final void ah(int);",
+          "instructions": 114,
+          "branches": 1,
+          "calls": {}
+        },
+        {
+          "signature": "public final void ag(javax.microedition.lcdui.Graphics, boolean);",
+          "instructions": 541,
+          "branches": 25,
+          "calls": {
+            "javax.microedition.lcdui.Graphics.drawLine": 14,
+            "java.lang.StringBuffer.append": 8,
+            "javax.microedition.lcdui.Graphics.setColor": 4,
+            "c.k": 3,
+            "c.aq": 3,
+            "javax.microedition.lcdui.Font.getHeight": 2,
+            "javax.microedition.lcdui.Image.getWidth": 1,
+            "javax.microedition.lcdui.Image.getHeight": 1
+          }
+        },
+        {
+          "signature": "public final void af(javax.microedition.lcdui.Graphics, int, int, int, int, int, int);",
+          "instructions": 129,
+          "branches": 4,
+          "calls": {
+            "javax.microedition.lcdui.Image.getWidth": 4,
+            "javax.microedition.lcdui.Graphics.drawImage": 2,
+            "javax.microedition.lcdui.Image.getHeight": 1
+          }
+        },
+        {
+          "signature": "public final int ae(int, int, int, int);",
+          "instructions": 187,
+          "branches": 17,
+          "calls": {}
+        },
+        {
+          "signature": "public final int ad(int, int, int, int);",
+          "instructions": 22,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public final int ac(int, int, int);",
+          "instructions": 23,
+          "branches": 1,
+          "calls": {}
+        },
+        {
+          "signature": "public final int ab(int, int);",
+          "instructions": 261,
+          "branches": 10,
+          "calls": {}
+        },
+        {
+          "signature": "public final boolean aa(byte[], int);",
+          "instructions": 306,
+          "branches": 40,
+          "calls": {
+            "java.lang.System.arraycopy": 1
+          }
+        },
+        {
+          "signature": "public final boolean z(int, int);",
+          "instructions": 246,
+          "branches": 28,
+          "calls": {}
+        },
+        {
+          "signature": "public final boolean y();",
+          "instructions": 105,
+          "branches": 16,
+          "calls": {
+            "TombRaiderMIDlet.o": 2
+          }
+        },
+        {
+          "signature": "public final void j();",
+          "instructions": 6807,
+          "branches": 674,
+          "calls": {
+            "TombRaiderMIDlet.o": 7,
+            "c.aq": 3,
+            "c.ap": 1,
+            "javax.microedition.lcdui.Font.getHeight": 1
+          }
+        },
+        {
+          "signature": "public static int x(int);",
+          "instructions": 7,
+          "branches": 0,
+          "calls": {
+            "java.util.Random.nextInt": 1
+          }
+        },
+        {
+          "signature": "public final void paint(javax.microedition.lcdui.Graphics);",
+          "instructions": 5,
+          "branches": 0,
+          "calls": {
+            "TombRaiderMIDlet.k": 1
+          }
+        },
+        {
+          "signature": "public final void w();",
+          "instructions": 38,
+          "branches": 5,
+          "calls": {
+            "javax.microedition.lcdui.Canvas.repaint": 1
+          }
+        },
+        {
+          "signature": "public final void v(int, boolean);",
+          "instructions": 90,
+          "branches": 24,
+          "calls": {
+            "javax.microedition.lcdui.Canvas.getGameAction": 1
+          }
+        },
+        {
+          "signature": "public final void keyPressed(int);",
+          "instructions": 5,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public final void keyReleased(int);",
+          "instructions": 10,
+          "branches": 0,
+          "calls": {}
+        }
+      ]
+    },
+    {
+      "class": "c",
+      "method_count": 6,
+      "instructions": 1501,
+      "branches": 66,
+      "methods": [
+        {
+          "signature": "public c(TombRaiderMIDlet);",
+          "instructions": 6,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public final void aq(java.lang.String, int, int);",
+          "instructions": 181,
+          "branches": 12,
+          "calls": {
+            "javax.microedition.lcdui.Font.charWidth": 3,
+            "java.lang.String.toCharArray": 1,
+            "TombRaiderMIDlet.a": 1,
+            "javax.microedition.lcdui.Font.getHeight": 1
+          }
+        },
+        {
+          "signature": "public final void aq(int, int, int);",
+          "instructions": 29,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public final void aq(javax.microedition.lcdui.Image);",
+          "instructions": 15,
+          "branches": 0,
+          "calls": {
+            "javax.microedition.lcdui.Image.getWidth": 1,
+            "javax.microedition.lcdui.Image.getHeight": 1
+          }
+        },
+        {
+          "signature": "public final int ap();",
+          "instructions": 11,
+          "branches": 1,
+          "calls": {}
+        },
+        {
+          "signature": "public final void k(javax.microedition.lcdui.Graphics, int, int);",
+          "instructions": 1259,
+          "branches": 53,
+          "calls": {
+            "javax.microedition.lcdui.Graphics.drawImage": 10,
+            "javax.microedition.lcdui.Graphics.setColor": 10,
+            "javax.microedition.lcdui.Graphics.drawLine": 10,
+            "javax.microedition.lcdui.Graphics.clipRect": 7,
+            "TombRaiderMIDlet.c": 5,
+            "javax.microedition.lcdui.Image.getHeight": 4,
+            "javax.microedition.lcdui.Graphics.drawRect": 4,
+            "javax.microedition.lcdui.Graphics.fillRect": 2
+          }
+        }
+      ]
+    },
+    {
+      "class": "d",
+      "method_count": 1,
+      "instructions": 27,
+      "branches": 0,
+      "methods": [
+        {
+          "signature": "public d(int, int, int, int, byte[], byte[], byte[]);",
+          "instructions": 27,
+          "branches": 0,
+          "calls": {}
+        }
+      ]
+    }
+  ],
+  "limitation": "Static method inspection, no game execution, no proof of hot paths or semantic equivalence."
+}

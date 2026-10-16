@@ -1,0 +1,425 @@
+{
+  "rank": 7,
+  "jar_path": "All Java Mobile Phone Games/F/Free Flight 3D/FreeFlight3D.jar",
+  "jar_sha256": "0061ce9a799a5182ff105ae2123b6c35b5c2fa895c2d6dc87da491b215abe6c8",
+  "title": "Free Flight **MASYAKA**",
+  "track": "render3d",
+  "status": "BYTECODE_DISASSEMBLED_INDEXED_NOT_FULLY_REVIEWED",
+  "tool": "OpenJDK javap -p -c; JAR never executed",
+  "classes": 2,
+  "classes_decoded": 2,
+  "methods": 11,
+  "instructions": 12883,
+  "branches": 951,
+  "errors": [],
+  "hot_methods_by_static_instruction_count": [
+    {
+      "class": "PaintCanvas",
+      "signature": "public void paint(javax.microedition.lcdui.Graphics);",
+      "instructions": 5250,
+      "branches": 256,
+      "priority_score": 16518,
+      "calls": {
+        "javax.microedition.lcdui.Graphics.setColor": 284,
+        "javax.microedition.lcdui.Graphics.drawString": 130,
+        "javax.microedition.lcdui.Graphics.drawImage": 111,
+        "java.lang.StringBuffer.append": 16,
+        "java.lang.StringBuffer.toString": 8,
+        "javax.microedition.lcdui.Graphics.getFont": 1,
+        "javax.microedition.lcdui.Font.getHeight": 1,
+        "javax.microedition.m3g.Graphics3D.getInstance": 1,
+        "javax.microedition.m3g.Graphics3D.bindTarget": 1,
+        "javax.microedition.m3g.Graphics3D.render": 1,
+        "javax.microedition.m3g.Graphics3D.releaseTarget": 1,
+        "javax.microedition.media.Player.start": 1
+      }
+    },
+    {
+      "class": "PaintCanvas",
+      "signature": "public void run();",
+      "instructions": 6667,
+      "branches": 557,
+      "priority_score": 15005,
+      "calls": {
+        "java.lang.Math.toRadians": 33,
+        "java.lang.Math.cos": 19,
+        "java.lang.StringBuffer.append": 15,
+        "java.lang.Math.sin": 14,
+        "javax.microedition.m3g.Camera.postRotate": 6,
+        "java.lang.StringBuffer.toString": 5,
+        "javax.microedition.lcdui.Display.vibrate": 3,
+        "javax.microedition.m3g.Camera.setTranslation": 2,
+        "javax.microedition.m3g.Camera.setOrientation": 2,
+        "javax.microedition.m3g.Camera.translate": 2,
+        "javax.microedition.media.Player.start": 2,
+        "FreeFlight.destroyApp": 1,
+        "javax.microedition.media.Manager.playTone": 1,
+        "java.lang.Thread.sleep": 1
+      }
+    },
+    {
+      "class": "PaintCanvas",
+      "signature": "public PaintCanvas(FreeFlight);",
+      "instructions": 614,
+      "branches": 54,
+      "priority_score": 2004,
+      "calls": {
+        "javax.microedition.lcdui.Image.createImage": 46,
+        "java.lang.Object.getClass": 3,
+        "java.lang.Class.getResourceAsStream": 3,
+        "javax.microedition.media.Manager.createPlayer": 3,
+        "javax.microedition.lcdui.Display.getDisplay": 1,
+        "javax.microedition.m3g.Loader.load": 1,
+        "javax.microedition.m3g.World.getActiveCamera": 1,
+        "javax.microedition.media.Player.prefetch": 1,
+        "java.lang.Thread.start": 1
+      }
+    },
+    {
+      "class": "PaintCanvas",
+      "signature": "public void keyPressed(int);",
+      "instructions": 106,
+      "branches": 28,
+      "priority_score": 190,
+      "calls": {}
+    },
+    {
+      "class": "PaintCanvas",
+      "signature": "public void keyRepeated(int);",
+      "instructions": 106,
+      "branches": 28,
+      "priority_score": 190,
+      "calls": {}
+    },
+    {
+      "class": "PaintCanvas",
+      "signature": "public void keyReleased(int);",
+      "instructions": 106,
+      "branches": 28,
+      "priority_score": 190,
+      "calls": {}
+    },
+    {
+      "class": "FreeFlight",
+      "signature": "public FreeFlight();",
+      "instructions": 13,
+      "branches": 0,
+      "priority_score": 13,
+      "calls": {
+        "javax.microedition.lcdui.Display.getDisplay": 1
+      }
+    },
+    {
+      "class": "FreeFlight",
+      "signature": "protected void destroyApp(boolean);",
+      "instructions": 11,
+      "branches": 0,
+      "priority_score": 11,
+      "calls": {
+        "javax.microedition.lcdui.Display.setCurrent": 1,
+        "PaintCanvas.destroy": 1
+      }
+    }
+  ],
+  "call_targets": [
+    {
+      "target": "javax.microedition.lcdui.Graphics.setColor",
+      "count": 284
+    },
+    {
+      "target": "javax.microedition.lcdui.Graphics.drawString",
+      "count": 130
+    },
+    {
+      "target": "javax.microedition.lcdui.Graphics.drawImage",
+      "count": 111
+    },
+    {
+      "target": "javax.microedition.lcdui.Image.createImage",
+      "count": 46
+    },
+    {
+      "target": "java.lang.Math.toRadians",
+      "count": 33
+    },
+    {
+      "target": "java.lang.StringBuffer.append",
+      "count": 31
+    },
+    {
+      "target": "java.lang.Math.cos",
+      "count": 19
+    },
+    {
+      "target": "java.lang.Math.sin",
+      "count": 14
+    },
+    {
+      "target": "java.lang.StringBuffer.toString",
+      "count": 13
+    },
+    {
+      "target": "javax.microedition.m3g.Camera.postRotate",
+      "count": 6
+    },
+    {
+      "target": "java.lang.Object.getClass",
+      "count": 3
+    },
+    {
+      "target": "java.lang.Class.getResourceAsStream",
+      "count": 3
+    },
+    {
+      "target": "javax.microedition.media.Manager.createPlayer",
+      "count": 3
+    },
+    {
+      "target": "javax.microedition.lcdui.Display.vibrate",
+      "count": 3
+    },
+    {
+      "target": "javax.microedition.media.Player.start",
+      "count": 3
+    },
+    {
+      "target": "javax.microedition.lcdui.Display.getDisplay",
+      "count": 2
+    },
+    {
+      "target": "javax.microedition.lcdui.Display.setCurrent",
+      "count": 2
+    },
+    {
+      "target": "javax.microedition.m3g.Camera.setTranslation",
+      "count": 2
+    },
+    {
+      "target": "javax.microedition.m3g.Camera.setOrientation",
+      "count": 2
+    },
+    {
+      "target": "javax.microedition.m3g.Camera.translate",
+      "count": 2
+    },
+    {
+      "target": "PaintCanvas.destroy",
+      "count": 1
+    },
+    {
+      "target": "javax.microedition.m3g.Loader.load",
+      "count": 1
+    },
+    {
+      "target": "javax.microedition.m3g.World.getActiveCamera",
+      "count": 1
+    },
+    {
+      "target": "javax.microedition.media.Player.prefetch",
+      "count": 1
+    },
+    {
+      "target": "java.lang.Thread.start",
+      "count": 1
+    },
+    {
+      "target": "FreeFlight.destroyApp",
+      "count": 1
+    },
+    {
+      "target": "javax.microedition.media.Manager.playTone",
+      "count": 1
+    },
+    {
+      "target": "java.lang.Thread.sleep",
+      "count": 1
+    },
+    {
+      "target": "javax.microedition.lcdui.Graphics.getFont",
+      "count": 1
+    },
+    {
+      "target": "javax.microedition.lcdui.Font.getHeight",
+      "count": 1
+    },
+    {
+      "target": "javax.microedition.m3g.Graphics3D.getInstance",
+      "count": 1
+    },
+    {
+      "target": "javax.microedition.m3g.Graphics3D.bindTarget",
+      "count": 1
+    },
+    {
+      "target": "javax.microedition.m3g.Graphics3D.render",
+      "count": 1
+    },
+    {
+      "target": "javax.microedition.m3g.Graphics3D.releaseTarget",
+      "count": 1
+    }
+  ],
+  "opcode_histogram": {
+    "aload_0": 2820,
+    "getfield": 1768,
+    "putfield": 1184,
+    "bipush": 906,
+    "invokevirtual": 610,
+    "ldc_w": 587,
+    "aload_1": 529,
+    "iconst_0": 461,
+    "sipush": 447,
+    "if_icmpne": 422,
+    "iconst_1": 341,
+    "iadd": 334,
+    "ldc": 175,
+    "dup": 164,
+    "iconst_3": 154,
+    "iconst_5": 135,
+    "invokestatic": 121,
+    "isub": 117,
+    "fconst_0": 110,
+    "iconst_4": 107,
+    "iconst_2": 106,
+    "imul": 99,
+    "goto": 93,
+    "ifge": 83,
+    "if_icmple": 79,
+    "ifle": 76,
+    "fcmpl": 74,
+    "fcmpg": 64,
+    "if_acmpne": 63,
+    "ifne": 61,
+    "fmul": 55,
+    "fconst_1": 54,
+    "astore_2": 54,
+    "f2d": 51,
+    "fsub": 44
+  },
+  "resource_file_count": 52,
+  "resources_by_suffix": {
+    ".png": 47,
+    ".wav": 3,
+    ".m3g": 1,
+    ".mf": 1
+  },
+  "class_methods": [
+    {
+      "class": "FreeFlight",
+      "method_count": 4,
+      "instructions": 31,
+      "branches": 0,
+      "methods": [
+        {
+          "signature": "public FreeFlight();",
+          "instructions": 13,
+          "branches": 0,
+          "calls": {
+            "javax.microedition.lcdui.Display.getDisplay": 1
+          }
+        },
+        {
+          "signature": "protected void startApp();",
+          "instructions": 6,
+          "branches": 0,
+          "calls": {
+            "javax.microedition.lcdui.Display.setCurrent": 1
+          }
+        },
+        {
+          "signature": "protected void pauseApp();",
+          "instructions": 1,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "protected void destroyApp(boolean);",
+          "instructions": 11,
+          "branches": 0,
+          "calls": {
+            "javax.microedition.lcdui.Display.setCurrent": 1,
+            "PaintCanvas.destroy": 1
+          }
+        }
+      ]
+    },
+    {
+      "class": "PaintCanvas",
+      "method_count": 7,
+      "instructions": 12852,
+      "branches": 951,
+      "methods": [
+        {
+          "signature": "public PaintCanvas(FreeFlight);",
+          "instructions": 614,
+          "branches": 54,
+          "calls": {
+            "javax.microedition.lcdui.Image.createImage": 46,
+            "java.lang.Object.getClass": 3,
+            "java.lang.Class.getResourceAsStream": 3,
+            "javax.microedition.media.Manager.createPlayer": 3,
+            "javax.microedition.lcdui.Display.getDisplay": 1,
+            "javax.microedition.m3g.Loader.load": 1,
+            "javax.microedition.m3g.World.getActiveCamera": 1,
+            "javax.microedition.media.Player.prefetch": 1
+          }
+        },
+        {
+          "signature": "public void run();",
+          "instructions": 6667,
+          "branches": 557,
+          "calls": {
+            "java.lang.Math.toRadians": 33,
+            "java.lang.Math.cos": 19,
+            "java.lang.StringBuffer.append": 15,
+            "java.lang.Math.sin": 14,
+            "javax.microedition.m3g.Camera.postRotate": 6,
+            "java.lang.StringBuffer.toString": 5,
+            "javax.microedition.lcdui.Display.vibrate": 3,
+            "javax.microedition.m3g.Camera.setTranslation": 2
+          }
+        },
+        {
+          "signature": "public void paint(javax.microedition.lcdui.Graphics);",
+          "instructions": 5250,
+          "branches": 256,
+          "calls": {
+            "javax.microedition.lcdui.Graphics.setColor": 284,
+            "javax.microedition.lcdui.Graphics.drawString": 130,
+            "javax.microedition.lcdui.Graphics.drawImage": 111,
+            "java.lang.StringBuffer.append": 16,
+            "java.lang.StringBuffer.toString": 8,
+            "javax.microedition.lcdui.Graphics.getFont": 1,
+            "javax.microedition.lcdui.Font.getHeight": 1,
+            "javax.microedition.m3g.Graphics3D.getInstance": 1
+          }
+        },
+        {
+          "signature": "public void keyPressed(int);",
+          "instructions": 106,
+          "branches": 28,
+          "calls": {}
+        },
+        {
+          "signature": "public void keyRepeated(int);",
+          "instructions": 106,
+          "branches": 28,
+          "calls": {}
+        },
+        {
+          "signature": "public void keyReleased(int);",
+          "instructions": 106,
+          "branches": 28,
+          "calls": {}
+        },
+        {
+          "signature": "public void destroy();",
+          "instructions": 3,
+          "branches": 0,
+          "calls": {}
+        }
+      ]
+    }
+  ],
+  "limitation": "Static method inspection, no game execution, no proof of hot paths or semantic equivalence."
+}

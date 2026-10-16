@@ -1,0 +1,1643 @@
+{
+  "rank": 27,
+  "jar_path": "All Java Mobile Phone Games/A/Arkanoid_Revenge_of_DOTH/Arkanoid_Revenge_of_DOTH_6230i.jar",
+  "jar_sha256": "419981c167210fe40c51e14a81f4e522b34388b5df42492d20c335fc4a8b51ce",
+  "title": "Arkad",
+  "track": "worlds",
+  "status": "BYTECODE_DISASSEMBLED_INDEXED_NOT_FULLY_REVIEWED",
+  "tool": "OpenJDK javap -p -c; JAR never executed",
+  "classes": 22,
+  "classes_decoded": 22,
+  "methods": 129,
+  "instructions": 2673,
+  "branches": 178,
+  "errors": [],
+  "hot_methods_by_static_instruction_count": [
+    {
+      "class": "sprites.SolidSprite",
+      "signature": "public void collidesWith(sprites.Solid);",
+      "instructions": 232,
+      "branches": 38,
+      "priority_score": 346,
+      "calls": {
+        "java.lang.Math.abs": 8,
+        "javax.microedition.lcdui.game.Layer.getX": 2,
+        "javax.microedition.lcdui.game.Layer.getY": 2,
+        "javax.microedition.lcdui.game.Layer.getWidth": 1,
+        "javax.microedition.lcdui.game.Layer.getHeight": 1,
+        "sprites.Solid.collidesWith": 1
+      }
+    },
+    {
+      "class": "Ball",
+      "signature": "public void collidesWith(sprites.Solid);",
+      "instructions": 227,
+      "branches": 29,
+      "priority_score": 314,
+      "calls": {
+        "Paddle.getX": 8,
+        "Paddle.getWidth": 8,
+        "java.lang.Math.abs": 8,
+        "javax.microedition.media.Player.start": 2,
+        "java.io.PrintStream.println": 2,
+        "sprites.SolidSprite.collidesWith": 2
+      }
+    },
+    {
+      "class": "sprites.ConcreteGameCanvas",
+      "signature": "public void erase(int, int, int, int);",
+      "instructions": 118,
+      "branches": 6,
+      "priority_score": 254,
+      "calls": {
+        "javax.microedition.lcdui.game.TiledLayer.getCellWidth": 3,
+        "javax.microedition.lcdui.game.TiledLayer.getCellHeight": 3,
+        "javax.microedition.lcdui.Graphics.getClipX": 1,
+        "javax.microedition.lcdui.Graphics.getClipY": 1,
+        "javax.microedition.lcdui.Graphics.getClipWidth": 1,
+        "javax.microedition.lcdui.Graphics.getClipHeight": 1,
+        "javax.microedition.lcdui.game.TiledLayer.getColumns": 1,
+        "javax.microedition.lcdui.game.TiledLayer.getRows": 1,
+        "javax.microedition.lcdui.game.TiledLayer.fillCells": 1,
+        "javax.microedition.lcdui.game.TiledLayer.getCell": 1,
+        "javax.microedition.lcdui.game.TiledLayer.setCell": 1,
+        "java.io.PrintStream.println": 1,
+        "javax.microedition.lcdui.Graphics.clipRect": 1,
+        "javax.microedition.lcdui.game.TiledLayer.paint": 1,
+        "javax.microedition.lcdui.Graphics.setClip": 1
+      }
+    },
+    {
+      "class": "IntroGameCanvas",
+      "signature": "public boolean isRunning();",
+      "instructions": 92,
+      "branches": 3,
+      "priority_score": 193,
+      "calls": {
+        "javax.microedition.lcdui.Graphics.setColor": 3,
+        "javax.microedition.lcdui.Graphics.drawString": 2,
+        "sprites.ConcreteGameCanvas.isRunning": 1,
+        "javax.microedition.lcdui.Font.getFont": 1,
+        "javax.microedition.lcdui.Graphics.setFont": 1,
+        "javax.microedition.lcdui.Image.createImage": 1,
+        "javax.microedition.lcdui.Graphics.drawImage": 1,
+        "java.io.PrintStream.println": 1
+      }
+    },
+    {
+      "class": "ArkanoidLayerManager",
+      "signature": "public void buildArea();",
+      "instructions": 184,
+      "branches": 2,
+      "priority_score": 190,
+      "calls": {
+        "javax.microedition.lcdui.Image.createImage": 7,
+        "Wall.getWidth": 6,
+        "Wall.getX": 5,
+        "javax.microedition.lcdui.Image.getWidth": 3,
+        "javax.microedition.lcdui.Image.getHeight": 3,
+        "java.lang.Math.min": 3,
+        "Wall.setPosition": 3,
+        "sprites.Broker.instance": 2,
+        "sprites.ConcreteGameCanvas.getHeight": 2,
+        "sprites.Broker.get": 1,
+        "sprites.ConcreteGameCanvas.getWidth": 1,
+        "Paddle.setBounds": 1,
+        "Paddle.getWidth": 1,
+        "Wall.getHeight": 1,
+        "Paddle.getHeight": 1,
+        "javax.microedition.lcdui.Font.getFont": 1,
+        "javax.microedition.lcdui.Font.getHeight": 1,
+        "Paddle.setPosition": 1,
+        "sprites.Broker.put": 1,
+        "java.io.PrintStream.println": 1
+      }
+    },
+    {
+      "class": "sprites.ConcreteGameCanvas",
+      "signature": "public void paintBackGround(javax.microedition.lcdui.Image, int, int);",
+      "instructions": 111,
+      "branches": 9,
+      "priority_score": 138,
+      "calls": {
+        "javax.microedition.lcdui.Image.getWidth": 3,
+        "javax.microedition.lcdui.Image.getHeight": 3,
+        "javax.microedition.lcdui.game.TiledLayer.setCell": 1,
+        "java.io.PrintStream.println": 1
+      }
+    },
+    {
+      "class": "sprites.SolidSprite",
+      "signature": "public void move();",
+      "instructions": 92,
+      "branches": 13,
+      "priority_score": 131,
+      "calls": {
+        "sprites.ActiveSprite.move": 1,
+        "sprites.Broker.instance": 1,
+        "sprites.Broker.get": 1,
+        "sprites.MoveableLayerManager.getLayerAt": 1,
+        "sprites.MoveableLayerManager.getSize": 1,
+        "java.util.Vector.elements": 1,
+        "java.util.Enumeration.nextElement": 1,
+        "java.util.Vector.contains": 1,
+        "sprites.Solid.collisionEnds": 1,
+        "java.util.Enumeration.hasMoreElements": 1
+      }
+    },
+    {
+      "class": "ArkanoidGameCanvas",
+      "signature": "public boolean isRunning();",
+      "instructions": 55,
+      "branches": 5,
+      "priority_score": 125,
+      "calls": {
+        "sprites.Broker.instance": 2,
+        "sprites.Broker.get": 2,
+        "sprites.ConcreteGameCanvas.isRunning": 1,
+        "ArkanoidLayerManager.getBrickCount": 1,
+        "ArkanoidLayerManager.nextLevel": 1,
+        "ArkanoidLayerManager.paint": 1,
+        "ArkanoidLayerManager.drawScore": 1,
+        "ArkanoidLayerManager.drawLives": 1,
+        "ArkanoidLayerManager.getBallCount": 1,
+        "Paddle.getBallCount": 1,
+        "ArkanoidLayerManager.gameOver": 1
+      }
+    },
+    {
+      "class": "Ball",
+      "signature": "private void init();",
+      "instructions": 51,
+      "branches": 6,
+      "priority_score": 120,
+      "calls": {
+        "java.io.PrintStream.println": 4,
+        "java.lang.Object.getClass": 2,
+        "java.lang.Class.getResourceAsStream": 2,
+        "javax.microedition.media.Manager.createPlayer": 2,
+        "javax.microedition.media.Player.realize": 2,
+        "javax.microedition.media.Player.prefetch": 2
+      }
+    },
+    {
+      "class": "Ball",
+      "signature": "public void move();",
+      "instructions": 63,
+      "branches": 7,
+      "priority_score": 84,
+      "calls": {
+        "java.lang.Math.abs": 3,
+        "sprites.SolidSprite.move": 1,
+        "sprites.Broker.instance": 1,
+        "sprites.Broker.get": 1,
+        "sprites.MoveableLayerManager.remove": 1
+      }
+    },
+    {
+      "class": "Paddle",
+      "signature": "public void fire();",
+      "instructions": 56,
+      "branches": 4,
+      "priority_score": 68,
+      "calls": {
+        "sprites.Broker.instance": 1,
+        "sprites.Broker.get": 1,
+        "ArkanoidLayerManager.getBallCount": 1,
+        "javax.microedition.lcdui.Image.createImage": 1,
+        "Ball.getHeight": 1,
+        "Ball.setPosition": 1,
+        "ArkanoidLayerManager.append": 1,
+        "ArkanoidLayerManager.eraseLives": 1,
+        "ArkanoidLayerManager.drawLives": 1,
+        "java.io.PrintStream.println": 1
+      }
+    },
+    {
+      "class": "sprites.MoveableLayerManager",
+      "signature": "public void move();",
+      "instructions": 28,
+      "branches": 4,
+      "priority_score": 68,
+      "calls": {
+        "sprites.MoveableSprite.isMoving": 1,
+        "sprites.MoveableSprite.erase": 1,
+        "sprites.MoveableSprite.move": 1,
+        "sprites.MoveableSprite.paint": 1
+      }
+    }
+  ],
+  "call_targets": [
+    {
+      "target": "sprites.Broker.instance",
+      "count": 33
+    },
+    {
+      "target": "sprites.Broker.get",
+      "count": 28
+    },
+    {
+      "target": "java.lang.Math.abs",
+      "count": 26
+    },
+    {
+      "target": "java.io.PrintStream.println",
+      "count": 16
+    },
+    {
+      "target": "javax.microedition.lcdui.Image.createImage",
+      "count": 13
+    },
+    {
+      "target": "Wall.getX",
+      "count": 10
+    },
+    {
+      "target": "Wall.getWidth",
+      "count": 10
+    },
+    {
+      "target": "Wall.getHeight",
+      "count": 9
+    },
+    {
+      "target": "Paddle.getWidth",
+      "count": 9
+    },
+    {
+      "target": "Paddle.getX",
+      "count": 8
+    },
+    {
+      "target": "sprites.ConcreteGameCanvas.getOffscreen",
+      "count": 7
+    },
+    {
+      "target": "javax.microedition.lcdui.Image.getWidth",
+      "count": 6
+    },
+    {
+      "target": "javax.microedition.lcdui.Image.getHeight",
+      "count": 6
+    },
+    {
+      "target": "sprites.Broker.put",
+      "count": 5
+    },
+    {
+      "target": "javax.microedition.lcdui.Font.getHeight",
+      "count": 5
+    },
+    {
+      "target": "javax.microedition.lcdui.Graphics.setColor",
+      "count": 4
+    },
+    {
+      "target": "java.util.Vector.elements",
+      "count": 4
+    },
+    {
+      "target": "java.util.Enumeration.nextElement",
+      "count": 4
+    },
+    {
+      "target": "java.util.Enumeration.hasMoreElements",
+      "count": 4
+    },
+    {
+      "target": "javax.microedition.lcdui.Graphics.drawString",
+      "count": 4
+    },
+    {
+      "target": "sprites.ConcreteGameCanvas.erase",
+      "count": 4
+    },
+    {
+      "target": "ArkanoidLayerManager.drawLives",
+      "count": 3
+    },
+    {
+      "target": "Paddle.getBallCount",
+      "count": 3
+    },
+    {
+      "target": "javax.microedition.lcdui.Font.getFont",
+      "count": 3
+    },
+    {
+      "target": "javax.microedition.lcdui.Display.setCurrent",
+      "count": 3
+    },
+    {
+      "target": "sprites.MoveableLayerManager.remove",
+      "count": 3
+    },
+    {
+      "target": "java.lang.Math.min",
+      "count": 3
+    },
+    {
+      "target": "Wall.setPosition",
+      "count": 3
+    },
+    {
+      "target": "java.lang.Long.toString",
+      "count": 3
+    },
+    {
+      "target": "javax.microedition.lcdui.Font.stringWidth",
+      "count": 3
+    },
+    {
+      "target": "Brick.collidesWith",
+      "count": 3
+    },
+    {
+      "target": "javax.microedition.lcdui.game.TiledLayer.getCellWidth",
+      "count": 3
+    },
+    {
+      "target": "javax.microedition.lcdui.game.TiledLayer.getCellHeight",
+      "count": 3
+    },
+    {
+      "target": "sprites.ConcreteGameCanvas.isRunning",
+      "count": 2
+    },
+    {
+      "target": "ArkanoidLayerManager.getBallCount",
+      "count": 2
+    }
+  ],
+  "opcode_histogram": {
+    "aload_0": 447,
+    "invokevirtual": 408,
+    "getfield": 158,
+    "aload_1": 130,
+    "iload": 116,
+    "return": 112,
+    "invokespecial": 88,
+    "invokestatic": 85,
+    "putfield": 76,
+    "aload_2": 70,
+    "iconst_0": 58,
+    "goto": 58,
+    "ldc": 50,
+    "iload_3": 45,
+    "istore": 45,
+    "checkcast": 43,
+    "iload_2": 36,
+    "getstatic": 36,
+    "iadd": 35,
+    "astore_1": 32,
+    "dup": 29,
+    "iconst_1": 26,
+    "ifeq": 26,
+    "bipush": 26,
+    "astore_2": 25,
+    "aload": 24,
+    "aload_3": 22,
+    "idiv": 22,
+    "new": 21,
+    "iload_1": 20,
+    "if_icmplt": 20,
+    "isub": 19,
+    "ifne": 18,
+    "ineg": 17,
+    "invokeinterface": 16
+  },
+  "resource_file_count": 24,
+  "resources_by_suffix": {
+    ".mf": 1,
+    ".png": 21,
+    ".wav": 2
+  },
+  "class_methods": [
+    {
+      "class": "Arkanoid",
+      "method_count": 2,
+      "instructions": 59,
+      "branches": 2,
+      "methods": [
+        {
+          "signature": "public Arkanoid();",
+          "instructions": 57,
+          "branches": 2,
+          "calls": {
+            "sprites.Broker.instance": 4,
+            "sprites.Broker.put": 4,
+            "java.lang.Integer.parseInt": 1,
+            "sprites.ConcreteMIDlet.startApp": 1
+          }
+        },
+        {
+          "signature": "protected void pauseApp();",
+          "instructions": 2,
+          "branches": 0,
+          "calls": {}
+        }
+      ]
+    },
+    {
+      "class": "ArkanoidGameCanvas",
+      "method_count": 4,
+      "instructions": 105,
+      "branches": 6,
+      "methods": [
+        {
+          "signature": "public ArkanoidGameCanvas(boolean, int);",
+          "instructions": 11,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public boolean isRunning();",
+          "instructions": 55,
+          "branches": 5,
+          "calls": {
+            "sprites.Broker.instance": 2,
+            "sprites.Broker.get": 2,
+            "sprites.ConcreteGameCanvas.isRunning": 1,
+            "ArkanoidLayerManager.getBrickCount": 1,
+            "ArkanoidLayerManager.nextLevel": 1,
+            "ArkanoidLayerManager.paint": 1,
+            "ArkanoidLayerManager.drawScore": 1,
+            "ArkanoidLayerManager.drawLives": 1
+          }
+        },
+        {
+          "signature": "public void nextLevel();",
+          "instructions": 19,
+          "branches": 0,
+          "calls": {
+            "javax.microedition.lcdui.Font.getFont": 1,
+            "javax.microedition.lcdui.Graphics.setFont": 1,
+            "javax.microedition.lcdui.Graphics.setColor": 1,
+            "WallFactory.createBackGround": 1
+          }
+        },
+        {
+          "signature": "public void run();",
+          "instructions": 20,
+          "branches": 1,
+          "calls": {
+            "sprites.Broker.instance": 2,
+            "sprites.Broker.get": 2,
+            "sprites.ConcreteGameCanvas.run": 1,
+            "sprites.ConcreteMIDlet.getDisplay": 1,
+            "javax.microedition.lcdui.Display.setCurrent": 1
+          }
+        }
+      ]
+    },
+    {
+      "class": "ArkanoidLayerManager",
+      "method_count": 15,
+      "instructions": 513,
+      "branches": 14,
+      "methods": [
+        {
+          "signature": "public ArkanoidLayerManager();",
+          "instructions": 8,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public void append(javax.microedition.lcdui.game.Layer);",
+          "instructions": 52,
+          "branches": 1,
+          "calls": {
+            "Wall.getX": 2,
+            "Wall.getHeight": 2,
+            "Ball.getWidth": 1,
+            "Ball.getHeight": 1,
+            "Ball.setMaxSpeed": 1,
+            "Wall.getWidth": 1,
+            "Wall.getY": 1,
+            "Ball.setBounds": 1
+          }
+        },
+        {
+          "signature": "public void remove(javax.microedition.lcdui.game.Layer);",
+          "instructions": 44,
+          "branches": 3,
+          "calls": {
+            "Brick.points": 1,
+            "sprites.MoveableLayerManager.remove": 1
+          }
+        },
+        {
+          "signature": "public void gameOver();",
+          "instructions": 6,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public void nextLevel();",
+          "instructions": 5,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "private void buildWall();",
+          "instructions": 48,
+          "branches": 3,
+          "calls": {
+            "Wall.getHeight": 2,
+            "Wall.getWidth": 1,
+            "Wall.getX": 1,
+            "WallFactory.createWall": 1,
+            "java.util.Vector.elements": 1,
+            "java.util.Enumeration.nextElement": 1,
+            "java.util.Enumeration.hasMoreElements": 1,
+            "java.util.Vector.size": 1
+          }
+        },
+        {
+          "signature": "private void cleanWall();",
+          "instructions": 16,
+          "branches": 2,
+          "calls": {
+            "java.util.Vector.elements": 1,
+            "java.util.Enumeration.nextElement": 1,
+            "java.util.Enumeration.hasMoreElements": 1
+          }
+        },
+        {
+          "signature": "public void buildArea();",
+          "instructions": 184,
+          "branches": 2,
+          "calls": {
+            "javax.microedition.lcdui.Image.createImage": 7,
+            "Wall.getWidth": 6,
+            "Wall.getX": 5,
+            "javax.microedition.lcdui.Image.getWidth": 3,
+            "javax.microedition.lcdui.Image.getHeight": 3,
+            "java.lang.Math.min": 3,
+            "Wall.setPosition": 3,
+            "sprites.Broker.instance": 2
+          }
+        },
+        {
+          "signature": "private void cleanArea();",
+          "instructions": 29,
+          "branches": 3,
+          "calls": {
+            "Paddle.addBalls": 1,
+            "java.util.Vector.elements": 1,
+            "java.util.Enumeration.nextElement": 1,
+            "java.util.Enumeration.hasMoreElements": 1,
+            "java.util.Vector.removeAllElements": 1
+          }
+        },
+        {
+          "signature": "public int getBrickCount();",
+          "instructions": 3,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public int getBallCount();",
+          "instructions": 3,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public void drawScore();",
+          "instructions": 22,
+          "branches": 0,
+          "calls": {
+            "sprites.Broker.instance": 1,
+            "sprites.Broker.get": 1,
+            "sprites.ConcreteGameCanvas.getOffscreen": 1,
+            "java.lang.Long.toString": 1,
+            "Wall.getX": 1,
+            "Wall.getHeight": 1,
+            "javax.microedition.lcdui.Graphics.drawString": 1
+          }
+        },
+        {
+          "signature": "public void eraseScore();",
+          "instructions": 38,
+          "branches": 0,
+          "calls": {
+            "java.lang.Long.toString": 2,
+            "javax.microedition.lcdui.Font.stringWidth": 2,
+            "javax.microedition.lcdui.Font.getHeight": 2,
+            "sprites.Broker.instance": 1,
+            "sprites.Broker.get": 1,
+            "sprites.ConcreteGameCanvas.getOffscreen": 1,
+            "javax.microedition.lcdui.Graphics.getFont": 1,
+            "Wall.getX": 1
+          }
+        },
+        {
+          "signature": "public void drawLives();",
+          "instructions": 23,
+          "branches": 0,
+          "calls": {
+            "sprites.Broker.instance": 1,
+            "sprites.Broker.get": 1,
+            "sprites.ConcreteGameCanvas.getOffscreen": 1,
+            "Paddle.getBallCount": 1,
+            "java.lang.Integer.toString": 1,
+            "Wall.getWidth": 1,
+            "Wall.getHeight": 1,
+            "javax.microedition.lcdui.Graphics.drawString": 1
+          }
+        },
+        {
+          "signature": "public void eraseLives();",
+          "instructions": 32,
+          "branches": 0,
+          "calls": {
+            "javax.microedition.lcdui.Font.getHeight": 2,
+            "sprites.Broker.instance": 1,
+            "sprites.Broker.get": 1,
+            "sprites.ConcreteGameCanvas.getOffscreen": 1,
+            "javax.microedition.lcdui.Graphics.getFont": 1,
+            "Wall.getWidth": 1,
+            "Wall.getHeight": 1,
+            "Paddle.getBallCount": 1
+          }
+        }
+      ]
+    },
+    {
+      "class": "Ball",
+      "method_count": 9,
+      "instructions": 426,
+      "branches": 44,
+      "methods": [
+        {
+          "signature": "public Ball(javax.microedition.lcdui.Image, int, int);",
+          "instructions": 8,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public Ball(javax.microedition.lcdui.Image, int, int, int, int);",
+          "instructions": 10,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public Ball(Ball);",
+          "instructions": 20,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public void setBounds(int, int, int, int);",
+          "instructions": 13,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public void move();",
+          "instructions": 63,
+          "branches": 7,
+          "calls": {
+            "java.lang.Math.abs": 3,
+            "sprites.SolidSprite.move": 1,
+            "sprites.Broker.instance": 1,
+            "sprites.Broker.get": 1,
+            "sprites.MoveableLayerManager.remove": 1
+          }
+        },
+        {
+          "signature": "public void collidesWith(sprites.Solid);",
+          "instructions": 227,
+          "branches": 29,
+          "calls": {
+            "Paddle.getX": 8,
+            "Paddle.getWidth": 8,
+            "java.lang.Math.abs": 8,
+            "javax.microedition.media.Player.start": 2,
+            "java.io.PrintStream.println": 2,
+            "sprites.SolidSprite.collidesWith": 2
+          }
+        },
+        {
+          "signature": "private void init();",
+          "instructions": 51,
+          "branches": 6,
+          "calls": {
+            "java.io.PrintStream.println": 4,
+            "java.lang.Object.getClass": 2,
+            "java.lang.Class.getResourceAsStream": 2,
+            "javax.microedition.media.Manager.createPlayer": 2,
+            "javax.microedition.media.Player.realize": 2,
+            "javax.microedition.media.Player.prefetch": 2
+          }
+        },
+        {
+          "signature": "public void setMaxSpeed(int, int);",
+          "instructions": 13,
+          "branches": 0,
+          "calls": {
+            "java.lang.Math.abs": 2
+          }
+        },
+        {
+          "signature": "public void setSpeed(int, int);",
+          "instructions": 21,
+          "branches": 2,
+          "calls": {
+            "java.lang.Math.abs": 2,
+            "sprites.SolidSprite.setSpeed": 1
+          }
+        }
+      ]
+    },
+    {
+      "class": "BallBrick",
+      "method_count": 4,
+      "instructions": 45,
+      "branches": 1,
+      "methods": [
+        {
+          "signature": "public BallBrick(javax.microedition.lcdui.Image);",
+          "instructions": 4,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public BallBrick(javax.microedition.lcdui.Image, int, int);",
+          "instructions": 6,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public BallBrick(BallBrick);",
+          "instructions": 4,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public void collidesWith(sprites.Solid);",
+          "instructions": 31,
+          "branches": 1,
+          "calls": {
+            "Brick.collidesWith": 1,
+            "Ball.getX": 1,
+            "Ball.getY": 1,
+            "Ball.setPosition": 1,
+            "sprites.Broker.instance": 1,
+            "sprites.Broker.get": 1,
+            "sprites.MoveableLayerManager.append": 1
+          }
+        }
+      ]
+    },
+    {
+      "class": "Brick",
+      "method_count": 8,
+      "instructions": 54,
+      "branches": 0,
+      "methods": [
+        {
+          "signature": "public Brick(javax.microedition.lcdui.Image);",
+          "instructions": 4,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public Brick(javax.microedition.lcdui.Image, int, int);",
+          "instructions": 6,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public Brick(Brick);",
+          "instructions": 4,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public void collidesWith(sprites.Solid);",
+          "instructions": 9,
+          "branches": 0,
+          "calls": {
+            "sprites.Broker.instance": 1,
+            "sprites.Broker.get": 1,
+            "sprites.MoveableLayerManager.remove": 1
+          }
+        },
+        {
+          "signature": "public void collisionEnds();",
+          "instructions": 3,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public void erase();",
+          "instructions": 16,
+          "branches": 0,
+          "calls": {
+            "sprites.Broker.instance": 1,
+            "sprites.Broker.get": 1,
+            "sprites.ConcreteGameCanvas.erase": 1
+          }
+        },
+        {
+          "signature": "public void paint();",
+          "instructions": 10,
+          "branches": 0,
+          "calls": {
+            "sprites.Broker.instance": 1,
+            "sprites.Broker.get": 1,
+            "sprites.ConcreteGameCanvas.getOffscreen": 1
+          }
+        },
+        {
+          "signature": "public int points();",
+          "instructions": 2,
+          "branches": 0,
+          "calls": {}
+        }
+      ]
+    },
+    {
+      "class": "HeavyBrick",
+      "method_count": 7,
+      "instructions": 77,
+      "branches": 6,
+      "methods": [
+        {
+          "signature": "public HeavyBrick(javax.microedition.lcdui.Image);",
+          "instructions": 4,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public HeavyBrick(javax.microedition.lcdui.Image, int);",
+          "instructions": 7,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public HeavyBrick(javax.microedition.lcdui.Image, int, int, int);",
+          "instructions": 9,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public HeavyBrick(HeavyBrick);",
+          "instructions": 12,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public void collidesWith(sprites.Solid);",
+          "instructions": 23,
+          "branches": 3,
+          "calls": {
+            "Brick.collidesWith": 1
+          }
+        },
+        {
+          "signature": "public void collisionEnds();",
+          "instructions": 16,
+          "branches": 3,
+          "calls": {
+            "Brick.collisionEnds": 1
+          }
+        },
+        {
+          "signature": "public int points();",
+          "instructions": 6,
+          "branches": 0,
+          "calls": {
+            "Brick.points": 1
+          }
+        }
+      ]
+    },
+    {
+      "class": "IntroGameCanvas",
+      "method_count": 3,
+      "instructions": 127,
+      "branches": 3,
+      "methods": [
+        {
+          "signature": "public IntroGameCanvas(boolean, int);",
+          "instructions": 5,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public boolean isRunning();",
+          "instructions": 92,
+          "branches": 3,
+          "calls": {
+            "javax.microedition.lcdui.Graphics.setColor": 3,
+            "javax.microedition.lcdui.Graphics.drawString": 2,
+            "sprites.ConcreteGameCanvas.isRunning": 1,
+            "javax.microedition.lcdui.Font.getFont": 1,
+            "javax.microedition.lcdui.Graphics.setFont": 1,
+            "javax.microedition.lcdui.Image.createImage": 1,
+            "javax.microedition.lcdui.Graphics.drawImage": 1,
+            "java.io.PrintStream.println": 1
+          }
+        },
+        {
+          "signature": "protected void keyPressed(int);",
+          "instructions": 30,
+          "branches": 0,
+          "calls": {
+            "sprites.Broker.instance": 4,
+            "sprites.Broker.get": 4,
+            "ArkanoidLayerManager.buildArea": 1,
+            "Paddle.addBalls": 1,
+            "sprites.ConcreteMIDlet.getDisplay": 1,
+            "javax.microedition.lcdui.Display.setCurrent": 1
+          }
+        }
+      ]
+    },
+    {
+      "class": "Paddle",
+      "method_count": 11,
+      "instructions": 146,
+      "branches": 6,
+      "methods": [
+        {
+          "signature": "public Paddle(javax.microedition.lcdui.Image, int);",
+          "instructions": 5,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public Paddle(javax.microedition.lcdui.Image, int, int, int, int, int);",
+          "instructions": 7,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public Paddle(Paddle);",
+          "instructions": 16,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public void setBounds(int, int);",
+          "instructions": 7,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public void leftMove();",
+          "instructions": 14,
+          "branches": 1,
+          "calls": {
+            "sprites.UserSprite.leftMove": 1
+          }
+        },
+        {
+          "signature": "public void rightMove();",
+          "instructions": 20,
+          "branches": 1,
+          "calls": {
+            "sprites.UserSprite.rightMove": 1
+          }
+        },
+        {
+          "signature": "public void upMove();",
+          "instructions": 1,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public void downMove();",
+          "instructions": 1,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public void fire();",
+          "instructions": 56,
+          "branches": 4,
+          "calls": {
+            "sprites.Broker.instance": 1,
+            "sprites.Broker.get": 1,
+            "ArkanoidLayerManager.getBallCount": 1,
+            "javax.microedition.lcdui.Image.createImage": 1,
+            "Ball.getHeight": 1,
+            "Ball.setPosition": 1,
+            "ArkanoidLayerManager.append": 1,
+            "ArkanoidLayerManager.eraseLives": 1
+          }
+        },
+        {
+          "signature": "public int getBallCount();",
+          "instructions": 3,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public void addBalls(int);",
+          "instructions": 16,
+          "branches": 0,
+          "calls": {
+            "sprites.Broker.instance": 1,
+            "sprites.Broker.get": 1,
+            "ArkanoidLayerManager.eraseLives": 1,
+            "ArkanoidLayerManager.drawLives": 1
+          }
+        }
+      ]
+    },
+    {
+      "class": "SpeedBrick",
+      "method_count": 4,
+      "instructions": 66,
+      "branches": 3,
+      "methods": [
+        {
+          "signature": "public SpeedBrick(javax.microedition.lcdui.Image, int);",
+          "instructions": 7,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public SpeedBrick(javax.microedition.lcdui.Image, int, int, int);",
+          "instructions": 9,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public SpeedBrick(SpeedBrick);",
+          "instructions": 8,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public void collidesWith(sprites.Solid);",
+          "instructions": 42,
+          "branches": 3,
+          "calls": {
+            "sprites.ActiveSprite.getSpeedX": 2,
+            "java.lang.Math.abs": 2,
+            "sprites.ActiveSprite.getSpeedY": 2,
+            "Brick.collidesWith": 1,
+            "sprites.ActiveSprite.setSpeed": 1
+          }
+        }
+      ]
+    },
+    {
+      "class": "Wall",
+      "method_count": 6,
+      "instructions": 28,
+      "branches": 0,
+      "methods": [
+        {
+          "signature": "public Wall(javax.microedition.lcdui.Image);",
+          "instructions": 4,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public Wall(javax.microedition.lcdui.Image, int, int);",
+          "instructions": 6,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public Wall(Wall);",
+          "instructions": 4,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public void collidesWith(sprites.Solid);",
+          "instructions": 1,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public void collisionEnds();",
+          "instructions": 3,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public void paint();",
+          "instructions": 10,
+          "branches": 0,
+          "calls": {
+            "sprites.Broker.instance": 1,
+            "sprites.Broker.get": 1,
+            "sprites.ConcreteGameCanvas.getOffscreen": 1
+          }
+        }
+      ]
+    },
+    {
+      "class": "WallFactory",
+      "method_count": 2,
+      "instructions": 33,
+      "branches": 5,
+      "methods": [
+        {
+          "signature": "public static javax.microedition.lcdui.Image createBackGround();",
+          "instructions": 30,
+          "branches": 5,
+          "calls": {
+            "javax.microedition.lcdui.Image.createImage": 4,
+            "java.util.Random.nextInt": 1,
+            "java.lang.Math.abs": 1,
+            "java.io.PrintStream.println": 1
+          }
+        },
+        {
+          "signature": "private WallFactory();",
+          "instructions": 3,
+          "branches": 0,
+          "calls": {}
+        }
+      ]
+    },
+    {
+      "class": "sprites.ActiveSprite",
+      "method_count": 8,
+      "instructions": 64,
+      "branches": 2,
+      "methods": [
+        {
+          "signature": "public sprites.ActiveSprite(javax.microedition.lcdui.Image, int, int);",
+          "instructions": 10,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public sprites.ActiveSprite(javax.microedition.lcdui.Image, int, int, int, int);",
+          "instructions": 12,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public sprites.ActiveSprite(sprites.ActiveSprite);",
+          "instructions": 12,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public void move();",
+          "instructions": 7,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public boolean isMoving();",
+          "instructions": 10,
+          "branches": 2,
+          "calls": {}
+        },
+        {
+          "signature": "public int getSpeedX();",
+          "instructions": 3,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public int getSpeedY();",
+          "instructions": 3,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public void setSpeed(int, int);",
+          "instructions": 7,
+          "branches": 0,
+          "calls": {}
+        }
+      ]
+    },
+    {
+      "class": "sprites.Broker",
+      "method_count": 3,
+      "instructions": 9,
+      "branches": 0,
+      "methods": [
+        {
+          "signature": "public static sprites.Broker instance();",
+          "instructions": 2,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "private sprites.Broker();",
+          "instructions": 3,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "private sprites.Broker(int);",
+          "instructions": 4,
+          "branches": 0,
+          "calls": {}
+        }
+      ]
+    },
+    {
+      "class": "sprites.ConcreteGameCanvas",
+      "method_count": 8,
+      "instructions": 303,
+      "branches": 21,
+      "methods": [
+        {
+          "signature": "public sprites.ConcreteGameCanvas(boolean, int);",
+          "instructions": 11,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "protected void showNotify();",
+          "instructions": 16,
+          "branches": 1,
+          "calls": {
+            "java.lang.Thread.start": 1
+          }
+        },
+        {
+          "signature": "protected void hideNotify();",
+          "instructions": 18,
+          "branches": 2,
+          "calls": {
+            "java.lang.Thread.join": 1,
+            "java.io.PrintStream.println": 1
+          }
+        },
+        {
+          "signature": "public void run();",
+          "instructions": 23,
+          "branches": 3,
+          "calls": {
+            "sprites.Broker.instance": 1,
+            "sprites.Broker.get": 1,
+            "sprites.MoveableLayerManager.move": 1,
+            "java.lang.Thread.sleep": 1,
+            "java.io.PrintStream.println": 1
+          }
+        },
+        {
+          "signature": "public void erase(int, int, int, int);",
+          "instructions": 118,
+          "branches": 6,
+          "calls": {
+            "javax.microedition.lcdui.game.TiledLayer.getCellWidth": 3,
+            "javax.microedition.lcdui.game.TiledLayer.getCellHeight": 3,
+            "javax.microedition.lcdui.Graphics.getClipX": 1,
+            "javax.microedition.lcdui.Graphics.getClipY": 1,
+            "javax.microedition.lcdui.Graphics.getClipWidth": 1,
+            "javax.microedition.lcdui.Graphics.getClipHeight": 1,
+            "javax.microedition.lcdui.game.TiledLayer.getColumns": 1,
+            "javax.microedition.lcdui.game.TiledLayer.getRows": 1
+          }
+        },
+        {
+          "signature": "public javax.microedition.lcdui.Graphics getOffscreen();",
+          "instructions": 3,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public boolean isRunning();",
+          "instructions": 3,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public void paintBackGround(javax.microedition.lcdui.Image, int, int);",
+          "instructions": 111,
+          "branches": 9,
+          "calls": {
+            "javax.microedition.lcdui.Image.getWidth": 3,
+            "javax.microedition.lcdui.Image.getHeight": 3,
+            "javax.microedition.lcdui.game.TiledLayer.setCell": 1,
+            "java.io.PrintStream.println": 1
+          }
+        }
+      ]
+    },
+    {
+      "class": "sprites.ConcreteMIDlet",
+      "method_count": 4,
+      "instructions": 54,
+      "branches": 4,
+      "methods": [
+        {
+          "signature": "public sprites.ConcreteMIDlet();",
+          "instructions": 35,
+          "branches": 2,
+          "calls": {
+            "javax.microedition.lcdui.Display.getDisplay": 1,
+            "javax.microedition.lcdui.Display.numAlphaLevels": 1,
+            "javax.microedition.lcdui.Display.getCurrent": 1,
+            "sprites.Broker.instance": 1,
+            "sprites.Broker.get": 1,
+            "sprites.ConcreteGameCanvas.addCommand": 1,
+            "sprites.ConcreteGameCanvas.setCommandListener": 1,
+            "javax.microedition.lcdui.Display.setCurrent": 1
+          }
+        },
+        {
+          "signature": "protected void pauseApp();",
+          "instructions": 2,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public javax.microedition.lcdui.Display getDisplay();",
+          "instructions": 3,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public void commandAction(javax.microedition.lcdui.Command, javax.microedition.lcdui.Displayable);",
+          "instructions": 14,
+          "branches": 2,
+          "calls": {
+            "java.io.PrintStream.println": 1
+          }
+        }
+      ]
+    },
+    {
+      "class": "sprites.Moveable",
+      "method_count": 1,
+      "instructions": 0,
+      "branches": 0,
+      "methods": [
+        {
+          "signature": "public abstract void move();",
+          "instructions": 0,
+          "branches": 0,
+          "calls": {}
+        }
+      ]
+    },
+    {
+      "class": "sprites.MoveableLayerManager",
+      "method_count": 2,
+      "instructions": 31,
+      "branches": 4,
+      "methods": [
+        {
+          "signature": "public sprites.MoveableLayerManager();",
+          "instructions": 3,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public void move();",
+          "instructions": 28,
+          "branches": 4,
+          "calls": {
+            "sprites.MoveableSprite.isMoving": 1,
+            "sprites.MoveableSprite.erase": 1,
+            "sprites.MoveableSprite.move": 1,
+            "sprites.MoveableSprite.paint": 1
+          }
+        }
+      ]
+    },
+    {
+      "class": "sprites.MoveableSprite",
+      "method_count": 7,
+      "instructions": 40,
+      "branches": 0,
+      "methods": [
+        {
+          "signature": "public sprites.MoveableSprite(javax.microedition.lcdui.Image);",
+          "instructions": 4,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public sprites.MoveableSprite(javax.microedition.lcdui.Image, int, int);",
+          "instructions": 6,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public sprites.MoveableSprite(sprites.MoveableSprite);",
+          "instructions": 4,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public abstract void move();",
+          "instructions": 0,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public abstract boolean isMoving();",
+          "instructions": 0,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public void erase();",
+          "instructions": 16,
+          "branches": 0,
+          "calls": {
+            "sprites.Broker.instance": 1,
+            "sprites.Broker.get": 1,
+            "sprites.ConcreteGameCanvas.erase": 1
+          }
+        },
+        {
+          "signature": "public void paint();",
+          "instructions": 10,
+          "branches": 0,
+          "calls": {
+            "sprites.Broker.instance": 1,
+            "sprites.Broker.get": 1,
+            "sprites.ConcreteGameCanvas.getOffscreen": 1
+          }
+        }
+      ]
+    },
+    {
+      "class": "sprites.Solid",
+      "method_count": 2,
+      "instructions": 0,
+      "branches": 0,
+      "methods": [
+        {
+          "signature": "public abstract void collidesWith(sprites.Solid);",
+          "instructions": 0,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public abstract void collisionEnds();",
+          "instructions": 0,
+          "branches": 0,
+          "calls": {}
+        }
+      ]
+    },
+    {
+      "class": "sprites.SolidSprite",
+      "method_count": 7,
+      "instructions": 367,
+      "branches": 51,
+      "methods": [
+        {
+          "signature": "public sprites.SolidSprite(javax.microedition.lcdui.Image, int, int);",
+          "instructions": 11,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public sprites.SolidSprite(javax.microedition.lcdui.Image, int, int, int, int);",
+          "instructions": 13,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public sprites.SolidSprite(sprites.SolidSprite);",
+          "instructions": 13,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public void move();",
+          "instructions": 92,
+          "branches": 13,
+          "calls": {
+            "sprites.ActiveSprite.move": 1,
+            "sprites.Broker.instance": 1,
+            "sprites.Broker.get": 1,
+            "sprites.MoveableLayerManager.getLayerAt": 1,
+            "sprites.MoveableLayerManager.getSize": 1,
+            "java.util.Vector.elements": 1,
+            "java.util.Enumeration.nextElement": 1,
+            "java.util.Vector.contains": 1
+          }
+        },
+        {
+          "signature": "public void collidesWith(sprites.Solid);",
+          "instructions": 232,
+          "branches": 38,
+          "calls": {
+            "java.lang.Math.abs": 8,
+            "javax.microedition.lcdui.game.Layer.getX": 2,
+            "javax.microedition.lcdui.game.Layer.getY": 2,
+            "javax.microedition.lcdui.game.Layer.getWidth": 1,
+            "javax.microedition.lcdui.game.Layer.getHeight": 1,
+            "sprites.Solid.collidesWith": 1
+          }
+        },
+        {
+          "signature": "public void collisionStarts(sprites.Solid);",
+          "instructions": 5,
+          "branches": 0,
+          "calls": {
+            "java.util.Vector.addElement": 1
+          }
+        },
+        {
+          "signature": "public void collisionEnds();",
+          "instructions": 1,
+          "branches": 0,
+          "calls": {}
+        }
+      ]
+    },
+    {
+      "class": "sprites.UserSprite",
+      "method_count": 12,
+      "instructions": 126,
+      "branches": 6,
+      "methods": [
+        {
+          "signature": "public sprites.UserSprite(javax.microedition.lcdui.Image, int);",
+          "instructions": 7,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public sprites.UserSprite(javax.microedition.lcdui.Image, int, int, int);",
+          "instructions": 9,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public sprites.UserSprite(sprites.UserSprite);",
+          "instructions": 12,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public void move();",
+          "instructions": 51,
+          "branches": 5,
+          "calls": {
+            "sprites.Broker.instance": 1,
+            "sprites.Broker.get": 1,
+            "sprites.ConcreteGameCanvas.getKeyStates": 1
+          }
+        },
+        {
+          "signature": "public boolean isMoving();",
+          "instructions": 16,
+          "branches": 1,
+          "calls": {
+            "sprites.Broker.instance": 1,
+            "sprites.Broker.get": 1,
+            "sprites.ConcreteGameCanvas.getKeyStates": 1
+          }
+        },
+        {
+          "signature": "public void collidesWith(sprites.Solid);",
+          "instructions": 1,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public void collisionEnds();",
+          "instructions": 3,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public void leftMove();",
+          "instructions": 7,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public void rightMove();",
+          "instructions": 6,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public void upMove();",
+          "instructions": 7,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public void downMove();",
+          "instructions": 6,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public void fire();",
+          "instructions": 1,
+          "branches": 0,
+          "calls": {}
+        }
+      ]
+    }
+  ],
+  "limitation": "Static method inspection, no game execution, no proof of hot paths or semantic equivalence."
+}

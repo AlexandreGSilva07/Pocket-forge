@@ -1,0 +1,1092 @@
+{
+  "rank": 92,
+  "jar_path": "All Java Mobile Phone Games/S/Space Invaders/SpruceInvaders.jar",
+  "jar_sha256": "28ed3efc8184427e2887d7d0ea360e031595b12c2fee6cd6445f17ec0f29017f",
+  "title": "Spruce Invaders",
+  "track": "compact",
+  "status": "BYTECODE_DISASSEMBLED_INDEXED_NOT_FULLY_REVIEWED",
+  "tool": "OpenJDK javap -p -c; JAR never executed",
+  "classes": 12,
+  "classes_decoded": 11,
+  "methods": 72,
+  "instructions": 4961,
+  "branches": 266,
+  "errors": [
+    {
+      "class_file": "org/spruce/midp/common/a.class",
+      "reason": "no method signatures detected (obfuscated/invalid class?)"
+    }
+  ],
+  "hot_methods_by_static_instruction_count": [
+    {
+      "class": "org.spruce.midp.common.c",
+      "signature": "public org.spruce.midp.common.c(javax.microedition.lcdui.Display, javax.microedition.lcdui.Displayable);",
+      "instructions": 1889,
+      "branches": 0,
+      "priority_score": 1889,
+      "calls": {
+        "javax.microedition.lcdui.Display.setCurrent": 1
+      }
+    },
+    {
+      "class": "org.spruce.midp.invaders.e",
+      "signature": "public void v();",
+      "instructions": 641,
+      "branches": 84,
+      "priority_score": 893,
+      "calls": {
+        "org.spruce.midp.invaders.f.a": 21,
+        "org.spruce.midp.invaders.f.b": 13,
+        "java.lang.Math.abs": 5,
+        "java.util.Hashtable.elements": 4,
+        "java.util.Enumeration.nextElement": 4,
+        "java.util.Enumeration.hasMoreElements": 4,
+        "java.util.Random.nextInt": 3,
+        "java.util.Hashtable.remove": 3,
+        "java.util.Hashtable.isEmpty": 3,
+        "java.util.Hashtable.size": 2,
+        "java.util.Hashtable.put": 2,
+        "java.util.Hashtable.containsKey": 1
+      }
+    },
+    {
+      "class": "org.spruce.midp.invaders.h",
+      "signature": "public void run();",
+      "instructions": 200,
+      "branches": 18,
+      "priority_score": 854,
+      "calls": {
+        "org.spruce.midp.invaders.f.a": 4,
+        "org.spruce.midp.invaders.f.b": 4,
+        "javax.microedition.lcdui.Canvas.repaint": 2,
+        "org.spruce.midp.invaders.e.q": 2,
+        "org.spruce.midp.invaders.c.a": 2,
+        "java.lang.Throwable.printStackTrace": 2,
+        "org.spruce.midp.invaders.e.s": 2,
+        "javax.microedition.lcdui.Image.getGraphics": 2,
+        "javax.microedition.lcdui.Graphics.setGrayScale": 2,
+        "org.spruce.midp.invaders.e.e": 2,
+        "org.spruce.midp.invaders.e.f": 2,
+        "javax.microedition.lcdui.Graphics.fillRect": 2,
+        "java.util.Hashtable.put": 2,
+        "java.lang.Thread.currentThread": 1,
+        "java.lang.Thread.sleep": 1,
+        "org.spruce.midp.invaders.e.w": 1,
+        "java.util.Hashtable.elements": 1,
+        "java.util.Enumeration.nextElement": 1,
+        "org.spruce.midp.invaders.g.c": 1,
+        "java.util.Hashtable.remove": 1
+      }
+    },
+    {
+      "class": "org.spruce.midp.invaders.e",
+      "signature": "public org.spruce.midp.invaders.e(int, int, int);",
+      "instructions": 505,
+      "branches": 25,
+      "priority_score": 580,
+      "calls": {
+        "java.lang.StringBuffer.append": 18,
+        "java.lang.StringBuffer.toString": 9,
+        "org.spruce.midp.invaders.c.a": 9,
+        "java.lang.Math.max": 6,
+        "java.util.Hashtable.put": 4,
+        "org.spruce.midp.invaders.d.a": 1,
+        "org.spruce.midp.invaders.d.b": 1
+      }
+    },
+    {
+      "class": "org.spruce.midp.invaders.h",
+      "signature": "private void a();",
+      "instructions": 199,
+      "branches": 9,
+      "priority_score": 425,
+      "calls": {
+        "org.spruce.midp.invaders.d.a": 7,
+        "org.spruce.midp.invaders.e.c": 3,
+        "org.spruce.midp.invaders.e.d": 3,
+        "javax.microedition.lcdui.Image.createImage": 2,
+        "javax.microedition.lcdui.Image.getGraphics": 2,
+        "javax.microedition.lcdui.Graphics.setGrayScale": 2,
+        "javax.microedition.lcdui.Graphics.fillRect": 2,
+        "javax.microedition.lcdui.Graphics.drawImage": 2,
+        "javax.microedition.lcdui.Canvas.getWidth": 1,
+        "javax.microedition.lcdui.Canvas.getHeight": 1,
+        "org.spruce.midp.invaders.e.e": 1,
+        "org.spruce.midp.invaders.e.f": 1
+      }
+    },
+    {
+      "class": "org.spruce.midp.invaders.h",
+      "signature": "private void b();",
+      "instructions": 160,
+      "branches": 14,
+      "priority_score": 362,
+      "calls": {
+        "javax.microedition.lcdui.Graphics.drawImage": 5,
+        "org.spruce.midp.invaders.f.a": 3,
+        "org.spruce.midp.invaders.f.b": 3,
+        "javax.microedition.lcdui.Canvas.getHeight": 2,
+        "org.spruce.midp.invaders.e.m": 2,
+        "java.util.Enumeration.nextElement": 2,
+        "java.util.Enumeration.hasMoreElements": 2,
+        "org.spruce.midp.invaders.e.a": 2,
+        "javax.microedition.lcdui.Image.getGraphics": 1,
+        "org.spruce.midp.invaders.e.i": 1,
+        "org.spruce.midp.invaders.e.j": 1,
+        "org.spruce.midp.invaders.e.k": 1,
+        "org.spruce.midp.invaders.e.l": 1,
+        "java.util.Hashtable.elements": 1,
+        "org.spruce.midp.invaders.g.c": 1,
+        "org.spruce.midp.invaders.e.n": 1,
+        "org.spruce.midp.invaders.e.p": 1,
+        "java.lang.String.valueOf": 1,
+        "javax.microedition.lcdui.Canvas.getWidth": 1,
+        "javax.microedition.lcdui.Graphics.drawString": 1
+      }
+    },
+    {
+      "class": "org.spruce.midp.invaders.h",
+      "signature": "public org.spruce.midp.invaders.h();",
+      "instructions": 129,
+      "branches": 4,
+      "priority_score": 270,
+      "calls": {
+        "javax.microedition.lcdui.Canvas.getWidth": 4,
+        "javax.microedition.lcdui.Canvas.getHeight": 4,
+        "org.spruce.midp.invaders.d.a": 4,
+        "javax.microedition.lcdui.Image.createImage": 2,
+        "javax.microedition.lcdui.Image.getGraphics": 2,
+        "javax.microedition.lcdui.Graphics.setGrayScale": 2,
+        "javax.microedition.lcdui.Graphics.fillRect": 2,
+        "javax.microedition.lcdui.Font.getFont": 1,
+        "java.lang.Thread.start": 1
+      }
+    },
+    {
+      "class": "org.spruce.midp.common.c",
+      "signature": "protected void paint(javax.microedition.lcdui.Graphics);",
+      "instructions": 96,
+      "branches": 5,
+      "priority_score": 207,
+      "calls": {
+        "javax.microedition.lcdui.Canvas.getWidth": 4,
+        "javax.microedition.lcdui.Canvas.getHeight": 4,
+        "javax.microedition.lcdui.Graphics.setColor": 2,
+        "java.io.PrintStream.println": 2,
+        "javax.microedition.lcdui.Graphics.drawString": 2,
+        "javax.microedition.lcdui.Graphics.fillRect": 1,
+        "javax.microedition.lcdui.Image.createImage": 1,
+        "java.lang.Throwable.getMessage": 1,
+        "javax.microedition.lcdui.Graphics.drawImage": 1,
+        "javax.microedition.lcdui.Font.getDefaultFont": 1,
+        "javax.microedition.lcdui.Font.getHeight": 1
+      }
+    },
+    {
+      "class": "org.spruce.midp.invaders.d",
+      "signature": "public static javax.microedition.lcdui.Image a(int);",
+      "instructions": 113,
+      "branches": 10,
+      "priority_score": 143,
+      "calls": {
+        "javax.microedition.lcdui.Graphics.setGrayScale": 2,
+        "javax.microedition.lcdui.Graphics.fillRect": 2,
+        "java.lang.Math.max": 2,
+        "javax.microedition.lcdui.Image.createImage": 1,
+        "javax.microedition.lcdui.Image.getGraphics": 1,
+        "java.lang.String.toCharArray": 1
+      }
+    },
+    {
+      "class": "org.spruce.midp.invaders.e",
+      "signature": "private boolean a(int, int, int, int, int, int, int, int);",
+      "instructions": 112,
+      "branches": 8,
+      "priority_score": 136,
+      "calls": {
+        "java.lang.StringBuffer.append": 16,
+        "java.lang.StringBuffer.toString": 4,
+        "org.spruce.midp.invaders.c.a": 4
+      }
+    },
+    {
+      "class": "org.spruce.midp.invaders.InvadersMIDlet",
+      "signature": "public void commandAction(javax.microedition.lcdui.Command, javax.microedition.lcdui.Displayable);",
+      "instructions": 82,
+      "branches": 13,
+      "priority_score": 121,
+      "calls": {
+        "javax.microedition.lcdui.Display.getDisplay": 2,
+        "javax.microedition.lcdui.Display.setCurrent": 2,
+        "org.spruce.midp.invaders.h.a": 2,
+        "javax.microedition.lcdui.Displayable.removeCommand": 2,
+        "javax.microedition.lcdui.Displayable.addCommand": 2,
+        "javax.microedition.midlet.MIDlet.notifyDestroyed": 1
+      }
+    },
+    {
+      "class": "org.spruce.midp.invaders.InvadersMIDlet",
+      "signature": "public org.spruce.midp.invaders.InvadersMIDlet();",
+      "instructions": 110,
+      "branches": 0,
+      "priority_score": 110,
+      "calls": {
+        "javax.microedition.lcdui.Displayable.addCommand": 4,
+        "javax.microedition.lcdui.Alert.setTimeout": 2,
+        "javax.microedition.lcdui.Displayable.setCommandListener": 1
+      }
+    }
+  ],
+  "call_targets": [
+    {
+      "target": "java.lang.StringBuffer.append",
+      "count": 38
+    },
+    {
+      "target": "org.spruce.midp.invaders.f.a",
+      "count": 28
+    },
+    {
+      "target": "org.spruce.midp.invaders.f.b",
+      "count": 21
+    },
+    {
+      "target": "org.spruce.midp.invaders.c.a",
+      "count": 17
+    },
+    {
+      "target": "java.lang.StringBuffer.toString",
+      "count": 15
+    },
+    {
+      "target": "org.spruce.midp.invaders.d.a",
+      "count": 12
+    },
+    {
+      "target": "javax.microedition.lcdui.Canvas.getHeight",
+      "count": 11
+    },
+    {
+      "target": "javax.microedition.lcdui.Canvas.getWidth",
+      "count": 10
+    },
+    {
+      "target": "javax.microedition.lcdui.Graphics.fillRect",
+      "count": 10
+    },
+    {
+      "target": "javax.microedition.lcdui.Graphics.setGrayScale",
+      "count": 10
+    },
+    {
+      "target": "java.lang.Math.max",
+      "count": 10
+    },
+    {
+      "target": "javax.microedition.lcdui.Graphics.drawImage",
+      "count": 9
+    },
+    {
+      "target": "javax.microedition.lcdui.Image.getGraphics",
+      "count": 8
+    },
+    {
+      "target": "java.util.Hashtable.put",
+      "count": 8
+    },
+    {
+      "target": "java.util.Hashtable.elements",
+      "count": 7
+    },
+    {
+      "target": "java.util.Enumeration.nextElement",
+      "count": 7
+    },
+    {
+      "target": "java.util.Enumeration.hasMoreElements",
+      "count": 7
+    },
+    {
+      "target": "javax.microedition.lcdui.Image.createImage",
+      "count": 6
+    },
+    {
+      "target": "java.lang.String.toCharArray",
+      "count": 6
+    },
+    {
+      "target": "javax.microedition.lcdui.Displayable.addCommand",
+      "count": 6
+    },
+    {
+      "target": "javax.microedition.lcdui.Display.setCurrent",
+      "count": 5
+    },
+    {
+      "target": "java.lang.Math.abs",
+      "count": 5
+    },
+    {
+      "target": "org.spruce.midp.invaders.h.a",
+      "count": 4
+    },
+    {
+      "target": "javax.microedition.lcdui.Display.getDisplay",
+      "count": 4
+    },
+    {
+      "target": "java.util.Hashtable.remove",
+      "count": 4
+    },
+    {
+      "target": "javax.microedition.lcdui.Graphics.drawString",
+      "count": 3
+    },
+    {
+      "target": "javax.microedition.lcdui.Canvas.repaint",
+      "count": 3
+    },
+    {
+      "target": "java.util.Random.nextInt",
+      "count": 3
+    },
+    {
+      "target": "java.util.Hashtable.isEmpty",
+      "count": 3
+    },
+    {
+      "target": "org.spruce.midp.invaders.e.e",
+      "count": 3
+    },
+    {
+      "target": "org.spruce.midp.invaders.e.f",
+      "count": 3
+    },
+    {
+      "target": "org.spruce.midp.invaders.e.c",
+      "count": 3
+    },
+    {
+      "target": "org.spruce.midp.invaders.e.d",
+      "count": 3
+    },
+    {
+      "target": "javax.microedition.lcdui.Graphics.setColor",
+      "count": 2
+    },
+    {
+      "target": "java.io.PrintStream.println",
+      "count": 2
+    }
+  ],
+  "opcode_histogram": {
+    "bipush": 570,
+    "dup": 552,
+    "bastore": 464,
+    "aload_0": 460,
+    "sipush": 347,
+    "invokevirtual": 309,
+    "getfield": 268,
+    "iload": 186,
+    "iconst_0": 111,
+    "invokestatic": 107,
+    "putfield": 101,
+    "ifne": 87,
+    "invokespecial": 79,
+    "ldc": 78,
+    "iconst_1": 76,
+    "aload_1": 71,
+    "new": 56,
+    "iadd": 53,
+    "aload_2": 52,
+    "ifeq": 48,
+    "iload_3": 44,
+    "iload_2": 43,
+    "return": 42,
+    "istore": 41,
+    "goto": 40,
+    "imul": 36,
+    "idiv": 34,
+    "aload": 34,
+    "iconst_5": 33,
+    "iconst_2": 32,
+    "getstatic": 29,
+    "ireturn": 26,
+    "if_icmplt": 23,
+    "iload_1": 23,
+    "aastore": 23
+  },
+  "resource_file_count": 1,
+  "resources_by_suffix": {
+    ".mf": 1
+  },
+  "class_methods": [
+    {
+      "class": "org.spruce.midp.common.b",
+      "source_mode": "jar_classpath",
+      "method_count": 3,
+      "instructions": 14,
+      "branches": 0,
+      "methods": [
+        {
+          "signature": "private org.spruce.midp.common.b(org.spruce.midp.common.c);",
+          "instructions": 6,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public void run();",
+          "instructions": 4,
+          "branches": 0,
+          "calls": {
+            "org.spruce.midp.common.c.a": 1
+          }
+        },
+        {
+          "signature": "org.spruce.midp.common.b(org.spruce.midp.common.c, org.spruce.midp.common.a);",
+          "instructions": 4,
+          "branches": 0,
+          "calls": {}
+        }
+      ]
+    },
+    {
+      "class": "org.spruce.midp.common.c",
+      "source_mode": "jar_classpath",
+      "method_count": 9,
+      "instructions": 2090,
+      "branches": 18,
+      "methods": [
+        {
+          "signature": "public org.spruce.midp.common.c(javax.microedition.lcdui.Display, javax.microedition.lcdui.Displayable);",
+          "instructions": 1889,
+          "branches": 0,
+          "calls": {
+            "javax.microedition.lcdui.Display.setCurrent": 1
+          }
+        },
+        {
+          "signature": "protected void keyPressed(int);",
+          "instructions": 3,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "protected void paint(javax.microedition.lcdui.Graphics);",
+          "instructions": 96,
+          "branches": 5,
+          "calls": {
+            "javax.microedition.lcdui.Canvas.getWidth": 4,
+            "javax.microedition.lcdui.Canvas.getHeight": 4,
+            "javax.microedition.lcdui.Graphics.setColor": 2,
+            "java.io.PrintStream.println": 2,
+            "javax.microedition.lcdui.Graphics.drawString": 2,
+            "javax.microedition.lcdui.Graphics.fillRect": 1,
+            "javax.microedition.lcdui.Image.createImage": 1,
+            "java.lang.Throwable.getMessage": 1
+          }
+        },
+        {
+          "signature": "protected void pointerPressed(int, int);",
+          "instructions": 3,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "protected void showNotify();",
+          "instructions": 18,
+          "branches": 0,
+          "calls": {
+            "java.util.Timer.schedule": 1,
+            "java.lang.Thread.start": 1
+          }
+        },
+        {
+          "signature": "private void a();",
+          "instructions": 9,
+          "branches": 0,
+          "calls": {
+            "java.util.Timer.cancel": 1,
+            "javax.microedition.lcdui.Display.setCurrent": 1
+          }
+        },
+        {
+          "signature": "public void run();",
+          "instructions": 24,
+          "branches": 4,
+          "calls": {
+            "java.lang.Thread.sleep": 1,
+            "javax.microedition.lcdui.Canvas.repaint": 1
+          }
+        },
+        {
+          "signature": "static void a(org.spruce.midp.common.c);",
+          "instructions": 3,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "private static java.lang.String a(java.lang.String);",
+          "instructions": 45,
+          "branches": 9,
+          "calls": {
+            "java.lang.String.toCharArray": 1
+          }
+        }
+      ]
+    },
+    {
+      "class": "org.spruce.midp.invaders.InvadersMIDlet",
+      "source_mode": "jar_classpath",
+      "method_count": 6,
+      "instructions": 273,
+      "branches": 25,
+      "methods": [
+        {
+          "signature": "public org.spruce.midp.invaders.InvadersMIDlet();",
+          "instructions": 110,
+          "branches": 0,
+          "calls": {
+            "javax.microedition.lcdui.Displayable.addCommand": 4,
+            "javax.microedition.lcdui.Alert.setTimeout": 2,
+            "javax.microedition.lcdui.Displayable.setCommandListener": 1
+          }
+        },
+        {
+          "signature": "public void startApp();",
+          "instructions": 30,
+          "branches": 3,
+          "calls": {
+            "javax.microedition.lcdui.Display.getDisplay": 2,
+            "org.spruce.midp.invaders.h.a": 1,
+            "javax.microedition.lcdui.Display.setCurrent": 1
+          }
+        },
+        {
+          "signature": "public void pauseApp();",
+          "instructions": 5,
+          "branches": 0,
+          "calls": {
+            "org.spruce.midp.invaders.h.a": 1
+          }
+        },
+        {
+          "signature": "public void destroyApp(boolean);",
+          "instructions": 1,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public void commandAction(javax.microedition.lcdui.Command, javax.microedition.lcdui.Displayable);",
+          "instructions": 82,
+          "branches": 13,
+          "calls": {
+            "javax.microedition.lcdui.Display.getDisplay": 2,
+            "javax.microedition.lcdui.Display.setCurrent": 2,
+            "org.spruce.midp.invaders.h.a": 2,
+            "javax.microedition.lcdui.Displayable.removeCommand": 2,
+            "javax.microedition.lcdui.Displayable.addCommand": 2,
+            "javax.microedition.midlet.MIDlet.notifyDestroyed": 1
+          }
+        },
+        {
+          "signature": "private static java.lang.String a(java.lang.String);",
+          "instructions": 45,
+          "branches": 9,
+          "calls": {
+            "java.lang.String.toCharArray": 1
+          }
+        }
+      ]
+    },
+    {
+      "class": "org.spruce.midp.invaders.a",
+      "source_mode": "jar_classpath",
+      "method_count": 1,
+      "instructions": 6,
+      "branches": 0,
+      "methods": [
+        {
+          "signature": "org.spruce.midp.invaders.a(org.spruce.midp.invaders.e);",
+          "instructions": 6,
+          "branches": 0,
+          "calls": {}
+        }
+      ]
+    },
+    {
+      "class": "org.spruce.midp.invaders.b",
+      "source_mode": "jar_classpath",
+      "method_count": 1,
+      "instructions": 6,
+      "branches": 0,
+      "methods": [
+        {
+          "signature": "org.spruce.midp.invaders.b(org.spruce.midp.invaders.e);",
+          "instructions": 6,
+          "branches": 0,
+          "calls": {}
+        }
+      ]
+    },
+    {
+      "class": "org.spruce.midp.invaders.c",
+      "source_mode": "jar_classpath",
+      "method_count": 2,
+      "instructions": 4,
+      "branches": 0,
+      "methods": [
+        {
+          "signature": "org.spruce.midp.invaders.c();",
+          "instructions": 3,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public static void a(java.lang.String);",
+          "instructions": 1,
+          "branches": 0,
+          "calls": {}
+        }
+      ]
+    },
+    {
+      "class": "org.spruce.midp.invaders.d",
+      "source_mode": "jar_classpath",
+      "method_count": 6,
+      "instructions": 238,
+      "branches": 19,
+      "methods": [
+        {
+          "signature": "org.spruce.midp.invaders.d();",
+          "instructions": 3,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public static void a(int, int);",
+          "instructions": 5,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public static javax.microedition.lcdui.Image a(int);",
+          "instructions": 113,
+          "branches": 10,
+          "calls": {
+            "javax.microedition.lcdui.Graphics.setGrayScale": 2,
+            "javax.microedition.lcdui.Graphics.fillRect": 2,
+            "java.lang.Math.max": 2,
+            "javax.microedition.lcdui.Image.createImage": 1,
+            "javax.microedition.lcdui.Image.getGraphics": 1,
+            "java.lang.String.toCharArray": 1
+          }
+        },
+        {
+          "signature": "public static int a();",
+          "instructions": 2,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public static int b();",
+          "instructions": 70,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "private static java.lang.String a(java.lang.String);",
+          "instructions": 45,
+          "branches": 9,
+          "calls": {
+            "java.lang.String.toCharArray": 1
+          }
+        }
+      ]
+    },
+    {
+      "class": "org.spruce.midp.invaders.e",
+      "source_mode": "jar_classpath",
+      "method_count": 25,
+      "instructions": 1415,
+      "branches": 131,
+      "methods": [
+        {
+          "signature": "public org.spruce.midp.invaders.e(int, int, int);",
+          "instructions": 505,
+          "branches": 25,
+          "calls": {
+            "java.lang.StringBuffer.append": 18,
+            "java.lang.StringBuffer.toString": 9,
+            "org.spruce.midp.invaders.c.a": 9,
+            "java.lang.Math.max": 6,
+            "java.util.Hashtable.put": 4,
+            "org.spruce.midp.invaders.d.a": 1,
+            "org.spruce.midp.invaders.d.b": 1
+          }
+        },
+        {
+          "signature": "public int a();",
+          "instructions": 3,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public int b();",
+          "instructions": 3,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public int c();",
+          "instructions": 3,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public int d();",
+          "instructions": 3,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public int e();",
+          "instructions": 3,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public int f();",
+          "instructions": 3,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public int g();",
+          "instructions": 7,
+          "branches": 0,
+          "calls": {
+            "java.lang.Math.max": 1
+          }
+        },
+        {
+          "signature": "public int h();",
+          "instructions": 7,
+          "branches": 0,
+          "calls": {
+            "java.lang.Math.max": 1
+          }
+        },
+        {
+          "signature": "public int i();",
+          "instructions": 3,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public int j();",
+          "instructions": 3,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public int k();",
+          "instructions": 3,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public int l();",
+          "instructions": 3,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public int m();",
+          "instructions": 3,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public org.spruce.midp.invaders.f n();",
+          "instructions": 10,
+          "branches": 1,
+          "calls": {
+            "org.spruce.midp.invaders.f.b": 1
+          }
+        },
+        {
+          "signature": "public boolean o();",
+          "instructions": 3,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public java.util.Enumeration p();",
+          "instructions": 4,
+          "branches": 0,
+          "calls": {
+            "java.util.Hashtable.elements": 1
+          }
+        },
+        {
+          "signature": "public int q();",
+          "instructions": 3,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public boolean r();",
+          "instructions": 3,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public org.spruce.midp.invaders.f s();",
+          "instructions": 3,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public void t();",
+          "instructions": 17,
+          "branches": 2,
+          "calls": {}
+        },
+        {
+          "signature": "public void u();",
+          "instructions": 22,
+          "branches": 2,
+          "calls": {}
+        },
+        {
+          "signature": "public void v();",
+          "instructions": 641,
+          "branches": 84,
+          "calls": {
+            "org.spruce.midp.invaders.f.a": 21,
+            "org.spruce.midp.invaders.f.b": 13,
+            "java.lang.Math.abs": 5,
+            "java.util.Hashtable.elements": 4,
+            "java.util.Enumeration.nextElement": 4,
+            "java.util.Enumeration.hasMoreElements": 4,
+            "java.util.Random.nextInt": 3,
+            "java.util.Hashtable.remove": 3
+          }
+        },
+        {
+          "signature": "private boolean a(int, int, int, int, int, int, int, int);",
+          "instructions": 112,
+          "branches": 8,
+          "calls": {
+            "java.lang.StringBuffer.append": 16,
+            "java.lang.StringBuffer.toString": 4,
+            "org.spruce.midp.invaders.c.a": 4
+          }
+        },
+        {
+          "signature": "private static java.lang.String a(java.lang.String);",
+          "instructions": 45,
+          "branches": 9,
+          "calls": {
+            "java.lang.String.toCharArray": 1
+          }
+        }
+      ]
+    },
+    {
+      "class": "org.spruce.midp.invaders.f",
+      "source_mode": "jar_classpath",
+      "method_count": 6,
+      "instructions": 52,
+      "branches": 3,
+      "methods": [
+        {
+          "signature": "public org.spruce.midp.invaders.f(int, int);",
+          "instructions": 16,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public int a();",
+          "instructions": 3,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public int b();",
+          "instructions": 3,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public void a(int, int);",
+          "instructions": 7,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public int hashCode();",
+          "instructions": 3,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public boolean equals(java.lang.Object);",
+          "instructions": 20,
+          "branches": 3,
+          "calls": {}
+        }
+      ]
+    },
+    {
+      "class": "org.spruce.midp.invaders.g",
+      "source_mode": "jar_classpath",
+      "method_count": 3,
+      "instructions": 15,
+      "branches": 0,
+      "methods": [
+        {
+          "signature": "public org.spruce.midp.invaders.g(int, int);",
+          "instructions": 5,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public int c();",
+          "instructions": 3,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public void d();",
+          "instructions": 7,
+          "branches": 0,
+          "calls": {}
+        }
+      ]
+    },
+    {
+      "class": "org.spruce.midp.invaders.h",
+      "source_mode": "jar_classpath",
+      "method_count": 10,
+      "instructions": 848,
+      "branches": 70,
+      "methods": [
+        {
+          "signature": "public org.spruce.midp.invaders.h();",
+          "instructions": 129,
+          "branches": 4,
+          "calls": {
+            "javax.microedition.lcdui.Canvas.getWidth": 4,
+            "javax.microedition.lcdui.Canvas.getHeight": 4,
+            "org.spruce.midp.invaders.d.a": 4,
+            "javax.microedition.lcdui.Image.createImage": 2,
+            "javax.microedition.lcdui.Image.getGraphics": 2,
+            "javax.microedition.lcdui.Graphics.setGrayScale": 2,
+            "javax.microedition.lcdui.Graphics.fillRect": 2,
+            "javax.microedition.lcdui.Font.getFont": 1
+          }
+        },
+        {
+          "signature": "private void a();",
+          "instructions": 199,
+          "branches": 9,
+          "calls": {
+            "org.spruce.midp.invaders.d.a": 7,
+            "org.spruce.midp.invaders.e.c": 3,
+            "org.spruce.midp.invaders.e.d": 3,
+            "javax.microedition.lcdui.Image.createImage": 2,
+            "javax.microedition.lcdui.Image.getGraphics": 2,
+            "javax.microedition.lcdui.Graphics.setGrayScale": 2,
+            "javax.microedition.lcdui.Graphics.fillRect": 2,
+            "javax.microedition.lcdui.Graphics.drawImage": 2
+          }
+        },
+        {
+          "signature": "public void paint(javax.microedition.lcdui.Graphics);",
+          "instructions": 8,
+          "branches": 0,
+          "calls": {
+            "javax.microedition.lcdui.Graphics.drawImage": 1
+          }
+        },
+        {
+          "signature": "public void keyPressed(int);",
+          "instructions": 49,
+          "branches": 14,
+          "calls": {
+            "javax.microedition.lcdui.Canvas.getGameAction": 1,
+            "org.spruce.midp.invaders.e.v": 1,
+            "org.spruce.midp.invaders.e.t": 1,
+            "org.spruce.midp.invaders.e.u": 1
+          }
+        },
+        {
+          "signature": "public void keyRepeated(int);",
+          "instructions": 4,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public void run();",
+          "instructions": 200,
+          "branches": 18,
+          "calls": {
+            "org.spruce.midp.invaders.f.a": 4,
+            "org.spruce.midp.invaders.f.b": 4,
+            "javax.microedition.lcdui.Canvas.repaint": 2,
+            "org.spruce.midp.invaders.e.q": 2,
+            "org.spruce.midp.invaders.c.a": 2,
+            "java.lang.Throwable.printStackTrace": 2,
+            "org.spruce.midp.invaders.e.s": 2,
+            "javax.microedition.lcdui.Image.getGraphics": 2
+          }
+        },
+        {
+          "signature": "private void b();",
+          "instructions": 160,
+          "branches": 14,
+          "calls": {
+            "javax.microedition.lcdui.Graphics.drawImage": 5,
+            "org.spruce.midp.invaders.f.a": 3,
+            "org.spruce.midp.invaders.f.b": 3,
+            "javax.microedition.lcdui.Canvas.getHeight": 2,
+            "org.spruce.midp.invaders.e.m": 2,
+            "java.util.Enumeration.nextElement": 2,
+            "java.util.Enumeration.hasMoreElements": 2,
+            "org.spruce.midp.invaders.e.a": 2
+          }
+        },
+        {
+          "signature": "private void a(javax.microedition.lcdui.Graphics, int, int);",
+          "instructions": 46,
+          "branches": 0,
+          "calls": {
+            "java.lang.StringBuffer.append": 4,
+            "org.spruce.midp.invaders.e.g": 2,
+            "java.lang.StringBuffer.toString": 2,
+            "org.spruce.midp.invaders.c.a": 2,
+            "javax.microedition.lcdui.Graphics.setGrayScale": 1,
+            "javax.microedition.lcdui.Graphics.fillRect": 1
+          }
+        },
+        {
+          "signature": "public void a(boolean);",
+          "instructions": 8,
+          "branches": 2,
+          "calls": {}
+        },
+        {
+          "signature": "private static java.lang.String a(java.lang.String);",
+          "instructions": 45,
+          "branches": 9,
+          "calls": {
+            "java.lang.String.toCharArray": 1
+          }
+        }
+      ]
+    }
+  ],
+  "limitation": "Static method inspection, no game execution, no proof of hot paths or semantic equivalence."
+}

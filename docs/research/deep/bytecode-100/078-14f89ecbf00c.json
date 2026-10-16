@@ -1,0 +1,2063 @@
+{
+  "rank": 78,
+  "jar_path": "All Java Mobile Phone Games/B/Beach Rally/beachrally.jar",
+  "jar_sha256": "14f89ecbf00ce4e6df9546181446855965ad212aae10376b568a9faa8d967b39",
+  "title": "Beach Rally",
+  "track": "physics",
+  "status": "BYTECODE_DISASSEMBLED_INDEXED_NOT_FULLY_REVIEWED",
+  "tool": "OpenJDK javap -p -c; JAR never executed",
+  "classes": 17,
+  "classes_decoded": 17,
+  "methods": 188,
+  "instructions": 9487,
+  "branches": 514,
+  "errors": [],
+  "hot_methods_by_static_instruction_count": [
+    {
+      "class": "com.nokia.mid.appl.raci.c",
+      "signature": "public com.nokia.mid.appl.raci.c();",
+      "instructions": 2585,
+      "branches": 2,
+      "priority_score": 2591,
+      "calls": {
+        "com.nokia.mid.appl.raci.h.a": 2,
+        "com.nokia.mid.appl.raci.d.a": 1,
+        "com.nokia.mid.appl.raci.h.m": 1,
+        "com.nokia.mid.appl.raci.h.l": 1,
+        "com.nokia.mid.appl.raci.h.g": 1,
+        "com.nokia.mid.appl.raci.h.f": 1,
+        "com.nokia.mid.appl.raci.h.d": 1,
+        "com.nokia.mid.appl.raci.h.c": 1,
+        "com.nokia.mid.appl.raci.h.e": 1,
+        "com.nokia.mid.appl.raci.h.h": 1,
+        "com.nokia.mid.appl.raci.h.b": 1,
+        "com.nokia.mid.appl.raci.h.n": 1,
+        "com.nokia.mid.appl.raci.h.q": 1,
+        "com.nokia.mid.appl.raci.h.o": 1,
+        "com.nokia.mid.appl.raci.h.i": 1,
+        "com.nokia.mid.appl.raci.h.j": 1,
+        "javax.microedition.lcdui.Font.getFont": 1
+      }
+    },
+    {
+      "class": "com.nokia.mid.appl.raci.c",
+      "signature": "private void d(javax.microedition.lcdui.Graphics);",
+      "instructions": 691,
+      "branches": 31,
+      "priority_score": 1475,
+      "calls": {
+        "javax.microedition.lcdui.Graphics.drawImage": 16,
+        "javax.microedition.lcdui.Graphics.setColor": 3,
+        "javax.microedition.lcdui.Graphics.fillRect": 3,
+        "com.nokia.mid.appl.raci.h.p": 1
+      }
+    },
+    {
+      "class": "com.nokia.mid.appl.raci.c",
+      "signature": "public void d(int, int);",
+      "instructions": 756,
+      "branches": 79,
+      "priority_score": 993,
+      "calls": {
+        "com.nokia.mid.appl.raci.i.a": 5,
+        "com.nokia.mid.appl.raci.h.a": 2,
+        "com.nokia.mid.appl.raci.i.b": 1,
+        "com.nokia.mid.appl.raci.e.e": 1,
+        "com.nokia.mid.appl.raci.e.c": 1,
+        "com.nokia.mid.appl.raci.e.a": 1,
+        "com.nokia.mid.appl.raci.e.d": 1
+      }
+    },
+    {
+      "class": "com.nokia.mid.appl.raci.c",
+      "signature": "private javax.microedition.lcdui.Image[] a(java.lang.String);",
+      "instructions": 170,
+      "branches": 3,
+      "priority_score": 859,
+      "calls": {
+        "java.io.DataInputStream.readShort": 4,
+        "java.io.DataInputStream.read": 3,
+        "java.io.DataInputStream.readByte": 2,
+        "java.lang.Object.getClass": 1,
+        "java.lang.Class.getResourceAsStream": 1,
+        "javax.microedition.lcdui.Image.createImage": 1,
+        "java.lang.Throwable.printStackTrace": 1
+      }
+    },
+    {
+      "class": "com.nokia.mid.appl.raci.c",
+      "signature": "public void s();",
+      "instructions": 209,
+      "branches": 12,
+      "priority_score": 663,
+      "calls": {
+        "java.io.DataInputStream.readInt": 28,
+        "java.io.DataInputStream.close": 3,
+        "java.io.DataInputStream.readBoolean": 2,
+        "java.lang.Throwable.printStackTrace": 2,
+        "javax.microedition.rms.RecordStore.openRecordStore": 1,
+        "javax.microedition.rms.RecordStore.getNumRecords": 1,
+        "javax.microedition.rms.RecordStore.getRecord": 1,
+        "javax.microedition.rms.RecordStore.closeRecordStore": 1
+      }
+    },
+    {
+      "class": "com.nokia.mid.appl.raci.c",
+      "signature": "private void a(javax.microedition.lcdui.Graphics);",
+      "instructions": 279,
+      "branches": 13,
+      "priority_score": 597,
+      "calls": {
+        "javax.microedition.lcdui.Graphics.drawImage": 8
+      }
+    },
+    {
+      "class": "com.nokia.mid.appl.raci.c",
+      "signature": "private void r();",
+      "instructions": 384,
+      "branches": 49,
+      "priority_score": 531,
+      "calls": {
+        "com.nokia.mid.appl.raci.i.a": 3,
+        "java.util.Random.nextInt": 1
+      }
+    },
+    {
+      "class": "com.nokia.mid.appl.raci.f",
+      "signature": "public static synchronized java.lang.String a(int, java.lang.String[]);",
+      "instructions": 120,
+      "branches": 10,
+      "priority_score": 510,
+      "calls": {
+        "java.lang.StringBuffer.append": 5,
+        "java.lang.Object.getClass": 2,
+        "java.lang.StringBuffer.toString": 2,
+        "java.lang.Class.getResourceAsStream": 2,
+        "java.io.DataInputStream.skipBytes": 2,
+        "java.io.DataInputStream.mark": 1,
+        "java.io.DataInputStream.readShort": 1,
+        "java.io.DataInputStream.readUTF": 1,
+        "java.io.DataInputStream.reset": 1,
+        "java.io.DataInputStream.close": 1,
+        "java.lang.System.getProperty": 1
+      }
+    },
+    {
+      "class": "com.nokia.mid.appl.raci.c",
+      "signature": "private void c(javax.microedition.lcdui.Graphics);",
+      "instructions": 135,
+      "branches": 2,
+      "priority_score": 276,
+      "calls": {
+        "javax.microedition.lcdui.Graphics.setColor": 3,
+        "javax.microedition.lcdui.Graphics.drawImage": 2,
+        "javax.microedition.lcdui.Image.getHeight": 2,
+        "com.nokia.mid.appl.raci.f.a": 2,
+        "javax.microedition.lcdui.Graphics.drawString": 2,
+        "javax.microedition.lcdui.Graphics.setClip": 1,
+        "javax.microedition.lcdui.Canvas.getWidth": 1,
+        "javax.microedition.lcdui.Canvas.getHeight": 1,
+        "javax.microedition.lcdui.Graphics.fillRect": 1,
+        "javax.microedition.lcdui.Graphics.setFont": 1
+      }
+    },
+    {
+      "class": "com.nokia.mid.appl.raci.g",
+      "signature": "public void d();",
+      "instructions": 61,
+      "branches": 7,
+      "priority_score": 265,
+      "calls": {
+        "com.nokia.mid.appl.raci.d.f": 1,
+        "java.lang.System.currentTimeMillis": 1,
+        "com.nokia.mid.appl.raci.d.b": 1,
+        "com.nokia.mid.appl.raci.d.d": 1,
+        "javax.microedition.lcdui.Display.getDisplay": 1,
+        "javax.microedition.lcdui.Display.getCurrent": 1,
+        "javax.microedition.lcdui.Canvas.repaint": 1,
+        "javax.microedition.lcdui.Canvas.serviceRepaints": 1,
+        "java.lang.Thread.yield": 1,
+        "java.lang.Throwable.printStackTrace": 1
+      }
+    },
+    {
+      "class": "com.nokia.mid.appl.raci.c",
+      "signature": "public void e();",
+      "instructions": 256,
+      "branches": 2,
+      "priority_score": 262,
+      "calls": {
+        "com.nokia.mid.appl.raci.h.k": 1
+      }
+    },
+    {
+      "class": "com.nokia.mid.appl.raci.c",
+      "signature": "public void o();",
+      "instructions": 220,
+      "branches": 13,
+      "priority_score": 259,
+      "calls": {
+        "java.io.DataOutputStream.writeInt": 28,
+        "java.io.ByteArrayOutputStream.close": 3,
+        "java.io.DataOutputStream.writeBoolean": 2,
+        "java.lang.Throwable.printStackTrace": 2,
+        "javax.microedition.rms.RecordStore.openRecordStore": 1,
+        "java.io.ByteArrayOutputStream.toByteArray": 1,
+        "javax.microedition.rms.RecordStore.getNumRecords": 1,
+        "javax.microedition.rms.RecordStore.addRecord": 1,
+        "javax.microedition.rms.RecordStore.setRecord": 1,
+        "javax.microedition.rms.RecordStore.closeRecordStore": 1
+      }
+    }
+  ],
+  "call_targets": [
+    {
+      "target": "javax.microedition.lcdui.Graphics.drawImage",
+      "count": 37
+    },
+    {
+      "target": "java.lang.StringBuffer.append",
+      "count": 34
+    },
+    {
+      "target": "java.io.DataInputStream.readInt",
+      "count": 28
+    },
+    {
+      "target": "java.io.DataOutputStream.writeInt",
+      "count": 28
+    },
+    {
+      "target": "javax.microedition.lcdui.Graphics.setColor",
+      "count": 21
+    },
+    {
+      "target": "com.nokia.mid.appl.raci.f.a",
+      "count": 17
+    },
+    {
+      "target": "com.nokia.mid.appl.raci.d.a",
+      "count": 15
+    },
+    {
+      "target": "java.lang.String.substring",
+      "count": 14
+    },
+    {
+      "target": "javax.microedition.lcdui.Graphics.drawLine",
+      "count": 14
+    },
+    {
+      "target": "java.lang.StringBuffer.toString",
+      "count": 13
+    },
+    {
+      "target": "com.nokia.mid.appl.raci.i.a",
+      "count": 12
+    },
+    {
+      "target": "javax.microedition.lcdui.Display.getDisplay",
+      "count": 11
+    },
+    {
+      "target": "java.lang.Throwable.printStackTrace",
+      "count": 10
+    },
+    {
+      "target": "javax.microedition.lcdui.Graphics.fillRect",
+      "count": 10
+    },
+    {
+      "target": "javax.microedition.lcdui.Display.setCurrent",
+      "count": 8
+    },
+    {
+      "target": "javax.microedition.lcdui.Canvas.getKeyCode",
+      "count": 8
+    },
+    {
+      "target": "javax.microedition.lcdui.Canvas.getKeyName",
+      "count": 8
+    },
+    {
+      "target": "java.lang.String.indexOf",
+      "count": 7
+    },
+    {
+      "target": "com.nokia.mid.appl.raci.c.q",
+      "count": 7
+    },
+    {
+      "target": "javax.microedition.lcdui.Canvas.getWidth",
+      "count": 7
+    },
+    {
+      "target": "javax.microedition.lcdui.Canvas.getHeight",
+      "count": 7
+    },
+    {
+      "target": "javax.microedition.lcdui.Display.getCurrent",
+      "count": 5
+    },
+    {
+      "target": "javax.microedition.lcdui.Image.createImage",
+      "count": 5
+    },
+    {
+      "target": "java.io.DataInputStream.readShort",
+      "count": 5
+    },
+    {
+      "target": "java.io.DataInputStream.close",
+      "count": 5
+    },
+    {
+      "target": "com.nokia.mid.sound.Sound.play",
+      "count": 5
+    },
+    {
+      "target": "com.nokia.mid.ui.DeviceControl.setLights",
+      "count": 4
+    },
+    {
+      "target": "com.nokia.mid.appl.raci.c.t",
+      "count": 4
+    },
+    {
+      "target": "javax.microedition.lcdui.Image.getHeight",
+      "count": 4
+    },
+    {
+      "target": "com.nokia.mid.appl.raci.h.a",
+      "count": 4
+    },
+    {
+      "target": "javax.microedition.lcdui.Graphics.setClip",
+      "count": 4
+    },
+    {
+      "target": "javax.microedition.lcdui.Graphics.drawString",
+      "count": 4
+    },
+    {
+      "target": "java.lang.Object.getClass",
+      "count": 4
+    },
+    {
+      "target": "java.lang.Class.getResourceAsStream",
+      "count": 4
+    },
+    {
+      "target": "java.io.DataInputStream.read",
+      "count": 4
+    }
+  ],
+  "opcode_histogram": {
+    "aload_0": 1203,
+    "sipush": 760,
+    "getfield": 730,
+    "dup": 681,
+    "iastore": 619,
+    "bipush": 583,
+    "iload": 509,
+    "invokevirtual": 499,
+    "putfield": 351,
+    "iconst_0": 259,
+    "iconst_1": 241,
+    "istore": 198,
+    "iadd": 171,
+    "goto": 164,
+    "return": 145,
+    "aload_1": 143,
+    "invokespecial": 109,
+    "iconst_2": 108,
+    "invokestatic": 92,
+    "iload_3": 86,
+    "isub": 83,
+    "iload_1": 78,
+    "iload_2": 75,
+    "iinc": 75,
+    "getstatic": 70,
+    "aload_2": 68,
+    "aload": 67,
+    "aload_3": 59,
+    "ldc": 57,
+    "iaload": 55,
+    "if_icmple": 53,
+    "idiv": 52,
+    "aaload": 50,
+    "if_icmpne": 45,
+    "iconst_3": 45
+  },
+  "resource_file_count": 21,
+  "resources_by_suffix": {
+    ".mf": 2,
+    ".ott": 5,
+    ".png": 4,
+    ".de": 1,
+    ".es-es": 1,
+    ".fr": 1,
+    ".it": 1,
+    ".nl-nl": 1,
+    ".pt-pt": 1,
+    ".tr-tr": 1,
+    ".xx": 1,
+    ".sum": 2
+  },
+  "class_methods": [
+    {
+      "class": "com.nokia.mid.appl.raci.GameMIDlet",
+      "source_mode": "isolated_classfile_fallback",
+      "method_count": 10,
+      "instructions": 518,
+      "branches": 50,
+      "methods": [
+        {
+          "signature": "public com.nokia.mid.appl.raci.GameMIDlet();",
+          "instructions": 190,
+          "branches": 5,
+          "calls": {
+            "java.lang.StringBuffer.append": 9,
+            "java.lang.String.substring": 6,
+            "com.nokia.mid.appl.raci.d.a": 3,
+            "java.lang.String.indexOf": 3,
+            "java.lang.StringBuffer.toString": 3,
+            "com.nokia.mid.appl.raci.a.a": 3,
+            "com.nokia.mid.appl.raci.d.setCommandListener": 2,
+            "com.nokia.mid.appl.raci.c.a": 1
+          }
+        },
+        {
+          "signature": "public void startApp();",
+          "instructions": 47,
+          "branches": 5,
+          "calls": {
+            "com.nokia.mid.appl.raci.a.k": 1,
+            "com.nokia.mid.ui.DeviceControl.setLights": 1,
+            "javax.microedition.lcdui.Display.setCurrent": 1,
+            "com.nokia.mid.appl.raci.d.i": 1,
+            "com.nokia.mid.appl.raci.c.i": 1,
+            "java.lang.Thread.start": 1,
+            "java.lang.Throwable.printStackTrace": 1,
+            "javax.microedition.midlet.MIDlet.notifyDestroyed": 1
+          }
+        },
+        {
+          "signature": "public void pauseApp();",
+          "instructions": 11,
+          "branches": 2,
+          "calls": {
+            "com.nokia.mid.appl.raci.d.l": 1,
+            "com.nokia.mid.appl.raci.c.l": 1
+          }
+        },
+        {
+          "signature": "public void destroyApp(boolean);",
+          "instructions": 15,
+          "branches": 2,
+          "calls": {
+            "java.lang.Thread.join": 1
+          }
+        },
+        {
+          "signature": "public void a(boolean);",
+          "instructions": 7,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "private void c();",
+          "instructions": 65,
+          "branches": 9,
+          "calls": {
+            "com.nokia.mid.appl.raci.d.a": 4,
+            "com.nokia.mid.appl.raci.c.q": 3,
+            "com.nokia.mid.appl.raci.c.t": 1,
+            "com.nokia.mid.appl.raci.c.g": 1,
+            "com.nokia.mid.appl.raci.c.p": 1,
+            "com.nokia.mid.appl.raci.b.a": 1,
+            "com.nokia.mid.appl.raci.d.f": 1,
+            "com.nokia.mid.appl.raci.c.l": 1
+          }
+        },
+        {
+          "signature": "private void d();",
+          "instructions": 12,
+          "branches": 2,
+          "calls": {}
+        },
+        {
+          "signature": "public void a();",
+          "instructions": 4,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "private void b();",
+          "instructions": 69,
+          "branches": 8,
+          "calls": {
+            "com.nokia.mid.appl.raci.c.t": 2,
+            "com.nokia.mid.appl.raci.c.c": 2,
+            "com.nokia.mid.appl.raci.c.k": 2,
+            "javax.microedition.lcdui.Display.setCurrent": 2,
+            "com.nokia.mid.appl.raci.d.a": 1,
+            "com.nokia.mid.appl.raci.a.g": 1,
+            "com.nokia.mid.appl.raci.c.g": 1,
+            "javax.microedition.lcdui.Canvas.repaint": 1
+          }
+        },
+        {
+          "signature": "public void run();",
+          "instructions": 98,
+          "branches": 17,
+          "calls": {
+            "com.nokia.mid.appl.raci.c.q": 3,
+            "com.nokia.mid.appl.raci.d.d": 1,
+            "com.nokia.mid.appl.raci.a.e": 1,
+            "com.nokia.mid.appl.raci.g.d": 1,
+            "com.nokia.mid.appl.raci.c.t": 1,
+            "com.nokia.mid.appl.raci.d.a": 1,
+            "com.nokia.mid.appl.raci.a.g": 1,
+            "com.nokia.mid.appl.raci.c.g": 1
+          }
+        }
+      ]
+    },
+    {
+      "class": "com.nokia.mid.appl.raci.a",
+      "source_mode": "isolated_classfile_fallback",
+      "method_count": 16,
+      "instructions": 452,
+      "branches": 32,
+      "methods": [
+        {
+          "signature": "public com.nokia.mid.appl.raci.a();",
+          "instructions": 12,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public void a(com.nokia.mid.appl.raci.g);",
+          "instructions": 4,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "private void c();",
+          "instructions": 17,
+          "branches": 2,
+          "calls": {
+            "com.nokia.mid.appl.raci.GameMIDlet.a": 1
+          }
+        },
+        {
+          "signature": "public void h();",
+          "instructions": 4,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public synchronized void commandAction(javax.microedition.lcdui.Command, javax.microedition.lcdui.Displayable);",
+          "instructions": 169,
+          "branches": 15,
+          "calls": {
+            "javax.microedition.lcdui.Canvas.getKeyCode": 8,
+            "javax.microedition.lcdui.Canvas.getKeyName": 8,
+            "javax.microedition.lcdui.Display.getDisplay": 3,
+            "javax.microedition.lcdui.Display.setCurrent": 2,
+            "com.nokia.mid.appl.raci.f.a": 2,
+            "javax.microedition.lcdui.Display.getCurrent": 2,
+            "com.nokia.mid.appl.raci.d.commandAction": 1,
+            "com.nokia.mid.appl.raci.GameMIDlet.a": 1
+          }
+        },
+        {
+          "signature": "private void a(javax.microedition.lcdui.Displayable);",
+          "instructions": 75,
+          "branches": 3,
+          "calls": {
+            "java.lang.StringBuffer.append": 2,
+            "com.nokia.mid.appl.raci.f.a": 1,
+            "javax.microedition.lcdui.Screen.setTitle": 1,
+            "com.nokia.mid.appl.raci.b.c": 1,
+            "com.nokia.mid.appl.raci.b.b": 1,
+            "java.lang.StringBuffer.toString": 1,
+            "javax.microedition.lcdui.Form.append": 1,
+            "com.nokia.mid.appl.raci.b.a": 1
+          }
+        },
+        {
+          "signature": "public void a(com.nokia.mid.appl.raci.b);",
+          "instructions": 4,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public void k();",
+          "instructions": 21,
+          "branches": 1,
+          "calls": {
+            "javax.microedition.lcdui.Image.createImage": 1,
+            "com.nokia.mid.ui.DeviceControl.setLights": 1,
+            "com.nokia.mid.appl.raci.d.k": 1
+          }
+        },
+        {
+          "signature": "public void b();",
+          "instructions": 4,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public void d(int, int);",
+          "instructions": 35,
+          "branches": 6,
+          "calls": {
+            "com.nokia.mid.appl.raci.d.a": 1,
+            "com.nokia.mid.appl.raci.e.b": 1,
+            "java.lang.Thread.sleep": 1
+          }
+        },
+        {
+          "signature": "public void b(javax.microedition.lcdui.Graphics);",
+          "instructions": 37,
+          "branches": 4,
+          "calls": {
+            "javax.microedition.lcdui.Graphics.setColor": 2,
+            "javax.microedition.lcdui.Display.getDisplay": 1,
+            "javax.microedition.lcdui.Display.isColor": 1,
+            "javax.microedition.lcdui.Canvas.getWidth": 1,
+            "javax.microedition.lcdui.Canvas.getHeight": 1,
+            "javax.microedition.lcdui.Graphics.fillRect": 1
+          }
+        },
+        {
+          "signature": "private void a(javax.microedition.lcdui.Graphics);",
+          "instructions": 46,
+          "branches": 1,
+          "calls": {
+            "javax.microedition.lcdui.Canvas.getWidth": 1,
+            "javax.microedition.lcdui.Canvas.getHeight": 1,
+            "javax.microedition.lcdui.Image.getWidth": 1,
+            "javax.microedition.lcdui.Image.getHeight": 1,
+            "javax.microedition.lcdui.Graphics.drawImage": 1
+          }
+        },
+        {
+          "signature": "public void a(int, int);",
+          "instructions": 4,
+          "branches": 0,
+          "calls": {
+            "com.nokia.mid.appl.raci.d.a": 1
+          }
+        },
+        {
+          "signature": "public void showNotify();",
+          "instructions": 6,
+          "branches": 0,
+          "calls": {
+            "com.nokia.mid.appl.raci.d.showNotify": 1
+          }
+        },
+        {
+          "signature": "public void g();",
+          "instructions": 11,
+          "branches": 0,
+          "calls": {
+            "com.nokia.mid.appl.raci.d.g": 1,
+            "com.nokia.mid.appl.raci.i.a": 1,
+            "com.nokia.mid.appl.raci.e.f": 1
+          }
+        },
+        {
+          "signature": "public boolean e();",
+          "instructions": 3,
+          "branches": 0,
+          "calls": {}
+        }
+      ]
+    },
+    {
+      "class": "com.nokia.mid.appl.raci.b",
+      "source_mode": "isolated_classfile_fallback",
+      "method_count": 5,
+      "instructions": 142,
+      "branches": 17,
+      "methods": [
+        {
+          "signature": "public int a();",
+          "instructions": 3,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public boolean a(int, int);",
+          "instructions": 27,
+          "branches": 5,
+          "calls": {}
+        },
+        {
+          "signature": "public java.lang.String c(int, int);",
+          "instructions": 7,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public int b(int, int);",
+          "instructions": 7,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public void a(int, java.lang.String, int);",
+          "instructions": 98,
+          "branches": 12,
+          "calls": {
+            "java.lang.String.equals": 1
+          }
+        }
+      ]
+    },
+    {
+      "class": "com.nokia.mid.appl.raci.c",
+      "source_mode": "isolated_classfile_fallback",
+      "method_count": 34,
+      "instructions": 6689,
+      "branches": 275,
+      "methods": [
+        {
+          "signature": "public com.nokia.mid.appl.raci.c();",
+          "instructions": 2585,
+          "branches": 2,
+          "calls": {
+            "com.nokia.mid.appl.raci.h.a": 2,
+            "com.nokia.mid.appl.raci.d.a": 1,
+            "com.nokia.mid.appl.raci.h.m": 1,
+            "com.nokia.mid.appl.raci.h.l": 1,
+            "com.nokia.mid.appl.raci.h.g": 1,
+            "com.nokia.mid.appl.raci.h.f": 1,
+            "com.nokia.mid.appl.raci.h.d": 1,
+            "com.nokia.mid.appl.raci.h.c": 1
+          }
+        },
+        {
+          "signature": "public java.lang.String d(int);",
+          "instructions": 9,
+          "branches": 0,
+          "calls": {
+            "java.lang.StringBuffer.append": 2,
+            "java.lang.StringBuffer.toString": 1
+          }
+        },
+        {
+          "signature": "public int p();",
+          "instructions": 3,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public void c(int);",
+          "instructions": 4,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "private void n();",
+          "instructions": 206,
+          "branches": 12,
+          "calls": {
+            "java.util.Random.nextInt": 1
+          }
+        },
+        {
+          "signature": "public void a(int, int);",
+          "instructions": 43,
+          "branches": 12,
+          "calls": {}
+        },
+        {
+          "signature": "public void c(int, int);",
+          "instructions": 43,
+          "branches": 12,
+          "calls": {}
+        },
+        {
+          "signature": "public void b(int, int);",
+          "instructions": 1,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public void k();",
+          "instructions": 8,
+          "branches": 0,
+          "calls": {
+            "com.nokia.mid.appl.raci.d.k": 1
+          }
+        },
+        {
+          "signature": "public void e();",
+          "instructions": 256,
+          "branches": 2,
+          "calls": {
+            "com.nokia.mid.appl.raci.h.k": 1
+          }
+        },
+        {
+          "signature": "public void l();",
+          "instructions": 4,
+          "branches": 0,
+          "calls": {
+            "com.nokia.mid.appl.raci.i.a": 1,
+            "com.nokia.mid.appl.raci.d.l": 1
+          }
+        },
+        {
+          "signature": "public void i();",
+          "instructions": 36,
+          "branches": 0,
+          "calls": {
+            "com.nokia.mid.appl.raci.d.i": 1
+          }
+        },
+        {
+          "signature": "public void g();",
+          "instructions": 7,
+          "branches": 0,
+          "calls": {
+            "com.nokia.mid.appl.raci.i.a": 1,
+            "com.nokia.mid.appl.raci.d.g": 1
+          }
+        },
+        {
+          "signature": "public void m();",
+          "instructions": 5,
+          "branches": 0,
+          "calls": {
+            "com.nokia.mid.appl.raci.d.m": 1
+          }
+        },
+        {
+          "signature": "public void d(int, int);",
+          "instructions": 756,
+          "branches": 79,
+          "calls": {
+            "com.nokia.mid.appl.raci.i.a": 5,
+            "com.nokia.mid.appl.raci.h.a": 2,
+            "com.nokia.mid.appl.raci.i.b": 1,
+            "com.nokia.mid.appl.raci.e.e": 1,
+            "com.nokia.mid.appl.raci.e.c": 1,
+            "com.nokia.mid.appl.raci.e.a": 1,
+            "com.nokia.mid.appl.raci.e.d": 1
+          }
+        },
+        {
+          "signature": "private void c(javax.microedition.lcdui.Graphics);",
+          "instructions": 135,
+          "branches": 2,
+          "calls": {
+            "javax.microedition.lcdui.Graphics.setColor": 3,
+            "javax.microedition.lcdui.Graphics.drawImage": 2,
+            "javax.microedition.lcdui.Image.getHeight": 2,
+            "com.nokia.mid.appl.raci.f.a": 2,
+            "javax.microedition.lcdui.Graphics.drawString": 2,
+            "javax.microedition.lcdui.Graphics.setClip": 1,
+            "javax.microedition.lcdui.Canvas.getWidth": 1,
+            "javax.microedition.lcdui.Canvas.getHeight": 1
+          }
+        },
+        {
+          "signature": "private void a(javax.microedition.lcdui.Graphics, int, int, int);",
+          "instructions": 44,
+          "branches": 2,
+          "calls": {
+            "javax.microedition.lcdui.Graphics.drawImage": 2
+          }
+        },
+        {
+          "signature": "private void b(javax.microedition.lcdui.Graphics, int, int, int);",
+          "instructions": 100,
+          "branches": 4,
+          "calls": {
+            "javax.microedition.lcdui.Graphics.drawImage": 4
+          }
+        },
+        {
+          "signature": "private void a(javax.microedition.lcdui.Graphics, int);",
+          "instructions": 78,
+          "branches": 1,
+          "calls": {
+            "javax.microedition.lcdui.Graphics.drawImage": 2,
+            "javax.microedition.lcdui.Image.getWidth": 2,
+            "javax.microedition.lcdui.Image.getHeight": 1,
+            "javax.microedition.lcdui.Graphics.setClip": 1
+          }
+        },
+        {
+          "signature": "private void d(javax.microedition.lcdui.Graphics);",
+          "instructions": 691,
+          "branches": 31,
+          "calls": {
+            "javax.microedition.lcdui.Graphics.drawImage": 16,
+            "javax.microedition.lcdui.Graphics.setColor": 3,
+            "javax.microedition.lcdui.Graphics.fillRect": 3,
+            "com.nokia.mid.appl.raci.h.p": 1
+          }
+        },
+        {
+          "signature": "private void r();",
+          "instructions": 384,
+          "branches": 49,
+          "calls": {
+            "com.nokia.mid.appl.raci.i.a": 3,
+            "java.util.Random.nextInt": 1
+          }
+        },
+        {
+          "signature": "private void a(javax.microedition.lcdui.Graphics);",
+          "instructions": 279,
+          "branches": 13,
+          "calls": {
+            "javax.microedition.lcdui.Graphics.drawImage": 8
+          }
+        },
+        {
+          "signature": "public void b(javax.microedition.lcdui.Graphics);",
+          "instructions": 47,
+          "branches": 5,
+          "calls": {
+            "javax.microedition.lcdui.Canvas.getWidth": 2,
+            "javax.microedition.lcdui.Canvas.getHeight": 2,
+            "javax.microedition.lcdui.Graphics.setClip": 1,
+            "javax.microedition.lcdui.Graphics.setColor": 1,
+            "javax.microedition.lcdui.Graphics.fillRect": 1,
+            "javax.microedition.lcdui.Graphics.drawImage": 1
+          }
+        },
+        {
+          "signature": "public boolean q();",
+          "instructions": 3,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public boolean t();",
+          "instructions": 8,
+          "branches": 2,
+          "calls": {}
+        },
+        {
+          "signature": "private void b();",
+          "instructions": 42,
+          "branches": 6,
+          "calls": {}
+        },
+        {
+          "signature": "private int b(byte[], int, int);",
+          "instructions": 33,
+          "branches": 2,
+          "calls": {}
+        },
+        {
+          "signature": "private javax.microedition.lcdui.Image[] a(java.lang.String);",
+          "instructions": 170,
+          "branches": 3,
+          "calls": {
+            "java.io.DataInputStream.readShort": 4,
+            "java.io.DataInputStream.read": 3,
+            "java.io.DataInputStream.readByte": 2,
+            "java.lang.Object.getClass": 1,
+            "java.lang.Class.getResourceAsStream": 1,
+            "javax.microedition.lcdui.Image.createImage": 1,
+            "java.lang.Throwable.printStackTrace": 1
+          }
+        },
+        {
+          "signature": "private void a(int, byte[]);",
+          "instructions": 79,
+          "branches": 3,
+          "calls": {}
+        },
+        {
+          "signature": "private void a(byte[], int, int);",
+          "instructions": 45,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public void s();",
+          "instructions": 209,
+          "branches": 12,
+          "calls": {
+            "java.io.DataInputStream.readInt": 28,
+            "java.io.DataInputStream.close": 3,
+            "java.io.DataInputStream.readBoolean": 2,
+            "java.lang.Throwable.printStackTrace": 2,
+            "javax.microedition.rms.RecordStore.openRecordStore": 1,
+            "javax.microedition.rms.RecordStore.getNumRecords": 1,
+            "javax.microedition.rms.RecordStore.getRecord": 1,
+            "javax.microedition.rms.RecordStore.closeRecordStore": 1
+          }
+        },
+        {
+          "signature": "public void o();",
+          "instructions": 220,
+          "branches": 13,
+          "calls": {
+            "java.io.DataOutputStream.writeInt": 28,
+            "java.io.ByteArrayOutputStream.close": 3,
+            "java.io.DataOutputStream.writeBoolean": 2,
+            "java.lang.Throwable.printStackTrace": 2,
+            "javax.microedition.rms.RecordStore.openRecordStore": 1,
+            "java.io.ByteArrayOutputStream.toByteArray": 1,
+            "javax.microedition.rms.RecordStore.getNumRecords": 1,
+            "javax.microedition.rms.RecordStore.addRecord": 1
+          }
+        },
+        {
+          "signature": "private void c();",
+          "instructions": 22,
+          "branches": 1,
+          "calls": {
+            "com.nokia.mid.appl.raci.f.a": 1,
+            "com.nokia.mid.appl.raci.b.a": 1,
+            "com.nokia.mid.appl.raci.b.c": 1
+          }
+        },
+        {
+          "signature": "private java.lang.String b(java.lang.String);",
+          "instructions": 134,
+          "branches": 7,
+          "calls": {
+            "java.lang.StringBuffer.append": 13,
+            "java.lang.String.substring": 6,
+            "java.lang.StringBuffer.toString": 5,
+            "java.util.Calendar.get": 3,
+            "java.lang.Integer.toString": 3,
+            "java.lang.String.indexOf": 3,
+            "java.util.Calendar.getInstance": 1
+          }
+        }
+      ]
+    },
+    {
+      "class": "com.nokia.mid.appl.raci.d",
+      "source_mode": "isolated_classfile_fallback",
+      "method_count": 30,
+      "instructions": 616,
+      "branches": 60,
+      "methods": [
+        {
+          "signature": "public com.nokia.mid.appl.raci.d();",
+          "instructions": 22,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public void a(com.nokia.mid.appl.raci.GameMIDlet);",
+          "instructions": 95,
+          "branches": 1,
+          "calls": {
+            "com.nokia.mid.appl.raci.f.a": 8,
+            "javax.microedition.lcdui.Displayable.setCommandListener": 1
+          }
+        },
+        {
+          "signature": "public void b(javax.microedition.lcdui.Graphics);",
+          "instructions": 1,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public void a(int, int);",
+          "instructions": 1,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public void c(int, int);",
+          "instructions": 1,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public void b(int, int);",
+          "instructions": 1,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public void k();",
+          "instructions": 14,
+          "branches": 0,
+          "calls": {
+            "java.lang.System.currentTimeMillis": 1
+          }
+        },
+        {
+          "signature": "private void a();",
+          "instructions": 36,
+          "branches": 4,
+          "calls": {}
+        },
+        {
+          "signature": "void b(int);",
+          "instructions": 63,
+          "branches": 3,
+          "calls": {}
+        },
+        {
+          "signature": "public void l();",
+          "instructions": 7,
+          "branches": 1,
+          "calls": {}
+        },
+        {
+          "signature": "public void i();",
+          "instructions": 17,
+          "branches": 1,
+          "calls": {
+            "java.lang.System.currentTimeMillis": 1
+          }
+        },
+        {
+          "signature": "public void g();",
+          "instructions": 7,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public void m();",
+          "instructions": 1,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public void d(int, int);",
+          "instructions": 1,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public boolean f();",
+          "instructions": 3,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public void paint(javax.microedition.lcdui.Graphics);",
+          "instructions": 32,
+          "branches": 4,
+          "calls": {
+            "javax.microedition.lcdui.Graphics.setColor": 2,
+            "javax.microedition.lcdui.Display.getDisplay": 1,
+            "javax.microedition.lcdui.Display.isColor": 1,
+            "javax.microedition.lcdui.Canvas.getWidth": 1,
+            "javax.microedition.lcdui.Canvas.getHeight": 1,
+            "javax.microedition.lcdui.Graphics.fillRect": 1
+          }
+        },
+        {
+          "signature": "protected void keyPressed(int);",
+          "instructions": 14,
+          "branches": 2,
+          "calls": {
+            "javax.microedition.lcdui.Canvas.getGameAction": 1
+          }
+        },
+        {
+          "signature": "protected void keyReleased(int);",
+          "instructions": 17,
+          "branches": 4,
+          "calls": {
+            "javax.microedition.lcdui.Canvas.getGameAction": 1
+          }
+        },
+        {
+          "signature": "protected void keyRepeated(int);",
+          "instructions": 17,
+          "branches": 4,
+          "calls": {
+            "javax.microedition.lcdui.Canvas.getGameAction": 1
+          }
+        },
+        {
+          "signature": "public void hideNotify();",
+          "instructions": 9,
+          "branches": 2,
+          "calls": {}
+        },
+        {
+          "signature": "public void showNotify();",
+          "instructions": 9,
+          "branches": 2,
+          "calls": {}
+        },
+        {
+          "signature": "public void d();",
+          "instructions": 41,
+          "branches": 3,
+          "calls": {
+            "java.lang.System.currentTimeMillis": 1,
+            "javax.microedition.lcdui.Display.getDisplay": 1,
+            "javax.microedition.lcdui.Display.getCurrent": 1,
+            "javax.microedition.lcdui.Canvas.repaint": 1,
+            "javax.microedition.lcdui.Canvas.serviceRepaints": 1,
+            "java.lang.Thread.yield": 1,
+            "java.lang.Throwable.printStackTrace": 1
+          }
+        },
+        {
+          "signature": "void j();",
+          "instructions": 9,
+          "branches": 1,
+          "calls": {}
+        },
+        {
+          "signature": "public static void a(boolean);",
+          "instructions": 3,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public void addCommand(javax.microedition.lcdui.Command);",
+          "instructions": 52,
+          "branches": 9,
+          "calls": {
+            "javax.microedition.lcdui.Command.getPriority": 2,
+            "javax.microedition.lcdui.Displayable.addCommand": 1,
+            "java.util.Vector.contains": 1,
+            "java.util.Vector.elementAt": 1,
+            "java.util.Vector.size": 1,
+            "java.util.Vector.addElement": 1,
+            "java.util.Vector.insertElementAt": 1
+          }
+        },
+        {
+          "signature": "public void removeCommand(javax.microedition.lcdui.Command);",
+          "instructions": 14,
+          "branches": 2,
+          "calls": {
+            "javax.microedition.lcdui.Displayable.removeCommand": 1,
+            "java.util.Vector.removeElement": 1
+          }
+        },
+        {
+          "signature": "public void setCommandListener(javax.microedition.lcdui.CommandListener);",
+          "instructions": 4,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public void a(int);",
+          "instructions": 60,
+          "branches": 7,
+          "calls": {
+            "javax.microedition.lcdui.List.size": 3,
+            "javax.microedition.lcdui.Display.getDisplay": 1,
+            "javax.microedition.lcdui.Display.getCurrent": 1,
+            "javax.microedition.lcdui.List.delete": 1,
+            "java.util.Vector.elementAt": 1,
+            "javax.microedition.lcdui.Command.getLabel": 1,
+            "javax.microedition.lcdui.List.append": 1,
+            "java.util.Vector.size": 1
+          }
+        },
+        {
+          "signature": "public void h();",
+          "instructions": 1,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public void commandAction(javax.microedition.lcdui.Command, javax.microedition.lcdui.Displayable);",
+          "instructions": 64,
+          "branches": 10,
+          "calls": {
+            "javax.microedition.lcdui.List.getSelectedIndex": 2,
+            "com.nokia.mid.appl.raci.GameMIDlet.a": 1,
+            "java.util.Vector.elementAt": 1,
+            "javax.microedition.lcdui.CommandListener.commandAction": 1,
+            "javax.microedition.lcdui.Display.getDisplay": 1,
+            "javax.microedition.lcdui.Display.setCurrent": 1,
+            "javax.microedition.lcdui.List.delete": 1,
+            "javax.microedition.lcdui.List.size": 1
+          }
+        }
+      ]
+    },
+    {
+      "class": "com.nokia.mid.appl.raci.e",
+      "source_mode": "isolated_classfile_fallback",
+      "method_count": 8,
+      "instructions": 131,
+      "branches": 8,
+      "methods": [
+        {
+          "signature": "public com.nokia.mid.appl.raci.e();",
+          "instructions": 38,
+          "branches": 0,
+          "calls": {
+            "java.lang.Object.getClass": 1,
+            "java.lang.Class.getResourceAsStream": 1,
+            "java.io.DataInputStream.read": 1,
+            "java.lang.System.arraycopy": 1,
+            "com.nokia.mid.sound.Sound.setGain": 1,
+            "java.io.DataInputStream.close": 1
+          }
+        },
+        {
+          "signature": "public static void a(javax.microedition.midlet.MIDlet);",
+          "instructions": 39,
+          "branches": 1,
+          "calls": {
+            "java.lang.Throwable.printStackTrace": 1
+          }
+        },
+        {
+          "signature": "public static void b();",
+          "instructions": 8,
+          "branches": 1,
+          "calls": {
+            "com.nokia.mid.sound.Sound.play": 1
+          }
+        },
+        {
+          "signature": "public static void f();",
+          "instructions": 7,
+          "branches": 1,
+          "calls": {
+            "com.nokia.mid.sound.Sound.stop": 1
+          }
+        },
+        {
+          "signature": "public static void e();",
+          "instructions": 10,
+          "branches": 2,
+          "calls": {
+            "com.nokia.mid.sound.Sound.play": 1
+          }
+        },
+        {
+          "signature": "public static void d();",
+          "instructions": 8,
+          "branches": 1,
+          "calls": {
+            "com.nokia.mid.sound.Sound.play": 1
+          }
+        },
+        {
+          "signature": "public static void c();",
+          "instructions": 8,
+          "branches": 1,
+          "calls": {
+            "com.nokia.mid.sound.Sound.play": 1
+          }
+        },
+        {
+          "signature": "public static void a();",
+          "instructions": 13,
+          "branches": 1,
+          "calls": {
+            "com.nokia.mid.sound.Sound.play": 1
+          }
+        }
+      ]
+    },
+    {
+      "class": "com.nokia.mid.appl.raci.f",
+      "source_mode": "isolated_classfile_fallback",
+      "method_count": 4,
+      "instructions": 154,
+      "branches": 12,
+      "methods": [
+        {
+          "signature": "private com.nokia.mid.appl.raci.f();",
+          "instructions": 3,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "private static java.lang.String a(java.lang.String, java.lang.String, java.lang.String);",
+          "instructions": 27,
+          "branches": 2,
+          "calls": {
+            "java.lang.StringBuffer.append": 3,
+            "java.lang.String.substring": 2,
+            "java.lang.String.indexOf": 1,
+            "java.lang.String.length": 1,
+            "java.lang.StringBuffer.toString": 1
+          }
+        },
+        {
+          "signature": "public static synchronized java.lang.String a(int);",
+          "instructions": 4,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public static synchronized java.lang.String a(int, java.lang.String[]);",
+          "instructions": 120,
+          "branches": 10,
+          "calls": {
+            "java.lang.StringBuffer.append": 5,
+            "java.lang.Object.getClass": 2,
+            "java.lang.StringBuffer.toString": 2,
+            "java.lang.Class.getResourceAsStream": 2,
+            "java.io.DataInputStream.skipBytes": 2,
+            "java.io.DataInputStream.mark": 1,
+            "java.io.DataInputStream.readShort": 1,
+            "java.io.DataInputStream.readUTF": 1
+          }
+        }
+      ]
+    },
+    {
+      "class": "com.nokia.mid.appl.raci.g",
+      "source_mode": "isolated_classfile_fallback",
+      "method_count": 6,
+      "instructions": 217,
+      "branches": 21,
+      "methods": [
+        {
+          "signature": "public com.nokia.mid.appl.raci.g();",
+          "instructions": 9,
+          "branches": 0,
+          "calls": {
+            "javax.microedition.lcdui.Font.getFont": 1
+          }
+        },
+        {
+          "signature": "public void keyPressed(int);",
+          "instructions": 23,
+          "branches": 5,
+          "calls": {
+            "com.nokia.mid.appl.raci.d.a": 1,
+            "com.nokia.mid.appl.raci.d.keyPressed": 1
+          }
+        },
+        {
+          "signature": "public void paint(javax.microedition.lcdui.Graphics);",
+          "instructions": 100,
+          "branches": 5,
+          "calls": {
+            "javax.microedition.lcdui.Font.getHeight": 2,
+            "javax.microedition.lcdui.Graphics.setColor": 2,
+            "javax.microedition.lcdui.Graphics.fillRect": 2,
+            "com.nokia.mid.appl.raci.f.a": 2,
+            "javax.microedition.lcdui.Graphics.drawString": 2,
+            "com.nokia.mid.appl.raci.d.paint": 1,
+            "javax.microedition.lcdui.Canvas.getWidth": 1,
+            "javax.microedition.lcdui.Canvas.getHeight": 1
+          }
+        },
+        {
+          "signature": "public void d();",
+          "instructions": 61,
+          "branches": 7,
+          "calls": {
+            "com.nokia.mid.appl.raci.d.f": 1,
+            "java.lang.System.currentTimeMillis": 1,
+            "com.nokia.mid.appl.raci.d.b": 1,
+            "com.nokia.mid.appl.raci.d.d": 1,
+            "javax.microedition.lcdui.Display.getDisplay": 1,
+            "javax.microedition.lcdui.Display.getCurrent": 1,
+            "javax.microedition.lcdui.Canvas.repaint": 1,
+            "javax.microedition.lcdui.Canvas.serviceRepaints": 1
+          }
+        },
+        {
+          "signature": "public void showNotify();",
+          "instructions": 6,
+          "branches": 0,
+          "calls": {
+            "com.nokia.mid.appl.raci.d.showNotify": 1
+          }
+        },
+        {
+          "signature": "public void hideNotify();",
+          "instructions": 18,
+          "branches": 4,
+          "calls": {
+            "com.nokia.mid.appl.raci.d.f": 1,
+            "com.nokia.mid.appl.raci.d.hideNotify": 1,
+            "com.nokia.mid.appl.raci.d.a": 1
+          }
+        }
+      ]
+    },
+    {
+      "class": "com.nokia.mid.appl.raci.h",
+      "source_mode": "isolated_classfile_fallback",
+      "method_count": 18,
+      "instructions": 40,
+      "branches": 0,
+      "methods": [
+        {
+          "signature": "public com.nokia.mid.appl.raci.h();",
+          "instructions": 6,
+          "branches": 0,
+          "calls": {
+            "javax.microedition.lcdui.Image.createImage": 1
+          }
+        },
+        {
+          "signature": "public int p();",
+          "instructions": 2,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public int h();",
+          "instructions": 2,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public int k();",
+          "instructions": 2,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public int b();",
+          "instructions": 2,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public int n();",
+          "instructions": 2,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public int a();",
+          "instructions": 2,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public int q();",
+          "instructions": 2,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public int o();",
+          "instructions": 2,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public int i();",
+          "instructions": 2,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public int j();",
+          "instructions": 2,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public int g();",
+          "instructions": 2,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public int f();",
+          "instructions": 2,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public int m();",
+          "instructions": 2,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public int l();",
+          "instructions": 2,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public int d();",
+          "instructions": 2,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public int c();",
+          "instructions": 2,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public int e();",
+          "instructions": 2,
+          "branches": 0,
+          "calls": {}
+        }
+      ]
+    },
+    {
+      "class": "com.nokia.mid.appl.raci.i",
+      "source_mode": "isolated_classfile_fallback",
+      "method_count": 5,
+      "instructions": 44,
+      "branches": 6,
+      "methods": [
+        {
+          "signature": "public com.nokia.mid.appl.raci.i();",
+          "instructions": 3,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public static void a(int);",
+          "instructions": 10,
+          "branches": 2,
+          "calls": {
+            "com.nokia.mid.ui.DeviceControl.setLights": 1
+          }
+        },
+        {
+          "signature": "public static void a();",
+          "instructions": 8,
+          "branches": 1,
+          "calls": {
+            "com.nokia.mid.ui.DeviceControl.setLights": 1
+          }
+        },
+        {
+          "signature": "public static void b();",
+          "instructions": 9,
+          "branches": 1,
+          "calls": {}
+        },
+        {
+          "signature": "public static void a(int, int);",
+          "instructions": 14,
+          "branches": 2,
+          "calls": {
+            "com.nokia.mid.ui.DeviceControl.startVibra": 1
+          }
+        }
+      ]
+    },
+    {
+      "class": "com.nokia.mid.sound.Sound",
+      "source_mode": "isolated_classfile_fallback",
+      "method_count": 14,
+      "instructions": 29,
+      "branches": 0,
+      "methods": [
+        {
+          "signature": "public com.nokia.mid.sound.Sound(byte[], int);",
+          "instructions": 3,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public com.nokia.mid.sound.Sound(int, long);",
+          "instructions": 3,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public void init(int, long);",
+          "instructions": 1,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public void init(byte[], int);",
+          "instructions": 1,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public int getState();",
+          "instructions": 2,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public void play(int);",
+          "instructions": 1,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public void stop();",
+          "instructions": 1,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public void resume();",
+          "instructions": 1,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public void release();",
+          "instructions": 1,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public void setGain(int);",
+          "instructions": 1,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public int getGain();",
+          "instructions": 2,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public static int getConcurrentSoundCount(int);",
+          "instructions": 2,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public static int[] getSupportedFormats();",
+          "instructions": 9,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public void setSoundListener(com.nokia.mid.sound.SoundListener);",
+          "instructions": 1,
+          "branches": 0,
+          "calls": {}
+        }
+      ]
+    },
+    {
+      "class": "com.nokia.mid.sound.SoundListener",
+      "source_mode": "isolated_classfile_fallback",
+      "method_count": 1,
+      "instructions": 0,
+      "branches": 0,
+      "methods": [
+        {
+          "signature": "public abstract void soundStateChanged(com.nokia.mid.sound.Sound, int);",
+          "instructions": 0,
+          "branches": 0,
+          "calls": {}
+        }
+      ]
+    },
+    {
+      "class": "com.nokia.mid.ui.DeviceControl",
+      "source_mode": "isolated_classfile_fallback",
+      "method_count": 5,
+      "instructions": 7,
+      "branches": 0,
+      "methods": [
+        {
+          "signature": "public com.nokia.mid.ui.DeviceControl();",
+          "instructions": 3,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public static void setLights(int, int);",
+          "instructions": 1,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public static void flashLights(long);",
+          "instructions": 1,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public static void startVibra(int, long);",
+          "instructions": 1,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public static void stopVibra();",
+          "instructions": 1,
+          "branches": 0,
+          "calls": {}
+        }
+      ]
+    },
+    {
+      "class": "com.nokia.mid.ui.DirectGraphics",
+      "source_mode": "isolated_classfile_fallback",
+      "method_count": 12,
+      "instructions": 0,
+      "branches": 0,
+      "methods": [
+        {
+          "signature": "public abstract void setARGBColor(int);",
+          "instructions": 0,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public abstract void drawTriangle(int, int, int, int, int, int, int);",
+          "instructions": 0,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public abstract void fillTriangle(int, int, int, int, int, int, int);",
+          "instructions": 0,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public abstract void drawPolygon(int[], int, int[], int, int, int);",
+          "instructions": 0,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public abstract void fillPolygon(int[], int, int[], int, int, int);",
+          "instructions": 0,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public abstract void drawPixels(int[], boolean, int, int, int, int, int, int, int, int);",
+          "instructions": 0,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public abstract void drawPixels(byte[], byte[], int, int, int, int, int, int, int, int);",
+          "instructions": 0,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public abstract void drawPixels(short[], boolean, int, int, int, int, int, int, int, int);",
+          "instructions": 0,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public abstract void getPixels(int[], int, int, int, int, int, int, int);",
+          "instructions": 0,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public abstract void getPixels(byte[], byte[], int, int, int, int, int, int, int);",
+          "instructions": 0,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public abstract void getPixels(short[], int, int, int, int, int, int, int);",
+          "instructions": 0,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public abstract void drawImage(javax.microedition.lcdui.Image, int, int, int, int);",
+          "instructions": 0,
+          "branches": 0,
+          "calls": {}
+        }
+      ]
+    },
+    {
+      "class": "com.nokia.mid.ui.DirectGraphicsImplemented",
+      "source_mode": "isolated_classfile_fallback",
+      "method_count": 15,
+      "instructions": 404,
+      "branches": 33,
+      "methods": [
+        {
+          "signature": "protected com.nokia.mid.ui.DirectGraphicsImplemented(javax.microedition.lcdui.Graphics);",
+          "instructions": 12,
+          "branches": 0,
+          "calls": {
+            "javax.microedition.lcdui.Graphics.setStrokeStyle": 1
+          }
+        },
+        {
+          "signature": "public void setARGBColor(int);",
+          "instructions": 5,
+          "branches": 0,
+          "calls": {
+            "javax.microedition.lcdui.Graphics.setColor": 1
+          }
+        },
+        {
+          "signature": "public void drawTriangle(int, int, int, int, int, int, int);",
+          "instructions": 26,
+          "branches": 0,
+          "calls": {
+            "javax.microedition.lcdui.Graphics.drawLine": 3,
+            "javax.microedition.lcdui.Graphics.setColor": 1
+          }
+        },
+        {
+          "signature": "public void fillTriangle(int, int, int, int, int, int, int);",
+          "instructions": 167,
+          "branches": 18,
+          "calls": {
+            "javax.microedition.lcdui.Graphics.drawLine": 7,
+            "java.lang.Math.abs": 2,
+            "javax.microedition.lcdui.Graphics.setColor": 1
+          }
+        },
+        {
+          "signature": "public void drawPolygon(int[], int, int[], int, int, int);",
+          "instructions": 41,
+          "branches": 2,
+          "calls": {
+            "javax.microedition.lcdui.Graphics.setColor": 1,
+            "javax.microedition.lcdui.Graphics.drawLine": 1
+          }
+        },
+        {
+          "signature": "public void fillPolygon(int[], int, int[], int, int, int);",
+          "instructions": 9,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public int getNativePixelFormat();",
+          "instructions": 2,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public int getAlphaComponent();",
+          "instructions": 2,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public void drawImage(javax.microedition.lcdui.Image, int, int, int, int);",
+          "instructions": 8,
+          "branches": 0,
+          "calls": {
+            "javax.microedition.lcdui.Graphics.drawImage": 1
+          }
+        },
+        {
+          "signature": "public void drawPixels(int[], boolean, int, int, int, int, int, int, int, int);",
+          "instructions": 30,
+          "branches": 4,
+          "calls": {
+            "javax.microedition.lcdui.Graphics.setColor": 1,
+            "javax.microedition.lcdui.Graphics.drawLine": 1
+          }
+        },
+        {
+          "signature": "public void drawPixels(short[], boolean, int, int, int, int, int, int, int, int);",
+          "instructions": 91,
+          "branches": 9,
+          "calls": {
+            "javax.microedition.lcdui.Graphics.setColor": 1,
+            "javax.microedition.lcdui.Graphics.drawLine": 1
+          }
+        },
+        {
+          "signature": "public void drawPixels(byte[], byte[], int, int, int, int, int, int, int, int);",
+          "instructions": 8,
+          "branches": 0,
+          "calls": {
+            "javax.microedition.lcdui.Graphics.drawLine": 1
+          }
+        },
+        {
+          "signature": "public void getPixels(int[], int, int, int, int, int, int, int);",
+          "instructions": 1,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public void getPixels(byte[], byte[], int, int, int, int, int, int, int);",
+          "instructions": 1,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public void getPixels(short[], int, int, int, int, int, int, int);",
+          "instructions": 1,
+          "branches": 0,
+          "calls": {}
+        }
+      ]
+    },
+    {
+      "class": "com.nokia.mid.ui.DirectUtils",
+      "source_mode": "isolated_classfile_fallback",
+      "method_count": 4,
+      "instructions": 41,
+      "branches": 0,
+      "methods": [
+        {
+          "signature": "public com.nokia.mid.ui.DirectUtils();",
+          "instructions": 3,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public static com.nokia.mid.ui.DirectGraphics getDirectGraphics(javax.microedition.lcdui.Graphics);",
+          "instructions": 5,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public static javax.microedition.lcdui.Image createImage(byte[], int, int);",
+          "instructions": 5,
+          "branches": 0,
+          "calls": {
+            "javax.microedition.lcdui.Image.createImage": 1
+          }
+        },
+        {
+          "signature": "public static javax.microedition.lcdui.Image createImage(int, int, int);",
+          "instructions": 28,
+          "branches": 0,
+          "calls": {
+            "javax.microedition.lcdui.Graphics.setColor": 2,
+            "javax.microedition.lcdui.Image.createImage": 1,
+            "javax.microedition.lcdui.Image.getGraphics": 1,
+            "javax.microedition.lcdui.Graphics.getColor": 1,
+            "javax.microedition.lcdui.Graphics.fillRect": 1
+          }
+        }
+      ]
+    },
+    {
+      "class": "com.nokia.mid.ui.FullCanvas",
+      "source_mode": "isolated_classfile_fallback",
+      "method_count": 1,
+      "instructions": 3,
+      "branches": 0,
+      "methods": [
+        {
+          "signature": "protected com.nokia.mid.ui.FullCanvas();",
+          "instructions": 3,
+          "branches": 0,
+          "calls": {}
+        }
+      ]
+    }
+  ],
+  "limitation": "Static method inspection, no game execution, no proof of hot paths or semantic equivalence."
+}

@@ -1,0 +1,1327 @@
+{
+  "rank": 93,
+  "jar_path": "828 Java Games/Space Impact III.jar",
+  "jar_sha256": "413932bfdf18c0ba19759c04142c6b078e396589561401bf3b737cd64bbe607b",
+  "title": "Space Impact III",
+  "track": "compact",
+  "status": "BYTECODE_DISASSEMBLED_INDEXED_NOT_FULLY_REVIEWED",
+  "tool": "OpenJDK javap -p -c; JAR never executed",
+  "classes": 11,
+  "classes_decoded": 11,
+  "methods": 109,
+  "instructions": 12960,
+  "branches": 1077,
+  "errors": [],
+  "hot_methods_by_static_instruction_count": [
+    {
+      "class": "com.kuju.j2me.boomer.h",
+      "signature": "public void j();",
+      "instructions": 1277,
+      "branches": 86,
+      "priority_score": 1535,
+      "calls": {}
+    },
+    {
+      "class": "com.kuju.j2me.boomer.a",
+      "signature": "void a(java.lang.String);",
+      "instructions": 597,
+      "branches": 56,
+      "priority_score": 765,
+      "calls": {
+        "com.kuju.j2me.io.a.a": 19,
+        "com.kuju.j2me.io.a.c": 3
+      }
+    },
+    {
+      "class": "com.kuju.j2me.boomer.d",
+      "signature": "public void a();",
+      "instructions": 527,
+      "branches": 32,
+      "priority_score": 623,
+      "calls": {}
+    },
+    {
+      "class": "com.kuju.j2me.boomer.b",
+      "signature": "public void d();",
+      "instructions": 417,
+      "branches": 50,
+      "priority_score": 567,
+      "calls": {}
+    },
+    {
+      "class": "com.kuju.j2me.boomer.h",
+      "signature": "public boolean a(int, int, int, int, byte[], int);",
+      "instructions": 415,
+      "branches": 50,
+      "priority_score": 565,
+      "calls": {}
+    },
+    {
+      "class": "com.kuju.j2me.boomer.h",
+      "signature": "public void a();",
+      "instructions": 354,
+      "branches": 38,
+      "priority_score": 468,
+      "calls": {}
+    },
+    {
+      "class": "com.kuju.j2me.boomer.h",
+      "signature": "public void a(javax.microedition.lcdui.Graphics);",
+      "instructions": 387,
+      "branches": 22,
+      "priority_score": 453,
+      "calls": {
+        "com.kuju.j2me.graphics.a.a": 11,
+        "javax.microedition.lcdui.Graphics.setColor": 4,
+        "javax.microedition.lcdui.Graphics.fillRect": 4,
+        "javax.microedition.lcdui.Graphics.setClip": 1
+      }
+    },
+    {
+      "class": "com.kuju.j2me.boomer.h",
+      "signature": "public void c(javax.microedition.lcdui.Graphics);",
+      "instructions": 372,
+      "branches": 22,
+      "priority_score": 438,
+      "calls": {
+        "java.lang.StringBuffer.append": 16,
+        "javax.microedition.lcdui.Graphics.drawString": 11,
+        "javax.microedition.lcdui.Graphics.setColor": 9,
+        "javax.microedition.lcdui.Font.getHeight": 8,
+        "java.lang.StringBuffer.toString": 7,
+        "javax.microedition.lcdui.Graphics.drawChars": 2,
+        "javax.microedition.lcdui.Graphics.setFont": 1,
+        "javax.microedition.lcdui.Graphics.fillRect": 1
+      }
+    },
+    {
+      "class": "com.kuju.j2me.boomer.a",
+      "signature": "void b(java.lang.String);",
+      "instructions": 372,
+      "branches": 14,
+      "priority_score": 414,
+      "calls": {
+        "com.kuju.j2me.io.a.a": 19,
+        "com.kuju.j2me.io.a.b": 1
+      }
+    },
+    {
+      "class": "com.kuju.j2me.boomer.c",
+      "signature": "void b(com.kuju.j2me.boomer.g);",
+      "instructions": 313,
+      "branches": 28,
+      "priority_score": 397,
+      "calls": {
+        "com.kuju.j2me.boomer.h.a": 4,
+        "java.util.Random.nextInt": 2,
+        "java.lang.Math.abs": 2,
+        "com.kuju.j2me.boomer.g.b": 1
+      }
+    },
+    {
+      "class": "com.kuju.j2me.boomer.g",
+      "signature": "public void a(int, int);",
+      "instructions": 283,
+      "branches": 36,
+      "priority_score": 391,
+      "calls": {
+        "com.kuju.j2me.boomer.h.a": 1,
+        "java.util.Random.nextInt": 1,
+        "java.lang.Math.abs": 1
+      }
+    },
+    {
+      "class": "com.kuju.j2me.boomer.h",
+      "signature": "public boolean a(byte[], byte[], int, int, int, int, int, int);",
+      "instructions": 260,
+      "branches": 35,
+      "priority_score": 365,
+      "calls": {}
+    }
+  ],
+  "call_targets": [
+    {
+      "target": "com.kuju.j2me.io.a.a",
+      "count": 38
+    },
+    {
+      "target": "com.kuju.j2me.graphics.a.a",
+      "count": 32
+    },
+    {
+      "target": "java.lang.StringBuffer.append",
+      "count": 23
+    },
+    {
+      "target": "com.kuju.j2me.boomer.h.a",
+      "count": 22
+    },
+    {
+      "target": "javax.microedition.lcdui.Graphics.setColor",
+      "count": 20
+    },
+    {
+      "target": "javax.microedition.lcdui.Graphics.drawString",
+      "count": 14
+    },
+    {
+      "target": "javax.microedition.lcdui.Font.getHeight",
+      "count": 13
+    },
+    {
+      "target": "java.lang.StringBuffer.toString",
+      "count": 10
+    },
+    {
+      "target": "javax.microedition.lcdui.Display.setCurrent",
+      "count": 9
+    },
+    {
+      "target": "javax.microedition.lcdui.Graphics.fillRect",
+      "count": 9
+    },
+    {
+      "target": "javax.microedition.rms.RecordStore.closeRecordStore",
+      "count": 8
+    },
+    {
+      "target": "javax.microedition.lcdui.List.append",
+      "count": 8
+    },
+    {
+      "target": "javax.microedition.lcdui.Image.createImage",
+      "count": 8
+    },
+    {
+      "target": "com.nokia.mid.sound.Sound.play",
+      "count": 7
+    },
+    {
+      "target": "javax.microedition.lcdui.Form.append",
+      "count": 6
+    },
+    {
+      "target": "javax.microedition.lcdui.Graphics.drawChars",
+      "count": 6
+    },
+    {
+      "target": "javax.microedition.lcdui.Font.charsWidth",
+      "count": 6
+    },
+    {
+      "target": "com.kuju.j2me.boomer.g.b",
+      "count": 5
+    },
+    {
+      "target": "java.util.Random.nextInt",
+      "count": 5
+    },
+    {
+      "target": "java.lang.Math.abs",
+      "count": 5
+    },
+    {
+      "target": "com.kuju.j2me.boomer.BoomerMidlet.g",
+      "count": 5
+    },
+    {
+      "target": "javax.microedition.lcdui.Graphics.setClip",
+      "count": 5
+    },
+    {
+      "target": "javax.microedition.lcdui.Graphics.setFont",
+      "count": 5
+    },
+    {
+      "target": "javax.microedition.lcdui.List.addCommand",
+      "count": 4
+    },
+    {
+      "target": "java.lang.String.equals",
+      "count": 4
+    },
+    {
+      "target": "com.kuju.j2me.io.a.c",
+      "count": 4
+    },
+    {
+      "target": "com.kuju.j2me.boomer.g.a",
+      "count": 4
+    },
+    {
+      "target": "com.kuju.j2me.boomer.d.a",
+      "count": 4
+    },
+    {
+      "target": "javax.microedition.lcdui.Form.addCommand",
+      "count": 3
+    },
+    {
+      "target": "javax.microedition.lcdui.Form.setCommandListener",
+      "count": 3
+    },
+    {
+      "target": "java.lang.System.arraycopy",
+      "count": 3
+    },
+    {
+      "target": "javax.microedition.lcdui.Command.getCommandType",
+      "count": 3
+    },
+    {
+      "target": "com.kuju.j2me.boomer.e.a",
+      "count": 3
+    },
+    {
+      "target": "javax.microedition.lcdui.Graphics.drawImage",
+      "count": 3
+    },
+    {
+      "target": "java.io.InputStream.read",
+      "count": 3
+    }
+  ],
+  "opcode_histogram": {
+    "getfield": 2087,
+    "aload_0": 2053,
+    "iload": 729,
+    "putfield": 611,
+    "invokevirtual": 546,
+    "bipush": 495,
+    "iconst_0": 483,
+    "iconst_1": 416,
+    "aaload": 404,
+    "goto": 367,
+    "aload_1": 325,
+    "iload_3": 318,
+    "istore": 304,
+    "iadd": 263,
+    "dup": 189,
+    "isub": 184,
+    "iload_2": 180,
+    "iinc": 163,
+    "ifeq": 139,
+    "iconst_2": 130,
+    "return": 113,
+    "iand": 108,
+    "iconst_3": 105,
+    "aload_2": 102,
+    "ishr": 100,
+    "iload_1": 100,
+    "imul": 96,
+    "if_icmplt": 96,
+    "if_icmpne": 95,
+    "ldc": 75,
+    "idiv": 74,
+    "istore_3": 70,
+    "baload": 66,
+    "sipush": 66,
+    "ifne": 65
+  },
+  "resource_file_count": 29,
+  "resources_by_suffix": {
+    ".mf": 1,
+    ".txt": 1,
+    "[none]": 1,
+    ".png": 8,
+    ".dat": 1,
+    ".ott": 7,
+    ".lgd": 9,
+    ".bgd": 1
+  },
+  "class_methods": [
+    {
+      "class": "com.kuju.j2me.boomer.BoomerMidlet",
+      "method_count": 15,
+      "instructions": 814,
+      "branches": 102,
+      "methods": [
+        {
+          "signature": "public com.kuju.j2me.boomer.BoomerMidlet();",
+          "instructions": 53,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public void c();",
+          "instructions": 114,
+          "branches": 22,
+          "calls": {
+            "javax.microedition.rms.RecordStore.closeRecordStore": 4,
+            "javax.microedition.rms.RecordStore.openRecordStore": 1,
+            "javax.microedition.rms.RecordStore.enumerateRecords": 1,
+            "javax.microedition.rms.RecordStore.getNumRecords": 1,
+            "javax.microedition.rms.RecordEnumeration.nextRecord": 1
+          }
+        },
+        {
+          "signature": "public void a();",
+          "instructions": 122,
+          "branches": 21,
+          "calls": {
+            "javax.microedition.rms.RecordStore.closeRecordStore": 4,
+            "javax.microedition.rms.RecordStore.openRecordStore": 1,
+            "javax.microedition.rms.RecordStore.enumerateRecords": 1,
+            "javax.microedition.rms.RecordStore.getNumRecords": 1,
+            "javax.microedition.rms.RecordEnumeration.nextRecordId": 1,
+            "javax.microedition.rms.RecordStore.setRecord": 1,
+            "javax.microedition.rms.RecordStore.addRecord": 1
+          }
+        },
+        {
+          "signature": "public void startApp();",
+          "instructions": 13,
+          "branches": 0,
+          "calls": {
+            "com.kuju.j2me.boomer.h.d": 1,
+            "javax.microedition.lcdui.Display.getDisplay": 1,
+            "javax.microedition.lcdui.Display.setCurrent": 1
+          }
+        },
+        {
+          "signature": "public void pauseApp();",
+          "instructions": 18,
+          "branches": 2,
+          "calls": {
+            "javax.microedition.lcdui.Display.getCurrent": 1,
+            "com.kuju.j2me.boomer.h.f": 1
+          }
+        },
+        {
+          "signature": "public void destroyApp(boolean);",
+          "instructions": 15,
+          "branches": 0,
+          "calls": {
+            "javax.microedition.lcdui.Display.setCurrent": 1,
+            "com.kuju.j2me.boomer.h.p": 1
+          }
+        },
+        {
+          "signature": "public void d();",
+          "instructions": 78,
+          "branches": 3,
+          "calls": {
+            "javax.microedition.lcdui.List.append": 6,
+            "javax.microedition.lcdui.List.addCommand": 2,
+            "javax.microedition.lcdui.Display.setCurrent": 2,
+            "javax.microedition.lcdui.List.setCommandListener": 1,
+            "javax.microedition.lcdui.Alert.setTimeout": 1
+          }
+        },
+        {
+          "signature": "public void b(boolean);",
+          "instructions": 48,
+          "branches": 5,
+          "calls": {
+            "javax.microedition.lcdui.List.append": 2,
+            "javax.microedition.lcdui.List.addCommand": 2,
+            "javax.microedition.lcdui.List.setSelectedIndex": 1,
+            "javax.microedition.lcdui.List.setCommandListener": 1,
+            "javax.microedition.lcdui.Display.setCurrent": 1
+          }
+        },
+        {
+          "signature": "public void a(boolean);",
+          "instructions": 42,
+          "branches": 4,
+          "calls": {
+            "com.kuju.j2me.boomer.h.k": 1,
+            "javax.microedition.lcdui.Display.setCurrent": 1,
+            "com.kuju.j2me.boomer.h.d": 1
+          }
+        },
+        {
+          "signature": "public void h();",
+          "instructions": 44,
+          "branches": 3,
+          "calls": {
+            "javax.microedition.lcdui.Form.append": 2,
+            "java.lang.StringBuffer.append": 2,
+            "java.lang.StringBuffer.toString": 1,
+            "javax.microedition.lcdui.Form.addCommand": 1,
+            "javax.microedition.lcdui.Form.setCommandListener": 1,
+            "javax.microedition.lcdui.Display.setCurrent": 1
+          }
+        },
+        {
+          "signature": "public void f();",
+          "instructions": 21,
+          "branches": 0,
+          "calls": {
+            "javax.microedition.lcdui.Form.append": 1,
+            "javax.microedition.lcdui.Form.addCommand": 1,
+            "javax.microedition.lcdui.Form.setCommandListener": 1,
+            "javax.microedition.lcdui.Display.setCurrent": 1
+          }
+        },
+        {
+          "signature": "public void e();",
+          "instructions": 29,
+          "branches": 0,
+          "calls": {
+            "javax.microedition.lcdui.Form.append": 3,
+            "javax.microedition.lcdui.Form.addCommand": 1,
+            "javax.microedition.lcdui.Form.setCommandListener": 1,
+            "javax.microedition.lcdui.Display.setCurrent": 1
+          }
+        },
+        {
+          "signature": "public void g();",
+          "instructions": 12,
+          "branches": 2,
+          "calls": {
+            "com.kuju.j2me.boomer.h.f": 1
+          }
+        },
+        {
+          "signature": "public boolean b();",
+          "instructions": 72,
+          "branches": 7,
+          "calls": {
+            "java.lang.System.arraycopy": 1
+          }
+        },
+        {
+          "signature": "public void commandAction(javax.microedition.lcdui.Command, javax.microedition.lcdui.Displayable);",
+          "instructions": 133,
+          "branches": 33,
+          "calls": {
+            "java.lang.String.equals": 4,
+            "javax.microedition.lcdui.Command.getCommandType": 3,
+            "javax.microedition.lcdui.List.getTitle": 1,
+            "javax.microedition.lcdui.Form.getTitle": 1,
+            "javax.microedition.lcdui.List.getSelectedIndex": 1
+          }
+        }
+      ]
+    },
+    {
+      "class": "com.kuju.j2me.boomer.a",
+      "method_count": 3,
+      "instructions": 975,
+      "branches": 70,
+      "methods": [
+        {
+          "signature": "com.kuju.j2me.boomer.a(com.kuju.j2me.boomer.h);",
+          "instructions": 6,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "void a(java.lang.String);",
+          "instructions": 597,
+          "branches": 56,
+          "calls": {
+            "com.kuju.j2me.io.a.a": 19,
+            "com.kuju.j2me.io.a.c": 3
+          }
+        },
+        {
+          "signature": "void b(java.lang.String);",
+          "instructions": 372,
+          "branches": 14,
+          "calls": {
+            "com.kuju.j2me.io.a.a": 19,
+            "com.kuju.j2me.io.a.b": 1
+          }
+        }
+      ]
+    },
+    {
+      "class": "com.kuju.j2me.boomer.b",
+      "method_count": 9,
+      "instructions": 1382,
+      "branches": 106,
+      "methods": [
+        {
+          "signature": "com.kuju.j2me.boomer.b(com.kuju.j2me.boomer.h, int, int, int);",
+          "instructions": 80,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public void b();",
+          "instructions": 107,
+          "branches": 3,
+          "calls": {}
+        },
+        {
+          "signature": "public void f();",
+          "instructions": 114,
+          "branches": 5,
+          "calls": {
+            "com.kuju.j2me.boomer.h.a": 4
+          }
+        },
+        {
+          "signature": "public void g();",
+          "instructions": 193,
+          "branches": 10,
+          "calls": {
+            "com.kuju.j2me.boomer.h.a": 12,
+            "com.nokia.mid.sound.Sound.play": 4
+          }
+        },
+        {
+          "signature": "public void d();",
+          "instructions": 417,
+          "branches": 50,
+          "calls": {}
+        },
+        {
+          "signature": "public void c();",
+          "instructions": 36,
+          "branches": 5,
+          "calls": {}
+        },
+        {
+          "signature": "public void a();",
+          "instructions": 36,
+          "branches": 5,
+          "calls": {}
+        },
+        {
+          "signature": "public void e();",
+          "instructions": 178,
+          "branches": 13,
+          "calls": {}
+        },
+        {
+          "signature": "public void a(javax.microedition.lcdui.Graphics);",
+          "instructions": 221,
+          "branches": 15,
+          "calls": {
+            "com.kuju.j2me.graphics.a.a": 7
+          }
+        }
+      ]
+    },
+    {
+      "class": "com.kuju.j2me.boomer.c",
+      "method_count": 8,
+      "instructions": 702,
+      "branches": 67,
+      "methods": [
+        {
+          "signature": "com.kuju.j2me.boomer.c(com.kuju.j2me.boomer.h);",
+          "instructions": 86,
+          "branches": 5,
+          "calls": {}
+        },
+        {
+          "signature": "byte[] a();",
+          "instructions": 38,
+          "branches": 2,
+          "calls": {
+            "com.kuju.j2me.io.a.c": 1,
+            "com.kuju.j2me.io.a.b": 1
+          }
+        },
+        {
+          "signature": "void a(byte[], com.kuju.j2me.boomer.g);",
+          "instructions": 42,
+          "branches": 1,
+          "calls": {
+            "com.kuju.j2me.boomer.g.b": 1
+          }
+        },
+        {
+          "signature": "void d(com.kuju.j2me.boomer.g);",
+          "instructions": 108,
+          "branches": 15,
+          "calls": {
+            "com.kuju.j2me.boomer.g.b": 1
+          }
+        },
+        {
+          "signature": "void e(com.kuju.j2me.boomer.g);",
+          "instructions": 26,
+          "branches": 2,
+          "calls": {
+            "com.kuju.j2me.boomer.g.a": 1,
+            "com.kuju.j2me.boomer.g.b": 1
+          }
+        },
+        {
+          "signature": "void a(com.kuju.j2me.boomer.g);",
+          "instructions": 22,
+          "branches": 2,
+          "calls": {
+            "com.kuju.j2me.boomer.g.a": 1,
+            "com.kuju.j2me.boomer.g.b": 1
+          }
+        },
+        {
+          "signature": "void b(com.kuju.j2me.boomer.g);",
+          "instructions": 313,
+          "branches": 28,
+          "calls": {
+            "com.kuju.j2me.boomer.h.a": 4,
+            "java.util.Random.nextInt": 2,
+            "java.lang.Math.abs": 2,
+            "com.kuju.j2me.boomer.g.b": 1
+          }
+        },
+        {
+          "signature": "void c(com.kuju.j2me.boomer.g);",
+          "instructions": 67,
+          "branches": 12,
+          "calls": {}
+        }
+      ]
+    },
+    {
+      "class": "com.kuju.j2me.boomer.d",
+      "method_count": 4,
+      "instructions": 923,
+      "branches": 51,
+      "methods": [
+        {
+          "signature": "com.kuju.j2me.boomer.d(com.kuju.j2me.boomer.h);",
+          "instructions": 9,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public void a(int, int, int, int, int, int, int, int, boolean);",
+          "instructions": 211,
+          "branches": 8,
+          "calls": {}
+        },
+        {
+          "signature": "public void a();",
+          "instructions": 527,
+          "branches": 32,
+          "calls": {}
+        },
+        {
+          "signature": "public void a(javax.microedition.lcdui.Graphics);",
+          "instructions": 176,
+          "branches": 11,
+          "calls": {
+            "com.kuju.j2me.graphics.a.a": 8
+          }
+        }
+      ]
+    },
+    {
+      "class": "com.kuju.j2me.boomer.e",
+      "method_count": 5,
+      "instructions": 254,
+      "branches": 16,
+      "methods": [
+        {
+          "signature": "com.kuju.j2me.boomer.e(com.kuju.j2me.boomer.h, int, int, int, int, int);",
+          "instructions": 72,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public void a(com.kuju.j2me.boomer.e);",
+          "instructions": 13,
+          "branches": 2,
+          "calls": {}
+        },
+        {
+          "signature": "public void a();",
+          "instructions": 46,
+          "branches": 9,
+          "calls": {}
+        },
+        {
+          "signature": "public void b();",
+          "instructions": 71,
+          "branches": 3,
+          "calls": {}
+        },
+        {
+          "signature": "public void a(javax.microedition.lcdui.Graphics);",
+          "instructions": 52,
+          "branches": 2,
+          "calls": {
+            "com.kuju.j2me.graphics.a.a": 1
+          }
+        }
+      ]
+    },
+    {
+      "class": "com.kuju.j2me.boomer.f",
+      "method_count": 3,
+      "instructions": 35,
+      "branches": 1,
+      "methods": [
+        {
+          "signature": "com.kuju.j2me.boomer.f(com.kuju.j2me.boomer.h);",
+          "instructions": 17,
+          "branches": 0,
+          "calls": {
+            "java.util.Timer.schedule": 1
+          }
+        },
+        {
+          "signature": "public void run();",
+          "instructions": 4,
+          "branches": 0,
+          "calls": {
+            "com.kuju.j2me.boomer.h.m": 1
+          }
+        },
+        {
+          "signature": "public void a();",
+          "instructions": 14,
+          "branches": 1,
+          "calls": {
+            "java.util.Timer.cancel": 1
+          }
+        }
+      ]
+    },
+    {
+      "class": "com.kuju.j2me.boomer.g",
+      "method_count": 5,
+      "instructions": 566,
+      "branches": 46,
+      "methods": [
+        {
+          "signature": "com.kuju.j2me.boomer.g(int, com.kuju.j2me.boomer.h);",
+          "instructions": 36,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public void a(com.kuju.j2me.boomer.g);",
+          "instructions": 57,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public void b(int, int);",
+          "instructions": 132,
+          "branches": 8,
+          "calls": {
+            "com.kuju.j2me.boomer.h.a": 1,
+            "java.util.Random.nextInt": 1,
+            "java.lang.Math.abs": 1
+          }
+        },
+        {
+          "signature": "public void a(int, int);",
+          "instructions": 283,
+          "branches": 36,
+          "calls": {
+            "com.kuju.j2me.boomer.h.a": 1,
+            "java.util.Random.nextInt": 1,
+            "java.lang.Math.abs": 1
+          }
+        },
+        {
+          "signature": "public void a(javax.microedition.lcdui.Graphics);",
+          "instructions": 58,
+          "branches": 2,
+          "calls": {
+            "com.kuju.j2me.graphics.a.a": 2
+          }
+        }
+      ]
+    },
+    {
+      "class": "com.kuju.j2me.boomer.h",
+      "method_count": 50,
+      "instructions": 6988,
+      "branches": 598,
+      "methods": [
+        {
+          "signature": "com.kuju.j2me.boomer.h(com.kuju.j2me.boomer.BoomerMidlet);",
+          "instructions": 50,
+          "branches": 2,
+          "calls": {
+            "java.lang.System.currentTimeMillis": 1
+          }
+        },
+        {
+          "signature": "public void n();",
+          "instructions": 23,
+          "branches": 3,
+          "calls": {
+            "javax.microedition.lcdui.Image.createImage": 1,
+            "com.nokia.mid.sound.Sound.play": 1
+          }
+        },
+        {
+          "signature": "public void e();",
+          "instructions": 86,
+          "branches": 2,
+          "calls": {
+            "javax.microedition.lcdui.Image.createImage": 6,
+            "com.kuju.j2me.boomer.a.a": 1
+          }
+        },
+        {
+          "signature": "public void k();",
+          "instructions": 37,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public void e(int);",
+          "instructions": 38,
+          "branches": 0,
+          "calls": {
+            "java.lang.StringBuffer.append": 3,
+            "java.lang.StringBuffer.toString": 1,
+            "com.kuju.j2me.boomer.a.b": 1
+          }
+        },
+        {
+          "signature": "public void c(int);",
+          "instructions": 211,
+          "branches": 21,
+          "calls": {
+            "com.kuju.j2me.boomer.b.b": 1
+          }
+        },
+        {
+          "signature": "public void d();",
+          "instructions": 19,
+          "branches": 1,
+          "calls": {
+            "com.kuju.j2me.boomer.f.a": 1
+          }
+        },
+        {
+          "signature": "public void m();",
+          "instructions": 215,
+          "branches": 28,
+          "calls": {
+            "com.nokia.mid.ui.DeviceControl.setLights": 1,
+            "com.kuju.j2me.boomer.BoomerMidlet.d": 1,
+            "com.kuju.j2me.boomer.BoomerMidlet.g": 1,
+            "com.nokia.mid.sound.Sound.play": 1,
+            "com.nokia.mid.ui.DeviceControl.startVibra": 1
+          }
+        },
+        {
+          "signature": "synchronized void f();",
+          "instructions": 14,
+          "branches": 1,
+          "calls": {
+            "com.kuju.j2me.boomer.f.a": 1
+          }
+        },
+        {
+          "signature": "void p();",
+          "instructions": 3,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public void a();",
+          "instructions": 354,
+          "branches": 38,
+          "calls": {}
+        },
+        {
+          "signature": "public void c();",
+          "instructions": 156,
+          "branches": 16,
+          "calls": {
+            "com.kuju.j2me.boomer.BoomerMidlet.g": 2
+          }
+        },
+        {
+          "signature": "public void h();",
+          "instructions": 58,
+          "branches": 6,
+          "calls": {}
+        },
+        {
+          "signature": "public void q();",
+          "instructions": 118,
+          "branches": 15,
+          "calls": {}
+        },
+        {
+          "signature": "public void a(int, int, int, int, int, int, int, int, boolean);",
+          "instructions": 41,
+          "branches": 5,
+          "calls": {
+            "com.kuju.j2me.boomer.d.a": 1
+          }
+        },
+        {
+          "signature": "public void b();",
+          "instructions": 69,
+          "branches": 8,
+          "calls": {
+            "com.kuju.j2me.boomer.d.a": 1
+          }
+        },
+        {
+          "signature": "public void a(int);",
+          "instructions": 279,
+          "branches": 15,
+          "calls": {
+            "com.kuju.j2me.boomer.g.a": 1,
+            "java.util.Random.nextInt": 1,
+            "java.lang.Math.abs": 1
+          }
+        },
+        {
+          "signature": "public void b(int);",
+          "instructions": 207,
+          "branches": 9,
+          "calls": {}
+        },
+        {
+          "signature": "public void o();",
+          "instructions": 47,
+          "branches": 5,
+          "calls": {
+            "com.kuju.j2me.boomer.b.d": 1,
+            "com.kuju.j2me.boomer.c.c": 1
+          }
+        },
+        {
+          "signature": "public void a(int, int, int, int, int);",
+          "instructions": 22,
+          "branches": 2,
+          "calls": {
+            "com.kuju.j2me.boomer.e.a": 1
+          }
+        },
+        {
+          "signature": "public void g();",
+          "instructions": 13,
+          "branches": 2,
+          "calls": {
+            "com.kuju.j2me.boomer.e.a": 1,
+            "com.kuju.j2me.boomer.e.b": 1
+          }
+        },
+        {
+          "signature": "public void b(com.kuju.j2me.boomer.g);",
+          "instructions": 134,
+          "branches": 11,
+          "calls": {
+            "com.nokia.mid.sound.Sound.play": 1
+          }
+        },
+        {
+          "signature": "public void d(int);",
+          "instructions": 72,
+          "branches": 4,
+          "calls": {}
+        },
+        {
+          "signature": "public void l();",
+          "instructions": 108,
+          "branches": 4,
+          "calls": {}
+        },
+        {
+          "signature": "public void a(com.kuju.j2me.boomer.g);",
+          "instructions": 68,
+          "branches": 5,
+          "calls": {
+            "com.nokia.mid.ui.DeviceControl.startVibra": 1
+          }
+        },
+        {
+          "signature": "public void a(com.kuju.j2me.boomer.d, int);",
+          "instructions": 101,
+          "branches": 9,
+          "calls": {}
+        },
+        {
+          "signature": "public void a(int, int, int, int);",
+          "instructions": 196,
+          "branches": 20,
+          "calls": {}
+        },
+        {
+          "signature": "public void i();",
+          "instructions": 14,
+          "branches": 1,
+          "calls": {
+            "com.kuju.j2me.boomer.b.b": 1
+          }
+        },
+        {
+          "signature": "public void j();",
+          "instructions": 1277,
+          "branches": 86,
+          "calls": {}
+        },
+        {
+          "signature": "public boolean a(int, int, int, int, byte[], int);",
+          "instructions": 415,
+          "branches": 50,
+          "calls": {}
+        },
+        {
+          "signature": "public boolean a(int, int, int, int, byte[], int, int, int, int, byte[]);",
+          "instructions": 74,
+          "branches": 2,
+          "calls": {}
+        },
+        {
+          "signature": "public boolean a(com.kuju.j2me.boomer.d, int, int, int, int, byte[]);",
+          "instructions": 61,
+          "branches": 2,
+          "calls": {}
+        },
+        {
+          "signature": "public boolean a(com.kuju.j2me.boomer.d);",
+          "instructions": 149,
+          "branches": 15,
+          "calls": {}
+        },
+        {
+          "signature": "public boolean a(int, int, int, int, int, int, int, int);",
+          "instructions": 22,
+          "branches": 4,
+          "calls": {}
+        },
+        {
+          "signature": "public boolean a(byte[], byte[], int, int, int, int, int, int);",
+          "instructions": 260,
+          "branches": 35,
+          "calls": {}
+        },
+        {
+          "signature": "public int a(int, int, int);",
+          "instructions": 88,
+          "branches": 16,
+          "calls": {}
+        },
+        {
+          "signature": "public com.nokia.mid.sound.Sound a(java.lang.String);",
+          "instructions": 39,
+          "branches": 2,
+          "calls": {
+            "java.lang.Object.getClass": 1,
+            "java.lang.Class.getResourceAsStream": 1,
+            "java.io.DataInputStream.read": 1,
+            "java.io.DataInputStream.close": 1,
+            "java.lang.System.arraycopy": 1
+          }
+        },
+        {
+          "signature": "protected void keyPressed(int);",
+          "instructions": 92,
+          "branches": 12,
+          "calls": {
+            "com.kuju.j2me.boomer.BoomerMidlet.g": 2,
+            "com.kuju.j2me.boomer.BoomerMidlet.pauseApp": 1
+          }
+        },
+        {
+          "signature": "protected void keyReleased(int);",
+          "instructions": 38,
+          "branches": 6,
+          "calls": {}
+        },
+        {
+          "signature": "protected void keyRepeated(int);",
+          "instructions": 32,
+          "branches": 5,
+          "calls": {}
+        },
+        {
+          "signature": "public void paint(javax.microedition.lcdui.Graphics);",
+          "instructions": 208,
+          "branches": 26,
+          "calls": {
+            "javax.microedition.lcdui.Graphics.setClip": 2,
+            "com.kuju.j2me.boomer.d.a": 2,
+            "javax.microedition.lcdui.Font.getFont": 1,
+            "javax.microedition.lcdui.Graphics.setFont": 1,
+            "com.kuju.j2me.graphics.a.a": 1,
+            "javax.microedition.lcdui.Graphics.setColor": 1,
+            "javax.microedition.lcdui.Graphics.fillRect": 1,
+            "com.kuju.j2me.boomer.g.a": 1
+          }
+        },
+        {
+          "signature": "public void d(javax.microedition.lcdui.Graphics);",
+          "instructions": 67,
+          "branches": 8,
+          "calls": {
+            "com.kuju.j2me.graphics.a.a": 1
+          }
+        },
+        {
+          "signature": "public void a(javax.microedition.lcdui.Graphics);",
+          "instructions": 387,
+          "branches": 22,
+          "calls": {
+            "com.kuju.j2me.graphics.a.a": 11,
+            "javax.microedition.lcdui.Graphics.setColor": 4,
+            "javax.microedition.lcdui.Graphics.fillRect": 4,
+            "javax.microedition.lcdui.Graphics.setClip": 1
+          }
+        },
+        {
+          "signature": "public void b(javax.microedition.lcdui.Graphics);",
+          "instructions": 217,
+          "branches": 13,
+          "calls": {
+            "javax.microedition.lcdui.Graphics.drawChars": 3,
+            "javax.microedition.lcdui.Font.getHeight": 3,
+            "javax.microedition.lcdui.Graphics.setColor": 2,
+            "javax.microedition.lcdui.Graphics.setFont": 1,
+            "javax.microedition.lcdui.Graphics.fillRect": 1,
+            "com.kuju.j2me.graphics.a.a": 1
+          }
+        },
+        {
+          "signature": "public void c(javax.microedition.lcdui.Graphics);",
+          "instructions": 372,
+          "branches": 22,
+          "calls": {
+            "java.lang.StringBuffer.append": 16,
+            "javax.microedition.lcdui.Graphics.drawString": 11,
+            "javax.microedition.lcdui.Graphics.setColor": 9,
+            "javax.microedition.lcdui.Font.getHeight": 8,
+            "java.lang.StringBuffer.toString": 7,
+            "javax.microedition.lcdui.Graphics.drawChars": 2,
+            "javax.microedition.lcdui.Graphics.setFont": 1,
+            "javax.microedition.lcdui.Graphics.fillRect": 1
+          }
+        },
+        {
+          "signature": "public void e(javax.microedition.lcdui.Graphics);",
+          "instructions": 84,
+          "branches": 6,
+          "calls": {
+            "javax.microedition.lcdui.Graphics.setColor": 2,
+            "javax.microedition.lcdui.Graphics.setFont": 1,
+            "javax.microedition.lcdui.Graphics.fillRect": 1,
+            "javax.microedition.lcdui.Graphics.drawChars": 1,
+            "javax.microedition.lcdui.Font.getHeight": 1
+          }
+        },
+        {
+          "signature": "public void a(java.lang.String, int);",
+          "instructions": 252,
+          "branches": 31,
+          "calls": {
+            "javax.microedition.lcdui.Font.charsWidth": 6,
+            "java.lang.String.length": 1,
+            "java.lang.String.getChars": 1,
+            "javax.microedition.lcdui.Font.charWidth": 1,
+            "java.lang.System.arraycopy": 1
+          }
+        },
+        {
+          "signature": "public void f(javax.microedition.lcdui.Graphics);",
+          "instructions": 77,
+          "branches": 1,
+          "calls": {
+            "javax.microedition.lcdui.Graphics.setColor": 2,
+            "java.lang.StringBuffer.append": 2,
+            "javax.microedition.lcdui.Graphics.drawString": 2,
+            "javax.microedition.lcdui.Graphics.setFont": 1,
+            "javax.microedition.lcdui.Graphics.fillRect": 1,
+            "javax.microedition.lcdui.Font.getHeight": 1,
+            "java.lang.StringBuffer.toString": 1
+          }
+        },
+        {
+          "signature": "public void a(javax.microedition.lcdui.Graphics, java.lang.String, int);",
+          "instructions": 17,
+          "branches": 0,
+          "calls": {
+            "javax.microedition.lcdui.Font.stringWidth": 1,
+            "javax.microedition.lcdui.Graphics.drawString": 1
+          }
+        },
+        {
+          "signature": "public void hideNotify();",
+          "instructions": 7,
+          "branches": 1,
+          "calls": {
+            "com.kuju.j2me.boomer.BoomerMidlet.pauseApp": 1
+          }
+        }
+      ]
+    },
+    {
+      "class": "com.kuju.j2me.graphics.a",
+      "method_count": 2,
+      "instructions": 235,
+      "branches": 15,
+      "methods": [
+        {
+          "signature": "public com.kuju.j2me.graphics.a(javax.microedition.lcdui.Image, int, int, boolean);",
+          "instructions": 101,
+          "branches": 6,
+          "calls": {
+            "javax.microedition.lcdui.Image.getWidth": 1,
+            "javax.microedition.lcdui.Image.getHeight": 1,
+            "javax.microedition.lcdui.Image.createImage": 1,
+            "javax.microedition.lcdui.Image.getGraphics": 1,
+            "javax.microedition.lcdui.Graphics.drawImage": 1
+          }
+        },
+        {
+          "signature": "public void a(int, javax.microedition.lcdui.Graphics, int, int, boolean);",
+          "instructions": 134,
+          "branches": 9,
+          "calls": {
+            "javax.microedition.lcdui.Graphics.drawImage": 2,
+            "javax.microedition.lcdui.Graphics.setClip": 2,
+            "javax.microedition.lcdui.Graphics.getClipX": 1,
+            "javax.microedition.lcdui.Graphics.getClipY": 1,
+            "javax.microedition.lcdui.Graphics.getClipWidth": 1,
+            "javax.microedition.lcdui.Graphics.getClipHeight": 1
+          }
+        }
+      ]
+    },
+    {
+      "class": "com.kuju.j2me.io.a",
+      "method_count": 5,
+      "instructions": 86,
+      "branches": 5,
+      "methods": [
+        {
+          "signature": "public com.kuju.j2me.io.a(java.lang.String);",
+          "instructions": 9,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public int a(int);",
+          "instructions": 13,
+          "branches": 2,
+          "calls": {}
+        },
+        {
+          "signature": "public int b(int);",
+          "instructions": 7,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "public int c(int);",
+          "instructions": 12,
+          "branches": 0,
+          "calls": {}
+        },
+        {
+          "signature": "private void a(java.lang.String);",
+          "instructions": 45,
+          "branches": 3,
+          "calls": {
+            "java.io.InputStream.read": 3,
+            "java.lang.Object.getClass": 1,
+            "java.lang.Class.getResourceAsStream": 1,
+            "java.io.InputStream.close": 1
+          }
+        }
+      ]
+    }
+  ],
+  "limitation": "Static method inspection, no game execution, no proof of hot paths or semantic equivalence."
+}
