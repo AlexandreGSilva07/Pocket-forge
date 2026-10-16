@@ -35,7 +35,15 @@ class Wave01Tests(unittest.TestCase):
         self.assertEqual(len(ids),12)
     def test_real_reviews_marked_as_partial_not_completed(self):
         registry=json.loads((DEEP/"registry.json").read_text(encoding="utf8"))
-        self.assertEqual(len(registry["studies_in_progress"]),3)
+        self.assertGreaterEqual(len(registry["studies_in_progress"]),3)
+        baseline={
+            "f2667dd8ee20f37d323d16a705ef9e26ed4e61f704af185e1dbb187cf7cf5761",
+            "8db1413d8135bfc300525375ae0ff398548707d0d8f824cb610d797130e67c9d",
+            "6df7ffc301a3524aa0935ac23311d9e132ce4c1dbf81129e5485052afc0828f2"
+        }
+        self.assertTrue(baseline.issubset({
+            item["jar_sha256"] for item in registry["studies_in_progress"]
+        }))
         self.assertEqual(registry["completed_studies"],[])
         for item in registry["studies_in_progress"]:
             self.assertEqual(item["stage"],"METHOD_REVIEW_PARTIAL")
