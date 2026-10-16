@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PocketForge — Tactics Lab</title>
+<style>
+:root{font:15px system-ui; color-scheme:dark;background:#0a101c;color:#ddecf7}
+*{box-sizing:border-box}body{margin:0;min-height:100vh;display:grid;place-items:center;padding:16px}
+main{background:#141f30;border:1px solid #344e65;border-radius:20px;padding:22px;width:min(560px,100%)}
+h1{margin:8px 0;font-size:1.5rem}p{color:#9eb9c9;line-height:1.5}
+#board{display:grid;grid-template-columns:repeat(11,minmax(0,1fr));gap:2px;background:#344456;border:5px solid #344456;border-radius:12px;overflow:hidden;aspect-ratio:1}
+.cell{border:0;border-radius:2px;background:#253746;padding:0;display:grid;place-items:center;min-width:0;cursor:pointer}
+.cell:focus-visible{outline:3px solid #75dfff;outline-offset:-3px}
+.cell span{width:70%;height:70%;border-radius:50%}
+.cell.you span{background:#75dfff;box-shadow:0 0 8px #75dfff}
+.cell.cpu span{background:#ffb85f;box-shadow:0 0 7px #ffb85f}
+.cell.last{background:#3b5562}
+#message{font-weight:700;margin-top:14px;min-height:22px}
+#reset{border:1px solid #5f8da5;background:#254258;border-radius:10px;color:white;padding:11px;margin-top:8px}
+</style></head><body><main><small>POCKETFORGE / TACTICS CORE</small>
+<h1>Cinco em linha</h1><p>Coloque cinco peças consecutivas na horizontal, vertical ou diagonal. Seu adversário usa avaliação tática de quatro direções — um algoritmo novo, inspirado no estudo do bytecode do 5Chess.</p>
+<div id="board" aria-label="Tabuleiro de onze por onze"></div>
+<div id="message" role="status">Sua vez. Peças azuis.</div>
+<button id="reset">Reiniciar partida</button>
+<script src="engine/tactics.js"></script>
+<script>
+"use strict";
+(()=>{
+ const T=window.PocketForgeTactics,el=document.getElementById("board"),message=document.getElementById("message");
+ let board,turn=1,ended=false;
+ const buttons=[];
+ for(let y=0;y<11;y++)for(let x=0;x<11;x++){
+  const b=document.createElement("button");b.type="button";b.className="cell";
+  b.setAttribute("aria-label","Linha "+(y+1)+", coluna "+(x+1));
+  b.dataset.x=x;b.dataset.y=y;b.append(document.createElement("span"));
+  b.onclick=()=>human(x,y);el.append(b);buttons.push(b);
+ }
+ function render(last){
+  for(let k=0;k<buttons.length;k++){
+   const b=buttons[k],value=board.cells[k];
+   b.className="cell"+(value===1?" you":value===2?" cpu":"")+(last===k?" last":"");
+   b.disabled=ended||turn!==1||value!==0;
+  }
+ }
+ function reset(){
+  board=T.makeBoard(11);turn=1;ended=false;message.textContent="Sua vez. Peças azuis.";render();
+ }
+ function human(x,y){
+  if(ended||turn!==1||!T.place(board,x,y,1))return;
+  if(T.winAt(board,x,y,1)){ended=true;message.textContent="Você venceu!";render(y*11+x);return;}
+  turn=2;message.textContent="Computador calculando...";render(y*11+x);
+  setTimeout(cpu,50);
+ }
+ function cpu(){
+  if(ended||turn!==2)return;
+  const move=T.chooseMove(board,2);
+  if(!move){ended=true;message.textContent="Empate!";render();return;}
+  T.place(board,move.x,move.y,2);
+  if(T.winAt(board,move.x,move.y,2)){ended=true;message.textContent="Computador venceu.";render(move.y*11+move.x);return;}
+  turn=1;message.textContent="Sua vez. A IA jogou: "+move.reason+".";render(move.y*11+move.x);
+ }
+ document.getElementById("reset").onclick=reset;reset();
+})();
+</script></main></body></html>
