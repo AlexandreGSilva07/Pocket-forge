@@ -40,7 +40,7 @@ button:disabled{opacity:.35;cursor:default}#controls{display:flex;gap:8px;flex-w
      applyMove:(s,n,isMax)=>{const undo={remaining:s.remaining,playerTurn:s.playerTurn};s.remaining-=n;s.playerTurn=!s.playerTurn;return undo;},
      undoMove:(s,n,isMax,old)=>{s.remaining=old.remaining;s.playerTurn=old.playerTurn;},
      isTerminal:s=>s.remaining===0,
-     evaluate:s=>s.remaining===0?(s.playerTurn?-100:100):0
+     evaluate:s=>s.remaining===0?(s.playerTurn?100:-100):0
    });
    // At leaf, playerTurn means next to move; last mover wins.
    // max side represents CPU (playerTurn=false at root); the evaluation
