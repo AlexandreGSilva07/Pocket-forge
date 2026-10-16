@@ -30,6 +30,9 @@ jobs:
           assert len(a)==100 and len(b)==25
           assert len({r["jar_sha256"] for r in a+b})==125
           assert len({r["jar_path"] for r in a+b})==125
+          assert all(r["investigation_targets"] for r in a+b)
+          assert all(r["game_title"] != "JBenchmark3D" for r in a)
+          assert p["technical_controls_not_games"]
           assert {i["rank"] for i in a}==set(range(1,101))
           assert {i["rank"] for i in b}==set(range(1,26))
           assert all(len(i["jar_sha256"])==64 and i["jar_path"].lower().endswith(".jar") for i in a+b)
