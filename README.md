@@ -7,14 +7,14 @@
 
 ## Pesquisa reproduzível: 100 jogos por PR
 
-**Status atual: 300/1.649 JARs com SHA-256 distintos registrados permanentemente**, distribuídos em três PRs integrados; o próximo é o lote 004. A análise é estática (classfiles, recursos e referências), **não** a execução de cada jogo.
+**Status: 1.649/1.649 JARs distintos auditados sinteticamente e versionados**, em 17 PRs mesclados (16 lotes de 100 + um de 49). A fase estática está encerrada; a **próxima fase é engenharia reversa detalhada e evolução do motor**.
 
 - [Contrato de continuidade para qualquer agente/chat](docs/research/CONTINUITY.md)
 - [Ledger com hashes completos, sem duplicação](docs/research/batches/registry.json)
-- [Lote 001](docs/research/batches/001.md) · [Lote 002](docs/research/batches/002.md) · [Lote 003](docs/research/batches/003.md)
+- [Relatório final, estatísticas e índice dos 17 PRs](docs/research/STATIC_COMPLETE.md) · [Lote 001](docs/research/batches/001.md) · [Lote 017](docs/research/batches/017.md)
 - Motor operacional já integrado ao demo: [compact](demo/engine/compact.js), [estado](demo/engine/state.js) e [áudio](demo/engine/audio.js), com testes e CI.
 
-**Não colocar os JARs/JADs originais no repositório.** O pipeline baixa o corpus em ambiente temporário e mantém apenas os resultados. Cada PR precisa trazer mudança concreta e verificada no motor, não só documentação.
+**Não colocar JARs/JADs originais no repositório.** O processamento sintético terminou: cada PR contém os metadados dos arquivos, sem executar ou descompilar integralmente os jogos. Os próximos PRs, da fase detalhada, deverão estudar algoritmos de verdade e incorporar melhorias funcionais do motor com testes e benchmarks.
 
 ## Comece aqui
 
