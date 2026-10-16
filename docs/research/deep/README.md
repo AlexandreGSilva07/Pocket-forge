@@ -58,6 +58,6 @@ Veja também [../STATIC_COMPLETE.md](../STATIC_COMPLETE.md) e [../CONTINUITY.md]
 ## Primeira onda — trabalhos realizados
 
 - [12 desmontagens de bytecode com inventários por classe/método](wave01/overview.md) — todos os JARs identificados por SHA-256 e analisados em ambiente temporário; **não constituem compreensão semântica integral**.
-- Estudos dirigidos: [3D Adventure](studies/f2667dd8ee20-3d-adventure.md), [Xrossing Dice](studies/8db1413d8135-xrossing-dice.md), [7 Zwerge](studies/6df7ffc301a3-7zwerge.md).
+- Estudos parciais: [3D Adventure](studies/f2667dd8ee20-3d-adventure.md), [Xrossing Dice](studies/8db1413d8135-xrossing-dice.md), [7 Zwerge](studies/6df7ffc301a3-7zwerge.md), [5Chess](studies/493f99e040eb-5chess.md), [3D Balloon Race](studies/12e9d0c928e3-balloon-asset-pack.md).
 - Motor modernizado com `demo/engine/ai.js`, `tilepack.js`, `pixels.js` e demos testados em Chromium.
-- **PR #20** prepara processamento dos demais 88 selecionados, mas não foi executado; a integração deve aguardar 88 evidências reais.
+- **PR #20 concluído**: 88 JARs adicionais com desmontagem real e relatórios por método em [bytecode-100](bytecode-100/README.md); somados à primeira onda, **100/100**. O estudo semântico integral e a emulação continuam pendentes.
