@@ -19,6 +19,7 @@
 - [Como retomar em outro chat: CONTINUITY](research/CONTINUITY.md)
 - [Registro permanente (ledger) com os 1.649 hashes](research/batches/registry.json)
 - [Auditoria sintética concluída: estatísticas e índices de todos os 17 lotes](research/STATIC_COMPLETE.md)
+- [Fase detalhada: protocolo e rastreador](research/deep/README.md) · [registry detalhado](research/deep/registry.json)
 - [Lote 001](research/batches/001.md) · [Lote 017](research/batches/017.md)
 
 ## Pesquisa empírica
