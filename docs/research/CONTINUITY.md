@@ -63,3 +63,7 @@ A lista de **100 jogos prioritários + 25 reservas** está em [deep/selection-10
 ## Prompt para novo chat
 
 > Continue o projeto PocketForge no repositório AlexandreGSilva07/Pocket-forge. Leia AGENTS.md, docs/research/CONTINUITY.md, docs/research/STATIC_COMPLETE.md e o registry.json. A **auditoria sintética de 1.649 JARs está concluída** em 17 PRs mesclados. Não repita essa etapa. Faça agora engenharia reversa DETALHADA, com análise real de classes e algoritmos, registre a evidência por arquivo e reconstrua progressivamente o motor do PocketForge com código original, integração, testes e benchmarks. Preserve o ledger permanentemente.
+
+## Atualização importante — RE profunda já iniciada
+
+**Não reiniciar a classificação dos 1.649 JARs e não reclassificar como completos os 100 escolhidos.** A primeira onda desmontou de verdade os bytecodes de 12 JARs via OpenJDK `javap`, armazenando inventários por classe e método em [deep/wave01](deep/wave01/overview.md). Houve revisão parcial de métodos reais em Xrossing Dice, 3D Adventure e 7 Zwerge; nenhuma execução dos originais em emulador foi feita. PRs #19 e #21 já integrados criaram os novos módulos AI, TilePack e Pixel Surface, testados em demos HTML/Chromium. O PR #20 é **rascunho de script para os 88 restantes; ainda não executado**. Progresso formal: [deep/registry.json](deep/registry.json).
