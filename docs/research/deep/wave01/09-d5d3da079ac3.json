@@ -1,0 +1,4895 @@
+{
+  "jar_path": "828 Java Games/WorldFighting.jar",
+  "jar_sha256": "d5d3da079ac379e9a90a5ce65a9596b39c5fcb66de4cb868f9004e4141f71201",
+  "game_title": "World Fighting",
+  "jar_bytes": 205791,
+  "research_status": "BYTECODE_DISASSEMBLED_INDEXED_NOT_FULLY_REVIEWED",
+  "class_count": 13,
+  "methods_count": 173,
+  "instructions_count": 12295,
+  "branch_count": 767,
+  "method_examples": [
+    {
+      "class": "d",
+      "signature": "protected void paint(javax.microedition.lcdui.Graphics);",
+      "instructions": 1741,
+      "branches": 54,
+      "priority_score": 3644,
+      "calls": {
+        "com.nokia.mid.ui.FullCanvas.getWidth": 66,
+        "javax.microedition.lcdui.Image.getHeight": 36,
+        "javax.microedition.lcdui.Image.getWidth": 31,
+        "com.nokia.mid.ui.FullCanvas.getHeight": 28,
+        "javax.microedition.lcdui.Graphics.drawImage": 28,
+        "javax.microedition.lcdui.Graphics.setClip": 21,
+        "javax.microedition.lcdui.Graphics.setColor": 16,
+        "b.case": 12,
+        "javax.microedition.lcdui.Graphics.drawString": 11,
+        "WFightN60.j": 9,
+        "javax.microedition.lcdui.Graphics.getFont": 7,
+        "javax.microedition.lcdui.Font.getHeight": 7,
+        "javax.microedition.lcdui.Graphics.fillRoundRect": 5,
+        "javax.microedition.lcdui.Graphics.drawRoundRect": 5,
+        "WFightN60.l": 4,
+        "b.if": 3,
+        "b.for": 3,
+        "WFightN60.g": 3,
+        "b.f": 3,
+        "javax.microedition.lcdui.Font.getFont": 3
+      }
+    },
+    {
+      "class": "a",
+      "signature": "protected void paint(javax.microedition.lcdui.Graphics);",
+      "instructions": 716,
+      "branches": 24,
+      "priority_score": 2220,
+      "calls": {
+        "javax.microedition.lcdui.Image.getWidth": 23,
+        "WFightN60.g": 21,
+        "com.nokia.mid.ui.FullCanvas.getWidth": 17,
+        "javax.microedition.lcdui.Graphics.drawImage": 11,
+        "javax.microedition.lcdui.Image.getHeight": 10,
+        "com.nokia.mid.ui.FullCanvas.getHeight": 9,
+        "javax.microedition.lcdui.Graphics.setClip": 8,
+        "javax.microedition.lcdui.Graphics.setColor": 4,
+        "com.nokia.mid.ui.DirectGraphics.drawImage": 3,
+        "javax.microedition.lcdui.Graphics.fillArc": 3,
+        "java.lang.String.length": 2,
+        "javax.microedition.lcdui.Graphics.drawString": 2,
+        "com.nokia.mid.ui.DirectUtils.getDirectGraphics": 1,
+        "com.nokia.mid.ui.DirectGraphics.fillPolygon": 1,
+        "javax.microedition.lcdui.Font.getFont": 1,
+        "javax.microedition.lcdui.Graphics.setFont": 1,
+        "java.io.PrintStream.println": 1
+      }
+    },
+    {
+      "class": "WFightN60$a",
+      "signature": "protected void paint(javax.microedition.lcdui.Graphics);",
+      "instructions": 556,
+      "branches": 17,
+      "priority_score": 1719,
+      "calls": {
+        "WFightN60.access$1": 20,
+        "com.nokia.mid.ui.FullCanvas.getWidth": 12,
+        "javax.microedition.lcdui.Image.getHeight": 12,
+        "javax.microedition.lcdui.Image.getWidth": 11,
+        "WFightN60.g": 10,
+        "com.nokia.mid.ui.FullCanvas.getHeight": 8,
+        "javax.microedition.lcdui.Graphics.setColor": 7,
+        "javax.microedition.lcdui.Graphics.drawImage": 6,
+        "javax.microedition.lcdui.Graphics.drawString": 6,
+        "javax.microedition.lcdui.Graphics.setClip": 5,
+        "WFightN60.o": 3,
+        "javax.microedition.lcdui.Font.getFont": 2,
+        "javax.microedition.lcdui.Graphics.setFont": 2,
+        "java.lang.String.length": 2,
+        "javax.microedition.lcdui.Graphics.fillRect": 1,
+        "WFightN60.p": 1,
+        "WFightN60.b": 1,
+        "com.nokia.mid.ui.DirectUtils.getDirectGraphics": 1,
+        "com.nokia.mid.ui.DirectGraphics.drawImage": 1
+      }
+    },
+    {
+      "class": "WFightN60$b",
+      "signature": "protected void paint(javax.microedition.lcdui.Graphics);",
+      "instructions": 521,
+      "branches": 14,
+      "priority_score": 1605,
+      "calls": {
+        "com.nokia.mid.ui.FullCanvas.getWidth": 16,
+        "javax.microedition.lcdui.Graphics.setColor": 15,
+        "javax.microedition.lcdui.Graphics.drawString": 14,
+        "com.nokia.mid.ui.FullCanvas.getHeight": 7,
+        "WFightN60.access$1": 7,
+        "javax.microedition.lcdui.Font.getFont": 4,
+        "javax.microedition.lcdui.Graphics.setFont": 4,
+        "javax.microedition.lcdui.Graphics.getFont": 4,
+        "javax.microedition.lcdui.Font.getHeight": 4,
+        "javax.microedition.lcdui.Graphics.setClip": 3,
+        "javax.microedition.lcdui.Image.getWidth": 3,
+        "javax.microedition.lcdui.Graphics.drawImage": 3,
+        "javax.microedition.lcdui.Image.getHeight": 3,
+        "java.lang.String.length": 2,
+        "javax.microedition.lcdui.Graphics.fillRect": 1,
+        "WFightN60.g": 1,
+        "WFightN60.access$0": 1,
+        "WFightN60.l": 1,
+        "com.nokia.mid.ui.DirectUtils.getDirectGraphics": 1,
+        "com.nokia.mid.ui.DirectGraphics.drawImage": 1
+      }
+    },
+    {
+      "class": "c",
+      "signature": "public c();",
+      "instructions": 1250,
+      "branches": 0,
+      "priority_score": 1250,
+      "calls": {}
+    },
+    {
+      "class": "d",
+      "signature": "private void new();",
+      "instructions": 200,
+      "branches": 30,
+      "priority_score": 1090,
+      "calls": {
+        "WFightN60.j": 7,
+        "java.lang.Thread.currentThread": 3,
+        "java.lang.Thread.sleep": 3,
+        "WFightN60.b": 2,
+        "b.case": 2,
+        "java.lang.System.currentTimeMillis": 2,
+        "b.e": 2,
+        "WFightN60.o": 2,
+        "javax.microedition.lcdui.Canvas.repaint": 1,
+        "javax.microedition.lcdui.Canvas.serviceRepaints": 1
+      }
+    },
+    {
+      "class": "WFightN60$c",
+      "signature": "public void run();",
+      "instructions": 192,
+      "branches": 32,
+      "priority_score": 1056,
+      "calls": {
+        "WFightN60.access$0": 22,
+        "WFightN60.a": 6,
+        "WFightN60.f": 4,
+        "java.lang.Thread.currentThread": 3,
+        "java.lang.Thread.sleep": 3,
+        "WFightN60.access$4": 3,
+        "javax.microedition.lcdui.Canvas.repaint": 2,
+        "WFightN60.c": 2,
+        "WFightN60.n": 2,
+        "javax.microedition.lcdui.Canvas.serviceRepaints": 1,
+        "WFightN60.try": 1,
+        "WFightN60.void": 1,
+        "WFightN60.int": 1,
+        "WFightN60.m": 1,
+        "WFightN60.r": 1,
+        "WFightN60.k": 1,
+        "WFightN60.access$3": 1,
+        "WFightN60.access$5": 1,
+        "a.do": 1,
+        "javax.microedition.lcdui.Display.getDisplay": 1
+      }
+    },
+    {
+      "class": "b",
+      "signature": "public void char();",
+      "instructions": 703,
+      "branches": 116,
+      "priority_score": 1051,
+      "calls": {
+        "d.byte": 5,
+        "d.int": 4,
+        "java.lang.Math.abs": 4,
+        "d.b": 3,
+        "WFightN60.j": 2,
+        "d.a": 1,
+        "WFightN60.p": 1,
+        "d.try": 1
+      }
+    },
+    {
+      "class": "WFightN60$c",
+      "signature": "protected void paint(javax.microedition.lcdui.Graphics);",
+      "instructions": 342,
+      "branches": 8,
+      "priority_score": 1050,
+      "calls": {
+        "WFightN60.access$1": 13,
+        "com.nokia.mid.ui.FullCanvas.getHeight": 7,
+        "javax.microedition.lcdui.Image.getHeight": 7,
+        "com.nokia.mid.ui.FullCanvas.getWidth": 6,
+        "javax.microedition.lcdui.Graphics.setColor": 5,
+        "javax.microedition.lcdui.Graphics.drawImage": 5,
+        "javax.microedition.lcdui.Graphics.drawString": 4,
+        "javax.microedition.lcdui.Graphics.setClip": 3,
+        "WFightN60.g": 3,
+        "javax.microedition.lcdui.Image.getWidth": 3,
+        "javax.microedition.lcdui.Font.getFont": 2,
+        "javax.microedition.lcdui.Graphics.setFont": 2,
+        "java.lang.String.length": 2,
+        "javax.microedition.lcdui.Graphics.fillRect": 1,
+        "com.nokia.mid.ui.DirectUtils.getDirectGraphics": 1,
+        "com.nokia.mid.ui.DirectGraphics.drawImage": 1
+      }
+    },
+    {
+      "class": "a",
+      "signature": "protected void keyPressed(int);",
+      "instructions": 257,
+      "branches": 40,
+      "priority_score": 891,
+      "calls": {
+        "javax.microedition.lcdui.Canvas.repaint": 6,
+        "javax.microedition.lcdui.Canvas.serviceRepaints": 6,
+        "WFightN60.j": 4,
+        "javax.microedition.lcdui.Canvas.getKeyCode": 1,
+        "WFightN60.a": 1,
+        "WFightN60.void": 1
+      }
+    },
+    {
+      "class": "d",
+      "signature": "protected void keyPressed(int);",
+      "instructions": 476,
+      "branches": 97,
+      "priority_score": 767,
+      "calls": {
+        "WFightN60.j": 28,
+        "b.for": 16,
+        "b.case": 2,
+        "javax.microedition.lcdui.Canvas.getKeyCode": 2,
+        "b.null": 2,
+        "WFightN60.a": 2,
+        "d$a.stop": 1,
+        "WFightN60.else": 1,
+        "WFightN60.l": 1
+      }
+    },
+    {
+      "class": "e",
+      "signature": "public e();",
+      "instructions": 737,
+      "branches": 0,
+      "priority_score": 737,
+      "calls": {}
+    },
+    {
+      "class": "d",
+      "signature": "public void run();",
+      "instructions": 126,
+      "branches": 25,
+      "priority_score": 705,
+      "calls": {
+        "WFightN60.j": 7,
+        "WFightN60.void": 5,
+        "b.char": 2,
+        "WFightN60.e": 2,
+        "java.lang.System.currentTimeMillis": 1,
+        "javax.microedition.lcdui.Displayable.isShown": 1,
+        "javax.microedition.lcdui.Canvas.repaint": 1,
+        "javax.microedition.lcdui.Canvas.serviceRepaints": 1,
+        "java.lang.Thread.currentThread": 1,
+        "java.lang.Thread.sleep": 1,
+        "WFightN60.do": 1,
+        "WFightN60.case": 1
+      }
+    },
+    {
+      "class": "d",
+      "signature": "public d(WFightN60);",
+      "instructions": 162,
+      "branches": 5,
+      "priority_score": 501,
+      "calls": {
+        "java.io.PrintStream.println": 5,
+        "javax.microedition.lcdui.Image.createImage": 5,
+        "java.lang.String.valueOf": 4,
+        "java.lang.Object.getClass": 2,
+        "java.lang.Class.getResourceAsStream": 2,
+        "java.io.InputStream.read": 2,
+        "java.lang.StringBuffer.append": 2,
+        "java.lang.String.concat": 1,
+        "java.lang.System.gc": 1,
+        "WFightN60.g": 1
+      }
+    },
+    {
+      "class": "b",
+      "signature": "public void a(javax.microedition.lcdui.Graphics);",
+      "instructions": 153,
+      "branches": 7,
+      "priority_score": 480,
+      "calls": {
+        "java.lang.String.valueOf": 4,
+        "javax.microedition.lcdui.Graphics.setColor": 3,
+        "javax.microedition.lcdui.Image.getHeight": 3,
+        "java.lang.String.concat": 2,
+        "javax.microedition.lcdui.Graphics.drawString": 2,
+        "com.nokia.mid.ui.DirectUtils.getDirectGraphics": 1,
+        "javax.microedition.lcdui.Image.getWidth": 1,
+        "javax.microedition.lcdui.Graphics.fillArc": 1,
+        "javax.microedition.lcdui.Graphics.drawImage": 1,
+        "com.nokia.mid.ui.DirectGraphics.drawImage": 1,
+        "d.b": 1,
+        "WFightN60.j": 1,
+        "javax.microedition.lcdui.Font.getFont": 1,
+        "javax.microedition.lcdui.Graphics.setFont": 1
+      }
+    },
+    {
+      "class": "WFightN60$d",
+      "signature": "private void if();",
+      "instructions": 85,
+      "branches": 7,
+      "priority_score": 361,
+      "calls": {
+        "java.lang.String.valueOf": 4,
+        "WFightN60.access$1": 3,
+        "java.lang.StringBuffer.append": 2,
+        "java.lang.System.gc": 1,
+        "WFightN60.try": 1,
+        "javax.microedition.lcdui.Image.createImage": 1,
+        "java.io.PrintStream.println": 1,
+        "javax.microedition.lcdui.Canvas.repaint": 1,
+        "javax.microedition.lcdui.Canvas.serviceRepaints": 1,
+        "WFightN60.q": 1,
+        "java.lang.Thread.start": 1
+      }
+    },
+    {
+      "class": "d$a",
+      "signature": "public void run();",
+      "instructions": 67,
+      "branches": 8,
+      "priority_score": 359,
+      "calls": {
+        "d.access$4": 4,
+        "java.lang.System.currentTimeMillis": 2,
+        "WFightN60.j": 2,
+        "d.access$0": 1,
+        "javax.microedition.lcdui.Displayable.isShown": 1,
+        "d.access$2": 1,
+        "d.access$1": 1,
+        "javax.microedition.lcdui.Canvas.repaint": 1,
+        "javax.microedition.lcdui.Canvas.serviceRepaints": 1,
+        "d.access$3": 1,
+        "WFightN60.do": 1,
+        "WFightN60.case": 1,
+        "java.lang.Thread.currentThread": 1,
+        "java.lang.Thread.sleep": 1
+      }
+    },
+    {
+      "class": "f",
+      "signature": "public void a();",
+      "instructions": 292,
+      "branches": 9,
+      "priority_score": 319,
+      "calls": {
+        "javax.microedition.lcdui.Image.createImage": 18,
+        "java.lang.StringBuffer.append": 10,
+        "java.lang.String.valueOf": 10,
+        "java.lang.String.concat": 1,
+        "java.io.PrintStream.println": 1,
+        "java.lang.System.gc": 1
+      }
+    },
+    {
+      "class": "WFightN60$d",
+      "signature": "public void run();",
+      "instructions": 55,
+      "branches": 7,
+      "priority_score": 296,
+      "calls": {
+        "java.lang.System.currentTimeMillis": 3,
+        "com.nokia.mid.ui.FullCanvas.getHeight": 1,
+        "com.nokia.mid.ui.FullCanvas.getWidth": 1,
+        "javax.microedition.lcdui.Canvas.repaint": 1,
+        "javax.microedition.lcdui.Canvas.serviceRepaints": 1,
+        "java.lang.Thread.currentThread": 1,
+        "java.lang.Thread.sleep": 1
+      }
+    },
+    {
+      "class": "WFightN60$c",
+      "signature": "protected void keyPressed(int);",
+      "instructions": 119,
+      "branches": 16,
+      "priority_score": 286,
+      "calls": {
+        "WFightN60.goto": 3,
+        "java.lang.System.gc": 3,
+        "javax.microedition.lcdui.Canvas.repaint": 2,
+        "WFightN60.access$0": 2,
+        "WFightN60.access$2": 2,
+        "javax.microedition.lcdui.Canvas.getKeyCode": 1
+      }
+    }
+  ],
+  "class_details": [
+    {
+      "class_file": "WFightN60$1.class",
+      "class_name": "WFightN60$1",
+      "methods_count": 2,
+      "instructions_count": 20,
+      "branch_count": 0,
+      "methods": [
+        {
+          "signature": "WFightN60$1(WFightN60$d);",
+          "instructions": 6,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 2,
+            "invokespecial": 1,
+            "aload_1": 1,
+            "putfield": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "public void run();",
+          "instructions": 14,
+          "branches": 0,
+          "calls": {
+            "WFightN60$d.access$7": 2,
+            "WFightN60.access$8": 1,
+            "WFightN60.access$1": 1,
+            "f.a": 1
+          },
+          "opcodes": {
+            "invokestatic": 4,
+            "aload_0": 2,
+            "getfield": 2,
+            "new": 1,
+            "dup": 1,
+            "invokespecial": 1,
+            "pop": 1,
+            "invokevirtual": 1,
+            "return": 1
+          }
+        }
+      ]
+    },
+    {
+      "class_file": "WFightN60$a.class",
+      "class_name": "WFightN60$a",
+      "methods_count": 10,
+      "instructions_count": 845,
+      "branch_count": 38,
+      "methods": [
+        {
+          "signature": "public WFightN60$a(WFightN60);",
+          "instructions": 41,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "dup": 6,
+            "ldc": 6,
+            "aastore": 6,
+            "aload_0": 5,
+            "putfield": 4,
+            "anewarray": 2,
+            "iconst_0": 2,
+            "iconst_1": 2,
+            "iconst_2": 2,
+            "invokespecial": 1,
+            "aload_1": 1,
+            "bipush": 1,
+            "iconst_4": 1,
+            "iconst_3": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "public void if();",
+          "instructions": 13,
+          "branches": 0,
+          "calls": {
+            "com.nokia.mid.ui.FullCanvas.getWidth": 1
+          },
+          "opcodes": {
+            "aload_0": 4,
+            "putfield": 3,
+            "iconst_0": 2,
+            "invokevirtual": 1,
+            "iconst_5": 1,
+            "idiv": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "protected void showNotify();",
+          "instructions": 4,
+          "branches": 0,
+          "calls": {
+            "WFightN60.access$0": 1,
+            "WFightN60.byte": 1
+          },
+          "opcodes": {
+            "invokestatic": 1,
+            "invokevirtual": 1,
+            "pop": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "protected void hideNotify();",
+          "instructions": 1,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "return": 1
+          }
+        },
+        {
+          "signature": "protected void keyPressed(int);",
+          "instructions": 108,
+          "branches": 13,
+          "calls": {
+            "javax.microedition.lcdui.Canvas.repaint": 2,
+            "WFightN60.goto": 2,
+            "WFightN60.access$0": 2,
+            "java.lang.System.currentTimeMillis": 1,
+            "javax.microedition.lcdui.Canvas.getKeyCode": 1,
+            "WFightN60.access$6": 1,
+            "WFightN60.null": 1,
+            "WFightN60.try": 1
+          },
+          "opcodes": {
+            "aload_0": 22,
+            "getfield": 18,
+            "iload_1": 8,
+            "invokevirtual": 8,
+            "bipush": 7,
+            "iconst_1": 5,
+            "invokestatic": 4,
+            "if_icmpeq": 4,
+            "if_icmpne": 4,
+            "putfield": 3,
+            "isub": 3,
+            "return": 3,
+            "goto": 2,
+            "arraylength": 2,
+            "iadd": 2
+          }
+        },
+        {
+          "signature": "protected void paint(javax.microedition.lcdui.Graphics);",
+          "instructions": 556,
+          "branches": 17,
+          "calls": {
+            "WFightN60.access$1": 20,
+            "com.nokia.mid.ui.FullCanvas.getWidth": 12,
+            "javax.microedition.lcdui.Image.getHeight": 12,
+            "javax.microedition.lcdui.Image.getWidth": 11,
+            "WFightN60.g": 10,
+            "com.nokia.mid.ui.FullCanvas.getHeight": 8,
+            "javax.microedition.lcdui.Graphics.setColor": 7,
+            "javax.microedition.lcdui.Graphics.drawImage": 6,
+            "javax.microedition.lcdui.Graphics.drawString": 6,
+            "javax.microedition.lcdui.Graphics.setClip": 5,
+            "WFightN60.o": 3,
+            "javax.microedition.lcdui.Font.getFont": 2,
+            "javax.microedition.lcdui.Graphics.setFont": 2,
+            "java.lang.String.length": 2,
+            "javax.microedition.lcdui.Graphics.fillRect": 1,
+            "WFightN60.p": 1,
+            "WFightN60.b": 1,
+            "com.nokia.mid.ui.DirectUtils.getDirectGraphics": 1,
+            "com.nokia.mid.ui.DirectGraphics.drawImage": 1
+          },
+          "opcodes": {
+            "invokevirtual": 87,
+            "getfield": 83,
+            "aload_0": 75,
+            "bipush": 37,
+            "aload_1": 31,
+            "isub": 24,
+            "invokestatic": 23,
+            "iconst_1": 22,
+            "iconst_0": 17,
+            "iadd": 16,
+            "idiv": 14,
+            "ior": 13,
+            "iload_2": 13,
+            "iconst_4": 11,
+            "iload_3": 10
+          }
+        },
+        {
+          "signature": "private void a(javax.microedition.lcdui.Graphics, int, int, int, int);",
+          "instructions": 70,
+          "branches": 4,
+          "calls": {
+            "javax.microedition.lcdui.Image.getWidth": 3,
+            "WFightN60.g": 1,
+            "javax.microedition.lcdui.Image.getHeight": 1,
+            "javax.microedition.lcdui.Graphics.setClip": 1,
+            "javax.microedition.lcdui.Graphics.drawImage": 1
+          },
+          "opcodes": {
+            "iload": 12,
+            "invokevirtual": 7,
+            "bipush": 6,
+            "istore": 5,
+            "aload": 5,
+            "idiv": 4,
+            "isub": 3,
+            "imul": 3,
+            "getfield": 2,
+            "iconst_0": 2,
+            "if_icmpge": 2,
+            "iconst_1": 2,
+            "iinc": 2,
+            "goto": 2,
+            "aload_1": 2
+          }
+        },
+        {
+          "signature": "public void a();",
+          "instructions": 10,
+          "branches": 0,
+          "calls": {
+            "java.lang.Thread.start": 1
+          },
+          "opcodes": {
+            "aload_0": 3,
+            "new": 1,
+            "dup": 1,
+            "invokespecial": 1,
+            "putfield": 1,
+            "getfield": 1,
+            "invokevirtual": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "public void do();",
+          "instructions": 8,
+          "branches": 0,
+          "calls": {
+            "java.lang.System.gc": 1
+          },
+          "opcodes": {
+            "aload_0": 2,
+            "putfield": 2,
+            "iconst_1": 1,
+            "aconst_null": 1,
+            "invokestatic": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "public void run();",
+          "instructions": 34,
+          "branches": 4,
+          "calls": {
+            "java.lang.System.currentTimeMillis": 1,
+            "javax.microedition.lcdui.Canvas.repaint": 1,
+            "java.lang.Thread.currentThread": 1,
+            "java.lang.Thread.sleep": 1
+          },
+          "opcodes": {
+            "aload_0": 7,
+            "putfield": 5,
+            "iconst_0": 3,
+            "invokestatic": 3,
+            "getfield": 2,
+            "goto": 2,
+            "ifne": 1,
+            "dup": 1,
+            "iconst_1": 1,
+            "iadd": 1,
+            "dup_x1": 1,
+            "bipush": 1,
+            "if_icmplt": 1,
+            "invokevirtual": 1,
+            "pop": 1
+          }
+        }
+      ]
+    },
+    {
+      "class_file": "WFightN60$b.class",
+      "class_name": "WFightN60$b",
+      "methods_count": 9,
+      "instructions_count": 743,
+      "branch_count": 38,
+      "methods": [
+        {
+          "signature": "public WFightN60$b(WFightN60);",
+          "instructions": 45,
+          "branches": 1,
+          "calls": {
+            "javax.microedition.lcdui.Image.createImage": 1
+          },
+          "opcodes": {
+            "dup": 6,
+            "aastore": 6,
+            "aload_0": 5,
+            "ldc": 5,
+            "putfield": 4,
+            "iconst_2": 3,
+            "anewarray": 3,
+            "iconst_0": 3,
+            "iconst_1": 3,
+            "invokespecial": 1,
+            "aload_1": 1,
+            "bipush": 1,
+            "invokestatic": 1,
+            "goto": 1,
+            "astore_2": 1
+          }
+        },
+        {
+          "signature": "public void a(int);",
+          "instructions": 27,
+          "branches": 2,
+          "calls": {
+            "com.nokia.mid.ui.FullCanvas.getWidth": 1
+          },
+          "opcodes": {
+            "aload_0": 7,
+            "putfield": 6,
+            "iconst_0": 3,
+            "iload_1": 2,
+            "ifne": 1,
+            "invokevirtual": 1,
+            "iconst_3": 1,
+            "idiv": 1,
+            "bipush": 1,
+            "isub": 1,
+            "goto": 1,
+            "iconst_1": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "protected void showNotify();",
+          "instructions": 4,
+          "branches": 0,
+          "calls": {
+            "WFightN60.access$0": 1,
+            "WFightN60.byte": 1
+          },
+          "opcodes": {
+            "invokestatic": 1,
+            "invokevirtual": 1,
+            "pop": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "protected void hideNotify();",
+          "instructions": 1,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "return": 1
+          }
+        },
+        {
+          "signature": "protected void keyPressed(int);",
+          "instructions": 89,
+          "branches": 17,
+          "calls": {
+            "java.lang.System.gc": 3,
+            "javax.microedition.lcdui.Canvas.repaint": 2,
+            "javax.microedition.lcdui.Canvas.getKeyCode": 1
+          },
+          "opcodes": {
+            "aload_0": 17,
+            "iload_1": 9,
+            "getfield": 7,
+            "bipush": 7,
+            "putfield": 5,
+            "iconst_1": 5,
+            "invokevirtual": 5,
+            "if_icmpeq": 4,
+            "if_icmpne": 4,
+            "goto": 4,
+            "ifne": 3,
+            "isub": 3,
+            "return": 3,
+            "invokestatic": 3,
+            "getstatic": 2
+          }
+        },
+        {
+          "signature": "protected void paint(javax.microedition.lcdui.Graphics);",
+          "instructions": 521,
+          "branches": 14,
+          "calls": {
+            "com.nokia.mid.ui.FullCanvas.getWidth": 16,
+            "javax.microedition.lcdui.Graphics.setColor": 15,
+            "javax.microedition.lcdui.Graphics.drawString": 14,
+            "com.nokia.mid.ui.FullCanvas.getHeight": 7,
+            "WFightN60.access$1": 7,
+            "javax.microedition.lcdui.Font.getFont": 4,
+            "javax.microedition.lcdui.Graphics.setFont": 4,
+            "javax.microedition.lcdui.Graphics.getFont": 4,
+            "javax.microedition.lcdui.Font.getHeight": 4,
+            "javax.microedition.lcdui.Graphics.setClip": 3,
+            "javax.microedition.lcdui.Image.getWidth": 3,
+            "javax.microedition.lcdui.Graphics.drawImage": 3,
+            "javax.microedition.lcdui.Image.getHeight": 3,
+            "java.lang.String.length": 2,
+            "javax.microedition.lcdui.Graphics.fillRect": 1,
+            "WFightN60.g": 1,
+            "WFightN60.access$0": 1,
+            "WFightN60.l": 1,
+            "com.nokia.mid.ui.DirectUtils.getDirectGraphics": 1,
+            "com.nokia.mid.ui.DirectGraphics.drawImage": 1
+          },
+          "opcodes": {
+            "invokevirtual": 81,
+            "aload_0": 52,
+            "bipush": 49,
+            "aload_1": 45,
+            "getfield": 37,
+            "iconst_1": 30,
+            "iconst_0": 23,
+            "iadd": 20,
+            "aaload": 19,
+            "iload_2": 18,
+            "ior": 18,
+            "idiv": 14,
+            "invokestatic": 13,
+            "iconst_2": 12,
+            "getstatic": 12
+          }
+        },
+        {
+          "signature": "public void if();",
+          "instructions": 10,
+          "branches": 0,
+          "calls": {
+            "java.lang.Thread.start": 1
+          },
+          "opcodes": {
+            "aload_0": 3,
+            "new": 1,
+            "dup": 1,
+            "invokespecial": 1,
+            "putfield": 1,
+            "getfield": 1,
+            "invokevirtual": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "public void a();",
+          "instructions": 8,
+          "branches": 0,
+          "calls": {
+            "java.lang.System.gc": 1
+          },
+          "opcodes": {
+            "aload_0": 2,
+            "putfield": 2,
+            "iconst_1": 1,
+            "aconst_null": 1,
+            "invokestatic": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "public void run();",
+          "instructions": 38,
+          "branches": 4,
+          "calls": {
+            "javax.microedition.lcdui.Canvas.repaint": 1,
+            "javax.microedition.lcdui.Canvas.serviceRepaints": 1,
+            "java.lang.Thread.currentThread": 1,
+            "java.lang.Thread.sleep": 1,
+            "java.lang.System.gc": 1,
+            "WFightN60.access$0": 1,
+            "WFightN60.try": 1
+          },
+          "opcodes": {
+            "aload_0": 6,
+            "invokestatic": 4,
+            "iconst_0": 3,
+            "putfield": 3,
+            "invokevirtual": 3,
+            "getfield": 2,
+            "iconst_1": 2,
+            "goto": 2,
+            "return": 2,
+            "putstatic": 2,
+            "ifne": 1,
+            "dup": 1,
+            "iadd": 1,
+            "dup_x1": 1,
+            "bipush": 1
+          }
+        }
+      ]
+    },
+    {
+      "class_file": "WFightN60$c.class",
+      "class_name": "WFightN60$c",
+      "methods_count": 10,
+      "instructions_count": 872,
+      "branch_count": 58,
+      "methods": [
+        {
+          "signature": "public WFightN60$c(WFightN60);",
+          "instructions": 146,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "dup": 29,
+            "aastore": 25,
+            "ldc": 19,
+            "iconst_1": 11,
+            "iconst_0": 10,
+            "iconst_2": 10,
+            "anewarray": 8,
+            "aload_0": 7,
+            "putfield": 6,
+            "iconst_3": 6,
+            "iconst_4": 4,
+            "bastore": 4,
+            "iconst_5": 2,
+            "invokespecial": 1,
+            "aload_1": 1
+          }
+        },
+        {
+          "signature": "public void a(byte);",
+          "instructions": 43,
+          "branches": 2,
+          "calls": {
+            "com.nokia.mid.ui.FullCanvas.getWidth": 4
+          },
+          "opcodes": {
+            "aload_0": 12,
+            "putfield": 8,
+            "invokevirtual": 4,
+            "idiv": 4,
+            "iload_1": 2,
+            "iconst_0": 2,
+            "iconst_5": 2,
+            "bipush": 2,
+            "iconst_2": 1,
+            "if_icmpge": 1,
+            "iconst_3": 1,
+            "goto": 1,
+            "iadd": 1,
+            "iconst_1": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "public void a(int);",
+          "instructions": 4,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 1,
+            "iload_1": 1,
+            "putfield": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "protected void showNotify();",
+          "instructions": 4,
+          "branches": 0,
+          "calls": {
+            "WFightN60.access$0": 1,
+            "WFightN60.byte": 1
+          },
+          "opcodes": {
+            "invokestatic": 1,
+            "invokevirtual": 1,
+            "pop": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "protected void hideNotify();",
+          "instructions": 1,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "return": 1
+          }
+        },
+        {
+          "signature": "protected void keyPressed(int);",
+          "instructions": 119,
+          "branches": 16,
+          "calls": {
+            "WFightN60.goto": 3,
+            "java.lang.System.gc": 3,
+            "javax.microedition.lcdui.Canvas.repaint": 2,
+            "WFightN60.access$0": 2,
+            "WFightN60.access$2": 2,
+            "javax.microedition.lcdui.Canvas.getKeyCode": 1
+          },
+          "opcodes": {
+            "aload_0": 27,
+            "getfield": 17,
+            "iload_1": 9,
+            "invokevirtual": 9,
+            "bipush": 7,
+            "invokestatic": 7,
+            "if_icmpne": 6,
+            "iconst_1": 5,
+            "return": 4,
+            "putfield": 4,
+            "if_icmpeq": 4,
+            "isub": 3,
+            "ifne": 2,
+            "goto": 2,
+            "aaload": 2
+          }
+        },
+        {
+          "signature": "protected void paint(javax.microedition.lcdui.Graphics);",
+          "instructions": 342,
+          "branches": 8,
+          "calls": {
+            "WFightN60.access$1": 13,
+            "com.nokia.mid.ui.FullCanvas.getHeight": 7,
+            "javax.microedition.lcdui.Image.getHeight": 7,
+            "com.nokia.mid.ui.FullCanvas.getWidth": 6,
+            "javax.microedition.lcdui.Graphics.setColor": 5,
+            "javax.microedition.lcdui.Graphics.drawImage": 5,
+            "javax.microedition.lcdui.Graphics.drawString": 4,
+            "javax.microedition.lcdui.Graphics.setClip": 3,
+            "WFightN60.g": 3,
+            "javax.microedition.lcdui.Image.getWidth": 3,
+            "javax.microedition.lcdui.Font.getFont": 2,
+            "javax.microedition.lcdui.Graphics.setFont": 2,
+            "java.lang.String.length": 2,
+            "javax.microedition.lcdui.Graphics.fillRect": 1,
+            "com.nokia.mid.ui.DirectUtils.getDirectGraphics": 1,
+            "com.nokia.mid.ui.DirectGraphics.drawImage": 1
+          },
+          "opcodes": {
+            "getfield": 55,
+            "aload_0": 52,
+            "invokevirtual": 48,
+            "bipush": 29,
+            "aload_1": 21,
+            "invokestatic": 16,
+            "iconst_0": 14,
+            "aaload": 13,
+            "isub": 11,
+            "iconst_1": 10,
+            "ior": 10,
+            "iload_2": 9,
+            "iconst_4": 8,
+            "iadd": 8,
+            "idiv": 5
+          }
+        },
+        {
+          "signature": "public void a();",
+          "instructions": 10,
+          "branches": 0,
+          "calls": {
+            "java.lang.Thread.start": 1
+          },
+          "opcodes": {
+            "aload_0": 3,
+            "new": 1,
+            "dup": 1,
+            "invokespecial": 1,
+            "putfield": 1,
+            "getfield": 1,
+            "invokevirtual": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "public void if();",
+          "instructions": 11,
+          "branches": 0,
+          "calls": {
+            "java.lang.System.gc": 1
+          },
+          "opcodes": {
+            "aload_0": 3,
+            "putfield": 3,
+            "iconst_1": 1,
+            "iconst_0": 1,
+            "aconst_null": 1,
+            "invokestatic": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "public void run();",
+          "instructions": 192,
+          "branches": 32,
+          "calls": {
+            "WFightN60.access$0": 22,
+            "WFightN60.a": 6,
+            "WFightN60.f": 4,
+            "java.lang.Thread.currentThread": 3,
+            "java.lang.Thread.sleep": 3,
+            "WFightN60.access$4": 3,
+            "javax.microedition.lcdui.Canvas.repaint": 2,
+            "WFightN60.c": 2,
+            "WFightN60.n": 2,
+            "javax.microedition.lcdui.Canvas.serviceRepaints": 1,
+            "WFightN60.try": 1,
+            "WFightN60.void": 1,
+            "WFightN60.int": 1,
+            "WFightN60.m": 1,
+            "WFightN60.r": 1,
+            "WFightN60.k": 1,
+            "WFightN60.access$3": 1,
+            "WFightN60.access$5": 1,
+            "a.do": 1,
+            "javax.microedition.lcdui.Display.getDisplay": 1
+          },
+          "opcodes": {
+            "invokestatic": 36,
+            "aload_0": 28,
+            "invokevirtual": 23,
+            "getfield": 21,
+            "goto": 19,
+            "iconst_0": 8,
+            "pop": 7,
+            "putfield": 5,
+            "if_icmpne": 5,
+            "iconst_1": 4,
+            "ldc2_w": 3,
+            "iconst_2": 3,
+            "tableswitch": 3,
+            "putstatic": 3,
+            "ifne": 2
+          }
+        }
+      ]
+    },
+    {
+      "class_file": "WFightN60$d.class",
+      "class_name": "WFightN60$d",
+      "methods_count": 8,
+      "instructions_count": 239,
+      "branch_count": 18,
+      "methods": [
+        {
+          "signature": "public WFightN60$d(WFightN60);",
+          "instructions": 24,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 5,
+            "putfield": 4,
+            "dup": 2,
+            "ldc": 2,
+            "aastore": 2,
+            "invokespecial": 1,
+            "aload_1": 1,
+            "iconst_2": 1,
+            "anewarray": 1,
+            "iconst_0": 1,
+            "iconst_1": 1,
+            "bipush": 1,
+            "iconst_m1": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "protected void keyPressed(int);",
+          "instructions": 6,
+          "branches": 0,
+          "calls": {
+            "java.lang.System.currentTimeMillis": 1
+          },
+          "opcodes": {
+            "aload_0": 2,
+            "invokestatic": 1,
+            "putfield": 1,
+            "invokespecial": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "private void if();",
+          "instructions": 85,
+          "branches": 7,
+          "calls": {
+            "java.lang.String.valueOf": 4,
+            "WFightN60.access$1": 3,
+            "java.lang.StringBuffer.append": 2,
+            "java.lang.System.gc": 1,
+            "WFightN60.try": 1,
+            "javax.microedition.lcdui.Image.createImage": 1,
+            "java.io.PrintStream.println": 1,
+            "javax.microedition.lcdui.Canvas.repaint": 1,
+            "javax.microedition.lcdui.Canvas.serviceRepaints": 1,
+            "WFightN60.q": 1,
+            "java.lang.Thread.start": 1
+          },
+          "opcodes": {
+            "aload_0": 19,
+            "getfield": 14,
+            "invokestatic": 9,
+            "invokevirtual": 9,
+            "dup": 4,
+            "putfield": 4,
+            "iconst_1": 3,
+            "ifnull": 2,
+            "return": 2,
+            "goto": 2,
+            "new": 2,
+            "invokespecial": 2,
+            "iadd": 1,
+            "arraylength": 1,
+            "if_icmplt": 1
+          }
+        },
+        {
+          "signature": "public void paint(javax.microedition.lcdui.Graphics);",
+          "instructions": 44,
+          "branches": 3,
+          "calls": {
+            "WFightN60.access$1": 2,
+            "com.nokia.mid.ui.FullCanvas.getWidth": 1,
+            "com.nokia.mid.ui.FullCanvas.getHeight": 1,
+            "javax.microedition.lcdui.Graphics.drawImage": 1,
+            "javax.microedition.lcdui.Graphics.setColor": 1,
+            "javax.microedition.lcdui.Graphics.fillRect": 1
+          },
+          "opcodes": {
+            "aload_0": 8,
+            "getfield": 7,
+            "invokevirtual": 5,
+            "aload_1": 3,
+            "iconst_2": 3,
+            "idiv": 3,
+            "ifnull": 2,
+            "iconst_1": 2,
+            "invokestatic": 2,
+            "sipush": 2,
+            "ior": 1,
+            "if_icmplt": 1,
+            "ldc": 1,
+            "bipush": 1,
+            "imul": 1
+          }
+        },
+        {
+          "signature": "public void do();",
+          "instructions": 18,
+          "branches": 1,
+          "calls": {
+            "java.lang.Thread.start": 1
+          },
+          "opcodes": {
+            "aload_0": 6,
+            "getfield": 2,
+            "invokevirtual": 2,
+            "putfield": 2,
+            "ifnull": 1,
+            "aconst_null": 1,
+            "new": 1,
+            "dup": 1,
+            "invokespecial": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "public void a();",
+          "instructions": 4,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 1,
+            "iconst_1": 1,
+            "putfield": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "public void run();",
+          "instructions": 55,
+          "branches": 7,
+          "calls": {
+            "java.lang.System.currentTimeMillis": 3,
+            "com.nokia.mid.ui.FullCanvas.getHeight": 1,
+            "com.nokia.mid.ui.FullCanvas.getWidth": 1,
+            "javax.microedition.lcdui.Canvas.repaint": 1,
+            "javax.microedition.lcdui.Canvas.serviceRepaints": 1,
+            "java.lang.Thread.currentThread": 1,
+            "java.lang.Thread.sleep": 1
+          },
+          "opcodes": {
+            "aload_0": 14,
+            "invokestatic": 5,
+            "getfield": 5,
+            "invokevirtual": 4,
+            "putfield": 3,
+            "iconst_0": 2,
+            "invokespecial": 2,
+            "ifne": 2,
+            "iconst_1": 2,
+            "bipush": 2,
+            "goto": 2,
+            "if_icmpeq": 1,
+            "lsub": 1,
+            "sipush": 1,
+            "i2l": 1
+          }
+        },
+        {
+          "signature": "static WFightN60 access$7(WFightN60$d);",
+          "instructions": 3,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 1,
+            "getfield": 1,
+            "areturn": 1
+          }
+        }
+      ]
+    },
+    {
+      "class_file": "WFightN60.class",
+      "class_name": "WFightN60",
+      "methods_count": 49,
+      "instructions_count": 816,
+      "branch_count": 55,
+      "methods": [
+        {
+          "signature": "public WFightN60();",
+          "instructions": 53,
+          "branches": 2,
+          "calls": {
+            "java.lang.Object.getClass": 1,
+            "java.lang.Class.getResourceAsStream": 1,
+            "java.io.InputStream.read": 1,
+            "java.io.PrintStream.println": 1,
+            "java.lang.Class.forName": 1,
+            "java.lang.System.gc": 1
+          },
+          "opcodes": {
+            "aload_0": 9,
+            "putfield": 5,
+            "invokevirtual": 5,
+            "iconst_0": 3,
+            "ldc": 3,
+            "astore_1": 3,
+            "aload_2": 3,
+            "invokespecial": 2,
+            "newarray": 2,
+            "pop": 2,
+            "goto": 2,
+            "invokestatic": 2,
+            "bipush": 1,
+            "putstatic": 1,
+            "sipush": 1
+          }
+        },
+        {
+          "signature": "public static final long h();",
+          "instructions": 11,
+          "branches": 0,
+          "calls": {
+            "java.lang.System.gc": 2,
+            "java.lang.Runtime.getRuntime": 1,
+            "java.lang.Runtime.freeMemory": 1
+          },
+          "opcodes": {
+            "invokestatic": 3,
+            "astore_0": 2,
+            "aload_0": 1,
+            "invokevirtual": 1,
+            "lstore_1": 1,
+            "aconst_null": 1,
+            "lload_1": 1,
+            "lreturn": 1
+          }
+        },
+        {
+          "signature": "public static final byte[] a(java.lang.String);",
+          "instructions": 40,
+          "branches": 3,
+          "calls": {
+            "java.lang.String.length": 1,
+            "java.lang.String.substring": 1,
+            "java.lang.Integer.parseInt": 1
+          },
+          "opcodes": {
+            "iconst_2": 4,
+            "iload_2": 4,
+            "aload_1": 3,
+            "aload_0": 2,
+            "invokevirtual": 2,
+            "iconst_0": 2,
+            "imul": 2,
+            "istore": 2,
+            "goto": 2,
+            "idiv": 1,
+            "newarray": 1,
+            "astore_1": 1,
+            "istore_2": 1,
+            "arraylength": 1,
+            "if_icmpge": 1
+          }
+        },
+        {
+          "signature": "public void goto();",
+          "instructions": 4,
+          "branches": 1,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 1,
+            "invokevirtual": 1,
+            "ifeq": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "public void q();",
+          "instructions": 10,
+          "branches": 2,
+          "calls": {
+            "com.nokia.mid.sound.Sound.play": 1
+          },
+          "opcodes": {
+            "aload_0": 2,
+            "invokevirtual": 2,
+            "ifeq": 1,
+            "getfield": 1,
+            "iconst_1": 1,
+            "goto": 1,
+            "astore_1": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "public void if();",
+          "instructions": 9,
+          "branches": 2,
+          "calls": {
+            "com.nokia.mid.sound.Sound.stop": 1
+          },
+          "opcodes": {
+            "aload_0": 2,
+            "invokevirtual": 2,
+            "ifeq": 1,
+            "getfield": 1,
+            "goto": 1,
+            "astore_1": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "public void startApp();",
+          "instructions": 3,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 1,
+            "invokevirtual": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "public void commandAction(javax.microedition.lcdui.Command, javax.microedition.lcdui.Displayable);",
+          "instructions": 13,
+          "branches": 3,
+          "calls": {
+            "javax.microedition.lcdui.Command.getCommandType": 2
+          },
+          "opcodes": {
+            "invokevirtual": 3,
+            "aload_1": 2,
+            "if_icmpne": 2,
+            "bipush": 1,
+            "invokestatic": 1,
+            "goto": 1,
+            "iconst_2": 1,
+            "aload_0": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "public void long();",
+          "instructions": 65,
+          "branches": 3,
+          "calls": {
+            "java.lang.String.valueOf": 2,
+            "javax.microedition.rms.RecordStore.openRecordStore": 1,
+            "javax.microedition.rms.RecordStore.getRecord": 1,
+            "javax.microedition.rms.RecordStore.closeRecordStore": 1,
+            "java.lang.String.concat": 1,
+            "java.io.PrintStream.println": 1
+          },
+          "opcodes": {
+            "iconst_1": 8,
+            "bastore": 7,
+            "dup": 6,
+            "invokevirtual": 4,
+            "invokestatic": 3,
+            "aload_1": 3,
+            "iconst_0": 3,
+            "iload_3": 3,
+            "aload_0": 3,
+            "ldc": 2,
+            "astore_1": 2,
+            "astore_2": 2,
+            "getfield": 2,
+            "goto": 2,
+            "istore_3": 1
+          }
+        },
+        {
+          "signature": "public void null();",
+          "instructions": 55,
+          "branches": 4,
+          "calls": {
+            "java.lang.String.valueOf": 2,
+            "javax.microedition.rms.RecordStore.openRecordStore": 1,
+            "javax.microedition.rms.RecordStore.setRecord": 1,
+            "javax.microedition.rms.RecordStore.addRecord": 1,
+            "javax.microedition.rms.RecordStore.closeRecordStore": 1,
+            "java.lang.String.concat": 1,
+            "java.io.PrintStream.println": 1
+          },
+          "opcodes": {
+            "aload_0": 5,
+            "getfield": 5,
+            "invokevirtual": 5,
+            "arraylength": 4,
+            "aload_1": 4,
+            "invokestatic": 3,
+            "iconst_0": 3,
+            "iload_3": 3,
+            "aload_2": 3,
+            "goto": 3,
+            "ldc": 2,
+            "iconst_1": 2,
+            "astore_1": 2,
+            "newarray": 1,
+            "astore_2": 1
+          }
+        },
+        {
+          "signature": "public int e();",
+          "instructions": 3,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 1,
+            "getfield": 1,
+            "ireturn": 1
+          }
+        },
+        {
+          "signature": "public void if(int);",
+          "instructions": 4,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 1,
+            "iload_1": 1,
+            "putfield": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "public int l();",
+          "instructions": 7,
+          "branches": 2,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 1,
+            "getfield": 1,
+            "ifeq": 1,
+            "iconst_1": 1,
+            "goto": 1,
+            "iconst_0": 1,
+            "ireturn": 1
+          }
+        },
+        {
+          "signature": "public f g();",
+          "instructions": 3,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 1,
+            "getfield": 1,
+            "areturn": 1
+          }
+        },
+        {
+          "signature": "public void a();",
+          "instructions": 12,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 2,
+            "getfield": 2,
+            "iconst_0": 2,
+            "iconst_1": 1,
+            "baload": 1,
+            "isub": 1,
+            "i2b": 1,
+            "bastore": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "public boolean d();",
+          "instructions": 10,
+          "branches": 2,
+          "calls": {},
+          "opcodes": {
+            "iconst_0": 2,
+            "iconst_1": 2,
+            "aload_0": 1,
+            "getfield": 1,
+            "baload": 1,
+            "if_icmpne": 1,
+            "goto": 1,
+            "ireturn": 1
+          }
+        },
+        {
+          "signature": "public boolean i();",
+          "instructions": 10,
+          "branches": 2,
+          "calls": {},
+          "opcodes": {
+            "iconst_1": 2,
+            "aload_0": 1,
+            "getfield": 1,
+            "iconst_5": 1,
+            "baload": 1,
+            "if_icmpne": 1,
+            "goto": 1,
+            "iconst_0": 1,
+            "ireturn": 1
+          }
+        },
+        {
+          "signature": "public boolean p();",
+          "instructions": 9,
+          "branches": 2,
+          "calls": {},
+          "opcodes": {
+            "iconst_1": 2,
+            "aload_0": 1,
+            "getfield": 1,
+            "baload": 1,
+            "ifne": 1,
+            "goto": 1,
+            "iconst_0": 1,
+            "ireturn": 1
+          }
+        },
+        {
+          "signature": "public byte o();",
+          "instructions": 5,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 1,
+            "getfield": 1,
+            "iconst_3": 1,
+            "baload": 1,
+            "ireturn": 1
+          }
+        },
+        {
+          "signature": "public byte b();",
+          "instructions": 5,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 1,
+            "getfield": 1,
+            "iconst_2": 1,
+            "baload": 1,
+            "ireturn": 1
+          }
+        },
+        {
+          "signature": "public byte byte();",
+          "instructions": 14,
+          "branches": 1,
+          "calls": {
+            "com.nokia.mid.ui.DeviceControl.setLights": 1
+          },
+          "opcodes": {
+            "aload_0": 2,
+            "getfield": 2,
+            "iconst_4": 2,
+            "baload": 2,
+            "iconst_1": 1,
+            "if_icmpne": 1,
+            "iconst_0": 1,
+            "bipush": 1,
+            "invokestatic": 1,
+            "ireturn": 1
+          }
+        },
+        {
+          "signature": "public void pauseApp();",
+          "instructions": 1,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "return": 1
+          }
+        },
+        {
+          "signature": "public void destroyApp(boolean);",
+          "instructions": 1,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "return": 1
+          }
+        },
+        {
+          "signature": "public static void n();",
+          "instructions": 10,
+          "branches": 1,
+          "calls": {
+            "javax.microedition.midlet.MIDlet.notifyDestroyed": 1
+          },
+          "opcodes": {
+            "getstatic": 2,
+            "invokevirtual": 2,
+            "iconst_1": 1,
+            "goto": 1,
+            "astore_0": 1,
+            "aconst_null": 1,
+            "putstatic": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "protected void for();",
+          "instructions": 4,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "getstatic": 1,
+            "invokevirtual": 1,
+            "pop": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "protected void char();",
+          "instructions": 1,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "return": 1
+          }
+        },
+        {
+          "signature": "public void try();",
+          "instructions": 28,
+          "branches": 1,
+          "calls": {
+            "WFightN60$c.a": 3,
+            "javax.microedition.lcdui.Display.getDisplay": 1,
+            "javax.microedition.lcdui.Display.setCurrent": 1,
+            "java.lang.System.gc": 1
+          },
+          "opcodes": {
+            "aload_0": 9,
+            "getfield": 6,
+            "invokevirtual": 4,
+            "invokestatic": 2,
+            "ifnonnull": 1,
+            "new": 1,
+            "dup": 1,
+            "invokespecial": 1,
+            "putfield": 1,
+            "iconst_0": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "public void else();",
+          "instructions": 23,
+          "branches": 1,
+          "calls": {
+            "WFightN60$c.a": 2,
+            "javax.microedition.lcdui.Display.getDisplay": 1,
+            "javax.microedition.lcdui.Display.setCurrent": 1,
+            "java.lang.System.gc": 1
+          },
+          "opcodes": {
+            "aload_0": 7,
+            "getfield": 4,
+            "invokevirtual": 3,
+            "invokestatic": 2,
+            "ifnonnull": 1,
+            "new": 1,
+            "dup": 1,
+            "invokespecial": 1,
+            "putfield": 1,
+            "iconst_1": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "public void void();",
+          "instructions": 28,
+          "branches": 1,
+          "calls": {
+            "WFightN60$c.a": 3,
+            "javax.microedition.lcdui.Display.getDisplay": 1,
+            "javax.microedition.lcdui.Display.setCurrent": 1,
+            "java.lang.System.gc": 1
+          },
+          "opcodes": {
+            "aload_0": 9,
+            "getfield": 5,
+            "invokevirtual": 5,
+            "invokestatic": 2,
+            "ifnonnull": 1,
+            "new": 1,
+            "dup": 1,
+            "invokespecial": 1,
+            "putfield": 1,
+            "iconst_2": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "public void new();",
+          "instructions": 15,
+          "branches": 0,
+          "calls": {
+            "WFightN60$d.do": 1,
+            "javax.microedition.lcdui.Display.getDisplay": 1,
+            "javax.microedition.lcdui.Display.setCurrent": 1,
+            "java.lang.System.gc": 1
+          },
+          "opcodes": {
+            "aload_0": 2,
+            "astore_1": 2,
+            "aload_1": 2,
+            "invokevirtual": 2,
+            "invokestatic": 2,
+            "new": 1,
+            "dup": 1,
+            "invokespecial": 1,
+            "aconst_null": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "public void m();",
+          "instructions": 23,
+          "branches": 1,
+          "calls": {
+            "WFightN60$b.a": 1,
+            "WFightN60$b.if": 1,
+            "javax.microedition.lcdui.Display.getDisplay": 1,
+            "javax.microedition.lcdui.Display.setCurrent": 1,
+            "java.lang.System.gc": 1
+          },
+          "opcodes": {
+            "aload_0": 7,
+            "getfield": 4,
+            "invokevirtual": 3,
+            "invokestatic": 2,
+            "ifnonnull": 1,
+            "new": 1,
+            "dup": 1,
+            "invokespecial": 1,
+            "putfield": 1,
+            "iconst_0": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "public void r();",
+          "instructions": 23,
+          "branches": 1,
+          "calls": {
+            "WFightN60$b.a": 1,
+            "WFightN60$b.if": 1,
+            "javax.microedition.lcdui.Display.getDisplay": 1,
+            "javax.microedition.lcdui.Display.setCurrent": 1,
+            "java.lang.System.gc": 1
+          },
+          "opcodes": {
+            "aload_0": 7,
+            "getfield": 4,
+            "invokevirtual": 3,
+            "invokestatic": 2,
+            "ifnonnull": 1,
+            "new": 1,
+            "dup": 1,
+            "invokespecial": 1,
+            "putfield": 1,
+            "iconst_1": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "public void int();",
+          "instructions": 22,
+          "branches": 1,
+          "calls": {
+            "WFightN60$a.if": 1,
+            "WFightN60$a.a": 1,
+            "javax.microedition.lcdui.Display.getDisplay": 1,
+            "javax.microedition.lcdui.Display.setCurrent": 1,
+            "java.lang.System.gc": 1
+          },
+          "opcodes": {
+            "aload_0": 7,
+            "getfield": 4,
+            "invokevirtual": 3,
+            "invokestatic": 2,
+            "ifnonnull": 1,
+            "new": 1,
+            "dup": 1,
+            "invokespecial": 1,
+            "putfield": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "public void f();",
+          "instructions": 19,
+          "branches": 1,
+          "calls": {
+            "a.do": 1,
+            "javax.microedition.lcdui.Display.getDisplay": 1,
+            "javax.microedition.lcdui.Display.setCurrent": 1,
+            "java.lang.System.gc": 1
+          },
+          "opcodes": {
+            "aload_0": 5,
+            "getfield": 3,
+            "invokevirtual": 2,
+            "invokestatic": 2,
+            "ifnonnull": 1,
+            "new": 1,
+            "dup": 1,
+            "getstatic": 1,
+            "invokespecial": 1,
+            "putfield": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "public void a(int);",
+          "instructions": 4,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 1,
+            "iload_1": 1,
+            "putfield": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "public int j();",
+          "instructions": 3,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 1,
+            "getfield": 1,
+            "ireturn": 1
+          }
+        },
+        {
+          "signature": "public void a(int, int);",
+          "instructions": 56,
+          "branches": 6,
+          "calls": {
+            "java.lang.Thread.currentThread": 1,
+            "java.lang.Thread.sleep": 1,
+            "d.a": 1,
+            "javax.microedition.lcdui.Display.getDisplay": 1,
+            "javax.microedition.lcdui.Display.setCurrent": 1
+          },
+          "opcodes": {
+            "aload_0": 6,
+            "getfield": 5,
+            "invokevirtual": 4,
+            "aaload": 4,
+            "iload_3": 4,
+            "istore_3": 3,
+            "invokestatic": 3,
+            "getstatic": 2,
+            "goto": 2,
+            "iload_1": 2,
+            "iconst_1": 2,
+            "ifnull": 2,
+            "sipush": 2,
+            "iadd": 2,
+            "iload_2": 2
+          }
+        },
+        {
+          "signature": "public void do();",
+          "instructions": 53,
+          "branches": 6,
+          "calls": {
+            "b.case": 2,
+            "d.a": 1,
+            "d.int": 1,
+            "d.byte": 1,
+            "a.a": 1,
+            "javax.microedition.lcdui.Display.getDisplay": 1,
+            "javax.microedition.lcdui.Display.setCurrent": 1,
+            "java.lang.System.gc": 1
+          },
+          "opcodes": {
+            "invokevirtual": 10,
+            "aload_0": 9,
+            "getfield": 6,
+            "iload_2": 4,
+            "getstatic": 3,
+            "iload_1": 3,
+            "goto": 2,
+            "iinc": 2,
+            "invokestatic": 2,
+            "ifne": 1,
+            "istore_1": 1,
+            "istore_2": 1,
+            "if_icmpne": 1,
+            "bipush": 1,
+            "if_icmplt": 1
+          }
+        },
+        {
+          "signature": "public void case();",
+          "instructions": 63,
+          "branches": 6,
+          "calls": {
+            "d.int": 3,
+            "b.case": 2,
+            "d.a": 1,
+            "d.byte": 1,
+            "b.for": 1,
+            "a.a": 1,
+            "javax.microedition.lcdui.Display.getDisplay": 1,
+            "javax.microedition.lcdui.Display.setCurrent": 1,
+            "b.if": 1,
+            "java.lang.System.gc": 1
+          },
+          "opcodes": {
+            "invokevirtual": 14,
+            "aload_0": 11,
+            "getfield": 8,
+            "iload_2": 4,
+            "getstatic": 3,
+            "iload_1": 3,
+            "goto": 2,
+            "iinc": 2,
+            "invokestatic": 2,
+            "ifne": 1,
+            "istore_1": 1,
+            "istore_2": 1,
+            "istore_3": 1,
+            "if_icmpne": 1,
+            "bipush": 1
+          }
+        },
+        {
+          "signature": "public void c();",
+          "instructions": 6,
+          "branches": 0,
+          "calls": {
+            "javax.microedition.lcdui.Display.getDisplay": 1,
+            "javax.microedition.lcdui.Display.setCurrent": 1
+          },
+          "opcodes": {
+            "getstatic": 1,
+            "invokestatic": 1,
+            "aload_0": 1,
+            "getfield": 1,
+            "invokevirtual": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "public void k();",
+          "instructions": 4,
+          "branches": 0,
+          "calls": {
+            "d.else": 1
+          },
+          "opcodes": {
+            "aload_0": 1,
+            "getfield": 1,
+            "invokevirtual": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "static a access$5(WFightN60, a);",
+          "instructions": 5,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 1,
+            "aload_1": 1,
+            "dup_x1": 1,
+            "putfield": 1,
+            "areturn": 1
+          }
+        },
+        {
+          "signature": "static a access$4(WFightN60);",
+          "instructions": 3,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 1,
+            "getfield": 1,
+            "areturn": 1
+          }
+        },
+        {
+          "signature": "static int access$3(WFightN60, int);",
+          "instructions": 5,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 1,
+            "iload_1": 1,
+            "dup_x1": 1,
+            "putfield": 1,
+            "ireturn": 1
+          }
+        },
+        {
+          "signature": "static int access$2(WFightN60, int);",
+          "instructions": 5,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 1,
+            "iload_1": 1,
+            "dup_x1": 1,
+            "putfield": 1,
+            "ireturn": 1
+          }
+        },
+        {
+          "signature": "static f access$8(WFightN60, f);",
+          "instructions": 5,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 1,
+            "aload_1": 1,
+            "dup_x1": 1,
+            "putfield": 1,
+            "areturn": 1
+          }
+        },
+        {
+          "signature": "static f access$1(WFightN60);",
+          "instructions": 3,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 1,
+            "getfield": 1,
+            "areturn": 1
+          }
+        },
+        {
+          "signature": "static int[] access$6();",
+          "instructions": 2,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "getstatic": 1,
+            "areturn": 1
+          }
+        },
+        {
+          "signature": "static WFightN60 access$0();",
+          "instructions": 56,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "putstatic": 14,
+            "iconst_2": 7,
+            "dup": 6,
+            "iastore": 6,
+            "iconst_3": 5,
+            "iconst_0": 4,
+            "iconst_1": 4,
+            "iconst_4": 3,
+            "iconst_5": 2,
+            "getstatic": 1,
+            "areturn": 1,
+            "bipush": 1,
+            "newarray": 1,
+            "return": 1
+          }
+        }
+      ]
+    },
+    {
+      "class_file": "a.class",
+      "class_name": "a",
+      "methods_count": 15,
+      "instructions_count": 1173,
+      "branch_count": 73,
+      "methods": [
+        {
+          "signature": "public a(WFightN60);",
+          "instructions": 30,
+          "branches": 0,
+          "calls": {
+            "WFightN60.g": 4
+          },
+          "opcodes": {
+            "aload_0": 7,
+            "putfield": 6,
+            "aload_1": 5,
+            "invokevirtual": 4,
+            "getfield": 4,
+            "invokespecial": 1,
+            "bipush": 1,
+            "anewarray": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "public void a(int, int, boolean, boolean);",
+          "instructions": 75,
+          "branches": 4,
+          "calls": {
+            "WFightN60.g": 3,
+            "WFightN60.h": 1
+          },
+          "opcodes": {
+            "aload_0": 16,
+            "getfield": 10,
+            "putfield": 8,
+            "iconst_0": 7,
+            "aaload": 6,
+            "iload": 4,
+            "iload_1": 3,
+            "invokevirtual": 3,
+            "aastore": 3,
+            "iload_2": 3,
+            "iload_3": 2,
+            "goto": 2,
+            "ifeq": 1,
+            "istore": 1,
+            "arraylength": 1
+          }
+        },
+        {
+          "signature": "public void do();",
+          "instructions": 7,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "iconst_0": 3,
+            "aload_0": 1,
+            "iconst_m1": 1,
+            "invokevirtual": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "public void a(int, int);",
+          "instructions": 7,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 1,
+            "iload_1": 1,
+            "iload_2": 1,
+            "iconst_1": 1,
+            "iconst_0": 1,
+            "invokevirtual": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "public void do(int);",
+          "instructions": 7,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "iload_1": 2,
+            "iconst_1": 2,
+            "aload_0": 1,
+            "invokevirtual": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "protected void showNotify();",
+          "instructions": 5,
+          "branches": 0,
+          "calls": {
+            "WFightN60.byte": 1
+          },
+          "opcodes": {
+            "aload_0": 1,
+            "getfield": 1,
+            "invokevirtual": 1,
+            "pop": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "public void a();",
+          "instructions": 1,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "return": 1
+          }
+        },
+        {
+          "signature": "public void for();",
+          "instructions": 1,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "return": 1
+          }
+        },
+        {
+          "signature": "protected void hideNotify();",
+          "instructions": 1,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "return": 1
+          }
+        },
+        {
+          "signature": "private int if(int);",
+          "instructions": 15,
+          "branches": 0,
+          "calls": {
+            "com.nokia.mid.ui.FullCanvas.getWidth": 1,
+            "javax.microedition.lcdui.Image.getWidth": 1
+          },
+          "opcodes": {
+            "aload_0": 2,
+            "invokevirtual": 2,
+            "iconst_2": 2,
+            "isub": 2,
+            "idiv": 1,
+            "iconst_1": 1,
+            "iload_1": 1,
+            "irem": 1,
+            "getfield": 1,
+            "imul": 1,
+            "ireturn": 1
+          }
+        },
+        {
+          "signature": "private int a(int);",
+          "instructions": 16,
+          "branches": 0,
+          "calls": {
+            "javax.microedition.lcdui.Image.getHeight": 2
+          },
+          "opcodes": {
+            "aload_0": 2,
+            "getfield": 2,
+            "invokevirtual": 2,
+            "iconst_2": 2,
+            "idiv": 2,
+            "iadd": 2,
+            "iload_1": 1,
+            "imul": 1,
+            "iconst_5": 1,
+            "ireturn": 1
+          }
+        },
+        {
+          "signature": "private boolean for(int);",
+          "instructions": 21,
+          "branches": 5,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 4,
+            "getfield": 4,
+            "if_icmpeq": 3,
+            "iload_1": 2,
+            "iconst_m1": 2,
+            "aaload": 1,
+            "ifnull": 1,
+            "iconst_1": 1,
+            "goto": 1,
+            "iconst_0": 1,
+            "ireturn": 1
+          }
+        },
+        {
+          "signature": "protected void paint(javax.microedition.lcdui.Graphics);",
+          "instructions": 716,
+          "branches": 24,
+          "calls": {
+            "javax.microedition.lcdui.Image.getWidth": 23,
+            "WFightN60.g": 21,
+            "com.nokia.mid.ui.FullCanvas.getWidth": 17,
+            "javax.microedition.lcdui.Graphics.drawImage": 11,
+            "javax.microedition.lcdui.Image.getHeight": 10,
+            "com.nokia.mid.ui.FullCanvas.getHeight": 9,
+            "javax.microedition.lcdui.Graphics.setClip": 8,
+            "javax.microedition.lcdui.Graphics.setColor": 4,
+            "com.nokia.mid.ui.DirectGraphics.drawImage": 3,
+            "javax.microedition.lcdui.Graphics.fillArc": 3,
+            "java.lang.String.length": 2,
+            "javax.microedition.lcdui.Graphics.drawString": 2,
+            "com.nokia.mid.ui.DirectUtils.getDirectGraphics": 1,
+            "com.nokia.mid.ui.DirectGraphics.fillPolygon": 1,
+            "javax.microedition.lcdui.Font.getFont": 1,
+            "javax.microedition.lcdui.Graphics.setFont": 1,
+            "java.io.PrintStream.println": 1
+          },
+          "opcodes": {
+            "invokevirtual": 112,
+            "aload_0": 106,
+            "getfield": 80,
+            "bipush": 32,
+            "aload_1": 30,
+            "iconst_2": 27,
+            "idiv": 27,
+            "iconst_0": 26,
+            "iload_3": 24,
+            "iadd": 21,
+            "isub": 21,
+            "invokespecial": 19,
+            "sipush": 17,
+            "ior": 16,
+            "iconst_3": 16
+          }
+        },
+        {
+          "signature": "protected void keyPressed(int);",
+          "instructions": 257,
+          "branches": 40,
+          "calls": {
+            "javax.microedition.lcdui.Canvas.repaint": 6,
+            "javax.microedition.lcdui.Canvas.serviceRepaints": 6,
+            "WFightN60.j": 4,
+            "javax.microedition.lcdui.Canvas.getKeyCode": 1,
+            "WFightN60.a": 1,
+            "WFightN60.void": 1
+          },
+          "opcodes": {
+            "aload_0": 56,
+            "getfield": 24,
+            "invokevirtual": 21,
+            "iload_2": 16,
+            "iload_1": 12,
+            "bipush": 11,
+            "putfield": 11,
+            "iconst_1": 10,
+            "if_icmpne": 9,
+            "goto": 9,
+            "if_icmpeq": 8,
+            "iadd": 8,
+            "ifeq": 7,
+            "iconst_2": 7,
+            "iconst_0": 7
+          }
+        },
+        {
+          "signature": "public void if();",
+          "instructions": 14,
+          "branches": 0,
+          "calls": {
+            "java.lang.System.gc": 1
+          },
+          "opcodes": {
+            "return": 2,
+            "dup": 2,
+            "ldc": 2,
+            "aastore": 2,
+            "invokestatic": 1,
+            "iconst_2": 1,
+            "anewarray": 1,
+            "iconst_0": 1,
+            "iconst_1": 1,
+            "putstatic": 1
+          }
+        }
+      ]
+    },
+    {
+      "class_file": "b.class",
+      "class_name": "b",
+      "methods_count": 31,
+      "instructions_count": 1689,
+      "branch_count": 205,
+      "methods": [
+        {
+          "signature": "public b(d, boolean);",
+          "instructions": 13,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 4,
+            "putfield": 3,
+            "invokespecial": 1,
+            "bipush": 1,
+            "anewarray": 1,
+            "aload_1": 1,
+            "iload_2": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "public void a(byte);",
+          "instructions": 42,
+          "branches": 3,
+          "calls": {
+            "d.b": 2,
+            "WFightN60.g": 2,
+            "java.io.PrintStream.println": 1
+          },
+          "opcodes": {
+            "aload_0": 7,
+            "getfield": 6,
+            "invokevirtual": 6,
+            "iload_1": 3,
+            "iload_2": 3,
+            "aaload": 3,
+            "putfield": 2,
+            "goto": 2,
+            "iconst_0": 1,
+            "istore_2": 1,
+            "arraylength": 1,
+            "if_icmpge": 1,
+            "aastore": 1,
+            "iinc": 1,
+            "astore_2": 1
+          }
+        },
+        {
+          "signature": "public void else();",
+          "instructions": 56,
+          "branches": 2,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 19,
+            "putfield": 14,
+            "iconst_0": 12,
+            "invokevirtual": 4,
+            "bipush": 1,
+            "getstatic": 1,
+            "iaload": 1,
+            "getfield": 1,
+            "ifeq": 1,
+            "goto": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "public void try();",
+          "instructions": 10,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 3,
+            "putfield": 3,
+            "bipush": 1,
+            "iconst_1": 1,
+            "iconst_0": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "public void a();",
+          "instructions": 10,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 3,
+            "putfield": 3,
+            "bipush": 1,
+            "iconst_0": 1,
+            "sipush": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "public void goto();",
+          "instructions": 6,
+          "branches": 0,
+          "calls": {
+            "d.case": 1
+          },
+          "opcodes": {
+            "aload_0": 2,
+            "getfield": 1,
+            "invokevirtual": 1,
+            "putfield": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "public int if();",
+          "instructions": 3,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 1,
+            "getfield": 1,
+            "ireturn": 1
+          }
+        },
+        {
+          "signature": "public boolean f();",
+          "instructions": 12,
+          "branches": 2,
+          "calls": {
+            "d.case": 1
+          },
+          "opcodes": {
+            "aload_0": 2,
+            "getfield": 2,
+            "invokevirtual": 1,
+            "isub": 1,
+            "bipush": 1,
+            "if_icmple": 1,
+            "iconst_1": 1,
+            "goto": 1,
+            "iconst_0": 1,
+            "ireturn": 1
+          }
+        },
+        {
+          "signature": "public int case();",
+          "instructions": 3,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 1,
+            "getfield": 1,
+            "ireturn": 1
+          }
+        },
+        {
+          "signature": "public void if(int);",
+          "instructions": 4,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 1,
+            "iload_1": 1,
+            "putfield": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "public int for();",
+          "instructions": 3,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 1,
+            "getfield": 1,
+            "ireturn": 1
+          }
+        },
+        {
+          "signature": "public int new();",
+          "instructions": 3,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 1,
+            "getfield": 1,
+            "ireturn": 1
+          }
+        },
+        {
+          "signature": "public int c();",
+          "instructions": 3,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 1,
+            "getfield": 1,
+            "ireturn": 1
+          }
+        },
+        {
+          "signature": "public void for(int);",
+          "instructions": 145,
+          "branches": 27,
+          "calls": {
+            "d.a": 4
+          },
+          "opcodes": {
+            "aload_0": 26,
+            "getfield": 15,
+            "iload_1": 14,
+            "if_icmpne": 11,
+            "putfield": 10,
+            "bipush": 9,
+            "return": 8,
+            "invokevirtual": 7,
+            "goto": 6,
+            "ifle": 5,
+            "iconst_1": 5,
+            "iconst_3": 4,
+            "iconst_4": 3,
+            "ifne": 2,
+            "istore_1": 2
+          }
+        },
+        {
+          "signature": "public void long();",
+          "instructions": 117,
+          "branches": 19,
+          "calls": {
+            "java.lang.Math.abs": 2,
+            "java.util.Random.nextInt": 2,
+            "d.int": 1,
+            "d.b": 1,
+            "WFightN60.p": 1,
+            "javax.microedition.lcdui.Image.getWidth": 1
+          },
+          "opcodes": {
+            "aload_0": 26,
+            "invokevirtual": 23,
+            "getfield": 14,
+            "goto": 5,
+            "iconst_1": 4,
+            "iconst_2": 4,
+            "ifne": 3,
+            "ifeq": 3,
+            "aload_1": 3,
+            "iconst_0": 3,
+            "getstatic": 3,
+            "if_icmpne": 3,
+            "return": 2,
+            "invokestatic": 2,
+            "aaload": 2
+          }
+        },
+        {
+          "signature": "public void char();",
+          "instructions": 703,
+          "branches": 116,
+          "calls": {
+            "d.byte": 5,
+            "d.int": 4,
+            "java.lang.Math.abs": 4,
+            "d.b": 3,
+            "WFightN60.j": 2,
+            "d.a": 1,
+            "WFightN60.p": 1,
+            "d.try": 1
+          },
+          "opcodes": {
+            "aload_0": 177,
+            "getfield": 105,
+            "putfield": 59,
+            "invokevirtual": 52,
+            "goto": 37,
+            "bipush": 30,
+            "iconst_0": 23,
+            "if_icmpne": 21,
+            "iconst_1": 19,
+            "isub": 12,
+            "ifeq": 12,
+            "ifne": 12,
+            "ifle": 11,
+            "dup": 11,
+            "sipush": 9
+          }
+        },
+        {
+          "signature": "public void void();",
+          "instructions": 71,
+          "branches": 8,
+          "calls": {
+            "java.lang.Math.abs": 2,
+            "d.byte": 1,
+            "d.int": 1,
+            "javax.microedition.lcdui.Image.getWidth": 1
+          },
+          "opcodes": {
+            "invokevirtual": 12,
+            "aload_0": 11,
+            "getfield": 9,
+            "aload_1": 7,
+            "isub": 4,
+            "aaload": 3,
+            "astore_1": 2,
+            "ifeq": 2,
+            "invokestatic": 2,
+            "if_icmpge": 2,
+            "getstatic": 2,
+            "iconst_5": 2,
+            "iaload": 2,
+            "i2b": 2,
+            "iconst_0": 1
+          }
+        },
+        {
+          "signature": "public void if(byte);",
+          "instructions": 25,
+          "branches": 2,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 7,
+            "putfield": 4,
+            "getfield": 3,
+            "iload_1": 2,
+            "bipush": 2,
+            "ifne": 1,
+            "dup": 1,
+            "isub": 1,
+            "ifge": 1,
+            "iconst_0": 1,
+            "invokevirtual": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "public int e();",
+          "instructions": 3,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 1,
+            "getfield": 1,
+            "ireturn": 1
+          }
+        },
+        {
+          "signature": "public void int(int);",
+          "instructions": 25,
+          "branches": 1,
+          "calls": {
+            "d.byte": 1,
+            "d.int": 1,
+            "java.lang.Math.abs": 1
+          },
+          "opcodes": {
+            "aload_0": 5,
+            "getfield": 4,
+            "invokevirtual": 4,
+            "putfield": 2,
+            "istore_2": 1,
+            "dup": 1,
+            "iload_1": 1,
+            "iadd": 1,
+            "isub": 1,
+            "invokestatic": 1,
+            "bipush": 1,
+            "if_icmple": 1,
+            "iload_2": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "public void a(int);",
+          "instructions": 4,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 1,
+            "iload_1": 1,
+            "putfield": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "public int do();",
+          "instructions": 3,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 1,
+            "getfield": 1,
+            "ireturn": 1
+          }
+        },
+        {
+          "signature": "public int new(int);",
+          "instructions": 12,
+          "branches": 0,
+          "calls": {
+            "com.nokia.mid.ui.FullCanvas.getWidth": 1,
+            "d.if": 1
+          },
+          "opcodes": {
+            "aload_0": 2,
+            "getfield": 2,
+            "invokevirtual": 2,
+            "iload_1": 1,
+            "iconst_2": 1,
+            "idiv": 1,
+            "iadd": 1,
+            "isub": 1,
+            "ireturn": 1
+          }
+        },
+        {
+          "signature": "public int do(int);",
+          "instructions": 4,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "sipush": 1,
+            "iload_1": 1,
+            "isub": 1,
+            "ireturn": 1
+          }
+        },
+        {
+          "signature": "public boolean null();",
+          "instructions": 36,
+          "branches": 5,
+          "calls": {
+            "d.byte": 1,
+            "d.int": 1,
+            "java.lang.Math.abs": 1,
+            "d.b": 1,
+            "WFightN60.j": 1
+          },
+          "opcodes": {
+            "invokevirtual": 9,
+            "aload_0": 8,
+            "getfield": 5,
+            "ifne": 2,
+            "bipush": 2,
+            "ireturn": 2,
+            "ifeq": 1,
+            "isub": 1,
+            "invokestatic": 1,
+            "if_icmpgt": 1,
+            "iconst_4": 1,
+            "if_icmpne": 1,
+            "iconst_1": 1,
+            "iconst_0": 1
+          }
+        },
+        {
+          "signature": "public void d();",
+          "instructions": 71,
+          "branches": 8,
+          "calls": {
+            "d.a": 2
+          },
+          "opcodes": {
+            "aload_0": 20,
+            "getfield": 12,
+            "putfield": 8,
+            "bipush": 5,
+            "getstatic": 4,
+            "iaload": 4,
+            "goto": 4,
+            "iconst_0": 3,
+            "ifeq": 3,
+            "iadd": 2,
+            "invokevirtual": 2,
+            "iconst_1": 1,
+            "isub": 1,
+            "ifle": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "public void if(javax.microedition.lcdui.Graphics);",
+          "instructions": 83,
+          "branches": 3,
+          "calls": {
+            "javax.microedition.lcdui.Image.getHeight": 4,
+            "javax.microedition.lcdui.Image.getWidth": 2,
+            "com.nokia.mid.ui.DirectUtils.getDirectGraphics": 1,
+            "javax.microedition.lcdui.Graphics.setClip": 1,
+            "javax.microedition.lcdui.Graphics.drawImage": 1,
+            "com.nokia.mid.ui.DirectGraphics.drawImage": 1
+          },
+          "opcodes": {
+            "aload_0": 16,
+            "getfield": 14,
+            "invokevirtual": 10,
+            "idiv": 5,
+            "iconst_2": 4,
+            "isub": 4,
+            "iconst_4": 3,
+            "aload_1": 3,
+            "iload_2": 3,
+            "iload_3": 3,
+            "return": 2,
+            "imul": 2,
+            "bipush": 2,
+            "ior": 2,
+            "ifne": 1
+          }
+        },
+        {
+          "signature": "public void byte();",
+          "instructions": 9,
+          "branches": 2,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 2,
+            "getfield": 1,
+            "ifne": 1,
+            "iconst_1": 1,
+            "goto": 1,
+            "iconst_0": 1,
+            "putfield": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "public boolean int();",
+          "instructions": 3,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 1,
+            "getfield": 1,
+            "ireturn": 1
+          }
+        },
+        {
+          "signature": "public void a(javax.microedition.lcdui.Graphics);",
+          "instructions": 153,
+          "branches": 7,
+          "calls": {
+            "java.lang.String.valueOf": 4,
+            "javax.microedition.lcdui.Graphics.setColor": 3,
+            "javax.microedition.lcdui.Image.getHeight": 3,
+            "java.lang.String.concat": 2,
+            "javax.microedition.lcdui.Graphics.drawString": 2,
+            "com.nokia.mid.ui.DirectUtils.getDirectGraphics": 1,
+            "javax.microedition.lcdui.Image.getWidth": 1,
+            "javax.microedition.lcdui.Graphics.fillArc": 1,
+            "javax.microedition.lcdui.Graphics.drawImage": 1,
+            "com.nokia.mid.ui.DirectGraphics.drawImage": 1,
+            "d.b": 1,
+            "WFightN60.j": 1,
+            "javax.microedition.lcdui.Font.getFont": 1,
+            "javax.microedition.lcdui.Graphics.setFont": 1
+          },
+          "opcodes": {
+            "aload_0": 25,
+            "invokevirtual": 21,
+            "getfield": 20,
+            "aload_1": 9,
+            "iconst_1": 8,
+            "bipush": 8,
+            "invokestatic": 6,
+            "aaload": 6,
+            "iload_2": 5,
+            "isub": 5,
+            "ldc": 4,
+            "iconst_0": 4,
+            "iload_3": 4,
+            "ior": 4,
+            "istore": 2
+          }
+        },
+        {
+          "signature": "public void b();",
+          "instructions": 54,
+          "branches": 0,
+          "calls": {
+            "java.lang.System.gc": 1
+          },
+          "opcodes": {
+            "putstatic": 21,
+            "bipush": 11,
+            "iconst_2": 4,
+            "iconst_4": 4,
+            "return": 2,
+            "iconst_0": 2,
+            "iconst_1": 2,
+            "dup": 2,
+            "bastore": 2,
+            "invokestatic": 1,
+            "iconst_3": 1,
+            "iconst_5": 1,
+            "newarray": 1
+          }
+        }
+      ]
+    },
+    {
+      "class_file": "c.class",
+      "class_name": "c",
+      "methods_count": 1,
+      "instructions_count": 1250,
+      "branch_count": 0,
+      "methods": [
+        {
+          "signature": "public c();",
+          "instructions": 1250,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "dup": 288,
+            "bipush": 270,
+            "bastore": 160,
+            "iastore": 88,
+            "iconst_4": 66,
+            "iconst_5": 63,
+            "iconst_0": 62,
+            "iconst_3": 52,
+            "aastore": 40,
+            "iconst_1": 37,
+            "iconst_2": 37,
+            "newarray": 31,
+            "putstatic": 29,
+            "ldc": 16,
+            "anewarray": 5
+          }
+        }
+      ]
+    },
+    {
+      "class_file": "d$a.class",
+      "class_name": "d$a",
+      "methods_count": 3,
+      "instructions_count": 80,
+      "branch_count": 8,
+      "methods": [
+        {
+          "signature": "public d$a(d);",
+          "instructions": 9,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 3,
+            "putfield": 2,
+            "invokespecial": 1,
+            "aload_1": 1,
+            "iconst_0": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "public void stop();",
+          "instructions": 4,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 1,
+            "iconst_1": 1,
+            "putfield": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "public void run();",
+          "instructions": 67,
+          "branches": 8,
+          "calls": {
+            "d.access$4": 4,
+            "java.lang.System.currentTimeMillis": 2,
+            "WFightN60.j": 2,
+            "d.access$0": 1,
+            "javax.microedition.lcdui.Displayable.isShown": 1,
+            "d.access$2": 1,
+            "d.access$1": 1,
+            "javax.microedition.lcdui.Canvas.repaint": 1,
+            "javax.microedition.lcdui.Canvas.serviceRepaints": 1,
+            "d.access$3": 1,
+            "WFightN60.do": 1,
+            "WFightN60.case": 1,
+            "java.lang.Thread.currentThread": 1,
+            "java.lang.Thread.sleep": 1
+          },
+          "opcodes": {
+            "aload_0": 13,
+            "getfield": 12,
+            "invokestatic": 12,
+            "invokevirtual": 8,
+            "goto": 3,
+            "pop": 2,
+            "if_icmpne": 2,
+            "pop2": 1,
+            "ifne": 1,
+            "ifeq": 1,
+            "bipush": 1,
+            "lsub": 1,
+            "l2i": 1,
+            "sipush": 1,
+            "idiv": 1
+          }
+        }
+      ]
+    },
+    {
+      "class_file": "d.class",
+      "class_name": "d",
+      "methods_count": 31,
+      "instructions_count": 3465,
+      "branch_count": 260,
+      "methods": [
+        {
+          "signature": "public d(WFightN60);",
+          "instructions": 162,
+          "branches": 5,
+          "calls": {
+            "java.io.PrintStream.println": 5,
+            "javax.microedition.lcdui.Image.createImage": 5,
+            "java.lang.String.valueOf": 4,
+            "java.lang.Object.getClass": 2,
+            "java.lang.Class.getResourceAsStream": 2,
+            "java.io.InputStream.read": 2,
+            "java.lang.StringBuffer.append": 2,
+            "java.lang.String.concat": 1,
+            "java.lang.System.gc": 1,
+            "WFightN60.g": 1
+          },
+          "opcodes": {
+            "aload_0": 18,
+            "invokevirtual": 15,
+            "putfield": 12,
+            "ldc": 12,
+            "invokestatic": 10,
+            "getstatic": 8,
+            "astore_2": 6,
+            "iload_3": 6,
+            "aload": 6,
+            "invokespecial": 5,
+            "aconst_null": 5,
+            "iconst_0": 4,
+            "arraylength": 4,
+            "astore": 4,
+            "getfield": 4
+          }
+        },
+        {
+          "signature": "protected void paint(javax.microedition.lcdui.Graphics);",
+          "instructions": 1741,
+          "branches": 54,
+          "calls": {
+            "com.nokia.mid.ui.FullCanvas.getWidth": 66,
+            "javax.microedition.lcdui.Image.getHeight": 36,
+            "javax.microedition.lcdui.Image.getWidth": 31,
+            "com.nokia.mid.ui.FullCanvas.getHeight": 28,
+            "javax.microedition.lcdui.Graphics.drawImage": 28,
+            "javax.microedition.lcdui.Graphics.setClip": 21,
+            "javax.microedition.lcdui.Graphics.setColor": 16,
+            "b.case": 12,
+            "javax.microedition.lcdui.Graphics.drawString": 11,
+            "WFightN60.j": 9,
+            "javax.microedition.lcdui.Graphics.getFont": 7,
+            "javax.microedition.lcdui.Font.getHeight": 7,
+            "javax.microedition.lcdui.Graphics.fillRoundRect": 5,
+            "javax.microedition.lcdui.Graphics.drawRoundRect": 5,
+            "WFightN60.l": 4,
+            "b.if": 3,
+            "b.for": 3,
+            "WFightN60.g": 3,
+            "b.f": 3,
+            "javax.microedition.lcdui.Font.getFont": 3
+          },
+          "opcodes": {
+            "invokevirtual": 315,
+            "aload_0": 238,
+            "bipush": 166,
+            "getfield": 138,
+            "aload_1": 102,
+            "isub": 93,
+            "idiv": 81,
+            "iconst_2": 62,
+            "iconst_4": 59,
+            "iconst_1": 50,
+            "ior": 40,
+            "iload": 35,
+            "iconst_0": 34,
+            "iadd": 33,
+            "imul": 29
+          }
+        },
+        {
+          "signature": "protected void keyPressed(int);",
+          "instructions": 476,
+          "branches": 97,
+          "calls": {
+            "WFightN60.j": 28,
+            "b.for": 16,
+            "b.case": 2,
+            "javax.microedition.lcdui.Canvas.getKeyCode": 2,
+            "b.null": 2,
+            "WFightN60.a": 2,
+            "d$a.stop": 1,
+            "WFightN60.else": 1,
+            "WFightN60.l": 1
+          },
+          "opcodes": {
+            "aload_0": 89,
+            "getfield": 68,
+            "invokevirtual": 56,
+            "if_icmpne": 49,
+            "bipush": 38,
+            "iload_1": 34,
+            "iconst_4": 34,
+            "iconst_1": 22,
+            "goto": 19,
+            "putfield": 18,
+            "if_icmplt": 14,
+            "if_icmpeq": 13,
+            "iconst_3": 6,
+            "iconst_2": 4,
+            "iconst_5": 4
+          }
+        },
+        {
+          "signature": "protected void keyReleased(int);",
+          "instructions": 15,
+          "branches": 2,
+          "calls": {
+            "b.c": 2,
+            "b.for": 1
+          },
+          "opcodes": {
+            "aload_0": 3,
+            "getfield": 3,
+            "invokevirtual": 3,
+            "iconst_1": 1,
+            "if_icmpeq": 1,
+            "iconst_2": 1,
+            "if_icmpne": 1,
+            "iconst_0": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "public void a(int);",
+          "instructions": 36,
+          "branches": 5,
+          "calls": {
+            "WFightN60.d": 1,
+            "com.nokia.mid.sound.Sound.getState": 1,
+            "com.nokia.mid.sound.Sound.stop": 1,
+            "com.nokia.mid.sound.Sound.play": 1,
+            "java.io.PrintStream.println": 1
+          },
+          "opcodes": {
+            "aload_0": 5,
+            "getfield": 5,
+            "invokevirtual": 5,
+            "iload_2": 3,
+            "aaload": 3,
+            "goto": 2,
+            "ifeq": 1,
+            "iconst_0": 1,
+            "istore_2": 1,
+            "arraylength": 1,
+            "if_icmpge": 1,
+            "ifne": 1,
+            "iinc": 1,
+            "iload_1": 1,
+            "iconst_1": 1
+          }
+        },
+        {
+          "signature": "public void a(int, int);",
+          "instructions": 141,
+          "branches": 4,
+          "calls": {
+            "WFightN60.g": 4,
+            "java.lang.System.gc": 3,
+            "f.a": 2,
+            "b.a": 2,
+            "d$a.stop": 1,
+            "java.util.Random.nextInt": 1,
+            "java.lang.Math.abs": 1,
+            "WFightN60.j": 1,
+            "b.for": 1,
+            "b.if": 1,
+            "WFightN60.h": 1
+          },
+          "opcodes": {
+            "aload_0": 38,
+            "getfield": 21,
+            "invokevirtual": 16,
+            "putfield": 13,
+            "iconst_0": 9,
+            "invokestatic": 5,
+            "iconst_1": 3,
+            "iload_1": 3,
+            "aaload": 3,
+            "iload_2": 3,
+            "aconst_null": 2,
+            "bipush": 2,
+            "aastore": 2,
+            "ifnonnull": 2,
+            "new": 2
+          }
+        },
+        {
+          "signature": "public void long();",
+          "instructions": 132,
+          "branches": 8,
+          "calls": {
+            "WFightN60.j": 4,
+            "b.else": 2,
+            "b.if": 2,
+            "java.lang.String.valueOf": 2,
+            "b.for": 1,
+            "b.case": 1,
+            "WFightN60.b": 1,
+            "java.lang.String.concat": 1,
+            "java.lang.System.currentTimeMillis": 1
+          },
+          "opcodes": {
+            "aload_0": 37,
+            "putfield": 21,
+            "invokevirtual": 18,
+            "iconst_0": 17,
+            "getfield": 11,
+            "invokestatic": 3,
+            "istore_1": 2,
+            "iconst_3": 2,
+            "if_icmpne": 2,
+            "iload_1": 2,
+            "ifne": 2,
+            "ldc": 2,
+            "goto": 2,
+            "lconst_0": 1,
+            "getstatic": 1
+          }
+        },
+        {
+          "signature": "public void goto();",
+          "instructions": 4,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 1,
+            "bipush": 1,
+            "putfield": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "public void do();",
+          "instructions": 28,
+          "branches": 1,
+          "calls": {
+            "java.lang.System.currentTimeMillis": 1,
+            "java.lang.Thread.start": 1
+          },
+          "opcodes": {
+            "aload_0": 8,
+            "putfield": 4,
+            "getfield": 4,
+            "iconst_0": 2,
+            "dup": 2,
+            "invokestatic": 1,
+            "lsub": 1,
+            "ladd": 1,
+            "ifnonnull": 1,
+            "new": 1,
+            "invokespecial": 1,
+            "invokevirtual": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "public void for();",
+          "instructions": 7,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 2,
+            "putfield": 2,
+            "iconst_1": 1,
+            "aconst_null": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "public void else();",
+          "instructions": 10,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 3,
+            "putfield": 3,
+            "iconst_1": 2,
+            "aconst_null": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "public void null();",
+          "instructions": 7,
+          "branches": 0,
+          "calls": {
+            "java.lang.System.currentTimeMillis": 1
+          },
+          "opcodes": {
+            "aload_0": 2,
+            "putfield": 2,
+            "iconst_1": 1,
+            "invokestatic": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "protected void hideNotify();",
+          "instructions": 3,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 1,
+            "invokevirtual": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "protected void showNotify();",
+          "instructions": 7,
+          "branches": 0,
+          "calls": {
+            "WFightN60.byte": 1
+          },
+          "opcodes": {
+            "aload_0": 2,
+            "invokevirtual": 2,
+            "getfield": 1,
+            "pop": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "public WFightN60 b();",
+          "instructions": 3,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 1,
+            "getfield": 1,
+            "areturn": 1
+          }
+        },
+        {
+          "signature": "public b int();",
+          "instructions": 3,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 1,
+            "getfield": 1,
+            "areturn": 1
+          }
+        },
+        {
+          "signature": "public b byte();",
+          "instructions": 3,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 1,
+            "getfield": 1,
+            "areturn": 1
+          }
+        },
+        {
+          "signature": "public int if();",
+          "instructions": 3,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 1,
+            "getfield": 1,
+            "ireturn": 1
+          }
+        },
+        {
+          "signature": "public int case();",
+          "instructions": 3,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 1,
+            "getfield": 1,
+            "ireturn": 1
+          }
+        },
+        {
+          "signature": "public void a(b);",
+          "instructions": 86,
+          "branches": 4,
+          "calls": {
+            "b.case": 4,
+            "java.lang.String.valueOf": 2,
+            "WFightN60.j": 1,
+            "b.for": 1,
+            "b.if": 1,
+            "java.lang.String.concat": 1
+          },
+          "opcodes": {
+            "aload_0": 15,
+            "invokevirtual": 13,
+            "getfield": 8,
+            "iaload": 5,
+            "iconst_1": 4,
+            "getstatic": 4,
+            "iadd": 3,
+            "astore_2": 2,
+            "aload_2": 2,
+            "dup2": 2,
+            "iastore": 2,
+            "iconst_4": 2,
+            "istore_3": 2,
+            "iload_3": 2,
+            "iconst_2": 2
+          }
+        },
+        {
+          "signature": "public boolean a();",
+          "instructions": 12,
+          "branches": 2,
+          "calls": {
+            "WFightN60.b": 1
+          },
+          "opcodes": {
+            "aload_0": 2,
+            "iconst_0": 2,
+            "invokevirtual": 2,
+            "getfield": 1,
+            "iaload": 1,
+            "if_icmple": 1,
+            "iconst_1": 1,
+            "goto": 1,
+            "ireturn": 1
+          }
+        },
+        {
+          "signature": "private void new();",
+          "instructions": 200,
+          "branches": 30,
+          "calls": {
+            "WFightN60.j": 7,
+            "java.lang.Thread.currentThread": 3,
+            "java.lang.Thread.sleep": 3,
+            "WFightN60.b": 2,
+            "b.case": 2,
+            "java.lang.System.currentTimeMillis": 2,
+            "b.e": 2,
+            "WFightN60.o": 2,
+            "javax.microedition.lcdui.Canvas.repaint": 1,
+            "javax.microedition.lcdui.Canvas.serviceRepaints": 1
+          },
+          "opcodes": {
+            "aload_0": 44,
+            "invokevirtual": 28,
+            "getfield": 24,
+            "putfield": 9,
+            "goto": 9,
+            "iconst_1": 8,
+            "invokestatic": 8,
+            "if_icmpne": 6,
+            "iconst_0": 4,
+            "iaload": 4,
+            "bipush": 4,
+            "iconst_2": 4,
+            "ifne": 3,
+            "pop": 3,
+            "ldc2_w": 3
+          }
+        },
+        {
+          "signature": "private void void();",
+          "instructions": 123,
+          "branches": 23,
+          "calls": {
+            "b.e": 2,
+            "java.lang.System.currentTimeMillis": 1,
+            "b.a": 1
+          },
+          "opcodes": {
+            "aload_0": 32,
+            "getfield": 24,
+            "putfield": 11,
+            "ifeq": 9,
+            "bipush": 8,
+            "goto": 6,
+            "if_icmpne": 5,
+            "invokevirtual": 3,
+            "iadd": 3,
+            "dup": 3,
+            "ifne": 3,
+            "iconst_1": 3,
+            "invokestatic": 1,
+            "lsub": 1,
+            "l2i": 1
+          }
+        },
+        {
+          "signature": "public long try();",
+          "instructions": 3,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 1,
+            "getfield": 1,
+            "lreturn": 1
+          }
+        },
+        {
+          "signature": "public void char();",
+          "instructions": 21,
+          "branches": 0,
+          "calls": {
+            "java.lang.Thread.start": 1,
+            "WFightN60.e": 1,
+            "WFightN60.if": 1
+          },
+          "opcodes": {
+            "aload_0": 6,
+            "getfield": 3,
+            "invokevirtual": 3,
+            "iconst_1": 2,
+            "putfield": 2,
+            "new": 1,
+            "dup": 1,
+            "invokespecial": 1,
+            "isub": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "public void run();",
+          "instructions": 126,
+          "branches": 25,
+          "calls": {
+            "WFightN60.j": 7,
+            "WFightN60.void": 5,
+            "b.char": 2,
+            "WFightN60.e": 2,
+            "java.lang.System.currentTimeMillis": 1,
+            "javax.microedition.lcdui.Displayable.isShown": 1,
+            "javax.microedition.lcdui.Canvas.repaint": 1,
+            "javax.microedition.lcdui.Canvas.serviceRepaints": 1,
+            "java.lang.Thread.currentThread": 1,
+            "java.lang.Thread.sleep": 1,
+            "WFightN60.do": 1,
+            "WFightN60.case": 1
+          },
+          "opcodes": {
+            "aload_0": 35,
+            "invokevirtual": 26,
+            "getfield": 24,
+            "goto": 7,
+            "ifne": 6,
+            "if_icmpne": 4,
+            "invokestatic": 3,
+            "ifeq": 3,
+            "iconst_4": 3,
+            "ifle": 3,
+            "if_icmpeq": 2,
+            "invokespecial": 2,
+            "putfield": 1,
+            "pop": 1,
+            "ldc2_w": 1
+          }
+        },
+        {
+          "signature": "static int access$1(d, int);",
+          "instructions": 5,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 1,
+            "iload_1": 1,
+            "dup_x1": 1,
+            "putfield": 1,
+            "ireturn": 1
+          }
+        },
+        {
+          "signature": "static int access$3(d);",
+          "instructions": 3,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 1,
+            "getfield": 1,
+            "ireturn": 1
+          }
+        },
+        {
+          "signature": "static long access$0(d, long);",
+          "instructions": 5,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 1,
+            "lload_1": 1,
+            "dup2_x1": 1,
+            "putfield": 1,
+            "lreturn": 1
+          }
+        },
+        {
+          "signature": "static long access$2(d);",
+          "instructions": 3,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 1,
+            "getfield": 1,
+            "lreturn": 1
+          }
+        },
+        {
+          "signature": "static WFightN60 access$4(d);",
+          "instructions": 94,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "putstatic": 18,
+            "bipush": 14,
+            "dup": 13,
+            "ldc": 9,
+            "aastore": 9,
+            "iconst_0": 6,
+            "iastore": 4,
+            "iconst_4": 3,
+            "iconst_1": 3,
+            "iconst_2": 3,
+            "iconst_3": 3,
+            "iconst_5": 2,
+            "aload_0": 1,
+            "getfield": 1,
+            "areturn": 1
+          }
+        }
+      ]
+    },
+    {
+      "class_file": "e.class",
+      "class_name": "e",
+      "methods_count": 1,
+      "instructions_count": 737,
+      "branch_count": 0,
+      "methods": [
+        {
+          "signature": "public e();",
+          "instructions": 737,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "ldc": 171,
+            "dup": 155,
+            "aastore": 155,
+            "bipush": 45,
+            "putstatic": 43,
+            "anewarray": 27,
+            "iconst_0": 27,
+            "iconst_1": 27,
+            "iconst_2": 27,
+            "iconst_3": 26,
+            "iconst_4": 16,
+            "iconst_5": 14,
+            "return": 2,
+            "aload_0": 1,
+            "invokespecial": 1
+          }
+        }
+      ]
+    },
+    {
+      "class_file": "f.class",
+      "class_name": "f",
+      "methods_count": 3,
+      "instructions_count": 366,
+      "branch_count": 14,
+      "methods": [
+        {
+          "signature": "public f();",
+          "instructions": 23,
+          "branches": 0,
+          "calls": {},
+          "opcodes": {
+            "aload_0": 6,
+            "putfield": 5,
+            "bipush": 3,
+            "multianewarray": 2,
+            "iconst_0": 2,
+            "invokespecial": 1,
+            "anewarray": 1,
+            "iconst_4": 1,
+            "iconst_2": 1,
+            "return": 1
+          }
+        },
+        {
+          "signature": "public void a();",
+          "instructions": 292,
+          "branches": 9,
+          "calls": {
+            "javax.microedition.lcdui.Image.createImage": 18,
+            "java.lang.StringBuffer.append": 10,
+            "java.lang.String.valueOf": 10,
+            "java.lang.String.concat": 1,
+            "java.io.PrintStream.println": 1,
+            "java.lang.System.gc": 1
+          },
+          "opcodes": {
+            "aload_0": 40,
+            "putfield": 33,
+            "invokestatic": 29,
+            "ldc": 25,
+            "getfield": 25,
+            "dup": 22,
+            "iconst_1": 21,
+            "iadd": 18,
+            "invokevirtual": 12,
+            "iload_1": 11,
+            "iconst_0": 5,
+            "aaload": 5,
+            "if_icmpge": 4,
+            "iload_2": 4,
+            "new": 4
+          }
+        },
+        {
+          "signature": "public void a(int);",
+          "instructions": 51,
+          "branches": 5,
+          "calls": {
+            "java.lang.StringBuffer.append": 4,
+            "java.lang.String.valueOf": 2,
+            "javax.microedition.lcdui.Image.createImage": 1
+          },
+          "opcodes": {
+            "aaload": 5,
+            "iload_1": 4,
+            "iload_2": 4,
+            "ldc": 4,
+            "invokevirtual": 4,
+            "aload_0": 3,
+            "getfield": 3,
+            "invokestatic": 3,
+            "iconst_1": 2,
+            "astore_3": 2,
+            "goto": 2,
+            "ifnonnull": 1,
+            "istore_2": 1,
+            "arraylength": 1,
+            "if_icmpge": 1
+          }
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "call_edges": [
+    {
+      "target": "com.nokia.mid.ui.FullCanvas.getWidth",
+      "count": 127
+    },
+    {
+      "target": "javax.microedition.lcdui.Image.getWidth",
+      "count": 80
+    },
+    {
+      "target": "javax.microedition.lcdui.Image.getHeight",
+      "count": 78
+    },
+    {
+      "target": "WFightN60.j",
+      "count": 67
+    },
+    {
+      "target": "com.nokia.mid.ui.FullCanvas.getHeight",
+      "count": 61
+    },
+    {
+      "target": "javax.microedition.lcdui.Graphics.drawImage",
+      "count": 57
+    },
+    {
+      "target": "WFightN60.g",
+      "count": 53
+    },
+    {
+      "target": "javax.microedition.lcdui.Graphics.setColor",
+      "count": 51
+    },
+    {
+      "target": "WFightN60.access$1",
+      "count": 46
+    },
+    {
+      "target": "javax.microedition.lcdui.Graphics.setClip",
+      "count": 42
+    },
+    {
+      "target": "javax.microedition.lcdui.Graphics.drawString",
+      "count": 39
+    },
+    {
+      "target": "java.lang.String.valueOf",
+      "count": 32
+    },
+    {
+      "target": "WFightN60.access$0",
+      "count": 31
+    },
+    {
+      "target": "java.lang.System.gc",
+      "count": 31
+    },
+    {
+      "target": "javax.microedition.lcdui.Image.createImage",
+      "count": 26
+    },
+    {
+      "target": "b.case",
+      "count": 25
+    },
+    {
+      "target": "b.for",
+      "count": 24
+    },
+    {
+      "target": "javax.microedition.lcdui.Canvas.repaint",
+      "count": 21
+    },
+    {
+      "target": "java.lang.StringBuffer.append",
+      "count": 18
+    },
+    {
+      "target": "java.lang.System.currentTimeMillis",
+      "count": 15
+    },
+    {
+      "target": "java.io.PrintStream.println",
+      "count": 14
+    },
+    {
+      "target": "javax.microedition.lcdui.Font.getFont",
+      "count": 13
+    },
+    {
+      "target": "javax.microedition.lcdui.Graphics.setFont",
+      "count": 13
+    },
+    {
+      "target": "javax.microedition.lcdui.Canvas.serviceRepaints",
+      "count": 13
+    },
+    {
+      "target": "javax.microedition.lcdui.Display.getDisplay",
+      "count": 13
+    },
+    {
+      "target": "javax.microedition.lcdui.Display.setCurrent",
+      "count": 13
+    },
+    {
+      "target": "java.lang.Thread.currentThread",
+      "count": 12
+    },
+    {
+      "target": "java.lang.Thread.sleep",
+      "count": 12
+    },
+    {
+      "target": "d.int",
+      "count": 12
+    },
+    {
+      "target": "javax.microedition.lcdui.Graphics.getFont",
+      "count": 11
+    },
+    {
+      "target": "javax.microedition.lcdui.Font.getHeight",
+      "count": 11
+    },
+    {
+      "target": "java.lang.Math.abs",
+      "count": 11
+    },
+    {
+      "target": "d.a",
+      "count": 10
+    },
+    {
+      "target": "d.byte",
+      "count": 10
+    },
+    {
+      "target": "java.lang.String.length",
+      "count": 9
+    },
+    {
+      "target": "com.nokia.mid.ui.DirectGraphics.drawImage",
+      "count": 9
+    },
+    {
+      "target": "WFightN60.a",
+      "count": 9
+    },
+    {
+      "target": "java.lang.String.concat",
+      "count": 8
+    },
+    {
+      "target": "WFightN60$c.a",
+      "count": 8
+    },
+    {
+      "target": "b.if",
+      "count": 8
+    },
+    {
+      "target": "d.b",
+      "count": 8
+    },
+    {
+      "target": "com.nokia.mid.ui.DirectUtils.getDirectGraphics",
+      "count": 7
+    },
+    {
+      "target": "java.lang.Thread.start",
+      "count": 7
+    },
+    {
+      "target": "WFightN60.void",
+      "count": 7
+    },
+    {
+      "target": "javax.microedition.lcdui.Canvas.getKeyCode",
+      "count": 6
+    },
+    {
+      "target": "WFightN60.o",
+      "count": 6
+    },
+    {
+      "target": "WFightN60.l",
+      "count": 6
+    },
+    {
+      "target": "WFightN60.byte",
+      "count": 5
+    },
+    {
+      "target": "WFightN60.goto",
+      "count": 5
+    },
+    {
+      "target": "javax.microedition.lcdui.Graphics.fillRect",
+      "count": 5
+    },
+    {
+      "target": "WFightN60.b",
+      "count": 5
+    },
+    {
+      "target": "b.a",
+      "count": 5
+    },
+    {
+      "target": "javax.microedition.lcdui.Graphics.fillRoundRect",
+      "count": 5
+    },
+    {
+      "target": "javax.microedition.lcdui.Graphics.drawRoundRect",
+      "count": 5
+    },
+    {
+      "target": "WFightN60.try",
+      "count": 4
+    },
+    {
+      "target": "WFightN60.f",
+      "count": 4
+    },
+    {
+      "target": "javax.microedition.lcdui.Graphics.fillArc",
+      "count": 4
+    },
+    {
+      "target": "d.access$4",
+      "count": 4
+    },
+    {
+      "target": "b.e",
+      "count": 4
+    },
+    {
+      "target": "f.a",
+      "count": 3
+    },
+    {
+      "target": "WFightN60.p",
+      "count": 3
+    },
+    {
+      "target": "WFightN60.access$4",
+      "count": 3
+    },
+    {
+      "target": "java.lang.Object.getClass",
+      "count": 3
+    },
+    {
+      "target": "java.lang.Class.getResourceAsStream",
+      "count": 3
+    },
+    {
+      "target": "java.io.InputStream.read",
+      "count": 3
+    },
+    {
+      "target": "java.util.Random.nextInt",
+      "count": 3
+    },
+    {
+      "target": "b.f",
+      "count": 3
+    },
+    {
+      "target": "WFightN60.e",
+      "count": 3
+    },
+    {
+      "target": "WFightN60$d.access$7",
+      "count": 2
+    },
+    {
+      "target": "WFightN60.access$2",
+      "count": 2
+    }
+  ],
+  "opcode_histogram": {
+    "aload_0": 1765,
+    "invokevirtual": 1223,
+    "getfield": 1089,
+    "bipush": 842,
+    "dup": 595,
+    "iconst_0": 409,
+    "iconst_1": 409,
+    "putfield": 388,
+    "ldc": 335,
+    "aload_1": 297,
+    "invokestatic": 279,
+    "iconst_2": 272,
+    "aastore": 258,
+    "iconst_4": 253,
+    "goto": 226,
+    "isub": 217,
+    "bastore": 178,
+    "idiv": 171,
+    "iconst_3": 163,
+    "iadd": 162,
+    "return": 159,
+    "if_icmpne": 157,
+    "iload_1": 151,
+    "putstatic": 133,
+    "iload_2": 128,
+    "iastore": 120,
+    "iconst_5": 112,
+    "ior": 105,
+    "aaload": 105,
+    "getstatic": 89,
+    "ifne": 85,
+    "imul": 80,
+    "invokespecial": 79,
+    "iload_3": 77,
+    "iload": 68
+  },
+  "resource_files": [
+    {
+      "path": "icons/icon.png",
+      "size": 656
+    },
+    {
+      "path": "images/arena.png",
+      "size": 538
+    },
+    {
+      "path": "images/border.png",
+      "size": 171
+    },
+    {
+      "path": "images/check_box.png",
+      "size": 343
+    },
+    {
+      "path": "images/digits.png",
+      "size": 618
+    },
+    {
+      "path": "images/faces.png",
+      "size": 2675
+    },
+    {
+      "path": "images/help_bg.png",
+      "size": 375
+    },
+    {
+      "path": "images/houses0_back.png",
+      "size": 2361
+    },
+    {
+      "path": "images/houses0_front.png",
+      "size": 1769
+    },
+    {
+      "path": "images/houses1_back.png",
+      "size": 2688
+    },
+    {
+      "path": "images/houses1_front.png",
+      "size": 686
+    },
+    {
+      "path": "images/houses2_back.png",
+      "size": 3473
+    },
+    {
+      "path": "images/houses2_front.png",
+      "size": 626
+    },
+    {
+      "path": "images/houses3_back.png",
+      "size": 3712
+    },
+    {
+      "path": "images/houses3_front.png",
+      "size": 625
+    },
+    {
+      "path": "images/infinity.png",
+      "size": 211
+    },
+    {
+      "path": "images/loading.png",
+      "size": 1169
+    },
+    {
+      "path": "images/menu.png",
+      "size": 1781
+    },
+    {
+      "path": "images/menu_active.png",
+      "size": 854
+    },
+    {
+      "path": "images/menu_bg.png",
+      "size": 366
+    },
+    {
+      "path": "images/menu_button.png",
+      "size": 307
+    },
+    {
+      "path": "images/menu_cursor.png",
+      "size": 1582
+    },
+    {
+      "path": "images/message.png",
+      "size": 799
+    },
+    {
+      "path": "images/names.png",
+      "size": 1027
+    },
+    {
+      "path": "images/panel.png",
+      "size": 1184
+    },
+    {
+      "path": "images/select_player.png",
+      "size": 1643
+    },
+    {
+      "path": "images/super_ind.png",
+      "size": 497
+    },
+    {
+      "path": "images/time.png",
+      "size": 167
+    },
+    {
+      "path": "images/vs.png",
+      "size": 962
+    },
+    {
+      "path": "images/players/agawa00.png",
+      "size": 763
+    },
+    {
+      "path": "images/players/agawa01.png",
+      "size": 754
+    },
+    {
+      "path": "images/players/agawa02.png",
+      "size": 809
+    },
+    {
+      "path": "images/players/agawa03.png",
+      "size": 741
+    },
+    {
+      "path": "images/players/agawa04.png",
+      "size": 794
+    },
+    {
+      "path": "images/players/agawa05.png",
+      "size": 727
+    },
+    {
+      "path": "images/players/agawa06.png",
+      "size": 703
+    },
+    {
+      "path": "images/players/agawa07.png",
+      "size": 711
+    },
+    {
+      "path": "images/players/agawa08.png",
+      "size": 659
+    },
+    {
+      "path": "images/players/agawa09.png",
+      "size": 783
+    },
+    {
+      "path": "images/players/agawa10.png",
+      "size": 670
+    },
+    {
+      "path": "images/players/agawa_s.png",
+      "size": 999
+    },
+    {
+      "path": "images/players/crock00.png",
+      "size": 895
+    },
+    {
+      "path": "images/players/crock01.png",
+      "size": 933
+    },
+    {
+      "path": "images/players/crock02.png",
+      "size": 844
+    },
+    {
+      "path": "images/players/crock03.png",
+      "size": 834
+    },
+    {
+      "path": "images/players/crock04.png",
+      "size": 904
+    },
+    {
+      "path": "images/players/crock05.png",
+      "size": 888
+    },
+    {
+      "path": "images/players/crock06.png",
+      "size": 811
+    },
+    {
+      "path": "images/players/crock07.png",
+      "size": 855
+    },
+    {
+      "path": "images/players/crock08.png",
+      "size": 761
+    },
+    {
+      "path": "images/players/crock09.png",
+      "size": 883
+    },
+    {
+      "path": "images/players/crock10.png",
+      "size": 837
+    },
+    {
+      "path": "images/players/crock_s.png",
+      "size": 559
+    },
+    {
+      "path": "images/players/freak00.png",
+      "size": 789
+    },
+    {
+      "path": "images/players/freak01.png",
+      "size": 815
+    },
+    {
+      "path": "images/players/freak02.png",
+      "size": 832
+    },
+    {
+      "path": "images/players/freak03.png",
+      "size": 771
+    },
+    {
+      "path": "images/players/freak04.png",
+      "size": 772
+    },
+    {
+      "path": "images/players/freak05.png",
+      "size": 730
+    },
+    {
+      "path": "images/players/freak06.png",
+      "size": 746
+    },
+    {
+      "path": "images/players/freak07.png",
+      "size": 744
+    },
+    {
+      "path": "images/players/freak08.png",
+      "size": 2046
+    },
+    {
+      "path": "images/players/freak09.png",
+      "size": 2213
+    },
+    {
+      "path": "images/players/freak10.png",
+      "size": 768
+    },
+    {
+      "path": "images/players/freak_s.png",
+      "size": 619
+    },
+    {
+      "path": "images/players/jane00.png",
+      "size": 665
+    },
+    {
+      "path": "images/players/jane01.png",
+      "size": 669
+    },
+    {
+      "path": "images/players/jane02.png",
+      "size": 658
+    },
+    {
+      "path": "images/players/jane03.png",
+      "size": 683
+    },
+    {
+      "path": "images/players/jane04.png",
+      "size": 698
+    },
+    {
+      "path": "images/players/jane05.png",
+      "size": 682
+    },
+    {
+      "path": "images/players/jane06.png",
+      "size": 630
+    },
+    {
+      "path": "images/players/jane07.png",
+      "size": 663
+    },
+    {
+      "path": "images/players/jane08.png",
+      "size": 595
+    },
+    {
+      "path": "images/players/jane09.png",
+      "size": 664
+    },
+    {
+      "path": "images/players/jane10.png",
+      "size": 589
+    },
+    {
+      "path": "images/players/jane_s.png",
+      "size": 482
+    },
+    {
+      "path": "images/players/kate00.png",
+      "size": 616
+    },
+    {
+      "path": "images/players/kate01.png",
+      "size": 596
+    },
+    {
+      "path": "images/players/kate02.png",
+      "size": 586
+    },
+    {
+      "path": "images/players/kate03.png",
+      "size": 641
+    },
+    {
+      "path": "images/players/kate04.png",
+      "size": 622
+    },
+    {
+      "path": "images/players/kate05.png",
+      "size": 615
+    },
+    {
+      "path": "images/players/kate06.png",
+      "size": 556
+    },
+    {
+      "path": "images/players/kate07.png",
+      "size": 611
+    },
+    {
+      "path": "images/players/kate08.png",
+      "size": 495
+    },
+    {
+      "path": "images/players/kate09.png",
+      "size": 637
+    },
+    {
+      "path": "images/players/kate10.png",
+      "size": 590
+    },
+    {
+      "path": "images/players/kate_s.png",
+      "size": 294
+    },
+    {
+      "path": "images/players/mike00.png",
+      "size": 637
+    },
+    {
+      "path": "images/players/mike01.png",
+      "size": 596
+    },
+    {
+      "path": "images/players/mike02.png",
+      "size": 652
+    },
+    {
+      "path": "images/players/mike03.png",
+      "size": 637
+    },
+    {
+      "path": "images/players/mike04.png",
+      "size": 652
+    },
+    {
+      "path": "images/players/mike05.png",
+      "size": 674
+    },
+    {
+      "path": "images/players/mike06.png",
+      "size": 641
+    },
+    {
+      "path": "images/players/mike07.png",
+      "size": 643
+    },
+    {
+      "path": "images/players/mike08.png",
+      "size": 537
+    },
+    {
+      "path": "images/players/mike09.png",
+      "size": 666
+    },
+    {
+      "path": "images/players/mike10.png",
+      "size": 634
+    },
+    {
+      "path": "images/players/mike_s.png",
+      "size": 343
+    },
+    {
+      "path": "images/players/rino00.png",
+      "size": 737
+    },
+    {
+      "path": "images/players/rino01.png",
+      "size": 712
+    },
+    {
+      "path": "images/players/rino02.png",
+      "size": 718
+    },
+    {
+      "path": "images/players/rino03.png",
+      "size": 717
+    },
+    {
+      "path": "images/players/rino04.png",
+      "size": 725
+    },
+    {
+      "path": "images/players/rino05.png",
+      "size": 698
+    },
+    {
+      "path": "images/players/rino06.png",
+      "size": 719
+    },
+    {
+      "path": "images/players/rino07.png",
+      "size": 722
+    },
+    {
+      "path": "images/players/rino08.png",
+      "size": 628
+    },
+    {
+      "path": "images/players/rino09.png",
+      "size": 686
+    },
+    {
+      "path": "images/players/rino10.png",
+      "size": 601
+    },
+    {
+      "path": "images/players/rino_s.png",
+      "size": 601
+    },
+    {
+      "path": "images/players/vong00.png",
+      "size": 709
+    },
+    {
+      "path": "images/players/vong01.png",
+      "size": 694
+    },
+    {
+      "path": "images/players/vong02.png",
+      "size": 677
+    },
+    {
+      "path": "images/players/vong03.png",
+      "size": 675
+    },
+    {
+      "path": "images/players/vong04.png",
+      "size": 733
+    },
+    {
+      "path": "images/players/vong05.png",
+      "size": 716
+    },
+    {
+      "path": "images/players/vong06.png",
+      "size": 645
+    },
+    {
+      "path": "images/players/vong07.png",
+      "size": 689
+    },
+    {
+      "path": "images/players/vong08.png",
+      "size": 624
+    },
+    {
+      "path": "images/players/vong09.png",
+      "size": 673
+    },
+    {
+      "path": "images/players/vong10.png",
+      "size": 670
+    },
+    {
+      "path": "images/players/vong_s.png",
+      "size": 374
+    },
+    {
+      "path": "META-INF/MANIFEST.MF",
+      "size": 244
+    },
+    {
+      "path": "sounds/agawa.amr",
+      "size": 1734
+    },
+    {
+      "path": "sounds/crock.amr",
+      "size": 1670
+    },
+    {
+      "path": "sounds/die_game.amr",
+      "size": 3494
+    },
+    {
+      "path": "sounds/die_raund.amr",
+      "size": 4166
+    },
+    {
+      "path": "sounds/freak.amr",
+      "size": 1446
+    },
+    {
+      "path": "sounds/gong.amr",
+      "size": 2406
+    },
+    {
+      "path": "sounds/hit_hand1.amr",
+      "size": 294
+    },
+    {
+      "path": "sounds/hit_hand2.amr",
+      "size": 582
+    },
+    {
+      "path": "sounds/hit_leg1.amr",
+      "size": 326
+    },
+    {
+      "path": "sounds/hit_leg2.amr",
+      "size": 582
+    },
+    {
+      "path": "sounds/jane.amr",
+      "size": 1606
+    },
+    {
+      "path": "sounds/kate.amr",
+      "size": 1574
+    },
+    {
+      "path": "sounds/mike.amr",
+      "size": 1702
+    },
+    {
+      "path": "sounds/rino.amr",
+      "size": 1126
+    },
+    {
+      "path": "sounds/start.amr",
+      "size": 12998
+    },
+    {
+      "path": "sounds/vong.amr",
+      "size": 1670
+    },
+    {
+      "path": "sounds/win_game.amr",
+      "size": 3910
+    },
+    {
+      "path": "sounds/win_raund.amr",
+      "size": 3430
+    },
+    {
+      "path": "logo.png",
+      "size": 2987
+    },
+    {
+      "path": "splash.png",
+      "size": 4773
+    }
+  ]
+}
