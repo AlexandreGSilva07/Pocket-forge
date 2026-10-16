@@ -72,6 +72,8 @@ Pocket-forge/
 
 ## Pesquisa baseada em jogos reais
 
+O [relatório da coleção Nokia64](docs/research/02-auditoria-j2me-2309-jars.md) registra a análise estática de **2.309 JARs, sendo 1.649 binariamente distintos**, obtidos de um ZIP de ~154 MiB pelo GitHub Actions. O jogo original não foi executado nem integrado ao repositório.
+
 O [primeiro relatório J2ME](docs/research/01-analise-j2me-lote01.md) documenta **análise estática de dez arquivos JAR**, com padrões de assets e renderização e experimentos para orientar a futura revisão da skill. **Não** foram analisados 1.000 jogos, executados jogos em emulador ou medidos FPS/RAM nesse estudo.
 
 ## Índice temático
