@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "phase": "detailed_reverse_engineering",
-  "status": "bytecode_indexed_100_3_partial_method_reviews",
+  "status": "bytecode_indexed_100_5_partial_method_reviews",
   "static_corpus_registry": "docs/research/batches/registry.json",
   "total_static_jar_sha256": 1649,
   "completed_studies": [],
@@ -65,9 +65,55 @@
         "demo/engine/tactics.js",
         "demo/tactics-lab.html"
       ]
+    },
+    {
+      "jar_sha256": "12e9d0c928e3887efec1e44a467ab592fc4d42194fb95540ef8f8c680d51ba93",
+      "name": "3D Balloon Race",
+      "stage": "METHOD_REVIEW_PARTIAL",
+      "reviewed_methods": [
+        "a.a(DataInputStream,boolean) — PNG prefix length",
+        "a.a(DataInputStream) — RLE header/bit-counter partial"
+      ],
+      "report": "docs/research/deep/studies/12e9d0c928e3-balloon-asset-pack.md",
+      "original_executed": false,
+      "engine_files": [
+        "demo/engine/assets.js",
+        "demo/assets-lab.html"
+      ]
     }
   ],
-  "engine_findings": [],
+  "engine_findings": [
+    {
+      "game": "Xrossing Dice",
+      "engine_file": "demo/engine/ai.js",
+      "finding": "adversarial alpha-beta with reversible move state",
+      "confidence": "partial method study"
+    },
+    {
+      "game": "7Zwerge",
+      "engine_file": "demo/engine/tilepack.js",
+      "finding": "compact binary tilemaps with optional layer",
+      "confidence": "partial method/resource study"
+    },
+    {
+      "game": "3D Adventure",
+      "engine_file": "demo/engine/pixels.js",
+      "finding": "16-bit framebuffer and DirectGraphics drawPixels",
+      "confidence": "partial method study"
+    },
+    {
+      "game": "5Chess",
+      "engine_file": "demo/engine/tactics.js",
+      "finding": "four-axis local tactical evaluator for five-in-a-row",
+      "confidence": "partial method study"
+    },
+    {
+      "game": "3D Balloon Race",
+      "engine_file": "demo/engine/assets.js",
+      "finding": "16-bit big-endian length-prefixed paletted PNG resources",
+      "confidence": "partial method/resource study"
+    }
+  ],
   "notes": "Register studies only when actual class/method behavior is inspected and evidence attached. Do not promote static inventory automatically.",
   "selection_file": "docs/research/deep/selection-100.json",
   "selection_report": "docs/research/deep/selection-100.md",
@@ -75,7 +121,7 @@
   "selection_reserves": 25,
   "technical_controls_not_games": 1,
   "selection_rationale": "Diversidade de APIs, render, mundos, IA, assets, física, áudio e compactação; lista gerada sobre 17 lotes com 1649 SHA-256 únicos; seleção não é decompilação.",
-  "next_step": "All 100 JARs method-indexed with javap; continue semantic control/data flow reviews and emulator validation. Four partial studies, zero full studies.",
+  "next_step": "All 100 candidates have real javap method inventories; review semantic routines in detail and run originals in appropriate emulators. Five partial method studies, zero complete full-game reconstructions.",
   "wave01_bytecode": {
     "target_count": 12,
     "actual_javap_processed": 12,
@@ -83,7 +129,7 @@
     "scope": "method signatures + opcode/call summary; not full human semantic reconstruction of all methods",
     "note": "Xrossing Dice has 2 method-less constant interfaces; parser initially reports as errors; address as a classification warning."
   },
-  "deep_method_review_partial": 4,
+  "deep_method_review_partial": 5,
   "bytecode_indexed_count": 100,
   "bytecode_index_files": [
     "docs/research/deep/wave01/overview.md",
