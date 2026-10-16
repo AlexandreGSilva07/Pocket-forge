@@ -34,3 +34,11 @@ Definir até 5 motivos sonoros básicos e parâmetros de variação; não usar u
 
 ## Critério de aceite
 Volume ajustável, mute, retomada após pausa, nenhuma exceção por bloqueio de autoplay, SFX sincronizados e nenhuma explosão de volume causada por múltiplas colisões no mesmo tick.
+
+## Audio Core v0.2 — módulo funcional derivado dos estudos do acervo
+
+`demo/engine/audio.js` cria áudio procedural com WebAudio e **limite configurável de vozes simultâneas** (padrão 8), inicialização condicionada à interação, controle de mute e descarte de nós após o término. A camada é independente da lógica do jogo. `demo/game.js` utiliza esse módulo para todos os efeitos sonoros do Lumen Shift, com os sinais anteriores preservados.
+
+`tests/audio_engine.test.cjs` utiliza AudioContext falso para validar criação sob demanda, limite de vozes, liberação após `onended`, validação de parâmetros, mute, indisponibilidade e contexto suspenso. Testes lógicos não validam qualidade perceptual, latência nem consumo de bateria; essas métricas permanecem abertas.
+
+Não há importação ou reprodução dos arquivos MIDI/OTT de terceiros do corpus: os efeitos são sintetizados originalmente. A recorrência de áudios minúsculos em J2ME orienta a comparação futura de síntese versus arquivos comprimidos.
