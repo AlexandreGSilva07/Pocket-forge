@@ -1,0 +1,54 @@
+name: Curate 100 deep J2ME research candidates
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/curate-deep-j2me.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  curate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout research selection branch
+        uses: actions/checkout@v4
+        with:
+          ref: research/deep-selection-100
+          persist-credentials: true
+      - name: Generate evidence-based shortlist from all 17 inventories
+        run: |
+          python3 -m py_compile scripts/select_j2me_deep_studies.py
+          python3 scripts/select_j2me_deep_studies.py
+          python3 - <<'PY'
+          import json,collections
+          p=json.load(open("docs/research/deep/selection-100.json",encoding="utf8"))
+          a=p["principal"];b=p["reserva"]
+          assert len(a)==100 and len(b)==25
+          assert len({r["jar_sha256"] for r in a+b})==125
+          assert len({r["jar_path"] for r in a+b})==125
+          assert {i["rank"] for i in a}==set(range(1,101))
+          assert {i["rank"] for i in b}==set(range(1,26))
+          assert all(len(i["jar_sha256"])==64 and i["jar_path"].lower().endswith(".jar") for i in a+b)
+          print("SUCCESS 100 primary 25 reserves",p["statistics"])
+          PY
+      - name: Persist files in selection branch (not on main yet)
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "pocketforge-selection-bot"
+          git config user.email "pocketforge-selection-bot@users.noreply.github.com"
+          git add docs/research/deep/selection-100.json docs/research/deep/selection-100.csv docs/research/deep/selection-100.md
+          git commit -m "research(deep): publicar 100 candidatos e 25 reservas com IDs auditados"
+          git push origin "HEAD:refs/heads/research/deep-selection-100"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pocketforge-j2me-deep-selection
+          path: |
+            docs/research/deep/selection-100.json
+            docs/research/deep/selection-100.csv
+            docs/research/deep/selection-100.md
+          retention-days: 30
