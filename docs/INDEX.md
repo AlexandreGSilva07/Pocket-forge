@@ -15,6 +15,10 @@
 - [UI e design system](17-design-system-ui.md)
 - [Receitas por gênero](10-receitas.md)
 
+## Pesquisa empírica
+- [Auditoria massiva J2ME — 2.309 JARs (1.649 hashes distintos)](research/02-auditoria-j2me-2309-jars.md) — resultados reais de download e inspeção automatizada
+- [Engenharia reversa de jogos J2ME — lote 01](research/01-analise-j2me-lote01.md) — 10 JARs efetivamente inspecionados, evidências técnicas, limites e experimentos propostos
+
 ## Garantia de qualidade
 - [Performance e profiling](07-performance.md)
 - [Testes, gates e evidências](08-qa-testes.md)

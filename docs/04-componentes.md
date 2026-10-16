@@ -58,3 +58,9 @@ A função retorna novo estado; o sistema que a chama decide quando criar partí
 4. Custo por frame aceitável na cena de referência.
 5. Nenhuma dependência de assets externos surpresa.
 6. Exemplo reproduzível no projeto de demonstração quando apropriado.
+
+## Implementado na pesquisa J2ME — renderer compacto v0.2
+
+`demo/engine/compact.js` fornece componentes **originais, reutilizáveis e executados no Lumen Shift**: atlas horizontal com regiões de desenho, gerador de mapas tipados (`Uint8Array`), codificador/decodificador RLE com validação rígida e renderer Canvas 2D com culling de tiles. `demo/game.js` usa o atlas/mapa de fato para desenhar o fundo. Testes determinísticos estão em `tests/compact_engine.test.cjs`.
+
+**Evidência e limite:** o desenho via atlas, a representação compacta e a persistência simplificada são padrões observados nos JARs, mas os detalhes concretos deste módulo são **implementações próprias**. Ainda não foi provado que a nova implementação melhora FPS, RAM ou tamanho sobre a anterior; o desempenho deve ser medido. A decoração do fundo não é uma engine de plataforma/RPG completa.

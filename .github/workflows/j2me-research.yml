@@ -1,0 +1,51 @@
+name: J2ME corpus research (static, 1000+ pack)
+on:
+  push:
+    branches:
+      - research/j2me-corpus-lote01
+    paths:
+      - scripts/audit_j2me_archive.py
+      - .github/workflows/j2me-research.yml
+  pull_request:
+    branches:
+      - main
+    paths:
+      - scripts/audit_j2me_archive.py
+      - .github/workflows/j2me-research.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    name: Download and inspect 1000+ J2ME JARs
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download archive into ephemeral runner
+        shell: bash
+        run: |
+          set -euo pipefail
+          URL="https://archive.org/download/1000_J2ME_Games_Pack/1000JavaGames.zip"
+          DEST="$RUNNER_TEMP/1000JavaGames.zip"
+          curl --fail --location --retry 3 --retry-all-errors --retry-delay 5 --connect-timeout 20 --max-time 900 --silent --show-error "$URL" --output "$DEST"
+          python3 - "$DEST" <<'PY'
+          import sys,zipfile,os
+          path=sys.argv[1]
+          with zipfile.ZipFile(path) as z:
+              print("archive OK:",len(z.infolist()),"entries,",os.stat(path).st_size,"bytes")
+          PY
+      - name: Inspect JAR bytecode and resources without executing games
+        run: |
+          python3 scripts/audit_j2me_archive.py "$RUNNER_TEMP/1000JavaGames.zip" --out research-output
+          cat research-output/report.md >> "$GITHUB_STEP_SUMMARY"
+      - name: Upload only derived reports (never game binaries)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pocketforge-j2me1000-audit
+          path: research-output/
+          if-no-files-found: warn
+          retention-days: 30
