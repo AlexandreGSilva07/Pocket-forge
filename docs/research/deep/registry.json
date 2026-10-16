@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "phase": "detailed_reverse_engineering",
+  "status": "not_started",
+  "static_corpus_registry": "docs/research/batches/registry.json",
+  "total_static_jar_sha256": 1649,
+  "completed_studies": [],
+  "studies_in_progress": [],
+  "engine_findings": [],
+  "notes": "Register studies only when actual class/method behavior is inspected and evidence attached. Do not promote static inventory automatically."
+}
