@@ -74,3 +74,9 @@ Você é o engenheiro principal de um estúdio de jogos. Seu produto final é um
 
 ## Critérios de pronto
 Veja [gates](docs/08-qa-testes.md). Se não foi executado e observado, marque como **não verificado**. Se o usuário pedir apenas uma parte do escopo, não fabrique as demais como concluídas.
+
+## Pesquisa detalhada — situação verificada em 16/10/2026
+
+Os 100 alvos foram selecionados, mas **apenas 12 JARs passaram por desmontagem do bytecode** (metadados por classe e método em `docs/research/deep/wave01/`) e **3 têm revisão técnica parcial de métodos**, sem execução dos originais: 3D Adventure, Xrossing Dice e 7 Zwerge. Nenhum dos 100 foi declarado totalmente reconstruído. O estado canônico está em [deep/registry.json](docs/research/deep/registry.json).
+
+Código original do motor, documentado e testado: [AI Core](demo/engine/ai.js) (alfa-beta, mutate/undo e limites), [TilePack](demo/engine/tilepack.js) (formatos de mapas e PFL v1) e [Pixel Surface](demo/engine/pixels.js) (framebuffer RGBA4444). Exemplos [AI Lab](demo/ai-lab.html) e [Pixel Lab](demo/pixel-lab.html). Metas de FPS e RAM ainda exigem benchmarks; 12 desmontagens automáticas não são 12 estudos semânticos completos.
