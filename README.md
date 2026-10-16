@@ -114,3 +114,9 @@ O objetivo é evoluir do vertical slice para ferramentas reutilizáveis e benchm
 ## Licença e contribuições
 
 Código e documentação sob [MIT](LICENSE); o uso de assets externos exige rastreio de proveniência e licença. Veja [CONTRIBUTING.md](CONTRIBUTING.md).
+
+## Engenharia reversa de verdade — primeira onda
+
+[PR #19](https://github.com/AlexandreGSilva07/Pocket-forge/pull/19) e [PR #21](https://github.com/AlexandreGSilva07/Pocket-forge/pull/21) foram integrados: **12 JARs originais desmontados por bytecode**, com três estudos manuais parciais, e módulos novos no motor para [IA alfa-beta](demo/engine/ai.js), [níveis binários](demo/engine/tilepack.js) e [framebuffer 16-bit](demo/engine/pixels.js). Há demos em [AI Lab](demo/ai-lab.html) e [Pixel Lab](demo/pixel-lab.html), com testes automatizados.
+
+Os **88 candidatos restantes ainda não foram desmontados**; há um [PR #20 em rascunho](https://github.com/AlexandreGSilva07/Pocket-forge/pull/20) com script para processá-los, **não executado**. A pesquisa manual semântica e a emulação dos 100 originais continuam pendentes. Não confundir essa fase com a auditoria estática de 1.649 JARs já concluída.
