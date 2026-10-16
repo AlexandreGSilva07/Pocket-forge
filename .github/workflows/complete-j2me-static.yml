@@ -47,11 +47,29 @@ jobs:
           git config user.name "pocketforge-audit-bot"
           git config user.email "pocketforge-audit-bot@users.noreply.github.com"
           git fetch origin main
-          git switch -c audit/j2me-batch-004 origin/main
-          for N in $(seq 4 17); do
+          LAST=3
+          for N in $(seq 17 -1 4); do
+            ID=$(printf '%03d' "$N")
+            if git ls-remote --exit-code --heads origin "refs/heads/audit/j2me-batch-$ID" >/dev/null 2>&1; then
+              LAST="$N"
+              break
+            fi
+          done
+          FIRST=$((LAST + 1))
+          if [ "$FIRST" -gt 17 ]; then echo "All 17 batches already have branches"; exit 0; fi
+          if [ "$LAST" -eq 3 ]; then
+            git switch -c "audit/j2me-batch-$(printf '%03d' "$FIRST")" origin/main
+          else
+            PREV="audit/j2me-batch-$(printf '%03d' "$LAST")"
+            git fetch origin "refs/heads/$PREV:refs/remotes/origin/$PREV"
+            git switch -c "audit/j2me-batch-$(printf '%03d' "$FIRST")" "refs/remotes/origin/$PREV"
+          fi
+          # Carry the latest safer static reader forward, without mutating earlier audits.
+          git show origin/main:scripts/audit_j2me_batch.py > scripts/audit_j2me_batch.py
+          for N in $(seq "$FIRST" 17); do
             ID=$(printf '%03d' "$N")
             BRANCH="audit/j2me-batch-$ID"
-            if [ "$N" -ne 4 ]; then git switch -c "$BRANCH"; fi
+            if [ "$N" -ne "$FIRST" ]; then git switch -c "$BRANCH"; fi
             if git ls-remote --exit-code --heads origin "refs/heads/$BRANCH" >/dev/null 2>&1; then
               echo "Refusing to overwrite existing remote $BRANCH" >&2
               exit 12
@@ -82,7 +100,8 @@ jobs:
                     "docs/research/batches/$ID.csv" \
                     "docs/research/batches/$ID.md" \
                     docs/research/batches/registry.json \
-                    config/j2me-batch.json
+                    config/j2me-batch.json \
+                    scripts/audit_j2me_batch.py
             git commit -m "research(j2me-$ID): audit $([ "$N" -eq 17 ] && echo 49 || echo 100) unique JARs with persistent IDs"
             git push origin "HEAD:refs/heads/$BRANCH"
             echo "Batch $ID published on $BRANCH"
