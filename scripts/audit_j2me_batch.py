@@ -57,24 +57,32 @@ def parse_jad(raw):
 def inspect_jar(raw, path):
     row=analyze_jar(raw,path)
     symbols=set(); classes=[]; class_digests=[]
-    pixel_bytes=0; png_palette=0
+    pixel_bytes=0; png_palette=0; entry_errors=[]
     with zipfile.ZipFile(io.BytesIO(raw)) as z:
         for info in z.infolist():
             if info.is_dir():continue
             name=info.filename
             if name.lower().endswith(".class"):
                 if info.file_size > 1024*1024:continue
-                b=guarded_read(z,info,1024*1024)
+                try:
+                    b=guarded_read(z,info,1024*1024)
+                except Exception as exc:
+                    entry_errors.append(safe_text(name+": "+str(exc)))
+                    continue
                 classes.append(name)
                 class_digests.append(hashlib.sha256(b).hexdigest())
                 for label,needle in SYMBOLS.items():
                     if needle in b:symbols.add(label)
             if name.lower().endswith(".png") and info.file_size <= 2*1024*1024:
-                b=guarded_read(z,info,2*1024*1024)
+                try:
+                    b=guarded_read(z,info,2*1024*1024)
+                except Exception as exc:
+                    entry_errors.append(safe_text(name+": "+str(exc)))
+                    continue
                 if b.startswith(b"\x89PNG\r\n\x1a\n") and len(b)>=26:
                     if b[25]==3: png_palette+=1
                     if len(b)>=24:pixel_bytes+=int.from_bytes(b[16:20],"big")*int.from_bytes(b[20:24],"big")*4
-    return row, sorted(symbols), classes, class_digests, pixel_bytes
+    return row, sorted(symbols), classes, class_digests, pixel_bytes, entry_errors
 
 def main():
     a=argparse.ArgumentParser()
@@ -113,7 +121,7 @@ def main():
     batchid=f"{args.batch:03d}"
     records=[];class_groups=collections.defaultdict(list)
     for offset,(path,raw,digest) in enumerate(selected):
-        static,symbols,classes,class_digests,rgba_budget=inspect_jar(raw,path)
+        static,symbols,classes,class_digests,rgba_budget,entry_errors=inspect_jar(raw,path)
         jad=jad_by_path.get(key(path))
         jad_path,jad_props = jad if jad else ("",{})
         title=static.get("title") or jad_props.get("MIDlet-Name") or pathlib.PurePosixPath(path).stem
@@ -125,7 +133,7 @@ def main():
             "cldc":safe_text(static["cldc"] or jad_props.get("MicroEdition-Configuration")),
             "api_refs":static["apis"],"method_symbols":symbols,
             "class_names":classes,"estimated_png_rgba_bytes":rgba_budget,
-            "jad_available":bool(jad)
+            "jad_available":bool(jad), "entry_errors": entry_errors
         }
         records.append(rec)
         for classhash in class_digests:class_groups[classhash].append(digest[:16])
@@ -148,6 +156,7 @@ def main():
         "total_indexed_png":sum(r["png_indexed"] for r in records),
         "total_audio":sum(r["audio"] for r in records),
         "total_jar_bytes":sum(r["bytes"] for r in records),
+        "jar_entries_with_read_errors":sum(bool(r["entry_errors"]) for r in records),
         "api_references":dict(apis.most_common()),
         "method_symbols":dict(symbols.most_common()),
         "identical_classfile_fingerprints_across_jars":len(shared),
@@ -178,6 +187,7 @@ def main():
         f"- Imagens: **{summary['total_images']}** (PNG indexados: **{summary['total_indexed_png']}**)",
         f"- Áudios: **{summary['total_audio']}**",
         f"- Metadados JAD correspondentes localizados: **{summary['jad_matched']}/{len(records)}**",
+        f"- JARs com entradas internas ilegíveis: **{summary['jar_entries_with_read_errors']}**",
         f"- Classfiles idênticos compartilhados entre JARs: **{len(shared)} fingerprints** (não prova engine compartilhada).",
         "",
         "## Registro de todos os arquivos auditados",
