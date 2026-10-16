@@ -1,72 +1,61 @@
-# Continuidade PocketForge: 100 jogos por PR
+# Continuidade entre conversas — PocketForge
 
-Este documento é o ponto de partida de qualquer conversa futura. O estado **não depende da memória do chat**: deve ser reconstituído dos arquivos versionados, PRs e CI.
+## Estado canônico — 15/10/2026 (Cuiabá)
 
-## Fontes de verdade
+**A AUDITORIA SINTÉTICA FOI FINALIZADA. NÃO REPETIR OS 17 LOTES.**
 
-- Corpus fixo: https://archive.org/download/1000_J2ME_Games_Pack/1000JavaGames.zip. Seu SHA-256 é guardado no registro.
-- Registro mestre permanente: docs/research/batches/registry.json. Contém cada lote e os **SHA-256 completos** dos JARs.
-- Por lote: docs/research/batches/NNN.json (classes, APIs, símbolos, JAR e JAD, IDs), NNN.csv (tabular) e NNN.md (leitura humana).
-- Configuração de seleção: config/j2me-batch.json; processamento: scripts/audit_j2me_batch.py; CI: .github/workflows/j2me-batch.yml.
-- Motor funcional e uso real: demo/engine/compact.js e demo/game.js. Testes: tests/compact_engine.test.cjs, tests/browser_smoke.py e workflows.
+- Corpus: 2.309 JARs processáveis no inventário inicial, contendo 1.649 SHA-256 distintos e 660 duplicatas exatas.
+- Os 1.649 JARs distintos foram classificados em 17 lotes: 001–016 com 100 arquivos; 017 com 49.
+- **Todos os PRs #1–#17 estão integrados à branch `main`**.
+- Fonte de verdade: [registry.json](batches/registry.json), com todos os hashes SHA-256 completos, uma entrada por arquivo JAR.
+- [Relatório de encerramento e índice de todos os 17 lotes](STATIC_COMPLETE.md).
+- **A fase seguinte é ENGENHARIA REVERSA DETALHADA**, não gerar novas cópias da auditoria sintética.
 
-## Níveis de conclusão — não misturar
+## Hierarquia de fontes (não confiar na memória do chat)
 
-1. STATIC_INSPECTED: inspecionado como ZIP/classfiles sem executar.
-2. DECOMPILED_REVIEWED: rotinas de comportamento reconstruídas com evidências específicas.
-3. ORIGINAL_BEHAVIOR_VERIFIED: executado e observado o jogo original.
-4. ENGINE_IMPLEMENTED: componente original codificado e usado por um jogo PocketForge.
-5. ENGINE_TESTED: testes unitários e em navegador aprovados.
-6. BENCHMARKED: tamanhos/tempo de carregamento/frame-time/memória medidos em condições declaradas.
+1. Ler `AGENTS.md` e `SKILL.md` na raiz.
+2. Ler `docs/research/STATIC_COMPLETE.md`, **`docs/research/batches/registry.json`** e relatórios por lote.
+3. Verificar PRs #1–#17, evidências de execução e testes no GitHub Actions.
+4. Abrir a implementação real em `demo/engine/compact.js`, `demo/engine/state.js` e `demo/engine/audio.js` e a integração em `demo/game.js`.
+5. Usar documentação de arquitetura, render, áudio, QA e benchmarks em `docs/INDEX.md`.
 
-Referência de API presente não prova que ela seja usada em runtime. 100 JARs inspecionados estaticamente não são 100 jogos estudados profundamente.
+## O que exatamente foi auditado
 
-## Como criar cada PR
+Para cada JAR existe `NNN.json`, `NNN.md` e `NNN.csv`: caminho/nome do JAR, título do manifesto, SHA-256 completo, caminho JAD se existir, números de classes/imagens/áudio, algumas referências e símbolos de bytecode e, quando necessário, registro de falhas parciais. **Não são dumps completos de classes nem reconstruções de algoritmos.**
 
-1. Ler este guia, batches/registry.json, o lote mais recente e todos os PRs abertos.
-2. Confirmar que o PR anterior foi mesclado; se não, criar branch a partir de uma base que CONTE o registro anterior, evitando perder o histórico.
-3. Usar uma branch distinta (audit/j2me-batch-002 etc.), configurar batch N em config/j2me-batch.json e submeter. GitHub Actions seleciona 100 JARs com SHA distintos, por ordem determinística dos caminhos no ZIP.
-4. Conferir se o CI realmente publicou os registros NNN.md/NNN.csv/NNN.json e atualizou registry.json. O CI aborta se detectar IDs repetidos no registro.
-5. Cada PR deve identificar **TODOS** os 100 arquivos pelo nome/caminho JAR e hash SHA-256. Preencher campo JAD somente se houver um arquivo JAD real com nome correspondente; caso contrário, registrar 'não encontrado'. Não confundir JAR com JAD.
-6. Inspecionar de modo mais profundo representantes diversos do lote: recursos, render, lógica, dados de nível, IA ou áudio. Explicar o método e as evidências.
-7. Codificar e integrar uma melhoria verificável ao MOTOR — não só documentação — com testes. Caso não exista evidência suficiente, registrar essa limitação e manter PR como pesquisa, não como reconstrução concluída.
-8. Medir diferenças reais sempre que alegar ganho de FPS, memória, tamanho ou latência. Incluir baseline, dispositivos, amostragem e testes.
-9. Criar um PR exclusivo para o lote, título 'J2ME Batch NNN — 100 JARs + módulo do motor'. Anexar link de CI, documento de todos os arquivos e changelog de código/testes.
-10. Nunca publicar conteúdo binário, imagens, músicas ou código decompilado de terceiros no repositório. Manter só metadados e implementações originais.
+O total agregado é 19.753 classes, 31.711 imagens, 27.410 PNGs indexados, 2.826 áudios e 648 JADs encontrados por correspondência de caminho/identificador. O lote 014 registra um arquivo parcialmente ilegível (Passaparola.jar). Não inferir conteúdo compreendido com a mera contagem.
 
-## Retomada em outro chat
+## Escala de evidências
 
-Pedido recomendado:
+| Estado | Significado e prova mínima |
+| --- | --- |
+| `STATIC_INSPECTED` | JAR indexado com hash/metadata/recursos, sem execução (todos os 1.649) |
+| `DECOMPILED_REVIEWED` | Métodos e lógica interpretados, pseudocódigo próprio e evidências precisas |
+| `ORIGINAL_BEHAVIOR_VERIFIED` | Jogo original executado em ambiente compatível; cenas/mecânicas observadas |
+| `ENGINE_IMPLEMENTED` | Módulo original da skill desenvolvido e realmente usado em demo |
+| `ENGINE_TESTED` | Testes relevantes demonstrados: funções, game loop, UI, regressões no browser |
+| `BENCHMARKED` | Medições reproduzíveis frente a baseline: carga, memória, FPS e tamanho |
 
-> Continue PocketForge no repo AlexandreGSilva07/Pocket-forge. Leia docs/research/CONTINUITY.md, docs/research/batches/registry.json e verifique os PRs abertos. Processe o próximo lote de 100 JARs não repetidos e produza PR separado com todos os nomes e hashes. Reconstrua de fato um componente funcional do motor, integre ao jogo de demonstração, teste e reporte diferenças medidas. Não confunda inspeção estática com reconstrução de código.
+Não mudar automaticamente o estado de nenhum jogo para as etapas detalhadas. Nomes de métodos presentes no classfile não demonstram como os métodos funcionam. Os três módulos existentes são **implementações próprias inspiradas por indícios**, e não ports reconstruídos dos 300 primeiros jogos.
 
-## Estado confirmado após integração dos primeiros PRs (15/10/2026)
+## Próxima etapa: auditoria detalhada completa
 
-- **300 JARs binariamente distintos já analisados estaticamente**, SHA-256 completos em registry.json e registros CSV/JSON/MD para cada lote.
-- **PR #1** (lote 001, renderer atlas/RLE): https://github.com/AlexandreGSilva07/Pocket-forge/pull/1 — integrado à main.
-- **PR #2** (lote 002, State Core): https://github.com/AlexandreGSilva07/Pocket-forge/pull/2 — integrado à main.
-- **PR #3** (lote 003, Audio Core): https://github.com/AlexandreGSilva07/Pocket-forge/pull/3 — integrado à main.
-- **Próximo lote:** 004, IDs 301–400; restam 1.349 SHA-256 distintos ainda não registrados, sujeitos à integridade do corpus.
-- **Motor integrado no Lumen Shift:** demo/engine/compact.js, state.js e audio.js; testes Node para os três módulos e smoke Playwright.
-- Nenhum título foi emulado/executado individualmente no estudo; observação foi de bytecode/resources. Não há benchmark de FPS/RAM do motor.
-- As branches temporárias e de reparo usadas nos merges não são fonte de verdade. A **main + registry.json** é canônica.
+1. Reutilizar a ordem/IDs do ledger; criar rastreador adicional de análise detalhada sem apagar o registro original.
+2. Analisar algoritmos reais: loops de renderização, tiles/atlases, pipeline de assets, física, controle, IA, fases, serialização, som e arquitetura.
+3. Deduplicar variantes de engines por similaridade de bytecode/recursos antes de gastar análise repetida em títulos parecidos.
+4. Documentar especificamente classes, funções e evidências, diferenciando inferências de observações em execução.
+5. Portar **as técnicas**, não código/arte protegidos, em novos módulos originais do PocketForge. Demonstrar uso real.
+6. Criar testes e benchmarks comparativos; **não alegar ganhos de velocidade/memória se não foram medidos**.
+7. Organizar novos PRs por lote/tema da fase detalhada, cada um com relatório, alteração funcional do motor quando sustentada por evidência e regressões verificadas.
 
-## Histórico da primeira execução
+## Auditoria sintética reproduzível (somente se for preciso validar, não repetir)
 
-- Corpus original: 2.309 JARs analisados em inventário amplo; 1.649 hashes diferentes.
-- Lote 001: 100 hashes distintos, docs/research/batches/001.md, .csv, .json e registry.json.
-- PR inicial: https://github.com/AlexandreGSilva07/Pocket-forge/pull/1
-- Motor original incorporado: compact.js, atlas Canvas de quatro regiões, tiles tipados, RLE, render de mapa com culling; usado em Lumen Shift.
-- Sempre conferir CI antes de afirmar sucesso; testes e auditoria estrutural não comprovam superioridade de desempenho.
+- Fonte: `https://archive.org/download/1000_J2ME_Games_Pack/1000JavaGames.zip`
+- Hash SHA-256 do ZIP: `f8e3fb19f0cb451a1eebecccc16c4cb941c68293db2990a4e82df68bfa2c10dd`
+- Script: `scripts/audit_j2me_batch.py`; histórico do workflow: `.github/workflows/complete-j2me-static.yml`
+- Teste da integridade do ledger: `python3 -m unittest tests.test_corpus_registry -v` (ou descoberta de testes).
+- O arquivo original e os JAR/JAD não ficam versionados; apenas resultados próprios.
 
-## Indicadores de qualidade a registrar por lote
+## Prompt para novo chat
 
-| Qualidade | Evidência exigida |
-|---|---|
-| Identidade | SHA completo e nome/caminho original |
-| Cobertura | 100 IDs únicos por PR, exceto lote final |
-| Pesquisa | APIs, símbolos, recursos e representantes analisados em profundidade |
-| Implementação | Arquivos de código alterados e usados no projeto |
-| Testes | Comandos, saídas e link de CI |
-| Performance | Medições reais versus baseline ou campo 'não medido' |
-| Persistência | Arquivos versionados e somados ao ledger global |
+> Continue o projeto PocketForge no repositório AlexandreGSilva07/Pocket-forge. Leia AGENTS.md, docs/research/CONTINUITY.md, docs/research/STATIC_COMPLETE.md e o registry.json. A **auditoria sintética de 1.649 JARs está concluída** em 17 PRs mesclados. Não repita essa etapa. Faça agora engenharia reversa DETALHADA, com análise real de classes e algoritmos, registre a evidência por arquivo e reconstrua progressivamente o motor do PocketForge com código original, integração, testes e benchmarks. Preserve o ledger permanentemente.
