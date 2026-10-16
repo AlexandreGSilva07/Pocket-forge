@@ -53,6 +53,8 @@
 ## Resultados reais de engenharia reversa
 
 - [Wave 01: 12 JARs desmontados e métodos catalogados](research/deep/wave01/overview.md)
+- [Wave 02: 88 JARs adicionais — 100/100 inventários de bytecode](research/deep/bytecode-100/README.md)
+- [Estudo 5Chess (IA tática)](research/deep/studies/493f99e040eb-5chess.md) · [Estudo 3D Balloon Race (assets)](research/deep/studies/12e9d0c928e3-balloon-asset-pack.md)
 - [Estudo 3D Adventure](research/deep/studies/f2667dd8ee20-3d-adventure.md)
 - [Estudo Xrossing Dice](research/deep/studies/8db1413d8135-xrossing-dice.md)
 - [Estudo 7 Zwerge](research/deep/studies/6df7ffc301a3-7zwerge.md)
