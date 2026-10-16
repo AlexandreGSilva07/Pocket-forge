@@ -1,0 +1,84 @@
+name: PocketForge — disassemble 12 original J2ME games
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/deep-j2me-wave01.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  deep-bytecode:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: research/deep-wave01-bytecode-engine
+          persist-credentials: true
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+      - name: Download archived games to ephemeral runner
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl --fail --location --retry 3 --retry-all-errors --retry-delay 5 \
+            --connect-timeout 20 --max-time 900 --silent --show-error \
+            'https://archive.org/download/1000_J2ME_Games_Pack/1000JavaGames.zip' \
+            --output "$RUNNER_TEMP/1000JavaGames.zip"
+          python3 - "$RUNNER_TEMP/1000JavaGames.zip" <<'PY'
+          import sys,hashlib,zipfile
+          p=sys.argv[1]
+          with open(p,'rb') as f: h=hashlib.file_digest(f,'sha256').hexdigest()
+          assert h=="f8e3fb19f0cb451a1eebecccc16c4cb941c68293db2990a4e82df68bfa2c10dd"
+          with zipfile.ZipFile(p) as z: print("ZIP verified:",len(z.infolist()),"entries")
+          PY
+      - name: Disassemble all classes for 12 selected JARs
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 -m py_compile scripts/deep_bytecode_wave.py
+          python3 scripts/deep_bytecode_wave.py "$RUNNER_TEMP/1000JavaGames.zip"
+          python3 - <<'PY'
+          import json,pathlib
+          folder=pathlib.Path("docs/research/deep/wave01")
+          result=list(folder.glob("[0-9][0-9]-*.json"))
+          assert len(result)==12,len(result)
+          n=0
+          for path in result:
+              row=json.loads(path.read_text())
+              assert row["jar_sha256"] and row["class_count"]>=2
+              assert row["methods_count"]>0,(path,row["errors"])
+              n+=row["methods_count"]
+          print("Method records validated:",n)
+          PY
+          cat docs/research/deep/wave01/overview.md >> "$GITHUB_STEP_SUMMARY"
+      - name: Node unit tests and Python checks
+        run: |
+          node --check demo/game.js
+          node --check demo/engine/ai.js
+          node --check demo/engine/tilepack.js
+          node --test tests/*.test.cjs
+          python3 -m unittest discover -s tests -v
+      - name: Commit analysis metadata to research PR branch
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "pocketforge-audit-bot"
+          git config user.email "pocketforge-audit-bot@users.noreply.github.com"
+          git add docs/research/deep/wave01
+          if ! git diff --cached --quiet; then
+            git commit -m "research(deep): registrar classes e métodos de bytecode em 12 JARs verificados"
+            git push origin "HEAD:refs/heads/research/deep-wave01-bytecode-engine"
+          fi
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: pocketforge-wave01-method-index
+          path: docs/research/deep/wave01/
+          if-no-files-found: warn
+          retention-days: 30
