@@ -105,6 +105,17 @@ def run():
             assert tactics_page.locator(".cell.you").count() == 0
             tactics_page.screenshot(path=str(SHOT_DIR / "tactics-lab.png"))
             tactics_ctx.close()
+            asset_ctx = browser.new_context(viewport={"width": 850, "height": 700})
+            asset_page = asset_ctx.new_page()
+            asset_page.on("pageerror", lambda error: errors.append(str(error)))
+            asset_response = asset_page.goto(url + "assets-lab.html", wait_until="load")
+            assert asset_response is not None and asset_response.status == 200
+            asset_page.wait_for_function(
+                "document.querySelector('#stats').textContent.includes('3 PNGs originais')",
+                timeout=12000
+            )
+            asset_page.screenshot(path=str(SHOT_DIR / "assets-lab.png"))
+            asset_ctx.close()
             browser.close()
     finally:
         server.shutdown()
