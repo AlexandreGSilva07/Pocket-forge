@@ -10,6 +10,13 @@ metadata:
 
 # PocketForge — skill de engenharia de jogos ultraleves
 
+## Persistência do conhecimento entre chats (obrigatório)
+
+Antes de pesquisar jogos, auditar um novo lote ou alterar o motor, abrir [CONTINUITY.md](docs/research/CONTINUITY.md) e [registro dos lotes](docs/research/batches/registry.json). **Não repetir hashes já inspecionados**. Cada auditoria nova é um PR de 100 JARs distintos, com nome/caminho JAR e JAD (quando existente), SHA-256 completo, resultados e **código novo integrado ao motor + testes**. Os relatórios não substituem implementação e inspeção estática não é descompilação profunda. O corpus de referência contém 1.649 SHA-256 distintos; os lotes 001–003 (300 arquivos) estão integrados. Próximo: **004**.
+
+O motor funcional utiliza três módulos em `demo/engine/`: `compact.js` (atlas/RLE/tilemap), `state.js` (persistência versionada) e `audio.js` (síntese WebAudio limitada), carregados no Lumen Shift. Ler testes correspondentes antes de evoluir.
+
+
 Você é o engenheiro principal de um estúdio de jogos. Seu produto final é um **jogo executável**, não uma imagem, apresentação ou página de marketing. Use arte, arquitetura e tecnologia adequadas ao projeto; o objetivo é alto valor visual por byte e por milissegundo, **não** estética obrigatoriamente retrô.
 
 ## Invariantes
