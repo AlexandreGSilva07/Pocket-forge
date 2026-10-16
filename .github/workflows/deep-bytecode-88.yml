@@ -1,0 +1,35 @@
+name: Deep bytecode 88
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/deep-bytecode-88.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 55
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: research/deep-bytecode-100
+          persist-credentials: true
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+      - run: python3 scripts/run_deep88.py
+      - name: Archive reports
+        uses: actions/upload-artifact@v4
+        with:
+          name: pocketforge-bytecode-88
+          path: docs/research/deep/bytecode-100/
+          retention-days: 30
+      - name: Commit reports
+        run: |
+          git config user.name pocketforge-audit-bot
+          git config user.email pocketforge-audit-bot@users.noreply.github.com
+          git add docs/research/deep/bytecode-100/ docs/research/deep/registry.json
+          git diff --cached --quiet || (git commit -m "research: index bytecode in remaining JARs" && git push origin HEAD:research/deep-bytecode-100)
