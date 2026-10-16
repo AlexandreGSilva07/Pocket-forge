@@ -12,7 +12,7 @@ metadata:
 
 ## Persistência do conhecimento entre chats (obrigatório)
 
-Antes de pesquisar jogos, auditar um novo lote ou alterar o motor, abrir [CONTINUITY.md](docs/research/CONTINUITY.md) e [registro dos lotes](docs/research/batches/registry.json). **Não repetir hashes já inspecionados**. Cada auditoria nova é um PR de 100 JARs distintos, com nome/caminho JAR e JAD (quando existente), SHA-256 completo, resultados e **código novo integrado ao motor + testes**. Os relatórios não substituem implementação e inspeção estática não é descompilação profunda. O corpus de referência contém 1.649 SHA-256 distintos; os lotes 001–003 (300 arquivos) estão integrados. Próximo: **004**.
+Antes de alterar o motor, ler [CONTINUITY.md](docs/research/CONTINUITY.md), o [relatório final da auditoria sintética](docs/research/STATIC_COMPLETE.md) e o [ledger dos 1.649 JARs](docs/research/batches/registry.json). **A etapa sintética está encerrada: todos os 17 PRs foram mesclados na main. Não reexecutar os lotes.** A próxima etapa é engenharia reversa detalhada de classes, métodos e algoritmos com evidências por jogo, seguida de construção e avaliação de componentes originais e testados do PocketForge. As análises sintéticas anteriores não são reconstruções completas e não provam melhoria de FPS/RAM.
 
 O motor funcional utiliza três módulos em `demo/engine/`: `compact.js` (atlas/RLE/tilemap), `state.js` (persistência versionada) e `audio.js` (síntese WebAudio limitada), carregados no Lumen Shift. Ler testes correspondentes antes de evoluir.
 
