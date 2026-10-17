@@ -1,0 +1,31 @@
+/* PocketForge standalone viewer. Embedded by builder; no stylesheet request at runtime.
+ * Keeps canvas's intrinsic 240x266 / 240x320 (etc.) aspect ratio.
+ */
+:root{color-scheme:dark}
+html,body{margin:0!important;width:100%;height:auto!important;min-height:100%;overflow-x:hidden!important;overflow-y:auto!important;background:radial-gradient(ellipse at 50% 0,#182c42 0,#0a101a 68%)!important;color:#e5eff8!important;font:14px/1.5 system-ui,-apple-system,sans-serif!important}
+body{padding:26px 12px 38px;box-sizing:border-box}
+#frame{display:block!important;position:relative!important;box-sizing:border-box!important;width:min(450px,100%)!important;min-height:0!important;height:auto!important;margin:0 auto!important;padding:18px 16px 20px!important;overflow:visible!important;border:1px solid #47677e!important;border-radius:22px!important;background:#132438!important;box-shadow:0 20px 70px #0009!important}
+#screen{box-sizing:border-box!important;display:block!important;position:relative!important;width:min(360px,100%)!important;max-width:100%!important;height:auto!important;min-height:360px!important;margin:0 auto 15px!important;background:#fff!important;color:#172735!important;border:3px solid #020b15!important;border-radius:12px!important;overflow:hidden!important;font:17px system-ui!important;box-shadow:inset 0 0 0 1px #0005}
+#screen:has(canvas){height:auto!important;min-height:0!important}
+#screen>canvas{display:block!important;box-sizing:border-box!important;width:100%!important;max-width:100%!important;height:auto!important;margin:auto!important;object-fit:contain!important;image-rendering:auto!important}
+#keypad{box-sizing:border-box!important;width:min(360px,100%)!important;margin:auto!important;position:relative!important;text-align:center!important;font-family:system-ui!important}
+#keypad .key,#keypad .softkey,#settings-button,#show,#hide,#exit{display:inline-block!important;box-sizing:border-box!important;width:30.5%!important;height:38px!important;line-height:36px!important;margin:2px .6%!important;padding:0!important;border:1px solid #54758c!important;border-radius:9px!important;background:#283e52!important;background-image:none!important;box-shadow:inset 0 1px #ffffff13!important;color:#f1f7fd!important;font:500 15px/36px system-ui!important;text-shadow:none!important;cursor:pointer!important}
+#keypad .key:active,#keypad .softkey:active,#keypad .key:focus-visible{background:#167d95!important}
+#keypad #joypad{position:absolute!important;top:-160px!important;left:0!important;width:100%!important;height:auto!important;opacity:.7!important}
+#keypad #joypad .key{width:29%!important}
+#show,#settings-button{position:absolute!important;left:12px!important;width:35px!important;height:35px!important;line-height:32px!important;margin:0!important;font-size:18px!important}
+#show{top:12px!important}#settings-button{top:54px!important}
+#top{position:absolute!important;top:0!important;left:0!important;width:100%!important;z-index:10}
+#top #hide,#top #exit{width:35px!important}
+#title{font:600 16px/35px system-ui!important;width:calc(100% - 85px)!important;height:35px!important;background:#213649!important;color:#fafafa!important}
+#pf-panel{box-sizing:border-box!important;position:fixed!important;z-index:60!important;right:14px!important;top:14px!important;width:min(325px,calc(100vw - 28px))!important;border:1px solid #486e85!important;border-radius:13px!important;background:#101f30!important;box-shadow:0 10px 40px #0008!important}
+#pf-panel button{height:37px!important;line-height:1.1!important;margin:0!important;padding:8px!important;background:#214759!important;color:#fff!important;font-size:12px!important}
+#pf-panel input{background:#182f46!important;color:white!important;border:1px solid #476b89!important;border-radius:6px!important;padding:6px!important}
+#alert{position:fixed!important;inset:0!important;z-index:90!important;background:#0008!important}
+#alert .message{width:min(450px,85%)!important;margin:15vh auto!important;background:#1c2938!important;color:#fff!important;border:1px solid #53748a!important;border-radius:12px!important;padding:25px!important;font:15px system-ui!important}
+#settings{position:fixed!important;z-index:80!important}
+#settings .dialog{box-sizing:border-box!important;max-width:470px!important;height:min(520px,80vh)!important;margin:10vh auto!important;background:#1a2d43!important;color:#fff!important;border:1px solid #48697e!important;border-radius:12px!important;padding:20px!important}
+#settings .dialog button{background:#24485a!important;color:#fff!important;font-size:14px!important;line-height:1.2!important;height:40px!important}
+#settings aside{color:#abc3d3!important;font-size:12px!important}
+@media(max-width:1150px){#pf-panel{position:relative!important;right:auto!important;top:auto!important;width:min(450px,100%)!important;margin:0 auto 16px!important}#frame{margin:0 auto!important}}
+@media(max-width:520px){body{padding:10px 8px 25px!important}#frame{padding:12px 8px!important;border-radius:13px!important}#screen{width:100%!important}#pf-panel{width:100%!important}#keypad{width:100%!important}}
