@@ -137,4 +137,6 @@ aplicacao_no_pocketforge: "..."
 - [EKA2L1](https://github.com/EKA2L1/EKA2L1), [FreeJ2ME](https://github.com/hex007/freej2me), [J2ME Loader](https://github.com/nikita36078/J2ME-Loader) — referências de emulação, não equivalentes umas às outras.
 - [Microsoft Windows Mobile 6 SDKs](https://www.microsoft.com/en-us/download/details.aspx?id=6135), [BlackBerry JDE Samples](https://github.com/blackberry/JDE-Samples), [Palm OS SDK](https://palmdb.net/app/palm-os-sdk) — comparação de ecossistemas independentes.
 
+**Aquisição efetivamente realizada:** [relatório de 12 arquivos com hashes e três pendências](aquisicao-fontes-mobile-2026-10-16.md). Os arquivos de terceiros não foram commitados.
+
 **Este catálogo é um inventário de referências e hipóteses de pesquisa.** Não houve download, instalação, descompactação, emulação de jogos ou avaliação de desempenho desses SDKs/firmwares nesta atualização. A pesquisa pode ser expandida para novos sistemas sem alterar a missão da skill.

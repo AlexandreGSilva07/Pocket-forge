@@ -24,6 +24,7 @@
 - [Lote 001](research/batches/001.md) · [Lote 017](research/batches/017.md)
 
 ## Pesquisa empírica
+- [Aquisição histórica verificada: 12 arquivos, SHA-256 e achados](research/aquisicao-fontes-mobile-2026-10-16.md)
 - [Catálogo multissistema de SDKs, runtimes e emuladores móveis históricos](research/plataformas-mobile-sdks-runtimes.md) — Java ME/phoneME, Symbian/S60/UIQ, Palm OS, Windows Mobile, BlackBerry; fontes, limitações e prioridades para estudar técnicas ultraleves sem atrelar a skill a um aparelho.
 - [Auditoria massiva J2ME — 2.309 JARs (1.649 hashes distintos)](research/02-auditoria-j2me-2309-jars.md) — resultados reais de download e inspeção automatizada
 - [Engenharia reversa de jogos J2ME — lote 01](research/01-analise-j2me-lote01.md) — 10 JARs efetivamente inspecionados, evidências técnicas, limites e experimentos propostos

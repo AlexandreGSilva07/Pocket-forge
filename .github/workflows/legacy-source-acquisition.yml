@@ -1,0 +1,28 @@
+name: Legacy Mobile Sources Research
+on:
+  pull_request:
+    paths:
+      - scripts/research_fetch_legacy_sources.py
+      - .github/workflows/legacy-source-acquisition.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  acquire:
+    runs-on: ubuntu-latest
+    timeout-minutes: 18
+    strategy:
+      fail-fast: false
+      matrix:
+        group: [emulators, runtimes, documents]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download and inspect without executing third party programs
+        run: python3 scripts/research_fetch_legacy_sources.py "${{ matrix.group }}"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: legacy-${{ matrix.group }}
+          path: legacy-research-output/${{ matrix.group }}/
+          if-no-files-found: error
+          retention-days: 5
+          compression-level: 0
