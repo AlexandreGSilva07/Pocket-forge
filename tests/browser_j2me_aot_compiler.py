@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Compile THREE independently authored Java JARs to standalone JS and test file:// in Chromium.
+"""Compile SIX independently authored Java JARs to standalone JS and test file:// in Chromium.
 
 No game-specific compiler modifications and no JAR/runtime bytecode in the HTML.
 This test proves the AOT pipeline for the exercised APIs; it does not imply
@@ -43,19 +43,31 @@ def jar_with_manifest(location:Path, classes:Path, main: str, midlet: bool):
 def build_fixture(root:Path,name:str):
     classes=root/name/"classes"
     classes.mkdir(parents=True)
-    if name=="Calculator":
-        run("javac","--release","8","-d",classes,SOURCES/"Calculator.java")
-        jar=root/name/"Calculator.jar"
-        jar_with_manifest(jar,classes,"demo.Calculator",False)
+    if name in ("Calculator","ResourceMain"):
+        run("javac","--release","8","-d",classes,SOURCES/("ResourceMain.java" if name=="ResourceMain" else "Calculator.java"))
+        jar=root/name/(name+".jar")
+        main="demo.ResourceMain" if name=="ResourceMain" else "demo.Calculator"
+        jar_with_manifest(jar,classes,main,False)
+        if name=="ResourceMain":
+            with zipfile.ZipFile(jar,"a") as z:
+                z.writestr("demo/hello.txt", (SOURCES/"hello.txt").read_bytes())
     else:
         if not TEAVM_JAR.is_file():
             raise RuntimeError("Run an AOT compilation first to download TeaVM dependencies")
         shims=sorted((SDK/"javax").rglob("*.java"))
-        class_name="InteractiveMIDlet" if name=="Interactive" else "PocketDemoMIDlet"
+        class_name=(name+"MIDlet" if name in ("Interactive","ReferenceGraphics","Bitmap") else "PocketDemoMIDlet")
         run("javac","--release","8","-cp",TEAVM_JAR,
             "-d",classes,*shims,SOURCES/(class_name+".java"))
         jar=root/name/(name+".jar")
         jar_with_manifest(jar,classes,"demo."+class_name,True)
+        if name=="Bitmap":
+            from PIL import Image as PILImage
+            from io import BytesIO
+            im=PILImage.new("RGBA",(2,2))
+            im.putdata([(255,0,0,255),(0,255,0,255),(255,255,0,255),(0,0,255,255)])
+            blob=BytesIO();im.save(blob,format="PNG")
+            with zipfile.ZipFile(jar,"a") as z:
+                z.writestr("demo/bitmap.png",blob.getvalue())
     return jar
 
 def main():
@@ -65,7 +77,7 @@ def main():
     with tempfile.TemporaryDirectory(prefix="pocketforge_aot_browser_") as td:
         t=Path(td)
         fixtures={}
-        for name in ("Calculator","PocketDemo","Interactive"):
+        for name in ("Calculator","ResourceMain","PocketDemo","Interactive","ReferenceGraphics","Bitmap"):
             if name=="PocketDemo" and not TEAVM_JAR.exists():
                 raise RuntimeError("TeaVM 0.16.0 JSO jar is required (resolved by Maven)")
             jar=build_fixture(t,name)
@@ -101,6 +113,18 @@ def main():
                   }
                   return {width:c.width,height:c.height,nonblack,colors:colors.size};
                 }""")
+                pixels_check=None
+                if name=="ReferenceGraphics":
+                    assert "PHONE_ME_GRAPHICS_CONTRACT_PASS" in output,output
+                    pixels_check=page.evaluate("""() => {const g=document.getElementById('pf-screen').getContext('2d');const pixel=(x,y)=>Array.from(g.getImageData(x,y,1,1).data);return {green:pixel(21,23),clipped:pixel(18,18),red:pixel(30,30),cyan:pixel(40,40)};}""")
+                    assert pixels_check["green"]==[0,255,0,255],pixels_check
+                    assert pixels_check["clipped"]==[0,0,0,255],pixels_check
+                    assert pixels_check["red"]==[255,0,0,255],pixels_check
+                    assert pixels_check["cyan"]==[0,255,255,255],pixels_check
+                if name=="Bitmap":
+                    assert "PHONE_ME_BITMAP_RESOURCE_PASS" in output,output
+                    bitmap_pixel=page.evaluate("Array.from(document.getElementById('pf-screen').getContext('2d').getImageData(20,20,1,1).data)")
+                    assert bitmap_pixel==[255,0,0,255],bitmap_pixel
                 input_changed=None
                 if name=="Interactive":
                     previous=page.evaluate("document.getElementById('pf-screen').toDataURL()")
@@ -113,12 +137,12 @@ def main():
                 page.screenshot(path=str(image),full_page=True)
                 assert not errors,errors
                 assert not network,network
-                if name=="Calculator":
-                    assert "CALCULATOR=57" in output,output
+                if name in ("Calculator","ResourceMain"):
+                    assert ("CALCULATOR=57" if name=="Calculator" else "PHONE_ME_RESOURCE_OK") in output,output
                     assert canvas is None
                 else:
                     assert canvas and canvas["width"]==240 and canvas["height"]==320
-                    assert canvas["colors"]>=3 and canvas["nonblack"]>1000,canvas
+                    assert (canvas["colors"]>=3 and canvas["nonblack"]>1000) or (name in ("ReferenceGraphics","Bitmap") and canvas["colors"]>=5),canvas
                 evidence[name]={
                     "jar_sha256":hashlib.sha256(jar.read_bytes()).hexdigest(),
                     "html_sha256":hashlib.sha256(html.read_bytes()).hexdigest(),
@@ -126,7 +150,7 @@ def main():
                     "output":output,"canvas":canvas,
                     "network_requests":network,"page_errors":errors,
                     "original_jar_embedded":False,"jsvm_embedded":False,
-                    "input_changed":input_changed,
+                    "input_changed":input_changed,"pixels_check":pixels_check,
                     "screenshot":str(image)
                 }
                 page.close()
@@ -134,6 +158,6 @@ def main():
     receipt=OUT/"aot-validation.json"
     receipt.write_text(json.dumps(evidence,ensure_ascii=False,indent=2)+"\n")
     print(json.dumps(evidence,ensure_ascii=False,indent=2))
-    print("PASS: three independent JARs compiled AOT to standalone HTML; no JVM/JAR/runtime network")
+    print("PASS: six independent JARs compiled AOT to standalone HTML; no JVM/JAR/runtime network")
 if __name__=="__main__":
     main()

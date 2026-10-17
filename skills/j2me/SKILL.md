@@ -20,6 +20,8 @@ Esta skill orienta agentes de IA a construir **software e artefatos executáveis
 | **PORT/COMPILE** | JAR + manifesto | HTML único com JavaScript compilado, sem JAR/JVM no runtime | **AOT funcional**, cobertura de APIs parcial |
 | **CREATE** | Brief de jogo | Fontes Java ME e manifesto para WTK/SDK CLDC-MIDP | Scaffold de fontes pronto; compilação real depende SDK e pré-verificador |
 
+**Bibliotecas originais como referência:** consultar [investigação phoneME e j2me.js](../../docs/j2me/phoneme-compatibilidade-referencia.md) antes de reimplementar APIs. Não copiar fontes GPLv2 para o runtime sem resolver licenciamento. O compilador agora inclui recursos e PNG comuns, ver testes em Chromium.
+
 ## Fluxo RUN — tarefas determinísticas
 
 1. Ler SKILL.md da raiz e o catálogo em docs/research/plataformas-mobile-sdks-runtimes.md.
