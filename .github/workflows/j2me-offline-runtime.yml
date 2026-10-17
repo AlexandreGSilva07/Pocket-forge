@@ -1,0 +1,60 @@
+name: PocketForge J2ME Offline Runtime
+on:
+  pull_request:
+    paths:
+      - scripts/build_j2me_runtime.py
+      - runtime/**
+      - tests/browser_j2me_runtime_smoke.py
+      - .github/workflows/j2me-offline-runtime.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  browser-runtime:
+    runs-on: ubuntu-latest
+    timeout-minutes: 18
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Package pinned MIT JS2ME and temporary test MIDlet
+        run: python3 scripts/build_j2me_runtime.py --ci-fixture
+      - name: Check no external URLs referenced by package HTML
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          p=Path('dist/j2me-web')
+          html=(p/'index.html').read_text()
+          assert 'pocketforge-bridge.js' in html
+          assert 'src="https:' not in html and 'src="http:' not in html
+          assert (p/'LICENSE-js2me-MIT.txt').is_file()
+          assert (p/'js/program_zazu.js').is_file()
+          PY
+      - name: Install isolated headless Chromium
+        run: |
+          python3 -m pip install playwright==1.56.0
+          python3 -m playwright install --with-deps chromium
+      - name: Run real JAR smoke and capture diagnostics
+        run: python3 tests/browser_j2me_runtime_smoke.py
+        env:
+          POCKETFORGE_SCREENSHOT_DIR: artifacts/j2me
+      - name: Remove non-distributable test fixture
+        if: always()
+        run: rm -rf dist/j2me-web/ci/
+      - name: Upload standalone offline runtime
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pocketforge-j2me-offline-runtime
+          path: dist/j2me-web/
+          if-no-files-found: error
+          retention-days: 10
+      - name: Upload browser evidence and error log
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pocketforge-j2me-runtime-evidence
+          path: artifacts/j2me/
+          if-no-files-found: warn
+          retention-days: 10
