@@ -101,6 +101,16 @@ def assemble(source: Path, output: Path, archive_sha256: str | None) -> dict:
         if not raw.startswith("js2me.createClass({"):
             raise ValueError("JS2ME API definition changed: "+rel)
         file.write_text(raw.replace("js2me.createClass({", "js2me.createClass({"+chr(10)+patch,1),encoding="utf-8")
+    # Java StringBuffer.append(Object) must render a null reference as "null".
+    # Old JS2ME attempted obj.toString() and crashed; this is a platform API fix.
+    string_buffer = output / "js" / "me" / "java" / "lang" / "StringBuffer.js"
+    buf_src = string_buffer.read_text(encoding="utf-8")
+    null_anchor = "$append$Ljava_lang_Object_$Ljava_lang_StringBuffer_: function (obj) {"
+    if null_anchor not in buf_src:
+        raise ValueError("JS2ME StringBuffer append(Object) layout changed")
+    buf_src = buf_src.replace(null_anchor, null_anchor + chr(10) +
+                              "        if (obj == null) { this.string += 'null'; return this; }", 1)
+    string_buffer.write_text(buf_src, encoding="utf-8")
     # Fix a generic JVM-wide-bytecode defect in old upstream Zazu interpreter.
     # The original function lacked the context argument, used context.push/pop
     # instead of context.stack and threw unconditionally after every supported op.
