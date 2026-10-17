@@ -21,6 +21,7 @@ import subprocess
 import tempfile
 from pathlib import Path
 import zipfile
+from j2me_midi_renderer import find_midi_resources, FluidSynth, default_soundfont
 
 ROOT = Path(__file__).resolve().parents[1]
 PROJECT = ROOT / "compiler" / "teavm-aot"
@@ -98,6 +99,24 @@ def compile_game(jar: Path, output: Path, maven: Path) -> dict:
                     raise ValueError("Embedded images exceed 16 MiB expanded pixel cap")
                 bitmaps[name]={"width":image.width,"height":image.height,
                                "rgba":base64.b64encode(rgba).decode("ascii")}
+    # Discover and render standard MIDI files embedded anywhere in the JAR's
+    # resources, including in proprietary resource-bank containers. AOT only:
+    # the MIDI synthesizer and SoundFont never appear in the generated HTML.
+    with zipfile.ZipFile(jar) as midi_jar:
+        candidates = {name:midi_jar.read(name) for name in resources}
+    midi_sources=find_midi_resources(candidates)
+    midi_assets={}
+    if midi_sources:
+        sf2_env=os.environ.get("POCKETFORGE_SOUNDFONT")
+        sf2=Path(sf2_env) if sf2_env else default_soundfont()
+        if not sf2 or not sf2.is_file():
+            raise RuntimeError("MIDI resources found but no local GM SoundFont. "
+                               "Install a GM SoundFont or set POCKETFORGE_SOUNDFONT.")
+        with FluidSynth(sf2) as synth:
+            for original,location in midi_sources.items():
+                rendered=synth.render(original)
+                key=base64.b64encode(original).decode("ascii")
+                midi_assets[key]=base64.b64encode(rendered).decode("ascii")
     invoke = ("new "+cls+"().__pocketforgeStart();" if kind=="midlet"
               else cls+".main(new String[0]);")
     default_package = "." not in cls
@@ -111,6 +130,8 @@ def compile_game(jar: Path, output: Path, maven: Path) -> dict:
         "entrypoint":cls,"kind":kind,"launcher_package":"default" if "." not in cls else "generated","classes":len(class_names),
         "resource_files":len(resources),"resources_embedded":bool(resources),
         "predecoded_bitmaps":len(bitmaps),
+        "midi_tracks_rendered":len(midi_assets),
+        "midi_audio_bytes":sum(len(v)*3//4 for v in midi_assets.values()),
         "translation":"TeaVM AOT, original game bytecode is not distributed",
         "known_limitations":["Incomplete MIDP/CLDC adapter coverage",
                              "Resource input streams require a TeaVM classloader and supported decoding",
@@ -173,7 +194,8 @@ def compile_game(jar: Path, output: Path, maven: Path) -> dict:
             raise ValueError("Generated script exceeds safety budget")
     # The HTML is intentionally a SINGLE FILE and has no reference to the JAR.
     code = code.replace("</script", "<\\/script")
-    asset_script = "window.PocketForgeBitmapAssets = " + json.dumps(bitmaps,separators=(",",":"),ensure_ascii=True).replace("</", "<\\/") + ";"
+    asset_script = ("window.PocketForgeBitmapAssets = " + json.dumps(bitmaps,separators=(",",":"),ensure_ascii=True).replace("</", "<\\/") + ";"
+        + "window.PocketForgeMidiAssets = " + json.dumps(midi_assets,separators=(",",":"),ensure_ascii=True) + ";")
     title = manifest.get("MIDlet-Name") or cls
     html = """<!doctype html>
 <html lang="pt-BR"><head><meta charset="utf-8">

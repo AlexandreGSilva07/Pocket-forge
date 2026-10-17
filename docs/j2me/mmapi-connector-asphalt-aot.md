@@ -72,3 +72,7 @@ O trabalho foi informado pela inspeção local de phoneME e j2me.js (GPLv2), Fre
 ## Atualização de áudio
 
 A falha `MMAPI playback failed: The element has no supported sources` foi rastreada a WAVs IMA ADPCM e corrigida de forma genérica, conforme [relatório de decodificação IMA ADPCM](ima-adpcm-audio.md). **Efeitos WAV recuperados; MIDI ainda não suportado.**
+
+## Evolução posterior: 8 músicas MIDI do Asphalt
+
+Veja a [implementação de MIDI no compilador AOT](midi-offline-soundfont.md). As 8 trilhas foram sintetizadas em Ogg/Opus durante o build, carregadas e reproduzidas pelo Chrome, sem rede nem servidor. Os timbres dependem do banco SoundFont local e a audição física ainda depende de teste do usuário.

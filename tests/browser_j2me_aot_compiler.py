@@ -59,11 +59,17 @@ def build_fixture(root:Path,name:str):
         if not TEAVM_JAR.is_file():
             raise RuntimeError("Run an AOT compilation first to download TeaVM dependencies")
         shims=sorted((SDK/"javax").rglob("*.java"))+sorted((SDK/"pocketforge/media").rglob("*.java"))
-        class_name=(name+"MIDlet" if name in ("Interactive","ReferenceGraphics","Bitmap","Media","Adpcm") else "PocketDemoMIDlet")
+        class_name=(name+"MIDlet" if name in ("Interactive","ReferenceGraphics","Bitmap","Media","Adpcm","Midi") else "PocketDemoMIDlet")
         run("javac","--release","8","-cp",TEAVM_JAR,
             "-d",classes,*shims,SOURCES/(class_name+".java"))
         jar=root/name/(name+".jar")
         jar_with_manifest(jar,classes,"demo."+class_name,True)
+        if name=="Midi":
+            import struct
+            # MIDI format 0: one note AOT rendered with a local SoundFont.
+            events=bytes.fromhex("00 c0 00 00 90 3c 64 60 80 3c 00 00 ff 2f 00")
+            song=b"MThd"+struct.pack(">IHHH",6,0,1,96)+b"MTrk"+struct.pack(">I",len(events))+events
+            with zipfile.ZipFile(jar,"a") as z:z.writestr("demo/song.mid",song)
         if name=="Adpcm":
             import struct
             # WAV format 0x0011 (IMA DVI ADPCM), 8kHz mono, one block;
@@ -99,7 +105,7 @@ def main():
     with tempfile.TemporaryDirectory(prefix="pocketforge_aot_browser_") as td:
         t=Path(td)
         fixtures={}
-        for name in ("Calculator","ResourceMain","PocketDemo","Interactive","ReferenceGraphics","Bitmap","ConnectorMain","Media","Adpcm"):
+        for name in ("Calculator","ResourceMain","PocketDemo","Interactive","ReferenceGraphics","Bitmap","ConnectorMain","Media","Adpcm","Midi"):
             if name=="PocketDemo" and not TEAVM_JAR.exists():
                 raise RuntimeError("TeaVM 0.16.0 JSO jar is required (resolved by Maven)")
             jar=build_fixture(t,name)
@@ -150,6 +156,23 @@ def main():
                     assert bitmap_pixel==[255,0,0,255],bitmap_pixel
                 input_changed=None
                 touch_changed=None
+                if name=="Midi":
+                    assert "MIDI_SYNTH_ASSET_PASS" in output,output
+                    assert report['midi_tracks_rendered']==1,report
+                    midi=page.evaluate("""() => {
+                       const a=[...window.PocketForgeAudio.values()][0];
+                       const source=a.getAttribute('src');
+                       return {mime:source.slice(5,source.indexOf(';base64,')),ready:a.readyState,
+                               decoded:atob(source.split(';base64,')[1].slice(0,8)),error:a.error?.code||0};
+                    }""")
+                    assert midi['mime']=='audio/ogg' and midi['decoded'].startswith('OggS'),midi
+                    assert midi['ready']>=2 and not midi['error'],midi
+                    page.locator('#pf-controls button[data-key="Digit5"]').click()
+                    page.wait_for_timeout(200)
+                    output=page.locator('#log').inner_text()
+                    assert "MIDI_START_PASS" in output,output
+                    page.wait_for_timeout(200)
+                    assert page.evaluate("[...window.PocketForgeAudio.values()][0].currentTime")>0.1
                 if name=="Adpcm":
                     assert "IMA_ADPCM_PLAYER_PASS" in output,output
                     audio=page.evaluate("""() => {
@@ -208,7 +231,7 @@ def main():
                     assert canvas is None
                 else:
                     assert canvas and canvas["width"]==240 and canvas["height"]==320
-                    assert (canvas["colors"]>=3 and canvas["nonblack"]>1000) or (name in ("ReferenceGraphics","Bitmap") and canvas["colors"]>=5) or (name in ("Media","Adpcm") and canvas["nonblack"]>1000),canvas
+                    assert (canvas["colors"]>=3 and canvas["nonblack"]>1000) or (name in ("ReferenceGraphics","Bitmap") and canvas["colors"]>=5) or (name in ("Media","Adpcm","Midi") and canvas["nonblack"]>1000),canvas
                 evidence[name]={
                     "jar_sha256":hashlib.sha256(jar.read_bytes()).hexdigest(),
                     "html_sha256":hashlib.sha256(html.read_bytes()).hexdigest(),
@@ -224,6 +247,6 @@ def main():
     receipt=OUT/"aot-validation.json"
     receipt.write_text(json.dumps(evidence,ensure_ascii=False,indent=2)+"\n")
     print(json.dumps(evidence,ensure_ascii=False,indent=2))
-    print("PASS: nine independent JARs compiled AOT to standalone HTML; no JVM/JAR/runtime network")
+    print("PASS: ten independent JARs compiled AOT to standalone HTML; no JVM/JAR/runtime network")
 if __name__=="__main__":
     main()
