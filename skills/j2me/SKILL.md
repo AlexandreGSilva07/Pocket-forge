@@ -45,6 +45,8 @@ Veja [protocolo testado de arquivo único](../../docs/j2me/html-unico-sem-servid
 - Para JARs não confiáveis, usar perfil isolado de navegador, sem dados pessoais ou sessão autenticada. VM em JS não é sandbox garantida.
 - Não commitar ROMs, JARs comerciais ou código original decompilado. Guardar testes privados em external-corpus/ e registrar hashes.
 
+**Áudio de jogos antigos:** não confiar no MIME `audio/x-wav` isoladamente: muitos WAVs Java ME usam IMA ADPCM (wFormatTag 17), que o Chrome não decodifica. Usar [decoder genérico e testes](../../docs/j2me/ima-adpcm-audio.md); não criar arquivos de áudio específicos por jogo. MIDI permanece separado.
+
 ## Fluxo PORT/COMPILE — compilação determinística, ainda parcial
 
 RUN executa bytecode pela VM JavaScript. Para PORT, executar `python3 scripts/compile_j2me_aot.py jogo.jar --out dist/aot/Jogo.html`. TeaVM compila classfiles, inclui APIs CLDC/MIDP disponíveis e produz HTML puro. O [relatório de arquitetura](../../docs/j2me/compilador-aot.md) descreve os testes. A compilação interrompe e gera `.compile.json` quando faltam APIs; corrigir essas APIs no núcleo, nunca no jogo.

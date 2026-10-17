@@ -59,11 +59,21 @@ def build_fixture(root:Path,name:str):
         if not TEAVM_JAR.is_file():
             raise RuntimeError("Run an AOT compilation first to download TeaVM dependencies")
         shims=sorted((SDK/"javax").rglob("*.java"))+sorted((SDK/"pocketforge/media").rglob("*.java"))
-        class_name=(name+"MIDlet" if name in ("Interactive","ReferenceGraphics","Bitmap","Media") else "PocketDemoMIDlet")
+        class_name=(name+"MIDlet" if name in ("Interactive","ReferenceGraphics","Bitmap","Media","Adpcm") else "PocketDemoMIDlet")
         run("javac","--release","8","-cp",TEAVM_JAR,
             "-d",classes,*shims,SOURCES/(class_name+".java"))
         jar=root/name/(name+".jar")
         jar_with_manifest(jar,classes,"demo."+class_name,True)
+        if name=="Adpcm":
+            import struct
+            # WAV format 0x0011 (IMA DVI ADPCM), 8kHz mono, one block;
+            # generated in the test, independent of proprietary game audio.
+            block=bytes([0,0,0,0])+bytes([0x11]*8)
+            fmt=struct.pack("<HHIIHHHH",17,1,8000,8000*len(block)//17,len(block),4,2,17)
+            chunk=lambda tag,data:tag+struct.pack("<I",len(data))+data+(b"\0" if len(data)%2 else b"")
+            body=b"WAVE"+chunk(b"fmt ",fmt)+chunk(b"fact",struct.pack("<I",17))+chunk(b"data",block)
+            wav=b"RIFF"+struct.pack("<I",len(body))+body
+            with zipfile.ZipFile(jar,"a") as z:z.writestr("demo/adpcm.wav",wav)
         if name=="Media":
             import wave,math,struct
             from io import BytesIO
@@ -89,7 +99,7 @@ def main():
     with tempfile.TemporaryDirectory(prefix="pocketforge_aot_browser_") as td:
         t=Path(td)
         fixtures={}
-        for name in ("Calculator","ResourceMain","PocketDemo","Interactive","ReferenceGraphics","Bitmap","ConnectorMain","Media"):
+        for name in ("Calculator","ResourceMain","PocketDemo","Interactive","ReferenceGraphics","Bitmap","ConnectorMain","Media","Adpcm"):
             if name=="PocketDemo" and not TEAVM_JAR.exists():
                 raise RuntimeError("TeaVM 0.16.0 JSO jar is required (resolved by Maven)")
             jar=build_fixture(t,name)
@@ -140,6 +150,30 @@ def main():
                     assert bitmap_pixel==[255,0,0,255],bitmap_pixel
                 input_changed=None
                 touch_changed=None
+                if name=="Adpcm":
+                    assert "IMA_ADPCM_PLAYER_PASS" in output,output
+                    audio=page.evaluate("""() => {
+                       const a=[...window.PocketForgeAudio.values()][0];
+                       const s=a.getAttribute('src');const b=atob(s.slice(s.indexOf(';base64,')+8));
+                       return {mime:s.slice(5,s.indexOf(';base64,')),
+                         format:b.charCodeAt(20)+b.charCodeAt(21)*256,
+                         samples:(b.length-44)/2,ready:a.readyState,error:a.error?.code||null};
+                    }""")
+                    assert audio['format']==1,audio
+                    assert audio['samples']==17,audio
+                    assert audio['ready']>=2 and not audio['error'],audio
+                    # Verify browser can start real playback after a trusted user gesture.
+                    page.evaluate("""() => {
+                      const btn=document.querySelector('#pf-controls button[data-key=Digit5]');
+                      btn.addEventListener('pointerdown',function(){
+                        const a=[...window.PocketForgeAudio.values()][0];
+                        a.play().then(()=>window.PFAdpcmPlay='resolved')
+                                .catch(e=>window.PFAdpcmPlay=String(e));
+                      },{once:true,capture:true});
+                    }""")
+                    page.locator('#pf-controls button[data-key=Digit5]').click()
+                    page.wait_for_function("window.PFAdpcmPlay!==undefined",timeout=2500)
+                    assert page.evaluate("window.PFAdpcmPlay")=='resolved'
                 if name=="Media":
                     assert "MMAPI_STATES_CONTROLS_PASS" in output,output
                     assert page.evaluate("window.PocketForgeAudio?.size") == 1
@@ -174,7 +208,7 @@ def main():
                     assert canvas is None
                 else:
                     assert canvas and canvas["width"]==240 and canvas["height"]==320
-                    assert (canvas["colors"]>=3 and canvas["nonblack"]>1000) or (name in ("ReferenceGraphics","Bitmap") and canvas["colors"]>=5) or (name=="Media" and canvas["nonblack"]>1000),canvas
+                    assert (canvas["colors"]>=3 and canvas["nonblack"]>1000) or (name in ("ReferenceGraphics","Bitmap") and canvas["colors"]>=5) or (name in ("Media","Adpcm") and canvas["nonblack"]>1000),canvas
                 evidence[name]={
                     "jar_sha256":hashlib.sha256(jar.read_bytes()).hexdigest(),
                     "html_sha256":hashlib.sha256(html.read_bytes()).hexdigest(),
@@ -190,6 +224,6 @@ def main():
     receipt=OUT/"aot-validation.json"
     receipt.write_text(json.dumps(evidence,ensure_ascii=False,indent=2)+"\n")
     print(json.dumps(evidence,ensure_ascii=False,indent=2))
-    print("PASS: eight independent JARs compiled AOT to standalone HTML; no JVM/JAR/runtime network")
+    print("PASS: nine independent JARs compiled AOT to standalone HTML; no JVM/JAR/runtime network")
 if __name__=="__main__":
     main()

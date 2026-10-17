@@ -29,8 +29,15 @@ public final class BrowserPlayer implements Player,VolumeControl,RateControl,Tem
   }
   byte[] bytes=out.toByteArray();
   if(bytes.length==0)throw new IOException("Empty media stream");
+  // Java ME games often store IMA ADPCM inside RIFF/WAVE (format 0x0011).
+  // Browsers accept WAV as a container but commonly reject that codec.
+  // Decode the standard codec to PCM while preserving the Player interface.
+  boolean converted=ImaAdpcmWav.isImaAdpcm(bytes);
+  if(converted){
+    bytes=ImaAdpcmWav.toPcm16Wav(bytes);
+  }
   id=nextId++;
-  create(id,type,encode(bytes));
+  create(id,converted?"audio/wav":type,encode(bytes));
  }
  private static String encode(byte[] data){
   final char[] chars="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/".toCharArray();
