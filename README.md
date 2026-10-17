@@ -18,6 +18,17 @@
 
 **Não colocar JARs/JADs originais no repositório.** O processamento sintético terminou: cada PR contém os metadados dos arquivos, sem executar ou descompilar integralmente os jogos. Os próximos PRs, da fase detalhada, deverão estudar algoritmos de verdade e incorporar melhorias funcionais do motor com testes e benchmarks.
 
+## Compilador PocketForge — JAR → HTML único sem emulador
+
+O [núcleo de compilação AOT](docs/j2me/compilador-aot.md), baseado no TeaVM 0.16.0 (Apache-2.0), **converte bytecode Java em JavaScript antes da execução**. Diferentemente do modo RUN, o HTML não contém o JAR original nem um interpretador Java. O manifesto fornece automaticamente a classe inicial: não há regras por título.
+
+```sh
+python3 scripts/compile_j2me_aot.py caminho/Jogo.jar --out dist/aot/Jogo.html
+# Abrir Jogo.html com dois cliques (file://), sem Java ou servidor
+```
+
+Validado com três JARs autorais e com o Asteroids original (11 classes, desenho real). **Não é compatibilidade universal concluída:** faltam APIs opcionais, MMAPI, recursos e cenários; Asphalt Nitro ainda reporta 19 símbolos ausentes. JDK/Maven são necessários apenas **durante a compilação**. O modo RUN antigo permanece como referência.
+
 ## J2ME determinístico — runtime HTML offline (experimental)
 
 A [subskill RUN/PORT/CREATE](skills/j2me/SKILL.md) descreve a arquitetura e os níveis de evidência. Consulte o [relatório técnico de execução real](docs/j2me/estado-motor-universal.md), inclusive falhas e correções contra Asphalt Nitro. Para **executar JARs originais sem Java instalado** usando a VM JS2ME MIT, empacotada sem CDN:

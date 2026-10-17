@@ -1,0 +1,45 @@
+name: PocketForge Java ME AOT Compiler
+
+on:
+  pull_request:
+    paths:
+      - "compiler/**"
+      - "scripts/compile_j2me_aot.py"
+      - "tests/browser_j2me_aot_compiler.py"
+      - "tests/fixtures/aot/**"
+      - ".github/workflows/j2me-aot-compiler.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  compile-and-test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "21"
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Resolve fixed TeaVM 0.16.0 dependencies
+        run: mvn -B -q dependency:get -Dartifact=org.teavm:teavm-jso:0.16.0
+      - name: Install headless Chromium for file:// browser tests
+        run: |
+          python3 -m pip install playwright==1.56.0
+          python3 -m playwright install --with-deps chromium
+      - name: Compile 3 independent real JARs to standalone HTML and verify rendering/input
+        run: python3 tests/browser_j2me_aot_compiler.py
+        env:
+          POCKETFORGE_AOT_EVIDENCE: artifacts/aot
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: pocketforge-aot-evidence
+          path: artifacts/aot/
+          if-no-files-found: warn
+          retention-days: 10

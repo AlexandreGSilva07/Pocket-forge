@@ -1,0 +1,139 @@
+#!/usr/bin/env python3
+"""Compile THREE independently authored Java JARs to standalone JS and test file:// in Chromium.
+
+No game-specific compiler modifications and no JAR/runtime bytecode in the HTML.
+This test proves the AOT pipeline for the exercised APIs; it does not imply
+that unsupported MIDP, 3D, sound, networking and manufacturer JSRs will work.
+"""
+from __future__ import annotations
+import hashlib
+import json
+import os
+from pathlib import Path
+import re
+import shutil
+import subprocess
+import sys
+import tempfile
+import zipfile
+
+ROOT = Path(__file__).resolve().parents[1]
+SCRIPT = ROOT / "scripts/compile_j2me_aot.py"
+SOURCES = ROOT / "tests/fixtures/aot"
+SDK = ROOT / "compiler/teavm-aot/src/main/java"
+TEAVM_JAR = Path.home()/".m2/repository/org/teavm/teavm-jso/0.16.0/teavm-jso-0.16.0.jar"
+OUT=Path(os.environ.get("POCKETFORGE_AOT_EVIDENCE",str(ROOT/"artifacts/aot")))
+
+def run(*args):
+    proc=subprocess.run([str(a) for a in args],capture_output=True,text=True,timeout=180)
+    if proc.returncode!=0:
+        raise RuntimeError("FAILED "+str(args)+"\n"+proc.stdout[-2000:]+"\n"+proc.stderr[-4500:])
+    return proc.stdout
+
+def jar_with_manifest(location:Path, classes:Path, main: str, midlet: bool):
+    from io import BytesIO
+    mani=("Manifest-Version: 1.0\nMIDlet-Name: PocketForge AOT Test\n"
+          + ("MIDlet-1: Test, , "+main+"\nMicroEdition-Configuration: CLDC-1.1\nMicroEdition-Profile: MIDP-2.0\n"
+             if midlet else "Main-Class: "+main+"\n")+"\n")
+    with zipfile.ZipFile(location,"w",zipfile.ZIP_DEFLATED) as z:
+        z.writestr("META-INF/MANIFEST.MF",mani)
+        for f in sorted((classes/"demo").rglob("*.class")):
+            z.write(f,f.relative_to(classes).as_posix())
+
+def build_fixture(root:Path,name:str):
+    classes=root/name/"classes"
+    classes.mkdir(parents=True)
+    if name=="Calculator":
+        run("javac","--release","8","-d",classes,SOURCES/"Calculator.java")
+        jar=root/name/"Calculator.jar"
+        jar_with_manifest(jar,classes,"demo.Calculator",False)
+    else:
+        if not TEAVM_JAR.is_file():
+            raise RuntimeError("Run an AOT compilation first to download TeaVM dependencies")
+        shims=sorted((SDK/"javax").rglob("*.java"))
+        class_name="InteractiveMIDlet" if name=="Interactive" else "PocketDemoMIDlet"
+        run("javac","--release","8","-cp",TEAVM_JAR,
+            "-d",classes,*shims,SOURCES/(class_name+".java"))
+        jar=root/name/(name+".jar")
+        jar_with_manifest(jar,classes,"demo."+class_name,True)
+    return jar
+
+def main():
+    from playwright.sync_api import sync_playwright
+    evidence={}
+    OUT.mkdir(parents=True,exist_ok=True)
+    with tempfile.TemporaryDirectory(prefix="pocketforge_aot_browser_") as td:
+        t=Path(td)
+        fixtures={}
+        for name in ("Calculator","PocketDemo","Interactive"):
+            if name=="PocketDemo" and not TEAVM_JAR.exists():
+                raise RuntimeError("TeaVM 0.16.0 JSO jar is required (resolved by Maven)")
+            jar=build_fixture(t,name)
+            html=t/(name+".html")
+            stdout=run(sys.executable,SCRIPT,jar,"--out",html)
+            report=json.loads(stdout)
+            assert report["status"]=="compiled"
+            assert report["jar_embedded"] is False
+            assert report["requires_java_at_runtime"] is False
+            assert report["requires_http_server"] is False
+            assert "<script src=" not in html.read_text()
+            assert html.stat().st_size<300000,"AOT output unexpectedly large for fixtures"
+            fixtures[name]=(jar,html,report)
+        with sync_playwright() as p:
+            executable="/usr/bin/google-chrome" if Path("/usr/bin/google-chrome").is_file() else None
+            browser=p.chromium.launch(headless=True,executable_path=executable)
+            for name,(jar,html,report) in fixtures.items():
+                page=browser.new_page(viewport={"width":900,"height":800})
+                errors=[];network=[]
+                page.on("pageerror",lambda e:errors.append(str(e)))
+                page.on("request",lambda r:network.append(r.url) if r.url.startswith(("http:","https:")) else None)
+                page.goto(html.resolve().as_uri(),wait_until="load",timeout=30000)
+                page.wait_for_timeout(350)
+                output=page.locator("#log").inner_text()
+                canvas=page.evaluate("""() => {
+                  const c=document.getElementById('pf-screen');
+                  if(!c)return null;
+                  const pixels=c.getContext('2d').getImageData(0,0,c.width,c.height).data;
+                  let nonblack=0,colors=new Set();
+                  for(let i=0;i<pixels.length;i+=4){
+                    const rgb=pixels[i]*65536+pixels[i+1]*256+pixels[i+2];
+                    if(rgb)nonblack++;colors.add(rgb);
+                  }
+                  return {width:c.width,height:c.height,nonblack,colors:colors.size};
+                }""")
+                input_changed=None
+                if name=="Interactive":
+                    previous=page.evaluate("document.getElementById('pf-screen').toDataURL()")
+                    page.keyboard.press("ArrowUp")
+                    page.wait_for_timeout(200)
+                    after=page.evaluate("document.getElementById('pf-screen').toDataURL()")
+                    input_changed=previous!=after
+                    assert input_changed,"MIDP keyPressed was not triggered by ArrowUp"
+                image=OUT/(name+".png")
+                page.screenshot(path=str(image),full_page=True)
+                assert not errors,errors
+                assert not network,network
+                if name=="Calculator":
+                    assert "CALCULATOR=57" in output,output
+                    assert canvas is None
+                else:
+                    assert canvas and canvas["width"]==240 and canvas["height"]==320
+                    assert canvas["colors"]>=3 and canvas["nonblack"]>1000,canvas
+                evidence[name]={
+                    "jar_sha256":hashlib.sha256(jar.read_bytes()).hexdigest(),
+                    "html_sha256":hashlib.sha256(html.read_bytes()).hexdigest(),
+                    "generated_bytes":html.stat().st_size,
+                    "output":output,"canvas":canvas,
+                    "network_requests":network,"page_errors":errors,
+                    "original_jar_embedded":False,"jsvm_embedded":False,
+                    "input_changed":input_changed,
+                    "screenshot":str(image)
+                }
+                page.close()
+            browser.close()
+    receipt=OUT/"aot-validation.json"
+    receipt.write_text(json.dumps(evidence,ensure_ascii=False,indent=2)+"\n")
+    print(json.dumps(evidence,ensure_ascii=False,indent=2))
+    print("PASS: three independent JARs compiled AOT to standalone HTML; no JVM/JAR/runtime network")
+if __name__=="__main__":
+    main()
