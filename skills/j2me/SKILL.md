@@ -24,12 +24,14 @@ Esta skill orienta agentes de IA a construir **software e artefatos executáveis
 
 1. Ler SKILL.md da raiz e o catálogo em docs/research/plataformas-mobile-sdks-runtimes.md.
 2. Executar: python3 scripts/build_j2me_runtime.py. Ele baixa uma **revisão fixada** do JS2ME MIT *durante o build*; para origem já clonada use --source /caminho/js2me.
-3. Iniciar: python3 -m http.server 8000 --directory dist/j2me-web. Abrir http://localhost:8000 e selecionar um JAR local. A VM é escrita em JavaScript e não exige JRE instalado.
+3. **Caminho padrão SEM servidor:** executar python3 scripts/build_j2me_single_html.py; abrir dist/PocketForge-J2ME-Offline.html com duplo clique (Chrome testado via file://) e selecionar JAR. Para gerar HTML com jogo já embutido, executar python3 scripts/build_j2me_single_html.py --jar jogo.jar --output MeuJogo.html. Não publicar JAR comercial embutido. A pasta dist/j2me-web em modo HTTP é apenas alternativa de depuração.
 4. Executar análise estática: python3 scripts/j2me_compat_report.py arquivo.jar --api-root dist/j2me-web/js/me --out report.json.
 5. Quando disponível, executar testes de navegador com tests/browser_j2me_compat_probe.py e salvar diagnósticos. O probe é um oráculo de comportamento parcial e não garante gameplay.
 6. Corrigir falhas do runtime na camada apropriada, adicionar regressão e testar **um segundo jogo**, evitando hacks exclusivos de títulos específicos.
 
 É proibido declarar êxito apenas porque o manifesto foi lido. Escala de evidências: ZIP válido → MIDlet encontrado → bytecode executado → primeiro frame real → input funcional → loop jogável → jogo completo comparado com original.
+
+Veja [protocolo testado de arquivo único](../../docs/j2me/html-unico-sem-servidor.md) para evidências, testes de JAR original, formatos do bundler e limitações.
 
 ## API, compatibilidade e segurança
 
@@ -37,7 +39,7 @@ Esta skill orienta agentes de IA a construir **software e artefatos executáveis
 - Um arquivo de classe da API presente na pasta JS2ME não prova que seus métodos estejam completos.
 - JS2ME é um projeto antigo, com JIT e suporte incompleto, especialmente M3G/JSR 184. Guardar stacks e versões exatas.
 - Nosso builder aplica correções de VM determinísticas com testes, mantendo avisos MIT/BSD e origem rastreável.
-- **Offline:** o bundle não usa CDN, Java instalado ou backend de execução. Um servidor HTTP em localhost pode ser necessário por políticas do navegador; arquivo HTML único é uma meta separada.
+- **Offline:** o bundle não usa CDN, Java instalado ou backend de execução. **HTML único via file:// foi implementado e testado no Chrome Linux.** Outros navegadores podem variar; o motor é carregado integralmente na página sem arquivos ou bibliotecas externos.
 - Para JARs não confiáveis, usar perfil isolado de navegador, sem dados pessoais ou sessão autenticada. VM em JS não é sandbox garantida.
 - Não commitar ROMs, JARs comerciais ou código original decompilado. Guardar testes privados em external-corpus/ e registrar hashes.
 
