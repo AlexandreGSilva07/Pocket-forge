@@ -35,13 +35,26 @@ jobs:
         run: |
           python3 -m pip install playwright==1.56.0
           python3 -m playwright install --with-deps chromium
+      - name: Static VM/API coverage report for test JAR
+        run: python3 scripts/j2me_compat_report.py dist/j2me-web/ci/test.jar --api-root dist/j2me-web/js/me --out artifacts/j2me/test-classfile-report.json
       - name: Run real JAR smoke and capture diagnostics
         run: python3 tests/browser_j2me_runtime_smoke.py
         env:
           POCKETFORGE_SCREENSHOT_DIR: artifacts/j2me
+      - name: Fetch one Asphalt Nitro research sample (temporary; do not redistribute)
+        id: fetch_asphalt
+        continue-on-error: true
+        run: python3 scripts/fetch_j2me_sample.py --dataset M5-Dev/j2me-vault --filename Games/AsphaltNitro.jar
+      - name: Inspect classfile/API dependencies of Asphalt Nitro
+        if: steps.fetch_asphalt.outcome == 'success'
+        run: python3 scripts/j2me_compat_report.py external-corpus/M5-Dev_j2me-vault/Games/AsphaltNitro.jar --api-root dist/j2me-web/js/me --out artifacts/j2me/asphalt-static-report.json
+      - name: Try executing the original Asphalt Nitro JAR in Chromium
+        if: steps.fetch_asphalt.outcome == 'success'
+        continue-on-error: true
+        run: python3 tests/browser_j2me_compat_probe.py external-corpus/M5-Dev_j2me-vault/Games/AsphaltNitro.jar --out artifacts/j2me/asphalt-browser-probe.json
       - name: Remove non-distributable test fixture
         if: always()
-        run: rm -rf dist/j2me-web/ci/
+        run: rm -rf dist/j2me-web/ci/ external-corpus/
       - name: Upload standalone offline runtime
         if: always()
         uses: actions/upload-artifact@v4
