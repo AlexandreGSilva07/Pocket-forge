@@ -19,6 +19,8 @@ jobs:
         run: node --check demo/game.js
       - name: Executar testes da toolchain
         run: python3 -m unittest discover -s tests -v
+      - name: Validar parsers JavaScript Java-free (fixtures sintéticas)
+        run: node --test tests/gameloft_*.test.cjs tests/zip_jar.test.cjs
       - name: Auditar tamanho do jogo
         run: python3 scripts/audit.py demo --max-bytes 1048576
       - name: Validar manifestos JSON
@@ -42,6 +44,10 @@ jobs:
           python3 -m playwright install --with-deps chromium
       - name: Smoke real desktop/touch
         run: python3 tests/browser_smoke.py
+        env:
+          POCKETFORGE_SCREENSHOT_DIR: artifacts/browser
+      - name: Smoke JAR binário aberto no navegador (sem JVM)
+        run: python3 tests/browser_gameloft_smoke.py
         env:
           POCKETFORGE_SCREENSHOT_DIR: artifacts/browser
       - name: Salvar capturas de evidência
