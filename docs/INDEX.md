@@ -53,7 +53,7 @@
 **Status:** a documentação distingue capacidades implementadas (v0.1) de projetos futuros; consulte o [roadmap](11-roadmap.md).
 
 ## Resultados reais de engenharia reversa
-
+\n- [Asphalt Nitro 1.1.7 — banco de recursos reconstruído byte a byte e teclado portado](research/deep/asphalt-nitro-1-1-7.md) · [Laboratório browser](../demo/gameloft-bank-lab.html) · [6 testes Node](../tests/gameloft_banks.test.cjs)\n
 - [Wave 01: 12 JARs desmontados e métodos catalogados](research/deep/wave01/overview.md)
 - [Wave 02: 88 JARs adicionais — 100/100 inventários de bytecode](research/deep/bytecode-100/README.md)
 - [Estudo 5Chess (IA tática)](research/deep/studies/493f99e040eb-5chess.md) · [Estudo 3D Balloon Race (assets)](research/deep/studies/12e9d0c928e3-balloon-asset-pack.md)

@@ -87,7 +87,7 @@ Pocket-forge/
 
 O [catálogo de SDKs, runtimes, emuladores e sistemas móveis](docs/research/plataformas-mobile-sdks-runtimes.md) reúne fontes verificáveis de Java ME/phoneME, Symbian/S60/UIQ/N-Gage, Palm OS, Windows Mobile e BlackBerry. A escolha do Nokia 5320/Symbian 9.3 foi **uma amostra avançada de época, não um alvo do PocketForge**. O estudo serve para entender técnicas generalizáveis e validá-las em jogos HTML5 próprios; os downloads históricos não foram executados nem avaliados em benchmark.
 
-## Pesquisa baseada em jogos reais
+## Engenharia reversa dirigida: Asphalt Nitro\n\nUma [investigação byte-a-byte do Asphalt Nitro 1.1.7](docs/research/deep/asphalt-nitro-1-1-7.md) validou **1.310 registros** do contêiner de bancos originais (mesmo ID, tamanho, tipo e SHA-256) e documentou a semântica de teclas derivada de `j.class`. O [laboratório JavaScript](demo/gameloft-bank-lab.html) abre partes de bancos extraídas localmente, **não** executa o jogo original. Nenhum JAR comercial é versionado. Há também [download seletivo de amostras do Hugging Face](scripts/fetch_j2me_sample.py) para pasta ignorada, quando permitido.\n\n## Pesquisa baseada em jogos reais
 
 O [relatório da coleção Nokia64](docs/research/02-auditoria-j2me-2309-jars.md) registra a análise estática de **2.309 JARs, sendo 1.649 binariamente distintos**, obtidos de um ZIP de ~154 MiB pelo GitHub Actions. O jogo original não foi executado nem integrado ao repositório.
 
