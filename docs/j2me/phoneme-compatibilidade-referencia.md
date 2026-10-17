@@ -43,7 +43,7 @@ O JAR original fornecido/estudado tem SHA-256 `a96827c5c6539bcaff2d7d23f8bad0cf1
 
 São requisitos da plataforma (MMAPI/IO), não nomes de métodos internos do Asphalt. Ter apenas uma definição vazia desses tipos poderia satisfazer a compilação, mas **não seria suporte funcional**; implementar comportamentos completos e testá-los é o próximo marco.
 
-**Situação comprovada:** o núcleo AOT continua compilando JARs independentes e verificando comportamento em Chrome. **Asphalt Nitro ainda não compila na modalidade AOT e não existe corrida jogável**, nem prova de compatibilidade com todos os aparelhos ou extensões JSR.
+**Situação comprovada:** o núcleo AOT continua compilando JARs independentes e verificando comportamento em Chrome. **Esta medição foi superada:** MMAPI/Connector foram implementados no marco [seguinte](mmapi-connector-asphalt-aot.md); Asphalt compila e executa menu/tutorial, mas ainda não há corrida jogável comprovada, nem prova de compatibilidade com todos os aparelhos ou extensões JSR.
 
 ## Próximas entregas verificáveis
 
