@@ -36,6 +36,7 @@ def main():
               runtime: window.PocketForgeJ2ME.diagnostics(),
               resourceCount: window.js2me.resources ? Object.keys(window.js2me.resources).length : 0,
               usedMethods: window.js2me.usedMethods ? Object.keys(window.js2me.usedMethods).length : 0,
+              bytecodeExecutions:window.PocketForgeJ2ME.executionCount(),
               threadCount: window.js2me.threads ? window.js2me.threads.length : 0,
               currentScreen: document.querySelector('#screen').textContent.slice(0,500),
               canvasCount: document.querySelectorAll('canvas').length
@@ -47,10 +48,10 @@ def main():
             page.screenshot(path=str(SHOT/"j2me-test.png"),full_page=True)
             assert data["manifest"].get("midlet-1"), "MIDlet entrypoint not recognized"
             assert data["resourceCount"] > 0, "JAR resources not loaded"
-            assert data["usedMethods"] > 0, "No Java methods were reached"
-            print("PASS: real JAR loaded, manifest read, bytecode methods reached (not full compatibility)")
+            assert data["bytecodeExecutions"] > 0, "No actual Java bytecode was interpreted"
+            print("PASS: real JAR loaded, manifest read, Java bytecode entered (not full compatibility)")
             print(json.dumps({"resourceCount":data["resourceCount"],"usedMethods":data["usedMethods"],
-                              "threadCount":data["threadCount"],"canvasCount":data["canvasCount"],
+                              "bytecodeExecutions":data["bytecodeExecutions"],"threadCount":data["threadCount"],"canvasCount":data["canvasCount"],
                               "browserErrors":errors,"events":data["runtime"][-8:]},ensure_ascii=False))
             browser.close()
     finally:
