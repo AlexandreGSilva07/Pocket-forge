@@ -75,6 +75,33 @@ def assemble(source: Path, output: Path, archive_sha256: str | None) -> dict:
     output.mkdir(parents=True)
     for folder in ("js", "css", "img"):
         shutil.copytree(source / folder, output / folder)
+    # Fix a generic JVM-wide-bytecode defect in old upstream Zazu interpreter.
+    # The original function lacked the context argument, used context.push/pop
+    # instead of context.stack and threw unconditionally after every supported op.
+    # This is a runtime-wide fix, not a patch to any commercial game.
+    zazu_path = output / "js" / "program_zazu.js"
+    zazu = zazu_path.read_text(encoding="utf-8")
+    start = zazu.index("executors[0xc4] = function () {")
+    end = zazu.index("js2me.generateProgram = function (data) {", start)
+    patch = """executors[0xc4] = function (context) {
+        var p = context.parameters[context.position - 1];
+        var op = p.op, i = p.pointer;
+        if (op >= 0x15 && op <= 0x19) {
+            context.stack.push(context.locals[i]);
+            return;
+        }
+        if (op >= 0x36 && op <= 0x3a) {
+            context.locals[i] = context.stack.pop();
+            return;
+        }
+        if (op === 0x84) {
+            context.locals[i] = (context.locals[i] + p.value) | 0;
+            return;
+        }
+        throw new Error("unsupported wide opcode: " + op);
+    };
+    """
+    zazu_path.write_text(zazu[:start] + patch + "\\n\\t" + zazu[end:], encoding="utf-8")
     original = (source / "index.html").read_text(encoding="utf-8")
     original = original.replace('<script type="text/javascript" src="js/emulator.js"></script>',
         '<script type="text/javascript" src="js/emulator.js"></script>\n'
