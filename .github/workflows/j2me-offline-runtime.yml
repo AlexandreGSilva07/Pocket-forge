@@ -3,6 +3,8 @@ on:
   pull_request:
     paths:
       - scripts/build_j2me_runtime.py
+      - scripts/build_j2me_single_html.py
+      - tests/browser_j2me_single_html.py
       - runtime/**
       - tests/browser_j2me_runtime_smoke.py
       - tests/browser_j2me_compat_probe.py
@@ -25,6 +27,10 @@ jobs:
           python-version: "3.11"
       - name: Package pinned MIT JS2ME and temporary test MIDlet
         run: python3 scripts/build_j2me_runtime.py --ci-fixture
+      - name: Generate fully self-contained HTML (no HTTP server)
+        run: |
+          python3 scripts/build_j2me_single_html.py
+          python3 scripts/build_j2me_single_html.py --jar dist/j2me-web/ci/test.jar --output dist/j2me-ci-embedded.html
       - name: Verify patched CLDC and MMAPI functions
         run: node tests/j2me_api_patches.test.cjs
       - name: Verify unlimited JVM arguments and callbacks
@@ -46,6 +52,10 @@ jobs:
         run: |
           python3 -m pip install playwright==1.56.0
           python3 -m playwright install --with-deps chromium
+      - name: Test universal single HTML directly via file protocol
+        run: python3 tests/browser_j2me_single_html.py --jar dist/j2me-web/ci/test.jar --html dist/PocketForge-J2ME-Offline.html --screenshot artifacts/j2me/single-html.png --report artifacts/j2me/single-html.json
+      - name: Test HTML with JAR embedded and auto-start (file protocol)
+        run: python3 tests/browser_j2me_single_html.py --html dist/j2me-ci-embedded.html --screenshot artifacts/j2me/single-embedded.png --report artifacts/j2me/single-embedded.json
       - name: Static VM/API coverage report for test JAR
         run: python3 scripts/j2me_compat_report.py dist/j2me-web/ci/test.jar --api-root dist/j2me-web/js/me --out artifacts/j2me/test-classfile-report.json
       - name: Run real JAR smoke and capture diagnostics
@@ -68,13 +78,21 @@ jobs:
           python3 tests/browser_j2me_compat_probe.py external-corpus/M5-Dev_j2me-vault/Games/AsphaltNitro.jar --engine timon --out artifacts/j2me/asphalt-timon.json
       - name: Remove non-distributable test fixture
         if: always()
-        run: rm -rf dist/j2me-web/ci/ external-corpus/
+        run: rm -rf dist/j2me-web/ci/ external-corpus/ dist/j2me-ci-embedded.html
       - name: Upload standalone offline runtime
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: pocketforge-j2me-offline-runtime
           path: dist/j2me-web/
+          if-no-files-found: error
+          retention-days: 10
+      - name: Upload ONE HTML, without JARs or external resources
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pocketforge-j2me-single-html-offline
+          path: dist/PocketForge-J2ME-Offline.html
           if-no-files-found: error
           retention-days: 10
       - name: Upload browser evidence and error log
