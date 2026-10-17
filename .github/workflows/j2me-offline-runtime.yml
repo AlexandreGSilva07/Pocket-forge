@@ -20,6 +20,8 @@ jobs:
           python-version: "3.11"
       - name: Package pinned MIT JS2ME and temporary test MIDlet
         run: python3 scripts/build_j2me_runtime.py --ci-fixture
+      - name: Verify corrected JVM wide opcode handler
+        run: node tests/j2me_wide.test.cjs
       - name: Check no external URLs referenced by package HTML
         run: |
           python3 - <<'PY'
