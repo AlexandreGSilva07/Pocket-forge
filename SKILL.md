@@ -12,6 +12,8 @@ metadata:
 
 ## Novos modos Java ME — decisão obrigatória
 
+**Requisito atual de distribuição:** para JAR no navegador priorize o [HTML único sem servidor](docs/j2me/html-unico-sem-servidor.md) gerado por `scripts/build_j2me_single_html.py`, validado via file:// no Chrome. Nenhum app externo ou local HTTP é necessário após montar o HTML.
+
 Se a tarefa envolve JAR/JAD, CLDC, MIDP, engenharia reversa Java ME ou criação de jogos J2ME, leia imediatamente **[skills/j2me/SKILL.md](skills/j2me/SKILL.md)**. Operações separadas: **RUN** (executar bytecode pela VM escrita em JS, experimental); **PORT** (exportar código JS/WASM sem VM, compilador genérico ainda não pronto); **CREATE** (gerar fontes J2ME, build com SDK e pré-verificador). Não confundir a execução via VM JS com a conversão AOT nem declarar que qualquer JAR é suportado.
 
 
