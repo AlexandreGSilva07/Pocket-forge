@@ -18,6 +18,25 @@
 
 **Não colocar JARs/JADs originais no repositório.** O processamento sintético terminou: cada PR contém os metadados dos arquivos, sem executar ou descompilar integralmente os jogos. Os próximos PRs, da fase detalhada, deverão estudar algoritmos de verdade e incorporar melhorias funcionais do motor com testes e benchmarks.
 
+## J2ME determinístico — runtime HTML offline (experimental)
+
+A [subskill RUN/PORT/CREATE](skills/j2me/SKILL.md) descreve a arquitetura e os níveis de evidência. Para **executar JARs originais sem Java instalado** usando a VM JS2ME MIT, empacotada sem CDN:
+
+```sh
+python3 scripts/build_j2me_runtime.py
+python3 -m http.server 8000 --directory dist/j2me-web
+# Abra http://localhost:8000 e selecione seu .jar
+```
+
+A origem MIT é baixada no **build**, fixada por SHA de commit; o HTML gerado funciona sem Internet. Alternativamente, passe `--source /caminho/js2me` para compilar offline com fonte já disponível. Compatibilidade MIDP/CLDC é **parcial**, e M3G não está completo; abrir o JAR não equivale a jogar.
+
+```sh
+python3 scripts/j2me_compat_report.py jogo.jar --api-root dist/j2me-web/js/me --out diagnostico.json
+python3 scripts/new_j2me_game.py PocketCar --title "Pocket Car"
+```
+
+**Port AOT puro JS/WASM ainda não implementado**; para isso é necessário um compilador e adaptadores completos. O experimento Asphalt Nitro é documentado com execuções/erros reais, sem declarar corrida concluída. Os jogos comerciais não entram no Git.
+
 ## Comece aqui
 
 | Recurso | O que contém |
