@@ -94,6 +94,8 @@ def assemble(source: Path, output: Path, archive_sha256: str | None) -> dict:
     """,
     }
     for rel, patch in standard_api_patches.items():
+        if rel.endswith("PlayerImpl.js"):
+            patch = patch.replace("$getMediaTime$J:", "$getMediaTime" + chr(36) + "$J:")
         file=output / rel
         raw=file.read_text(encoding="utf-8")
         if not raw.startswith("js2me.createClass({"):
