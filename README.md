@@ -20,6 +20,9 @@
 
 ## Compilador PocketForge — JAR → HTML único sem emulador
 
+**Áudio recuperado:** o [decodificador WAV IMA ADPCM](docs/j2me/ima-adpcm-audio.md) agora converte efeitos Java ME para PCM. No Asphalt Nitro, 25/25 sons passaram a carregar sem erro no Chrome; trilhas MIDI ainda requerem suporte específico.
+
+
 **Referência de Java ME real:** [phoneME, j2me.js, biblioteca CLDC/MIDP e ensaios em Chromium](docs/j2me/phoneme-compatibilidade-referencia.md). Fontes GPL são estudadas fora do repositório; o código do compilador permanece independente. O AOT agora inclui recursos do JAR e imagens comuns no HTML, sem embutir a VM.
 
 

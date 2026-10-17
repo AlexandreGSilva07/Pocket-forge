@@ -68,3 +68,7 @@ O trabalho foi informado pela inspeção local de phoneME e j2me.js (GPLv2), Fre
 5. Aplicar regressões a mais jogos independentes antes de reivindicar **compatibilidade universal**.
 
 **Regra permanente:** correções de comportamento pertencem às APIs compartilhadas do PocketForge, jamais a um bloco `if jogo == Asphalt`.
+
+## Atualização de áudio
+
+A falha `MMAPI playback failed: The element has no supported sources` foi rastreada a WAVs IMA ADPCM e corrigida de forma genérica, conforme [relatório de decodificação IMA ADPCM](ima-adpcm-audio.md). **Efeitos WAV recuperados; MIDI ainda não suportado.**
