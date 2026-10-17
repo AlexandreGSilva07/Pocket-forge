@@ -5,6 +5,7 @@
 (function () {
  "use strict";
  const audit = [];
+ let bytecodeExecutions = 0;
  function log(kind, message) {
    const value = String(message && (message.message || message) || "");
    audit.push({kind, message:value, t:Math.round(performance.now())});
@@ -17,6 +18,18 @@
  window.addEventListener("load",function(){
    const screen=document.getElementById("screen");
    if(!screen||!window.js2me){log("error","JS2ME não inicializou.");return;}
+   // Legacy startup runs bootstrap classes on thread 0; explicitly bind that thread
+   // to an isolated static-VM namespace before any class initialization begins.
+   const originalSetup = window.js2me.setupJVM;
+   window.js2me.setupJVM = function(callback){
+     this.VMMapping[0] = 0;
+     this.statics0 = {};
+     this.currentVM = 0;
+     this.statics = this.statics0;
+     return originalSetup.call(this,callback);
+   };
+   const originalExecute = window.js2me.execute;
+   window.js2me.execute = function(){bytecodeExecutions++;return originalExecute.apply(this,arguments);};
    const choose=screen.querySelector("#file-selector");
    if(choose)choose.style.display="none"; // obsolete FirefoxOS MozActivity
    const bar=document.createElement("section");bar.id="pf-panel";
@@ -28,7 +41,7 @@
    button.id="pf-export-diagnostic";button.onclick=()=>{const blob=new Blob([JSON.stringify({
      engine:"JS2ME",upstreamCommit:"828b81b468953c34bb754b59e67c1021754e8bdb",
      manifest:window.js2me.manifest||null,notes:"Startup and API errors only; not proof of compatibility",
-     events:audit
+     bytecodeExecutions:bytecodeExecutions,events:audit
    },null,2)],{type:"application/json"});
    const u=URL.createObjectURL(blob),a=document.createElement("a");a.href=u;a.download="pocketforge-j2me-diagnostic.json";a.click();setTimeout(()=>URL.revokeObjectURL(u),1000);};
    bar.append(heading,detail,file,status,button);
@@ -53,7 +66,7 @@
      // Do not call legacy: upstream HTML injection through error text.
    };
    window.PocketForgeJ2ME=Object.freeze({
-     load:load,diagnostics:()=>audit.slice(),engine:"js2me-mit",offline:true,
+     load:load,diagnostics:()=>audit.slice(),executionCount:()=>bytecodeExecutions,engine:"js2me-mit",offline:true,
      capabilities:{jvm:"JIT+interpreter partial",cldc:"partial",midp:"partial",m3g:false}
    });
    log("ready","Selecione um JAR original para tentar executar.");
