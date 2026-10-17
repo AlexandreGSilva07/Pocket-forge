@@ -1,0 +1,30 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PocketForge · Banco Gameloft em JS</title>
+<style>:root{color-scheme:dark;font-family:system-ui;background:#09121b;color:#e6f3ff}body{margin:0 auto;padding:24px;max-width:1100px}h1{margin:0}p{color:#a4b6c8;line-height:1.6}main{display:grid;grid-template-columns:1fr 1fr;gap:18px}.pane{border:1px solid #344a5e;border-radius:15px;padding:18px;background:#142332}.btn,input,select,button{font:inherit}button,input,select{padding:10px;border:1px solid #496c83;border-radius:8px;background:#1a3d54;color:white}button{cursor:pointer}input[type=search]{width:100%}input[type=file]{width:100%;margin:12px 0}.entries{max-height:450px;overflow:auto;margin:12px 0;border:1px solid #37546a;border-radius:7px}.entries button{display:block;width:100%;border-radius:0;text-align:left;border:0;border-bottom:1px solid #31475a;font-size:13px}.entries button:hover,.entries button[aria-pressed=true]{background:#286080}pre{background:#061320;padding:12px;border-radius:7px;white-space:pre-wrap;overflow-wrap:anywhere;max-height:340px;overflow:auto}img{max-width:100%;image-rendering:pixelated;border:1px solid #526981}.muted{font-size:12px;color:#9db4c9}#status{min-height:36px;color:#91e8ba}@media(max-width:650px){main{grid-template-columns:1fr}body{padding:12px}}</style></head>
+<body><h1>PocketForge / Bancos Gameloft</h1><p><strong>Leitor JavaScript real</strong> do formato encontrado no Asphalt Nitro 1.1.7. Extraia os arquivos <code>6</code> e <code>6.1</code> da sua cópia do JAR e selecione ambos. A página funciona localmente, sem Java, envio de arquivos ou recursos comerciais embutidos. <strong>Não é o jogo completo.</strong></p>
+<main><section class="pane"><label>Partes extraídas do JAR<input id="files" type="file" multiple></label><label>Banco <select id="bank"></select></label><button id="load">Ler banco</button><p id="status" role="status">Selecione os arquivos.</p><label>Filtrar por ID ou tipo<input id="search" type="search" placeholder="gameloft_sprite, png, 43..."></label><p class="muted" id="summary"></p><div class="entries" id="entries"></div></section>
+<section class="pane"><h2 id="title">Nenhum registro</h2><p id="meta" class="muted">As entradas serão lidas sem JVM.</p><div id="preview"></div><h3>Bytes (amostra de até 256)</h3><pre id="hex"></pre><button id="save" disabled>Salvar registro original</button></section></main>
+<p class="muted">Escopo: contêiner de dados reconstruído e validado registro a registro; sprites DF 05, pistas, física, áudio e estados do jogo ainda não são interpretados aqui.</p>
+<script src="engine/gameloft-banks.js"></script>
+<script>(()=>{"use strict";
+const $=id=>document.getElementById(id);let files=new Map(),records=[],selected=null,prevURL=null;
+function err(msg){$('status').textContent=msg;}
+function show(){const filter=$('search').value.trim().toLowerCase(),matched=records.filter(r=>String(r.index).includes(filter)||r.type.includes(filter));
+ $('summary').textContent=matched.length+' correspondências · '+records.length+' entradas no banco';
+ $('entries').replaceChildren(...matched.slice(0,700).map(r=>{const b=document.createElement('button');b.textContent='#'+r.index+'  ·  '+r.type+'  ·  '+r.data.length+' bytes';b.setAttribute('aria-pressed',selected===r);b.onclick=()=>select(r);return b;}));
+}
+function select(r){selected=r;$('title').textContent='Registro #'+r.index;$('meta').textContent='Parte '+r.part+' · '+r.type+' · tag '+r.tag+' · bytes ['+r.begin+','+r.end+')';
+ $('hex').textContent=Array.from(r.data.subarray(0,256),n=>n.toString(16).padStart(2,'0')).join(' ');$('save').disabled=false;
+ if(prevURL)URL.revokeObjectURL(prevURL);$('preview').replaceChildren();
+ if(r.type==='png'){const start=r.tag<=2?1:0;prevURL=URL.createObjectURL(new Blob([r.data.subarray(start)],{type:'image/png'}));const im=new Image();im.alt='PNG local extraído';im.src=prevURL;$('preview').append(im);}
+ show();
+}
+$('files').onchange=e=>{files=new Map([...e.target.files].map(f=>[f.name,f]));const bases=[...files.keys()].filter(x=>!x.includes('.')).sort((a,b)=>a.localeCompare(b));$('bank').replaceChildren(...bases.map(name=>{const o=document.createElement('option');o.value=name;o.textContent=name;return o;}));err(files.size+' arquivos selecionados.');};
+$('load').onclick=async()=>{const base=$('bank').value,mainFile=files.get(base);if(!mainFile){err('Selecione um banco base.');return;}
+ try{const main=new Uint8Array(await mainFile.arrayBuffer()),parts={};for(let i=1;i<main[2];i++){const file=files.get(base+'.'+i);if(!file)throw Error('Parte ausente: '+base+'.'+i);parts[i]=new Uint8Array(await file.arrayBuffer());}
+ records=window.PocketForgeGameloftBanks.parse(main,parts);selected=null;err(records.length+' registros verificados; nenhum arquivo foi modificado.');$('title').textContent='Banco '+base;$('save').disabled=true;$('hex').textContent='';$('preview').replaceChildren();show();}
+ catch(e){records=[];show();err(e.name+': '+e.message);}
+};
+$('search').oninput=show;
+$('save').onclick=()=>{if(!selected)return;const u=URL.createObjectURL(new Blob([selected.data],{type:'application/octet-stream'})),a=document.createElement('a');a.href=u;a.download='record_'+selected.index+'.bin';a.click();setTimeout(()=>URL.revokeObjectURL(u),5000);};
+})();</script></body></html>
