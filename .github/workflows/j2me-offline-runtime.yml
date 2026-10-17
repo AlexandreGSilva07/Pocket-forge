@@ -48,10 +48,13 @@ jobs:
       - name: Inspect classfile/API dependencies of Asphalt Nitro
         if: steps.fetch_asphalt.outcome == 'success'
         run: python3 scripts/j2me_compat_report.py external-corpus/M5-Dev_j2me-vault/Games/AsphaltNitro.jar --api-root dist/j2me-web/js/me --out artifacts/j2me/asphalt-static-report.json
-      - name: Try executing the original Asphalt Nitro JAR in Chromium
+      - name: Compare original Asphalt Nitro startup across bytecode backends
         if: steps.fetch_asphalt.outcome == 'success'
         continue-on-error: true
-        run: python3 tests/browser_j2me_compat_probe.py external-corpus/M5-Dev_j2me-vault/Games/AsphaltNitro.jar --out artifacts/j2me/asphalt-browser-probe.json
+        run: |
+          python3 tests/browser_j2me_compat_probe.py external-corpus/M5-Dev_j2me-vault/Games/AsphaltNitro.jar --engine zazu --out artifacts/j2me/asphalt-zazu.json
+          python3 tests/browser_j2me_compat_probe.py external-corpus/M5-Dev_j2me-vault/Games/AsphaltNitro.jar --engine pumba --out artifacts/j2me/asphalt-pumba.json
+          python3 tests/browser_j2me_compat_probe.py external-corpus/M5-Dev_j2me-vault/Games/AsphaltNitro.jar --engine timon --out artifacts/j2me/asphalt-timon.json
       - name: Remove non-distributable test fixture
         if: always()
         run: rm -rf dist/j2me-web/ci/ external-corpus/
