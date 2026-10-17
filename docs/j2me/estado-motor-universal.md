@@ -37,6 +37,19 @@ O analisador de classfiles lê magic/versão/constant pool, referências externa
 
 A meta é minimizar exceções: usar um pequeno corpus para identificar e implementar lacunas genéricas por *assinatura*; só acionar análises manuais em formatos proprietários, desvios de render e performance.
 
+## Validação visual do Asphalt Nitro — marco comprovado
+
+A execução [GitHub Actions #38990874458](https://github.com/AlexandreGSilva07/Pocket-forge/actions/runs/38990874458) usou o **JAR original 1.1.7** temporariamente e capturou imagens diretamente do Chromium, salvas em artifact separado de evidências (nenhum jogo comercial integra o bundle). O resultado não é um mockup:
+
+- **Canvas 240×320 preenchido com a arte original de carregamento do Asphalt Nitro.** A imagem foi efetivamente renderizada pela VM em JavaScript.
+- Após cerca de 12 segundos, o backend `zazu` tinha **153.486 entradas no executor de bytecode**; o `pumba`, **153.590**. Ambos tinham um Canvas e **zero exceções de página** no instante de observação. Esses números representam chamadas/entradas cumulativas, **não quantidade de métodos diferentes** ou progresso percentual.
+- Após pressionar ArrowUp + ArrowRight e esperar mais três segundos, o contador avançou aproximadamente 585 vezes. **As screenshots PNG antes e depois foram byte-a-byte idênticas**, assim como os pixels do Canvas. A arte de carregamento permaneceu estática; nenhuma resposta de input ou corrida está provada.
+- O `timon` ainda falha na inicialização com `this.init is not a function` e não cria Canvas.
+- Uma falha genérica do `js/methodStub.js` rejeitava/descartava chamadas com mais de dez argumentos e podia perder callbacks assíncronos, emitindo dezenas de `Too many arguments`. O builder agora preserva todos os parâmetros em um array de `arguments`; regressão automatizada verifica **12 argumentos Java e o callback**. Os avisos desapareceram no Chromium; **isso não fez a tela passar do carregamento**.
+- **Próximo bloqueio observável:** ciclo de vida do MIDlet/callbacks e eventos após a splash screen. Instrumentar estado de threads, recursos e temporizadores antes de tentar otimizações AOT.
+
+A inspeção de pixels demonstrou **imagem real não preta em 76.800/76.800 pixels**, não apenas existência de tag Canvas. Contudo, não houve referência original executada em outro emulador nem comparação de frames posteriores; status correto: **splash original renderizada, não jogo funcional**.
+
 ## O que falta para universalizar e para o modo PORT
 
 - **RUN:** suporte abrangente CLDC/MIDP, MMAPI, RecordStore, canvas, tempos/threads, JSR184 M3G, Mascot, Nokia UI, diferentes resoluções, controle touch/teclas. Testar dezenas de jogos independentes.
