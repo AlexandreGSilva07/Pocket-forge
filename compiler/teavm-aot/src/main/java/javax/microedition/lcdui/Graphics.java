@@ -7,7 +7,7 @@ import org.teavm.jso.JSByRef;
 public class Graphics {
  public static final int TOP=16,BOTTOM=32,LEFT=4,RIGHT=8,HCENTER=1,VCENTER=2,BASELINE=64;
  private int color=0, surface=0, tx=0,ty=0;
- private int clipX=0,clipY=0,clipW=240,clipH=320;
+ private int clipX=0,clipY=0,clipW=Canvas.__pfScreenWidth(),clipH=Canvas.__pfScreenHeight();
  private Font font=Font.getDefaultFont();
  public Graphics(){}
  Graphics(int id){surface=id;clipW=Image.__pfWidth(id);clipH=Image.__pfHeight(id);}

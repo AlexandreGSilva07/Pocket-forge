@@ -56,7 +56,7 @@ def entrypoint(manifest: dict) -> tuple[str, str]:
         raise ValueError("Unsupported entrypoint class name: " + repr(cls))
     return cls, kind
 
-def compile_game(jar: Path, output: Path, maven: Path) -> dict:
+def compile_game(jar: Path, output: Path, maven: Path, screen: str = "240x320") -> dict:
     if not jar.is_file() or not zipfile.is_zipfile(jar):
         raise ValueError("Input must be an existing valid Java .jar")
     if jar.stat().st_size > MAX_JAR:
@@ -76,6 +76,14 @@ def compile_game(jar: Path, output: Path, maven: Path) -> dict:
         resources = [x for x in names if not x.endswith(".class") and not x.endswith("/") and not x.startswith("META-INF/")]
         if cls.replace(".","/")+".class" not in names:
             raise ValueError("Entrypoint class missing in JAR: "+cls)
+    matched=re.fullmatch(r"([1-9][0-9]{1,3})x([1-9][0-9]{1,3})",screen)
+    if not matched:
+        raise ValueError("Screen must be WIDTHxHEIGHT, e.g. 240x320")
+    sw,sh=map(int,matched.groups())
+    if sw>1024 or sh>1024:
+        raise ValueError("Screen dimensions cannot exceed 1024x1024")
+    app_id=manifest.get("MIDlet-Vendor","")+"\0"+manifest.get("MIDlet-Name",cls)+"\0"+cls
+    storage_namespace=hashlib.sha256(app_id.encode("utf8")).hexdigest()[:32]
     # Pre-decode ordinary bitmap resources during compilation, so MIDP's
     # synchronous Image.createImage("/file.png") can return immediately in JS.
     # Proprietary resource containers are still passed unchanged to the JVM
@@ -130,6 +138,8 @@ def compile_game(jar: Path, output: Path, maven: Path) -> dict:
         "entrypoint":cls,"kind":kind,"launcher_package":"default" if "." not in cls else "generated","classes":len(class_names),
         "resource_files":len(resources),"resources_embedded":bool(resources),
         "predecoded_bitmaps":len(bitmaps),
+        "screen_width":sw,"screen_height":sh,
+        "storage_namespace":storage_namespace,
         "midi_tracks_rendered":len(midi_assets),
         "midi_audio_bytes":sum(len(v)*3//4 for v in midi_assets.values()),
         "translation":"TeaVM AOT, original game bytecode is not distributed",
@@ -194,7 +204,8 @@ def compile_game(jar: Path, output: Path, maven: Path) -> dict:
             raise ValueError("Generated script exceeds safety budget")
     # The HTML is intentionally a SINGLE FILE and has no reference to the JAR.
     code = code.replace("</script", "<\\/script")
-    asset_script = ("window.PocketForgeBitmapAssets = " + json.dumps(bitmaps,separators=(",",":"),ensure_ascii=True).replace("</", "<\\/") + ";"
+    asset_script = ("window.PocketForgeConfig = " + json.dumps({"screenWidth":sw,"screenHeight":sh,"storageNamespace":storage_namespace},separators=(",",":")) + ";"
+        + "window.PocketForgeBitmapAssets = " + json.dumps(bitmaps,separators=(",",":"),ensure_ascii=True).replace("</", "<\\/") + ";"
         + "window.PocketForgeMidiAssets = " + json.dumps(midi_assets,separators=(",",":"),ensure_ascii=True) + ";")
     title = manifest.get("MIDlet-Name") or cls
     html = """<!doctype html>
@@ -231,9 +242,10 @@ p{color:#a2b8c9}a{color:#8bd5ee}
  const output=document.getElementById('log');output.textContent='';
  for(const k of ['log','info','warn','error']){
   const orig=console[k];console[k]=function(...args){orig.apply(console,args);
-    output.textContent+=args.map(x=>String(x)).join(' ')+'\\n';};
+    const line=args.map(x=>String(x)).join(' ').slice(0,4000);
+    output.textContent=(output.textContent+line+'\\n').slice(-40000);};
  }
- window.addEventListener('error',e=>{output.textContent+='ERROR '+e.message+'\\n';});
+ window.addEventListener('error',e=>{output.textContent=(output.textContent+'ERROR '+e.message+'\\n').slice(-40000);});
 })();
 </script>
 <script>
@@ -271,9 +283,10 @@ def main():
     p.add_argument("jar",type=Path)
     p.add_argument("--out",type=Path)
     p.add_argument("--maven",type=Path,default=DEFAULT_MAVEN)
+    p.add_argument("--screen",default="240x320",help="LCD WIDTHxHEIGHT, default 240x320")
     a=p.parse_args()
     target=a.out or ROOT/"dist"/"aot"/(a.jar.stem+".html")
-    result=compile_game(a.jar.resolve(),target.resolve(),a.maven.resolve())
+    result=compile_game(a.jar.resolve(),target.resolve(),a.maven.resolve(),a.screen)
     print(json.dumps(result,ensure_ascii=False,indent=2))
 if __name__=="__main__":
     main()

@@ -45,6 +45,8 @@ Veja [protocolo testado de arquivo único](../../docs/j2me/html-unico-sem-servid
 - Para JARs não confiáveis, usar perfil isolado de navegador, sem dados pessoais ou sessão autenticada. VM em JS não é sandbox garantida.
 - Não commitar ROMs, JARs comerciais ou código original decompilado. Guardar testes privados em external-corpus/ e registrar hashes.
 
+**Persistência e confiabilidade do AOT:** antes de entregar um HTML, validar `RecordStore` após `page.reload()`, tecla focada Enter/Espaço com um só keyPressed, playbackRate MMAPI, perfil de tela e memória dos logs. Consulte [regressões e limites](../../docs/j2me/auditoria-correcoes-aot.md). O salvamento `file://` pode ser isolado pelo caminho/nome do HTML; não prometer migração automática entre versões.
+
 **Áudio de jogos antigos:** não confiar no MIME `audio/x-wav` isoladamente: muitos WAVs Java ME usam IMA ADPCM (wFormatTag 17), que o Chrome não decodifica. Usar [decoder genérico e testes](../../docs/j2me/ima-adpcm-audio.md); não criar arquivos de áudio específicos por jogo. Para músicas Standard MIDI Files, usar [síntese AOT com FluidSynth/FFmpeg e SoundFont](../../docs/j2me/midi-offline-soundfont.md); o compilador inspeciona bancos de recursos genéricos, sintetiza no build e inclui Ogg/Opus no HTML offline. Sem SoundFont, o build falha explicitamente, sem fingir que há música.
 
 ## Fluxo PORT/COMPILE — compilação determinística, ainda parcial

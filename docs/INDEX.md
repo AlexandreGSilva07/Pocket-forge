@@ -6,6 +6,7 @@
 - [MMAPI/Connector genéricos e execução compilada de Asphalt Nitro](j2me/mmapi-connector-asphalt-aot.md)
 - [Áudio IMA ADPCM: WAV Java ME decodificado em PCM sem rede](j2me/ima-adpcm-audio.md)
 - [Música MIDI Java ME: síntese offline e inclusão Ogg/Opus no HTML](j2me/midi-offline-soundfont.md)
+- [Auditoria e correções: RMS persistente, teclado, tempo, resolução e logs](j2me/auditoria-correcoes-aot.md)
 - [Subskill para engenharia reversa e criação J2ME](../skills/j2me/SKILL.md)
 - [HTML único J2ME offline, sem servidor, com jogo opcional embutido](j2me/html-unico-sem-servidor.md)
 - [Estado verificado do runtime universal e diagnóstico de Asphalt Nitro](j2me/estado-motor-universal.md)
