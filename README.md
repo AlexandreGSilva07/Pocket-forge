@@ -20,7 +20,7 @@
 
 ## J2ME determinístico — runtime HTML offline (experimental)
 
-A [subskill RUN/PORT/CREATE](skills/j2me/SKILL.md) descreve a arquitetura e os níveis de evidência. Para **executar JARs originais sem Java instalado** usando a VM JS2ME MIT, empacotada sem CDN:
+A [subskill RUN/PORT/CREATE](skills/j2me/SKILL.md) descreve a arquitetura e os níveis de evidência. Consulte o [relatório técnico de execução real](docs/j2me/estado-motor-universal.md), inclusive falhas e correções contra Asphalt Nitro. Para **executar JARs originais sem Java instalado** usando a VM JS2ME MIT, empacotada sem CDN:
 
 ```sh
 python3 scripts/build_j2me_runtime.py
