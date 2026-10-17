@@ -48,6 +48,48 @@ def main():
              canvasCount:document.querySelectorAll('canvas').length,
              currentScreen:document.querySelector('#screen').textContent.slice(0,300)
             })""")
+            # Capture real frames in the CI browser; a canvas tag alone is not
+            # evidence of rendered pixels. Screenshots are limited evidence,
+            # never bundled with the distributable VM.
+            from hashlib import sha256
+            shot_before=a.out.with_name("asphalt-"+a.engine+"-before.png")
+            shot_after=a.out.with_name("asphalt-"+a.engine+"-after.png")
+            shot_before.parent.mkdir(parents=True,exist_ok=True)
+            screen=page.locator("#screen")
+            pixels_js="""() => [...document.querySelectorAll('canvas')].map(c=>{
+                const o={width:c.width,height:c.height,visible:c.getBoundingClientRect().width>0};
+                try{
+                    const g=c.getContext('2d',{willReadFrequently:true});
+                    if(!g){o.pixelError='2d context unavailable';return o;}
+                    const bytes=g.getImageData(0,0,c.width,c.height).data;
+                    let nonblack=0,alpha=0,sum=0;
+                    for(let j=0;j<bytes.length;j+=4){
+                        const v=bytes[j]+bytes[j+1]+bytes[j+2];
+                        sum+=v;if(v)nonblack++;if(bytes[j+3])alpha++;
+                    }
+                    o.nonblackPixels=nonblack;o.opaquePixels=alpha;
+                    o.meanRGB=bytes.length?sum/(bytes.length/4)/3:0;
+                }catch(e){o.pixelError=String(e)}
+                return o;
+            })"""
+            before=page.evaluate(pixels_js)
+            screen.screenshot(path=str(shot_before),timeout=15000)
+            page.keyboard.down("ArrowUp")
+            page.keyboard.down("ArrowRight")
+            page.wait_for_timeout(1300)
+            page.keyboard.up("ArrowUp")
+            page.keyboard.up("ArrowRight")
+            page.wait_for_timeout(1800)
+            after=page.evaluate(pixels_js)
+            screen.screenshot(path=str(shot_after),timeout=15000)
+            report["visual_probe"]={
+                "before_canvas":before,"after_canvas":after,
+                "before_png_sha256":sha256(shot_before.read_bytes()).hexdigest(),
+                "after_png_sha256":sha256(shot_after.read_bytes()).hexdigest(),
+                "screen_changed_after_input":shot_before.read_bytes()!=shot_after.read_bytes(),
+                "description":"The two screenshots were taken ~3 seconds apart; changes might arise from animation or loading even without keys. Does not prove input handling or gameplay."
+            }
+            report["execution_count_after_input"]=page.evaluate("window.PocketForgeJ2ME.executionCount()")
             report.update({"manifest":data["manifest"],"bytecode_executions":data["executions"],
                 "resource_count":data["resourceCount"],"canvas_count":data["canvasCount"],
                 "error_count":len(errors),"javascript_errors":errors[:25],"console_errors":console_errors[:25],
