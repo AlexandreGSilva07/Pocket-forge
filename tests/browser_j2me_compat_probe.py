@@ -12,12 +12,13 @@ def main():
     p=argparse.ArgumentParser()
     p.add_argument("jar",type=Path)
     p.add_argument("--out",type=Path,default=Path("artifacts/j2me-asphalt-probe.json"))
+    p.add_argument("--engine",choices=("zazu","pumba","timon"),default="zazu")
     a=p.parse_args()
     if not a.jar.is_file():raise FileNotFoundError(a.jar)
     handler=functools.partial(http.server.SimpleHTTPRequestHandler,directory=str(BASE))
     server=http.server.ThreadingHTTPServer(("127.0.0.1",0),handler)
     threading.Thread(target=server.serve_forever,daemon=True).start()
-    report={"jar":a.jar.name,"bytes":a.jar.stat().st_size,
+    report={"jar":a.jar.name,"bytes":a.jar.stat().st_size,"engine":a.engine,
             "stage":"not_started","bytecode_executions":0,
             "original_full_gameplay_verified":False,"limitations":[]}
     try:
@@ -25,7 +26,7 @@ def main():
             browser=pw.chromium.launch(headless=True)
             page=browser.new_page(viewport={"width":1180,"height":800})
             errors=[];console_errors=[]
-            page.on("pageerror",lambda e:errors.append(str(e)))
+            page.on("pageerror",lambda e:errors.append({"message":str(e),"stack":getattr(e,"stack",None)}))
             page.on("console",lambda msg:console_errors.append(msg.text[:300]) if msg.type=="error" else None)
             base=f"http://127.0.0.1:{server.server_port}"
             def intercept(route):
@@ -34,7 +35,7 @@ def main():
                 else:
                     route.abort()
             page.route("**/*",intercept)
-            response=page.goto(base+"/?selector=1")
+            response=page.goto(base+"/?selector=1&engine="+a.engine)
             assert response and response.status==200
             page.wait_for_function("!!window.PocketForgeJ2ME")
             page.locator("#pf-jar-file").set_input_files(str(a.jar))
