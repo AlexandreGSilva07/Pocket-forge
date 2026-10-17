@@ -12,3 +12,11 @@ external-corpus/
 
 # Generated SDK game scaffolds (private workspaces)
 generated/
+
+# PocketForge generic Java ME AOT build outputs and external input JARs
+/compiler/teavm-aot/input.jar
+/compiler/teavm-aot/target/
+/dist/aot/
+
+# AOT compiler outputs and generated browser evidence
+/artifacts/aot/

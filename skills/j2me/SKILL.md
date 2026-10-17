@@ -17,7 +17,7 @@ Esta skill orienta agentes de IA a construir **software e artefatos executáveis
 | Modo | Entrada | Saída | Implementação atual |
 |---|---|---|---|
 | **RUN** | JAR original | Página com VM Java ME em JS; executa bytecode original | MVP com base JS2ME MIT; APIs parciais |
-| **PORT** | JAR + traços | Build JS/WASM sem bytecode/JVM no runtime | **Ainda não implementado como compilador genérico** |
+| **PORT/COMPILE** | JAR + manifesto | HTML único com JavaScript compilado, sem JAR/JVM no runtime | **AOT funcional**, cobertura de APIs parcial |
 | **CREATE** | Brief de jogo | Fontes Java ME e manifesto para WTK/SDK CLDC-MIDP | Scaffold de fontes pronto; compilação real depende SDK e pré-verificador |
 
 ## Fluxo RUN — tarefas determinísticas
@@ -43,11 +43,11 @@ Veja [protocolo testado de arquivo único](../../docs/j2me/html-unico-sem-servid
 - Para JARs não confiáveis, usar perfil isolado de navegador, sem dados pessoais ou sessão autenticada. VM em JS não é sandbox garantida.
 - Não commitar ROMs, JARs comerciais ou código original decompilado. Guardar testes privados em external-corpus/ e registrar hashes.
 
-## Fluxo PORT — não inventar progresso
+## Fluxo PORT/COMPILE — compilação determinística, ainda parcial
 
-RUN executa bytecode pela VM escrita em JavaScript; **não é** um porte AOT independente da JVM. Para PORT verdadeiro, construir tradutor classfile→IR→JS/WASM, compatibilizar CLDC/MIDP, preservar semântica da JVM e testar equivalência por traços. Os scripts zip-jar.js/gameloft-banks.js demonstram portagem determinística de estruturas de dados, não do motor de corrida inteiro.
+RUN executa bytecode pela VM JavaScript. Para PORT, executar `python3 scripts/compile_j2me_aot.py jogo.jar --out dist/aot/Jogo.html`. TeaVM compila classfiles, inclui APIs CLDC/MIDP disponíveis e produz HTML puro. O [relatório de arquitetura](../../docs/j2me/compilador-aot.md) descreve os testes. A compilação interrompe e gera `.compile.json` quando faltam APIs; corrigir essas APIs no núcleo, nunca no jogo.
 
-Só marcar PORT-TESTED quando o build resultante não carregar o JAR nem VM e reproduzir ações/regras do jogo em HTML5. TeaVM é referência AOT Apache 2.0, mas não converte MIDP/CLDC automaticamente.
+Marcar PORT-TESTED **por cenário**, com prova de execução visual/funcional. Três JARs autorais e tela inicial Asteroids foram compilados e testados. **Asphalt Nitro não está compilado ou jogável**. TeaVM é Apache-2.0 e as APIs MIDP/CLDC precisam ser implementadas corretamente para cada perfil suportado.
 
 ## Fluxo CREATE — produção Java ME
 
