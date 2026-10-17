@@ -1,5 +1,11 @@
 # Índice da documentação PocketForge
 
+## Java ME: RUN / PORT / CREATE
+- [Subskill para engenharia reversa e criação J2ME](../skills/j2me/SKILL.md)
+- [Pacote offline JS2ME: build e importação de JAR](../scripts/build_j2me_runtime.py)
+- [Diagnóstico determinístico de bytecode e APIs](../scripts/j2me_compat_report.py)
+- [Criação de fonte MIDP/GameCanvas](../scripts/new_j2me_game.py)
+
 ## Primeiro contato
 - [Visão e princípios](00-visao.md)
 - [Pipeline de produção](01-pipeline.md)
