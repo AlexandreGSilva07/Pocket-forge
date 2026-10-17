@@ -3,7 +3,7 @@
 **Super-skill de engenharia de jogos modernos ultraleves.** Crie jogos HTML5 com liberdade estética, alto acabamento visual e foco em **qualidade percebida por byte, milissegundo e linha de código** — do Game Brief ao build revisado.
 
 > [!IMPORTANT]
-> **v0.1 = fundação operacional**, não criação autônoma de qualquer jogo. Existem documentação, scripts, demo, testes estruturais e smoke interativo de navegador. Agentes autônomos de criação e QA visual em navegador ainda constam no roadmap. J2ME é uma referência de engenharia enxuta; PocketForge **não usa Java, não é emulador e não obriga pixel art**.
+> **v0.1 = fundação operacional**, não criação autônoma de qualquer jogo. Existem documentação, scripts, demo, testes estruturais e smoke interativo de navegador. Agentes autônomos de criação e QA visual em navegador ainda constam no roadmap. J2ME é uma referência de engenharia enxuta; PocketForge agora inclui uma **VM experimental Java ME escrita em JavaScript**, sem Java instalado, e não obriga pixel art.
 
 ## Pesquisa reproduzível: 100 jogos por PR
 
@@ -24,9 +24,11 @@ A [subskill RUN/PORT/CREATE](skills/j2me/SKILL.md) descreve a arquitetura e os n
 
 ```sh
 python3 scripts/build_j2me_runtime.py
-python3 -m http.server 8000 --directory dist/j2me-web
-# Abra http://localhost:8000 e selecione seu .jar
+python3 scripts/build_j2me_single_html.py
+# Abra dist/PocketForge-J2ME-Offline.html com DOIS CLIQUES, sem servidor!
 ```
+
+O [gerador de arquivo único sem servidor](docs/j2me/html-unico-sem-servidor.md) também aceita `--jar jogo.jar --output MeuJogo.html` para criar um HTML privado que contém e inicia automaticamente o JAR. **RUN executa bytecode no runtime JS; não é porte AOT.**
 
 A origem MIT é baixada no **build**, fixada por SHA de commit; o HTML gerado funciona sem Internet. Alternativamente, passe `--source /caminho/js2me` para compilar offline com fonte já disponível. Compatibilidade MIDP/CLDC é **parcial**, e M3G não está completo; abrir o JAR não equivale a jogar.
 
