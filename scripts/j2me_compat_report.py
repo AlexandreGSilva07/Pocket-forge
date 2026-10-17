@@ -15,7 +15,7 @@ import zipfile
 EXTERNAL_ROOTS=("java/","javax/","com/nokia/","com/mascotcapsule/","com/siemens/","com/samsung/","com/sony_ericsson/")
 def parse_class(b):
     if len(b)<10 or b[:4]!=b"\xca\xfe\xba\xbe": raise ValueError("invalid classfile")
-    pos=8
+    pos=4
     def u1():
         nonlocal pos
         if pos+1>len(b):raise ValueError("classfile truncated")
@@ -28,7 +28,7 @@ def parse_class(b):
         nonlocal pos
         if pos+4>len(b):raise ValueError("classfile truncated")
         n=struct.unpack_from(">I",b,pos)[0];pos+=4;return n
-    major=u2()
+    minor=u2(); major=u2()
     num=u2(); cp=[None]*num; i=1
     while i<num:
         tag=u1()
