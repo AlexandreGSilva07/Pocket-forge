@@ -101,7 +101,7 @@ def assemble(source: Path, output: Path, archive_sha256: str | None) -> dict:
         throw new Error("unsupported wide opcode: " + op);
     };
     """
-    zazu_path.write_text(zazu[:start] + patch + "\\n\\t" + zazu[end:], encoding="utf-8")
+    zazu_path.write_text(zazu[:start] + patch + chr(10) + chr(9) + zazu[end:], encoding="utf-8")
     original = (source / "index.html").read_text(encoding="utf-8")
     original = original.replace('<script type="text/javascript" src="js/emulator.js"></script>',
         '<script type="text/javascript" src="js/emulator.js"></script>\n'
