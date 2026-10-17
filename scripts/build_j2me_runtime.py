@@ -102,6 +102,21 @@ def assemble(source: Path, output: Path, archive_sha256: str | None) -> dict:
     };
     """
     zazu_path.write_text(zazu[:start] + patch + chr(10) + chr(9) + zazu[end:], encoding="utf-8")
+    # Replace generic TypeError on unresolved call sites with an exact class
+    # and method signature. This fixes diagnostics without inventing behavior.
+    replacements = {
+        "obj[methodInfo.name].apply(obj, args)": "js2me.safeInvoke(obj[methodInfo.name], obj, args, methodInfo)",
+        "classObj.prototype[methodInfo.name].apply(classObj.prototype, args)": "js2me.safeInvoke(classObj.prototype[methodInfo.name], classObj.prototype, args, methodInfo)",
+        "classObj.prototype[methodInfo.name].apply(obj, args)": "js2me.safeInvoke(classObj.prototype[methodInfo.name], obj, args, methodInfo)",
+    }
+    for name in ("program_zazu.js", "program_pumba.js"):
+        file = output / "js" / name
+        code = file.read_text(encoding="utf-8")
+        for before, after in replacements.items():
+            if before not in code:
+                raise ValueError(name + " upstream call layout changed: " + before)
+            code = code.replace(before, after)
+        file.write_text(code, encoding="utf-8")
     original = (source / "index.html").read_text(encoding="utf-8")
     original = original.replace('<script type="text/javascript" src="js/emulator.js"></script>',
         '<script type="text/javascript" src="js/emulator.js"></script>\n'
