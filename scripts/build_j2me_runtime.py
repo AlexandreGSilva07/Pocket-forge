@@ -117,15 +117,22 @@ def main():
     p = argparse.ArgumentParser()
     p.add_argument("--source", type=Path, help="Existing checkout of pinned JS2ME revision (no network)")
     p.add_argument("--output", type=Path, default=ROOT / "dist" / "j2me-web")
+    p.add_argument("--ci-fixture", action="store_true", help="Copy upstream demo test.jar for ephemeral smoke (remove before distribution)")
     args = p.parse_args()
     if args.source:
         manifest = assemble(args.source.resolve(), args.output, None)
+        if args.ci_fixture:
+            (args.output / "ci").mkdir(exist_ok=True)
+            shutil.copy2(args.source.resolve() / "jars" / "test.jar", args.output / "ci" / "test.jar")
     else:
         with tempfile.TemporaryDirectory() as td:
             temp = Path(td)
             sha = download_archive(temp / "js2me.zip")
             source = safely_extract(temp / "js2me.zip", temp / "source")
             manifest = assemble(source, args.output, sha)
+            if args.ci_fixture:
+                (args.output / "ci").mkdir(exist_ok=True)
+                shutil.copy2(source / "jars" / "test.jar", args.output / "ci" / "test.jar")
     print(json.dumps({"output": str(args.output), **manifest}, indent=2))
 
 
