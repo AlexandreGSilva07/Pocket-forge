@@ -1,0 +1,87 @@
+name: PocketForge J2ME Offline Runtime
+on:
+  pull_request:
+    paths:
+      - scripts/build_j2me_runtime.py
+      - runtime/**
+      - tests/browser_j2me_runtime_smoke.py
+      - tests/browser_j2me_compat_probe.py
+      - tests/j2me_api_patches.test.cjs
+      - tests/j2me_wide.test.cjs
+      - tests/j2me_many_args.test.cjs
+      - scripts/j2me_compat_report.py
+      - .github/workflows/j2me-offline-runtime.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  browser-runtime:
+    runs-on: ubuntu-latest
+    timeout-minutes: 18
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Package pinned MIT JS2ME and temporary test MIDlet
+        run: python3 scripts/build_j2me_runtime.py --ci-fixture
+      - name: Verify patched CLDC and MMAPI functions
+        run: node tests/j2me_api_patches.test.cjs
+      - name: Verify unlimited JVM arguments and callbacks
+        run: node tests/j2me_many_args.test.cjs
+      - name: Verify corrected JVM wide opcode handler
+        run: node tests/j2me_wide.test.cjs
+      - name: Check no external URLs referenced by package HTML
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          p=Path('dist/j2me-web')
+          html=(p/'index.html').read_text()
+          assert 'pocketforge-bridge.js' in html
+          assert 'src="https:' not in html and 'src="http:' not in html
+          assert (p/'LICENSE-js2me-MIT.txt').is_file()
+          assert (p/'js/program_zazu.js').is_file()
+          PY
+      - name: Install isolated headless Chromium
+        run: |
+          python3 -m pip install playwright==1.56.0
+          python3 -m playwright install --with-deps chromium
+      - name: Static VM/API coverage report for test JAR
+        run: python3 scripts/j2me_compat_report.py dist/j2me-web/ci/test.jar --api-root dist/j2me-web/js/me --out artifacts/j2me/test-classfile-report.json
+      - name: Run real JAR smoke and capture diagnostics
+        run: python3 tests/browser_j2me_runtime_smoke.py
+        env:
+          POCKETFORGE_SCREENSHOT_DIR: artifacts/j2me
+      - name: Fetch one Asphalt Nitro research sample (temporary; do not redistribute)
+        id: fetch_asphalt
+        continue-on-error: true
+        run: python3 scripts/fetch_j2me_sample.py --dataset M5-Dev/j2me-vault --filename Games/AsphaltNitro.jar
+      - name: Inspect classfile/API dependencies of Asphalt Nitro
+        if: steps.fetch_asphalt.outcome == 'success'
+        run: python3 scripts/j2me_compat_report.py external-corpus/M5-Dev_j2me-vault/Games/AsphaltNitro.jar --api-root dist/j2me-web/js/me --out artifacts/j2me/asphalt-static-report.json
+      - name: Compare original Asphalt Nitro startup across bytecode backends
+        if: steps.fetch_asphalt.outcome == 'success'
+        continue-on-error: true
+        run: |
+          python3 tests/browser_j2me_compat_probe.py external-corpus/M5-Dev_j2me-vault/Games/AsphaltNitro.jar --engine zazu --out artifacts/j2me/asphalt-zazu.json
+          python3 tests/browser_j2me_compat_probe.py external-corpus/M5-Dev_j2me-vault/Games/AsphaltNitro.jar --engine pumba --out artifacts/j2me/asphalt-pumba.json
+          python3 tests/browser_j2me_compat_probe.py external-corpus/M5-Dev_j2me-vault/Games/AsphaltNitro.jar --engine timon --out artifacts/j2me/asphalt-timon.json
+      - name: Remove non-distributable test fixture
+        if: always()
+        run: rm -rf dist/j2me-web/ci/ external-corpus/
+      - name: Upload standalone offline runtime
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pocketforge-j2me-offline-runtime
+          path: dist/j2me-web/
+          if-no-files-found: error
+          retention-days: 10
+      - name: Upload browser evidence and error log
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pocketforge-j2me-runtime-evidence
+          path: artifacts/j2me/
+          if-no-files-found: warn
+          retention-days: 10

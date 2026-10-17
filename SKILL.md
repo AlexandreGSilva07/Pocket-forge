@@ -1,6 +1,6 @@
 ---
 name: pocketforge
-description: "Engenharia completa de jogos modernos ultraleves para Web, do conceito ao build validado: arte, mecânicas, áudio, performance, QA e entrega. Use quando o usuário pedir para criar, prototipar, ampliar, revisar, portar ou otimizar jogos HTML5."
+description: "Engenharia de jogos ultraleves HTML5 e Java ME: criação, engenharia reversa de JAR/JAD, execução offline em navegador, adaptação e validação de gameplay. Use para criar, prototipar, analisar, portar ou testar jogos."
 license: MIT
 metadata:
   version: "0.1.0"
@@ -9,6 +9,11 @@ metadata:
 ---
 
 # PocketForge — skill de engenharia de jogos ultraleves
+
+## Novos modos Java ME — decisão obrigatória
+
+Se a tarefa envolve JAR/JAD, CLDC, MIDP, engenharia reversa Java ME ou criação de jogos J2ME, leia imediatamente **[skills/j2me/SKILL.md](skills/j2me/SKILL.md)**. Operações separadas: **RUN** (executar bytecode pela VM escrita em JS, experimental); **PORT** (exportar código JS/WASM sem VM, compilador genérico ainda não pronto); **CREATE** (gerar fontes J2ME, build com SDK e pré-verificador). Não confundir a execução via VM JS com a conversão AOT nem declarar que qualquer JAR é suportado.
+
 
 ## Persistência do conhecimento entre chats (obrigatório)
 

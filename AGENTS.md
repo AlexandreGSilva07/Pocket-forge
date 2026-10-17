@@ -3,6 +3,8 @@
 Este repositório é uma super-skill para criar jogos modernos ultraleves. Nenhum agente deve depender do histórico da conversa.
 
 ## Leia antes de agir
+
+**Para tarefas J2ME**, após ler a skill raiz, seguir [skills/j2me/SKILL.md](skills/j2me/SKILL.md): RUN (VM JS experimental), PORT (AOT geral ainda não implementado), CREATE (fonte + SDK). Usar diagnósticos determinísticos e execução comprovada, não inventários isolados. Nunca commitar JARs de terceiros.
 1. [SKILL.md](SKILL.md) — contrato de criação de jogos e critérios de qualidade.
 2. [docs/research/CONTINUITY.md](docs/research/CONTINUITY.md) — protocolo de auditorias de 100 JARs por PR.
 3. [docs/research/batches/registry.json](docs/research/batches/registry.json) — fonte de verdade dos SHA-256 já investigados.
