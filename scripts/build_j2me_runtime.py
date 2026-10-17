@@ -111,6 +111,19 @@ def assemble(source: Path, output: Path, archive_sha256: str | None) -> dict:
     buf_src = buf_src.replace(null_anchor, null_anchor + chr(10) +
                               "        if (obj == null) { this.string += 'null'; return this; }", 1)
     string_buffer.write_text(buf_src, encoding="utf-8")
+    # Upstream method stubs assume <=10 Java arguments, dropping later values
+    # and continuation callbacks; large game methods may then hang loading.
+    stub_path=output/"js"/"methodStub.js"
+    stub=stub_path.read_text(encoding="utf-8")
+    bad_sig="var stub = function (arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, guard) {"
+    bad_args="var args = [arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9];"
+    bad_warn="if (guard !== undefined) {\\n\\t\\t\\tconsole.error('Too many arguments');\\n\\t\\t}"
+    if bad_sig not in stub or bad_args not in stub:
+        raise ValueError("upstream Java method stub layout changed")
+    stub=stub.replace(bad_sig,"var stub = function () {",1)
+    stub=stub.replace(bad_args,"var args = Array.prototype.slice.call(arguments);",1)
+    stub=stub.replace(bad_warn,"// All arguments and asynchronous callbacks are retained.",1)
+    stub_path.write_text(stub,encoding="utf-8")
     # Fix a generic JVM-wide-bytecode defect in old upstream Zazu interpreter.
     # The original function lacked the context argument, used context.push/pop
     # instead of context.stack and threw unconditionally after every supported op.
