@@ -5,6 +5,10 @@ on:
       - scripts/build_j2me_runtime.py
       - runtime/**
       - tests/browser_j2me_runtime_smoke.py
+      - tests/browser_j2me_compat_probe.py
+      - tests/j2me_api_patches.test.cjs
+      - tests/j2me_wide.test.cjs
+      - scripts/j2me_compat_report.py
       - .github/workflows/j2me-offline-runtime.yml
   workflow_dispatch:
 permissions:
