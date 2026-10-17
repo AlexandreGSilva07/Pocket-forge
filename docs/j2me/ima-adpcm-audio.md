@@ -42,3 +42,7 @@ python3 scripts/compile_j2me_aot.py Jogo.jar --out Jogo-Com-Som.html
 ```
 
 O computador que compila usa JDK, Maven e TeaVM; o arquivo HTML final é autônomo e offline.
+
+## Evolução posterior: música MIDI
+
+O [marco MIDI com FluidSynth](midi-offline-soundfont.md) adicionou conversão automática de SMF para Ogg/Opus no build. Assim, o suporte MIDI anteriormente ausente foi implementado e testado com a música do Asphalt e um JAR autoral. Permanecem limites de timbres e formatos opcionais.

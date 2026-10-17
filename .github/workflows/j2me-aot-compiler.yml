@@ -30,9 +30,11 @@ jobs:
         run: mvn -B -q dependency:get -Dartifact=org.teavm:teavm-jso:0.16.0
       - name: Install headless Chromium for file:// browser tests
         run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq libfluidsynth3 timgm6mb-soundfont ffmpeg
           python3 -m pip install playwright==1.56.0 pillow==11.1.0
           python3 -m playwright install --with-deps chromium
-      - name: Compile 9 independent real JARs to standalone HTML and verify rendering/input
+      - name: Compile 10 independent real JARs to standalone HTML and verify rendering/input
         run: python3 tests/browser_j2me_aot_compiler.py
         env:
           POCKETFORGE_AOT_EVIDENCE: artifacts/aot

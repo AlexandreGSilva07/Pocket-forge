@@ -17,10 +17,12 @@ public final class BrowserPlayer implements Player,VolumeControl,RateControl,Tem
  public BrowserPlayer(InputStream stream,String mime) throws IOException {
   if(stream==null||mime==null)throw new IllegalArgumentException("Source and MIME required");
   type=mime.toLowerCase().split(";")[0].trim();
-  if(!(type.equals("audio/wav")||type.equals("audio/x-wav")||
+  boolean supported=type.equals("audio/wav")||type.equals("audio/x-wav")||
        type.equals("audio/mpeg")||type.equals("audio/mp3")||
-       type.equals("audio/ogg")||type.equals("audio/mp4")))
-   throw new IOException("Unsupported MMAPI codec: "+mime);
+       type.equals("audio/ogg")||type.equals("audio/mp4")||
+       type.equals("audio/midi")||type.equals("audio/x-midi")||
+       type.equals("audio/sp-midi")||type.equals("audio/mid");
+  if(!supported)throw new IOException("Unsupported MMAPI codec: "+mime);
   ByteArrayOutputStream out=new ByteArrayOutputStream();
   byte[] buf=new byte[4096];int total=0,n;
   while((n=stream.read(buf))!=-1){total+=n;
@@ -36,8 +38,11 @@ public final class BrowserPlayer implements Player,VolumeControl,RateControl,Tem
   if(converted){
     bytes=ImaAdpcmWav.toPcm16Wav(bytes);
   }
+  boolean isMidi=bytes.length>=14&&bytes[0]=='M'&&bytes[1]=='T'&&
+                 bytes[2]=='h'&&bytes[3]=='d';
   id=nextId++;
-  create(id,converted?"audio/wav":type,encode(bytes));
+  if(!create(id,converted?"audio/wav":isMidi?"audio/midi":type,encode(bytes)))
+   throw new IOException("No offline-synthesized MIDI asset for this resource");
  }
  private static String encode(byte[] data){
   final char[] chars="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/".toCharArray();
@@ -52,17 +57,29 @@ public final class BrowserPlayer implements Player,VolumeControl,RateControl,Tem
  }
  @JSBody(params={"id","mime","base64"},script=
  "if(!window.PocketForgeAudio)window.PocketForgeAudio=new Map();"+
+ "if(!window.__pfAudioUnlock){window.__pfAudioUnlock=true;"+
+ "var unlock=function(){window.PocketForgeAudio.forEach(function(audio){"+
+ "if(audio.__pfNeedsGesture&&audio.__pfDesired){audio.__pfNeedsGesture=false;"+
+ "var attempt=audio.play();if(attempt&&attempt.catch)attempt.catch(function(){audio.__pfNeedsGesture=true;});}});};"+
+ "document.addEventListener('pointerdown',unlock,true);document.addEventListener('keydown',unlock,true);}"+
+ "if(mime==='audio/midi'||mime==='audio/x-midi'||mime==='audio/sp-midi'||mime==='audio/mid'){"+
+ "var converted=window.PocketForgeMidiAssets&&window.PocketForgeMidiAssets[base64];"+
+ "if(!converted)return false;"+
+ "base64=converted;mime='audio/ogg';}"+
  "var a=document.createElement('audio');a.preload='auto';"+
- "a.src='data:'+mime+';base64,'+base64;window.PocketForgeAudio.set(id,a);")
- private static native void create(int id,String mime,String base64);
+ "a.__pfDesired=false;a.__pfNeedsGesture=false;"+
+ "a.src='data:'+mime+';base64,'+base64;window.PocketForgeAudio.set(id,a);return true;")
+ private static native boolean create(int id,String mime,String base64);
  @JSBody(params={"id"},script="var a=window.PocketForgeAudio.get(id);a.load();")
  private static native void load(int id);
  @JSBody(params={"id","loops"},script=
- "var a=window.PocketForgeAudio.get(id);a.loop=loops===-1;"+
+ "var a=window.PocketForgeAudio.get(id);a.__pfDesired=true;a.loop=loops===-1;"+
  "if(loops>1){var remain=loops-1;a.onended=function(){if(remain-->0){a.currentTime=0;a.play().catch(function(e){console.warn('MMAPI playback failed: '+e.message)})}}}"+
- "var p=a.play();if(p&&p.catch)p.catch(function(e){window.PocketForgeAudioError=String(e);console.warn('MMAPI playback failed: '+e.message)});")
+ "var p=a.play();if(p&&p.then)p.then(function(){a.__pfNeedsGesture=false;},function(e){"+
+ "if(a.__pfDesired)a.__pfNeedsGesture=true;window.PocketForgeAudioError=String(e);"+
+ "if(e.name!=='NotAllowedError')console.warn('MMAPI playback failed: '+e.message);});")
  private static native void play(int id,int loops);
- @JSBody(params={"id"},script="window.PocketForgeAudio.get(id).pause();")
+ @JSBody(params={"id"},script="var a=window.PocketForgeAudio.get(id);a.__pfDesired=false;a.__pfNeedsGesture=false;a.pause();")
  private static native void pause(int id);
  @JSBody(params={"id","seconds"},script="var a=window.PocketForgeAudio.get(id);try{a.currentTime=Math.max(0,seconds)}catch(e){}")
  private static native void seek(int id,double seconds);
@@ -70,7 +87,7 @@ public final class BrowserPlayer implements Player,VolumeControl,RateControl,Tem
  private static native double position(int id);
  @JSBody(params={"id"},script="var d=window.PocketForgeAudio.get(id).duration;return Number.isFinite(d)?d:-1;")
  private static native double duration(int id);
- @JSBody(params={"id"},script="var a=window.PocketForgeAudio.get(id);a.pause();a.removeAttribute('src');a.load();window.PocketForgeAudio.delete(id);")
+ @JSBody(params={"id"},script="var a=window.PocketForgeAudio.get(id);a.__pfDesired=false;a.__pfNeedsGesture=false;a.pause();a.removeAttribute('src');a.load();window.PocketForgeAudio.delete(id);")
  private static native void destroy(int id);
  @JSBody(params={"id","level","muted"},script="var a=window.PocketForgeAudio.get(id);a.volume=level/100;a.muted=muted;")
  private static native void volume(int id,int level,boolean muted);

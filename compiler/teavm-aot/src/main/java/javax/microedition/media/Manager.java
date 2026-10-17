@@ -14,7 +14,7 @@ public final class Manager {
   throw new IOException("Media locators require an explicit supported source: "+locator);
  }
  public static String[] getSupportedContentTypes(String protocol) {
-  return new String[]{"audio/wav","audio/mpeg","audio/ogg","audio/mp4"};
+  return new String[]{"audio/wav","audio/mpeg","audio/ogg","audio/mp4","audio/midi","audio/x-midi","audio/sp-midi"};
  }
  public static String[] getSupportedProtocols(String type){return new String[]{"stream"};}
 }
