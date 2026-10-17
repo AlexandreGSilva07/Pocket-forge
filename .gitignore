@@ -9,3 +9,6 @@ coverage/
 
 # Research binaries stay local; never commit third-party ROMs, JARs or SDKs.
 external-corpus/
+
+# Generated SDK game scaffolds (private workspaces)
+generated/
