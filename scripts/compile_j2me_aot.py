@@ -9,6 +9,8 @@ The generated HTML needs only a browser; no local server, JRE, or external URL.
 """
 from __future__ import annotations
 import argparse
+import base64
+import io
 import hashlib
 import json
 import os
@@ -73,21 +75,45 @@ def compile_game(jar: Path, output: Path, maven: Path) -> dict:
         resources = [x for x in names if not x.endswith(".class") and not x.endswith("/") and not x.startswith("META-INF/")]
         if cls.replace(".","/")+".class" not in names:
             raise ValueError("Entrypoint class missing in JAR: "+cls)
+    # Pre-decode ordinary bitmap resources during compilation, so MIDP's
+    # synchronous Image.createImage("/file.png") can return immediately in JS.
+    # Proprietary resource containers are still passed unchanged to the JVM
+    # classpath resource supplier; their decoders remain a separate problem.
+    bitmaps={};total_rgba=0
+    with zipfile.ZipFile(jar) as resjar:
+        for name in resources:
+            if not name.lower().endswith((".png",".jpg",".jpeg",".gif",".bmp")):
+                continue
+            try:
+                from PIL import Image as PILImage
+            except ImportError as exc:
+                raise RuntimeError("Pillow is required to compile image JAR resources: pip install pillow") from exc
+            with PILImage.open(io.BytesIO(resjar.read(name))) as original:
+                if original.width*original.height>1000000:
+                    raise ValueError("Image exceeds 1M pixel resource cap: "+name)
+                image=original.convert("RGBA")
+                rgba=image.tobytes()
+                total_rgba+=len(rgba)
+                if total_rgba>16*1024*1024:
+                    raise ValueError("Embedded images exceed 16 MiB expanded pixel cap")
+                bitmaps[name]={"width":image.width,"height":image.height,
+                               "rgba":base64.b64encode(rgba).decode("ascii")}
     invoke = ("new "+cls+"().__pocketforgeStart();" if kind=="midlet"
               else cls+".main(new String[0]);")
     default_package = "." not in cls
     launcher_class = "Launcher" if default_package else "pocketforge.generated.Launcher"
     launcher = (("" if default_package else "package pocketforge.generated;\n")
                 + "public final class Launcher {"
-                + "public static void main(String[] args) {" + invoke + "}"
+                + "public static void main(String[] args) throws Exception {" + invoke + "}"
                 + "}\n")
     report = {
         "input":str(jar), "sha256":hashlib.sha256(jar.read_bytes()).hexdigest(),
         "entrypoint":cls,"kind":kind,"launcher_package":"default" if "." not in cls else "generated","classes":len(class_names),
-        "resource_files":len(resources),"resources_embedded":False,
+        "resource_files":len(resources),"resources_embedded":bool(resources),
+        "predecoded_bitmaps":len(bitmaps),
         "translation":"TeaVM AOT, original game bytecode is not distributed",
         "known_limitations":["Incomplete MIDP/CLDC adapter coverage",
-                             "Game resources are not yet linked",
+                             "Resource input streams require a TeaVM classloader and supported decoding",
                              "Threads and optional manufacturer JSRs not yet verified"]
     }
     with tempfile.TemporaryDirectory(prefix="pf_aot_") as td:
@@ -95,6 +121,26 @@ def compile_game(jar: Path, output: Path, maven: Path) -> dict:
         shutil.copytree(PROJECT / "src", work / "src")
         shutil.copy2(PROJECT / "pom.xml", work / "pom.xml")
         shutil.copy2(jar, work / "input.jar")
+        # Embed only the original non-class resources inside the AOT output.
+        # The source JAR never appears in the generated HTML, but its *assets*
+        # may be copyrighted: keep third-party generated HTML private.
+        resource_dir = work / "src/main/resources"
+        resource_dir.mkdir(parents=True,exist_ok=True)
+        if resources:
+            with zipfile.ZipFile(jar) as source_archive:
+                for rel in resources:
+                    # ZIP paths are data, not instructions or trusted paths.
+                    item = Path(rel)
+                    if item.is_absolute() or ".." in item.parts or "\\" in rel:
+                        raise ValueError("Unsafe resource path in JAR: " + rel)
+                    target = resource_dir / item
+                    target.parent.mkdir(parents=True,exist_ok=True)
+                    target.write_bytes(source_archive.read(rel))
+        (resource_dir / "pocketforge-resource-index.txt").write_text(
+            "\n".join(resources)+"\n",encoding="utf8")
+        service = resource_dir / "META-INF/services/org.teavm.classlib.ResourceSupplier"
+        service.parent.mkdir(parents=True,exist_ok=True)
+        service.write_text("pocketforge.generated.GameResourceSupplier\n",encoding="ascii")
         source = work / "src/main/java" / ("Launcher.java" if default_package
                                     else "pocketforge/generated/Launcher.java")
         source.parent.mkdir(parents=True,exist_ok=True)
@@ -127,6 +173,7 @@ def compile_game(jar: Path, output: Path, maven: Path) -> dict:
             raise ValueError("Generated script exceeds safety budget")
     # The HTML is intentionally a SINGLE FILE and has no reference to the JAR.
     code = code.replace("</script", "<\\/script")
+    asset_script = "window.PocketForgeBitmapAssets = " + json.dumps(bitmaps,separators=(",",":"),ensure_ascii=True).replace("</", "<\\/") + ";"
     title = manifest.get("MIDlet-Name") or cls
     html = """<!doctype html>
 <html lang="pt-BR"><head><meta charset="utf-8">
@@ -154,6 +201,7 @@ p{color:#a2b8c9}a{color:#8bd5ee}
  window.addEventListener('error',e=>{output.textContent+='ERROR '+e.message+'\\n';});
 })();
 </script>
+<script>"""+asset_script+"""</script>
 <script>"""+code+"""</script>
 <script>
 try { if(typeof main !== 'function') throw Error('AOT main not exported');main(); }

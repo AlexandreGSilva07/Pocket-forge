@@ -1,6 +1,6 @@
 # PocketForge — Núcleo de Compilação Java ME → HTML5
 
-**Marco experimental: 16/10/2026.** Um compilador antecipado (AOT), **diferente do emulador JS2ME**. A mesma ferramenta recebe JARs independentes e produz HTML único, que abre por dois cliques no Chrome, sem Java instalado e sem interpretador de bytecode no navegador.
+**Marco experimental: 16/10/2026, ampliado com referências phoneME.** Um compilador antecipado (AOT), **diferente do emulador JS2ME**. A mesma ferramenta recebe JARs independentes e produz HTML único, que abre por dois cliques no Chrome, sem Java instalado e sem interpretador de bytecode no navegador.
 
 ## Arquitetura implementada
 
@@ -57,3 +57,7 @@ Tentou-se minificar o JS do TeaVM: o HTML de Asteroids caiu para ~70 KB, **mas h
 - [FreeJ2ME](https://github.com/hex007/freej2me) e [SquirrelJME](https://github.com/SquirrelJME/SquirrelJME) — referências de comportamento e implementação, sem copiar código nem assets.
 
 **Resultado:** existe agora um compilador real, testado, extensível e independente de nomes de jogos. A meta de compatibilidade com *qualquer* JAR, inclusive Asphalt Nitro completo, **ainda não foi alcançada**.
+
+## Referência phoneME e compatibilidade ampliada
+
+Veja [levantamento executável de phoneME/j2me.js](phoneme-compatibilidade-referencia.md): o compilador recebeu suporte geral a clipping, translação, ARGB, regiões gráficas e leitura de pixels. Inclui recursos não Java via TeaVM ResourceSupplier e pré-decodifica imagens comuns no HTML. Os testes de regressão agora são **seis JARs independentes**. No Asphalt Nitro, símbolos faltantes caíram de **19 para 6** (MMAPI e Connector), mas o jogo **ainda não compila nem está jogável**. As fontes phoneME/j2me.js GPLv2 foram mantidas fora do repositório.

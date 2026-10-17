@@ -20,6 +20,9 @@
 
 ## Compilador PocketForge — JAR → HTML único sem emulador
 
+**Referência de Java ME real:** [phoneME, j2me.js, biblioteca CLDC/MIDP e ensaios em Chromium](docs/j2me/phoneme-compatibilidade-referencia.md). Fontes GPL são estudadas fora do repositório; o código do compilador permanece independente. O AOT agora inclui recursos do JAR e imagens comuns no HTML, sem embutir a VM.
+
+
 O [núcleo de compilação AOT](docs/j2me/compilador-aot.md), baseado no TeaVM 0.16.0 (Apache-2.0), **converte bytecode Java em JavaScript antes da execução**. Diferentemente do modo RUN, o HTML não contém o JAR original nem um interpretador Java. O manifesto fornece automaticamente a classe inicial: não há regras por título.
 
 ```sh
