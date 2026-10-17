@@ -75,6 +75,30 @@ def assemble(source: Path, output: Path, archive_sha256: str | None) -> dict:
     output.mkdir(parents=True)
     for folder in ("js", "css", "img"):
         shutil.copytree(source / folder, output / folder)
+    # Two standard Java ME API gaps observed by runtime probes (not game hacks):
+    # StringBuffer.append(char[], offset, length) and Player.getMediaTime().
+    standard_api_patches = {
+        "js/me/java/lang/StringBuffer.js": """\t$append$_CII$Ljava_lang_StringBuffer_: function(chars, offset, count) {
+        if(chars == null) throw new javaRoot.$java.$lang.$NullPointerException();
+        if(offset < 0 || count < 0 || offset > chars.length - count)
+            throw new javaRoot.$java.$lang.$IndexOutOfBoundsException();
+        for(var k=0;k<count;k++) this.string += String.fromCharCode(chars[offset+k] & 65535);
+        return this;
+    },
+    """,
+        "js/me/javax/microedition/media/PlayerImpl.js": """\t$getMediaTime$J: function() {
+        var sec=this.element && Number(this.element.currentTime);
+        var micro=Number.isFinite(sec) && sec>0 ? Math.floor(sec*1000000) : 0;
+        return {hi:Math.floor(micro/4294967296)|0,lo:(micro%4294967296)>>>0};
+    },
+    """,
+    }
+    for rel, patch in standard_api_patches.items():
+        file=output / rel
+        raw=file.read_text(encoding="utf-8")
+        if not raw.startswith("js2me.createClass({"):
+            raise ValueError("JS2ME API definition changed: "+rel)
+        file.write_text(raw.replace("js2me.createClass({", "js2me.createClass({"+chr(10)+patch,1),encoding="utf-8")
     # Fix a generic JVM-wide-bytecode defect in old upstream Zazu interpreter.
     # The original function lacked the context argument, used context.push/pop
     # instead of context.stack and threw unconditionally after every supported op.
