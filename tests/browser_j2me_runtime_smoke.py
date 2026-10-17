@@ -23,6 +23,15 @@ def main():
         with sync_playwright() as p:
             browser = p.chromium.launch(headless=True)
             page = browser.new_page(viewport={"width":1180,"height":800})
+            blocked = []
+            local_origin = f"http://127.0.0.1:{server.server_port}/"
+            def require_offline(route):
+                if route.request.url.startswith(local_origin) or route.request.url.startswith("data:"):
+                    route.continue_()
+                else:
+                    blocked.append(route.request.url)
+                    route.abort()
+            page.route("**/*", require_offline)
             page.on("pageerror", lambda e: errors.append(str(e)))
             r = page.goto(f"http://127.0.0.1:{server.server_port}/?selector=1",wait_until="load")
             assert r and r.status == 200
@@ -48,6 +57,7 @@ def main():
             page.screenshot(path=str(SHOT/"j2me-test.png"),full_page=True)
             assert data["manifest"].get("midlet-1"), "MIDlet entrypoint not recognized"
             assert data["resourceCount"] > 0, "JAR resources not loaded"
+            assert not blocked, "runtime attempted external network access: " + str(blocked)
             assert data["bytecodeExecutions"] > 0, "No actual Java bytecode was interpreted"
             print("PASS: real JAR loaded, manifest read, Java bytecode entered (not full compatibility)")
             print(json.dumps({"resourceCount":data["resourceCount"],"usedMethods":data["usedMethods"],
