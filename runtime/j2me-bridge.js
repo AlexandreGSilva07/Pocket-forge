@@ -45,6 +45,17 @@
        log("compat-warning","Created static storage for VM "+this.currentVM);
      }
    };
+   // Explicit deterministic diagnostics for unresolved JVM invocations.
+   window.js2me.safeInvoke = function(method, receiver, args, methodInfo){
+     if(typeof method!=="function"){
+       const id=(methodInfo&&methodInfo.className||"unknown")+
+         " -> "+(methodInfo&&methodInfo.name||"unknown");
+       const error=new Error("J2ME_MISSING_INVOKE_TARGET "+id);
+       log("missing-method",error.message);
+       throw error;
+     }
+     return method.apply(receiver,args);
+   };
    const originalExecute = window.js2me.execute;
    window.js2me.execute = function(){bytecodeExecutions++;return originalExecute.apply(this,arguments);};
    const choose=screen.querySelector("#file-selector");
