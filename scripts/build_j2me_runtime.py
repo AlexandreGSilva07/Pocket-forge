@@ -122,7 +122,13 @@ def assemble(source: Path, output: Path, archive_sha256: str | None) -> dict:
         raise ValueError("upstream Java method stub layout changed")
     stub=stub.replace(bad_sig,"var stub = function () {",1)
     stub=stub.replace(bad_args,"var args = Array.prototype.slice.call(arguments);",1)
-    stub=stub.replace(bad_warn,"// All arguments and asynchronous callbacks are retained.",1)
+    warning_start=stub.find("if (guard !== undefined) {")
+    if warning_start < 0:
+        raise ValueError("upstream JVM argument guard block missing")
+    warning_end=stub.find("}",warning_start)
+    if warning_end < 0:
+        raise ValueError("unterminated JVM argument guard block")
+    stub=stub[:warning_start]+"// Unlimited method arguments; preserve continuation. "+stub[warning_end+1:]
     stub_path.write_text(stub,encoding="utf-8")
     # Fix a generic JVM-wide-bytecode defect in old upstream Zazu interpreter.
     # The original function lacked the context argument, used context.push/pop
