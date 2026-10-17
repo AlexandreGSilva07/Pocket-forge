@@ -23,6 +23,10 @@ O leitor foi **testado contra os bytes reais do JAR** na sandbox, sem JVM: extra
 
 Isso é equivalência de **extração de bytes**, não de renderização ou mecânica. Ainda não sabemos interpretar os 928 recursos binários nem converter `DF 05` em pixels diretamente via JS. O procedimento prévio usava a classe Java original `f.class` apenas na etapa offline de geração de sprites.
 
+## Trabalho 1.5 — importar diretamente o JAR no navegador, sem Java
+
+O módulo [demo/engine/zip-jar.js](../../../demo/engine/zip-jar.js) implementa leitura do diretório central ZIP, descompressão `stored`/`deflate-raw` via APIs nativas do navegador, limites de entrada e validação CRC32. Foi **testado com o próprio AsphaltNitro.jar na sandbox**: 56 entradas abertas, 16 bancos reconhecidos e 1.310 registros recuperados pelo pipeline JavaScript completo — **zero bytecode Java executado**. Testes públicos cobrem arquivos sintéticos (stored/deflate) e CRC corrompido. Importação de JAR é leitura/inspeção, **não emulação nem execução de corrida**.
+
 ## Trabalho 2 — semântica de entrada derivada de bytecode real
 
 Em `j.class` inspecionado com `javap -c -p j`, observou-se:
