@@ -28,6 +28,23 @@
      this.statics = this.statics0;
      return originalSetup.call(this,callback);
    };
+   // The Firefox-OS era engine may switch to a thread that has no VM mapping
+   // while asynchronous class loading resumes. Preserve isolation by creating
+   // a dedicated static namespace per valid VM; surface every recovery in log.
+   const originalSwitchVM = window.js2me.switchVM;
+   window.js2me.switchVM = function(threadId){
+     if(this.VMMapping[threadId]===undefined){
+       const fallback=Number.isInteger(this.currentVM)?this.currentVM:0;
+       this.VMMapping[threadId]=fallback;
+       log("compat-warning","Missing VM mapping for thread "+threadId+"; mapped to VM "+fallback);
+     }
+     originalSwitchVM.call(this,threadId);
+     if(!this.statics){
+       const key="statics"+this.currentVM;
+       this.statics=this[key]||(this[key]={});
+       log("compat-warning","Created static storage for VM "+this.currentVM);
+     }
+   };
    const originalExecute = window.js2me.execute;
    window.js2me.execute = function(){bytecodeExecutions++;return originalExecute.apply(this,arguments);};
    const choose=screen.querySelector("#file-selector");
