@@ -123,5 +123,5 @@ public final class BrowserPlayer implements Player,VolumeControl,RateControl,Tem
  public int getMaxRate(){return 200000;}
  public int setRate(int value){ensureOpen();rate=Math.max(getMinRate(),Math.min(getMaxRate(),value));speed(id,rate);return rate;}
  public int getTempo(){ensureOpen();return tempo;}
- public int setTempo(int value){ensureOpen();tempo=Math.max(10000,Math.min(300000,value));speed(id,(tempo*100000)/120000);return tempo;}
+ public int setTempo(int value){ensureOpen();tempo=Math.max(10000,Math.min(300000,value));speed(id,(int)(((long)tempo*100000L)/120000L));return tempo;}
 }

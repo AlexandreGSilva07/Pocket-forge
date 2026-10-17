@@ -7,9 +7,13 @@ public abstract class Canvas extends Displayable {
  private static Canvas current;
  private static int pressed;
  private static boolean keyboardInstalled;
- @JSBody(script="if(!document.getElementById('pf-screen')){var c=document.createElement('canvas');c.id='pf-screen';c.width=240;c.height=320;c.style='border:1px solid #888;image-rendering:pixelated;max-width:100%;background:white';document.getElementById('game').appendChild(c);}")
+ @JSBody(script="if(!document.getElementById('pf-screen')){var c=document.createElement('canvas');c.id='pf-screen';c.width=window.PocketForgeConfig.screenWidth;c.height=window.PocketForgeConfig.screenHeight;c.style='border:1px solid #888;image-rendering:pixelated;max-width:100%;background:white';document.getElementById('game').appendChild(c);}")
  protected static native void ensureCanvas();
- @JSBody(script="if(window.__PF_MIDP_KEYS)return;window.__PF_MIDP_KEYS=true;var mapping={ArrowUp:-1,ArrowDown:-2,ArrowLeft:-3,ArrowRight:-4,Enter:-5,Space:-5,Digit2:50,Digit4:52,Digit5:53,Digit6:54,Digit8:56,Numpad2:50,Numpad4:52,Numpad5:53,Numpad6:54,Numpad8:56,Digit0:48,Digit1:49,Digit3:51,Digit7:55,Digit9:57,Digit6:54,Digit4:52,Digit8:56,Digit5:53,Digit2:50,F1:-6,F2:-7,Escape:-7,Backspace:-7,Home:-6,End:-7};document.addEventListener('keydown',e=>{var key=mapping[e.code];if(key===undefined)return;e.preventDefault();javaMethods.get('javax.microedition.lcdui.Canvas.__pfKeyDown(I)V').invoke(key);});document.addEventListener('keyup',e=>{var key=mapping[e.code];if(key===undefined)return;e.preventDefault();javaMethods.get('javax.microedition.lcdui.Canvas.__pfKeyUp(I)V').invoke(key);});")
+ @JSBody(script="return window.PocketForgeConfig.screenWidth;")
+ public static native int __pfScreenWidth();
+ @JSBody(script="return window.PocketForgeConfig.screenHeight;")
+ public static native int __pfScreenHeight();
+ @JSBody(script="if(window.__PF_MIDP_KEYS)return;window.__PF_MIDP_KEYS=true;var mapping={ArrowUp:-1,ArrowDown:-2,ArrowLeft:-3,ArrowRight:-4,Enter:-5,Space:-5,Digit2:50,Digit4:52,Digit5:53,Digit6:54,Digit8:56,Numpad2:50,Numpad4:52,Numpad5:53,Numpad6:54,Numpad8:56,Digit0:48,Digit1:49,Digit3:51,Digit7:55,Digit9:57,Digit6:54,Digit4:52,Digit8:56,Digit5:53,Digit2:50,F1:-6,F2:-7,Escape:-7,Backspace:-7,Home:-6,End:-7};document.addEventListener('keydown',e=>{if(e.target&&e.target.closest&&e.target.closest('#pf-controls'))return;var key=mapping[e.code];if(key===undefined)return;e.preventDefault();javaMethods.get('javax.microedition.lcdui.Canvas.__pfKeyDown(I)V').invoke(key);});document.addEventListener('keyup',e=>{if(e.target&&e.target.closest&&e.target.closest('#pf-controls'))return;var key=mapping[e.code];if(key===undefined)return;e.preventDefault();javaMethods.get('javax.microedition.lcdui.Canvas.__pfKeyUp(I)V').invoke(key);});")
  private static native void installKeyEvents();
  @JSBody(script="var c=document.getElementById('pf-screen');if(!c||c.__pfPointerInstalled)return;c.__pfPointerInstalled=true;"+
  "function pos(e){var r=c.getBoundingClientRect();return [Math.floor((e.clientX-r.left)*c.width/r.width),Math.floor((e.clientY-r.top)*c.height/r.height)]}"+

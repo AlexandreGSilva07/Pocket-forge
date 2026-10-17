@@ -43,8 +43,8 @@ def jar_with_manifest(location:Path, classes:Path, main: str, midlet: bool):
 def build_fixture(root:Path,name:str):
     classes=root/name/"classes"
     classes.mkdir(parents=True)
-    if name in ("Calculator","ResourceMain","ConnectorMain"):
-        if name=="ConnectorMain":
+    if name in ("Calculator","ResourceMain","ConnectorMain","RmsMain"):
+        if name in ("ConnectorMain","RmsMain"):
             shimfiles=sorted((SDK/"javax").rglob("*.java"))+sorted((SDK/"pocketforge/media").rglob("*.java"))
             run("javac","--release","8","-cp",TEAVM_JAR,"-d",classes,*shimfiles,SOURCES/(name+".java"))
         else:
@@ -59,7 +59,7 @@ def build_fixture(root:Path,name:str):
         if not TEAVM_JAR.is_file():
             raise RuntimeError("Run an AOT compilation first to download TeaVM dependencies")
         shims=sorted((SDK/"javax").rglob("*.java"))+sorted((SDK/"pocketforge/media").rglob("*.java"))
-        class_name=(name+"MIDlet" if name in ("Interactive","ReferenceGraphics","Bitmap","Media","Adpcm","Midi") else "PocketDemoMIDlet")
+        class_name=(name+"MIDlet" if name in ("Interactive","ReferenceGraphics","Bitmap","Media","Adpcm","Midi","WideScreen") else "PocketDemoMIDlet")
         run("javac","--release","8","-cp",TEAVM_JAR,
             "-d",classes,*shims,SOURCES/(class_name+".java"))
         jar=root/name/(name+".jar")
@@ -105,12 +105,12 @@ def main():
     with tempfile.TemporaryDirectory(prefix="pocketforge_aot_browser_") as td:
         t=Path(td)
         fixtures={}
-        for name in ("Calculator","ResourceMain","PocketDemo","Interactive","ReferenceGraphics","Bitmap","ConnectorMain","Media","Adpcm","Midi"):
+        for name in ("Calculator","ResourceMain","PocketDemo","Interactive","ReferenceGraphics","Bitmap","ConnectorMain","RmsMain","Media","Adpcm","Midi","WideScreen"):
             if name=="PocketDemo" and not TEAVM_JAR.exists():
                 raise RuntimeError("TeaVM 0.16.0 JSO jar is required (resolved by Maven)")
             jar=build_fixture(t,name)
             html=t/(name+".html")
-            stdout=run(sys.executable,SCRIPT,jar,"--out",html)
+            stdout=run(sys.executable,SCRIPT,jar,"--out",html,*( ["--screen","320x240"] if name=="WideScreen" else []))
             report=json.loads(stdout)
             assert report["status"]=="compiled"
             assert report["jar_embedded"] is False
@@ -143,6 +143,20 @@ def main():
                   return {width:c.width,height:c.height,nonblack,colors:colors.size};
                 }""")
                 pixels_check=None
+                if name=="RmsMain":
+                    assert "RMS_BEFORE=0 RMS_AFTER=1" in output,output
+                    for _ in range(2):
+                        page.reload();page.wait_for_timeout(250)
+                        output=page.locator('#log').inner_text()
+                        assert "RMS_BEFORE=1 RMS_AFTER=1" in output,output
+                    page.evaluate("console.log('X'.repeat(60000))")
+                    assert page.evaluate("document.querySelector('#log').textContent.length")<=40000
+                    output=page.locator('#log').inner_text()
+                if name=="WideScreen":
+                    assert "SCREEN_320x240_PASS" in output,output
+                    assert canvas and canvas['width']==320 and canvas['height']==240,canvas
+                    edge=page.evaluate("Array.from(document.querySelector('#pf-screen').getContext('2d').getImageData(300,220,1,1).data)")
+                    assert edge==[255,217,102,255],edge
                 if name=="ReferenceGraphics":
                     assert "PHONE_ME_GRAPHICS_CONTRACT_PASS" in output,output
                     pixels_check=page.evaluate("""() => {const g=document.getElementById('pf-screen').getContext('2d');const pixel=(x,y)=>Array.from(g.getImageData(x,y,1,1).data);return {green:pixel(21,23),clipped:pixel(18,18),red:pixel(30,30),cyan:pixel(40,40)};}""")
@@ -200,6 +214,8 @@ def main():
                 if name=="Media":
                     assert "MMAPI_STATES_CONTROLS_PASS" in output,output
                     assert page.evaluate("window.PocketForgeAudio?.size") == 1
+                    rate=page.evaluate("[...window.PocketForgeAudio.values()][0].playbackRate")
+                    assert abs(rate-1.2)<0.001,rate
                     page.keyboard.press("ArrowUp")
                     page.wait_for_timeout(250)
                     output=page.locator("#log").inner_text()
@@ -221,17 +237,29 @@ def main():
                     page.locator('#pf-controls button[data-key="Digit5"]').click()
                     page.wait_for_timeout(150)
                     assert before_button!=page.evaluate("document.getElementById('pf-screen').toDataURL()"),"Virtual keypad failed to send MIDP key"
+                    # A focused button must dispatch one logical key, not both
+                    # the native Enter/Space and a synthetic Digit5.
+                    button=page.locator('#pf-controls button[data-key="Digit5"]')
+                    button.focus()
+                    for key in ('Enter','Space'):
+                        count=page.locator('#log').inner_text().count('KEY_CODE=')
+                        page.keyboard.press(key)
+                        page.wait_for_timeout(100)
+                        after_log=page.locator('#log').inner_text()
+                        assert after_log.count('KEY_CODE=')==count+1,after_log
+                        assert 'KEY_CODE=53' in after_log
+
                 image=OUT/(name+".png")
                 page.screenshot(path=str(image),full_page=True)
                 assert not errors,errors
                 assert not network,network
-                if name in ("Calculator","ResourceMain","ConnectorMain"):
-                    marker={"Calculator":"CALCULATOR=57","ResourceMain":"PHONE_ME_RESOURCE_OK","ConnectorMain":"CONNECTOR_RESOURCE_AND_DENIAL_PASS"}[name]
+                if name in ("Calculator","ResourceMain","ConnectorMain","RmsMain"):
+                    marker={"Calculator":"CALCULATOR=57","ResourceMain":"PHONE_ME_RESOURCE_OK","ConnectorMain":"CONNECTOR_RESOURCE_AND_DENIAL_PASS","RmsMain":"RMS_BEFORE=1 RMS_AFTER=1"}[name]
                     assert marker in output,output
                     assert canvas is None
                 else:
-                    assert canvas and canvas["width"]==240 and canvas["height"]==320
-                    assert (canvas["colors"]>=3 and canvas["nonblack"]>1000) or (name in ("ReferenceGraphics","Bitmap") and canvas["colors"]>=5) or (name in ("Media","Adpcm","Midi") and canvas["nonblack"]>1000),canvas
+                    assert canvas and canvas["width"]==(320 if name=="WideScreen" else 240) and canvas["height"]==(240 if name=="WideScreen" else 320)
+                    assert (canvas["colors"]>=3 and canvas["nonblack"]>1000) or (name in ("ReferenceGraphics","Bitmap") and canvas["colors"]>=5) or (name in ("Media","Adpcm","Midi","WideScreen") and canvas["nonblack"]>1000),canvas
                 evidence[name]={
                     "jar_sha256":hashlib.sha256(jar.read_bytes()).hexdigest(),
                     "html_sha256":hashlib.sha256(html.read_bytes()).hexdigest(),
@@ -247,6 +275,6 @@ def main():
     receipt=OUT/"aot-validation.json"
     receipt.write_text(json.dumps(evidence,ensure_ascii=False,indent=2)+"\n")
     print(json.dumps(evidence,ensure_ascii=False,indent=2))
-    print("PASS: ten independent JARs compiled AOT to standalone HTML; no JVM/JAR/runtime network")
+    print("PASS: twelve independent JARs compiled AOT to standalone HTML; no JVM/JAR/runtime network")
 if __name__=="__main__":
     main()

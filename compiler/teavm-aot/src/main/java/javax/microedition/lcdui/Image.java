@@ -16,9 +16,9 @@ public final class Image {
   "var c=document.createElement('canvas');c.width=w;c.height=h;"+
   "if(!window.PocketForgeSurfaces)window.PocketForgeSurfaces=new Map();window.PocketForgeSurfaces.set(id,c);")
  private static native void allocate(int id,int w,int h);
- @JSBody(params={"id"},script="var c=window.PocketForgeSurfaces.get(id);return c?c.width:240;")
+ @JSBody(params={"id"},script="var c=window.PocketForgeSurfaces.get(id);return c?c.width:window.PocketForgeConfig.screenWidth;")
  public static native int __pfWidth(int id);
- @JSBody(params={"id"},script="var c=window.PocketForgeSurfaces.get(id);return c?c.height:320;")
+ @JSBody(params={"id"},script="var c=window.PocketForgeSurfaces.get(id);return c?c.height:window.PocketForgeConfig.screenHeight;")
  public static native int __pfHeight(int id);
  public static Image createImage(int width,int height){return new Image(width,height,true);}
  public static Image createRGBImage(int[] rgb,int w,int h,boolean processAlpha){

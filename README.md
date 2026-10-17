@@ -20,6 +20,8 @@
 
 ## Compilador PocketForge — JAR → HTML único sem emulador
 
+**Correções de compatibilidade verificadas:** [RMS persistente, controle virtual sem teclas duplicadas, tempo MMAPI sem overflow, resolução configurável e logs limitados](docs/j2me/auditoria-correcoes-aot.md). O Asphalt foi recompilado e validado com um registro RMS real após recarregar. Para perfis de tela alternativos, use `--screen 320x240` no build.
+
 **Áudio Java ME recuperado:** [IMA ADPCM](docs/j2me/ima-adpcm-audio.md) para os efeitos WAV e [MIDI/FluidSynth offline](docs/j2me/midi-offline-soundfont.md) para música. No Asphalt Nitro, 25 efeitos e 8 faixas MIDI foram convertidos no build: o Chrome executou a música sem erro após a primeira interação. O HTML permanece único/offline; timbres dependem do SoundFont.
 
 

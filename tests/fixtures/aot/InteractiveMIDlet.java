@@ -13,7 +13,7 @@ public final class InteractiveMIDlet extends MIDlet {
     g.setColor(moves>0?0x41dd87:0xcddd41);g.fillRect(30,90,180,80);
     g.setColor(0xffffff);g.drawString("MOVES="+moves,50,120,Graphics.TOP|Graphics.LEFT);
   }
-  protected void keyPressed(int code){moves++;repaint();}
+  protected void keyPressed(int code){moves++;System.out.println("KEY_CODE="+code+" MOVES="+moves);repaint();}
   protected void pointerPressed(int x,int y){moves+=2;repaint();}
  }
 }

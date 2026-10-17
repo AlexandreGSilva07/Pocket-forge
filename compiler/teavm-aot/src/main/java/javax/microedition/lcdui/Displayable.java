@@ -5,8 +5,8 @@ public class Displayable {
  private CommandListener listener;
  private final ArrayList<Command> commands=new ArrayList<Command>();
  public boolean isShown(){return true;}
- public int getWidth(){return 240;}
- public int getHeight(){return 320;}
+ public int getWidth(){return Canvas.__pfScreenWidth();}
+ public int getHeight(){return Canvas.__pfScreenHeight();}
  public void setTitle(String title){this.title=title;}
  public String getTitle(){return title;}
  public void setCommandListener(CommandListener listener){this.listener=listener;}
