@@ -32,7 +32,7 @@ class J2MEWorkflows(unittest.TestCase):
             self.assertEqual(result["classes_inside_jar"],1)
             self.assertIn("java/lang/Object",result["external_api_classes"])
             self.assertFalse(result["claims"]["original_executed"])
-            self.assertEqual(result["java_classfile_major_versions"]["45"],1)
+            self.assertEqual(result["java_classfile_major_versions"][45],1)
 
     def test_generate_java_me_source_and_no_overwrite(self):
         with tempfile.TemporaryDirectory() as td:
