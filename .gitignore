@@ -6,3 +6,6 @@ dist/
 coverage/
 .playwright/
 .DS_Store
+
+# Research binaries stay local; never commit third-party ROMs, JARs or SDKs.
+external-corpus/
