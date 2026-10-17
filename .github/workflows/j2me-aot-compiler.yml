@@ -32,7 +32,7 @@ jobs:
         run: |
           python3 -m pip install playwright==1.56.0 pillow==11.1.0
           python3 -m playwright install --with-deps chromium
-      - name: Compile 6 independent real JARs to standalone HTML and verify rendering/input
+      - name: Compile 8 independent real JARs to standalone HTML and verify rendering/input
         run: python3 tests/browser_j2me_aot_compiler.py
         env:
           POCKETFORGE_AOT_EVIDENCE: artifacts/aot

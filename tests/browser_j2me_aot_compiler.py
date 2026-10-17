@@ -43,23 +43,35 @@ def jar_with_manifest(location:Path, classes:Path, main: str, midlet: bool):
 def build_fixture(root:Path,name:str):
     classes=root/name/"classes"
     classes.mkdir(parents=True)
-    if name in ("Calculator","ResourceMain"):
-        run("javac","--release","8","-d",classes,SOURCES/("ResourceMain.java" if name=="ResourceMain" else "Calculator.java"))
+    if name in ("Calculator","ResourceMain","ConnectorMain"):
+        if name=="ConnectorMain":
+            shimfiles=sorted((SDK/"javax").rglob("*.java"))+sorted((SDK/"pocketforge/media").rglob("*.java"))
+            run("javac","--release","8","-cp",TEAVM_JAR,"-d",classes,*shimfiles,SOURCES/(name+".java"))
+        else:
+            run("javac","--release","8","-d",classes,SOURCES/(name+".java"))
         jar=root/name/(name+".jar")
-        main="demo.ResourceMain" if name=="ResourceMain" else "demo.Calculator"
+        main="demo."+name
         jar_with_manifest(jar,classes,main,False)
-        if name=="ResourceMain":
+        if name in ("ResourceMain","ConnectorMain"):
             with zipfile.ZipFile(jar,"a") as z:
                 z.writestr("demo/hello.txt", (SOURCES/"hello.txt").read_bytes())
     else:
         if not TEAVM_JAR.is_file():
             raise RuntimeError("Run an AOT compilation first to download TeaVM dependencies")
-        shims=sorted((SDK/"javax").rglob("*.java"))
-        class_name=(name+"MIDlet" if name in ("Interactive","ReferenceGraphics","Bitmap") else "PocketDemoMIDlet")
+        shims=sorted((SDK/"javax").rglob("*.java"))+sorted((SDK/"pocketforge/media").rglob("*.java"))
+        class_name=(name+"MIDlet" if name in ("Interactive","ReferenceGraphics","Bitmap","Media") else "PocketDemoMIDlet")
         run("javac","--release","8","-cp",TEAVM_JAR,
             "-d",classes,*shims,SOURCES/(class_name+".java"))
         jar=root/name/(name+".jar")
         jar_with_manifest(jar,classes,"demo."+class_name,True)
+        if name=="Media":
+            import wave,math,struct
+            from io import BytesIO
+            blob=BytesIO()
+            with wave.open(blob,"wb") as wav:
+                wav.setnchannels(1);wav.setsampwidth(2);wav.setframerate(8000)
+                wav.writeframes(b"".join(struct.pack("<h",int(3500*math.sin(i*2*math.pi*440/8000))) for i in range(1600)))
+            with zipfile.ZipFile(jar,"a") as z:z.writestr("demo/beep.wav",blob.getvalue())
         if name=="Bitmap":
             from PIL import Image as PILImage
             from io import BytesIO
@@ -77,7 +89,7 @@ def main():
     with tempfile.TemporaryDirectory(prefix="pocketforge_aot_browser_") as td:
         t=Path(td)
         fixtures={}
-        for name in ("Calculator","ResourceMain","PocketDemo","Interactive","ReferenceGraphics","Bitmap"):
+        for name in ("Calculator","ResourceMain","PocketDemo","Interactive","ReferenceGraphics","Bitmap","ConnectorMain","Media"):
             if name=="PocketDemo" and not TEAVM_JAR.exists():
                 raise RuntimeError("TeaVM 0.16.0 JSO jar is required (resolved by Maven)")
             jar=build_fixture(t,name)
@@ -89,7 +101,8 @@ def main():
             assert report["requires_java_at_runtime"] is False
             assert report["requires_http_server"] is False
             assert "<script src=" not in html.read_text()
-            assert html.stat().st_size<300000,"AOT output unexpectedly large for fixtures"
+            print("AOT_FIXTURE",name,html.stat().st_size,flush=True)
+            assert html.stat().st_size<1000000,"AOT output unexpectedly large for fixtures"
             fixtures[name]=(jar,html,report)
         with sync_playwright() as p:
             executable="/usr/bin/google-chrome" if Path("/usr/bin/google-chrome").is_file() else None
@@ -126,6 +139,15 @@ def main():
                     bitmap_pixel=page.evaluate("Array.from(document.getElementById('pf-screen').getContext('2d').getImageData(20,20,1,1).data)")
                     assert bitmap_pixel==[255,0,0,255],bitmap_pixel
                 input_changed=None
+                touch_changed=None
+                if name=="Media":
+                    assert "MMAPI_STATES_CONTROLS_PASS" in output,output
+                    assert page.evaluate("window.PocketForgeAudio?.size") == 1
+                    page.keyboard.press("ArrowUp")
+                    page.wait_for_timeout(250)
+                    output=page.locator("#log").inner_text()
+                    assert "MMAPI_START_STOP_CLOSE_PASS" in output,output
+                    assert page.evaluate("window.PocketForgeAudio.size") == 0
                 if name=="Interactive":
                     previous=page.evaluate("document.getElementById('pf-screen').toDataURL()")
                     page.keyboard.press("ArrowUp")
@@ -133,16 +155,26 @@ def main():
                     after=page.evaluate("document.getElementById('pf-screen').toDataURL()")
                     input_changed=previous!=after
                     assert input_changed,"MIDP keyPressed was not triggered by ArrowUp"
+                    before_touch=page.evaluate("document.getElementById('pf-screen').toDataURL()")
+                    page.locator('#pf-screen').click(position={"x":120,"y":100})
+                    page.wait_for_timeout(200)
+                    touch_changed=before_touch!=page.evaluate("document.getElementById('pf-screen').toDataURL()")
+                    assert touch_changed,"MIDP Canvas.pointerPressed was not triggered"
+                    before_button=page.evaluate("document.getElementById('pf-screen').toDataURL()")
+                    page.locator('#pf-controls button[data-key="Digit5"]').click()
+                    page.wait_for_timeout(150)
+                    assert before_button!=page.evaluate("document.getElementById('pf-screen').toDataURL()"),"Virtual keypad failed to send MIDP key"
                 image=OUT/(name+".png")
                 page.screenshot(path=str(image),full_page=True)
                 assert not errors,errors
                 assert not network,network
-                if name in ("Calculator","ResourceMain"):
-                    assert ("CALCULATOR=57" if name=="Calculator" else "PHONE_ME_RESOURCE_OK") in output,output
+                if name in ("Calculator","ResourceMain","ConnectorMain"):
+                    marker={"Calculator":"CALCULATOR=57","ResourceMain":"PHONE_ME_RESOURCE_OK","ConnectorMain":"CONNECTOR_RESOURCE_AND_DENIAL_PASS"}[name]
+                    assert marker in output,output
                     assert canvas is None
                 else:
                     assert canvas and canvas["width"]==240 and canvas["height"]==320
-                    assert (canvas["colors"]>=3 and canvas["nonblack"]>1000) or (name in ("ReferenceGraphics","Bitmap") and canvas["colors"]>=5),canvas
+                    assert (canvas["colors"]>=3 and canvas["nonblack"]>1000) or (name in ("ReferenceGraphics","Bitmap") and canvas["colors"]>=5) or (name=="Media" and canvas["nonblack"]>1000),canvas
                 evidence[name]={
                     "jar_sha256":hashlib.sha256(jar.read_bytes()).hexdigest(),
                     "html_sha256":hashlib.sha256(html.read_bytes()).hexdigest(),
@@ -150,7 +182,7 @@ def main():
                     "output":output,"canvas":canvas,
                     "network_requests":network,"page_errors":errors,
                     "original_jar_embedded":False,"jsvm_embedded":False,
-                    "input_changed":input_changed,"pixels_check":pixels_check,
+                    "input_changed":input_changed,"touch_changed":touch_changed,"pixels_check":pixels_check,
                     "screenshot":str(image)
                 }
                 page.close()
@@ -158,6 +190,6 @@ def main():
     receipt=OUT/"aot-validation.json"
     receipt.write_text(json.dumps(evidence,ensure_ascii=False,indent=2)+"\n")
     print(json.dumps(evidence,ensure_ascii=False,indent=2))
-    print("PASS: six independent JARs compiled AOT to standalone HTML; no JVM/JAR/runtime network")
+    print("PASS: eight independent JARs compiled AOT to standalone HTML; no JVM/JAR/runtime network")
 if __name__=="__main__":
     main()

@@ -30,7 +30,7 @@ python3 scripts/compile_j2me_aot.py caminho/Jogo.jar --out dist/aot/Jogo.html
 # Abrir Jogo.html com dois cliques (file://), sem Java ou servidor
 ```
 
-Validado com três JARs autorais e com o Asteroids original (11 classes, desenho real). **Não é compatibilidade universal concluída:** faltam APIs opcionais, MMAPI, recursos e cenários; Asphalt Nitro ainda reporta 19 símbolos ausentes. JDK/Maven são necessários apenas **durante a compilação**. O modo RUN antigo permanece como referência.
+**Marco novo:** [Asphalt Nitro já compilou e chegou ao menu/tutorial com carro no Chrome](docs/j2me/mmapi-connector-asphalt-aot.md), por meio de MMAPI/Connector e input genéricos. O gerador exporta um único HTML offline (10,7 MB no Asphalt), sem JAR nem JVM em runtime, com botões virtuais. Oito JARs de regressão validam o núcleo. **Ainda não existe corrida jogável certificada nem cobertura universal:** MMAPI/JSRs e sistema de arquivos têm limitações. JDK/Maven são necessários apenas **durante a compilação**.
 
 ## J2ME determinístico — runtime HTML offline (experimental)
 
@@ -51,7 +51,7 @@ python3 scripts/j2me_compat_report.py jogo.jar --api-root dist/j2me-web/js/me --
 python3 scripts/new_j2me_game.py PocketCar --title "Pocket Car"
 ```
 
-**Port AOT puro JS/WASM ainda não implementado**; para isso é necessário um compilador e adaptadores completos. O experimento Asphalt Nitro é documentado com execuções/erros reais, sem declarar corrida concluída. Os jogos comerciais não entram no Git.
+**Port AOT Java→JS já implementado parcialmente**; APIs adicionais e equivalência de jogos completos ainda precisam de desenvolvimento. O experimento Asphalt Nitro é documentado com execuções/erros reais, sem declarar corrida concluída. Os jogos comerciais não entram no Git.
 
 ## Comece aqui
 

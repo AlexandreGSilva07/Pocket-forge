@@ -31,7 +31,7 @@ O programa não executa o JAR durante a compilação. O executável de entrada �
 | `PocketDemo.jar`, fonte autoral MIDP | 2 | HTML 59 KB; cria Canvas de 240×320 com desenho e texto colorido. |
 | `Interactive.jar`, fonte autoral MIDP | 2 | HTML 59 KB; pressionar seta chama `keyPressed` **Java compilado** e altera pixels. |
 | `asteroids.jar`, jogo independente de 2002 | 11 | HTML ~246 KB; **tela original Asteroid Zone renderizada e animada no Chrome**, sem JVM/JAR no HTML; não há demonstração de gameplay completo. |
-| `AsphaltNitro.jar`, jogo Gameloft | 21 | **Ainda não compila.** O diagnóstico enumerou 19 símbolos de API ausentes (MMAPI, `Graphics.drawRGB`, `drawRegion`, clipping e outras). Não declarar suporte até corrigir APIs e executar uma corrida. |
+| `AsphaltNitro.jar`, jogo Gameloft | 21 | **Agora compila** após implementação genérica de APIs. HTML 10,7 MB executado via `file://`, exibindo menu original, tutorial e carro vermelho em cena 3D. Ainda não há corrida controlada validada. |
 
 O teste [`tests/browser_j2me_aot_compiler.py`](../../tests/browser_j2me_aot_compiler.py) **constrói três JARs diferentes a partir de fontes próprias**, compila os três sem modificar o compilador e abre os HTMLs via `file://` no Chrome/Chromium. Exige saída matemática exata, Canvas 240×320, conteúdo gráfico, resposta real ao teclado, zero erros JavaScript e zero requisições externas. A compilação do Asteroids foi testada manualmente com código real na máquina; não distribui seus bytes no Git.
 
@@ -60,4 +60,8 @@ Tentou-se minificar o JS do TeaVM: o HTML de Asteroids caiu para ~70 KB, **mas h
 
 ## Referência phoneME e compatibilidade ampliada
 
-Veja [levantamento executável de phoneME/j2me.js](phoneme-compatibilidade-referencia.md): o compilador recebeu suporte geral a clipping, translação, ARGB, regiões gráficas e leitura de pixels. Inclui recursos não Java via TeaVM ResourceSupplier e pré-decodifica imagens comuns no HTML. Os testes de regressão agora são **seis JARs independentes**. No Asphalt Nitro, símbolos faltantes caíram de **19 para 6** (MMAPI e Connector), mas o jogo **ainda não compila nem está jogável**. As fontes phoneME/j2me.js GPLv2 foram mantidas fora do repositório.
+Veja [levantamento executável de phoneME/j2me.js](phoneme-compatibilidade-referencia.md): o compilador recebeu suporte geral a clipping, translação, ARGB, regiões gráficas e leitura de pixels. Inclui recursos não Java via TeaVM ResourceSupplier e pré-decodifica imagens comuns no HTML. Os testes de regressão agora são **seis JARs independentes**. Na etapa anterior os símbolos faltantes do Asphalt Nitro caíram de **19 para 6**. Uma etapa posterior de [MMAPI e Connector](mmapi-connector-asphalt-aot.md) eliminou os seis erros de compilação e fez o jogo avançar até menu/tutorial, mas a corrida completa continua não verificada. As fontes phoneME/j2me.js GPLv2 foram mantidas fora do repositório.
+
+## Marco posterior: Asphalt Nitro AOT no navegador
+
+O [relatório de MMAPI, Connector e Asphalt Nitro](mmapi-connector-asphalt-aot.md) documenta uma nova validação com **8 JARs autorais** e execução do Asphalt Nitro compilado no Chrome: menu real e tutorial com veículo renderizado em cena 3D, sem JAR/VM/rede no browser. Não foi certificada uma corrida jogável.

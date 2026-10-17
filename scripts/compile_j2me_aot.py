@@ -187,10 +187,23 @@ background:#122238;border:1px solid #36526d;border-radius:16px;padding:14px}
 #game canvas{max-width:100%;height:auto}#log{color:#a9f0b9;background:#070e19;
 text-align:left;border-radius:10px;padding:14px;white-space:pre-wrap;max-height:220px;overflow:auto}
 p{color:#a2b8c9}a{color:#8bd5ee}
+#pf-controls{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;max-width:420px;margin:12px auto 0}
+#pf-controls button{border:1px solid #4c738c;border-radius:8px;background:#203b56;color:#fff;padding:11px 4px;font:600 14px system-ui;touch-action:none;user-select:none;cursor:pointer}
+#pf-controls button:active,#pf-controls button:focus-visible{background:#197d88;outline:2px solid #61d4c9}
 </style></head><body>
 <h1>PocketForge · Compilação antecipada</h1>
 <p>Java ME original convertido para JavaScript. Sem JAR, interpretador Java ou servidor.</p>
-<div id="game"></div><pre id="log" aria-label="Saída do programa">Iniciando JavaScript compilado…\n</pre>
+<div id="game"></div>
+<div id="pf-controls" role="group" aria-label="Controles Java ME">
+<button type="button" data-key="ArrowUp">↑ 2</button>
+<button type="button" data-key="ArrowDown">↓ 8</button>
+<button type="button" data-key="ArrowLeft">← 4</button>
+<button type="button" data-key="ArrowRight">→ 6</button>
+<button type="button" data-key="Digit5">OK / 5</button>
+<button type="button" data-key="Digit0">0</button>
+<button type="button" data-key="F1">Soft 1</button>
+<button type="button" data-key="F2">Soft 2</button>
+</div><pre id="log" aria-label="Saída do programa">Iniciando JavaScript compilado…\n</pre>
 <script>
 (function(){
  const output=document.getElementById('log');output.textContent='';
@@ -199,6 +212,19 @@ p{color:#a2b8c9}a{color:#8bd5ee}
     output.textContent+=args.map(x=>String(x)).join(' ')+'\\n';};
  }
  window.addEventListener('error',e=>{output.textContent+='ERROR '+e.message+'\\n';});
+})();
+</script>
+<script>
+(function(){
+  document.querySelectorAll('#pf-controls button').forEach(function(button){
+    var code=button.getAttribute('data-key');
+    function send(type){document.dispatchEvent(new KeyboardEvent(type,{code:code,key:code,bubbles:true,cancelable:true}));}
+    button.addEventListener('pointerdown',function(e){e.preventDefault();if(button.setPointerCapture)button.setPointerCapture(e.pointerId);send('keydown');});
+    button.addEventListener('pointerup',function(e){e.preventDefault();send('keyup');});
+    button.addEventListener('pointercancel',function(e){send('keyup');});
+    button.addEventListener('keydown',function(e){if(e.code==='Enter'||e.code==='Space'){e.preventDefault();send('keydown');}});
+    button.addEventListener('keyup',function(e){if(e.code==='Enter'||e.code==='Space'){e.preventDefault();send('keyup');}});
+  });
 })();
 </script>
 <script>"""+asset_script+"""</script>

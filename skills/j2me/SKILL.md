@@ -49,7 +49,7 @@ Veja [protocolo testado de arquivo único](../../docs/j2me/html-unico-sem-servid
 
 RUN executa bytecode pela VM JavaScript. Para PORT, executar `python3 scripts/compile_j2me_aot.py jogo.jar --out dist/aot/Jogo.html`. TeaVM compila classfiles, inclui APIs CLDC/MIDP disponíveis e produz HTML puro. O [relatório de arquitetura](../../docs/j2me/compilador-aot.md) descreve os testes. A compilação interrompe e gera `.compile.json` quando faltam APIs; corrigir essas APIs no núcleo, nunca no jogo.
 
-Marcar PORT-TESTED **por cenário**, com prova de execução visual/funcional. Três JARs autorais e tela inicial Asteroids foram compilados e testados. **Asphalt Nitro não está compilado ou jogável**. TeaVM é Apache-2.0 e as APIs MIDP/CLDC precisam ser implementadas corretamente para cada perfil suportado.
+Marcar PORT-TESTED **por cenário**, com prova de execução visual/funcional. Três JARs autorais e tela inicial Asteroids foram compilados e testados. **Asphalt Nitro compilou para HTML único e exibiu menu/tutorial com carro; corrida completa NÃO foi comprovada**. Veja [testes de MMAPI, Connector e fluxo Asphalt](../../docs/j2me/mmapi-connector-asphalt-aot.md). TeaVM é Apache-2.0 e as APIs MIDP/CLDC precisam ser implementadas corretamente para cada perfil suportado.
 
 ## Fluxo CREATE — produção Java ME
 

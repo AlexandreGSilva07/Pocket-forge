@@ -14,5 +14,6 @@ public final class InteractiveMIDlet extends MIDlet {
     g.setColor(0xffffff);g.drawString("MOVES="+moves,50,120,Graphics.TOP|Graphics.LEFT);
   }
   protected void keyPressed(int code){moves++;repaint();}
+  protected void pointerPressed(int x,int y){moves+=2;repaint();}
  }
 }
